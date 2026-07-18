@@ -146,6 +146,11 @@ footer{color:var(--muted);font-size:12px;padding:20px 0 40px;border-top:1px soli
   </div>
 
   <div class="card">
+    <h3>Portfolio analytics <span class="small muted" id="anNote"></span></h3>
+    <div class="grid2" id="analytics">—</div>
+  </div>
+
+  <div class="card">
     <h3>Desk &amp; diagnostics</h3>
     <div class="grid2">
       <div class="diag"><h4>Roster</h4><div class="roster" id="roster"></div></div>
@@ -222,14 +227,14 @@ function chart(labels,datasets,o){
   return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img">${gy}${gx}${paths}</svg>`;
 }
 
-let S,N,L,SL,TK,RO,H={};
+let S,N,L,SL,TK,RO,AN,H={};
 async function boot(){
-  [S,N,L,SL,TK,RO]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster')]);
+  [S,N,L,SL,TK,RO,AN]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster'),api('analytics')]);
   H.GLOBAL=await api('holdings_GLOBAL')||[]; H.INDO=await api('holdings_INDO')||[];
   if(!S){document.getElementById('sub').textContent='dashboard data not published yet — run scripts/dashboard_push.py';return;}
   renderTop(); renderBanners(); renderStrip();
   renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
-  renderTotal(); renderDiag();
+  renderTotal(); renderAnalytics(); renderDiag();
   if(!curTab)curTab='reports'; tabs(curTab);
   setTimeout(boot,300000);            // refresh every 5 min
 }
@@ -330,6 +335,34 @@ function renderTotal(){
   document.getElementById('chTotal').innerHTML=t.length<2
     ?'<div class="muted small">consolidated series appears once both books print an official mark the same day</div>'
     :chart(t.map(r=>String(r.date).slice(5)),[{name:'Total',color:'#1A2230',vals:t.map(r=>r.nav_usd)}],{h:220,fmtY:v=>'$'+fmt0(v)});
+}
+
+function renderAnalytics(){
+  const el=document.getElementById('analytics'); if(!el)return;
+  if(!AN||!AN.books){el.innerHTML='<div class="small muted">analytics not published yet</div>';return;}
+  const anyLow=Object.values(AN.books).some(b=>b.metrics&&b.metrics.low_n);
+  document.getElementById('anNote').textContent=anyLow?`· ${Object.values(AN.books)[0].metrics.n_obs} obs — annualized figures not yet meaningful (need ${AN.method.min_obs_for_stable_stats}+)`: `· ${Object.values(AN.books)[0].metrics.n_obs} obs`;
+  const fm=(v,suf='')=>v==null?'—':`${v>0?'+':''}${fmt(v)}${suf}`;
+  const row=(k,v)=>`<tr><td class="muted" style="padding:2px 0">${k}</td><td class="num mono">${v}</td></tr>`;
+  el.innerHTML=['GLOBAL','INDO'].map(b=>{
+    const d=AN.books[b]||{},m=d.metrics||{},att=d.attribution||[];
+    const attRows=att.length?att.map(a=>`<tr><td class="muted" style="padding:2px 0">${esc(a.bucket)}</td><td class="num mono ${cls(a.contribution_pp)}">${fm(a.contribution_pp,'pp')}</td></tr>`).join(''):row('—','no contributions yet');
+    return `<div class="diag"><h4>${bookName(b)}</h4>
+      <div class="small muted" style="margin:2px 0 8px">benchmark: ${esc(d.benchmark||'—')} · rf ${fmt(m.rf_annual_pct)}%</div>
+      <table style="width:100%;font-size:13px">
+        ${row('Return (cum / ann)',`${fm(m.cum_return_pct,'%')} / ${fm(m.ann_return_pct,'%')}${m.low_n?' <span class=muted>*</span>':''}`)}
+        ${row('Benchmark (cum)',fm(m.bench_cum_return_pct,'%'))}
+        ${row('Active return',`<span class="${cls(m.active_cum_pp)}">${fm(m.active_cum_pp,'pp')}</span>`)}
+        ${row('Volatility (ann)',fm(m.ann_vol_pct,'%'))}
+        ${row('Sharpe / Sortino',`${fm(m.sharpe)} / ${fm(m.sortino)}`)}
+        ${row('Beta / correlation',`${fm(m.beta)} / ${fm(m.correlation)}`)}
+        ${row("Jensen's alpha (ann)",`<span class="${cls(m.jensen_alpha_ann_pct)}">${fm(m.jensen_alpha_ann_pct,'%')}</span>`)}
+        ${row('Tracking error / IR',`${fm(m.tracking_error_ann_pct,'%')} / ${fm(m.info_ratio)}`)}
+        ${row('Max drawdown',fm(m.max_drawdown_pct,'%'))}
+      </table>
+      <h4 style="margin-top:10px">Attribution <span class="small muted">(pp of initial capital)</span></h4>
+      <table style="width:100%;font-size:13px">${attRows}</table></div>`;
+  }).join('');
 }
 
 function renderDiag(){
