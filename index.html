@@ -152,15 +152,16 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     </div>
   </div>
   <div class="tabrow">
-    <button class="wstab on">Fund Monitor</button>
-    <button class="wstab">North Book</button>
-    <button class="wstab">South Book</button>
+    <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
+    <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
+    <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
   </div>
 </div></header>
 
 <div class="wrap">
   <div class="statusline" id="banners"></div>
 
+  <div id="view-monitor">
   <div class="strip" id="strip"></div>
 
   <div class="grid">
@@ -210,6 +211,9 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
       </div>
     </div>
   </div>
+  </div>
+
+  <div id="view-book" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
     investment advice. Prices via public feeds; ⏸ marks stale data held at last good mark.
@@ -300,7 +304,138 @@ async function boot(){
   renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
   renderTotal(); renderAnalytics(); renderDiag();
   if(!curTab)curTab='reports'; tabs(curTab);
+  route();
   setTimeout(boot,300000);            // refresh every 5 min
+}
+
+// ---- workspace routing (Fund Monitor / North Book / South Book) ----
+const BOOK_OF={north:'GLOBAL',south:'INDO'};
+function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
+function route(){
+  const h=(location.hash||'#monitor').slice(1);
+  const cur=BOOK_OF[h]?h:'monitor';
+  ['monitor','north','south'].forEach(k=>{
+    const b=document.getElementById('ws-'+k); if(b)b.className='wstab'+(k===cur?' on':'');});
+  document.getElementById('view-monitor').style.display=cur==='monitor'?'':'none';
+  document.getElementById('view-book').style.display=cur==='monitor'?'none':'';
+  if(cur!=='monitor'&&S)renderBookView(BOOK_OF[cur]);
+}
+window.addEventListener('hashchange',route);
+
+async function renderBookView(b){
+  const el=document.getElementById('view-book');
+  const s=S.books[b], ser=(N&&N[b])||[], pm=pmPersona(b);
+  const d=(AN&&AN.books&&AN.books[b])||{}, m=d.metrics||{};
+  const cashPct=s.nav?fmt(s.cash/s.nav*100,1):null;
+  const si=s.since_inception_pct;
+  const perf=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
+    chart(ser.map(r=>String(r.date).slice(5)),
+      [{name:'Fund',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
+       {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
+      {h:250,fmtY:v=>fmt(v,1),fill:true,pills:true});
+  const raw=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
+    chart(ser.map(r=>String(r.date).slice(5)),
+      [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_ccy)}],
+      {h:160,fmtY:v=>fmt0(v),fill:true,pills:true});
+  const hs=H[b]||[];
+  const hrows=hs.map(h2=>`<tr class="${h2.stale?'stale':''}">
+    <td class="mono">${esc(h2.ticker)}</td><td>${esc(h2.instrument)}</td>
+    <td class="num mono">${fmt0(h2.qty)}</td>
+    <td class="num mono">${fmt(h2.price,h2.ccy==='IDR'?0:2)}</td>
+    <td class="num mono">${fmt0(h2.mv)}</td>
+    <td class="num mono ${cls(h2.pnl_pct)}">${pct(h2.pnl_pct)}</td></tr>`).join('')
+    ||`<tr><td colspan="6" class="muted">No positions yet — cash is a position.</td></tr>`;
+  const cell=(k,v,c='')=>`<div class="cell"><div class="k">${k}</div><div class="v mono ${c}">${v}</div></div>`;
+  el.innerHTML=`
+    <div class="panel" style="margin-top:8px">
+      <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div>
+        <h2>${esc(bookName(b))}</h2><span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}
+        <span class="aux muted small" style="margin-left:auto">${pm?esc(pm)+' · PM':''} · marked ${esc(s.mark||'—')} · ${esc(String(s.asof||'').slice(0,16))}</span></div>
+      <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}<span class="chg ${cls(si)}">${pct(si)}</span></div>
+      <div class="govnote">${govNote()}</div>
+    </div>
+    <div class="strip" style="grid-template-columns:repeat(6,1fr)">
+      ${cell('Since inception',pct(si),cls(si))}
+      ${cell('vs benchmark',alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp',cls(alphaPP(s)))}
+      ${cell('Benchmark (cum)',pct(s.bench_since_inception_pct),'')}
+      ${cell('Cash %',cashPct==null?'—':cashPct+'%','')}
+      ${cell('Names',String(s.n_names||0),'')}
+      ${cell('Drawdown',s.drawdown_pct==null?'—':fmt(s.drawdown_pct)+'%',s.drawdown_pct<0?'down':'')}
+    </div>
+    <div class="grid" style="grid-template-columns:1.6fr 1fr">
+      <div class="col">
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Performance — fund vs benchmark<span class="aux">total-return · both series rebased to 100 at inception</span></div>
+          <div class="pbody">
+            <div class="legend"><span style="color:var(--north)">Fund (inception=100)</span><span style="color:var(--bench)">Benchmark (inception=100)</span></div>
+            ${perf}
+          </div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>NAV (${esc(s.ccy||'')})<span class="aux">book currency, official + indicative marks</span></div>
+          <div class="pbody">${raw}</div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Holdings<span class="aux">${hs.length} position${hs.length===1?'':'s'}</span></div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th>
+            <th class="num">Qty</th><th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
+            <tbody>${hrows}</tbody></table></div></div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Trades</div>
+          <div class="pbody flush" id="bkTrades"><div class="item muted">Loading…</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Analytics &amp; attribution<span class="aux">${m.low_n?esc(m.n_obs+' obs — low sample'):''}</span></div>
+          <div class="pbody">${anBlock(b)}</div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Mandate &amp; risk</div>
+          <div class="pbody">
+            <table style="font-size:11.5px">
+              <tr><td class="muted" style="padding:2.5px 0">Benchmark</td><td class="num">${esc(d.benchmark||'—')}</td></tr>
+              <tr><td class="muted" style="padding:2.5px 0">Risk-free proxy</td><td class="num mono">${fmt(m.rf_annual_pct)}%</td></tr>
+              <tr><td class="muted" style="padding:2.5px 0">Governor</td><td class="num">${govLabel((s.governor||{}).state||'UNKNOWN')} · ${govNote()||'—'}</td></tr>
+              <tr><td class="muted" style="padding:2.5px 0">Gross exposure</td><td class="num mono">${s.gross_exposure_pct==null?'—':fmt(s.gross_exposure_pct)+'%'}</td></tr>
+              <tr><td class="muted" style="padding:2.5px 0">Drawdown from peak</td><td class="num mono">${s.drawdown_pct==null?'—':fmt(s.drawdown_pct)+'%'}</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Decisions</div>
+          <div class="pbody flush feed" id="bkDecisions" style="max-height:420px"><div class="item muted">Loading…</div></div>
+        </div>
+        <div class="panel">
+          <div class="ptitle"><span class="dot"></span>Theses</div>
+          <div class="pbody flush feed" id="bkTheses" style="max-height:560px"><div class="item muted">Loading…</div></div>
+        </div>
+      </div>
+    </div>`;
+  const tr=(await api('trades')||[]).filter(t=>t.book===b);
+  const trows=tr.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
+    <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
+    <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${fmt(t.price,4)}</td>
+    <td class="num mono ${cls(t.cash_delta)}">${fmt(t.cash_delta)}</td></tr>`).join('');
+  const trEl=document.getElementById('bkTrades');
+  if(trEl)trEl.innerHTML=trows?`<div class="scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Ticker</th>
+    <th class="num">Qty</th><th class="num">Price</th><th class="num">Cash Δ</th></tr></thead><tbody>${trows}</tbody></table></div>`
+    :'<div class="item muted">No trades in this book yet.</div>';
+  const dec=((await api('decisions'))||[]).filter(x=>(x.meta||{}).book===b).slice(0,12);
+  const deEl=document.getElementById('bkDecisions');
+  if(deEl)deEl.innerHTML=dec.map(x=>{const mm=x.meta||{};return `<div class="item"><div class="meta">
+    <span>${esc((mm.date||'').slice(0,10))}</span>${mm.kind?`<span class="tag">${esc(mm.kind)}</span>`:''}
+    <span>${esc(mm.title||x.file)}</span>${x.persona?`<span>${who(x.persona,'')}</span>`:''}</div>
+    <div class="body">${md(x.body)}</div></div>`;}).join('')||'<div class="item muted">No decisions journaled for this book yet.</div>';
+  const th=((await api('theses'))||[]).filter(x=>(x.meta||{}).book===b).slice(0,12);
+  const thEl=document.getElementById('bkTheses');
+  if(thEl)thEl.innerHTML=th.map(x=>{const mm=x.meta||{},ex=x.excerpt||{};return `<div class="item"><div class="meta">
+    <span class="mono">${esc(mm.id||x.file)}</span><span>${esc(mm.ticker||'')}</span>
+    <span class="tag">${esc(mm.status||'')}</span>${mm.verdict?`<span class="tag">${esc(mm.verdict)}</span>`:''}
+    ${mm.sleeve?`<span class="tag">${esc(mm.sleeve)}</span>`:''}</div>
+    ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}</div>`;}).join('')
+    ||'<div class="item muted">No theses for this book yet.</div>';
 }
 
 function renderTop(){
@@ -376,7 +511,7 @@ function renderBook(b,el){
     <div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th><th class="num">Qty</th>
       <th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="legend"><span style="color:var(--north)">NAV (idx)</span><span style="color:var(--bench)">Benchmark</span></div>
+    <div class="legend"><span style="color:var(--north)">Fund (inception=100)</span><span style="color:var(--bench)">Benchmark (inception=100)</span></div>
     <div style="padding:2px 10px 10px">${miniChart(b)}</div>`;
 }
 function miniChart(b){
@@ -399,12 +534,14 @@ function renderAnalytics(){
   if(!AN||!AN.books){el.innerHTML='<div class="small muted">analytics not published yet</div>';return;}
   const anyLow=Object.values(AN.books).some(b=>b.metrics&&b.metrics.low_n);
   document.getElementById('anNote').textContent=anyLow?`${Object.values(AN.books)[0].metrics.n_obs} obs — annualized figures not yet meaningful (need ${AN.method.min_obs_for_stable_stats}+)`:`${Object.values(AN.books)[0].metrics.n_obs} obs`;
+  el.innerHTML=['GLOBAL','INDO'].map(anBlock).join('');
+}
+function anBlock(b){
   const fm=(v,suf='')=>v==null?'—':`${v>0?'+':''}${fmt(v)}${suf}`;
   const row=(k,v)=>`<tr><td class="muted" style="padding:2.5px 0;border-bottom:1px dotted var(--hair)">${k}</td><td class="num mono" style="border-bottom:1px dotted var(--hair)">${v}</td></tr>`;
-  el.innerHTML=['GLOBAL','INDO'].map(b=>{
-    const d=AN.books[b]||{},m=d.metrics||{},att=d.attribution||[];
-    const attRows=att.length?att.map(a=>`<tr><td class="muted" style="padding:2.5px 0;border-bottom:1px dotted var(--hair)">${esc(a.bucket)}</td><td class="num mono ${cls(a.contribution_pp)}" style="border-bottom:1px dotted var(--hair)">${fm(a.contribution_pp,'pp')}</td></tr>`).join(''):row('—','no contributions yet');
-    return `<div class="diag"><h4>${bookName(b)}</h4>
+  const d=(AN&&AN.books&&AN.books[b])||{},m=d.metrics||{},att=d.attribution||[];
+  const attRows=att.length?att.map(a=>`<tr><td class="muted" style="padding:2.5px 0;border-bottom:1px dotted var(--hair)">${esc(a.bucket)}</td><td class="num mono ${cls(a.contribution_pp)}" style="border-bottom:1px dotted var(--hair)">${fm(a.contribution_pp,'pp')}</td></tr>`).join(''):row('—','no contributions yet');
+  return `<div class="diag"><h4>${bookName(b)}</h4>
       <div class="small muted" style="margin:1px 0 6px">benchmark: ${esc(d.benchmark||'—')} · rf ${fmt(m.rf_annual_pct)}%</div>
       <table style="font-size:11.5px">
         ${row('Return (cum / ann)',`${fm(m.cum_return_pct,'%')} / ${fm(m.ann_return_pct,'%')}${m.low_n?' <span class=muted>*</span>':''}`)}
@@ -419,7 +556,6 @@ function renderAnalytics(){
       </table>
       <h4 style="margin-top:8px">Attribution <span class="small muted">(pp of initial capital)</span></h4>
       <table style="font-size:11.5px">${attRows}</table></div>`;
-  }).join('');
 }
 
 function renderDiag(){
