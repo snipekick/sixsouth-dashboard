@@ -155,6 +155,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
     <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
+    <button class="wstab" id="ws-structure" onclick="go('structure')">Structure</button>
   </div>
 </div></header>
 
@@ -214,6 +215,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   </div>
 
   <div id="view-book" style="display:none"></div>
+  <div id="view-structure" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
     investment advice. Prices via public feeds; ⏸ marks stale data held at last good mark.
@@ -313,12 +315,14 @@ const BOOK_OF={north:'GLOBAL',south:'INDO'};
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
 function route(){
   const h=(location.hash||'#monitor').slice(1);
-  const cur=BOOK_OF[h]?h:'monitor';
-  ['monitor','north','south'].forEach(k=>{
+  const cur=(BOOK_OF[h]||h==='structure')?h:'monitor';
+  ['monitor','north','south','structure'].forEach(k=>{
     const b=document.getElementById('ws-'+k); if(b)b.className='wstab'+(k===cur?' on':'');});
   document.getElementById('view-monitor').style.display=cur==='monitor'?'':'none';
-  document.getElementById('view-book').style.display=cur==='monitor'?'none':'';
-  if(cur!=='monitor'&&S)renderBookView(BOOK_OF[cur]);
+  document.getElementById('view-book').style.display=BOOK_OF[cur]?'':'none';
+  document.getElementById('view-structure').style.display=cur==='structure'?'':'none';
+  if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur]);
+  if(cur==='structure')renderStructureView();
 }
 window.addEventListener('hashchange',route);
 
@@ -437,6 +441,86 @@ async function renderBookView(b){
     ${mm.sleeve?`<span class="tag">${esc(mm.sleeve)}</span>`:''}</div>
     ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}</div>`;}).join('')
     ||'<div class="item muted">No theses for this book yet.</div>';
+}
+
+// ---- Structure view: fund architecture, workflow, governance ----
+let ST=null;
+async function renderStructureView(){
+  const el=document.getElementById('view-structure'); if(!el)return;
+  if(!ST)ST=await api('structure');
+  const st=ST||{}, px=(L&&L.limits&&L.limits.pipeline)||{};
+  const cap=px.max_new_theses_per_book_per_week!=null?px.max_new_theses_per_book_per_week:3;
+  const bx=(x,y,w,t1,t2,stroke)=>`<rect x="${x}" y="${y}" width="${w}" height="36" rx="2" fill="var(--panel2)" stroke="${stroke||'var(--hair)'}"/>`+
+    `<text x="${x+w/2}" y="${y+(t2?15:21)}" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="700">${t1}</text>`+
+    (t2?`<text x="${x+w/2}" y="${y+28}" text-anchor="middle" fill="var(--muted)" font-size="8.5">${t2}</text>`:'');
+  const ln=(x1,y1,x2,y2,dash)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--dim)" stroke-width="1" ${dash?'stroke-dasharray="3 3"':''} marker-end="url(#ah)"/>`;
+  const B=[[10,'Screens','deterministic'],[132,'IDEATION','Mon–Fri · cards'],[254,'Triage (Sat)',`≤${cap}/book/wk`],
+    [376,'Analyst draft','estimates first','var(--north)'],[498,'Bear attack','forces revision','var(--north)'],
+    [620,'Judge','kill is final','var(--north)'],[742,'Risk check','VETO absolute'],[864,'PM sizing','deviate down only','var(--north)']];
+  const C=[[10,'Order ticket','limit + chase cap'],[132,'Fill next open','deterministic','var(--up)'],[254,'Monitor','kill criteria'],
+    [376,'Exit','cap-exempt'],[498,'Post-mortem','root cause']];
+  let svg=`<svg viewBox="0 0 980 250" class="chart" role="img" style="max-width:1100px">`+
+    `<defs><marker id="ah" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="var(--dim)"/></marker></defs>`+
+    bx(320,6,340,'Macro desk — Severin (global) + Ferrand (FX/transmission)','state/macro_regime.md · regime, tilts, markers frontmatter','var(--south)')+
+    ln(400,42,432,68,1)+ln(490,42,490,60,1)+ln(580,42,912,68,1)+ln(360,42,190,68,1)+
+    `<text x="497" y="58" fill="var(--dim)" font-size="8.5">feeds analyst · Bear · PM · Voss · IDEATION packets</text>`+
+    B.map(b=>bx(b[0],70,108,b[1],b[2],b[3])).join('')+
+    B.slice(0,-1).map(b=>ln(b[0]+108,88,b[0]+122,88)).join('')+
+    `<polyline points="918,106 918,128 64,128 64,142" fill="none" stroke="var(--dim)" stroke-width="1"/>`+ln(64,142,64,148)+
+    C.map(b=>bx(b[0],150,108,b[1],b[2],b[3])).join('')+
+    C.slice(0,-1).map(b=>ln(b[0]+108,168,b[0]+122,168)).join('')+
+    bx(620,150,230,'Lessons → agent skill files','one lesson, one commit — the learning loop')+
+    ln(606,168,618,168)+
+    `<polyline points="735,150 735,220 20,220" fill="none" stroke="var(--dim)" stroke-width="1" stroke-dasharray="3 3"/>`+
+    `<text x="24" y="236" fill="var(--dim)" font-size="8.5">learned rules feed back into every desk file (post-mortem agent is the sole editor); losses AND lucky wins both teach</text>`+
+    `</svg>`;
+  const schedRows=(st.schedule||[]).map(r=>`<tr><td class="mono">${esc(r.job)}</td><td>${esc(r.session||'—')}</td>
+    <td>${esc(r.days)}</td><td class="mono">${esc((r.times_wib||[]).join(' · ')||'—')}</td></tr>`).join('');
+  const sess=st.sessions||{};
+  const sessRows=Object.keys(sess).map(k=>{const v=sess[k]||{};return `<tr><td class="mono">${esc(k)}</td>
+    <td>${esc(v.tier||'')}</td><td class="num mono">${fmt0(v.budget_tokens)}</td><td class="num mono">${esc(String(v.max_turns||''))}</td>
+    <td class="num mono">${esc(String(v.timeout_minutes||''))}m</td><td>${v.always_llm?'always':'quiet-skip'}</td>
+    <td>${esc(v.escalate_to||'—')}</td></tr>`;}).join('');
+  const agents=st.agents||{};
+  const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b></td>
+    <td class="mono">${esc(e.role||'')}</td><td><span class="tag">${esc(agents[e.role]||e.tier||'')}</span></td>
+    <td class="muted">${esc(e.authority||e.note||'')}</td></tr>`).join('');
+  el.innerHTML=`
+    <div class="grid" style="grid-template-columns:1fr;margin-top:8px">
+      <div class="panel"><div class="ptitle"><span class="dot"></span>Idea pipeline — how the fund works<span class="aux">every stage writes to disk before the next begins</span></div>
+        <div class="pbody">${svg}</div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1.2fr 1fr">
+      <div class="col">
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Session schedule (WIB) — launchd, unattended</div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Job</th><th>Session</th><th>Days</th><th>Times</th></tr></thead>
+            <tbody>${schedRows||'<tr><td colspan=4 class="muted">structure.json not published yet</td></tr>'}</tbody></table></div></div></div>
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Session envelopes<span class="aux">budgets are output-scale; wrapper enforces turns + wall-clock</span></div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Session</th><th>Tier</th><th class="num">Budget</th><th class="num">Turns</th><th class="num">Timeout</th><th>LLM</th><th>Escalates to</th></tr></thead>
+            <tbody>${sessRows}</tbody></table></div></div></div>
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Desk roster &amp; authority</div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
+            <tbody>${rosterRows||'<tr><td colspan=4 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
+      </div>
+      <div class="col">
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Macro desk — information flow</div>
+          <div class="pbody"><div class="item" style="border:none;padding:0">
+            <div class="body">
+              <p><strong>One artifact, many consumers.</strong> Severin (MACRO_GLOBAL) writes the global blocks — rates path, USD, China impulse, commodities, risk appetite; Ferrand (MACRO_FX) writes FX/Indonesia transmission and co-signs the synthesis. Output: <code>state/macro_regime.md</code> — ≤600 words plus machine frontmatter (regime · risk appetite · tilts · trip markers).</p>
+              <p><strong>Trigger-driven cadence.</strong> Full rebuild only on the first Saturday or when a pre-registered marker trips (each marker names its level at write time). Other Saturdays: a ≤150-word delta. Weekday sessions pay zero macro tokens — they read the frontmatter only.</p>
+              <p><strong>Where it binds.</strong> Idea cards must declare WITH / NEUTRAL / AGAINST the desk's tilts (AGAINST must name its variant); analysts get the memo for variant perception; Bear uses it as ammunition; PMs size to the frontmatter call — on desk disagreement, the more conservative call governs.</p>
+            </div></div></div></div>
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Governance</div>
+          <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body"><ul>
+            <li><strong>Supremacy:</strong> constitution ▸ CLAUDE.md ▸ runbooks ▸ desk files ▸ agent judgment (content only, never process).</li>
+            <li><strong>Integrity gate:</strong> out-of-band SHA-256 manifest over law + engine; any diff fail-closes the next session.</li>
+            <li><strong>Deterministic first:</strong> prices, NAV, fills, risk limits, analytics are scripts; the LLM does theses, attacks, verdicts, sizing judgment.</li>
+            <li><strong>Anti-bias law:</strong> estimates committed before market data; variant perception mandatory; every thesis Bear-attacked; Judge kill is final.</li>
+            <li><strong>Caps:</strong> ≤${cap} deep-dives/book/week · ≤12 idea cards/book · drawdown governors ${govNote()||'—'}.</li>
+            <li><strong>Audit trail:</strong> append-only ledger is the source of truth; every session commits to git; lessons commit one-by-one.</li>
+          </ul></div></div></div></div>
+      </div>
+    </div>`;
 }
 
 function renderTop(){

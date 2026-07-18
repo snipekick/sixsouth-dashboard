@@ -1,0 +1,130 @@
+{
+  "asof": "2026-07-18T16:23:04+07:00",
+  "schedule": [
+    {
+      "job": "com.buyside.dashboard",
+      "session": "dashboard",
+      "days": "always-on",
+      "times_wib": []
+    },
+    {
+      "job": "com.buyside.ideation",
+      "session": "IDEATION",
+      "days": "Mon\u2013Fri",
+      "times_wib": [
+        "11:00"
+      ]
+    },
+    {
+      "job": "com.buyside.idxclose",
+      "session": "IDX_CLOSE",
+      "days": "Mon\u2013Fri",
+      "times_wib": [
+        "16:00"
+      ]
+    },
+    {
+      "job": "com.buyside.idxpreopen",
+      "session": "IDX_PREOPEN",
+      "days": "Mon\u2013Fri",
+      "times_wib": [
+        "08:45"
+      ]
+    },
+    {
+      "job": "com.buyside.usclose",
+      "session": "US_CLOSE",
+      "days": "Tue\u2013Sat",
+      "times_wib": [
+        "06:30"
+      ]
+    },
+    {
+      "job": "com.buyside.uspreopen",
+      "session": "US_PREOPEN",
+      "days": "Mon\u2013Fri",
+      "times_wib": [
+        "20:00"
+      ]
+    },
+    {
+      "job": "com.buyside.weekly",
+      "session": "WEEKLY_DEEP",
+      "days": "Sat",
+      "times_wib": [
+        "10:00"
+      ]
+    }
+  ],
+  "sessions": {
+    "US_CLOSE": {
+      "tier": "cheap",
+      "budget_tokens": 60000,
+      "max_turns": 25,
+      "timeout_minutes": 30,
+      "always_llm": false,
+      "escalate_to": "frontier"
+    },
+    "IDX_PREOPEN": {
+      "tier": "cheap",
+      "budget_tokens": 40000,
+      "max_turns": 18,
+      "timeout_minutes": 30,
+      "always_llm": false,
+      "escalate_to": "frontier"
+    },
+    "IDX_CLOSE": {
+      "tier": "cheap",
+      "budget_tokens": 80000,
+      "max_turns": 25,
+      "timeout_minutes": 30,
+      "always_llm": true,
+      "escalate_to": "frontier"
+    },
+    "US_PREOPEN": {
+      "tier": "cheap",
+      "budget_tokens": 40000,
+      "max_turns": 18,
+      "timeout_minutes": 30,
+      "always_llm": false,
+      "escalate_to": "frontier"
+    },
+    "IDEATION": {
+      "tier": "mid",
+      "budget_tokens": 150000,
+      "max_turns": 80,
+      "timeout_minutes": 60,
+      "always_llm": true,
+      "escalate_to": null
+    },
+    "WEEKLY_DEEP": {
+      "tier": "mid",
+      "budget_tokens": 900000,
+      "max_turns": 220,
+      "timeout_minutes": 180,
+      "always_llm": true,
+      "escalate_to": null
+    },
+    "MONTHLY_IC": {
+      "tier": "mid",
+      "budget_tokens": 300000,
+      "max_turns": 140,
+      "timeout_minutes": 120,
+      "always_llm": true,
+      "escalate_to": null
+    }
+  },
+  "agents": {
+    "ANALYST_GLOBAL": "mid",
+    "ANALYST_INDO": "mid",
+    "MACRO_FX": "mid",
+    "MACRO_GLOBAL": "mid",
+    "BEAR": "frontier",
+    "JUDGE": "frontier",
+    "RISK_OFFICER": "mid",
+    "PM_GLOBAL": "frontier",
+    "PM_INDO": "frontier",
+    "POSTMORTEM": "frontier",
+    "OPS": "cheap"
+  }
+}
