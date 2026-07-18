@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Six South · 6S</title>
+<style>
+/* Self-contained: no CDN scripts, no external fonts, no remote assets.
+   All dynamic content is HTML-escaped in JS (stored-XSS defense, findings state-data-07). */
+:root{
+  --bg:#F5F6F4; --panel:#FFFFFF; --ink:#1A2230; --muted:#5C6675;
+  --hair:#E3E6E2; --north:#2352C9; --south:#9C7A1E;
+  --up:#0E8A5A; --down:#C2402F; --chip:#EEF0EC;
+  --amber-bg:#FCF6E8; --amber-hair:#EBD9A8; --amber-ink:#7A5B12;
+  --serif:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","IBM Plex Mono",Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.mono{font-family:var(--mono)}
+.small{font-size:12px}
+.muted{color:var(--muted)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+header{border-bottom:1px solid var(--hair);background:var(--panel)}
+.mast{display:flex;align-items:baseline;justify-content:space-between;padding:22px 0 14px;flex-wrap:wrap;gap:8px}
+.mast h1{font:400 34px/1 var(--serif);letter-spacing:.2px}
+.mast h1 .sh{font-size:16px;color:var(--muted);margin-left:8px;letter-spacing:.08em}
+.mast .sub{color:var(--muted);font-size:13px}
+.badges{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{background:var(--chip);border:1px solid var(--hair);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--muted);white-space:nowrap}
+.chip.alert{background:#FCEFEA;border-color:#F0CFC5;color:var(--down)}
+.chip.warn{background:var(--amber-bg);border-color:var(--amber-hair);color:var(--amber-ink)}
+.chip.ok{background:#E9F5EE;border-color:#BFE3CE;color:var(--up)}
+
+.banners{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.banner{flex:1 1 240px;border:1px solid var(--hair);background:var(--panel);border-radius:10px;padding:10px 14px;font-size:13px}
+.banner.warn{background:var(--amber-bg);border-color:var(--amber-hair)}
+.banner .lab{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.banner .val{margin-top:2px}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:10px;overflow:hidden;margin:16px 0}
+.strip .cell{background:var(--panel);padding:14px 16px}
+.cell .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cell .v{font-size:22px;margin-top:2px}
+.up{color:var(--up)} .down{color:var(--down)}
+
+.card{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:16px;margin:16px 0}
+.card h3{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.card .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-bottom:6px}
+.card .legend span::before{content:"";display:inline-block;width:14px;height:0;border-top:2px solid;margin-right:5px;vertical-align:middle}
+
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;margin:16px 0}
+.twin::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--hair)}
+.book{padding:0 18px}
+.book:first-child{padding-left:0}
+.book:last-child{padding-right:0}
+.bookhead{display:flex;align-items:center;gap:10px;margin-bottom:2px;flex-wrap:wrap}
+.bookmark{width:10px;height:26px;border-radius:3px}
+.book.north .bookmark{background:var(--north)}
+.book.south .bookmark{background:var(--south)}
+.bookhead h2{font-size:17px;font-weight:600}
+.bookhead .ccy{color:var(--muted);font-size:12px}
+.pm{font-size:12px;color:var(--muted);margin-bottom:8px}
+.bignav{font-size:30px;margin:2px 0 6px}
+.govnote{font-size:11px;color:var(--muted);margin-bottom:8px}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.kv div{background:var(--chip);border-radius:8px;padding:8px 10px}
+.kv .k{font-size:11px;color:var(--muted)}
+.kv .v{font-size:15px}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{color:var(--muted);font-weight:500;text-align:left;padding:6px 8px;border-bottom:1px solid var(--hair)}
+td{padding:7px 8px;border-bottom:1px solid var(--hair)}
+td.num,th.num{text-align:right}
+tr:last-child td{border-bottom:none}
+.stale{opacity:.55}
+.stale td:first-child::after{content:" \23F8";font-size:11px}
+.scroll{overflow-x:auto}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.diag h4{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:0 0 6px}
+.roster{display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;font-size:12.5px}
+.roster .r{display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px dotted var(--hair)}
+.roster .r b{font-weight:600}
+
+.chart{width:100%;height:auto;display:block}
+.chart .axl{fill:var(--muted);font-size:10px;font-family:var(--mono)}
+.chart .grid{stroke:var(--hair);stroke-width:1}
+
+.tabs{display:flex;gap:6px;margin:24px 0 12px;flex-wrap:wrap}
+.tab{border:1px solid var(--hair);background:var(--panel);border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer;color:var(--muted)}
+.tab.on{color:var(--ink);border-color:var(--ink)}
+.feed{display:grid;gap:10px;margin-bottom:40px}
+.item{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:14px 16px}
+.item .meta{font-size:12px;color:var(--muted);margin-bottom:6px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.item .who{color:var(--ink);font-weight:600}
+.item .body{font-size:14px}
+.item .body h4{font-size:14px;margin:8px 0 4px}
+.item .body p{margin:6px 0}
+.item .body ul{margin:6px 0 6px 18px}
+.item .body code{font-family:var(--mono);font-size:12.5px;background:var(--chip);padding:1px 4px;border-radius:4px}
+.dotN{color:var(--north)} .dotS{color:var(--south)}
+.tag{background:var(--chip);border:1px solid var(--hair);border-radius:6px;padding:1px 7px;font-size:11px}
+footer{color:var(--muted);font-size:12px;padding:20px 0 40px;border-top:1px solid var(--hair)}
+@media (max-width:840px){
+  .twin{grid-template-columns:1fr}
+  .twin::before{display:none}
+  .book{padding:0;border-top:1px solid var(--hair);margin-top:16px;padding-top:16px}
+  .book:first-child{border-top:none;margin-top:0;padding-top:0}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .grid2,.roster{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap mast">
+  <div>
+    <h1>Six South<span class="sh">6S</span></h1>
+    <div class="sub" id="sub">paper · loading…</div>
+  </div>
+  <div class="badges">
+    <span class="chip" id="flow">flow —</span>
+    <span class="chip" id="qc">QC —</span>
+    <span class="chip" id="mode">—</span>
+    <span class="chip" id="asof">—</span>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <div class="banners" id="banners"></div>
+
+  <div class="strip" id="strip"></div>
+
+  <div class="card">
+    <h3>Consolidated NAV (USD)</h3>
+    <div class="legend"><span style="color:#1A2230">Total NAV</span></div>
+    <div id="chTotal" class="muted small">—</div>
+  </div>
+
+  <div class="twin">
+    <section class="book north" id="bookG"></section>
+    <section class="book south" id="bookI"></section>
+  </div>
+
+  <div class="card">
+    <h3>Desk &amp; diagnostics</h3>
+    <div class="grid2">
+      <div class="diag"><h4>Roster</h4><div class="roster" id="roster"></div></div>
+      <div class="diag">
+        <h4>Sleeve hit rates</h4><div id="sleeves" class="small muted">—</div>
+        <h4 style="margin-top:12px">Token cost</h4><div id="tokens" class="small muted">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="feed" id="feed"></div>
+
+  <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
+    investment advice. Prices via public feeds; ⏸ marks stale data held at last good mark.
+    ^JKSE is a price index (South Book relative return is dividend-proxied in the engine).</footer>
+</div>
+
+<script>
+"use strict";
+// ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
+const qs=new URLSearchParams(location.search);
+if(qs.get('token')){ sessionStorage.setItem('dt',qs.get('token')); history.replaceState({},'',location.pathname); }
+const T=sessionStorage.getItem('dt');
+const api=n=>fetch('data/'+n+'.json').then(r=>r.ok?r.json():Promise.reject()).catch(()=>fetch('/api/'+n,{headers:T?{'X-Dash-Token':T}:{}}).then(r=>r.ok?r.json():null).catch(()=>null));
+
+// ---- formatting & safe rendering ----
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=(x,d=2)=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
+const fmt0=x=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:0});
+const pct=x=>x==null?'—':`${x>0?'+':''}${fmt(x)}%`;
+const cls=x=>x==null?'':(x>=0?'up':'down');
+// fund-minus-benchmark spread in pp; prefers the published field, falls back to computing it
+const alphaPP=s=>s.alpha_since_inception_pp!=null?s.alpha_since_inception_pp
+  :(s.since_inception_pct!=null&&s.bench_since_inception_pct!=null
+    ?Math.round((s.since_inception_pct-s.bench_since_inception_pct)*100)/100:null);
+const bookName=b=>(S&&S.display_books&&S.display_books[b])||b;
+function md(t){                         // escape-first mini markdown (no raw HTML ever)
+  if(!t)return'';
+  const inl=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');
+  let html='',list=false;
+  for(const raw of String(t).split(/\r?\n/)){
+    const line=raw.trim(); let m;
+    if(!line){ if(list){html+='</ul>';list=false;} continue; }
+    if((m=line.match(/^#{1,6}\s+(.*)$/))){ if(list){html+='</ul>';list=false;} html+=`<h4>${inl(m[1])}</h4>`; }
+    else if((m=line.match(/^[-*]\s+(.*)$/))){ if(!list){html+='<ul>';list=true;} html+=`<li>${inl(m[1])}</li>`; }
+    else { if(list){html+='</ul>';list=false;} html+=`<p>${inl(line)}</p>`; }
+  }
+  if(list)html+='</ul>';
+  return html;
+}
+
+// ---- inline SVG line chart (dependency-free) ----
+function chart(labels,datasets,o){
+  o=o||{}; const W=o.w||660,Hh=o.h||220,padL=52,padR=12,padT=8,padB=20;
+  const vals=[]; datasets.forEach(d=>d.vals.forEach(v=>{if(v!=null&&!isNaN(v))vals.push(v)}));
+  if(vals.length<2)return'<div class="muted small">not enough data yet</div>';
+  let lo=Math.min(...vals),hi=Math.max(...vals); if(lo===hi){lo-=1;hi+=1;}
+  const iw=W-padL-padR,ih=Hh-padT-padB,n=labels.length;
+  const X=i=>padL+(n<=1?iw/2:(i/(n-1))*iw);
+  const Y=v=>padT+(1-(v-lo)/(hi-lo))*ih;
+  let paths='';
+  datasets.forEach(d=>{
+    let seg=[],segs=[];
+    d.vals.forEach((v,i)=>{ if(v==null||isNaN(v)){ if(seg.length)segs.push(seg); seg=[]; } else seg.push(X(i).toFixed(1)+','+Y(v).toFixed(1)); });
+    if(seg.length)segs.push(seg);
+    segs.forEach(s=>paths+=`<polyline fill="none" stroke="${d.color}" stroke-width="1.6" ${d.dash?'stroke-dasharray="4 3"':''} points="${s.join(' ')}"/>`);
+  });
+  const gy=[hi,(hi+lo)/2,lo].map(v=>
+    `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${W-padR}" y2="${Y(v).toFixed(1)}" class="grid"/>`+
+    `<text x="${padL-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" class="axl">${o.fmtY?o.fmtY(v):fmt(v)}</text>`).join('');
+  const gx=`<text x="${padL}" y="${Hh-4}" class="axl">${esc(labels[0])}</text>`+
+           `<text x="${W-padR}" y="${Hh-4}" text-anchor="end" class="axl">${esc(labels[n-1])}</text>`;
+  return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img">${gy}${gx}${paths}</svg>`;
+}
+
+let S,N,L,SL,TK,RO,H={};
+async function boot(){
+  [S,N,L,SL,TK,RO]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster')]);
+  H.GLOBAL=await api('holdings_GLOBAL')||[]; H.INDO=await api('holdings_INDO')||[];
+  if(!S){document.getElementById('sub').textContent='dashboard data not published yet — run scripts/dashboard_push.py';return;}
+  renderTop(); renderBanners(); renderStrip();
+  renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
+  renderTotal(); renderDiag();
+  if(!curTab)curTab='reports'; tabs(curTab);
+  setTimeout(boot,300000);            // refresh every 5 min
+}
+
+function renderTop(){
+  document.getElementById('sub').textContent=`${S.tagline||''} · ${bookName('GLOBAL')} / ${bookName('INDO')} · inception ${S.inception||'—'}`;
+  document.getElementById('mode').textContent=String(S.mode||'paper').toUpperCase();
+  document.getElementById('asof').textContent=`as of ${String(S.asof||'').slice(0,16).replace('T',' ')} WIB`;
+  const qc=document.getElementById('qc'); qc.textContent=`QC ${S.qc}`; qc.className='chip'+(S.qc==='OK'?' ok':' alert');
+  const fr=S.flow_regime||{},fe=document.getElementById('flow');
+  fe.textContent=`flow: ${fr.regime||'—'}${fr.median_z_60d!=null?' z '+fr.median_z_60d:''}`;
+  fe.className='chip'+(fr.stale?'':(fr.regime==='FOREIGN OUTFLOW'?' alert':''));
+  fe.title=fr.asof?`foreign net-flow regime · ${fr.n_tickers} names · asof ${fr.asof}`:'flows unavailable';
+}
+
+function renderBanners(){
+  const b=[]; const hb=S.heartbeat||{}, ha=S.human_attention||{};
+  const seen=hb.age_hours!=null?`${fmt(hb.age_hours,1)} h ago`:'unknown';
+  b.push(`<div class="banner ${hb.stale?'warn':''}"><div class="lab">Desk last seen</div>
+    <div class="val">${esc(hb.session||'—')} · ${seen}${hb.llm_used===false?' · no-LLM session':''}
+    ${hb.stale?` <span class="tag">stale &gt; ${fmt(hb.warn_after_hours,0)}h</span>`:''}</div></div>`);
+  const oc=ha.open_count||0;
+  b.push(`<div class="banner ${oc>0?'warn':''}"><div class="lab">Human attention</div>
+    <div class="val">${oc===0?'none open':`${oc} open escalation${oc>1?'s':''}`}
+    ${oc>0&&ha.oldest_age_days!=null?` <span class="tag">oldest ${ha.oldest_age_days}d</span>`:''}
+    ${oc>0&&ha.newest_age_days!=null?` <span class="tag">newest ${ha.newest_age_days}d</span>`:''}</div></div>`);
+  const fr=S.flow_regime||{};
+  b.push(`<div class="banner"><div class="lab">Foreign flow regime</div>
+    <div class="val">${esc(fr.regime||'—')}${fr.breadth_pos_pct!=null?` · ${fmt(fr.breadth_pos_pct,0)}% names net-bought`:''}
+    ${fr.stale?' <span class="tag">stale</span>':(fr.asof?` <span class="tag">${esc(fr.asof)}</span>`:'')}</div></div>`);
+  document.getElementById('banners').innerHTML=b.join('');
+}
+
+function renderStrip(){
+  const g=S.books.GLOBAL,i=S.books.INDO;
+  const usd=(g.nav_usd||0)+(i.nav_usd||0);
+  const cells=[
+    ['Total NAV (USD)','$'+fmt0(usd),''],
+    [`${bookName('GLOBAL')} — since inception`,pct(g.since_inception_pct),cls(g.since_inception_pct)],
+    [`${bookName('INDO')} — since inception`,pct(i.since_inception_pct),cls(i.since_inception_pct)],
+    ['Benchmarks (N / S)',`${pct(g.bench_since_inception_pct)} / ${pct(i.bench_since_inception_pct)}`,'']];
+  document.getElementById('strip').innerHTML=cells.map(c=>
+    `<div class="cell"><div class="k">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}</div></div>`).join('');
+}
+
+// governor thresholds come from the published constitution snapshot — never hardcoded
+function govLabel(st){return{DEGROSS:'DE-GROSS',REVIEW:'REVIEW',RECOVERY:'RECOVERY',NONE:'steady',UNKNOWN:'gov —'}[st]||esc(st);}
+function govChip(b){
+  const s=S.books[b],g=s.governor||{},st=g.state||'UNKNOWN',dd=s.drawdown_pct;
+  const c=(st==='DEGROSS'||st==='REVIEW')?'chip alert':(st==='UNKNOWN'?'chip warn':'chip');
+  return `<span class="${c}" title="source: ${esc(g.source||'—')}">${govLabel(st)}${dd!=null?` · dd ${fmt(dd)}%`:''}</span>`;
+}
+function govNote(){
+  const dg=(L&&L.limits&&L.limits.drawdown_governors)||{};
+  if(dg.review_trigger_pct==null||dg.degross_trigger_pct==null)return'';
+  return `REVIEW ≤ ${fmt(dg.review_trigger_pct,0)}% · DE-GROSS ≤ ${fmt(dg.degross_trigger_pct,0)}%`;
+}
+function pmPersona(b){
+  if(!RO||!RO.roster)return'';
+  const e=RO.roster.find(x=>x.role==='PM_'+b); return e?e.persona:'';
+}
+function renderBook(b,el){
+  const s=S.books[b],hs=H[b]||[],col=b==='GLOBAL'?'north':'south',pm=pmPersona(b);
+  const rows=hs.map(h=>`<tr class="${h.stale?'stale':''}">
+    <td class="mono">${esc(h.ticker)}</td><td>${esc(h.instrument)}</td>
+    <td class="num mono">${fmt0(h.qty)}</td>
+    <td class="num mono">${fmt(h.price,h.ccy==='IDR'?0:2)}</td>
+    <td class="num mono">${fmt0(h.mv)}</td>
+    <td class="num mono ${cls(h.pnl_pct)}">${pct(h.pnl_pct)}</td></tr>`).join('')
+    ||`<tr><td colspan="6" class="muted">No positions yet — the fund is in its ramp phase. Cash is a position.</td></tr>`;
+  document.getElementById(el).innerHTML=`
+    <div class="bookhead"><div class="bookmark"></div><h2>${esc(bookName(b))}</h2>
+      <span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}</div>
+    <div class="pm">${pm?esc(pm)+' · ':''}${b==='GLOBAL'?'North Book (USD)':'South Book (IDR)'}</div>
+    <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}</div>
+    <div class="govnote">${govNote()}</div>
+    <div class="kv">
+      <div><div class="k">Since inception</div><div class="v mono ${cls(s.since_inception_pct)}">${pct(s.since_inception_pct)}</div></div>
+      <div><div class="k">vs benchmark</div><div class="v mono ${cls(alphaPP(s))}">${alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp'}</div></div>
+      <div><div class="k">Cash / names</div><div class="v mono">${fmt0(s.cash)} · ${s.n_names||0}</div></div>
+    </div>
+    <div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th><th class="num">Qty</th>
+      <th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="legend" style="margin-top:12px"><span style="color:${b==='GLOBAL'?'var(--north)':'var(--south)'}">NAV (idx)</span><span style="color:#9AA3AD">Benchmark</span></div>
+    ${miniChart(b)}`;
+}
+function miniChart(b){
+  const ser=(N&&N[b])||[]; if(ser.length<2)return'<div class="muted small">not enough NAV history yet</div>';
+  const col=b==='GLOBAL'?'#2352C9':'#9C7A1E';
+  return chart(ser.map(r=>String(r.date).slice(5)),
+    [{name:'NAV',color:col,vals:ser.map(r=>r.nav_idx)},
+     {name:'Benchmark',color:'#9AA3AD',dash:true,vals:ser.map(r=>r.bench_idx)}],
+    {h:180,fmtY:v=>fmt(v,0)});
+}
+function renderTotal(){
+  const t=(N&&N.USD_TOTAL)||[];
+  document.getElementById('chTotal').innerHTML=t.length<2
+    ?'<div class="muted small">consolidated series appears once both books print an official mark the same day</div>'
+    :chart(t.map(r=>String(r.date).slice(5)),[{name:'Total',color:'#1A2230',vals:t.map(r=>r.nav_usd)}],{h:220,fmtY:v=>'$'+fmt0(v)});
+}
+
+function renderDiag(){
+  // roster
+  const rr=(RO&&RO.roster)||[];
+  document.getElementById('roster').innerHTML=rr.map(e=>
+    `<div class="r"><span><b>${esc(e.persona)}</b> <span class="muted">${esc(e.role)}</span></span>
+      <span class="tag">${esc(e.tier||'')}</span></div>`).join('')||'<span class="muted small">roster unavailable</span>';
+  // sleeves
+  const se=document.getElementById('sleeves');
+  if(!SL||!SL.n){se.innerHTML='<span class="muted">no closed theses yet — hit rates populate as positions resolve.</span>';}
+  else{
+    const ov=SL.overall||{};
+    let rows=`<div class="r"><span><b>overall</b></span><span>${ov.n} · ${ov.hit_rate!=null?Math.round(ov.hit_rate*100)+'%':'—'}${ov.avg_realized_pct!=null?' · '+pct(ov.avg_realized_pct):''}</span></div>`;
+    const sl=SL.sleeves||{};
+    for(const k of Object.keys(sl)){const a=sl[k];
+      rows+=`<div class="r"><span>${esc(k)}</span><span>${a.n} · ${a.hit_rate!=null?Math.round(a.hit_rate*100)+'%':'—'}${a.avg_realized_pct!=null?' · '+pct(a.avg_realized_pct):''}</span></div>`;}
+    se.className='roster'; se.style.gridTemplateColumns='1fr'; se.innerHTML=rows;
+  }
+  // tokens
+  const te=document.getElementById('tokens');
+  if(!TK||!TK.available){te.innerHTML='<span class="muted">token log not populated yet.</span>';}
+  else{
+    const d7=TK.last_7d||{},d30=TK.last_30d||{};
+    const line=(lab,d)=>`<div class="r"><span>${lab}</span><span>${d.sessions||0} sess · ${fmt0(d.in_tokens)} in · ${fmt0(d.out_tokens)} out</span></div>`;
+    te.className='roster'; te.style.gridTemplateColumns='1fr';
+    te.innerHTML=line('last 7d',d7)+line('last 30d',d30);
+  }
+}
+
+// ---- feeds ----
+let curTab='';
+const TABS={reports:'Daily reports',rebalance:'Rebalance memos',decisions:'Decisions',
+            trades:'Trades',theses:'Live theses',lessons:'Lessons',postmortems:'Post-mortems'};
+function tabs(on){curTab=on;
+  document.getElementById('tabs').innerHTML=Object.entries(TABS).map(([k,v])=>
+    `<button class="tab ${k===on?'on':''}" onclick="tabs('${k}')">${esc(v)}</button>`).join('');
+  feed(on);
+}
+function bdot(b){return b==='GLOBAL'?`<span class="dotN" title="${esc(bookName('GLOBAL'))}">●</span>`
+  :(b==='INDO'?`<span class="dotS" title="${esc(bookName('INDO'))}">●</span>`:'');}
+function who(name,role){return name?`<span class="who">${esc(name)}</span>${role?` <span class="muted">${esc(role)}</span>`:''}`:'';}
+function poss(name,noun){return name?`<span class="who">${esc(name)}</span><span class="muted">’s ${esc(noun)}</span>`:'';}
+const empty=m=>`<div class="item muted">${esc(m||'Nothing here yet.')}</div>`;
+
+async function feed(kind){
+  const box=document.getElementById('feed'); box.innerHTML='<div class="item muted">Loading…</div>';
+  if(kind==='reports'){
+    const r=await api('reports'); const list=(r&&r.daily)||[];
+    box.innerHTML=list.map(x=>`<div class="item"><div class="meta"><span>${esc(x.file)}</span>
+      ${x.meta&&x.meta.book?bdot(x.meta.book):''}</div><div class="body">${md(x.body)}</div></div>`).join('')||empty();
+  }else if(kind==='rebalance'){
+    const r=await api('reports'); const list=(r&&r.rebalance)||[];
+    box.innerHTML=list.map(x=>`<div class="item"><div class="meta">
+      ${x.meta&&x.meta.book?bdot(x.meta.book):''}<span>${esc((x.meta&&x.meta.date||'').slice(0,10))}</span>
+      ${x.persona?`<span>${poss(x.persona,'memo')}</span>`:''}
+      ${x.judged_by?`<span>· ${poss(x.judged_by,'verdict')}${x.meta&&x.meta.judge_verdict?` <span class="tag">${esc(x.meta.judge_verdict)}</span>`:''}</span>`:''}</div>
+      <div class="body">${md(x.body)}</div></div>`).join('')||empty();
+  }else if(kind==='decisions'){
+    const r=await api('decisions')||[];
+    box.innerHTML=r.map(x=>{const m=x.meta||{};return `<div class="item"><div class="meta">
+      ${bdot(m.book)}<span>${esc((m.date||'').slice(0,10))}</span>
+      ${m.kind?`<span class="tag">${esc(m.kind)}</span>`:''}
+      <span>${esc(m.title||x.file)}</span>${x.persona?`<span>${who(x.persona,'')}</span>`:''}
+      ${m.thesis?`<span class="mono">${esc(m.thesis)}</span>`:''}</div>
+      <div class="body">${md(x.body)}</div></div>`;}).join('')||empty();
+  }else if(kind==='trades'){
+    const r=await api('trades')||[];
+    const rows=r.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
+      <td>${bdot(t.book)} ${esc(t.book||'')}</td>
+      <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
+      <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${fmt(t.price,4)}</td>
+      <td class="num mono">${fmt(t.fees)}</td><td class="num mono ${cls(t.cash_delta)}">${fmt(t.cash_delta)}</td></tr>`).join('');
+    box.innerHTML=`<div class="item"><div class="scroll"><table><thead><tr><th>Date</th><th>Book</th><th>Type</th>
+      <th>Ticker</th><th class="num">Qty</th><th class="num">Price</th><th class="num">Fees</th>
+      <th class="num">Cash Δ</th></tr></thead><tbody>${rows}</tbody></table></div>
+      ${rows?'':'<div class="muted">No trades yet.</div>'}</div>`;
+  }else if(kind==='theses'){
+    const r=await api('theses')||[];
+    box.innerHTML=r.map(x=>{const m=x.meta||{},ex=x.excerpt||{};return `<div class="item"><div class="meta">
+      ${bdot(m.book)}<span class="mono">${esc(m.id||x.file)}</span><span>${esc(m.ticker||'')}</span>
+      <span>${esc(m.horizon||'')} horizon</span><span class="tag">${esc(m.status||'')}</span>
+      ${m.sleeve?`<span class="tag">${esc(m.sleeve)}</span>`:''}${m.archetype?`<span class="tag">${esc(m.archetype)}</span>`:''}
+      ${m.verdict?`<span class="tag">${esc(m.verdict)}</span>`:''}</div>
+      <div class="meta">${x.analyst?who(x.analyst,'analyst'):''}
+        ${x.attacked_by?`<span>· ${poss(x.attacked_by,'attack')}</span>`:''}
+        ${x.judged_by?`<span>· ${poss(x.judged_by,'verdict')}</span>`:''}</div>
+      ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}
+      ${ex.kill_criteria?`<div class="body"><h4>Kill criteria</h4>${md(ex.kill_criteria)}</div>`:''}</div>`;}).join('')||empty();
+  }else if(kind==='lessons'){
+    const r=await api('lessons')||[];
+    box.innerHTML=r.map(x=>`<div class="item"><div class="meta"><span>${esc(x.file)}</span>
+      ${x.persona?`<span>${who(x.persona,'')}</span>`:''}
+      ${x.meta&&x.meta.scope?`<span class="tag">${esc(x.meta.scope)}</span>`:''}</div>
+      <div class="body">${md(x.body)}</div></div>`).join('')
+      ||empty('No lessons yet — the fund has not been wrong yet, or has not noticed.');
+  }else if(kind==='postmortems'){
+    const r=await api('postmortems')||[];
+    box.innerHTML=r.map(x=>{const m=x.meta||{};return `<div class="item"><div class="meta">
+      ${bdot(m.book)}<span>${esc((m.date||'').slice(0,10))}</span><span class="mono">${esc(m.ticker||m.thesis||'')}</span>
+      ${x.persona?`<span>${who(x.persona,'')}</span>`:''}</div>
+      <div class="body">${md(x.body)}</div></div>`;}).join('')||empty('No post-mortems yet.');
+  }
+}
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+{
+  "asof": "2026-07-18T14:02:31.551090+07:00",
+  "source": "constitution/limits.yaml",
+  "limits": {
+    "meta": {
+      "fund_name": "Six South (Paper)",
+      "fund_shorthand": "6S",
+      "mode": "paper",
+      "inception_date": "2026-07-06",
+      "base_currency_consolidated": "USD",
+      "max_holding_horizon_years": 4
+    },
+    "books": {
+      "GLOBAL": {
+        "currency": "USD",
+        "initial_capital": 1000000,
+        "benchmark": {
+          "composite": [
+            {
+              "ticker": "ACWI",
+              "weight": 0.8
+            },
+            {
+              "ticker": "AGG",
+              "weight": 0.2
+            }
+          ]
+        }
+      },
+      "INDO": {
+        "currency": "IDR",
+        "initial_capital": 15000000000,
+        "benchmark": {
+          "composite": [
+            {
+              "ticker": "^JKSE",
+              "weight": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "venues": {
+      "IDX": {
+        "tz": "Asia/Jakarta",
+        "open": "09:00",
+        "close": "16:00",
+        "calendar": "IDX_2026_2027.csv"
+      },
+      "US": {
+        "tz": "America/New_York",
+        "open": "09:30",
+        "close": "16:00",
+        "calendar": "US_2026_2027.csv"
+      },
+      "HK": {
+        "tz": "Asia/Hong_Kong",
+        "open": "09:30",
+        "close": "16:00",
+        "calendar": "HK_2026_2027.csv"
+      }
+    },
+    "universe": {
+      "GLOBAL": {
+        "equities": {
+          "exchanges": [
+            "US",
+            "HK"
+          ],
+          "min_market_cap_usd": 2000000000,
+          "min_avg_dollar_volume_usd": 5000000
+        },
+        "bonds_via_etf_only": true,
+        "bond_etf_whitelist": [
+          "TLT",
+          "IEF",
+          "SHY",
+          "LQD",
+          "HYG",
+          "EMB",
+          "AGG",
+          "BNDX",
+          "TIP"
+        ],
+        "fx_pairs": [
+          "EURUSD",
+          "USDJPY",
+          "GBPUSD",
+          "AUDUSD",
+          "USDCNH",
+          "USDMXN",
+          "USDBRL",
+          "USDINR"
+        ],
+        "fx_idr_allowed": false,
+        "crypto_allowed": false
+      },
+      "INDO": {
+        "equities": {
+          "exchange": "IDX",
+          "min_market_cap_idr": 1000000000000,
+          "min_avg_daily_value_idr": 2000000000,
+          "min_price_idr": 50,
+          "board_lot": 100,
+          "main_board_only": true
+        },
+        "gov_bonds": {
+          "series_prefix": "FR",
+          "pricing": "curve_interpolated",
+          "min_position_tenor_years": 1
+        },
+        "idx_etfs_allowed": false
+      }
+    },
+    "position_limits": {
+      "max_position_pct_nav_at_cost": 10.0,
+      "max_position_pct_nav_market": 15.0,
+      "max_position_pct_nav_market_hard": 18.0,
+      "max_gross_exposure_pct": 100.0,
+      "max_fx_gross_notional_pct_nav": 15.0,
+      "max_sector_pct_nav": 30.0,
+      "min_names_when_ramped": 8,
+      "max_names": 15,
+      "max_single_trade_pct_nav": 5.0,
+      "cash_pct_range": [
+        0.0,
+        40.0
+      ],
+      "min_cash_floor_breach_action": "block_buys",
+      "factor_soft_cap_pct": 40.0,
+      "factor_hard_cap_pct": 60.0,
+      "max_live_fx_theses": 2,
+      "max_non_base_ccy_exposure_pct": 40.0,
+      "ramp_exemption_days": 45,
+      "ramp_deployment_end_pct": 60.0,
+      "horizon_balance": {
+        "min_short_horizon_theses": 2,
+        "min_long_horizon_theses": 2
+      }
+    },
+    "liquidity": {
+      "adv_exit_participation_pct": 20.0,
+      "exit_liquidity_max_days": 7
+    },
+    "sizing": {
+      "book_heat_budget_pct": 12.0
+    },
+    "turnover": {
+      "max_trades_per_book_per_week": 6,
+      "count_open_tickets": true,
+      "order_expiry_venue_days": 3
+    },
+    "exits": {
+      "risk_reducing_exempt": [
+        "kill_criteria",
+        "governor_degross"
+      ],
+      "kill_exit_unfilled_sessions_critical": 2,
+      "judge_kill_cooldown_days": 60,
+      "kill_reentry_cooldown_days": 30
+    },
+    "drawdown_governors": {
+      "review_trigger_pct": -8.0,
+      "degross_trigger_pct": -15.0,
+      "degross_target_gross_pct": 50.0,
+      "single_name_postmortem_pct": -20.0,
+      "daily_loss_pause_pct": -4.0
+    },
+    "governors": {
+      "recovery_hysteresis_pct": -6.0
+    },
+    "factor_taxonomy": [
+      "bi_rate",
+      "idr_defensive",
+      "domestic_cycle",
+      "coal_china",
+      "copper_china",
+      "gold",
+      "nickel_ev",
+      "china_growth",
+      "us_tech",
+      "semis_ai",
+      "us_rates",
+      "energy",
+      "us_defensive",
+      "em_flows",
+      "oil_gas",
+      "cpo",
+      "property_rates",
+      "infra_towers",
+      "digital_id",
+      "global_defense",
+      "japan_reflation",
+      "eu_cycle"
+    ],
+    "stress": {
+      "bi_rate": -4.0,
+      "idr_defensive": -3.0,
+      "domestic_cycle": -5.0,
+      "coal_china": -8.0,
+      "copper_china": -7.0,
+      "gold": -5.0,
+      "nickel_ev": -8.0,
+      "china_growth": -7.0,
+      "us_tech": -6.0,
+      "semis_ai": -9.0,
+      "us_rates": -3.0,
+      "energy": -6.0,
+      "us_defensive": -3.0,
+      "em_flows": -5.0,
+      "oil_gas": -7.0,
+      "cpo": -6.0,
+      "property_rates": -6.0,
+      "infra_towers": -4.0,
+      "digital_id": -7.0,
+      "global_defense": -5.0,
+      "japan_reflation": -4.0,
+      "eu_cycle": -5.0
+    },
+    "idx_microstructure": {
+      "price_bands": [
+        {
+          "price_max": 200,
+          "band_pct": 35.0
+        },
+        {
+          "price_max": 5000,
+          "band_pct": 25.0
+        },
+        {
+          "price_max": null,
+          "band_pct": 20.0
+        }
+      ],
+      "tick_sizes": [
+        {
+          "price_max": 200,
+          "tick": 1
+        },
+        {
+          "price_max": 500,
+          "tick": 2
+        },
+        {
+          "price_max": 2000,
+          "tick": 5
+        },
+        {
+          "price_max": 5000,
+          "tick": 10
+        },
+        {
+          "price_max": null,
+          "tick": 25
+        }
+      ]
+    },
+    "fees_taxes": {
+      "last_verified": "2026-07-06",
+      "review_after_months": 12,
+      "IDX_equity": {
+        "buy_commission_pct": 0.15,
+        "sell_commission_pct": 0.25,
+        "sell_final_tax_pct": 0.1,
+        "dividend_withholding_pct": 10.0,
+        "slippage_base_bps": 25
+      },
+      "US_equity": {
+        "buy_commission_pct": 0.0,
+        "sell_commission_pct": 0.0,
+        "sec_fee_per_million_usd_sold": 27.8,
+        "taf_per_share_usd": 0.000166,
+        "taf_cap_usd": 8.3,
+        "dividend_withholding_pct": 15.0,
+        "slippage_base_bps": 10
+      },
+      "HK_equity": {
+        "buy_commission_pct": 0.03,
+        "sell_commission_pct": 0.03,
+        "stamp_duty_pct": 0.1,
+        "dividend_withholding_pct": 0.0,
+        "slippage_base_bps": 15
+      },
+      "FR_bond": {
+        "spread_bps_round_trip": 10,
+        "coupon_final_tax_pct": 10.0,
+        "slippage_base_bps": 5
+      },
+      "FX": {
+        "majors_spread_bps": 5,
+        "em_spread_bps": 15
+      },
+      "slippage_participation": {
+        "k_bps": 20,
+        "max_participation_pct_adv": 10.0
+      }
+    },
+    "pipeline": {
+      "max_new_theses_per_book_per_week": 3,
+      "thesis_max_words": 1600,
+      "dossier_max_words": 800,
+      "skill_file_max_words": 1500
+    },
+    "learning_triggers": {
+      "underperform_vs_benchmark_pp": -10.0,
+      "underperform_window_trading_days": 60,
+      "thesis_stale_review_days": 30,
+      "dossier_stale_warn_days": 45,
+      "dossier_freeze_days": 60,
+      "horizon_review_fraction": 0.9
+    },
+    "ops_thresholds": {
+      "order_overdue_warn_days": 7,
+      "postmortem_stale_warn_days": 10,
+      "kill_ledger_price_retention_days": 180,
+      "kill_px_backfill_warn_days": 5,
+      "adv_stale_warn_days": 10,
+      "heartbeat_gap_critical_hours": 26,
+      "market_params_stale_warn_days": 60,
+      "calendar_min_horizon_days": 60,
+      "min_free_disk_gb": 5
+    },
+    "data_integrity": {
+      "bad_print_max_day_move_pct": 35.0,
+      "bad_print_confirm_sessions": 2,
+      "curve_max_tenor_move_bps": 75,
+      "nav_continuity_warn_pct": 8.0,
+      "suspension_terminal_trading_days": 30,
+      "price_sources_dead_critical_days": 2
+    },
+    "consensus_quarantine": {
+      "banned_inputs": [
+        "sell_side_ratings",
+        "analyst_price_targets",
+        "consensus_estimates_as_model_inputs",
+        "broker_recommendation_counts"
+      ],
+      "note": "Consensus EPS/revenue may be VIEWED only in the variant-perception step (\"what does the market believe\") AFTER the bottom-up estimate is committed to the thesis file. It must never be a model input or an anchor. CONTAMINATION events are logged as decision-journal entries (persistent), never only to QC_FLAGS (which is rebuilt each run).\n"
+    },
+    "learning_boundary": {
+      "editable_by_agents": [
+        "agents/",
+        "lessons/",
+        "reports/",
+        "data/dossiers/",
+        "data/cache/",
+        "state/"
+      ],
+      "append_only": [
+        "state/ledger.csv",
+        "state/nav_history.csv",
+        "state/kill_ledger.csv"
+      ],
+      "agent_editable_params": "state/market_params.yaml",
+      "immutable": [
+        "constitution/",
+        "CLAUDE.md",
+        "LIVE_TRANSITION.md",
+        "runbooks/",
+        "scripts/",
+        "config/MODELS.yaml",
+        "launchd/"
+      ],
+      "constitution_change_requests": "state/PENDING_PATCHES.md"
+    },
+    "reporting": {
+      "daily_report_time_wib": "16:00",
+      "daily_report_max_words": 100,
+      "rebalance_memo_max_words": 100,
+      "official_nav_mark": "next_morning_confirmed_close"
+    },
+    "enforcement": {
+      "meta.max_holding_horizon_years": "learn.py",
+      "books.benchmark_total_return": "nav.py",
+      "venues": "common.py",
+      "universe.membership": "risk_check.py",
+      "universe.GLOBAL.equities.min_market_cap_usd": "risk_check.py",
+      "universe.GLOBAL.equities.min_avg_dollar_volume_usd": "risk_check.py",
+      "universe.GLOBAL.bond_etf_whitelist": "risk_check.py",
+      "universe.GLOBAL.fx_pairs": "risk_check.py",
+      "universe.INDO.equities.min_market_cap_idr": "risk_check.py",
+      "universe.INDO.equities.min_avg_daily_value_idr": "risk_check.py",
+      "universe.INDO.equities.min_price_idr": "screen.py",
+      "universe.INDO.equities.main_board_only": "screen.py",
+      "universe.INDO.equities.board_lot": "fills.py",
+      "universe.INDO.gov_bonds.min_position_tenor_years": "risk_check.py",
+      "position_limits.max_position_pct_nav_at_cost": "risk_check.py",
+      "position_limits.max_position_pct_nav_market": "learn.py",
+      "position_limits.max_position_pct_nav_market_hard": "learn.py",
+      "position_limits.max_gross_exposure_pct": "risk_check.py",
+      "position_limits.max_fx_gross_notional_pct_nav": "risk_check.py",
+      "position_limits.max_sector_pct_nav": "risk_check.py",
+      "position_limits.min_names_when_ramped": "risk_check.py",
+      "position_limits.max_names": "risk_check.py",
+      "position_limits.max_single_trade_pct_nav": "risk_check.py",
+      "position_limits.cash_pct_range": "risk_check.py",
+      "position_limits.factor_soft_cap_pct": "risk_check.py",
+      "position_limits.factor_hard_cap_pct": "risk_check.py",
+      "position_limits.max_live_fx_theses": "risk_check.py",
+      "position_limits.max_non_base_ccy_exposure_pct": "risk_check.py",
+      "position_limits.horizon_balance": "risk_check.py",
+      "position_limits.ramp": "risk_check.py",
+      "liquidity.exit_liquidity_max_days": "size_position.py",
+      "sizing.book_heat_budget_pct": "size_position.py",
+      "turnover.max_trades_per_book_per_week": "risk_check.py",
+      "turnover.order_expiry_venue_days": "fills.py",
+      "exits.risk_reducing_exempt": "risk_check.py",
+      "exits.kill_exit_unfilled_sessions_critical": "qc_state.py",
+      "exits.judge_kill_cooldown_days": "risk_check.py",
+      "exits.kill_reentry_cooldown_days": "risk_check.py",
+      "drawdown_governors.state_machine": "risk_check.py",
+      "drawdown_governors.single_name_postmortem_pct": "learn.py",
+      "drawdown_governors.daily_loss_pause_pct": "qc_state.py",
+      "governors.recovery_hysteresis_pct": "risk_check.py",
+      "factor_taxonomy": "risk_check.py",
+      "stress": "size_position.py",
+      "idx_microstructure.price_bands": "fills.py",
+      "idx_microstructure.tick_sizes": "fills.py",
+      "fees_taxes": "fills.py",
+      "fees_taxes.last_verified": "report.py",
+      "fees_taxes.slippage_participation": "fills.py",
+      "pipeline.max_new_theses_per_book_per_week": "thesis_lint.py",
+      "pipeline.thesis_max_words": "thesis_lint.py",
+      "pipeline.dossier_max_words": "qc_state.py",
+      "pipeline.skill_file_max_words": "qc_state.py",
+      "learning_triggers": "learn.py",
+      "learning_triggers.dossier_freeze_days": "risk_check.py",
+      "ops_thresholds": "qc_state.py",
+      "data_integrity.bad_print": "learn.py",
+      "data_integrity.curve_max_tenor_move_bps": "idgb_curve.py",
+      "data_integrity.nav_continuity_warn_pct": "qc_state.py",
+      "data_integrity.suspension_terminal_trading_days": "qc_state.py",
+      "data_integrity.price_sources_dead_critical_days": "qc_state.py",
+      "consensus_quarantine": "NORM",
+      "learning_boundary.append_only": "qc_state.py",
+      "learning_boundary.immutable": "run_session.py",
+      "reporting": "report.py",
+      "order_state_machine": "journal.py"
+    }
+  },
+  "market_params": {
+    "schema_version": 1,
+    "last_reviewed": "2026-07-06",
+    "cash_yield_proxy_annual_pct": {
+      "GLOBAL": {
+        "value": 4.25,
+        "asof": "2026-07-01",
+        "source": "US 3M T-bill ~ Fed funds effective; Fed target 4.25-4.50% on hold Jul-2026 (FRED FEDFUNDS / federalreserve.gov)"
+      },
+      "INDO": {
+        "value": 5.5,
+        "asof": "2026-06-18",
+        "source": "BI Deposit Facility 4.75% + retail deposito spread; BI-Rate 5.75% set 2026-06-18 (bi.go.id news release)"
+      }
+    },
+    "jkse_dividend_yield_proxy_annual_pct": {
+      "value": 3.0,
+      "asof": "2026-06-30",
+      "source": "IDX Composite trailing gross dividend yield ~3.0-3.8% (IDX statistics / GuruFocus 2026); conservative TR proxy"
+    },
+    "fx_carry_rates": {
+      "USD": {
+        "value": 4.25,
+        "asof": "2026-07-01",
+        "source": "Fed funds target 4.25-4.50%, on hold Jul-2026 (federalreserve.gov)"
+      },
+      "EUR": {
+        "value": 2.25,
+        "asof": "2026-06-17",
+        "source": "ECB deposit facility 2.25%, raised 2026-06 (ecb.europa.eu monetary policy decisions)"
+      },
+      "JPY": {
+        "value": 1.0,
+        "asof": "2026-06-16",
+        "source": "BoJ policy rate 1.00%, gradual hiking cycle (boj.or.jp 2026-06-16 statement)"
+      },
+      "GBP": {
+        "value": 4.0,
+        "asof": "2026-06-30",
+        "source": "BoE Bank Rate ~4.00%, easing cycle ending mid-2026 (bankofengland.co.uk) \u2014 VERIFY at next IC"
+      },
+      "AUD": {
+        "value": 3.6,
+        "asof": "2026-06-30",
+        "source": "RBA cash rate ~3.60% (rba.gov.au 2026) \u2014 VERIFY at next IC"
+      },
+      "CNH": {
+        "value": 1.8,
+        "asof": "2026-06-30",
+        "source": "PBOC 7-day OMO / short CNH funding proxy ~1.4-2.0% (pbc.gov.cn 2026)"
+      },
+      "MXN": {
+        "value": 6.5,
+        "asof": "2026-06-30",
+        "source": "Banxico overnight target 6.50%, easing cycle ended, unanimous hold Jun-2026 (banxico.org.mx)"
+      },
+      "BRL": {
+        "value": 14.25,
+        "asof": "2026-06-18",
+        "source": "BCB Selic 14.25% after 25bp cut 2026-06-18 (bcb.gov.br)"
+      },
+      "INR": {
+        "value": 5.5,
+        "asof": "2026-06-30",
+        "source": "RBI repo 5.25% held Jun-2026, ~5.5% forecast path (rbi.org.in)"
+      }
+    }
+  }
+}

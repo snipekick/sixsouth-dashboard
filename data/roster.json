@@ -1,0 +1,70 @@
+{
+  "asof": "2026-07-18T14:02:31.552680+07:00",
+  "display_books": {
+    "GLOBAL": "North Book",
+    "INDO": "South Book"
+  },
+  "source": "CLAUDE.md",
+  "roster": [
+    {
+      "role": "ANALYST_GLOBAL",
+      "persona": "Sloane",
+      "tier": "mid",
+      "authority": "proposes North theses; no trade authority"
+    },
+    {
+      "role": "ANALYST_INDO",
+      "persona": "Sunda",
+      "tier": "mid",
+      "authority": "proposes South theses; primary-source digger"
+    },
+    {
+      "role": "MACRO_FX",
+      "persona": "Ferrand",
+      "tier": "mid",
+      "authority": "regime memo + FX theses; proposes only"
+    },
+    {
+      "role": "BEAR",
+      "persona": "Drew",
+      "tier": "frontier",
+      "authority": "attacks thesis + sizing; forces revision"
+    },
+    {
+      "role": "JUDGE",
+      "persona": "Aldrich",
+      "tier": "frontier",
+      "authority": "PASS / PASS_REDUCED / KILL; kill is final"
+    },
+    {
+      "role": "RISK_OFFICER",
+      "persona": "Voss",
+      "tier": "mid",
+      "authority": "VETO absolute; judgment layer above it"
+    },
+    {
+      "role": "PM_GLOBAL",
+      "persona": "Harrison",
+      "tier": "frontier",
+      "authority": "sizes/times North Book; sole FX executor"
+    },
+    {
+      "role": "PM_INDO",
+      "persona": "Kretek",
+      "tier": "frontier",
+      "authority": "sizes/times South Book"
+    },
+    {
+      "role": "POSTMORTEM",
+      "persona": "Pecora",
+      "tier": "frontier",
+      "authority": "lessons; sole skill-file editor"
+    },
+    {
+      "role": "OPS",
+      "persona": "Ledger",
+      "tier": "cheap",
+      "authority": "scripts + plumbing prose; zero judgment"
+    }
+  ]
+}
