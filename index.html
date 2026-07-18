@@ -213,7 +213,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   <div class="strip" id="strip"></div>
 
   <section class="panel office-panel" aria-labelledby="officeHeading">
-    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">The floor — Wall Street desk</span><span class="aux">11 fictional agents · observed locally · scheduled / last-observed publicly</span></div>
+    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">The floor — Wall Street desk</span><span class="aux">11 fictional agents · workflow motion is illustrative · status labels are authoritative</span></div>
     <div class="office-meta" aria-live="polite">
       <div><div class="k">Truth model</div><div class="v"><span class="office-truth scheduled" id="officeTruth">SCHEDULED VIEW</span> <span id="officeTruthDetail">waiting for desk state</span></div></div>
       <div><div class="k">Session / phase</div><div class="v"><span class="mono" id="officePhase">—</span><span class="office-run-status" id="officeStatus">UNKNOWN</span></div></div>
@@ -223,7 +223,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     <div class="office-stage" id="office">
       <canvas class="office-canvas" id="officeCanvas" width="1440" height="576" aria-hidden="true"></canvas>
       <div class="office-loading" id="officeLoading">Loading the trading floor…</div>
-      <span class="office-help">Horizontal scroll on small screens</span>
+      <span class="office-help">Illustrative desk motion · observed handoffs only</span>
     </div>
     <div class="office-workflow" aria-label="Research and execution workflow">
       <b>Controlled handoff</b><span>Analyst</span><span class="arrow">→</span><span>Bear attack</span><span class="arrow">→</span><span>Analyst revision</span><span class="arrow">→</span><span>Judge</span><span class="arrow">→</span><span>Risk</span><span class="arrow">→</span><span>PM</span><span class="arrow">→</span><span>Ops / fills</span><span class="arrow">→</span><span>Postmortem</span><span class="office-handoff" id="officeHandoff" aria-live="polite">No active telemetry handoff</span>
@@ -292,7 +292,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js"></script>
+<script src="office-floor.js?v=20260718-trading-floor"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
