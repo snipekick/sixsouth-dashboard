@@ -111,7 +111,7 @@ tbody tr:hover td{background:var(--panel2)}
 .office-panel{margin:8px 0 0;overflow:hidden}
 .office-bar{flex-wrap:wrap}
 .office-bar .aux{white-space:normal;text-align:right}
-.office-meta{display:grid;grid-template-columns:minmax(260px,1.2fr) repeat(2,minmax(210px,1fr));gap:1px;background:var(--hair);border-bottom:1px solid var(--hair)}
+.office-meta{display:grid;grid-template-columns:minmax(230px,1.1fr) repeat(3,minmax(190px,1fr));gap:1px;background:var(--hair);border-bottom:1px solid var(--hair)}
 .office-meta>div{background:var(--panel);padding:8px 10px;min-width:0}
 .office-meta .k{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
 .office-meta .v{font-size:11.5px;margin-top:2px;color:var(--ink);overflow-wrap:anywhere}
@@ -204,8 +204,9 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
 
   <section class="panel office-panel" aria-labelledby="officeHeading">
     <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="aux">11 fictional agents · illustrative animation · published desk activity</span></div>
-    <div class="office-meta" aria-live="polite">
+    <div class="office-meta">
       <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Waiting for the next published update</span><span class="office-run-status" id="officeStatus">—</span></div></div>
+      <div><div class="k">Meeting room</div><div class="v" id="officeMeetingStatus" role="status" aria-live="polite">Available · no meeting in progress</div></div>
       <div><div class="k">Next scheduled session</div><div class="v mono" id="officeNext">—</div></div>
       <div><div class="k">Market tape</div><div class="v" id="officeMarketMeta">Waiting for published market data</div></div>
     </div>
@@ -281,7 +282,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js?v=20260718-6s-virtual-office-v3"></script>
+<script src="office-floor.js?v=20260719-glass-meeting-room-v1"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
