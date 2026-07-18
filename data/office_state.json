@@ -1,60 +1,20 @@
 {
   "schema_version": 2,
-  "asof": "2026-07-18T18:24:30+07:00",
+  "asof": "2026-07-18T21:28:20+07:00",
   "provenance": "last_observed",
-  "session": "IDEATION",
-  "phase": "complete",
+  "session": "Idea research",
   "phase_label": "Session complete",
   "status": "complete",
   "observed_at": "2026-07-18T13:42:22+07:00",
-  "expires_at": null,
   "next_session": {
-    "session": "IDX_PREOPEN",
+    "session": "South pre-open review",
     "scheduled_for": "2026-07-20T08:45:00+07:00"
   },
-  "upcoming_sessions": [
-    {
-      "session": "IDX_PREOPEN",
-      "scheduled_for": "2026-07-20T08:45:00+07:00"
-    },
-    {
-      "session": "IDEATION",
-      "scheduled_for": "2026-07-20T11:00:00+07:00"
-    },
-    {
-      "session": "IDX_CLOSE",
-      "scheduled_for": "2026-07-20T16:00:00+07:00"
-    },
-    {
-      "session": "US_PREOPEN",
-      "scheduled_for": "2026-07-20T20:00:00+07:00"
-    },
-    {
-      "session": "US_CLOSE",
-      "scheduled_for": "2026-07-21T06:30:00+07:00"
-    },
-    {
-      "session": "WEEKLY_DEEP",
-      "scheduled_for": "2026-07-25T10:00:00+07:00"
-    },
-    {
-      "session": "MONTHLY_IC",
-      "scheduled_for": "2026-08-01T14:00:00+07:00"
-    }
-  ],
-  "stage": "done",
   "stage_label": "Session completed",
   "stage_observed": true,
-  "stage_book": null,
   "handoff": null,
-  "orchestrator": {
-    "state": "last_observed",
-    "activity": "idle",
-    "inner_stage_observed": false
-  },
   "agents": [
     {
-      "id": "analyst_global",
       "role": "ANALYST_GLOBAL",
       "name": "Sloane",
       "title": "Senior Analyst, Global Equities",
@@ -65,7 +25,6 @@
       "state": "off_desk"
     },
     {
-      "id": "analyst_indo",
       "role": "ANALYST_INDO",
       "name": "Dani",
       "title": "Senior Analyst, Indonesia",
@@ -76,7 +35,6 @@
       "state": "off_desk"
     },
     {
-      "id": "macro_global",
       "role": "MACRO_GLOBAL",
       "name": "Severin",
       "title": "Chief Global Strategist",
@@ -87,7 +45,6 @@
       "state": "off_desk"
     },
     {
-      "id": "macro_fx",
       "role": "MACRO_FX",
       "name": "Ferrand",
       "title": "FX Strategist",
@@ -98,7 +55,6 @@
       "state": "off_desk"
     },
     {
-      "id": "bear",
       "role": "BEAR",
       "name": "Drew",
       "title": "Head of Red Team",
@@ -109,7 +65,6 @@
       "state": "off_desk"
     },
     {
-      "id": "judge",
       "role": "JUDGE",
       "name": "Aldrich",
       "title": "Head of Research (IC Chair)",
@@ -120,7 +75,6 @@
       "state": "off_desk"
     },
     {
-      "id": "risk_officer",
       "role": "RISK_OFFICER",
       "name": "Voss",
       "title": "Chief Risk Officer",
@@ -131,7 +85,6 @@
       "state": "off_desk"
     },
     {
-      "id": "pm_global",
       "role": "PM_GLOBAL",
       "name": "Harrison",
       "title": "Portfolio Manager, North Book",
@@ -142,7 +95,6 @@
       "state": "off_desk"
     },
     {
-      "id": "pm_indo",
       "role": "PM_INDO",
       "name": "Gunawan",
       "title": "Portfolio Manager, South Book",
@@ -153,7 +105,6 @@
       "state": "off_desk"
     },
     {
-      "id": "postmortem",
       "role": "POSTMORTEM",
       "name": "Pecora",
       "title": "Head of Review",
@@ -164,7 +115,6 @@
       "state": "off_desk"
     },
     {
-      "id": "ops",
       "role": "OPS",
       "name": "Ledger",
       "title": "Head of Operations",

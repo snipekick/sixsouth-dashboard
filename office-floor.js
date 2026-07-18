@@ -1,5 +1,5 @@
 /*
- * Six South Wall Street floor.
+ * Six South 6S Virtual Office.
  * Character sheets and the idle/walk/type/read state model are adapted from
  * Pixel Agents at commit cd0343b4ea7c3acf231db6cd07d43a59e3d69cf3.
  * See PIXEL_AGENTS_NOTICE.txt for MIT and upstream-art attribution.
@@ -18,17 +18,17 @@ const SHEETS=[
 ];
 
 const TEAM=[
- {role:"ANALYST_GLOBAL",name:"Sloane",sheet:0,hue:0,home:"north_analyst",book:"North"},
- {role:"ANALYST_INDO",name:"Dani",sheet:1,hue:0,home:"south_analyst",book:"South"},
- {role:"MACRO_FX",name:"Ferrand",sheet:2,hue:0,home:"macro_fx",book:"Cross-book"},
- {role:"MACRO_GLOBAL",name:"Severin",sheet:3,hue:0,home:"macro_global",book:"Cross-book"},
- {role:"BEAR",name:"Drew",sheet:4,hue:0,home:"bear",book:"Independent"},
- {role:"JUDGE",name:"Aldrich",sheet:5,hue:0,home:"judge",book:"Independent"},
- {role:"RISK_OFFICER",name:"Voss",sheet:0,hue:155,home:"risk",book:"Independent"},
- {role:"PM_GLOBAL",name:"Harrison",sheet:1,hue:190,home:"north_pm",book:"North"},
- {role:"PM_INDO",name:"Gunawan",sheet:2,hue:42,home:"south_pm",book:"South"},
- {role:"POSTMORTEM",name:"Pecora",sheet:3,hue:-75,home:"postmortem",book:"Cross-book"},
- {role:"OPS",name:"Ledger",sheet:5,hue:95,home:"ops",book:"Cross-book"}
+ {role:"ANALYST_GLOBAL",roleLabel:"Global Analyst",name:"Sloane",sheet:0,hue:0,home:"north_analyst",book:"North"},
+ {role:"ANALYST_INDO",roleLabel:"Indonesia Analyst",name:"Dani",sheet:1,hue:0,home:"south_analyst",book:"South"},
+ {role:"MACRO_FX",roleLabel:"Macro & FX",name:"Ferrand",sheet:2,hue:0,home:"macro_fx",book:"Cross-book"},
+ {role:"MACRO_GLOBAL",roleLabel:"Global Macro",name:"Severin",sheet:3,hue:0,home:"macro_global",book:"Cross-book"},
+ {role:"BEAR",roleLabel:"Bear Reviewer",name:"Drew",sheet:4,hue:0,home:"bear",book:"Independent"},
+ {role:"JUDGE",roleLabel:"Investment Judge",name:"Aldrich",sheet:5,hue:0,home:"judge",book:"Independent"},
+ {role:"RISK_OFFICER",roleLabel:"Risk Officer",name:"Voss",sheet:0,hue:155,home:"risk",book:"Independent"},
+ {role:"PM_GLOBAL",roleLabel:"North PM",name:"Harrison",sheet:1,hue:190,home:"north_pm",book:"North"},
+ {role:"PM_INDO",roleLabel:"South PM",name:"Gunawan",sheet:2,hue:42,home:"south_pm",book:"South"},
+ {role:"POSTMORTEM",roleLabel:"Postmortem",name:"Pecora",sheet:3,hue:-75,home:"postmortem",book:"Cross-book"},
+ {role:"OPS",roleLabel:"Operations",name:"Ledger",sheet:5,hue:95,home:"ops",book:"Cross-book"}
 ];
 const CREW={
  US_CLOSE:["PM_GLOBAL","OPS"],IDX_PREOPEN:["PM_INDO","RISK_OFFICER","OPS"],IDX_CLOSE:["PM_GLOBAL","PM_INDO","OPS"],
@@ -81,13 +81,30 @@ const FAILURE_STATUS=new Set(["degraded","failed","blocked"]);
 const norm=s=>String(s==null?"":s).trim().toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"");
 const cap=s=>String(s||"").replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 function wibDate(d){if(!(d instanceof Date)||!Number.isFinite(d.getTime()))return "time unavailable";try{return new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Jakarta",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",hour12:false}).format(d)+" WIB";}catch(_){return "time unavailable";}}
+function finiteNumber(value){const n=Number(value);return Number.isFinite(n)?n:null;}
+function tapeValue(value){
+ const n=finiteNumber(value);if(n==null)return null;const digits=Math.abs(n)<10?4:Math.abs(n)<1000?2:0;
+ return n.toLocaleString("en-US",{minimumFractionDigits:digits,maximumFractionDigits:digits});
+}
+function signed(value,suffix){const n=finiteNumber(value);if(n==null)return null;return (n>=0?"+":"")+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})+(suffix||"");}
+function normalizeMarketTape(raw){
+ const validStatus=new Set(["ok","partial","unavailable"]),status=validStatus.has(raw&&raw.status)?raw.status:"unavailable",generatedAt=String((raw&&raw.generated_at)||"");
+ const instruments=Array.isArray(raw&&raw.instruments)?raw.instruments.slice(0,12):[];
+ const items=instruments.map((item,index)=>{
+  const value=tapeValue(item&&item.value),changePct=signed(item&&item.change_pct,"%"),change=changePct||signed(item&&item.change,""),available=!!(item&&item.available!==false&&value!=null);
+  return {index,symbol:String((item&&item.symbol)||"MARKET").slice(0,14),label:String((item&&item.label)||"").slice(0,36),value,change,asof:String((item&&item.asof)||""),source:String((item&&item.source)||"").slice(0,48),stale:!!(item&&item.stale),available};
+ });
+ return {status,generatedAt,notice:String((raw&&raw.notice)||""),items,available:items.filter(x=>x.available)};
+}
 function dayOk(days,dow){return days==="Mon–Fri"?dow>=1&&dow<=5:days==="Tue–Sat"?dow>=2&&dow<=6:days==="Sat"?dow===6:false;}
 function wibParts(now){const d=new Date(now.getTime()+7*3600000);return {y:d.getUTCFullYear(),m:d.getUTCMonth(),date:d.getUTCDate(),dow:d.getUTCDay(),hm:d.getUTCHours()+d.getUTCMinutes()/60};}
+const PUBLIC_SESSIONS={US_CLOSE:"North close review",IDX_PREOPEN:"South pre-open review",IDX_CLOSE:"South close review",US_PREOPEN:"North pre-open review",IDEATION:"Idea research",WEEKLY_DEEP:"Weekly deep research",MONTHLY_IC:"Monthly investment review"};
+function sessionKey(session){const raw=String(session||""),upper=raw.toUpperCase();if(CREW[upper])return upper;for(const key of Object.keys(PUBLIC_SESSIONS))if(PUBLIC_SESSIONS[key]===raw)return key;return "";}
 function sessionWindow(structure,now){
  const p=wibParts(now),schedule=(structure&&structure.schedule)||[],sessions=(structure&&structure.sessions)||{};
  for(const job of schedule){
-  if(!job.session||!CREW[job.session]||!dayOk(job.days,p.dow))continue;
-  for(const t of job.times_wib||[]){const q=String(t).split(":"),st=Number(q[0])+Number(q[1]||0)/60,dur=((sessions[job.session]||{}).timeout_minutes||60)/60;if(p.hm>=st&&p.hm<st+dur)return job.session;}
+  const key=sessionKey(job.session);if(!key||!dayOk(job.days,p.dow))continue;
+  for(const t of job.times_wib||[]){const q=String(t).split(":"),st=Number(q[0])+Number(q[1]||0)/60,dur=((sessions[key]||{}).timeout_minutes||60)/60;if(p.hm>=st&&p.hm<st+dur)return PUBLIC_SESSIONS[key];}
  }
  return null;
 }
@@ -97,13 +114,14 @@ function nextSession(structure,now){
   const p=wibParts(new Date(now.getTime()+add*86400000));
   const choices=[];
   for(const job of schedule){
-   if(!job.session||!CREW[job.session]||!dayOk(job.days,p.dow))continue;
-   for(const t of job.times_wib||[]){const q=String(t).split(":"),at=new Date(Date.UTC(p.y,p.m,p.date,Number(q[0])-7,Number(q[1]||0)));if(at>now)choices.push({session:job.session,scheduled_for:at.toISOString()});}
+   const key=sessionKey(job.session);if(!key||!dayOk(job.days,p.dow))continue;
+   for(const t of job.times_wib||[]){const q=String(t).split(":"),at=new Date(Date.UTC(p.y,p.m,p.date,Number(q[0])-7,Number(q[1]||0)));if(at>now)choices.push({session:PUBLIC_SESSIONS[key],scheduled_for:at.toISOString()});}
   }
   choices.sort((a,b)=>String(a.scheduled_for).localeCompare(String(b.scheduled_for)));if(choices.length)return choices[0];
  }
  return null;
 }
+function publicSessionLabel(session){const raw=String(session||"");return PUBLIC_SESSIONS[raw.toUpperCase()]||raw||"Scheduled desk review";}
 function resolveStation(raw,role,book){
  const s=norm(raw),b=norm(book);
  if(/bear|red_team|attack/.test(s))return "bear";
@@ -157,7 +175,7 @@ function normalizeState(raw,roster,summary,structure){
   session=sessionWindow(structure,now);phase=session?"Scheduled session window":"Between scheduled sessions";next=nextSession(structure,now);provenance="scheduled";
  }
  const rosterMap=new Map(((roster&&roster.roster)||[]).map(x=>[x.role,x]));
- const crew=session&&CREW[session],active=role=>crew==="ALL"||(Array.isArray(crew)&&crew.includes(role));
+ const crew=CREW[sessionKey(session)],active=role=>crew==="ALL"||(Array.isArray(crew)&&crew.includes(role));
  const agents=TEAM.map((base,i)=>{
   const a=byRole.get(base.role)||{},r=rosterMap.get(base.role)||{};
   const fallbackActive=!!active(base.role),act=(raw&&Array.isArray(raw.agents))?activityOf(a.state,a.activity):(fallbackActive?ROLE_ACTIVITY[base.role]:"idle");
@@ -186,14 +204,13 @@ function findPath(sc,sr,ec,er,blocked){
 class Floor{
  constructor(){
  this.canvas=document.getElementById("officeCanvas");if(!this.canvas)return;
-  this.ctx=this.canvas.getContext("2d");this.ctx.imageSmoothingEnabled=false;this.images=[];this.agents=[];this.blocked=new Set();this.buildCollision();this.last=0;this.raf=0;this.userPaused=false;
+  this.ctx=this.canvas.getContext("2d");this.ctx.imageSmoothingEnabled=false;this.images=[];this.agents=[];this.blocked=new Set();this.buildCollision();this.last=0;this.raf=0;
   this.motionQuery=window.matchMedia("(prefers-reduced-motion: reduce)");this.reduced=this.motionQuery.matches;this.ready=false;
   const monitor=document.getElementById("view-monitor");this.routeVisible=!monitor||monitor.style.display!=="none";this.intersecting=!("IntersectionObserver" in window);
-  this.button=document.getElementById("officeMotion");this.button.addEventListener("click",()=>{this.userPaused=!this.userPaused;this.updateButton();this.ensureLoop();});
   document.addEventListener("visibilitychange",()=>this.ensureLoop());
   if("IntersectionObserver" in window){this.observer=new IntersectionObserver(entries=>{this.intersecting=entries.some(e=>e.target===this.canvas&&e.isIntersecting);this.ensureLoop();},{threshold:.01});this.observer.observe(this.canvas);}
   else{const check=()=>{const r=this.canvas.getBoundingClientRect();this.intersecting=r.bottom>0&&r.right>0&&r.top<window.innerHeight&&r.left<window.innerWidth;this.ensureLoop();};window.addEventListener("scroll",check,{passive:true});window.addEventListener("resize",check);check();}
-  const motionChanged=e=>{this.reduced=e.matches;this.updateButton();if(this.reduced)this.snapAll();this.ensureLoop();};
+  const motionChanged=e=>{this.reduced=e.matches;if(this.reduced)this.snapAll();this.ensureLoop();};
   if(this.motionQuery.addEventListener)this.motionQuery.addEventListener("change",motionChanged);else this.motionQuery.addListener(motionChanged);
   this.loadSprites();
  }
@@ -209,31 +226,36 @@ class Floor{
   for(const [c,r] of desks)for(let dc=-1;dc<=2;dc++){add(c+dc,r-2);add(c+dc,r-1);}
  }
  loadSprites(){Promise.all(SHEETS.map(src=>new Promise((ok,bad)=>{const im=new Image();im.onload=()=>ok(im);im.onerror=bad;im.src="data:image/png;base64,"+src;}))).then(imgs=>{this.images=imgs;this.ready=true;const loading=document.getElementById("officeLoading");if(loading)loading.hidden=true;this.sync();this.ensureLoop();}).catch(()=>{const loading=document.getElementById("officeLoading");if(loading)loading.textContent="Character sprites unavailable — desk state remains available below.";this.draw();});}
- update(args){this.args=args||{};this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure);this.updateMeta();this.updateA11y();if(this.ready)this.sync();}
+ update(args){this.args=args||{};this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure);this.marketTape=normalizeMarketTape(this.args.marketTape);this.updateMeta();this.updateA11y();if(this.ready)this.sync();}
  sync(){
   if(!this.state)return;const old=new Map(this.agents.map(a=>[a.role,a]));
   this.agents=this.state.agents.map((d,i)=>{let a=old.get(d.role);const controlledMove=!!(this.state.handoff&&this.state.handoff.active&&this.state.handoff.fromRole===d.role),pts=(controlledMove&&HANDOFF_POINTS[d.station])||POINTS[d.station]||POINTS[d.home]||POINTS.lobby,target=pts[i%pts.length];
    if(!a){const homes=POINTS[d.homeStation]||POINTS[d.home]||pts,spawn=controlledMove?homes[i%homes.length]:target;a=Object.assign({},d,{col:spawn[0],row:spawn[1],x:0,y:0,path:[],progress:0,dir:"down",frame:0,frameTime:0});}else Object.assign(a,d);
    a.target=target;a.controlledMove=controlledMove;if(this.reduced||!controlledMove){a.col=target[0];a.row=target[1];a.path=[];a.progress=0;}else if(!a.path.length&&(a.col!==target[0]||a.row!==target[1]))a.path=findPath(a.col,a.row,target[0],target[1],this.blocked);
    a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;return a;});
-  this.updateButton();this.ensureLoop();
+  this.ensureLoop();
  }
  updateMeta(){
-  const s=this.state,t=document.getElementById("officeTruth"),detail=document.getElementById("officeTruthDetail"),phase=document.getElementById("officePhase"),status=document.getElementById("officeStatus"),next=document.getElementById("officeNext"),handoff=document.getElementById("officeHandoff");
-  if(t){t.className="office-truth "+(s.provenance==="last_observed"?"last-observed":s.provenance);t.textContent=s.provenance==="live"?"OBSERVED NOW":s.provenance==="last_observed"?"LAST OBSERVED":"SCHEDULED VIEW";}
-  if(detail)detail.textContent=s.detail;if(phase)phase.textContent=s.session+" · "+(s.stageObserved&&s.stageLabel?s.stageLabel:s.phase);
-  if(status){const staleRunning=s.status==="running"&&s.provenance!=="live";status.className="office-run-status "+(staleRunning?"last-seen":s.status);status.textContent=staleRunning?"LAST SEEN RUNNING":String(s.status||"unknown").toUpperCase();}
-  if(next){const n=s.next;next.textContent=n&&n.session?n.session+(n.scheduled_for?" · "+wibDate(new Date(n.scheduled_for)):""):"schedule unavailable";}
-  if(handoff){handoff.className="office-handoff"+(s.handoff&&s.handoff.active?" active":"");if(s.handoff){const when=s.handoff.active?"Observed handoff":"Last-observed handoff",book=s.handoff.book==="GLOBAL"?"North":s.handoff.book==="INDO"?"South":"Cross-book";handoff.textContent=when+" · "+s.handoff.fromName+" → "+s.handoff.toName+" · "+book;}else if(s.provenance==="live"&&norm(s.orchestrator&&s.orchestrator.activity)==="orchestrating"&&!s.stageObserved)handoff.textContent="Orchestrator observed · inner stage not observed";else handoff.textContent="No observed handoff";}
+  const s=this.state,phase=document.getElementById("officePhase"),status=document.getElementById("officeStatus"),next=document.getElementById("officeNext"),handoff=document.getElementById("officeHandoff");
+  const delayed=FAILURE_STATUS.has(s.status),active=s.status==="running"&&s.provenance==="live",complete=s.status==="complete";
+  if(phase)phase.textContent=delayed?"The next office update is delayed":active?"The desk team is at work":complete?"Latest desk work published":"Between scheduled working sessions";
+  if(status){status.className="office-run-status "+(delayed?"degraded":active?"running":complete?"complete":"scheduled");status.textContent=delayed?"DELAYED":active?"ACTIVE":complete?"UPDATED":"SCHEDULED";}
+  if(next){const n=s.next;next.textContent=n&&n.session?publicSessionLabel(n.session)+(n.scheduled_for?" · "+wibDate(new Date(n.scheduled_for)):""):"schedule unavailable";}
+  if(handoff){handoff.className="office-handoff"+(s.handoff&&s.handoff.active?" active":"");if(s.handoff){const when=s.handoff.active?"Desk handoff":"Recent desk handoff",book=s.handoff.book==="GLOBAL"?"North":s.handoff.book==="INDO"?"South":"Cross-book";handoff.textContent=when+" · "+s.handoff.fromName+" → "+s.handoff.toName+" · "+book;}else handoff.textContent="No active desk handoff";}
+  this.updateMarketMeta();
+ }
+ updateMarketMeta(){
+  const tape=this.marketTape||normalizeMarketTape(null),meta=document.getElementById("officeMarketMeta"),a11y=document.getElementById("officeMarketA11y"),items=tape.available,staleCount=items.filter(x=>x.stale).length,asof=tape.generatedAt?wibDate(new Date(tape.generatedAt)):"time unavailable";
+  if(meta){if(!items.length)meta.textContent="Market data unavailable · no values published";else{const quality=tape.status==="partial"?"Partial market snapshot":staleCount?"Market snapshot · "+staleCount+" stale":"Market snapshot";meta.textContent=quality+" · "+items.length+" instruments · "+asof;}}
+  if(a11y){const values=items.map(x=>x.symbol+" "+x.value+(x.change?" "+x.change:"")+(x.stale?" stale":"")+(x.asof?" as of "+x.asof:"")+(x.source?" source "+x.source:"")).join("; ");a11y.textContent=values?"Published market tape: "+values:"Published market tape unavailable.";}
  }
  updateA11y(){
   const list=document.getElementById("officeAgentList"),sum=document.getElementById("officeRosterSummary");if(!list)return;const frag=document.createDocumentFragment();
-  for(const a of this.state.agents){const li=document.createElement("li"),b=document.createElement("b"),span=document.createElement("span");b.textContent=a.name+" — "+a.title;span.textContent=a.stateLabel+" · "+a.activityLabel+" · "+cap(a.station)+" · "+a.book;li.append(b,span);frag.append(li);}list.replaceChildren(frag);if(sum){const s=this.state;let truth=s.provenance==="live"?"observed now":s.provenance==="last_observed"?"last observed":"scheduled view";if(s.provenance==="last_observed"&&s.observed)truth+=" "+wibDate(new Date(s.observed));if(s.provenance==="scheduled"&&s.next&&s.next.scheduled_for)truth+="; next "+s.next.session+" "+wibDate(new Date(s.next.scheduled_for));const status=s.status==="running"&&s.provenance!=="live"?"last seen running":s.status;sum.textContent="Accessible desk roster — "+s.agents.length+" agents · "+truth+" · "+s.session+" · status "+status;}
+  for(const a of this.state.agents){const li=document.createElement("li"),b=document.createElement("b"),span=document.createElement("span");b.textContent=a.name+" · "+a.roleLabel;span.textContent=a.activityLabel+" · "+cap(a.station)+" · "+a.book;li.append(b,span);frag.append(li);}list.replaceChildren(frag);if(sum)sum.textContent="Accessible 6S Virtual Office roster — "+this.state.agents.length+" agents · roles and published desk activity · animation is illustrative";
  }
- updateButton(){if(!this.button)return;const paused=this.userPaused||this.reduced;this.button.textContent=paused?"Resume motion":"Pause motion";this.button.setAttribute("aria-pressed",String(paused));this.button.disabled=this.reduced;}
  snapAll(){for(const a of this.agents){if(a.target){a.col=a.target[0];a.row=a.target[1];a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;a.path=[];a.progress=0;}}}
  setRouteVisible(value){this.routeVisible=!!value;this.ensureLoop();}
- shouldRun(){return !this.userPaused&&!this.reduced&&!document.hidden&&this.routeVisible&&this.intersecting;}
+ shouldRun(){return !this.reduced&&!document.hidden&&this.routeVisible&&this.intersecting;}
  ensureLoop(){
   if(!this.ready)return;const run=this.shouldRun();
   if(run&&!this.raf){this.last=performance.now();this.raf=requestAnimationFrame(t=>this.tick(t));}
@@ -254,14 +276,22 @@ class Floor{
  drawOffice(c,clock){
   this.floorMaterials(c);this.cityWindows(c,clock);
   for(const z of ZONES)this.zone(c,z);
-  this.marketWall(c,clock);this.hangingBoards(c,clock);this.decor(c,clock);this.desksBack(c,clock);
+  this.marketWall(c,clock);this.hangingBoards(c,clock);this.officeFurniture(c,clock);this.decor(c,clock);this.desksBack(c,clock);
  }
  floorMaterials(c){
-  const floor=c.createLinearGradient(0,32,0,H);floor.addColorStop(0,"#1B2027");floor.addColorStop(.52,"#12161B");floor.addColorStop(1,"#090C10");c.fillStyle=floor;c.fillRect(0,0,W,H);
-  for(let r=2;r<ROWS;r++)for(let col=0;col<COLS;col++){c.fillStyle=(r+col)%2?"rgba(255,255,255,.018)":"rgba(0,0,0,.05)";c.fillRect(col*TILE,r*TILE,TILE,TILE);}
-  c.strokeStyle="rgba(118,132,148,.08)";c.lineWidth=1;for(let x=0;x<W;x+=32){c.beginPath();c.moveTo(x,32);c.lineTo(x,H);c.stroke();}for(let y=32;y<H;y+=32){c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke();}
-  const aisle=c.createLinearGradient(384,0,1056,0);aisle.addColorStop(0,"rgba(52,62,73,.18)");aisle.addColorStop(.5,"rgba(83,92,102,.25)");aisle.addColorStop(1,"rgba(52,62,73,.18)");c.fillStyle=aisle;c.fillRect(384,176,672,160);
-  c.fillStyle="rgba(200,167,94,.18)";c.fillRect(384,254,672,2);c.fillStyle="rgba(255,255,255,.025)";for(let x=398;x<1042;x+=32)c.fillRect(x,184,1,144);
+  const floor=c.createLinearGradient(0,32,0,H);floor.addColorStop(0,"#20262D");floor.addColorStop(.5,"#151A20");floor.addColorStop(1,"#0C1014");c.fillStyle=floor;c.fillRect(0,0,W,H);
+  // Dense commercial carpet with long directional fibres, not a tile checkerboard.
+  for(let y=36;y<H;y+=9){c.fillStyle=y%27===0?"rgba(139,154,168,.025)":"rgba(0,0,0,.035)";c.fillRect(0,y,W,1);}
+  for(let i=0;i<150;i++){const x=(i*137+41)%W,y=38+((i*83+19)%(H-42)),w=2+(i%5);c.fillStyle=i%4?"rgba(191,204,214,.025)":"rgba(0,0,0,.08)";c.fillRect(x,y,w,1);}
+  // Warm oak collaboration spine through the centre of the office.
+  const aisle=c.createLinearGradient(384,0,1056,0);aisle.addColorStop(0,"#322A22");aisle.addColorStop(.18,"#44372A");aisle.addColorStop(.5,"#50402E");aisle.addColorStop(.82,"#44372A");aisle.addColorStop(1,"#322A22");c.fillStyle=aisle;c.fillRect(384,176,672,160);
+  c.fillStyle="rgba(232,200,142,.075)";for(let x=392;x<1056;x+=48)c.fillRect(x,176,1,160);
+  c.fillStyle="rgba(0,0,0,.12)";for(let y=192;y<336;y+=24){c.fillRect(384,y,672,1);const offset=(Math.floor((y-192)/24)%2)*24;for(let x=408+offset;x<1056;x+=96)c.fillRect(x,y-24,1,24);}
+  c.fillStyle="rgba(228,197,133,.22)";c.fillRect(384,254,672,2);c.fillStyle="rgba(255,255,255,.035)";c.fillRect(384,177,672,2);
+  // Soft area rugs visually anchor the two open trading pods.
+  for(const [x,color] of [[48,"rgba(62,142,221,.11)"],[1064,"rgba(232,163,61,.1)"]]){c.fillStyle=color;c.fillRect(x,136,328,174);c.strokeStyle="rgba(214,224,232,.07)";c.strokeRect(x+.5,136.5,327,173);for(let y=148;y<304;y+=14){c.strokeStyle="rgba(255,255,255,.018)";c.beginPath();c.moveTo(x+7,y);c.lineTo(x+321,y);c.stroke();}}
+  // Broad ceiling-light reflections add depth without flashing.
+  for(const x of [170,510,850,1190]){const glow=c.createRadialGradient(x,230,8,x,230,190);glow.addColorStop(0,"rgba(213,231,242,.075)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(x-200,32,400,390);}
  }
  cityWindows(c,clock){
   for(const [x,w,seed] of [[16,400,2],[1024,400,7]]){
@@ -272,7 +302,7 @@ class Floor{
  }
  zone(c,z){
   const x=z.x*TILE,y=z.y*TILE,w=z.w*TILE,h=z.h*TILE,openPod=z.key==="north"||z.key==="south",g=c.createLinearGradient(x,y,x,y+h);g.addColorStop(0,z.color);g.addColorStop(1,"#0E1217");c.save();if(openPod)c.globalAlpha=.72;c.fillStyle=g;c.fillRect(x,y,w,h);
-  c.fillStyle="rgba(255,255,255,.018)";for(let yy=y+32;yy<y+h-4;yy+=16)for(let xx=x+5;xx<x+w-4;xx+=16)if(((xx+yy)/16)%2)c.fillRect(xx,yy,8,8);c.restore();
+  c.fillStyle="rgba(255,255,255,.018)";for(let yy=y+34;yy<y+h-4;yy+=12)c.fillRect(x+5,yy,w-10,1);c.restore();
   c.fillStyle="rgba(255,255,255,.055)";c.fillRect(x+5,y+28,w-10,2);c.fillStyle=z.edge;c.fillRect(x,y,w,3);
   if(openPod){c.fillRect(x,y,3,24);c.fillRect(x+w-3,y,3,24);c.fillStyle="rgba(255,255,255,.06)";c.fillRect(x+6,y+h-2,w-12,1);}else{c.fillRect(x,y,3,h);c.fillRect(x+w-3,y,3,h);c.fillRect(x,y+h-3,w,3);c.fillStyle=z.color;if(z.door==="top"||z.door==="bottom"){const dx=(z.x+Math.floor(z.w/2))*TILE,dy=z.door==="top"?y:y+h-3;c.fillRect(dx,dy,TILE*2,3);c.fillStyle="rgba(255,255,255,.16)";c.fillRect(dx,dy,TILE*2,1);}else{const dx=z.door==="left"?x:x+w-3,dy=(z.y+Math.floor(z.h/2))*TILE;c.fillRect(dx,dy,3,TILE*2);c.fillStyle="rgba(255,255,255,.16)";c.fillRect(dx,dy,1,TILE*2);}}
   if(z.glass){c.fillStyle="rgba(120,184,240,.1)";for(let k=1;k<z.w;k+=3)c.fillRect(x+k*TILE,y+3,2,h-6);c.fillStyle="rgba(230,245,255,.12)";c.fillRect(x+6,y+4,w-12,1);}
@@ -315,17 +345,48 @@ class Floor{
    if(desk.seed%4===0){c.fillStyle="#B9C1C8";c.fillRect(cx+29,cy-1,7,7);c.fillStyle="#182027";c.fillRect(cx+31,cy+1,3,3);}
   }
  }
- decor(c,clock){
-  c.fillStyle="rgba(200,167,94,.22)";c.fillRect(628,244,184,2);c.fillRect(718,190,2,126);c.fillStyle="#2D343C";c.fillRect(648,231,144,25);c.fillStyle="#0B0F14";c.fillRect(652,235,136,17);c.fillStyle="#C7A65A";c.font="bold 8px Arial";c.textAlign="center";c.fillText("WALL ST · BROAD ST",720,246);c.textAlign="left";
-  for(const x of [401,1026]){c.fillStyle="#1E252C";c.fillRect(x,181,13,40);c.fillStyle="#4B5965";c.fillRect(x+3,181,7,31);c.fillStyle="#1F5335";for(let i=0;i<4;i++)c.fillRect(x-4+i*6,174-(i%2)*5,7,12);}
-  c.fillStyle="rgba(196,220,238,.035)";for(let x=72;x<W;x+=176)c.fillRect(x,118,88,3);c.fillStyle="rgba(232,163,61,.08)";c.fillRect(0,331,W,2);
-  const glow=c.createRadialGradient(720,250,15,720,250,230);glow.addColorStop(0,"rgba(150,185,210,.09)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(480,32,480,430);
+ officeFurniture(c,clock){
+  // Low lounge seating at the edge of the central collaboration spine.
+  this.sofa(c,400,205,126,"#263746","#3E8EDD");this.sofa(c,914,205,126,"#3D3223","#E8A33D");
+  this.coffeeTable(c,443,264,44);this.coffeeTable(c,957,264,44);
+  // Two coffee bars flank the main route, leaving the central doors and aisle clear.
+  this.coffeeBar(c,548,184,102,"COFFEE");this.coffeeBar(c,790,184,102,"NEWS");
+  // Collaboration table in the glass investment-committee room.
+  c.fillStyle="rgba(0,0,0,.28)";c.fillRect(354,420,218,58);c.fillStyle="#4A3828";c.fillRect(360,410,206,54);c.fillStyle="#74583A";c.fillRect(360,410,206,4);c.fillStyle="#20262D";c.fillRect(370,464,10,11);c.fillRect(546,464,10,11);
+  for(const x of [380,430,480,530]){c.fillStyle="#242C34";c.fillRect(x,397,24,10);c.fillStyle="#53606C";c.fillRect(x+3,397,18,3);c.fillStyle="#161B20";c.fillRect(x+10,407,4,10);}
+  c.fillStyle="#0B1118";c.fillRect(427,417,72,34);c.fillStyle="#192A38";c.fillRect(431,421,64,26);c.strokeStyle="#78B8F0";c.beginPath();c.moveTo(434,442);c.lineTo(445,435);c.lineTo(456,439);c.lineTo(468,428);c.lineTo(481,432);c.lineTo(492,425);c.stroke();
+  // Public research library, risk cabinet, operations rack and postmortem archive.
+  this.storage(c,45,374,138,54,"RESEARCH LIBRARY","#3E8EDD");this.storage(c,674,378,92,50,"RISK FILES","#3DBD4A");
+  this.serverRack(c,928,378,clock);this.storage(c,1204,374,154,54,"CASE ARCHIVE","#9AA3AD");
+  // Whiteboards make review rooms read as working spaces rather than blocks.
+  this.whiteboard(c,45,411,170,"BEAR QUESTIONS","#E84A93");this.whiteboard(c,1205,438,148,"LESSONS","#9AA3AD");
  }
+ sofa(c,x,y,w,body,accent){
+  c.fillStyle="rgba(0,0,0,.32)";c.fillRect(x+4,y+35,w-8,8);c.fillStyle=body;c.fillRect(x,y,w,34);c.fillStyle="#4B5965";c.fillRect(x+6,y+6,w-12,19);c.fillStyle=accent;c.fillRect(x+6,y+27,w-12,3);c.fillStyle="#151A20";c.fillRect(x+12,y+34,7,8);c.fillRect(x+w-19,y+34,7,8);
+  for(let px=x+13;px<x+w-18;px+=32){c.fillStyle="rgba(225,233,239,.12)";c.fillRect(px,y+10,23,11);}
+ }
+ coffeeTable(c,x,y,w){c.fillStyle="rgba(0,0,0,.3)";c.fillRect(x-2,y+13,w+4,7);c.fillStyle="#765A3D";c.fillRect(x,y,w,13);c.fillStyle="#A17B50";c.fillRect(x,y,w,2);c.fillStyle="#171B20";c.fillRect(x+6,y+13,4,11);c.fillRect(x+w-10,y+13,4,11);c.fillStyle="#D4D9DE";c.fillRect(x+7,y-3,8,7);c.fillStyle="#20262D";c.fillRect(x+9,y-1,4,3);}
+ coffeeBar(c,x,y,w,label){c.fillStyle="#171C21";c.fillRect(x,y,w,36);c.fillStyle="#5E4933";c.fillRect(x,y+27,w,9);c.fillStyle="#8A6B49";c.fillRect(x,y+27,w,2);c.fillStyle="#0A0D11";c.fillRect(x+8,y+7,28,17);c.fillStyle="#E8A33D";c.fillRect(x+12,y+11,20,2);c.fillStyle="#8D98A3";c.font="bold 7px Arial";c.fillText(label,x+43,y+17);for(let k=0;k<3;k++){c.fillStyle=k===1?"#D8DDE1":"#78838D";c.fillRect(x+68+k*9,y+9,6,10);}}
+ storage(c,x,y,w,h,label,accent){c.fillStyle="#11161B";c.fillRect(x,y,w,h);c.fillStyle="#3B4650";c.fillRect(x,y,w,3);c.fillStyle=accent;c.fillRect(x,y,3,h);for(let yy=y+15;yy<y+h;yy+=13){c.fillStyle="#28313A";c.fillRect(x+7,yy,w-14,2);for(let xx=x+9;xx<x+w-12;xx+=13){c.fillStyle=(xx+yy)%3?"#56616B":"#846A47";c.fillRect(xx,yy-8,8,7);}}c.fillStyle="#C5CCD2";c.font="bold 7px Arial";c.fillText(label,x+8,y+10);}
+ serverRack(c,x,y,clock){c.fillStyle="#080B0E";c.fillRect(x,y,90,78);c.fillStyle="#414B55";c.fillRect(x,y,90,3);c.fillStyle="#252D35";for(let yy=y+9;yy<y+72;yy+=11){c.fillRect(x+7,yy,76,8);c.fillStyle=(Math.floor(clock*2)+yy)%3?"#3DBD4A":"#E8A33D";c.fillRect(x+12,yy+3,3,2);c.fillStyle="#252D35";c.fillRect(x+19,yy+3,54,2);}c.fillStyle="#ADB5BD";c.font="bold 7px Arial";c.fillText("MARKS / FILLS",x+8,y+76);}
+ whiteboard(c,x,y,w,label,accent){c.fillStyle="#BBC5CC";c.fillRect(x,y,w,46);c.fillStyle="#EEF1F3";c.fillRect(x+3,y+3,w-6,38);c.fillStyle=accent;c.fillRect(x+7,y+8,36,3);c.fillStyle="#59636C";for(let k=0;k<3;k++)c.fillRect(x+7,y+17+k*7,w-23-k*19,2);c.fillStyle="#11161B";c.font="bold 7px Arial";c.fillText(label,x+49,y+11);}
+ decor(c,clock){
+  c.fillStyle="rgba(200,167,94,.22)";c.fillRect(628,244,184,2);c.fillRect(718,190,2,126);c.fillStyle="#2D343C";c.fillRect(648,231,144,25);c.fillStyle="#0B0F14";c.fillRect(652,235,136,17);c.fillStyle="#C7A65A";c.font="bold 8px Arial";c.textAlign="center";c.fillText("6S VIRTUAL OFFICE",720,246);c.textAlign="left";
+  for(const x of [401,526,779,1026,42,1370])this.plant(c,x,181,1);
+  // Acoustic ceiling rafts and warm task-light pools make the floor feel occupied.
+  for(let x=72;x<W;x+=176){c.fillStyle="#343E47";c.fillRect(x,116,88,5);c.fillStyle="rgba(213,231,242,.16)";c.fillRect(x+8,121,72,2);}
+  for(const [x,y] of [[128,220],[304,220],[1136,220],[1312,220],[480,430],[736,430],[1000,430],[1280,430]]){const glow=c.createRadialGradient(x,y,4,x,y,70);glow.addColorStop(0,"rgba(236,205,145,.065)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(x-72,y-70,144,140);}
+  c.fillStyle="rgba(232,163,61,.08)";c.fillRect(0,331,W,2);
+  // Live office clocks for the three market hubs (cached for the current minute).
+  const minute=Math.floor(Date.now()/60000);if(!this.officeClocks||this.officeClocks.minute!==minute){const now=new Date(),zones=["America/New_York","Europe/London","Asia/Jakarta"];this.officeClocks={minute,times:zones.map(zone=>{try{return new Intl.DateTimeFormat("en-GB",{timeZone:zone,hour:"2-digit",minute:"2-digit",hour12:false}).format(now);}catch(_){return "--:--";}})};}
+  c.fillStyle="#0B1015";c.fillRect(602,124,236,31);c.fillStyle="#77828C";c.font="bold 7px Arial";["NEW YORK","LONDON","JAKARTA"].forEach((label,i)=>{const x=616+i*74;c.fillText(label,x,136);c.fillStyle=i===2?"#E8A33D":"#D9DEE2";c.font="bold 9px Arial";c.fillText(this.officeClocks.times[i],x,148);c.fillStyle="#77828C";c.font="bold 7px Arial";});
+ }
+ plant(c,x,y,scale){const s=scale||1;c.fillStyle="#694B35";c.fillRect(x,y+19*s,16*s,18*s);c.fillStyle="#8C6846";c.fillRect(x+2*s,y+19*s,12*s,3*s);const greens=["#1D5A3A","#287149","#3B8557"];for(let i=0;i<7;i++){c.fillStyle=greens[i%greens.length];const dx=(-8+(i*5)%25)*s,dy=(-2-(i%3)*8)*s;c.fillRect(x+4*s+dx,y+16*s+dy,9*s,13*s);}c.fillStyle="#17221C";c.fillRect(x+7*s,y+7*s,2*s,15*s);}
  drawHeader(c,clock){
-  const brandW=326,ticker=["NORTH BOOK","ACWI / AGG","RATES","USD","CHINA IMPULSE","COMMODITIES","JKSE","IDR","SOUTH BOOK"],step=148,total=ticker.length*step,offset=(clock*22)%total;
+  const brandW=326,tape=this.marketTape||normalizeMarketTape(null),raw=tape.items.length?tape.items:[{symbol:"MARKET TAPE",available:false,stale:false}],ticker=raw.map(item=>{if(!item.available)return {text:item.symbol+"  UNAVAILABLE",color:"#6F7882"};const change=item.change?"  "+item.change:"",stale=item.stale?"  STALE":"";return {text:item.symbol+"  "+item.value+change+stale,color:item.stale?"#E8A33D":item.change&&item.change.startsWith("-")?"#F0524E":item.change?"#3DBD4A":"#AEB6C0"};});
   c.fillStyle="#090C10";c.fillRect(0,0,W,32);c.save();c.beginPath();c.rect(brandW,0,W-brandW,29);c.clip();c.font="bold 10px Arial";c.textBaseline="middle";
-  for(let cycle=-1;cycle<=1;cycle++)for(let i=0;i<ticker.length;i++){const x=brandW+18+i*step-offset+cycle*total;c.fillStyle=i%3===0?"#78B8F0":i%3===1?"#E8A33D":"#AEB6C0";c.fillText(ticker[i],x,15);}c.restore();
-  c.fillStyle="#090C10";c.fillRect(0,0,brandW,29);c.fillStyle="#E01F26";c.fillRect(0,0,36,29);c.fillStyle="#FFFFFF";c.font="bold 12px Arial";c.fillText("6S",10,15);c.fillStyle="#F5F6F7";c.font="bold 11px Arial";c.fillText("SIX SOUTH CAPITAL",48,12);c.fillStyle="#8F99A4";c.font="7px Arial";c.fillText("WALL STREET TRADING FLOOR",48,22);c.fillStyle="#38424C";c.fillRect(brandW-2,0,2,29);c.fillStyle="#E01F26";c.fillRect(0,29,W,3);
+  const widths=ticker.map(item=>Math.max(138,Math.ceil(c.measureText(item.text).width)+48)),total=widths.reduce((a,b)=>a+b,0),offset=total?(clock*24)%total:0,cycles=Math.ceil((W-brandW)/Math.max(1,total))+2;for(let cycle=-1;cycle<=cycles;cycle++){let x=brandW+18-offset+cycle*total;for(let i=0;i<ticker.length;i++){c.fillStyle=ticker[i].color;c.fillText(ticker[i].text,x,15);x+=widths[i];}}c.restore();
+  c.fillStyle="#090C10";c.fillRect(0,0,brandW,29);c.fillStyle="#E01F26";c.fillRect(0,0,36,29);c.fillStyle="#FFFFFF";c.font="bold 12px Arial";c.fillText("6S",10,15);c.fillStyle="#F5F6F7";c.font="bold 11px Arial";c.fillText("SIX SOUTH CAPITAL",48,12);c.fillStyle="#8F99A4";c.font="7px Arial";c.fillText("6S VIRTUAL OFFICE",48,22);c.fillStyle="#38424C";c.fillRect(brandW-2,0,2,29);c.fillStyle="#E01F26";c.fillRect(0,29,W,3);
  }
  drawVignette(c){const g=c.createLinearGradient(0,32,0,H);g.addColorStop(0,"rgba(0,0,0,.02)");g.addColorStop(.72,"rgba(0,0,0,0)");g.addColorStop(1,"rgba(0,0,0,.2)");c.fillStyle=g;c.fillRect(0,32,W,H-32);}
  drawAgent(c,a,clock){
@@ -338,7 +399,7 @@ class Floor{
   c.restore();
  }
  drawAgentLabel(c,a){
-  const x=Math.round(a.x),y=Math.round(a.y),floating=!!a.controlledMove,label=String(a.name||a.role).slice(0,24),labelY=floating?y-70:(a.row<=10?y+8:y+18);c.save();c.globalAlpha=(a.state==="off_desk"||a.state==="scheduled")?.66:1;c.font="bold 9px Arial";const labelW=Math.min(82,Math.max(44,c.measureText(label).width+14));c.fillStyle="rgba(7,10,13,.93)";c.fillRect(Math.round(x-labelW/2),labelY,labelW,13);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(Math.round(x-labelW/2),labelY,3,13);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,x,labelY+7);c.restore();
+  const x=Math.round(a.x),y=Math.round(a.y),floating=!!a.controlledMove,label=String(a.name||a.role).slice(0,20)+" · "+String(a.roleLabel||a.title||"Desk agent").slice(0,24),labelY=floating?y-70:(a.row<=10?y+8:y+18);c.save();c.globalAlpha=(a.state==="off_desk"||a.state==="scheduled")?.72:1;c.font="bold 8px Arial";const labelW=Math.min(132,Math.max(76,c.measureText(label).width+14));c.fillStyle="rgba(7,10,13,.94)";c.fillRect(Math.round(x-labelW/2),labelY,labelW,14);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(Math.round(x-labelW/2),labelY,3,14);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,x,labelY+7,labelW-10);c.restore();
  }
 }
 

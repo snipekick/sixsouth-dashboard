@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Six South · 6S</title>
 <style>
-/* Six South terminal skin — S&P Capital IQ-inspired. Tokens + rules: dashboard/DESIGN.md.
+/* Six South terminal skin — S&P Capital IQ-inspired. Design rules: dashboard/DESIGN.md.
    Self-contained: no CDN scripts, no external fonts (Arial is a system font), no remote assets.
    All dynamic content is HTML-escaped in JS (stored-XSS defense, findings state-data-07). */
 :root{
@@ -107,29 +107,19 @@ tbody tr:hover td{background:var(--panel2)}
 .chart .grid{stroke:#232529;stroke-width:1}
 .chart .pill{font-size:9px;font-weight:700}
 
-/* Wall Street floor — canvas is visual; the status and full roster remain semantic DOM. */
+/* 6S Virtual Office — canvas is visual; the status and full roster remain semantic DOM. */
 .office-panel{margin:8px 0 0;overflow:hidden}
 .office-bar{flex-wrap:wrap}
 .office-bar .aux{white-space:normal;text-align:right}
-.office-meta{display:grid;grid-template-columns:minmax(260px,1.4fr) repeat(2,minmax(190px,.8fr)) auto;gap:1px;background:var(--hair);border-bottom:1px solid var(--hair)}
+.office-meta{display:grid;grid-template-columns:minmax(260px,1.2fr) repeat(2,minmax(210px,1fr));gap:1px;background:var(--hair);border-bottom:1px solid var(--hair)}
 .office-meta>div{background:var(--panel);padding:8px 10px;min-width:0}
 .office-meta .k{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
 .office-meta .v{font-size:11.5px;margin-top:2px;color:var(--ink);overflow-wrap:anywhere}
-.office-truth{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border:1px solid var(--hair)}
-.office-truth::before{content:"";width:6px;height:6px;background:var(--dim)}
-.office-truth.live{border-color:var(--up);color:var(--up)}
-.office-truth.live::before{background:var(--up)}
-.office-truth.last-observed{border-color:var(--north);color:var(--north)}
-.office-truth.last-observed::before{background:var(--north)}
-.office-truth.scheduled{border-color:var(--south);color:var(--south)}
-.office-truth.scheduled::before{background:var(--south)}
 .office-run-status{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid var(--hair);color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.05em;vertical-align:1px}
 .office-run-status.running{border-color:var(--north);color:var(--north)}
 .office-run-status.complete{border-color:var(--up);color:var(--up)}
 .office-run-status.degraded,.office-run-status.failed,.office-run-status.blocked{border-color:var(--down);color:var(--down)}
 .office-run-status.last-seen{border-color:var(--muted);color:var(--muted)}
-.office-motion{align-self:center;border:1px solid var(--hair);background:var(--panel2);color:var(--ink);font:inherit;font-size:10.5px;padding:5px 9px;cursor:pointer}
-.office-motion:hover,.office-motion:focus-visible{border-color:var(--muted);outline:none}
 .office-stage{position:relative;background:var(--bg);overflow:auto;scrollbar-color:var(--hair) var(--bar)}
 .office-canvas{display:block;width:100%;height:auto;min-width:920px;aspect-ratio:5/2;image-rendering:pixelated;image-rendering:crisp-edges}
 .office-loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:11px;pointer-events:none;background:var(--bg)}
@@ -147,6 +137,7 @@ tbody tr:hover td{background:var(--panel2)}
 .office-agent-list b{display:block;color:var(--ink);font-size:11px}
 .office-agent-list span{display:block;color:var(--muted);font-size:10px;overflow-wrap:anywhere}
 .office-help{position:absolute;right:8px;bottom:7px;padding:2px 6px;background:var(--bg);border:1px solid var(--hair);color:var(--muted);font-size:9px;pointer-events:none}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--hair);margin:2px 0 0;flex-wrap:wrap}
 .tab{border:none;background:transparent;padding:6px 12px;font-size:11.5px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px}
@@ -178,7 +169,6 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   .office-canvas{width:920px}
   .office-help{position:sticky;display:inline-block;float:right;margin:-25px 7px 7px 0}
 }
-@media (prefers-reduced-motion:reduce){.office-motion{display:none}}
 </style>
 </head>
 <body>
@@ -213,20 +203,20 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   <div class="strip" id="strip"></div>
 
   <section class="panel office-panel" aria-labelledby="officeHeading">
-    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">The floor — Wall Street desk</span><span class="aux">11 fictional agents · workflow motion is illustrative · status labels are authoritative</span></div>
+    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="aux">11 fictional agents · illustrative animation · published desk activity</span></div>
     <div class="office-meta" aria-live="polite">
-      <div><div class="k">Truth model</div><div class="v"><span class="office-truth scheduled" id="officeTruth">SCHEDULED VIEW</span> <span id="officeTruthDetail">waiting for desk state</span></div></div>
-      <div><div class="k">Session / phase</div><div class="v"><span class="mono" id="officePhase">—</span><span class="office-run-status" id="officeStatus">UNKNOWN</span></div></div>
+      <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Waiting for the next published update</span><span class="office-run-status" id="officeStatus">—</span></div></div>
       <div><div class="k">Next scheduled session</div><div class="v mono" id="officeNext">—</div></div>
-      <div><button class="office-motion" id="officeMotion" type="button" aria-pressed="false">Pause motion</button></div>
+      <div><div class="k">Market tape</div><div class="v" id="officeMarketMeta">Waiting for published market data</div></div>
     </div>
     <div class="office-stage" id="office">
       <canvas class="office-canvas" id="officeCanvas" width="1440" height="576" aria-hidden="true"></canvas>
-      <div class="office-loading" id="officeLoading">Loading the trading floor…</div>
-      <span class="office-help">Illustrative desk motion · observed handoffs only</span>
+      <div class="office-loading" id="officeLoading">Loading the 6S Virtual Office…</div>
+      <span class="office-help">Illustrative animation · published desk handoffs</span>
+      <p class="sr-only" id="officeMarketA11y" aria-live="polite"></p>
     </div>
     <div class="office-workflow" aria-label="Research and execution workflow">
-      <b>Controlled handoff</b><span>Analyst</span><span class="arrow">→</span><span>Bear attack</span><span class="arrow">→</span><span>Analyst revision</span><span class="arrow">→</span><span>Judge</span><span class="arrow">→</span><span>Risk</span><span class="arrow">→</span><span>PM</span><span class="arrow">→</span><span>Ops / fills</span><span class="arrow">→</span><span>Postmortem</span><span class="office-handoff" id="officeHandoff" aria-live="polite">No active telemetry handoff</span>
+      <b>Research workflow</b><span>Analyst</span><span class="arrow">→</span><span>Bear review</span><span class="arrow">→</span><span>Analyst revision</span><span class="arrow">→</span><span>Judge</span><span class="arrow">→</span><span>Risk</span><span class="arrow">→</span><span>PM</span><span class="arrow">→</span><span>Ops / fills</span><span class="arrow">→</span><span>Postmortem</span><span class="office-handoff" id="officeHandoff" aria-live="polite">No active desk handoff</span>
     </div>
     <details class="office-access">
       <summary id="officeRosterSummary">Accessible desk roster — loading</summary>
@@ -264,7 +254,6 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
             <div class="diag"><h4>Roster</h4><div class="roster" id="roster"></div></div>
             <div class="diag">
               <h4>Sleeve hit rates</h4><div id="sleeves" class="small muted">—</div>
-              <h4 style="margin-top:10px">Token cost</h4><div id="tokens" class="small muted">—</div>
             </div>
           </div>
         </div>
@@ -292,7 +281,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js?v=20260718-trading-floor"></script>
+<script src="office-floor.js?v=20260718-6s-virtual-office-v3"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -370,9 +359,9 @@ function chart(labels,datasets,o){
   return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img">${gy}${gx}${paths}${pills}</svg>`;
 }
 
-let S,N,L,SL,TK,RO,AN,ST,OS,H={};
+let S,N,L,SL,RO,AN,ST,OS,MT,H={};
 async function boot(){
-  [S,N,L,SL,TK,RO,AN,ST,OS]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster'),api('analytics'),api('structure'),api('office_state')]);
+  [S,N,L,SL,RO,AN,ST,OS,MT]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('roster'),api('analytics'),api('structure'),api('office_state'),api('market_tape')]);
   H.GLOBAL=await api('holdings_GLOBAL')||[]; H.INDO=await api('holdings_INDO')||[];
   if(!S){document.getElementById('sub').textContent='dashboard data not published yet — run scripts/dashboard_push.py';return;}
   renderTop(); renderBanners(); renderStrip();
@@ -520,7 +509,7 @@ async function renderBookView(b){
 }
 
 function renderOffice(){
-  if(window.SixSouthOffice)window.SixSouthOffice.render({state:OS,roster:RO,summary:S,structure:ST});
+  if(window.SixSouthOffice)window.SixSouthOffice.render({state:OS,roster:RO,summary:S,structure:ST,marketTape:MT});
 }
 
 // ---- Structure view: fund architecture, workflow, governance ----
@@ -588,18 +577,12 @@ async function renderStructureView(){
     bx(30,300,180,'Pecora — Post-mortem','lessons · sole desk-file editor')+
     bx(250,300,180,'Ledger — Ops','scripts · plumbing · zero judgment')+
     `</svg>`;
-  const schedRows=(st.schedule||[]).map(r=>`<tr><td class="mono">${esc(r.job)}</td><td>${esc(r.session||'—')}</td>
+  const publicSession={US_CLOSE:'North close review',IDX_PREOPEN:'South pre-open review',IDX_CLOSE:'South close review',US_PREOPEN:'North pre-open review',IDEATION:'Idea research',WEEKLY_DEEP:'Weekly deep research',MONTHLY_IC:'Monthly investment review'};
+  const schedRows=(st.schedule||[]).map(r=>`<tr><td>${esc(publicSession[r.session]||r.session||'Scheduled desk review')}</td>
     <td>${esc(r.days)}</td><td class="mono">${esc((r.times_wib||[]).join(' · ')||'—')}</td></tr>`).join('');
-  const sess=st.sessions||{};
-  const sessRows=Object.keys(sess).map(k=>{const v=sess[k]||{};return `<tr><td class="mono">${esc(k)}</td>
-    <td>${esc(v.tier||'')}</td><td class="num mono">${fmt0(v.budget_tokens)}</td><td class="num mono">${esc(String(v.max_turns||''))}</td>
-    <td class="num mono">${esc(String(v.timeout_minutes||''))}m</td><td>${v.always_llm?'always':'quiet-skip'}</td>
-    <td>${esc(v.escalate_to||'—')}</td></tr>`;}).join('');
-  const agents=st.agents||{};
-  const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b></td>
-    <td>${esc(e.title||'')}</td>
-    <td class="mono">${esc(e.role||'')}</td><td><span class="tag">${esc(agents[e.role]||e.tier||'')}</span></td>
-    <td class="muted">${esc(e.authority||e.note||'')}</td></tr>`).join('');
+  const coverage={GLOBAL:'North Book',INDO:'South Book',SHARED:'Cross-book',INDEPENDENT:'Independent'};
+  const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b> <span class="muted">· ${esc(e.title||'Desk agent')}</span></td>
+    <td class="muted">${esc(coverage[e.book]||e.book||'Cross-book')}</td></tr>`).join('');
   const bkl=(L&&L.limits&&L.limits.books)||{};
   const cpt=v=>v==null?null:Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(v);
   const capN=cpt(bkl.GLOBAL&&bkl.GLOBAL.initial_capital)||'1M', capS=cpt(bkl.INDO&&bkl.INDO.initial_capital)||'15B';
@@ -608,7 +591,7 @@ async function renderStructureView(){
     <div class="grid" style="grid-template-columns:1fr;margin-top:8px">
       <div class="panel"><div class="ptitle"><span class="dot"></span>About Six South (6S)<span class="aux">"Two books, one bearing" · inception ${esc(S.inception||'2026-07-06')}</span></div>
         <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
-          <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working unattended on a daily schedule from a single machine. No human picks the trades. The owner maintains the machine and the rulebook it runs under; the fund does the investing.</p>
+          <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working on a published cadence. No human picks the trades. The owner maintains the rulebook; the fund does the investing.</p>
           <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
           <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸). All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
         </div></div></div></div>
@@ -632,8 +615,8 @@ async function renderStructureView(){
         <div class="pbody">${orgSvg}</div></div>
       <div class="col">
         <div class="panel"><div class="ptitle"><span class="dot"></span>Who runs it — the desk, seat by seat<span class="aux">every persona is an AI agent with a fixed mandate</span></div>
-          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Title</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
-            <tbody>${rosterRows||'<tr><td colspan=5 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Name · role</th><th>Coverage</th></tr></thead>
+            <tbody>${rosterRows||'<tr><td colspan=2 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
         <div class="panel"><div class="ptitle"><span class="dot"></span>Why the separation of powers matters</div>
           <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body">
             <p>The seats are deliberately adversarial: the people who <em>want</em> a trade (analysts, macro) never approve it; the people who approve it (Judge, Risk) never propose one; and the Bear is paid to disagree with everybody. None of them can overrule the others outside their lane. Most fund blow-ups are a failure of exactly this separation — 6S makes it structural.</p>
@@ -642,26 +625,23 @@ async function renderStructureView(){
     </div>
     <div class="grid" style="grid-template-columns:1.2fr 1fr">
       <div class="col">
-        <div class="panel"><div class="ptitle"><span class="dot"></span>Session schedule (WIB) — launchd, unattended</div>
-          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Job</th><th>Session</th><th>Days</th><th>Times</th></tr></thead>
-            <tbody>${schedRows||'<tr><td colspan=4 class="muted">structure.json not published yet</td></tr>'}</tbody></table></div></div></div>
-        <div class="panel"><div class="ptitle"><span class="dot"></span>Session envelopes<span class="aux">budgets are output-scale; wrapper enforces turns + wall-clock</span></div>
-          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Session</th><th>Tier</th><th class="num">Budget</th><th class="num">Turns</th><th class="num">Timeout</th><th>LLM</th><th>Escalates to</th></tr></thead>
-            <tbody>${sessRows}</tbody></table></div></div></div>
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Published working cadence (WIB)</div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Activity</th><th>Days</th><th>Times</th></tr></thead>
+            <tbody>${schedRows||'<tr><td colspan=3 class="muted">working cadence unavailable</td></tr>'}</tbody></table></div></div></div>
       </div>
       <div class="col">
         <div class="panel"><div class="ptitle"><span class="dot"></span>Macro desk — information flow</div>
           <div class="pbody"><div class="item" style="border:none;padding:0">
             <div class="body">
-              <p><strong>One artifact, many consumers.</strong> Severin (MACRO_GLOBAL) writes the global blocks — rates path, USD, China impulse, commodities, risk appetite; Ferrand (MACRO_FX) writes FX/Indonesia transmission and co-signs the synthesis. Output: <code>state/macro_regime.md</code> — ≤600 words plus machine frontmatter (regime · risk appetite · tilts · trip markers).</p>
-              <p><strong>Trigger-driven cadence.</strong> Full rebuild only on the first Saturday or when a pre-registered marker trips (each marker names its level at write time). Other Saturdays: a ≤150-word delta. Weekday sessions pay zero macro tokens — they read the frontmatter only.</p>
+              <p><strong>One view, many consumers.</strong> Severin covers the global rates path, the US dollar, China, commodities and risk appetite; Ferrand covers FX and the transmission into Indonesia. Together they publish one conservative regime view for both books.</p>
+              <p><strong>Trigger-driven cadence.</strong> The macro view is refreshed when pre-registered market markers move or at its scheduled review. Between reviews, the desk carries the last published view and its date.</p>
               <p><strong>Where it binds.</strong> Idea cards must declare WITH / NEUTRAL / AGAINST the desk's tilts (AGAINST must name its variant); analysts get the memo for variant perception; Bear uses it as ammunition; PMs size to the frontmatter call — on desk disagreement, the more conservative call governs.</p>
             </div></div></div></div>
         <div class="panel"><div class="ptitle"><span class="dot"></span>Governance</div>
           <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body"><ul>
-            <li><strong>Supremacy:</strong> constitution ▸ CLAUDE.md ▸ runbooks ▸ desk files ▸ agent judgment (content only, never process).</li>
-            <li><strong>Integrity gate:</strong> out-of-band SHA-256 manifest over law + engine; any diff fail-closes the next session.</li>
-            <li><strong>Deterministic first:</strong> prices, NAV, fills, risk limits, analytics are scripts; the LLM does theses, attacks, verdicts, sizing judgment.</li>
+            <li><strong>Mandates first:</strong> each desk seat has a fixed role, authority boundary and documented review cadence.</li>
+            <li><strong>Fail closed:</strong> if required data or controls are unavailable, the fund stops trading and reports the issue.</li>
+            <li><strong>Numbers before narratives:</strong> prices, NAV, fills, risk limits and analytics are calculated consistently before investment judgment is applied.</li>
             <li><strong>Anti-bias law:</strong> estimates committed before market data; variant perception mandatory; every thesis Bear-attacked; Judge kill is final.</li>
             <li><strong>Caps:</strong> ≤${cap} deep-dives/book/week · ≤12 idea cards/book · drawdown governors ${govNote()||'—'}.</li>
             <li><strong>Audit trail:</strong> append-only ledger is the source of truth; every session commits to git; lessons commit one-by-one.</li>
@@ -697,12 +677,9 @@ function renderTop(){
 }
 
 function renderBanners(){
-  const hb=S.heartbeat||{}, ha=S.human_attention||{}, fr=S.flow_regime||{};
-  const seen=hb.age_hours!=null?`${fmt(hb.age_hours,1)} h ago`:'unknown';
-  const oc=ha.open_count||0;
+  const hb=S.heartbeat||{},fr=S.flow_regime||{},seen=hb.age_hours!=null?`${fmt(hb.age_hours,1)} h ago`:'time unavailable';
   document.getElementById('banners').innerHTML=
-    `<span>DESK LAST SEEN <b>${esc(hb.session||'—')} · ${seen}</b>${hb.llm_used===false?' · no-LLM':''}${hb.stale?` <span class="tag">STALE &gt;${fmt(hb.warn_after_hours,0)}h</span>`:''}</span>`+
-    `<span>HUMAN ATTENTION <b>${oc===0?'none open':oc+' open'}</b>${oc>0&&ha.oldest_age_days!=null?` <span class="tag">oldest ${ha.oldest_age_days}d</span>`:''}</span>`+
+    `<span>LAST PUBLISHED UPDATE <b>${seen}</b>${hb.stale?' <span class="tag">STALE</span>':''}</span>`+
     `<span>FOREIGN FLOW <b>${esc(fr.regime||'—')}</b>${fr.breadth_pos_pct!=null?` · ${fmt(fr.breadth_pos_pct,0)}% net-bought`:''}${fr.stale?' <span class="tag">stale</span>':''}</span>`;
 }
 
@@ -809,8 +786,7 @@ function renderDiag(){
   // roster
   const rr=(RO&&RO.roster)||[];
   document.getElementById('roster').innerHTML=rr.map(e=>
-    `<div class="r"><span><b>${esc(e.persona)}</b> <span class="muted">${esc(e.role)}</span></span>
-      <span class="tag">${esc(e.tier||'')}</span></div>`).join('')||'<span class="muted small">roster unavailable</span>';
+    `<div class="r"><span><b>${esc(e.persona)}</b> <span class="muted">· ${esc(e.title||'Desk agent')}</span></span></div>`).join('')||'<span class="muted small">roster unavailable</span>';
   // sleeves
   const se=document.getElementById('sleeves');
   if(!SL||!SL.n){se.innerHTML='<span class="muted">no closed theses yet — hit rates populate as positions resolve.</span>';}
@@ -821,15 +797,6 @@ function renderDiag(){
     for(const k of Object.keys(sl)){const a=sl[k];
       rows+=`<div class="r"><span>${esc(k)}</span><span>${a.n} · ${a.hit_rate!=null?Math.round(a.hit_rate*100)+'%':'—'}${a.avg_realized_pct!=null?' · '+pct(a.avg_realized_pct):''}</span></div>`;}
     se.className='roster'; se.style.gridTemplateColumns='1fr'; se.innerHTML=rows;
-  }
-  // tokens
-  const te=document.getElementById('tokens');
-  if(!TK||!TK.available){te.innerHTML='<span class="muted">token log not populated yet.</span>';}
-  else{
-    const d7=TK.last_7d||{},d30=TK.last_30d||{};
-    const line=(lab,d)=>`<div class="r"><span>${lab}</span><span>${d.sessions||0} sess · ${fmt0(d.in_tokens)} in · ${fmt0(d.out_tokens)} out</span></div>`;
-    te.className='roster'; te.style.gridTemplateColumns='1fr';
-    te.innerHTML=line('last 7d',d7)+line('last 30d',d30);
   }
 }
 

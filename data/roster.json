@@ -1,87 +1,75 @@
 {
-  "asof": "2026-07-18T16:57:31.990433+07:00",
+  "asof": "2026-07-18T21:28:20.433661+07:00",
   "display_books": {
     "GLOBAL": "North Book",
     "INDO": "South Book"
   },
-  "source": "CLAUDE.md",
   "roster": [
     {
-      "role": "ANALYST_GLOBAL",
       "persona": "Sloane",
-      "tier": "mid",
-      "authority": "proposes North theses; no trade authority",
-      "title": "Senior Analyst, Global Equities"
+      "role": "ANALYST_GLOBAL",
+      "title": "Senior Analyst, Global Equities",
+      "book": "GLOBAL"
     },
     {
-      "role": "ANALYST_INDO",
       "persona": "Dani",
-      "tier": "mid",
-      "authority": "proposes South theses; primary-source digger",
-      "title": "Senior Analyst, Indonesia"
+      "role": "ANALYST_INDO",
+      "title": "Senior Analyst, Indonesia",
+      "book": "INDO"
     },
     {
-      "role": "MACRO_FX",
       "persona": "Ferrand",
-      "tier": "mid",
-      "authority": "regime memo (FX/transmission + synthesis co-sign) + FX theses; proposes only",
-      "title": "FX Strategist"
+      "role": "MACRO_FX",
+      "title": "FX Strategist",
+      "book": "SHARED"
     },
     {
-      "role": "MACRO_GLOBAL",
       "persona": "Severin",
-      "tier": "mid",
-      "authority": "regime memo global blocks (rates, USD, China, commodities, risk appetite) + markers; proposes context only",
-      "title": "Chief Global Strategist"
+      "role": "MACRO_GLOBAL",
+      "title": "Chief Global Strategist",
+      "book": "SHARED"
     },
     {
-      "role": "BEAR",
       "persona": "Drew",
-      "tier": "frontier",
-      "authority": "attacks thesis + sizing; forces revision",
-      "title": "Head of Red Team"
+      "role": "BEAR",
+      "title": "Head of Red Team",
+      "book": "INDEPENDENT"
     },
     {
-      "role": "JUDGE",
       "persona": "Aldrich",
-      "tier": "frontier",
-      "authority": "PASS / PASS_REDUCED / KILL; kill is final",
-      "title": "Head of Research (IC Chair)"
+      "role": "JUDGE",
+      "title": "Head of Research (IC Chair)",
+      "book": "INDEPENDENT"
     },
     {
-      "role": "RISK_OFFICER",
       "persona": "Voss",
-      "tier": "mid",
-      "authority": "VETO absolute; judgment layer above it",
-      "title": "Chief Risk Officer"
+      "role": "RISK_OFFICER",
+      "title": "Chief Risk Officer",
+      "book": "INDEPENDENT"
     },
     {
-      "role": "PM_GLOBAL",
       "persona": "Harrison",
-      "tier": "frontier",
-      "authority": "sizes/times North Book; sole FX executor",
-      "title": "Portfolio Manager, North Book"
+      "role": "PM_GLOBAL",
+      "title": "Portfolio Manager, North Book",
+      "book": "GLOBAL"
     },
     {
-      "role": "PM_INDO",
       "persona": "Gunawan",
-      "tier": "frontier",
-      "authority": "sizes/times South Book",
-      "title": "Portfolio Manager, South Book"
+      "role": "PM_INDO",
+      "title": "Portfolio Manager, South Book",
+      "book": "INDO"
     },
     {
-      "role": "POSTMORTEM",
       "persona": "Pecora",
-      "tier": "frontier",
-      "authority": "lessons; sole skill-file editor",
-      "title": "Head of Review"
+      "role": "POSTMORTEM",
+      "title": "Head of Review",
+      "book": "SHARED"
     },
     {
-      "role": "OPS",
       "persona": "Ledger",
-      "tier": "cheap",
-      "authority": "scripts + plumbing prose; zero judgment",
-      "title": "Head of Operations"
+      "role": "OPS",
+      "title": "Head of Operations",
+      "book": "SHARED"
     }
   ]
 }
