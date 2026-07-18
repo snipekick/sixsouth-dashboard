@@ -106,6 +106,8 @@ tbody tr:hover td{background:var(--panel2)}
 .chart .axl{fill:var(--dim);font-size:9.5px}
 .chart .grid{stroke:#232529;stroke-width:1}
 .chart .pill{font-size:9px;font-weight:700}
+@keyframes scrblink{0%,88%{opacity:.9}94%{opacity:.35}100%{opacity:.9}}
+.scr-on{animation:scrblink 2.4s infinite}
 
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--hair);margin:2px 0 0;flex-wrap:wrap}
 .tab{border:none;background:transparent;padding:6px 12px;font-size:11.5px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px}
@@ -174,6 +176,10 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
           <section class="book south" id="bookI" style="border-top:1px solid var(--hair)"></section>
         </div>
       </div>
+      <div class="panel">
+        <div class="ptitle"><span class="dot"></span>The floor — who's working<span class="aux">presence inferred from the session schedule · fictional characters</span></div>
+        <div class="pbody" id="office">—</div>
+      </div>
     </div>
 
     <div class="col">
@@ -219,7 +225,8 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
     investment advice. Prices via public feeds; ⏸ marks stale data held at last good mark.
-    ^JKSE is a price index (South Book relative return is dividend-proxied in the engine).</footer>
+    ^JKSE is a price index (South Book relative return is dividend-proxied in the engine).
+    All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
 <script>
@@ -297,14 +304,14 @@ function chart(labels,datasets,o){
   return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img">${gy}${gx}${paths}${pills}</svg>`;
 }
 
-let S,N,L,SL,TK,RO,AN,H={};
+let S,N,L,SL,TK,RO,AN,ST,H={};
 async function boot(){
-  [S,N,L,SL,TK,RO,AN]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster'),api('analytics')]);
+  [S,N,L,SL,TK,RO,AN,ST]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('tokens'),api('roster'),api('analytics'),api('structure')]);
   H.GLOBAL=await api('holdings_GLOBAL')||[]; H.INDO=await api('holdings_INDO')||[];
   if(!S){document.getElementById('sub').textContent='dashboard data not published yet — run scripts/dashboard_push.py';return;}
   renderTop(); renderBanners(); renderStrip();
   renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
-  renderTotal(); renderAnalytics(); renderDiag();
+  renderTotal(); renderAnalytics(); renderDiag(); renderOffice();
   if(!curTab)curTab='reports'; tabs(curTab);
   route();
   setTimeout(boot,300000);            // refresh every 5 min
@@ -444,8 +451,62 @@ async function renderBookView(b){
     ||'<div class="item muted">No theses for this book yet.</div>';
 }
 
+// ---- The floor: pixel presence, inferred from schedule + heartbeat ----
+const TEAM=[
+  {r:'ANALYST_GLOBAL',c:'#3E8EDD'},{r:'ANALYST_INDO',c:'#E8A33D'},
+  {r:'MACRO_GLOBAL',c:'#E8A33D'},{r:'MACRO_FX',c:'#E8A33D'},{r:'BEAR',c:'#E84A93'},
+  {r:'JUDGE',c:'#3E8EDD'},{r:'RISK_OFFICER',c:'#3E8EDD'},{r:'PM_GLOBAL',c:'#3E8EDD'},
+  {r:'PM_INDO',c:'#E8A33D'},{r:'POSTMORTEM',c:'#9AA3AD'},{r:'OPS',c:'#9AA3AD'}];
+const CREW={US_CLOSE:['OPS'],IDX_PREOPEN:['PM_INDO','OPS'],IDX_CLOSE:['OPS','PM_INDO'],
+  US_PREOPEN:['PM_GLOBAL','MACRO_FX','OPS'],IDEATION:['ANALYST_GLOBAL','ANALYST_INDO'],
+  WEEKLY_DEEP:'ALL',MONTHLY_IC:'ALL'};
+const TASKN={US_CLOSE:'processing fills',IDX_PREOPEN:'pre-open checks',IDX_CLOSE:'writing the daily',
+  US_PREOPEN:'US pre-open',IDEATION:'scouting ideas',WEEKLY_DEEP:'deep-dive day',MONTHLY_IC:'IC prep'};
+const IDLE={BEAR:'building counter-cases',JUDGE:'on call',RISK_OFFICER:'watching limits',
+  POSTMORTEM:'reviewing past exits',OPS:'monitoring feeds',MACRO_FX:'watching prints',MACRO_GLOBAL:'watching prints'};
+function deskStatus(role){
+  const hb=(S&&S.heartbeat)||{};
+  const now=new Date(), wib=new Date(now.getTime()+(7*60+now.getTimezoneOffset())*60000);
+  const dow=wib.getDay(), hm=wib.getHours()+wib.getMinutes()/60;
+  const onCrew=s=>{const c=CREW[s];return c==='ALL'||(c||[]).includes(role);};
+  if(hb.session&&hb.age_hours!=null&&hb.age_hours<=1&&onCrew(hb.session))
+    return {a:1,s:TASKN[hb.session]||'in session'};
+  for(const j of ((ST&&ST.schedule)||[])){
+    if(!j.session||!CREW[j.session])continue;
+    const dayok=j.days==='Mon–Fri'?(dow>=1&&dow<=5):j.days==='Tue–Sat'?(dow>=2&&dow<=6):j.days==='Sat'?dow===6:false;
+    for(const t of (j.times_wib||[])){
+      const p=t.split(':'),st=(+p[0])+(+p[1])/60;
+      if(dayok&&hm>=st&&hm<st+1&&onCrew(j.session))return {a:1,s:TASKN[j.session]||'in session'};
+    }
+  }
+  if(dow===0)return {a:0,s:'weekend'};
+  if(hm>=8&&hm<18)return {a:0,s:IDLE[role]||'reading filings'};
+  return {a:0,s:'off desk'};
+}
+function renderOffice(){
+  const el=document.getElementById('office'); if(!el)return;
+  const rmap={}; ((RO&&RO.roster)||[]).forEach(e=>rmap[e.role]=e);
+  let cells='';
+  TEAM.forEach((m,i)=>{
+    const e=rmap[m.r]||{}, st=deskStatus(m.r);
+    const x=8+(i%4)*128, y=10+Math.floor(i/4)*92;
+    const scr=st.a?`<rect x="${x+4}" y="${y+18}" width="18" height="13" fill="var(--up)" class="scr-on" opacity=".9"/>`
+               :`<rect x="${x+4}" y="${y+18}" width="18" height="13" fill="var(--panel2)"/>`;
+    const po=st.a?1:.28;
+    cells+=`<g shape-rendering="crispEdges">
+      <rect x="${x}" y="${y+16}" width="26" height="17" rx="1" fill="none" stroke="var(--hair)"/>${scr}
+      <rect x="${x+11}" y="${y+31}" width="4" height="4" fill="var(--hair)"/>
+      <g opacity="${po}"><rect x="${x+40}" y="${y+8}" width="10" height="9" fill="${m.c}" opacity=".85"/>
+      <rect x="${x+36}" y="${y+17}" width="18" height="14" fill="${m.c}"/></g>
+      <rect x="${x}" y="${y+35}" width="112" height="3" fill="var(--hair)"/>
+      <text x="${x}" y="${y+50}" font-size="10" font-weight="700" fill="var(--ink)">${esc(e.persona||m.r)}</text>
+      <text x="${x}" y="${y+61}" font-size="8.5" fill="var(--dim)">${esc(e.title||'')}</text>
+      <text x="${x}" y="${y+72}" font-size="8.5" fill="${st.a?'var(--up)':'var(--dim)'}">${st.a?'● ':''}${esc(st.s)}</text></g>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 520 290" class="chart" role="img" style="max-width:560px">${cells}</svg>`;
+}
+
 // ---- Structure view: fund architecture, workflow, governance ----
-let ST=null;
 async function renderStructureView(){
   const el=document.getElementById('view-structure'); if(!el)return;
   if(!ST)ST=await api('structure');
@@ -498,11 +559,11 @@ async function renderStructureView(){
     `<line x1="120" y1="104" x2="120" y2="118" stroke="var(--dim)" stroke-width="1"/>`+
     `<line x1="340" y1="104" x2="340" y2="118" stroke="var(--dim)" stroke-width="1"/>`+
     bx(30,118,180,'Harrison — PM North','sizes & times the USD book','var(--north)')+
-    bx(250,118,180,'Kretek — PM South','sizes & times the IDR book','var(--north)')+
+    bx(250,118,180,'Gunawan — PM South','sizes & times the IDR book','var(--north)')+
     `<line x1="120" y1="158" x2="120" y2="172" stroke="var(--dim)" stroke-width="1"/>`+
     `<line x1="340" y1="158" x2="340" y2="172" stroke="var(--dim)" stroke-width="1"/>`+
     bx(30,172,180,'Sloane — Analyst North','proposes · no trade authority')+
-    bx(250,172,180,'Sunda — Analyst South','proposes · primary-source digger')+
+    bx(250,172,180,'Dani — Analyst South','proposes · primary-source digger')+
     `<line x1="20" y1="228" x2="440" y2="228" stroke="var(--hair)" stroke-width="1"/>`+
     `<text x="30" y="240" fill="var(--dim)" font-size="8.5" letter-spacing=".06em">INDEPENDENT OF THE CHAIN — CANNOT BE OVERRULED BY IT</text>`+
     bx(30,248,180,'Severin + Ferrand — Macro','context only · conservative call binds','var(--south)')+
@@ -519,6 +580,7 @@ async function renderStructureView(){
     <td>${esc(v.escalate_to||'—')}</td></tr>`;}).join('');
   const agents=st.agents||{};
   const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b></td>
+    <td>${esc(e.title||'')}</td>
     <td class="mono">${esc(e.role||'')}</td><td><span class="tag">${esc(agents[e.role]||e.tier||'')}</span></td>
     <td class="muted">${esc(e.authority||e.note||'')}</td></tr>`).join('');
   const bkl=(L&&L.limits&&L.limits.books)||{};
@@ -531,7 +593,7 @@ async function renderStructureView(){
         <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
           <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working unattended on a daily schedule from a single machine. No human picks the trades. The owner maintains the machine and the rulebook it runs under; the fund does the investing.</p>
           <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
-          <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸).</p>
+          <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸). All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
         </div></div></div></div>
     </div>
     <div class="grid" style="grid-template-columns:1.5fr 1fr">
@@ -553,8 +615,8 @@ async function renderStructureView(){
         <div class="pbody">${orgSvg}</div></div>
       <div class="col">
         <div class="panel"><div class="ptitle"><span class="dot"></span>Who runs it — the desk, seat by seat<span class="aux">every persona is an AI agent with a fixed mandate</span></div>
-          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
-            <tbody>${rosterRows||'<tr><td colspan=4 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Title</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
+            <tbody>${rosterRows||'<tr><td colspan=5 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
         <div class="panel"><div class="ptitle"><span class="dot"></span>Why the separation of powers matters</div>
           <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body">
             <p>The seats are deliberately adversarial: the people who <em>want</em> a trade (analysts, macro) never approve it; the people who approve it (Judge, Risk) never propose one; and the Bear is paid to disagree with everybody. None of them can overrule the others outside their lane. Most fund blow-ups are a failure of exactly this separation — 6S makes it structural.</p>
