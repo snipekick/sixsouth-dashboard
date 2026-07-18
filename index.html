@@ -155,7 +155,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
     <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
-    <button class="wstab" id="ws-structure" onclick="go('structure')">Structure</button>
+    <button class="wstab" id="ws-about" onclick="go('about')">About</button>
   </div>
 </div></header>
 
@@ -314,15 +314,16 @@ async function boot(){
 const BOOK_OF={north:'GLOBAL',south:'INDO'};
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
 function route(){
-  const h=(location.hash||'#monitor').slice(1);
-  const cur=(BOOK_OF[h]||h==='structure')?h:'monitor';
-  ['monitor','north','south','structure'].forEach(k=>{
+  let h=(location.hash||'#monitor').slice(1);
+  if(h==='structure')h='about';        // legacy links
+  const cur=(BOOK_OF[h]||h==='about')?h:'monitor';
+  ['monitor','north','south','about'].forEach(k=>{
     const b=document.getElementById('ws-'+k); if(b)b.className='wstab'+(k===cur?' on':'');});
   document.getElementById('view-monitor').style.display=cur==='monitor'?'':'none';
   document.getElementById('view-book').style.display=BOOK_OF[cur]?'':'none';
-  document.getElementById('view-structure').style.display=cur==='structure'?'':'none';
+  document.getElementById('view-structure').style.display=cur==='about'?'':'none';
   if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur]);
-  if(cur==='structure')renderStructureView();
+  if(cur==='about')renderStructureView();
 }
 window.addEventListener('hashchange',route);
 
@@ -520,12 +521,45 @@ async function renderStructureView(){
   const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b></td>
     <td class="mono">${esc(e.role||'')}</td><td><span class="tag">${esc(agents[e.role]||e.tier||'')}</span></td>
     <td class="muted">${esc(e.authority||e.note||'')}</td></tr>`).join('');
+  const bkl=(L&&L.limits&&L.limits.books)||{};
+  const cpt=v=>v==null?null:Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(v);
+  const capN=cpt(bkl.GLOBAL&&bkl.GLOBAL.initial_capital)||'1M', capS=cpt(bkl.INDO&&bkl.INDO.initial_capital)||'15B';
+  const gl=(t,d)=>`<div style="padding:6px 0;border-bottom:1px dotted var(--hair)"><b style="font-size:11.5px">${t}</b><div class="muted" style="font-size:11px;margin-top:1px">${d}</div></div>`;
   el.innerHTML=`
-    <div class="grid" style="grid-template-columns:1.5fr 1fr;margin-top:8px">
-      <div class="panel"><div class="ptitle"><span class="dot"></span>Idea pipeline — how the fund works<span class="aux">every stage writes to disk before the next begins</span></div>
+    <div class="grid" style="grid-template-columns:1fr;margin-top:8px">
+      <div class="panel"><div class="ptitle"><span class="dot"></span>About Six South (6S)<span class="aux">"Two books, one bearing" · inception ${esc(S.inception||'2026-07-06')}</span></div>
+        <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
+          <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working unattended on a daily schedule from a single machine. No human picks the trades. The owner maintains the machine and the rulebook it runs under; the fund does the investing.</p>
+          <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
+          <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸).</p>
+        </div></div></div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1.5fr 1fr">
+      <div class="panel"><div class="ptitle"><span class="dot"></span>Idea pipeline — how the fund decides<span class="aux">every stage writes to disk before the next begins</span></div>
         <div class="pbody">${svg}</div></div>
+      <div class="panel"><div class="ptitle"><span class="dot"></span>In plain English</div>
+        <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body"><ul style="margin:2px 0 2px 16px">
+          <li><strong>Scout (Mon–Fri).</strong> Screens sweep both markets; promising names get short "idea cards," sanity-checked against the macro view.</li>
+          <li><strong>Research (Saturday).</strong> The best few cards get a full deep-dive. The analyst must commit their own estimates <em>before</em> seeing what the market thinks — a rule against anchoring.</li>
+          <li><strong>Attack.</strong> A dedicated Bear tries to kill every idea. Weak ones die here, cheaply.</li>
+          <li><strong>Judge.</strong> An independent judge passes or kills. A kill is final — no appeals without new evidence.</li>
+          <li><strong>Risk &amp; sizing.</strong> Hard limits can veto any trade outright; the PM may only size <em>down</em> from the model's suggestion, never up.</li>
+          <li><strong>Execute &amp; monitor.</strong> Limit orders at the next market open. Every position carries pre-written exit rules ("kill criteria") decided before entry, not during the panic.</li>
+          <li><strong>Learn.</strong> Every exit — win or loss — gets an autopsy. Generalizable lessons are written into the desks' own rulebooks, one at a time.</li>
+        </ul></div></div></div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1.2fr">
       <div class="panel"><div class="ptitle"><span class="dot"></span>Desk hierarchy — authority<span class="aux">solid = reporting line</span></div>
         <div class="pbody">${orgSvg}</div></div>
+      <div class="col">
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Who runs it — the desk, seat by seat<span class="aux">every persona is an AI agent with a fixed mandate</span></div>
+          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
+            <tbody>${rosterRows||'<tr><td colspan=4 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
+        <div class="panel"><div class="ptitle"><span class="dot"></span>Why the separation of powers matters</div>
+          <div class="pbody"><div class="item" style="border:none;padding:0"><div class="body">
+            <p>The seats are deliberately adversarial: the people who <em>want</em> a trade (analysts, macro) never approve it; the people who approve it (Judge, Risk) never propose one; and the Bear is paid to disagree with everybody. None of them can overrule the others outside their lane. Most fund blow-ups are a failure of exactly this separation — 6S makes it structural.</p>
+          </div></div></div></div>
+      </div>
     </div>
     <div class="grid" style="grid-template-columns:1.2fr 1fr">
       <div class="col">
@@ -535,9 +569,6 @@ async function renderStructureView(){
         <div class="panel"><div class="ptitle"><span class="dot"></span>Session envelopes<span class="aux">budgets are output-scale; wrapper enforces turns + wall-clock</span></div>
           <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Session</th><th>Tier</th><th class="num">Budget</th><th class="num">Turns</th><th class="num">Timeout</th><th>LLM</th><th>Escalates to</th></tr></thead>
             <tbody>${sessRows}</tbody></table></div></div></div>
-        <div class="panel"><div class="ptitle"><span class="dot"></span>Desk roster &amp; authority</div>
-          <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Persona</th><th>Role</th><th>Tier</th><th>Authority</th></tr></thead>
-            <tbody>${rosterRows||'<tr><td colspan=4 class="muted">roster unavailable</td></tr>'}</tbody></table></div></div></div>
       </div>
       <div class="col">
         <div class="panel"><div class="ptitle"><span class="dot"></span>Macro desk — information flow</div>
@@ -557,6 +588,21 @@ async function renderStructureView(){
             <li><strong>Audit trail:</strong> append-only ledger is the source of truth; every session commits to git; lessons commit one-by-one.</li>
           </ul></div></div></div></div>
       </div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="panel"><div class="ptitle"><span class="dot"></span>How to read this dashboard</div>
+        <div class="pbody"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 24px">
+          ${gl('NAV','A book’s total value in its own currency (cash + positions). "Official" marks print each morning; intraday marks are labeled indicative.')}
+          ${gl('Benchmark','What passive money would have earned instead: North — 80% global equities (ACWI) + 20% bonds (AGG), total return; South — the Jakarta index with dividends added back. Beating it is the whole job.')}
+          ${gl('vs benchmark (pp)','Fund return minus benchmark return, in percentage points. Positive and green = ahead of passive; negative and red = behind.')}
+          ${gl('Charts marked (inception=100)','Both lines are rebased to 100 on day one, so the gap between them IS the relative performance — they are not price levels.')}
+          ${gl('Sharpe, Jensen’s alpha, beta…','Risk-adjusted performance stats on the Fund Monitor and book tabs. With only days of history they are mechanical noise — the low-sample note stays up until ~20 observations.')}
+          ${gl('Idea cards → theses','Cards are cheap weekday scouting notes; theses are full Saturday research files that survived the Bear and the Judge. Both feeds are on the right of the Fund Monitor.')}
+          ${gl('Kill criteria','Exit rules written before entry — price levels, dates, or business metrics that force a review or an automatic full exit. The fund cannot "hold and hope."')}
+          ${gl('QC chip','The engine’s self-checks. Anything but OK and the fund stops trading and only reports until it’s fixed.')}
+          ${gl('PAPER badge','All money is simulated. Fills, fees, taxes and slippage are modeled deterministically — but no real orders exist.')}
+          ${gl('Desk last seen','The most recent unattended session and when it ran. The fund works Jakarta hours (WIB), six days a week.')}
+        </div></div></div>
     </div>`;
 }
 
