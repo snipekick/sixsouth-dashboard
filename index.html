@@ -333,10 +333,11 @@ async function renderBookView(b){
       [{name:'Fund',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
        {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
       {h:250,fmtY:v=>fmt(v,1),fill:true,pills:true});
+  const compact=v=>Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(v);
   const raw=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
     chart(ser.map(r=>String(r.date).slice(5)),
       [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_ccy)}],
-      {h:160,fmtY:v=>fmt0(v),fill:true,pills:true});
+      {h:160,fmtY:compact,fill:true,pills:true});
   const hs=H[b]||[];
   const hrows=hs.map(h2=>`<tr class="${h2.stale?'stale':''}">
     <td class="mono">${esc(h2.ticker)}</td><td>${esc(h2.instrument)}</td>
