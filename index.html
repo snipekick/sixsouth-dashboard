@@ -235,7 +235,9 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
 const qs=new URLSearchParams(location.search);
 if(qs.get('token')){ sessionStorage.setItem('dt',qs.get('token')); history.replaceState({},'',location.pathname); }
 const T=sessionStorage.getItem('dt');
-const api=n=>fetch('data/'+n+'.json').then(r=>r.ok?r.json():Promise.reject()).catch(()=>fetch('/api/'+n,{headers:T?{'X-Dash-Token':T}:{}}).then(r=>r.ok?r.json():null).catch(()=>null));
+// 10-min bucket buster: a new URL each bucket forces CDN+browser to refetch, so
+// no viewer ever sees data older than ~10 minutes without any manual refresh.
+const api=n=>fetch('data/'+n+'.json?b='+Math.floor(Date.now()/6e5)).then(r=>r.ok?r.json():Promise.reject()).catch(()=>fetch('/api/'+n,{headers:T?{'X-Dash-Token':T}:{}}).then(r=>r.ok?r.json():null).catch(()=>null));
 
 // ---- formatting & safe rendering ----
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
