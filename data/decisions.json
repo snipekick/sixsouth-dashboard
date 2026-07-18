@@ -1,170 +1,146 @@
 [
   {
-    "file": "2026-07-18-INDO-risk-veto-MSFT-dd18.md",
+    "file": "2026-07-18-INDO-weekly-deep-sourcing-triage-2026-07-18-d1f9.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.979462+07:00",
+      "date": "2026-07-18 10:08:39.650388+07:00",
       "book": "INDO",
-      "title": "VETO MSFT buy 100",
-      "thesis": "T-GLOBAL-MSFT-001",
-      "kind": "risk_veto"
+      "title": "WEEKLY_DEEP sourcing triage 2026-07-18",
+      "thesis": null,
+      "kind": "review"
     },
-    "body": "Order `O-MSFT-INDO` VETOed and removed by risk_check: INDO equities must be IDX (.JK)",
+    "body": "## Sourcing triage \u2014 INDO \u2014 2026-07-18 (Sunda / ANALYST_INDO)\n\nBlank-slate book (0 positions). Kill-ledger revisit scan first: DSNG.JK/ELSA.JK/PNBN.JK were Judge-KILLed 2026-07-13 (judge_kill_cooldown_days=60, live until ~2026-09-11) \u2014 excluded from consideration regardless of price. All 3 now sit ABOVE their old entry levels anyway (DSNG 1215 vs 1170 entry; ELSA 640 vs 620; PNBN 915 vs 880), so the mechanical \"at/below prior entry math\" revisit test doesn't even apply to them this week; moot given the cooldown regardless. No watchlist entries exist. Foreign-flow feed remains STALE (0 fresh readings) \u2014 flow_z60 ignored everywhere. Screen: data/cache/screen_INDO_2026-07-18.csv (36 rows, WASHOUT/NEGLECTED/MOMENTUM).\n\n### Names re-considered from last week's 2026-07-11 triage (pass reasoning re-checked, not re-litigated from scratch)\n- SGRO.JK (NEGLECTED, CPO) \u2014 still the deepest washout in the book (off -56.62%) but ADV ~428mn IDR, essentially unchanged from last week's ~392mn IDR \u2014 the \"10x thinner than DSNG, real ARA/ARB unsizeability risk\" pass reason is unchanged (and DSNG is gone this week anyway). PASS again, monitor-only.\n- AADI.JK (MOMENTUM, coal) \u2014 same \"macro/China-import-policy edge, MACRO_FX's lane not this book's\" reasoning still applies. PASS again.\n- RALS.JK (NEGLECTED, consumer) \u2014 still flattish (off -18.49%, mom12 +7.93%), no compensating mispricing story. PASS again.\n- AALI.JK (WASHOUT, CPO) \u2014 still positive mom12 (+12.69%) questioning the washout tag, and weaker cagr than LSIP (+11.97% vs LSIP's +37.03%) within the same CPO cluster. PASS again.\n- GOTO.JK (WASHOUT, tech) \u2014 cagr still 0.0 (no earnings track record), heavy coverage, Rp50 floor-adjacent price, same tick-size/board-lot caveat. PASS again.\n- GGRM.JK (MOMENTUM, tobacco) \u2014 price-vs-fundamentals gap has widened further (mom12 now +87.32% vs cagr +5.91%, versus +73.8%/+2.7% last week). PASS again, more strongly.\n- MAPI.JK (MOMENTUM, consumer) \u2014 still near 52w highs (-0.98%) with a weak cagr relative to the move. PASS again.\n- ADRO.JK (MOMENTUM, coal) \u2014 still liquid/trending, heavy coverage, no washout component. PASS again.\n- LSIP.JK (NEGLECTED #4/MOMENTUM #7, CPO) \u2014 REVISITED, now a PICK. Last week's pass reason was \"least washed-out CPO name, mispricing already closed vs DSNG/SGRO\" \u2014 but DSNG is now cooldown-excluded and SGRO remains unsizeable on liquidity, so LSIP is the best available CPO exposure this book has this week by elimination, and on its own merits it screens better than the other surviving CPO names (cagr +37.03% vs AALI's +11.97%, similar off-high depth to AALI at workable ADV ~10.9bn IDR).\n- JPFA.JK (WASHOUT #1/NEGLECTED #11, poultry) \u2014 was runner-up/swap-in last week for a dossier-stage stumble, not a full-cycle kill; treating fresh this week rather than auto-promoting. Thin coverage, continued washout-with-recovery pattern (off -25.25%, mom12 +35.69%). No clean method-card fit among the 10 house cards (protein/feed producer isn't a plantation/commodity-cyclical in the CPO sense, isn't a bank/infra/holdco, and isn't a clean quality-compounder without a moat argument yet to be built) \u2014 deferred, not killed; flagging as next swap-in candidate.\n\n### New names this week (not in 2026-07-11 screen)\n1. JSMR.JK (WASHOUT #7, toll roads, infra_towers/domestic_cycle, off -28.77%, cagr -24.93% \u2014 worst momentum in the book, moderate coverage, ADV ~24.4bn IDR) \u2014 PICK. VAL_INFRA_TOWERS_TELCO explicit fit (toll roads named in the card); genuinely fresh sector for this desk.\n2. ASII.JK (WASHOUT #6, auto/conglomerate, domestic_cycle/coal_china, off -27.6%, mega/heavy coverage, ADV ~304bn IDR \u2014 best liquidity in the book) \u2014 PICK. Textbook SOTP holdco (listed auto distribution/manufacturing + heavy-equipment/mining contracting + agribusiness + financial services + infra stakes). Assigned VAL_HOLDCO_DISCOUNT; per that card's own rule a dated catalyst is mandatory or the thesis routes to EVENT_SPECIAL_SIT/pass \u2014 not pre-judging that at sourcing stage, leaving it to the analyst's phase-1/2 work and Bear/Judge to enforce.\n3. TLKM.JK (WASHOUT #2, telecom, idr_defensive/em_flows, off -26.98%, mega/heavy coverage, ADV ~438bn IDR) \u2014 PASS (close). Same VAL_INFRA_TOWERS_TELCO card as JSMR; picking both dilutes construction-chain sector breadth versus adding JSMR's toll-road angle alongside ASII's holdco and LSIP's commodity-cyclical picks. First swap-in if JSMR falters in dossier stage.\n4. MYOR.JK / CMRY.JK (WASHOUT, consumer) \u2014 PASS. Moderate/thin coverage but no compensating washout-depth or mispricing story beyond generic consumer-cycle softness already priced by the whole WASHOUT sleeve.\n5. PWON.JK (WASHOUT, property) \u2014 PASS. BI's defensive hiking cycle (state/macro_regime.md) is a direct headwind for property-rates-sensitive names; no thesis here fights the macro regime call without a name-specific offset not yet identified.\n6. INTP.JK, MTEL.JK, SIDO.JK (WASHOUT) \u2014 PASS, uniformly. No differentiated angle over the three picks above; SIDO's cagr -24.18% and MTEL's -15.64% mirror generic domestic-cycle softness already captured by JSMR/ASII.\n7. ERAA.JK (WASHOUT, consumer electronics retail, thin coverage) \u2014 PASS (close), swap-in candidate alongside JPFA if a pick falters.\n8. BJTM.JK (NEGLECTED, regional bank) \u2014 PASS. Off only -3.84% from high \u2014 not actually washed out; VAL_BANKS needs a real dislocation to be worth the LK-footnote digging this desk already did on PNBN (now killed) \u2014 no new information edge over that exercise.\n9. TAPG.JK (NEGLECTED/MOMENTUM, CPO) \u2014 PASS. cagr +94.26% and mom12 +76.3% \u2014 already re-rated hard, opposite of a washout entry.\n10. MAIN.JK, LPPF.JK, AUTO.JK (NEGLECTED, consumer) \u2014 PASS. Thin coverage but flattish/no compensating mispricing story, same class as RALS.\n11. DMAS.JK, ITMG.JK, AKRA.JK, PRDA.JK, BBTN.JK (MOMENTUM) \u2014 PASS, uniformly. None offer a washout/neglected entry; all chasing an existing move, several (ITMG, coal) also overlapping AADI's macro-not-primary-source pass reasoning.\n\n### Final 3 picks for deep-dive (step 7)\n- **JSMR.JK** (WASHOUT) \u2014 edge claimed: analytical (toll-road traffic/tariff-adjustment data under-modeled at moderate coverage vs the domestic-cycle-softness narrative priced into the whole sleeve).\n- **ASII.JK** (WASHOUT) \u2014 edge claimed: analytical (look-through SOTP across auto/heavy-equipment/agribusiness/financial-services segments vs a single blended conglomerate multiple; catalyst-or-pass discipline applies at construction).\n- **LSIP.JK** (NEGLECTED) \u2014 edge claimed: analytical (FFB yield/replanting capex read within the CPO cluster, best surviving mispricing-to-liquidity ratio now that DSNG is cooldown-excluded).\n\nAll 3 non-MOMENTUM (2 WASHOUT + 1 NEGLECTED); rule satisfied trivially. No dossiers/thesis files written at this stage.",
     "persona": "Kretek"
   },
   {
-    "file": "2026-07-18-INDO-risk-veto-FR9999-f833.md",
+    "file": "2026-07-18-INDO-weekly-deep-portfolio-review-2026-07-18-no-holdings-a4bf.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.980111+07:00",
+      "date": "2026-07-18 10:16:36.000962+07:00",
       "book": "INDO",
-      "title": "VETO FR9999 buy 100000000",
-      "thesis": "T-INDO-FR0103-001",
-      "kind": "risk_veto"
+      "title": "WEEKLY_DEEP portfolio review 2026-07-18 \u2014 no holdings",
+      "thesis": null,
+      "kind": "review"
     },
-    "body": "Order `O-FR9999` VETOed and removed by risk_check: FR series not in bond_master.csv \u2014 fail-closed",
+    "body": "Portfolio review (Kretek, PM_INDO) \u2014 INDO book: 0 positions, 0% gross, 100% cash, drawdown 0%, governor NONE. No holding-level distance-to-kill/target review applicable (nothing held). No market-value concentration (>15% NAV) possible at 0 names. Foreign-flow feed remains STALE \u2014 flagged, not actionable against a holding that doesn't exist. Nothing to re-affirm this week; construction pipeline (step 7) is this book's only active work.",
     "persona": "Kretek"
   },
   {
-    "file": "2026-07-18-INDO-risk-veto-FR0011-32bf.md",
+    "file": "2026-07-18-INDO-ideation-2026-07-18-indo-cards-fcc2.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.980009+07:00",
+      "date": "2026-07-18 13:42:07.389840+07:00",
       "book": "INDO",
-      "title": "VETO FR0011 buy 100000000",
-      "thesis": "T-INDO-FR0103-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-FRSHORT` VETOed and removed by risk_check: FR tenor 0.33y below floor 1y",
-    "persona": "Kretek"
-  },
-  {
-    "file": "2026-07-18-INDO-risk-veto-BBCA.JK-b8c1.md",
-    "meta": {
-      "date": "2026-07-18 15:45:35.979579+07:00",
-      "book": "INDO",
-      "title": "VETO BBCA.JK buy 150",
-      "thesis": "T-INDO-BBCA-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-BBCA-LOT` VETOed and removed by risk_check: qty not board-lot multiple",
-    "persona": "Kretek"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-same-title-ff74.md",
-    "meta": {
-      "date": "2026-07-18 15:45:38.860226+07:00",
-      "book": "GLOBAL",
-      "title": "same title",
+      "title": "IDEATION 2026-07-18 \u2014 INDO cards",
       "thesis": null,
       "kind": "other"
     },
-    "body": "dup",
+    "body": "ADVANCE: TLKM.JK (WASHOUT #2, BI-tightening telco drawdown, EV +8.75-9.0%), ADRO.JK (MOMENTUM #3, coal momentum + dividend anchor, EV +9.0%). WATCH: PWON.JK (WASHOUT #5, property developer, EV +1.6% borderline, BI headwind \u2014 needs rate pivot signal). NOT CARDED: ASII.JK/DSNG.JK/ELSA.JK/JSMR.JK/LSIP.JK/PNBN.JK (existing theses), MAPI.JK/GGRM.JK (thin moats, wait for fundamental inflection). Session state: 100% cash, 6 judged-unticketed theses pending next trading session.",
+    "persona": "Kretek"
+  },
+  {
+    "file": "2026-07-18-INDO-contamination-incidental-price-derived-data-during-phase-1-623c.md",
+    "meta": {
+      "date": "2026-07-18 10:31:41.198360+07:00",
+      "book": "INDO",
+      "title": "CONTAMINATION \u2014 incidental price-derived data during Phase 1",
+      "thesis": "T-INDO-LSIP-001",
+      "kind": "other"
+    },
+    "body": "Per constitution section 3 (consensus quarantine): \"An agent meeting banned data logs a persistent CONTAMINATION journal entry and discards it.\"\n\nDuring Phase-1 (fundamentals-only) research on T-INDO-LSIP-001 (PP London Sumatra), an early WebSearch results summary surfaced a trailing PE ratio (4.73), forward PE (5.12), and a market-cap figure (IDR 8.93tn) before the analyst restricted subsequent searches to primary-source domains. These are price-derived, market-implied numbers banned from the Phase-1 context per the two-phase analyst protocol.\n\nDisposition: the analyst discarded these figures immediately upon recognizing them and confirmed none appear anywhere in the NAV/estimate work committed to the thesis file \u2014 all subsequent research used company primary filings (annual report/financial statements) and public commodity-price series only. No re-work needed; no committed estimate, archetype selection, or base_rate anchor was influenced by the leaked figures.",
+    "persona": "Kretek"
+  },
+  {
+    "file": "2026-07-18-INDO-contamination-incidental-price-derived-data-during-phase-1-0c5b.md",
+    "meta": {
+      "date": "2026-07-18 10:26:49.591248+07:00",
+      "book": "INDO",
+      "title": "CONTAMINATION \u2014 incidental price-derived data during Phase 1",
+      "thesis": "T-INDO-ASII-001",
+      "kind": "other"
+    },
+    "body": "Per constitution section 3 (consensus quarantine): \"An agent meeting banned data logs a persistent CONTAMINATION journal entry and discards it.\"\n\nDuring Phase-1 (fundamentals-only) research on T-INDO-ASII-001 (Astra International), a WebSearch query on Astra's dividend policy surfaced an aggregator snippet referencing \"dividend yields between 1.3-1.9%\". Dividend yield is a price-derived, market-implied number, banned from the Phase-1 context per the two-phase analyst protocol (no prices, no market-implied numbers) even though it is not itself a sell-side rating/price-target/recommendation-count.\n\nDisposition: the analyst did not use, cite, or anchor any part of the thesis on this figure \u2014 only IDR-per-share dividend amounts and payout-ratio percentages (non-price-derived) were used in the Phase-1 build. The number is discarded per protocol; logging here per the constitution's mandatory-log requirement. No re-work needed since the figure was never incorporated into any committed estimate or the base_rate/archetype selection.",
+    "persona": "Kretek"
+  },
+  {
+    "file": "2026-07-18-GLOBAL-weekly-deep-sourcing-triage-2026-07-18-3c2e.md",
+    "meta": {
+      "date": "2026-07-18 10:08:02.935599+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP sourcing triage 2026-07-18",
+      "thesis": null,
+      "kind": "review"
+    },
+    "body": "## Sourcing triage \u2014 GLOBAL \u2014 2026-07-18 (Sloane / ANALYST_GLOBAL)\n\nBlank-slate book (0 positions). Kill-ledger revisit scan first: NVO/SMFG/TXN were Judge-KILLed 2026-07-13 (judge_kill_cooldown_days=60, live until ~2026-09-11) \u2014 excluded from consideration regardless of price even though SMFG (24.95 vs 25.74 entry) and TXN (284.02 vs 296 entry) now sit marginally below their old entry levels: both kills were valuation/EV-math based (SMFG's own honest numbers clear only -3.65%/-4.85% vs ~13% risk-free cash; TXN's own fair-value math computes $85-102/share vs a $284-296 entry/current range), not entry-price based, so a 3-4% pullback does not cure either flaw. No watchlist entries exist. Screen: data/cache/screen_GLOBAL_2026-07-18.csv (24 rows, WASHOUT/MOMENTUM, no NEGLECTED sleeve this week). flow_z60 ignored throughout (GLOBAL foreign-flow layer is vestigial/IDX-only).\n\n### Names re-considered from last week's 2026-07-11 triage (pass reasoning re-checked, not re-litigated from scratch)\n- ASML, CAT, MU, AMD, 2020.HK \u2014 all still show the SAME structural PASS reason this week (heavy-coverage/consensus-priced, or momentum accelerating further, or thinnest-liquidity-weakest-fundamentals) \u2014 momentum in several cases is now MORE extreme (AMD +219% vs +214% prior week; MU +822%), reinforcing rather than reversing the prior pass. Not re-picked.\n- MSFT (WASHOUT #2, off -26.89%) \u2014 prior pass reason \"heaviest coverage in the index, no information edge available\" still applies; no new evidence changes this. PASS again.\n- NEM (WASHOUT #9, off -31.72%) \u2014 prior pass reason \"gold-price beta, no company-specific mispricing\" still applies; nothing new sources an independent edge this week. PASS again.\n\n### New names this week (not in 2026-07-11 screen)\n1. 0700.HK (Tencent, WASHOUT #7, china_growth/em_flows, off -31.07%, mega/heavy) \u2014 PICK. Platform quality compounder priced for regulatory/political overhang; genuine differentiated angle vs the US mega-cap tech names already passed on for zero-edge heavy coverage \u2014 China-platform consensus dynamics are a different read than US-tech consensus.\n2. NOC (Northrop Grumman, WASHOUT #10, global_defense/us_defensive, off -31.79%, moderate coverage) \u2014 PICK. Defense prime, moderate (not heaviest) coverage, backlog-driven compounder characteristics under VAL_COMPOUNDER_QUALITY's \"any 1-4y compounding thesis\" clause; zero sector overlap with anything sourced/killed in the last two weeks.\n3. SONY (WASHOUT #6, japan_reflation/us_tech, off -30.2%, heavy coverage, cagr +6.82%) \u2014 PICK. Diversified gaming/music/pictures/image-sensor/finance compounder; genuinely under-modeled sum of segments even at heavy headline coverage. Assigned VAL_COMPOUNDER_QUALITY (not HOLDCO) \u2014 no dated catalyst confirmed at sourcing stage to satisfy VAL_HOLDCO_DISCOUNT's mandatory-catalyst rule; analyst may surface one during phase-1/2 work, but the default card is the compounder card.\n4. TM (Toyota, WASHOUT #4, japan_reflation/us_defensive, off -28.47%) \u2014 PASS (close). No clean method-card fit (autos not named under any of the 10 house cards) and japan_reflation factor overlaps SONY; deferred not killed.\n5. 1211.HK (BYD, WASHOUT #11, china_growth/nickel_ev, off -33.59%, heavy coverage) \u2014 PASS. China EV price-war/margin-compression narrative already heavily covered; no informational edge over consensus.\n6. QCOM (WASHOUT #8, semis_ai/us_tech, off -31.31%, moderate coverage) \u2014 PASS (close). Sector already had one archetype-mismatch kill this cycle (TXN); a second semis name this week dilutes construction-chain breadth versus the three picks above. First swap-in if any pick falters in dossier stage.\n7. PLTR (WASHOUT #12, us_tech/global_defense, off -36.1%, cagr +115.98% despite the pullback) \u2014 PASS. Still priced for perfection on any reasonable multiple-survival test even after the drawdown; no margin of safety.\n8. 0005.HK (HSBC, MOMENTUM #5, us_rates/china_growth, 0% off 52w high) \u2014 PASS. Sitting at a fresh 52-week high with a rate-story thesis already priced in is the same failure pattern that killed SMFG last cycle (policy view already consensus, zero margin of safety) \u2014 declining to repeat it on a different bank.\n9. UNH, ABBV, OXY, TTE, BP, SHEL (MOMENTUM sleeve) \u2014 PASS, uniformly. All sit within ~1-17% of 52-week highs after already-large 12m moves (+18% to +42%); none offer a washout/neglected entry, all are chasing an existing move.\n\n### Final 3 picks for deep-dive (step 7)\n- **0700.HK** (WASHOUT) \u2014 edge claimed: analytical (SOTP-style segment read + regulatory-overhang normalization vs headline \"China platform risk\" framing).\n- **NOC** (WASHOUT) \u2014 edge claimed: analytical (backlog/order-book compounding under-modeled at moderate coverage, no consensus-cycle overlap with anything else sourced this cycle).\n- **SONY** (WASHOUT) \u2014 edge claimed: analytical (segment sum-of-the-parts under-modeled at heavy headline coverage; gaming/sensor/finance mix priced as one generic \"Japan tech\" multiple).\n\nAll 3 non-MOMENTUM (WASHOUT); rule satisfied trivially. No dossiers/thesis files written at this stage.",
     "persona": "Harrison"
   },
   {
-    "file": "2026-07-18-GLOBAL-same-title-dc01.md",
+    "file": "2026-07-18-GLOBAL-weekly-deep-portfolio-review-2026-07-18-no-holdings-d0ad.md",
     "meta": {
-      "date": "2026-07-18 15:45:38.911685+07:00",
+      "date": "2026-07-18 10:16:34.036671+07:00",
       "book": "GLOBAL",
-      "title": "same title",
+      "title": "WEEKLY_DEEP portfolio review 2026-07-18 \u2014 no holdings",
+      "thesis": null,
+      "kind": "review"
+    },
+    "body": "Portfolio review (Harrison, PM_GLOBAL) \u2014 GLOBAL book: 0 positions, 0% gross, 100% cash, drawdown 0%, governor NONE. No holding-level distance-to-kill/target review applicable (nothing held). No market-value concentration (>15% NAV) possible at 0 names. Nothing to re-affirm this week; construction pipeline (step 7) is this book's only active work.",
+    "persona": "Harrison"
+  },
+  {
+    "file": "2026-07-18-GLOBAL-ideation-2026-07-18-global-cards-9973.md",
+    "meta": {
+      "date": "2026-07-18 13:42:03.525577+07:00",
+      "book": "GLOBAL",
+      "title": "IDEATION 2026-07-18 \u2014 GLOBAL cards",
       "thesis": null,
       "kind": "other"
     },
-    "body": "dup",
+    "body": "ADVANCE: MSFT (WASHOUT #2, mega-cap tech, AI-CapEx digestion, EV +8.75%), CAT (MOMENTUM #3, infra pullback, EV +4.0% thin), NEM (WASHOUT #9, gold-miner operational misses, EV +8.75%). NOT CARDED: NVO/TXN/SONY/0700.HK/NOC/SMFG (existing theses), AAPL/ABBV/UNH (no variant perception at levels).",
     "persona": "Harrison"
   },
   {
-    "file": "2026-07-18-GLOBAL-risk-veto-ZZFAKE-207a.md",
+    "file": "2026-07-12-INDO-weekly-deep-portfolio-review-2026-07-12-no-holdings-pipeline-31a4.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.979801+07:00",
-      "book": "GLOBAL",
-      "title": "VETO ZZFAKE buy 10",
-      "thesis": "T-GLOBAL-MSFT-001",
-      "kind": "risk_veto"
+      "date": "2026-07-12 12:07:21.582478+07:00",
+      "book": "INDO",
+      "title": "WEEKLY_DEEP portfolio review 2026-07-12 \u2014 no holdings, pipeline update",
+      "thesis": null,
+      "kind": "review"
     },
-    "body": "Order `O-ZZFAKE` VETOed and removed by risk_check: ZZFAKE not in maintained universe CSV \u2014 add it with sector/factor tags first",
+    "body": "INDO book: 0 positions, 0% gross, 100% cash (NAV Rp15,011,301,369.86), pre-ramp since inception 2026-07-06 -- nothing to re-affirm, no market-value/target/kill triggers to act on. Foreign-flow feed remains STALE (0 fresh readings) -- flagged, not estimated. This week's 3 deep-dive construction chains (DSNG.JK, ELSA.JK, PNBN.JK) all completed the full pipeline (analyst draft -> Bear attack KILL_RECOMMENDED -> analyst revision -> Bear re-attack reaffirmed -> Judge verdict) and were ALL judged KILL: DSNG.JK (valuation; coverage-lag mechanism empirically refuted by the stock's own post-RUPST bounce, expected_pct -8.9%/3y, no NAV margin of safety), ELSA.JK (process; also uncited 4.0x EV/EBITDA multiple and a conceded sign-inverted archetype, expected_pct -3.8%/3y vs a ~6.5%/yr FR carry), PNBN.JK (valuation; own VAL_BANKS math shows warranted P/BV 0.20-0.27x vs 0.38x traded, expected_pct -24.3%/3y, ~-23.5%/yr equity risk premium vs the FR sovereign sleeve in the same book). A 3-for-3 kill rate in the first real deep-dive batch is notable but reads as the bar working as designed, not evidence the screen is broken -- not lowering the bar to force a trade, and not reaching for the FR sovereign sleeve as a consolation allocation without its own BI-path-anchored thesis. Pipeline continues: next WEEKLY_DEEP resumes sourcing from screen.py + kill_ledger/watchlist revisit scan (all 3 killed tickers now carry documented reason_tags for future revisit-at-lower-price screening).",
+    "persona": "Kretek"
+  },
+  {
+    "file": "2026-07-12-GLOBAL-weekly-deep-portfolio-review-2026-07-12-no-holdings-pipeline-d61d.md",
+    "meta": {
+      "date": "2026-07-12 12:07:10.419132+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP portfolio review 2026-07-12 \u2014 no holdings, pipeline update",
+      "thesis": null,
+      "kind": "review"
+    },
+    "body": "GLOBAL book: 0 positions, 0% gross, 100% cash (NAV $1,000,582.19), pre-ramp since inception 2026-07-06 \u2014 nothing to re-affirm, no market-value/target/kill triggers to act on. This week's 3 deep-dive construction chains (NVO, SMFG, TXN) all completed the full pipeline (analyst draft -> Bear attack KILL_RECOMMENDED -> analyst revision -> Bear re-attack reaffirmed -> Judge verdict) and were ALL judged KILL: NVO (reason_tag process; merits: analyst's own base-case DCF sat below entry, CagriSema lost its head-to-head to Zepbound, expected_pct -33.5%/3y), SMFG (process; base_rate archetype mismatch + no surviving variant perception, expected_pct -3.65%/3y), TXN (valuation; entry priced ~27-40x own fair EV/EBIT anchor of 12-14x, expected_pct -48.18%/3y). A 3-for-3 kill rate in the first real deep-dive batch is notable but reads as the bar working as designed (each kill is merits-based and independently reproduced by two adversarial passes), not evidence the screen is broken -- not lowering the bar to force a trade. Pipeline continues: next WEEKLY_DEEP resumes sourcing from screen.py + kill_ledger/watchlist revisit scan (all 3 killed tickers now carry documented reason_tags for future revisit-at-lower-price screening).",
     "persona": "Harrison"
   },
   {
-    "file": "2026-07-18-GLOBAL-risk-veto-MSFT-946e.md",
+    "file": "2026-07-11-INDO-weekly-deep-sourcing-triage-2026-07-11-0f6c.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.980411+07:00",
-      "book": "GLOBAL",
-      "title": "VETO MSFT sell 500",
-      "thesis": "T-GLOBAL-MSFT-001",
-      "kind": "risk_veto"
+      "date": "2026-07-11 21:17:50.161546+07:00",
+      "book": "INDO",
+      "title": "WEEKLY_DEEP sourcing triage 2026-07-11",
+      "thesis": null,
+      "kind": "review"
     },
-    "body": "Order `O-MSFT-NAKED` VETOed and removed by risk_check: sell 500 exceeds position 0.0 \u2014 no naked shorts",
-    "persona": "Harrison"
+    "body": "## Sourcing triage \u2014 INDO \u2014 2026-07-11 (Sunda / ANALYST_INDO)\n\nBlank-slate book (0 positions, 0% gross, inception 2026-07-06); no kill_ledger.csv or watchlist revisit candidates exist yet. Screen: data/cache/screen_INDO_2026-07-11.csv (36 rows, WASHOUT/NEGLECTED/MOMENTUM). Foreign-flow feed is STALE (0 fresh readings) \u2014 flow_z60 ignored everywhere, including on em_flows-sensitive names (BBCA, BBRI, GOTO) where it would normally matter; flagged as a live blind spot, not a \"no signal\" read.\n\n### Ranked list (all names seriously considered)\n1. DSNG.JK (NEGLECTED, CPO) \u2014 PICK. Deepest genuine washout with fundamentals intact (off-high -37.5%, cagr +44.3%); best mispricing-to-liquidity ratio in the CPO cluster.\n2. PNBN.JK (WASHOUT, bank) \u2014 PICK. Thin-coverage mid-cap bank, real washout but cagr -14.35% \u2014 value-trap-or-mispricing question only LK footnotes resolve; VAL_BANKS card at construction.\n3. JPFA.JK (WASHOUT/NEGLECTED, poultry) \u2014 runner-up, not picked. Thin coverage, washout-then-recovery pattern; first swap-in if DSNG/PNBN falter in dossier stage.\n4. SGRO.JK (NEGLECTED, CPO) \u2014 PASS. Most extreme washout in the whole screen but ADV ~392mn IDR, roughly 10x thinner than DSNG \u2014 monitor-only, real ARA/ARB unsizeability risk.\n5. AADI.JK (WASHOUT/MOMENTUM, coal) \u2014 PASS. Liquid washout+trend combo, but edge here is macro/China-import-policy, not primary-source digging \u2014 MACRO_FX's lane, not this book's this week.\n6. ACES.JK (WASHOUT, consumer) \u2014 PASS. Deepest cagr decline in WASHOUT but moderate (not thin) coverage \u2014 limited informational edge.\n7. LSIP.JK (NEGLECTED/MOMENTUM, CPO) \u2014 PASS. Thin coverage but least washed-out CPO name; mispricing largely closed vs DSNG/SGRO.\n8. RALS.JK (NEGLECTED, consumer) \u2014 PASS. Flattish, thin ADV, no compensating mispricing story.\n9. AALI.JK (WASHOUT, CPO) \u2014 PASS. Positive mom12 makes the WASHOUT tag questionable; weaker than DSNG on drawdown/cagr.\n10. BBCA.JK / BBRI.JK (WASHOUT, mega banks) \u2014 PASS. Heavy coverage, no thin-coverage edge; also most exposed to the dead flow feed on their primary driver.\n11. GOTO.JK (WASHOUT, tech) \u2014 PASS. cagr 0.0 (no earnings track record), heavy coverage, Rp50 price makes board-lot value trivial (tick-size cost caveat).\n12. GGRM.JK (MOMENTUM, tobacco) \u2014 PASS. mom12 +73.8% vs cagr +2.7% \u2014 price has vastly outrun fundamentals; re-underwrite/monitor risk, not a fresh long.\n13. MAPI.JK (MOMENTUM, consumer) \u2014 PASS. At 52w highs with weak cagr relative to the move \u2014 overextended.\n14. ADRO.JK (MOMENTUM, coal) \u2014 PASS. Liquid/trending but heavy coverage, no washout component, no edge.\n\n### Final 3 picks for deep-dive (step 7)\n- **DSNG.JK** (NEGLECTED) \u2014 edge claimed: thin sell-side coverage on small-cap planter; FFB yield/replanting capex + under-modeled B40/B50 biodiesel mandate demand. Liquidity: ADV 8.6bn IDR, workable but thin \u2014 watch ARA/ARB on entry, size conservatively.\n- **PNBN.JK** (WASHOUT) \u2014 edge claimed: thin coverage on a mid-cap bank with a complex legacy ownership structure; \"washout justified or overdone\" resolves only via NPL/related-party LK footnotes. Liquidity flag: ADV only 4.0bn IDR \u2014 thin, may need multi-day accumulation.\n- **ELSA.JK** (cross-listed WASHOUT/NEGLECTED/MOMENTUM, energy services) \u2014 edge claimed: thin coverage on state-energy-services-linked name; contract backlog/SKK Migas capex data under-modeled by sell-side. Liquidity: ADV 15.9bn IDR reasonable. Chase-risk flagged: entering after +17.6% 1m move needs dossier to confirm fundamentally justified re-rating, not a flow-driven pop (unverifiable this week given stale flow feed).\n\n\u22651 non-MOMENTUM pick satisfied (DSNG.JK NEGLECTED, PNBN.JK WASHOUT). No dossiers/thesis files written at this stage.",
+    "persona": "Kretek"
   },
   {
-    "file": "2026-07-18-GLOBAL-risk-veto-JPM-e4c7.md",
+    "file": "2026-07-11-GLOBAL-weekly-deep-sourcing-triage-2026-07-11-3190.md",
     "meta": {
-      "date": "2026-07-18 15:45:35.980302+07:00",
+      "date": "2026-07-11 21:17:47.168045+07:00",
       "book": "GLOBAL",
-      "title": "VETO JPM buy 10",
-      "thesis": "T-GLOBAL-MSFT-001",
-      "kind": "risk_veto"
+      "title": "WEEKLY_DEEP sourcing triage 2026-07-11",
+      "thesis": null,
+      "kind": "review"
     },
-    "body": "Order `O-JPM-STALE` VETOed and removed by risk_check: price stale >3 trading days \u2014 instrument frozen for new orders (\u00a712)",
-    "persona": "Harrison"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-risk-veto-GOOGL-caff.md",
-    "meta": {
-      "date": "2026-07-18 15:45:36.736171+07:00",
-      "book": "GLOBAL",
-      "title": "VETO GOOGL buy 380",
-      "thesis": "T-GLOBAL-GOOGL-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-GG2` VETOed and removed by risk_check: position 14.8% > 10.0% at-cost cap",
-    "persona": "Harrison"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-risk-veto-EURUSD-6d02.md",
-    "meta": {
-      "date": "2026-07-18 15:45:35.980208+07:00",
-      "book": "GLOBAL",
-      "title": "VETO EURUSD buy 200000",
-      "thesis": "T-GLOBAL-EURUSD-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-EUR-BIG` VETOed and removed by risk_check: trade 20.0% NAV > 5.0% cap; position 24.9% > 10.0% at-cost cap; position 24.9% market > 15.0% review cap (trim/hold re-underwrite); FX gross notional 25% > 15% cap",
-    "persona": "Harrison"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-risk-veto-BADFAC-1635.md",
-    "meta": {
-      "date": "2026-07-18 15:45:35.979913+07:00",
-      "book": "GLOBAL",
-      "title": "VETO BADFAC buy 10",
-      "thesis": "T-GLOBAL-MSFT-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-BADFAC` VETOed and removed by risk_check: factor ['fx_badfac'] outside closed taxonomy (UNTAGGED/off-list) \u2014 fail-closed VETO",
-    "persona": "Harrison"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-risk-veto-AAPL-6834.md",
-    "meta": {
-      "date": "2026-07-18 15:45:35.979287+07:00",
-      "book": "GLOBAL",
-      "title": "VETO AAPL buy 600",
-      "thesis": "T-GLOBAL-AAPL-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-AAPL-OVER` VETOed and removed by risk_check: trade 12.7% NAV > 5.0% cap; position 23.2% > 10.0% at-cost cap; position 23.3% market > 15.0% review cap (trim/hold re-underwrite)",
-    "persona": "Harrison"
-  },
-  {
-    "file": "2026-07-18-GLOBAL-risk-veto-9988.HK-df6f.md",
-    "meta": {
-      "date": "2026-07-18 15:45:35.979685+07:00",
-      "book": "GLOBAL",
-      "title": "VETO 9988.HK buy 45000",
-      "thesis": "T-GLOBAL-9988.HK-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `O-9988-BIG` VETOed and removed by risk_check: trade 46.0% NAV > 5.0% cap; position 46.0% > 10.0% at-cost cap; position 46.0% market > 15.0% review cap (trim/hold re-underwrite); sector TECH_CHINA 46.7% > 30.0% cap",
+    "body": "## Sourcing triage \u2014 GLOBAL \u2014 2026-07-11 (Sloane / ANALYST_GLOBAL)\n\nBlank-slate book (0 positions, 0% gross, inception 2026-07-06); no kill_ledger.csv or watchlist revisit candidates exist yet. Screen: data/cache/screen_GLOBAL_2026-07-11.csv (24 rows, WASHOUT/MOMENTUM, no NEGLECTED sleeve this week). flow_z60 ignored throughout (GLOBAL foreign-flow layer is vestigial/IDX-only).\n\n### Ranked list (all names seriously considered)\n1. NVO (WASHOUT) \u2014 PICK. -36.8% 12m but +15.6% 1m stabilization; GLP-1 franchise cash generation vs possible over-extrapolated share-loss narrative worth independent document work.\n2. SMFG (MOMENTUM) \u2014 PICK. Only name at 0% off 52w high with below-average vol; BOJ policy normalization \u2192 traceable NIM re-rate, not a chase.\n3. TXN (MOMENTUM) \u2014 PICK. Most restrained momentum in the sleeve (+32% vs +625% MU); capex/inventory cycle inflection, moderate (not heavy) coverage leaves room for original work.\n4. 2318.HK (WASHOUT) \u2014 PASS (close). Near-zero bench correlation is a genuine diversifier but Chinese insurer investment-portfolio opacity is a week-one hazard; deferred, not killed.\n5. ASML \u2014 PASS. Real document trail but heavy coverage means bookings-vs-China-restriction read is already consensus.\n6. CAT \u2014 PASS. Reflation/infra thesis already in the price; heavy coverage, momentum still accelerating.\n7. NEM \u2014 PASS. Gold-price beta (51% vol), no company-specific mispricing on offer.\n8. MSFT \u2014 PASS. Notable drawdown but heaviest coverage in the index; no information edge available.\n9. TSM \u2014 PASS. Excellent business, zero asymmetry at heavy coverage.\n10. 2020.HK \u2014 PASS. Thinnest liquidity of WASHOUT top-5, weakest cagr; a China-consumption story not a cash-flow one.\n11. AMD \u2014 PASS. +214% 12m still accelerating, heavy coverage; poor risk/reward for a first entry.\n12. MU \u2014 PASS. +625% 12m, 107% vol \u2014 a casino, arbitraged many times over.\n\n### Final 3 picks for deep-dive (step 7)\n- **NVO** (WASHOUT) \u2014 edge claimed: analytical (normalized GLP-1 earnings power vs share-loss narrative).\n- **SMFG** (MOMENTUM) \u2014 edge claimed: structural-flow (BOJ-driven NIM expansion, policy-mechanical not sentiment).\n- **TXN** (MOMENTUM) \u2014 edge claimed: analytical (analog semis capex/inventory inflection, under-covered vs AI-momentum peers).\n\n\u22651 non-MOMENTUM (WASHOUT) pick satisfied (NVO). No dossiers/thesis files written at this stage.",
     "persona": "Harrison"
   }
 ]
