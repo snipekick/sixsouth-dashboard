@@ -38,7 +38,7 @@ const CREW={
 const POINTS={
  north_analyst:[[7,15],[11,15]],north_pm:[[19,15]],south_analyst:[[70,15],[74,15]],south_pm:[[83,15]],
  macro_global:[[34,9]],macro_fx:[[51,9]],bear:[[8,29],[12,29]],judge:[[28,28],[32,28]],
- risk:[[47,29],[51,29]],ops:[[63,29],[67,29]],postmortem:[[80,29],[84,29]],lobby:[[43,17],[46,17]]
+ risk:[[47,29],[51,29]],ops:[[63,29],[67,29]],postmortem:[[80,29],[84,29]],lobby:[[25,20],[65,20]]
 };
 const HANDOFF_POINTS={north_analyst:[[9,17]],south_analyst:[[72,17]],bear:[[10,31]],judge:[[30,31]],risk:[[48,31]],north_pm:[[20,17]],south_pm:[[82,17]],ops:[[65,31]],postmortem:[[82,31]]};
 const MEETING_ROOM={x:27,y:12,w:37,h:8,label:"6S MEETING ROOM"};
@@ -67,8 +67,30 @@ const ZONES=[
  {key:"ops",x:57,y:22,w:14,h:12,label:"OPS / FILLS",color:"#202329",edge:"#9AA3AD",door:"top"},
  {key:"post",x:74,y:21,w:14,h:13,label:"POSTMORTEM / ARCHIVE",color:"#242126",edge:"#9AA3AD",door:"top"}
 ];
-const ROLE_ACTIVITY={ANALYST_GLOBAL:"read",ANALYST_INDO:"read",MACRO_FX:"read",MACRO_GLOBAL:"read",BEAR:"review",JUDGE:"review",RISK_OFFICER:"review",PM_GLOBAL:"read",PM_INDO:"read",POSTMORTEM:"read",OPS:"type"};
+const ROLE_ACTIVITY={ANALYST_GLOBAL:"type",ANALYST_INDO:"type",MACRO_FX:"read",MACRO_GLOBAL:"read",BEAR:"review",JUDGE:"review",RISK_OFFICER:"review",PM_GLOBAL:"read",PM_INDO:"read",POSTMORTEM:"read",OPS:"type"};
 const ROLE_NAMES=new Map(TEAM.map(x=>[x.role,x.name]));
+const HUBS=Object.freeze({
+ NEW_YORK:Object.freeze({hub:"New York",timeZone:"America/New_York",arrival:420,start:480,lunch:720,lunchEnd:780,close:1170,quiet:1380,quietEnd:420}),
+ LONDON:Object.freeze({hub:"London",timeZone:"Europe/London",arrival:390,start:450,lunch:720,lunchEnd:780,close:1080,quiet:1380,quietEnd:390}),
+ JAKARTA:Object.freeze({hub:"Jakarta",timeZone:"Asia/Jakarta",arrival:465,start:510,lunch:720,lunchEnd:780,close:1050,quiet:1350,quietEnd:390})
+});
+const ROLE_HUB=Object.freeze({
+ ANALYST_GLOBAL:"NEW_YORK",PM_GLOBAL:"NEW_YORK",MACRO_GLOBAL:"LONDON",MACRO_FX:"LONDON",
+ ANALYST_INDO:"JAKARTA",PM_INDO:"JAKARTA",BEAR:"JAKARTA",JUDGE:"JAKARTA",RISK_OFFICER:"JAKARTA",POSTMORTEM:"JAKARTA",OPS:"JAKARTA"
+});
+// Collision-free semantic destinations for the illustrative desk-clock routine.
+const REST_POINTS=Object.freeze({
+ ANALYST_GLOBAL:[5,18],PM_GLOBAL:[15,18],ANALYST_INDO:[85,18],PM_INDO:[76,18],
+ MACRO_GLOBAL:[31,9],MACRO_FX:[55,9],BEAR:[14,32],JUDGE:[35,32],RISK_OFFICER:[52,32],OPS:[69,32],POSTMORTEM:[86,32]
+});
+const LUNCH_POINTS=Object.freeze({
+ ANALYST_GLOBAL:[5,18],PM_GLOBAL:[15,18],ANALYST_INDO:[85,18],PM_INDO:[76,18],
+ MACRO_GLOBAL:[42,11],MACRO_FX:[45,11],BEAR:[18,31],JUDGE:[39,31],RISK_OFFICER:[55,31],OPS:[72,31],POSTMORTEM:[85,32]
+});
+const WANDER_POINTS=Object.freeze({
+ ANALYST_GLOBAL:[25,15],PM_GLOBAL:[25,17],ANALYST_INDO:[65,15],PM_INDO:[65,17],
+ MACRO_GLOBAL:[42,11],MACRO_FX:[45,11],BEAR:[18,31],JUDGE:[39,31],RISK_OFFICER:[55,31],OPS:[72,31],POSTMORTEM:[85,32]
+});
 const MEETING_MINUTES={US_CLOSE:30,IDX_PREOPEN:30,IDX_CLOSE:30,US_PREOPEN:30,IDEATION:45,WEEKLY_DEEP:60,MONTHLY_IC:60};
 const HANDOFF_RULES={
  analyst_to_bear:[[/^ANALYST_(GLOBAL|INDO)$/,/^BEAR$/]],
@@ -102,6 +124,19 @@ function normalizeMarketTape(raw){
 }
 function dayOk(days,dow,date){const value=String(days||"").toLowerCase().replace(/[^a-z]+/g," ").trim();if(value==="mon fri"||value==="monday friday")return dow>=1&&dow<=5;if(value==="tue sat"||value==="tuesday saturday")return dow>=2&&dow<=6;if(value==="sat"||value==="saturday")return dow===6;if(value==="first sat"||value==="first saturday")return dow===6&&date<=7;if(value==="daily"||value==="every day")return true;return false;}
 function wibParts(now){const d=new Date(now.getTime()+7*3600000);return {y:d.getUTCFullYear(),m:d.getUTCMonth(),date:d.getUTCDate(),dow:d.getUTCDay(),hm:d.getUTCHours()+d.getUTCMinutes()/60};}
+function safeDeskClock(role){return {role:String(role||"").toUpperCase(),hub:"Unassigned",timeZone:null,weekday:"",deskTime:"--:--",phase:"resting",phaseLabel:"Resting (illustrative)",working:false,illustrative:true};}
+function zonedDeskParts(when,timeZone){
+ try{const parts=new Intl.DateTimeFormat("en-US",{timeZone,weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(when),values={};for(const part of parts)if(part.type!=="literal")values[part.type]=part.value;let hour=Number(values.hour);if(hour===24)hour=0;const minute=Number(values.minute);if(!Number.isInteger(hour)||!Number.isInteger(minute))return null;return {weekday:values.weekday||"",hour,minute,minutes:hour*60+minute,deskTime:String(hour).padStart(2,"0")+":"+String(minute).padStart(2,"0")};}catch(_){return null;}
+}
+function deskClockAt(role,when){
+ const key=String(role||"").toUpperCase(),hubKey=ROLE_HUB[key],profile=HUBS[hubKey],date=when instanceof Date?when:new Date(when);if(!profile||!Number.isFinite(date.getTime()))return safeDeskClock(key);
+ const p=zonedDeskParts(date,profile.timeZone);if(!p)return safeDeskClock(key);const weekday=["Mon","Tue","Wed","Thu","Fri"].includes(p.weekday),saturday=p.weekday==="Sat",m=p.minutes;let phase="resting",phaseLabel="Off shift · resting (illustrative)";
+ if(hubKey==="JAKARTA"&&saturday){if(m<510||m>=profile.quiet)phase="quiet",phaseLabel="Off shift · quiet hours (illustrative)";else if(m<570)phase="arriving",phaseLabel="Arriving for the desk day (illustrative)";else if(m<720)phase="working",phaseLabel="At desk (illustrative)";}
+ else if(weekday){if(m<profile.quietEnd||m>=profile.quiet){phase="quiet";phaseLabel="Off shift · quiet hours (illustrative)";}else if(m<profile.arrival){phase="resting";phaseLabel=hubKey==="JAKARTA"?"Preparation / rest (illustrative)":"Off shift · resting (illustrative)";}else if(m<profile.start){phase="arriving";phaseLabel="Arriving for the desk day (illustrative)";}else if(m<profile.lunch){phase="working";phaseLabel="At desk (illustrative)";}else if(m<profile.lunchEnd){phase="lunch";phaseLabel="Lunch break (illustrative)";}else if(m<profile.close){phase="working";phaseLabel="At desk (illustrative)";}}
+ else if(m<profile.quietEnd||m>=profile.quiet){phase="quiet";phaseLabel="Off shift · quiet hours (illustrative)";}
+ return {role:key,hub:profile.hub,timeZone:profile.timeZone,weekday:p.weekday,deskTime:p.deskTime,phase,phaseLabel,working:phase==="working",illustrative:true};
+}
+function ambientWander(role,when){const date=when instanceof Date?when:new Date(when),index=TEAM.findIndex(member=>member.role===String(role||"").toUpperCase());if(!Number.isFinite(date.getTime())||index<0)return false;return Math.floor(date.getTime()/600000)%6===index%6;}
 const PUBLIC_SESSIONS={US_CLOSE:"North close review",IDX_PREOPEN:"South pre-open review",IDX_CLOSE:"South close review",US_PREOPEN:"North pre-open review",IDEATION:"Idea research",WEEKLY_DEEP:"Weekly deep research",MONTHLY_IC:"Monthly investment review"};
 function sessionKey(session){const raw=String(session||""),upper=raw.toUpperCase();if(CREW[upper])return upper;for(const key of Object.keys(PUBLIC_SESSIONS))if(PUBLIC_SESSIONS[key]===raw)return key;return "";}
 function explicitMeetingParticipants(entry){
@@ -179,8 +214,8 @@ function validHandoff(value){
  if((from.includes("INDO")||to.includes("INDO"))&&book!=="INDO")return null;
  return {kind,fromRole:from,toRole:to,book,fromName:ROLE_NAMES.get(from),toName:ROLE_NAMES.get(to)};
 }
-function normalizeState(raw,roster,summary,structure){
- const now=new Date(),byRole=new Map(((raw&&raw.agents)||[]).map(a=>[String(a.role||a.id||"").toUpperCase(),a]));
+function normalizeState(raw,roster,summary,structure,at){
+ const now=at instanceof Date&&Number.isFinite(at.getTime())?at:new Date(),byRole=new Map(((raw&&raw.agents)||[]).map(a=>[String(a.role||a.id||"").toUpperCase(),a]));
  let provenance=norm(raw&&raw.provenance),session=raw&&raw.session,phase=(raw&&raw.phase_label)||(raw&&raw.phase),next=raw&&raw.next_session;
  if(!["live","last_observed","scheduled"].includes(provenance))provenance="scheduled";
  if(provenance==="live"){
@@ -196,8 +231,8 @@ function normalizeState(raw,roster,summary,structure){
   const a=byRole.get(base.role)||{},r=rosterMap.get(base.role)||{};
   const fallbackActive=!!active(base.role),act=(raw&&Array.isArray(raw.agents))?activityOf(a.state,a.activity):(fallbackActive?ROLE_ACTIVITY[base.role]:"idle");
   const bookId=String(a.book||base.book),book=bookId==="GLOBAL"?"North":bookId==="INDO"?"South":bookId==="SHARED"?"Cross-book":bookId==="INDEPENDENT"?"Independent":bookId;
-  const state=norm(a.state)||(provenance==="scheduled"?"scheduled":"off_desk");
-  return Object.assign({},base,{index:i,name:String(a.name||r.persona||base.name),title:String(a.title||r.title||base.role),activity:act,activityLabel:String(a.activity||cap(act)),state,stateLabel:cap(state),station:resolveStation(a.station,base.role,bookId),homeStation:resolveStation(a.home_station,base.role,bookId),bookId,book});
+  const state=norm(a.state)||(provenance==="scheduled"?"scheduled":"off_desk"),observedWork=provenance==="live"&&byRole.has(base.role)&&!["off_desk","idle","rest","resting","sleep","sleeping","scheduled","inactive"].includes(state)&&["type","read","review","walk"].includes(act);
+  return Object.assign({},base,{index:i,name:String(a.name||r.persona||base.name),title:String(a.title||r.title||base.role),activity:act,activityLabel:String(a.activity||cap(act)),state,stateLabel:cap(state),station:resolveStation(a.station,base.role,bookId),homeStation:resolveStation(a.home_station,base.role,bookId),bookId,book,observedWork});
  });
  const observed=(raw&&raw.observed_at)||(raw&&raw.asof)||null,expires=raw&&raw.expires_at,stage=norm(raw&&raw.stage)||"unknown",stageObserved=!!(raw&&raw.stage_observed),orchestrator=(raw&&raw.orchestrator&&typeof raw.orchestrator==="object")?raw.orchestrator:{};
  const status=raw?statusOf(raw,stage,orchestrator):"scheduled",handoffValue=provenance==="scheduled"?null:validHandoff(raw&&raw.handoff),handoff=handoffValue?Object.assign(handoffValue,{active:provenance==="live"&&stageObserved}):null;
@@ -248,36 +283,41 @@ class Floor{
   for(let col=MEETING_TABLE.x;col<MEETING_TABLE.x+MEETING_TABLE.w;col++)for(let row=MEETING_TABLE.y;row<MEETING_TABLE.y+MEETING_TABLE.h;row++)add(col,row);
  }
  loadSprites(){Promise.all(SHEETS.map(src=>new Promise((ok,bad)=>{const im=new Image();im.onload=()=>ok(im);im.onerror=bad;im.src="data:image/png;base64,"+src;}))).then(imgs=>{this.images=imgs;this.ready=true;const loading=document.getElementById("officeLoading");if(loading)loading.hidden=true;this.sync();this.ensureLoop();}).catch(()=>{const loading=document.getElementById("officeLoading");if(loading)loading.textContent="Character sprites unavailable — desk state remains available below.";this.draw();});}
- update(args){this.args=args||{};this.nowOverride=this.args.now==null?null:this.args.now;this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure);this.marketTape=normalizeMarketTape(this.args.marketTape);this.refreshMeeting(true);if(this.ready)this.sync();this.updateMeta();this.updateA11y();}
+ update(args){this.args=args||{};this.nowOverride=this.args.now==null?null:this.args.now;const at=this.currentTime();this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure,at);this.marketTape=normalizeMarketTape(this.args.marketTape);this.refreshMeeting(true);if(this.ready)this.sync();this.updateMeta();this.updateA11y();}
  sync(){
   if(!this.state)return;const old=new Map(this.agents.map(a=>[a.role,a]));
   this.agents=this.state.agents.map((d,i)=>{let a=old.get(d.role),isNew=!a;if(!a){const homes=POINTS[d.homeStation]||POINTS[d.home]||POINTS.lobby,spawn=homes[i%homes.length];a=Object.assign({},d,{col:spawn[0],row:spawn[1],x:0,y:0,path:[],progress:0,dir:"down",frame:0,frameTime:0,meetingAssigned:false,returningMeeting:false});}else Object.assign(a,d);this.routeAgent(a,i,isNew);a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;return a;});
-  this.updateMeetingStatus();this.updateA11y();this.ensureLoop();
+  this.updateMeta();this.updateMeetingStatus();this.updateA11y();this.ensureLoop();
  }
  currentTime(){const value=this.nowOverride==null?new Date():new Date(this.nowOverride);return Number.isFinite(value.getTime())?value:new Date();}
  refreshMeeting(force){
-  if(!this.state)return;const next=activeMeetingAt(this.args&&this.args.structure,this.state,this.currentTime()),signature=[next.active,next.key,next.startsAt,next.endsAt,next.source,next.participantRoles.join(",")].join("|");if(!force&&signature===this.meetingSignature)return;
+  if(!this.state)return;const at=this.currentTime();this.officeNow=at;const raw=this.args&&this.args.state,expiry=new Date(raw&&raw.expires_at),expiredBoundary=this.state.provenance==="live"&&Number.isFinite(expiry.getTime())&&expiry<=at;if(expiredBoundary)this.state=normalizeState(raw,this.args&&this.args.roster,this.args&&this.args.summary,this.args&&this.args.structure,at);
+  const next=activeMeetingAt(this.args&&this.args.structure,this.state,at),rhythm=TEAM.map(member=>{const desk=deskClockAt(member.role,at);return member.role+":"+desk.phase+":"+desk.deskTime+":"+(desk.working&&ambientWander(member.role,at)?"walk":"base");}).join(","),signature=[next.active,next.key,next.startsAt,next.endsAt,next.source,next.participantRoles.join(","),rhythm].join("|");if(!force&&!expiredBoundary&&signature===this.meetingSignature)return;
   const previous=this.meeting;if(previous&&previous.active&&!next.active)this.meetingExit={session:previous.session,participantRoles:[...previous.participantRoles]};else if(next.active)this.meetingExit=null;this.meeting=next;this.meetingSignature=signature;
-  if(this.agents.length)this.routeAgents();this.updateMeetingStatus();this.updateA11y();this.ensureLoop();
+  if(this.agents.length){if(expiredBoundary)this.sync();else this.routeAgents();}this.updateMeta();this.updateMeetingStatus();this.updateA11y();this.ensureLoop();
  }
  targetPlan(agent,index){
-  if((!this.meeting||!this.meeting.active)&&(agent.meetingAssigned||agent.returningMeeting)){const homes=POINTS[agent.homeStation]||POINTS[agent.home]||POINTS[agent.station]||POINTS.lobby;return {target:homes[index%homes.length],meeting:false,handoff:false,meetingIndex:-1};}
-  const meetingIndex=this.meeting&&this.meeting.active?this.meeting.participantRoles.indexOf(agent.role):-1;if(meetingIndex>=0&&this.meeting.source==="schedule")return {target:MEETING_SEATS[meetingIndex%MEETING_SEATS.length],meeting:true,handoff:false,meetingIndex};
-  const handoff=!!(this.state&&this.state.handoff&&this.state.handoff.active&&this.state.handoff.fromRole===agent.role);if(handoff){const points=HANDOFF_POINTS[agent.station]||POINTS[agent.station]||POINTS[agent.home]||POINTS.lobby;return {target:points[index%points.length],meeting:false,handoff:true,meetingIndex:-1};}
-  if(meetingIndex>=0)return {target:MEETING_SEATS[meetingIndex%MEETING_SEATS.length],meeting:true,handoff:false,meetingIndex};
-  const points=POINTS[agent.station]||POINTS[agent.home]||POINTS.lobby;return {target:points[index%points.length],meeting:false,handoff:false,meetingIndex:-1};
+  const at=this.officeNow||this.currentTime(),lifecycle=deskClockAt(agent.role,at),meetingIndex=this.meeting&&this.meeting.active?this.meeting.participantRoles.indexOf(agent.role):-1;if(meetingIndex>=0)return {target:MEETING_SEATS[meetingIndex%MEETING_SEATS.length],meeting:true,handoff:false,meetingIndex,lifecycle,dutyPhase:"meeting",motion:true,routinePlace:"meeting room"};
+  const handoff=!!(this.state&&this.state.handoff&&this.state.handoff.active&&this.state.handoff.fromRole===agent.role),desks=POINTS[agent.station]||POINTS[agent.home]||POINTS.lobby,desk=desks[index%desks.length];if(handoff){const points=HANDOFF_POINTS[agent.station]||desks;return {target:points[index%points.length],meeting:false,handoff:true,meetingIndex:-1,lifecycle,dutyPhase:"handoff",motion:true,routinePlace:"desk handoff"};}
+  if(this.state&&this.state.provenance==="live"&&agent.observedWork)return {target:desk,meeting:false,handoff:false,meetingIndex:-1,lifecycle,dutyPhase:"observed_working",motion:true,routinePlace:"published desk"};
+  if(lifecycle.phase==="working"&&ambientWander(agent.role,at))return {target:WANDER_POINTS[agent.role]||desk,meeting:false,handoff:false,meetingIndex:-1,lifecycle,dutyPhase:"working",motion:true,routinePlace:"brief office walk"};
+  if(lifecycle.phase==="lunch")return {target:LUNCH_POINTS[agent.role]||desk,meeting:false,handoff:false,meetingIndex:-1,lifecycle,dutyPhase:"lunch",motion:true,routinePlace:"lunch break"};
+  if(lifecycle.phase==="resting"||lifecycle.phase==="quiet")return {target:REST_POINTS[agent.role]||desk,meeting:false,handoff:false,meetingIndex:-1,lifecycle,dutyPhase:lifecycle.phase,motion:true,routinePlace:lifecycle.phase==="quiet"?"quiet area":"rest area"};
+  return {target:desk,meeting:false,handoff:false,meetingIndex:-1,lifecycle,dutyPhase:lifecycle.phase,motion:lifecycle.phase==="arriving",routinePlace:lifecycle.phase==="arriving"?"desk arrival":"coverage desk"};
  }
  routeAgent(agent,index,isNew){
-  const wasMeeting=!!agent.meetingAssigned,wasReturning=!!agent.returningMeeting,plan=this.targetPlan(agent,index),departing=wasMeeting&&!plan.meeting&&!plan.handoff,returning=(departing||wasReturning)&&!plan.meeting&&!plan.handoff,targetChanged=!agent.target||agent.target[0]!==plan.target[0]||agent.target[1]!==plan.target[1];agent.meetingAssigned=plan.meeting;agent.returningMeeting=returning;agent.handoffMove=plan.handoff;agent.controlledMove=plan.meeting||plan.handoff||returning;agent.target=plan.target;if(targetChanged){agent.waitFrames=0;if(plan.meeting)agent.routeDelay=(plan.meetingIndex%4)*.18;}
-  if(isNew&&!agent.controlledMove){agent.col=plan.target[0];agent.row=plan.target[1];agent.path=[];agent.progress=0;return;}
+  const wasMeeting=!!agent.meetingAssigned,wasReturning=!!agent.returningMeeting,plan=this.targetPlan(agent,index),departing=wasMeeting&&!plan.meeting&&!plan.handoff,returning=(departing||wasReturning)&&!plan.meeting&&!plan.handoff,targetChanged=!agent.target||agent.target[0]!==plan.target[0]||agent.target[1]!==plan.target[1];agent.meetingAssigned=plan.meeting;agent.returningMeeting=returning;agent.handoffMove=plan.handoff;agent.lifecycle=plan.lifecycle;agent.dutyPhase=plan.dutyPhase;agent.routinePlace=plan.routinePlace;agent.lifecycleMove=!plan.meeting&&!plan.handoff&&(targetChanged||agent.path.length>0);agent.controlledMove=plan.meeting||plan.handoff||returning||agent.lifecycleMove;agent.target=plan.target;if(targetChanged){agent.waitFrames=0;agent.routeDelay=plan.meeting?(plan.meetingIndex%4)*.18:plan.motion?(index%4)*.13:0;}
+  if(isNew&&!plan.meeting&&!plan.handoff&&!plan.motion){agent.col=plan.target[0];agent.row=plan.target[1];agent.path=[];agent.progress=0;agent.lifecycleMove=false;agent.controlledMove=false;return;}
   if(this.reduced){agent.col=plan.target[0];agent.row=plan.target[1];agent.path=[];agent.progress=0;agent.returningMeeting=false;agent.controlledMove=plan.meeting||plan.handoff;return;}
   if((targetChanged||!agent.path.length)&&(agent.col!==plan.target[0]||agent.row!==plan.target[1])){agent.path=findPath(agent.col,agent.row,plan.target[0],plan.target[1],this.blocked);agent.progress=0;}
+  if(!agent.path.length&&agent.col===plan.target[0]&&agent.row===plan.target[1]){agent.lifecycleMove=false;agent.controlledMove=!!(plan.meeting||plan.handoff||returning);}
  }
  routeAgents(){for(let index=0;index<this.agents.length;index++)this.routeAgent(this.agents[index],index,false);this.updateMeetingStatus();}
  updateMeta(){
   const s=this.state,phase=document.getElementById("officePhase"),status=document.getElementById("officeStatus"),next=document.getElementById("officeNext"),handoff=document.getElementById("officeHandoff");
   const delayed=FAILURE_STATUS.has(s.status),active=s.status==="running"&&s.provenance==="live",complete=s.status==="complete";
-  if(phase)phase.textContent=delayed?"The next office update is delayed":active?"The desk team is at work":complete?"Latest desk work published":"Between scheduled working sessions";
+  const working=this.agents.filter(a=>["meeting","handoff","observed_working","working"].includes(a.dutyPhase)).length,arriving=this.agents.filter(a=>a.dutyPhase==="arriving").length,offShift=this.agents.filter(a=>["resting","quiet","lunch"].includes(a.dutyPhase)).length,rhythm="Illustrative desk clocks · "+working+" working"+(arriving?" · "+arriving+" arriving":"")+(offShift?" · "+offShift+" off shift / break":"");
+  if(phase)phase.textContent=delayed?"The next office update is delayed":active?"Published desk activity is live":rhythm;
   if(status){status.className="office-run-status "+(delayed?"degraded":active?"running":complete?"complete":"scheduled");status.textContent=delayed?"DELAYED":active?"ACTIVE":complete?"UPDATED":"SCHEDULED";}
   if(next){const n=s.next;next.textContent=n&&n.session?publicSessionLabel(n.session)+(n.scheduled_for?" · "+wibDate(new Date(n.scheduled_for)):""):"schedule unavailable";}
   if(handoff){handoff.className="office-handoff"+(s.handoff&&s.handoff.active?" active":"");if(s.handoff){const when=s.handoff.active?"Desk handoff":"Recent desk handoff",book=s.handoff.book==="GLOBAL"?"North":s.handoff.book==="INDO"?"South":"Cross-book";handoff.textContent=when+" · "+s.handoff.fromName+" → "+s.handoff.toName+" · "+book;}else handoff.textContent="No active desk handoff";}
@@ -291,14 +331,16 @@ class Floor{
  updateMeetingStatus(){
   const el=document.getElementById("officeMeetingStatus");if(!el)return;let text="Available · no meeting in progress",title="The 6S meeting room is available.";
   if(this.meeting&&this.meeting.active){const expected=this.meeting.participantRoles.length,assigned=this.agents.filter(agent=>agent.meetingAssigned),arrived=assigned.filter(agent=>!agent.path.length&&agent.target&&agent.col===agent.target[0]&&agent.row===agent.target[1]).length,awayOnHandoff=this.agents.filter(agent=>this.meeting.participantRoles.includes(agent.role)&&agent.handoffMove).length,names=this.meeting.participantRoles.map(role=>ROLE_NAMES.get(role)).filter(Boolean);if(arrived<expected){text="Gathering · "+this.meeting.session+" · "+arrived+"/"+expected+" seated";}else{text="In session · "+this.meeting.session+" · "+expected+" participants"+(this.meeting.endsAt?" · until "+wibDate(new Date(this.meeting.endsAt)):"");}if(awayOnHandoff)text+=" · "+awayOnHandoff+" completing a desk handoff";title="Meeting participants: "+names.join(", ")+".";}
-  else{const returning=this.agents.filter(agent=>agent.returningMeeting);if(returning.length){text="Meeting ended · "+returning.length+" participant"+(returning.length===1?"":"s")+" returning to desks";title=(this.meetingExit&&this.meetingExit.session?this.meetingExit.session+" ended. ":"")+"Participants are walking back to their desks.";}else this.meetingExit=null;}
+  else{const returning=this.agents.filter(agent=>agent.returningMeeting);if(returning.length){text="Meeting ended · "+returning.length+" participant"+(returning.length===1?"":"s")+" returning to desk-clock destinations";title=(this.meetingExit&&this.meetingExit.session?this.meetingExit.session+" ended. ":"")+"Participants are walking to their current working, break, or rest destinations.";}else this.meetingExit=null;}
   if(el.textContent!==text)el.textContent=text;el.title=title;
  }
  updateA11y(){
   const list=document.getElementById("officeAgentList"),sum=document.getElementById("officeRosterSummary");if(!list||!this.state)return;const frag=document.createDocumentFragment(),runtime=new Map(this.agents.map(agent=>[agent.role,agent]));
-  for(const base of this.state.agents){const a=runtime.get(base.role)||base,li=document.createElement("li"),b=document.createElement("b"),span=document.createElement("span"),seated=a.meetingAssigned&&!a.path.length&&a.target&&a.col===a.target[0]&&a.row===a.target[1],place=a.meetingAssigned?(seated?"seated in 6S meeting room":"walking to 6S meeting room"):a.returningMeeting?"returning to desk":cap(a.station);b.textContent=a.name+" · "+a.roleLabel;span.textContent=a.activityLabel+" · "+place+" · "+a.book;li.append(b,span);frag.append(li);}list.replaceChildren(frag);if(sum)sum.textContent="Accessible 6S Virtual Office roster — "+this.state.agents.length+" agents · roles and published desk activity · animation is illustrative";
+  for(const base of this.state.agents){const a=runtime.get(base.role)||base,li=document.createElement("li"),b=document.createElement("b"),span=document.createElement("span"),seated=a.meetingAssigned&&!a.path.length&&a.target&&a.col===a.target[0]&&a.row===a.target[1],desk=a.lifecycle||safeDeskClock(a.role);let place,activity;
+   if(a.meetingAssigned){place=seated?"seated in 6S meeting room":"walking to 6S meeting room";activity=this.meeting&&this.meeting.source==="schedule"?"Published meeting":"Observed live meeting";}else if(a.returningMeeting){place="returning to "+(a.routinePlace||"desk-clock destination");activity="Meeting transition";}else if(a.handoffMove){place="moving through a validated desk handoff";activity="Published desk handoff";}else if(a.dutyPhase==="observed_working"){place="at published desk";activity="Observed working";}else if(a.dutyPhase==="working"){place=a.routinePlace==="brief office walk"?(a.path.length?"walking to a brief office stop":"at a brief office stop"):"at coverage desk";activity="Illustrative routine · working";}else if(a.dutyPhase==="arriving"){place=a.path.length?"arriving at coverage desk":"ready at coverage desk";activity="Illustrative routine · arriving";}else if(a.dutyPhase==="lunch"){place="on lunch break";activity="Illustrative routine · on break";}else if(a.dutyPhase==="quiet"){place="off shift · quiet hours";activity="Illustrative routine · resting";}else{place="off shift · rest area";activity="Illustrative routine · resting";}
+   b.textContent=a.name+" · "+a.roleLabel;span.textContent=activity+" · "+place+" · "+desk.hub+" desk clock "+desk.deskTime+" · "+a.book;li.append(b,span);frag.append(li);}list.replaceChildren(frag);if(sum)sum.textContent="Accessible 6S Virtual Office roster — "+this.state.agents.length+" agents · New York, London, and Jakarta desk-clock routines · illustrative unless marked published or observed";
  }
- snapAll(){for(const a of this.agents){if(a.target){a.col=a.target[0];a.row=a.target[1];a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;a.path=[];a.progress=0;a.returningMeeting=false;a.controlledMove=!!(a.meetingAssigned||a.handoffMove);}}this.updateMeetingStatus();this.updateA11y();}
+ snapAll(){for(const a of this.agents){if(a.target){a.col=a.target[0];a.row=a.target[1];a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;a.path=[];a.progress=0;a.returningMeeting=false;a.lifecycleMove=false;a.controlledMove=!!(a.meetingAssigned||a.handoffMove);}}this.updateMeetingStatus();this.updateA11y();}
  setRouteVisible(value){this.routeVisible=!!value;this.ensureLoop();}
  shouldRun(){return !this.reduced&&!document.hidden&&this.routeVisible&&this.intersecting;}
  ensureLoop(){
@@ -312,7 +354,7 @@ class Floor{
   const claimed=new Map();for(const a of this.agents){const cell=a.path.length&&a.progress>0?a.path[0]:[a.col,a.row];claimed.set(cell[0]+","+cell[1],a);}let completed=false;
   for(const a of this.agents){a.frameTime+=dt;if(a.path.length){if(a.routeDelay>0){a.routeDelay=Math.max(0,a.routeDelay-dt);continue;}const [nc,nr]=a.path[0],currentKey=a.col+","+a.row,nextKey=nc+","+nr;if(a.progress===0){const owner=claimed.get(nextKey);if(owner&&owner!==a){a.waitFrames=(a.waitFrames||0)+1;if(a.waitFrames>=24){const dynamicBlocked=new Set(this.blocked);for(const other of this.agents)if(other!==a){dynamicBlocked.add(other.col+","+other.row);if(other.path.length&&other.progress>0)dynamicBlocked.add(other.path[0][0]+","+other.path[0][1]);}const reroute=findPath(a.col,a.row,a.target[0],a.target[1],dynamicBlocked);if(reroute.length){a.path=reroute;a.routeDelay=(a.index%3)*.04;}a.waitFrames=0;}continue;}a.waitFrames=0;if(claimed.get(currentKey)===a)claimed.delete(currentKey);claimed.set(nextKey,a);}const dx=nc-a.col,dy=nr-a.row;a.dir=dx>0?"right":dx<0?"left":dy>0?"down":"up";a.progress+=dt*3.15;const t=Math.min(1,a.progress),fx=(a.col+.5)*TILE,fy=(a.row+.5)*TILE,tx=(nc+.5)*TILE,ty=(nr+.5)*TILE;a.x=fx+(tx-fx)*t;a.y=fy+(ty-fy)*t;if(a.progress>=1){a.col=nc;a.row=nr;a.x=tx;a.y=ty;a.path.shift();a.progress=0;if(!a.path.length){if(a.returningMeeting){a.returningMeeting=false;a.controlledMove=!!(a.meetingAssigned||a.handoffMove);const handoffActive=this.state&&this.state.handoff&&this.state.handoff.active&&this.state.handoff.fromRole===a.role;if(handoffActive)this.routeAgent(a,this.agents.indexOf(a),false);}completed=true;}}continue;}
    a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;
-  }if(completed){this.updateMeetingStatus();this.updateA11y();}
+  }if(completed){for(const a of this.agents)if(!a.path.length){a.lifecycleMove=false;if(!a.meetingAssigned&&!a.handoffMove&&!a.returningMeeting)a.controlledMove=false;}this.updateMeetingStatus();this.updateA11y();}
  }
  draw(clock=0){
   const c=this.ctx;c.save();c.imageSmoothingEnabled=false;this.drawOffice(c,clock);
@@ -375,6 +417,8 @@ class Floor{
   c.fillStyle="rgba(0,0,0,.32)";c.fillRect(cx-43,cy+22,86,9);c.fillStyle="#121820";c.fillRect(cx-14,cy-38,28,43);c.fillStyle="#303944";c.fillRect(cx-11,cy-35,22,31);c.fillStyle="#171D24";c.fillRect(cx-17,cy-18,5,22);c.fillRect(cx+12,cy-18,5,22);
   this.monitor(c,cx-15,cy-96,30,21,desk.seed,color,clock);this.monitor(c,cx-42,cy-66,26,25,desk.seed+3,color,clock);this.monitor(c,cx+16,cy-66,26,25,desk.seed+7,color,clock);
   c.fillStyle="#424C56";c.fillRect(cx-2,cy-75,4,13);c.fillRect(cx-31,cy-41,4,13);c.fillRect(cx+27,cy-41,4,13);c.fillStyle="#222A32";c.fillRect(cx-36,cy-29,72,5);
+  // A task lamp and terminal handset sit inside the workstation footprint.
+  c.fillStyle="#59636C";c.fillRect(cx+34,cy-31,2,28);c.fillRect(cx+25,cy-31,11,2);c.fillStyle=color;c.fillRect(cx+23,cy-29,13,3);c.fillStyle="#11161B";c.fillRect(cx-40,cy-24,12,16);c.fillStyle="#65717C";c.fillRect(cx-38,cy-21,8,3);
  }
  monitor(c,x,y,w,h,seed,color,clock){
   c.fillStyle="#050709";c.fillRect(x-2,y-2,w+4,h+4);c.fillStyle="#1D2730";c.fillRect(x,y,w,h);c.fillStyle="rgba(5,12,18,.95)";c.fillRect(x+2,y+3,w-4,h-5);c.fillStyle=color;c.fillRect(x+2,y+3,w-4,2);
@@ -385,7 +429,8 @@ class Floor{
  }
  drawDeskForeground(c,clock){
   for(const desk of WORKSTATIONS){const [col,row]=desk.point,cx=(col+.5)*TILE,cy=(row+.5)*TILE,agent=this.agents.find(a=>!a.controlledMove&&a.target&&a.target[0]===col&&a.target[1]===row),mode=agent&&(agent.visualMode||agent.activity),active=!!agent,pulse=(Math.floor(clock*5)+desk.seed)%2;
-   c.fillStyle="#3A2C20";c.fillRect(cx-39,cy+2,78,15);c.fillStyle="#6A5138";c.fillRect(cx-39,cy+2,78,3);c.fillStyle="#181C21";c.fillRect(cx-16,cy+5,32,8);c.fillStyle=active&&agent.activity==="type"?(pulse?"#78B8F0":"#3DBD4A"):"#515A64";for(let k=0;k<6;k++)c.fillRect(cx-13+k*5,cy+7,3,2);c.fillStyle="#20252B";c.fillRect(cx-39,cy+17,78,7);c.fillStyle="#11151A";c.fillRect(cx-34,cy+24,5,12);c.fillRect(cx+29,cy+24,5,12);c.fillStyle="#68717A";c.fillRect(cx+22,cy+8,5,4);
+   c.fillStyle="#3A2C20";c.fillRect(cx-39,cy+2,78,15);c.fillStyle="#6A5138";c.fillRect(cx-39,cy+2,78,3);c.fillStyle="#181C21";c.fillRect(cx-16,cy+5,32,8);c.fillStyle=active&&mode==="type"?(pulse?"#78B8F0":"#3DBD4A"):"#515A64";for(let k=0;k<6;k++)c.fillRect(cx-13+k*5,cy+7,3,2);c.fillStyle="#20252B";c.fillRect(cx-39,cy+17,78,7);c.fillStyle="#11151A";c.fillRect(cx-34,cy+24,5,12);c.fillRect(cx+29,cy+24,5,12);c.fillStyle="#68717A";c.fillRect(cx+22,cy+8,5,4);
+   c.fillStyle="#D9DEE2";c.fillRect(cx-34,cy+6,12,7);c.fillStyle=desk.seed%2?"#3E8EDD":"#E8A33D";c.fillRect(cx-34,cy+6,2,7);c.fillStyle="#59636C";c.fillRect(cx-29,cy+8,5,1);c.fillRect(cx-29,cy+11,4,1);c.fillStyle="#AAB2B9";c.fillRect(cx+27,cy+4,7,7);c.fillStyle="#1B2228";c.fillRect(cx+29,cy+6,3,3);
    if(active&&mode==="type"){c.fillStyle="#D4A57B";c.fillRect(cx-12,cy,6,4);c.fillRect(cx+6,cy+(pulse?0:1),6,4);}
    if(active&&(mode==="read"||mode==="review")){c.fillStyle="#E8EAED";c.fillRect(cx-14,cy+3,28,10);c.fillStyle=mode==="review"?"#E84A93":"#3E8EDD";c.fillRect(cx-14,cy+3,2,10);c.fillStyle="#89929C";c.fillRect(cx-8,cy+6,16,1);c.fillRect(cx-8,cy+9,12,1);}
    if(desk.seed%4===0){c.fillStyle="#B9C1C8";c.fillRect(cx+29,cy-1,7,7);c.fillStyle="#182027";c.fillRect(cx+31,cy+1,3,3);}
@@ -400,7 +445,9 @@ class Floor{
   this.serverRack(c,928,378,clock);this.storage(c,1204,374,154,54,"CASE ARCHIVE","#9AA3AD");
   // Whiteboards make review rooms read as working spaces rather than blocks.
   this.whiteboard(c,45,411,170,"BEAR QUESTIONS","#E84A93");this.whiteboard(c,1205,438,148,"LESSONS","#9AA3AD");
+  this.rhythmNooks(c);
  }
+ rhythmNooks(c){for(const member of TEAM){const point=REST_POINTS[member.role];if(!point)continue;const x=(point[0]+.5)*TILE,y=(point[1]+.5)*TILE,accent=ROLE_HUB[member.role]==="NEW_YORK"?"#3E8EDD":ROLE_HUB[member.role]==="LONDON"?"#78B8F0":"#E8A33D";c.fillStyle="rgba(0,0,0,.16)";c.fillRect(x-13,y+7,26,4);c.fillStyle="rgba(78,91,104,.34)";c.fillRect(x-12,y+4,24,4);c.fillStyle=accent;c.fillRect(x-10,y+4,20,1);}}
  sofa(c,x,y,w,body,accent){
   c.fillStyle="rgba(0,0,0,.32)";c.fillRect(x+4,y+35,w-8,8);c.fillStyle=body;c.fillRect(x,y,w,34);c.fillStyle="#4B5965";c.fillRect(x+6,y+6,w-12,19);c.fillStyle=accent;c.fillRect(x+6,y+27,w-12,3);c.fillStyle="#151A20";c.fillRect(x+12,y+34,7,8);c.fillRect(x+w-19,y+34,7,8);
   for(let px=x+13;px<x+w-18;px+=32){c.fillStyle="rgba(225,233,239,.12)";c.fillRect(px,y+10,23,11);}
@@ -420,9 +467,16 @@ class Floor{
   c.fillStyle="rgba(218,241,252,.35)";for(let col=room.x+2;col<room.x+room.w-1;col+=4){if(Math.abs(col-doorCol)<=1)continue;c.fillRect(col*TILE,y+3,1,h-6);}c.fillStyle="rgba(121,190,226,.15)";c.fillRect(x+4,y+4,w-8,2);
   // Collision-matched boardroom table and eleven uniquely assigned seats.
   const tx=MEETING_TABLE.x*TILE,ty=MEETING_TABLE.y*TILE,tw=MEETING_TABLE.w*TILE,th=MEETING_TABLE.h*TILE;c.fillStyle="rgba(0,0,0,.35)";c.fillRect(tx+4,ty+8,tw-8,th+8);c.fillStyle="#59432E";c.fillRect(tx,ty,tw,th);c.fillStyle="#8C6B46";c.fillRect(tx,ty,tw,3);c.fillStyle="#2B333B";c.fillRect(tx+12,ty+7,tw-24,th-12);c.fillStyle=active?"#3DBD4A":"#3E8EDD";c.fillRect(tx+18,ty+11,tw-36,2);
+  // Speakerphone, notebooks, water glasses, and warm pendant pools all sit on
+  // the collision-matched table or walls, never in a walking lane.
+  c.fillStyle="#111820";c.fillRect(tx+tw/2-14,ty+9,28,12);c.fillStyle="#4E5B66";c.fillRect(tx+tw/2-10,ty+12,20,6);c.fillStyle=active?"#3DBD4A":"#78B8F0";c.fillRect(tx+tw/2-2,ty+14,4,2);
+  for(let k=0;k<6;k++){const nx=tx+27+k*66;c.fillStyle=k%2?"#E5E8EA":"#D8DFE4";c.fillRect(nx,ty+5,18,9);c.fillStyle=k%2?"#E8A33D":"#3E8EDD";c.fillRect(nx,ty+5,2,9);c.fillStyle="#B9D7E5";c.fillRect(nx+22,ty+6,4,6);c.fillStyle="rgba(220,241,250,.5)";c.fillRect(nx+23,ty+6,1,4);if(k===1||k===4){c.fillStyle="#D7D9D9";c.fillRect(nx+30,ty+7,7,6);c.fillStyle="#32261B";c.fillRect(nx+31,ty+8,5,4);}}
+  for(const px of [x+82,x+w-88]){c.fillStyle="rgba(232,195,126,.08)";c.fillRect(px-32,y+25,64,28);c.fillStyle="#8E7959";c.fillRect(px-1,y+4,2,25);c.fillStyle="#D9B878";c.fillRect(px-9,y+28,18,3);}
   for(let index=0;index<MEETING_SEATS.length;index++){const [col,row]=MEETING_SEATS[index],cx=(col+.5)*TILE,cy=(row+.5)*TILE,top=row<MEETING_TABLE.y;c.fillStyle="rgba(0,0,0,.3)";c.fillRect(cx-11,cy+(top?3:-10),22,7);c.fillStyle="#36434E";c.fillRect(cx-9,cy+(top?-1:-14),18,9);c.fillStyle=index%2?"#53616D":"#465A69";c.fillRect(cx-7,cy+(top?1:-12),14,3);}
   // Dual wall displays read as video/market collaboration screens, not a second ticker.
   c.fillStyle="#060A0E";c.fillRect(x+178,y+6,106,18);c.fillRect(x+w-122,y+6,106,18);c.fillStyle="#263746";c.fillRect(x+182,y+10,98,10);c.fillRect(x+w-118,y+10,98,10);c.fillStyle=active?"#3DBD4A":"#6F7B85";c.fillRect(x+187,y+14,42,2);c.fillRect(x+w-113,y+14,42,2);
+  c.fillStyle="#10171E";c.fillRect(x+16,y+h-18,94,11);c.fillStyle="#B9C5CD";c.font="bold 6px Arial";c.fillText("NEW YORK · LONDON · JAKARTA",x+22,y+h-11);
+  for(let slat=0;slat<5;slat++){c.fillStyle=slat%2?"#334653":"#263946";c.fillRect(x+120+slat*11,y+31,7,22);}c.fillStyle="#244C38";c.fillRect(x+w-42,y+32,28,18);for(let leaf=0;leaf<6;leaf++){c.fillStyle=leaf%2?"#3D8558":"#2C6C47";c.fillRect(x+w-39+(leaf%3)*8,y+35+Math.floor(leaf/3)*7,6,8);}
  }
  drawMeetingForeground(c){const x=MEETING_TABLE.x*TILE,y=(MEETING_TABLE.y+MEETING_TABLE.h)*TILE,w=MEETING_TABLE.w*TILE;c.fillStyle="#36291F";c.fillRect(x,y-5,w,8);c.fillStyle="#171C21";for(let leg=x+18;leg<x+w-18;leg+=92)c.fillRect(leg,y+3,5,10);}
  decor(c,clock){
@@ -432,7 +486,7 @@ class Floor{
   for(const [x,y] of [[128,220],[304,220],[1136,220],[1312,220],[480,430],[736,430],[1000,430],[1280,430]]){const glow=c.createRadialGradient(x,y,4,x,y,70);glow.addColorStop(0,"rgba(236,205,145,.065)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(x-72,y-70,144,140);}
   c.fillStyle="rgba(232,163,61,.08)";c.fillRect(0,331,W,2);
   // Live office clocks for the three market hubs (cached for the current minute).
-  const minute=Math.floor(Date.now()/60000);if(!this.officeClocks||this.officeClocks.minute!==minute){const now=new Date(),zones=["America/New_York","Europe/London","Asia/Jakarta"];this.officeClocks={minute,times:zones.map(zone=>{try{return new Intl.DateTimeFormat("en-GB",{timeZone:zone,hour:"2-digit",minute:"2-digit",hour12:false}).format(now);}catch(_){return "--:--";}})};}
+  const now=this.officeNow||this.currentTime(),minute=Math.floor(now.getTime()/60000);if(!this.officeClocks||this.officeClocks.minute!==minute){const zones=["America/New_York","Europe/London","Asia/Jakarta"];this.officeClocks={minute,times:zones.map(zone=>{try{return new Intl.DateTimeFormat("en-GB",{timeZone:zone,hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(now);}catch(_){return "--:--";}})};}
   c.fillStyle="#0B1015";c.fillRect(602,124,236,31);c.fillStyle="#77828C";c.font="bold 7px Arial";["NEW YORK","LONDON","JAKARTA"].forEach((label,i)=>{const x=616+i*74;c.fillText(label,x,136);c.fillStyle=i===2?"#E8A33D":"#D9DEE2";c.font="bold 9px Arial";c.fillText(this.officeClocks.times[i],x,148);c.fillStyle="#77828C";c.font="bold 7px Arial";});
  }
  plant(c,x,y,scale){const s=scale||1;c.fillStyle="#694B35";c.fillRect(x,y+19*s,16*s,18*s);c.fillStyle="#8C6846";c.fillRect(x+2*s,y+19*s,12*s,3*s);const greens=["#1D5A3A","#287149","#3B8557"];for(let i=0;i<7;i++){c.fillStyle=greens[i%greens.length];const dx=(-8+(i*5)%25)*s,dy=(-2-(i%3)*8)*s;c.fillRect(x+4*s+dx,y+16*s+dy,9*s,13*s);}c.fillStyle="#17221C";c.fillRect(x+7*s,y+7*s,2*s,15*s);}
@@ -444,30 +498,43 @@ class Floor{
  }
  drawVignette(c){const g=c.createLinearGradient(0,32,0,H);g.addColorStop(0,"rgba(0,0,0,.02)");g.addColorStop(.72,"rgba(0,0,0,0)");g.addColorStop(1,"rgba(0,0,0,.2)");c.fillStyle=g;c.fillRect(0,32,W,H-32);}
  drawAgent(c,a,clock){
-  if(!this.images[a.sheet])return;c.save();c.globalAlpha=(a.state==="off_desk"||a.state==="scheduled")?.72:1;let mode=a.path.length?"walk":a.activity;if(!a.path.length&&mode==="idle")mode=["BEAR","JUDGE","RISK_OFFICER","POSTMORTEM"].includes(a.role)?"review":"type";a.visualMode=mode;let frame=1,row=a.dir==="up"?1:a.dir==="left"||a.dir==="right"?2:0,flip=a.dir==="left";
+  if(!this.images[a.sheet])return;c.save();const offShift=["resting","quiet","lunch"].includes(a.dutyPhase);c.globalAlpha=offShift?.78:1;let mode=a.path.length?"walk":a.activity;
+  if(!a.path.length){if(a.dutyPhase==="quiet")mode="sleep";else if(a.dutyPhase==="resting"||a.dutyPhase==="lunch")mode="rest";else if(a.dutyPhase==="arriving")mode="wait";else if(a.dutyPhase==="working")mode=a.routinePlace==="brief office walk"?"wait":ROLE_ACTIVITY[a.role]||"type";else if(a.dutyPhase==="meeting")mode=ROLE_ACTIVITY[a.role]||"read";else if(a.dutyPhase==="observed_working")mode=a.activity||ROLE_ACTIVITY[a.role]||"type";else if(a.dutyPhase==="handoff")mode="wait";else mode="idle";}
+  a.visualMode=mode;let frame=1,row=(mode==="sleep"||mode==="rest")?0:a.dir==="up"?1:a.dir==="left"||a.dir==="right"?2:0,flip=a.dir==="left";
   if(mode==="walk")frame=[0,1,2,1][Math.floor(a.frameTime/.16)%4];else if(mode==="type")frame=3+Math.floor(a.frameTime/.28)%2;else if(mode==="read"||mode==="review")frame=5+Math.floor(a.frameTime/.38)%2;
   const bob=mode!=="walk"&&(mode==="type"||mode==="read"||mode==="review")?Math.floor((Math.sin(clock*4+a.index)+1)/2):0,x=Math.round(a.x),y=Math.round(a.y),dx=x-16,dy=y-55-bob;c.fillStyle="rgba(0,0,0,.42)";c.fillRect(x-12,y+5,24,5);
-  c.save();if("filter" in c)c.filter="hue-rotate("+a.hue+"deg)";if(flip){c.translate(x,0);c.scale(-1,1);c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,-16,dy,32,64);}else c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,dx,dy,32,64);c.restore();if(a.role==="ANALYST_GLOBAL"||a.role==="ANALYST_INDO")this.drawAnalystVest(c,x,dy,row,flip);
+  c.save();if("filter" in c)c.filter="hue-rotate("+a.hue+"deg)";if(flip){c.translate(x,0);c.scale(-1,1);c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,-16,dy,32,64);}else c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,dx,dy,32,64);c.restore();this.drawFinanceVest(c,x,dy,row,flip,mode,frame);
   if(mode==="wait"||mode==="review"){c.fillStyle="#F3F4F6";c.fillRect(x+14,dy-2,15,13);c.fillStyle=mode==="review"?"#E84A93":"#E8A33D";c.font="bold 9px Arial";c.fillText(mode==="review"?"?":"…",x+18,dy+5);}
   if(mode==="read"){c.fillStyle="#E8EAED";c.fillRect(x+10,y-22,10,13);c.fillStyle="#3E8EDD";c.fillRect(x+10,y-22,2,13);c.fillStyle="#697580";c.fillRect(x+13,y-18,5,1);c.fillRect(x+13,y-15,4,1);}
+  if(mode==="sleep"||mode==="rest"){c.fillStyle="rgba(7,10,13,.94)";c.fillRect(x+11,dy-4,18,14);c.fillStyle=mode==="sleep"?"#78B8F0":"#E8A33D";c.font="bold 8px Arial";c.fillText(mode==="sleep"?"Zz":"…",x+15,dy+3);}
   c.restore();
  }
- drawAnalystVest(c,x,dy,row,flip){
-  const top=dy+18;c.save();c.fillStyle="#102A43";if(row===2){const side=flip?-1:1,cx=x+side;c.fillRect(cx-5,top,10,20);c.fillStyle="#1D4264";c.fillRect(cx-side*3,top+3,3,15);c.fillStyle="#D8E0E6";c.fillRect(cx-side,top,3,5);c.fillStyle="#35A7B8";c.fillRect(cx+side*2,top+6,2,1);c.fillStyle="#E8A33D";c.fillRect(cx+side*2,top+7,2,1);}
-  else{c.beginPath();c.moveTo(x-8,top);c.lineTo(x-11,top+5);c.lineTo(x-9,top+21);c.lineTo(x+9,top+21);c.lineTo(x+11,top+5);c.lineTo(x+8,top);c.lineTo(x+3,top+1);c.lineTo(x,top+7);c.lineTo(x-3,top+1);c.closePath();c.fill();c.fillStyle="#1D4264";c.fillRect(x-7,top+5,3,14);c.fillRect(x+4,top+5,3,14);c.fillStyle="#DCE3E8";c.beginPath();c.moveTo(x-3,top);c.lineTo(x+3,top);c.lineTo(x,top+7);c.closePath();c.fill();c.fillStyle="#071522";c.fillRect(x,top+7,1,14);if(row===0){c.fillStyle="#35A7B8";c.fillRect(x+3,top+8,5,1);c.fillStyle="#E84A93";c.fillRect(x+3,top+9,5,1);c.fillStyle="#E8A33D";c.fillRect(x+3,top+10,5,1);}}
+ drawFinanceVest(c,x,dy,row,flip,mode,frame){
+  // The overlay stays inside the torso so sprite arms remain visible. Desk hands
+  // and reading/review props are rendered later and therefore always sit above it.
+  const activePose=mode==="type"||mode==="read"||mode==="review",stride=mode==="walk"?(frame===1?1:0):0,top=dy+19+stride,narrow=activePose?1:0;c.save();
+  if(flip){c.translate(x,0);c.scale(-1,1);c.translate(-x,0);}
+  c.fillStyle="#0D2740";
+  if(row===2){const left=x-5+narrow,width=10-narrow;c.fillRect(left,top,width,19);c.fillStyle="#173B5C";c.fillRect(left,top+3,3,14);c.fillStyle="#071522";c.fillRect(x+2,top+2,1,16);c.fillStyle="#D6DEE4";c.fillRect(x+1,top,3,4);c.fillStyle="#38A3B8";c.fillRect(x+2,top+7,3,1);c.fillStyle="#E8A33D";c.fillRect(x+2,top+8,3,1);}
+  else{const shoulder=activePose?8:9;c.beginPath();c.moveTo(x-shoulder,top+2);c.lineTo(x-shoulder-1,top+6);c.lineTo(x-7,top+20);c.lineTo(x+7,top+20);c.lineTo(x+shoulder+1,top+6);c.lineTo(x+shoulder,top+2);c.lineTo(x+4,top);c.lineTo(x-4,top);c.closePath();c.fill();c.fillStyle="#173B5C";c.fillRect(x-7,top+5,3,13);c.fillRect(x+4,top+5,3,13);
+   if(row===1){c.fillStyle="#294B68";c.fillRect(x-6,top+4,12,2);c.fillStyle="#071522";c.fillRect(x-5,top+18,10,1);}
+   else{c.fillStyle="#DCE3E8";c.beginPath();c.moveTo(x-4,top);c.lineTo(x+4,top);c.lineTo(x,top+7);c.closePath();c.fill();c.fillStyle="#071522";c.fillRect(x,top+7,1,12);c.fillStyle="#38A3B8";c.fillRect(x+3,top+8,5,1);c.fillStyle="#E84A93";c.fillRect(x+3,top+9,5,1);c.fillStyle="#E8A33D";c.fillRect(x+3,top+10,5,1);}
+  }
   c.restore();
  }
  drawAgentLabel(c,a){
-  const x=Math.round(a.x),y=Math.round(a.y),meeting=!!a.meetingAssigned,floating=!!a.controlledMove&&!meeting,label=String(a.name||a.role).slice(0,20)+" · "+String(a.roleLabel||a.title||"Desk agent").slice(0,24),labelY=meeting?y+12:floating?y-70:(a.row<=10?y+8:y+18);c.save();c.globalAlpha=(a.state==="off_desk"||a.state==="scheduled")?.72:1;c.font="bold "+(meeting?7:8)+"px Arial";const maxWidth=meeting?88:132,labelW=Math.min(maxWidth,Math.max(meeting?70:76,c.measureText(label).width+12));c.fillStyle="rgba(7,10,13,.94)";c.fillRect(Math.round(x-labelW/2),labelY,labelW,14);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(Math.round(x-labelW/2),labelY,3,14);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,x,labelY+7,labelW-9);c.restore();
+  const x=Math.round(a.x),y=Math.round(a.y),meeting=!!a.meetingAssigned,floating=!!a.controlledMove&&!meeting,label=String(a.name||a.role).slice(0,20)+" · "+String(a.roleLabel||a.title||"Desk agent").slice(0,24),labelY=meeting?y+12:floating?y-70:(a.row<=10?y+8:y+18);c.save();c.globalAlpha=["resting","quiet","lunch"].includes(a.dutyPhase)?.78:1;c.font="bold "+(meeting?7:8)+"px Arial";const maxWidth=meeting?88:132,labelW=Math.min(maxWidth,Math.max(meeting?70:76,c.measureText(label).width+12)),labelX=Math.max(3,Math.min(W-labelW-3,Math.round(x-labelW/2))),center=labelX+labelW/2;c.fillStyle="rgba(7,10,13,.94)";c.fillRect(labelX,labelY,labelW,14);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(labelX,labelY,3,14);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,center,labelY+7,labelW-9);c.restore();
  }
 }
 
 let floor=null;
 function readonlyMeeting(value){return Object.freeze(Object.assign({},value,{participantRoles:Object.freeze([...(value.participantRoles||[])])}));}
+function readonlyDeskClock(value){return Object.freeze({role:String(value&&value.role||""),hub:String(value&&value.hub||"Unassigned"),timeZone:value&&value.timeZone||null,weekday:String(value&&value.weekday||""),deskTime:String(value&&value.deskTime||"--:--"),phase:String(value&&value.phase||"resting"),phaseLabel:String(value&&value.phaseLabel||"Resting (illustrative)"),working:!!(value&&value.working),illustrative:true});}
 window.SixSouthOffice=Object.freeze({
  render(args){if(!floor)floor=new Floor();if(floor&&floor.canvas)floor.update(args);},
  setVisible(value){if(floor&&floor.canvas)floor.setRouteVisible(value);},
  meetingAt(structure,iso){return readonlyMeeting(scheduleMeetingAt(structure,new Date(iso)));},
- inspect(){if(!floor)return null;return Object.freeze({meeting:readonlyMeeting(floor.meeting),agents:Object.freeze(floor.agents.map(agent=>Object.freeze({role:agent.role,col:agent.col,row:agent.row,target:Object.freeze([...(agent.target||[])]),pathLength:agent.path.length,meetingAssigned:!!agent.meetingAssigned,returningMeeting:!!agent.returningMeeting})))});}
+ deskClockAt(role,iso){const validDate=iso instanceof Date&&Number.isFinite(iso.getTime()),validString=typeof iso==="string"&&iso.trim()!==""&&Number.isFinite(new Date(iso).getTime()),when=validDate?new Date(iso.getTime()):validString?new Date(iso):new Date(NaN);return readonlyDeskClock(deskClockAt(role,when));},
+ inspect(){if(!floor)return null;return Object.freeze({now:(floor.officeNow||floor.currentTime()).toISOString(),meeting:readonlyMeeting(floor.meeting),agents:Object.freeze(floor.agents.map(agent=>{const desk=agent.lifecycle||safeDeskClock(agent.role);return Object.freeze({role:agent.role,current:Object.freeze([agent.col,agent.row]),target:Object.freeze([...(agent.target||[])]),pathLength:agent.path.length,meetingAssigned:!!agent.meetingAssigned,returningMeeting:!!agent.returningMeeting,controlledMove:!!agent.controlledMove,dutyPhase:String(agent.dutyPhase||desk.phase),hub:String(desk.hub),timeZone:desk.timeZone,deskTime:String(desk.deskTime),visualMode:String(agent.visualMode||"idle"),routinePlace:String(agent.routinePlace||""),financeVest:true});}))});}
 });
 })();
