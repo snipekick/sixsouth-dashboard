@@ -18,13 +18,13 @@ const SHEETS=[
 ];
 
 const TEAM=[
- {role:"ANALYST_GLOBAL",roleLabel:"Global Analyst",name:"Sloane",sheet:0,hue:0,home:"north_analyst",book:"North"},
+ {role:"ANALYST_GLOBAL",roleLabel:"Global Analyst",name:"Sloane",sheet:4,hue:-18,home:"north_analyst",book:"North"},
  {role:"ANALYST_INDO",roleLabel:"Indonesia Analyst",name:"Dani",sheet:1,hue:0,home:"south_analyst",book:"South"},
  {role:"MACRO_FX",roleLabel:"Macro & FX",name:"Ferrand",sheet:2,hue:0,home:"macro_fx",book:"Cross-book"},
  {role:"MACRO_GLOBAL",roleLabel:"Global Macro",name:"Severin",sheet:3,hue:0,home:"macro_global",book:"Cross-book"},
  {role:"BEAR",roleLabel:"Bear Reviewer",name:"Drew",sheet:4,hue:0,home:"bear",book:"Independent"},
  {role:"JUDGE",roleLabel:"Investment Judge",name:"Aldrich",sheet:5,hue:0,home:"judge",book:"Independent"},
- {role:"RISK_OFFICER",roleLabel:"Risk Officer",name:"Voss",sheet:0,hue:155,home:"risk",book:"Independent"},
+ {role:"RISK_OFFICER",roleLabel:"Risk Officer",name:"Voss",sheet:2,hue:155,home:"risk",book:"Independent"},
  {role:"PM_GLOBAL",roleLabel:"North PM",name:"Harrison",sheet:1,hue:190,home:"north_pm",book:"North"},
  {role:"PM_INDO",roleLabel:"South PM",name:"Gunawan",sheet:2,hue:42,home:"south_pm",book:"South"},
  {role:"POSTMORTEM",roleLabel:"Postmortem",name:"Pecora",sheet:3,hue:-75,home:"postmortem",book:"Cross-book"},
@@ -82,7 +82,6 @@ const LOUNGE_POINTS=Object.freeze({
  ANALYST_GLOBAL:[5,18],PM_GLOBAL:[15,18],ANALYST_INDO:[85,18],PM_INDO:[76,18],
  MACRO_GLOBAL:[31,9],MACRO_FX:[55,9],BEAR:[14,32],JUDGE:[35,32],RISK_OFFICER:[52,32],OPS:[69,32],POSTMORTEM:[86,32]
 });
-const MEETING_MINUTES={US_CLOSE:30,IDX_PREOPEN:30,IDX_CLOSE:30,US_PREOPEN:30,IDEATION:45,WEEKLY_DEEP:60,MONTHLY_IC:60};
 const HANDOFF_RULES={
  analyst_to_bear:[[/^ANALYST_(GLOBAL|INDO)$/,/^BEAR$/]],
  bear_to_analyst_revision:[[/^BEAR$/,/^ANALYST_(GLOBAL|INDO)$/]],
@@ -111,11 +110,18 @@ function normalizeMarketTape(raw){
   const value=tapeValue(item&&item.value),changePct=signed(item&&item.change_pct,"%"),change=changePct||signed(item&&item.change,""),available=!!(item&&item.available!==false&&value!=null);
   return {index,symbol:String((item&&item.symbol)||"MARKET").slice(0,14),label:String((item&&item.label)||"").slice(0,36),value,change,asof:String((item&&item.asof)||""),source:String((item&&item.source)||"").slice(0,48),stale:!!(item&&item.stale),available};
  });
- return {status,generatedAt,notice:String((raw&&raw.notice)||""),items,available:items.filter(x=>x.available)};
+ return {status,generatedAt,notice:String((raw&&raw.notice)||"").slice(0,180),items,available:items.filter(x=>x.available)};
+}
+const MARKET_MAX_AGE_MS=4*86400000;
+function marketItemStale(item,when){const observed=Date.parse(item&&item.asof||"");return !!(item&&item.stale)||(Number.isFinite(observed)&&when.getTime()-observed>MARKET_MAX_AGE_MS);}
+function marketObservedLabel(value){if(/^\d{4}-\d{2}-\d{2}$/.test(String(value||"")))try{return new Intl.DateTimeFormat("en-GB",{timeZone:"UTC",day:"2-digit",month:"short",year:"numeric"}).format(new Date(value));}catch(_){}const date=new Date(value);return wibDate(date);}
+function marketObservationRange(items){
+ const dates=items.map(item=>{const ms=Date.parse(item.asof||"");return Number.isFinite(ms)?ms:null;}).filter(ms=>ms!=null).sort((a,b)=>a-b);
+ if(!dates.length)return "observation time unavailable";const first=marketObservedLabel(new Date(dates[0]).toISOString().slice(0,10)),last=marketObservedLabel(new Date(dates[dates.length-1]).toISOString().slice(0,10));return first===last?"observed "+last:"observed "+first+" to "+last;
 }
 function dayOk(days,dow,date){const value=String(days||"").toLowerCase().replace(/[^a-z]+/g," ").trim();if(value==="mon fri"||value==="monday friday")return dow>=1&&dow<=5;if(value==="tue sat"||value==="tuesday saturday")return dow>=2&&dow<=6;if(value==="sat"||value==="saturday")return dow===6;if(value==="first sat"||value==="first saturday")return dow===6&&date<=7;if(value==="daily"||value==="every day")return true;return false;}
 function wibParts(now){const d=new Date(now.getTime()+7*3600000);return {y:d.getUTCFullYear(),m:d.getUTCMonth(),date:d.getUTCDate(),dow:d.getUTCDay(),hm:d.getUTCHours()+d.getUTCMinutes()/60};}
-function safeDeskClock(role){return {role:String(role||"").toUpperCase(),hub:"Unassigned",timeZone:null,weekday:"",deskTime:"--:--",phase:"resting",phaseLabel:"Resting (illustrative)",working:false,illustrative:true};}
+function safeDeskClock(role){return {role:String(role||"").toUpperCase(),hub:"Unassigned",timeZone:null,weekday:"",deskTime:"--:--",phase:"working",phaseLabel:"Working at assigned desk (illustrative)",working:true,illustrative:true};}
 function zonedDeskParts(when,timeZone){
  try{const parts=new Intl.DateTimeFormat("en-US",{timeZone,weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(when),values={};for(const part of parts)if(part.type!=="literal")values[part.type]=part.value;let hour=Number(values.hour);if(hour===24)hour=0;const minute=Number(values.minute);if(!Number.isInteger(hour)||!Number.isInteger(minute))return null;return {weekday:values.weekday||"",hour,minute,minutes:hour*60+minute,deskTime:String(hour).padStart(2,"0")+":"+String(minute).padStart(2,"0")};}catch(_){return null;}
 }
@@ -131,33 +137,43 @@ function explicitMeetingParticipants(entry){
  for(const value of raw){const role=String(value||"").trim().toUpperCase();if(role==="ALL")for(const member of TEAM)wanted.add(member.role);else if(ROLE_NAMES.has(role))wanted.add(role);}
  return TEAM.map(member=>member.role).filter(role=>wanted.has(role));
 }
-function liveMeetingParticipants(entry,key){const published=explicitMeetingParticipants(entry);if(published.length)return published;const crew=CREW[key],wanted=new Set(crew==="ALL"?TEAM.map(member=>member.role):crew||[]);return TEAM.map(member=>member.role).filter(role=>wanted.has(role));}
 function publishedMeetingDuration(entry){const configured=Number(entry&&entry.meeting_minutes);return Number.isFinite(configured)&&configured>0?Math.min(180,configured):null;}
-function liveMeetingDuration(entry,key){return publishedMeetingDuration(entry)||(MEETING_MINUTES[key]||30);}
+function validMeetingTime(value){const match=String(value).match(/^(\d{1,2}):(\d{2})$/);return !!match&&Number(match[1])<=23&&Number(match[2])<=59;}
+function validScheduleEntry(entry){
+ const key=sessionKey(entry&&entry.session),times=Array.isArray(entry&&entry.times_wib)?entry.times_wib:[];
+ const validDays=[0,1,2,3,4,5,6].some(dow=>dayOk(entry&&entry.days,dow,dow===6?1:8));
+ return !!(key&&publishedMeetingDuration(entry)&&explicitMeetingParticipants(entry).length&&validDays&&times.some(validMeetingTime));
+}
+function scheduleRows(structure){return Array.isArray(structure&&structure.schedule)?structure.schedule:[];}
 function scheduleMeetingAt(structure,when){
  const now=when instanceof Date?when:new Date(when),inactive={active:false,session:null,key:null,participantRoles:[],meetingMinutes:null,startsAt:null,endsAt:null,source:"schedule"};if(!Number.isFinite(now.getTime()))return inactive;
- const p=wibParts(now),matches=[];for(const entry of (structure&&structure.schedule)||[]){const key=sessionKey(entry.session),minutes=publishedMeetingDuration(entry),participants=explicitMeetingParticipants(entry);if(!key||!minutes||!participants.length||!dayOk(entry.days,p.dow,p.date))continue;for(const value of entry.times_wib||[]){const parts=String(value).match(/^(\d{1,2}):(\d{2})$/);if(!parts)continue;const hour=Number(parts[1]),minute=Number(parts[2]);if(hour>23||minute>59)continue;const start=new Date(Date.UTC(p.y,p.m,p.date,hour-7,minute)),end=new Date(start.getTime()+minutes*60000);if(now>=start&&now<end)matches.push({active:true,session:PUBLIC_SESSIONS[key],key,participantRoles:participants,meetingMinutes:minutes,startsAt:start.toISOString(),endsAt:end.toISOString(),source:"schedule"});}}
+ const p=wibParts(now),matches=[];for(const entry of scheduleRows(structure)){if(!validScheduleEntry(entry))continue;const key=sessionKey(entry.session),minutes=publishedMeetingDuration(entry),participants=explicitMeetingParticipants(entry);if(!dayOk(entry.days,p.dow,p.date))continue;for(const value of entry.times_wib||[]){const parts=String(value).match(/^(\d{1,2}):(\d{2})$/);if(!parts)continue;const hour=Number(parts[1]),minute=Number(parts[2]);if(hour>23||minute>59)continue;const start=new Date(Date.UTC(p.y,p.m,p.date,hour-7,minute)),end=new Date(start.getTime()+minutes*60000);if(now>=start&&now<end)matches.push({active:true,session:PUBLIC_SESSIONS[key],key,participantRoles:participants,meetingMinutes:minutes,startsAt:start.toISOString(),endsAt:end.toISOString(),source:"schedule"});}}
  matches.sort((a,b)=>String(b.startsAt).localeCompare(String(a.startsAt)));return matches[0]||inactive;
 }
 function activeMeetingAt(structure,state,when){
- const scheduled=scheduleMeetingAt(structure,when);if(scheduled.active)return scheduled;const key=sessionKey(state&&state.session),isLive=state&&state.provenance==="live"&&state.status==="running";if(!isLive||!key)return scheduled;
- const matching=((structure&&structure.schedule)||[]).filter(row=>sessionKey(row.session)===key);if(matching.length)return scheduled;
- const entry={};return {active:true,session:PUBLIC_SESSIONS[key],key,participantRoles:liveMeetingParticipants(entry,key),meetingMinutes:liveMeetingDuration(entry,key),startsAt:null,endsAt:null,source:"live"};
+ void state;return scheduleMeetingAt(structure,when);
 }
 function sessionWindow(structure,now){const meeting=scheduleMeetingAt(structure,now);return meeting.active?meeting.session:null;}
 function scheduleInstant(parts,value){const match=String(value).match(/^(\d{1,2}):(\d{2})$/);if(!match)return null;const hour=Number(match[1]),minute=Number(match[2]);if(hour>23||minute>59)return null;return new Date(Date.UTC(parts.y,parts.m,parts.date,hour-7,minute));}
 function nextSession(structure,now){
- const schedule=(structure&&structure.schedule)||[];
+ const schedule=scheduleRows(structure);
  for(let add=0;add<9;add++){
   const p=wibParts(new Date(now.getTime()+add*86400000));
   const choices=[];
   for(const job of schedule){
-   const key=sessionKey(job.session);if(!key||!dayOk(job.days,p.dow,p.date))continue;
+   if(!validScheduleEntry(job))continue;const key=sessionKey(job.session);if(!dayOk(job.days,p.dow,p.date))continue;
    for(const t of job.times_wib||[]){const at=scheduleInstant(p,t);if(at&&at>now)choices.push({session:PUBLIC_SESSIONS[key],scheduled_for:at.toISOString()});}
   }
   choices.sort((a,b)=>String(a.scheduled_for).localeCompare(String(b.scheduled_for)));if(choices.length)return choices[0];
  }
  return null;
+}
+function resolvedNextSession(rawNext,structure,now){
+ const scheduledFor=new Date(rawNext&&rawNext.scheduled_for),key=sessionKey(rawNext&&rawNext.session);
+ if(key&&Number.isFinite(scheduledFor.getTime())&&scheduledFor>now){
+  return {session:PUBLIC_SESSIONS[key],scheduled_for:scheduledFor.toISOString()};
+ }
+ return nextSession(structure,now);
 }
 function publicSessionLabel(session){const raw=String(session||"");return PUBLIC_SESSIONS[raw.toUpperCase()]||raw||"Scheduled desk review";}
 function resolveStation(raw,role,book){
@@ -202,7 +218,7 @@ function validHandoff(value){
  return {kind,fromRole:from,toRole:to,book,fromName:ROLE_NAMES.get(from),toName:ROLE_NAMES.get(to)};
 }
 function normalizeState(raw,roster,summary,structure,at){
- const now=at instanceof Date&&Number.isFinite(at.getTime())?at:new Date(),byRole=new Map(((raw&&raw.agents)||[]).map(a=>[String(a.role||a.id||"").toUpperCase(),a]));
+ const now=at instanceof Date&&Number.isFinite(at.getTime())?at:new Date(),rawAgents=Array.isArray(raw&&raw.agents)?raw.agents.filter(a=>a&&typeof a==="object"):[],byRole=new Map(rawAgents.map(a=>[String(a.role||a.id||"").toUpperCase(),a]));
  let provenance=norm(raw&&raw.provenance),session=raw&&raw.session,phase=(raw&&raw.phase_label)||(raw&&raw.phase),next=raw&&raw.next_session;
  if(!["live","last_observed","scheduled"].includes(provenance))provenance="scheduled";
  if(provenance==="live"){
@@ -212,11 +228,11 @@ function normalizeState(raw,roster,summary,structure,at){
  if(!raw||!Array.isArray(raw.agents)){
   session=sessionWindow(structure,now);phase=session?"Scheduled session window":"Between scheduled sessions";next=nextSession(structure,now);provenance="scheduled";
  }
- const rosterMap=new Map(((roster&&roster.roster)||[]).map(x=>[x.role,x]));
+ const rosterRows=Array.isArray(roster&&roster.roster)?roster.roster.filter(x=>x&&typeof x==="object"):[],rosterMap=new Map(rosterRows.map(x=>[x.role,x]));
  const crew=CREW[sessionKey(session)],active=role=>crew==="ALL"||(Array.isArray(crew)&&crew.includes(role));
  const agents=TEAM.map((base,i)=>{
   const a=byRole.get(base.role)||{},r=rosterMap.get(base.role)||{};
-  const fallbackActive=!!active(base.role),act=(raw&&Array.isArray(raw.agents))?activityOf(a.state,a.activity):(fallbackActive?ROLE_ACTIVITY[base.role]:"idle");
+  const fallbackActive=!!active(base.role),act=Array.isArray(raw&&raw.agents)?activityOf(a.state,a.activity):(fallbackActive?ROLE_ACTIVITY[base.role]:"idle");
   const bookId=String(a.book||base.book),book=bookId==="GLOBAL"?"North":bookId==="INDO"?"South":bookId==="SHARED"?"Cross-book":bookId==="INDEPENDENT"?"Independent":bookId;
   const state=norm(a.state)||(provenance==="scheduled"?"scheduled":"off_desk"),observedWork=provenance==="live"&&byRole.has(base.role)&&!["off_desk","idle","rest","resting","sleep","sleeping","scheduled","inactive"].includes(state)&&["type","read","review","walk"].includes(act);
   return Object.assign({},base,{index:i,name:String(a.name||r.persona||base.name),title:String(a.title||r.title||base.role),activity:act,activityLabel:String(a.activity||cap(act)),state,stateLabel:cap(state),station:resolveStation(a.station,base.role,bookId),homeStation:resolveStation(a.home_station,base.role,bookId),bookId,book,observedWork});
@@ -229,7 +245,7 @@ function normalizeState(raw,roster,summary,structure,at){
  if(provenance==="live")detail=expires?"Observed phase; valid through "+wibDate(new Date(expires))+".":"Observed phase from the local desk state.";
  if(provenance==="last_observed")detail=observed?"Replay of the snapshot from "+wibDate(new Date(observed))+".":"Replay of the latest observed desk state.";
  if(FAILURE_STATUS.has(status))detail+=" Outcome: "+status+".";
- return {provenance,session:session||"NO ACTIVE SESSION",phase:phase||"Desk state",status,observed,next:next||nextSession(structure,now),detail,stage,stageLabel,stageObserved,handoff,orchestrator,agents};
+ return {provenance,session:session||"NO ACTIVE SESSION",phase:phase||"Desk state",status,observed,next:resolvedNextSession(next,structure,now),detail,stage,stageLabel,stageObserved,handoff,orchestrator,agents};
 }
 
 function findPath(sc,sr,ec,er,blocked){
@@ -243,15 +259,14 @@ class Floor{
  constructor(){
  this.canvas=document.getElementById("officeCanvas");if(!this.canvas)return;
   this.ctx=this.canvas.getContext("2d");this.ctx.imageSmoothingEnabled=false;this.images=[];this.agents=[];this.blocked=new Set();this.buildCollision();this.last=0;this.raf=0;
-  this.meeting={active:false,session:null,key:null,participantRoles:[],meetingMinutes:null,startsAt:null,endsAt:null,source:"schedule"};this.meetingSignature="";this.meetingExit=null;this.nowOverride=null;
+  this.meeting={active:false,session:null,key:null,participantRoles:[],meetingMinutes:null,startsAt:null,endsAt:null,source:"schedule"};this.meetingSignature="";this.meetingExit=null;this.nowOverride=null;this.meetingTimer=0;
   this.motionQuery=window.matchMedia("(prefers-reduced-motion: reduce)");this.reduced=this.motionQuery.matches;this.ready=false;
   const monitor=document.getElementById("view-monitor");this.routeVisible=!monitor||monitor.style.display!=="none";this.intersecting=!("IntersectionObserver" in window);
-  document.addEventListener("visibilitychange",()=>{this.refreshMeeting();this.ensureLoop();});
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)this.refreshMeeting(true);this.ensureLoop();});
   if("IntersectionObserver" in window){this.observer=new IntersectionObserver(entries=>{this.intersecting=entries.some(e=>e.target===this.canvas&&e.isIntersecting);this.ensureLoop();},{threshold:.01});this.observer.observe(this.canvas);}
   else{const check=()=>{const r=this.canvas.getBoundingClientRect();this.intersecting=r.bottom>0&&r.right>0&&r.top<window.innerHeight&&r.left<window.innerWidth;this.ensureLoop();};window.addEventListener("scroll",check,{passive:true});window.addEventListener("resize",check);check();}
   const motionChanged=e=>{this.reduced=e.matches;if(this.reduced)this.snapAll();this.updateMeetingStatus();this.ensureLoop();};
   if(this.motionQuery.addEventListener)this.motionQuery.addEventListener("change",motionChanged);else this.motionQuery.addListener(motionChanged);
-  this.meetingTimer=window.setInterval(()=>this.refreshMeeting(),1000);
   this.loadSprites();
  }
  buildCollision(){
@@ -270,7 +285,7 @@ class Floor{
   for(let col=MEETING_TABLE.x;col<MEETING_TABLE.x+MEETING_TABLE.w;col++)for(let row=MEETING_TABLE.y;row<MEETING_TABLE.y+MEETING_TABLE.h;row++)add(col,row);
  }
  loadSprites(){Promise.all(SHEETS.map(src=>new Promise((ok,bad)=>{const im=new Image();im.onload=()=>ok(im);im.onerror=bad;im.src="data:image/png;base64,"+src;}))).then(imgs=>{this.images=imgs;this.ready=true;const loading=document.getElementById("officeLoading");if(loading)loading.hidden=true;this.sync();this.ensureLoop();}).catch(()=>{const loading=document.getElementById("officeLoading");if(loading)loading.textContent="Character sprites unavailable — desk state remains available below.";this.draw();});}
- update(args){this.args=args||{};this.nowOverride=this.args.now==null?null:this.args.now;const at=this.currentTime();this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure,at);this.marketTape=normalizeMarketTape(this.args.marketTape);this.refreshMeeting(true);if(this.ready)this.sync();this.updateMeta();this.updateA11y();}
+ update(args){this.args=args||{};this.nowOverride=this.args.now==null?null:this.args.now;const at=this.currentTime();this.state=normalizeState(this.args.state,this.args.roster,this.args.summary,this.args.structure,at);this.marketTape=normalizeMarketTape(this.args.marketTape);this.refreshMeeting(true);if(this.ready)this.sync();this.updateMeta();this.updateA11y();this.ensureRefreshTimer();}
  sync(){
   if(!this.state)return;const old=new Map(this.agents.map(a=>[a.role,a]));
   this.agents=this.state.agents.map((d,i)=>{let a=old.get(d.role),isNew=!a;if(!a){const homes=POINTS[d.homeStation]||POINTS[d.home]||POINTS.lobby,spawn=homes[i%homes.length];a=Object.assign({},d,{col:spawn[0],row:spawn[1],x:0,y:0,path:[],progress:0,dir:"down",frame:0,frameTime:0,meetingAssigned:false,returningMeeting:false});}else Object.assign(a,d);this.routeAgent(a,i,isNew);a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;return a;});
@@ -278,7 +293,7 @@ class Floor{
  }
  currentTime(){const value=this.nowOverride==null?new Date():new Date(this.nowOverride);return Number.isFinite(value.getTime())?value:new Date();}
  refreshMeeting(force){
-  if(!this.state)return;const at=this.currentTime();this.officeNow=at;const raw=this.args&&this.args.state,expiry=new Date(raw&&raw.expires_at),expiredBoundary=this.state.provenance==="live"&&Number.isFinite(expiry.getTime())&&expiry<=at;if(expiredBoundary)this.state=normalizeState(raw,this.args&&this.args.roster,this.args&&this.args.summary,this.args&&this.args.structure,at);
+  if(!this.state)return;const at=this.currentTime();this.officeNow=at;const raw=this.args&&this.args.state,expiry=new Date(raw&&raw.expires_at),expiredBoundary=this.state.provenance==="live"&&Number.isFinite(expiry.getTime())&&expiry<=at;if(expiredBoundary)this.state=normalizeState(raw,this.args&&this.args.roster,this.args&&this.args.summary,this.args&&this.args.structure,at);else this.state.next=resolvedNextSession(this.state.next,this.args&&this.args.structure,at);
   const next=activeMeetingAt(this.args&&this.args.structure,this.state,at),deskTimes=TEAM.map(member=>{const desk=deskClockAt(member.role,at);return member.role+":"+desk.deskTime;}).join(","),signature=[next.active,next.key,next.startsAt,next.endsAt,next.source,next.participantRoles.join(","),deskTimes].join("|");if(!force&&!expiredBoundary&&signature===this.meetingSignature)return;
   const previous=this.meeting;if(previous&&previous.active&&!next.active)this.meetingExit={session:previous.session,participantRoles:[...previous.participantRoles]};else if(next.active)this.meetingExit=null;this.meeting=next;this.meetingSignature=signature;
   if(this.agents.length){if(expiredBoundary)this.sync();else this.routeAgents();}this.updateMeta();this.updateMeetingStatus();this.updateA11y();this.ensureLoop();
@@ -298,18 +313,18 @@ class Floor{
  routeAgents(){for(let index=0;index<this.agents.length;index++)this.routeAgent(this.agents[index],index,false);this.updateMeetingStatus();}
  updateMeta(){
   const s=this.state,phase=document.getElementById("officePhase"),status=document.getElementById("officeStatus"),next=document.getElementById("officeNext"),handoff=document.getElementById("officeHandoff");
-  const delayed=FAILURE_STATUS.has(s.status),active=s.status==="running"&&s.provenance==="live",complete=s.status==="complete";
+  const failed=FAILURE_STATUS.has(s.status),active=s.status==="running"&&s.provenance==="live",lastObserved=s.provenance==="last_observed";
   const returning=this.agents.filter(a=>a.returningMeeting).length,atDesk=this.agents.filter(a=>["observed_working","working"].includes(a.dutyPhase)&&!a.returningMeeting&&!a.path.length).length,meetingParticipants=this.agents.filter(a=>a.dutyPhase==="meeting").length,movement=meetingParticipants?" · "+meetingParticipants+" meeting participant"+(meetingParticipants===1?"":"s"):returning?" · "+returning+" returning to desks":"",rhythm="Illustrative office · "+atDesk+" working at desks"+movement;
-  if(phase)phase.textContent=delayed?rhythm+" · next update delayed":active?"Published desk activity · "+atDesk+" at desks"+movement:rhythm;
-  if(status){status.className="office-run-status "+(delayed?"degraded":active?"running":complete?"complete":"scheduled");status.textContent=delayed?"DELAYED":active?"ACTIVE":complete?"UPDATED":"SCHEDULED";}
+  if(phase){const label=failed?cap(s.status)+" outcome":active?(s.phase||"Published desk activity"):lastObserved?"Last observed desk snapshot":"Scheduled office illustration";phase.textContent=label+" · "+rhythm+" · "+s.detail;phase.title=[s.phase,s.stageLabel,s.detail].filter(Boolean).join(" · ");}
+  if(status){let klass="scheduled",label="SCHEDULED";if(failed){klass=s.status;label=s.status.toUpperCase();}else if(active){klass="running";label="ACTIVE";}else if(lastObserved){klass="last-seen";label="LAST OBSERVED";}else if(s.status==="complete"){klass="complete";label="COMPLETE";}else if(s.status==="skipped")label="SKIPPED";else if(s.status==="unknown")label="UNKNOWN";status.className="office-run-status "+klass;status.textContent=label;}
   if(next){const n=s.next;next.textContent=n&&n.session?publicSessionLabel(n.session)+(n.scheduled_for?" · "+wibDate(new Date(n.scheduled_for)):""):"schedule unavailable";}
   if(handoff){handoff.className="office-handoff"+(s.handoff&&s.handoff.active?" active":"");if(s.handoff){const when=s.handoff.active?"Desk handoff":"Recent desk handoff",book=s.handoff.book==="GLOBAL"?"North":s.handoff.book==="INDO"?"South":"Cross-book";handoff.textContent=when+" · "+s.handoff.fromName+" → "+s.handoff.toName+" · "+book;}else handoff.textContent="No active desk handoff";}
   this.updateMarketMeta();
  }
  updateMarketMeta(){
-  const tape=this.marketTape||normalizeMarketTape(null),meta=document.getElementById("officeMarketMeta"),a11y=document.getElementById("officeMarketA11y"),items=tape.available,staleCount=items.filter(x=>x.stale).length,asof=tape.generatedAt?wibDate(new Date(tape.generatedAt)):"time unavailable";
-  if(meta){if(!items.length)meta.textContent="Market data unavailable · no values published";else{const quality=tape.status==="partial"?"Partial market snapshot":staleCount?"Market snapshot · "+staleCount+" stale":"Market snapshot";meta.textContent=quality+" · "+items.length+" instruments · "+asof;}}
-  if(a11y){const values=items.map(x=>x.symbol+" "+x.value+(x.change?" "+x.change:"")+(x.stale?" stale":"")+(x.asof?" as of "+x.asof:"")+(x.source?" source "+x.source:"")).join("; ");a11y.textContent=values?"Published market tape: "+values:"Published market tape unavailable.";}
+  const tape=this.marketTape||normalizeMarketTape(null),meta=document.getElementById("officeMarketMeta"),a11y=document.getElementById("officeMarketA11y"),items=tape.available,now=this.officeNow||this.currentTime(),staleCount=items.filter(x=>marketItemStale(x,now)).length,published=tape.generatedAt?wibDate(new Date(tape.generatedAt)):"publication time unavailable",sources=[...new Set(items.map(x=>x.source).filter(Boolean))];
+  if(meta){if(!items.length)meta.textContent="Market data unavailable · no values published";else{const quality=tape.status==="partial"?"Partial last-observed market values":tape.notice||"Last-observed market values; not a live feed";meta.textContent=quality+" · "+items.length+" instruments · "+marketObservationRange(items)+(sources.length?" · source "+sources.join(", "):"")+(staleCount?" · "+staleCount+" stale":"");meta.title="Published "+published+". "+(tape.notice||"Values are delayed or last observed, not live.");}}
+  if(a11y){const values=items.map(x=>x.symbol+" "+x.value+(x.change?" "+x.change:"")+(marketItemStale(x,now)?" stale":"")+(x.asof?" as of "+x.asof:"")+(x.source?" source "+x.source:"")).join("; "),text=values?"Published last-observed market tape: "+values:"Published market tape unavailable.";if(a11y.textContent!==text)a11y.textContent=text;}
  }
  updateMeetingStatus(){
   const el=document.getElementById("officeMeetingStatus");if(!el)return;let text="Available · no meeting in progress",title="The 6S meeting room is available.";
@@ -320,14 +335,19 @@ class Floor{
  updateA11y(){
   const list=document.getElementById("officeAgentList"),sum=document.getElementById("officeRosterSummary");if(!list||!this.state)return;const frag=document.createDocumentFragment(),runtime=new Map(this.agents.map(agent=>[agent.role,agent]));
   for(const base of this.state.agents){const a=runtime.get(base.role)||base,li=document.createElement("li"),b=document.createElement("b"),span=document.createElement("span"),seated=a.meetingAssigned&&!a.path.length&&a.target&&a.col===a.target[0]&&a.row===a.target[1],desk=a.lifecycle||safeDeskClock(a.role),deskHandoff=this.state.handoff&&this.state.handoff.active&&this.state.handoff.fromRole===a.role;let place,activity;
-   if(a.meetingAssigned){place=seated?"seated in 6S meeting room":"walking to 6S meeting room";activity=this.meeting&&this.meeting.source==="schedule"?"Published meeting":"Observed live meeting";}else if(a.returningMeeting){place="returning to assigned desk";activity="Meeting transition";}else if(deskHandoff){place="working at coverage desk";activity="Published desk handoff";}else if(a.dutyPhase==="observed_working"){place="working at published desk";activity="Observed working";}else{place="working at coverage desk";activity="Illustrative office activity";}
+   if(a.meetingAssigned){place=seated?"seated in 6S meeting room":"walking to 6S meeting room";activity="Published meeting";}else if(a.returningMeeting){place="returning to assigned desk";activity="Meeting transition";}else if(deskHandoff){place="working at coverage desk";activity="Published desk handoff";}else if(a.dutyPhase==="observed_working"){place="working at published desk";activity="Observed working";}else{place="working at coverage desk";activity="Illustrative office activity";}
    b.textContent=a.name+" · "+a.roleLabel;span.textContent=activity+" · "+place+" · "+desk.hub+" clock "+desk.deskTime+" · "+a.book;li.append(b,span);frag.append(li);}list.replaceChildren(frag);if(sum)sum.textContent="Accessible 6S Virtual Office roster — "+this.state.agents.length+" continuously staffed desks · published meetings take priority · illustrative unless marked published or observed";
  }
  snapAll(){for(const a of this.agents){if(a.target){a.col=a.target[0];a.row=a.target[1];a.x=(a.col+.5)*TILE;a.y=(a.row+.5)*TILE;a.path=[];a.progress=0;a.returningMeeting=false;a.lifecycleMove=false;a.controlledMove=!!(a.meetingAssigned||a.handoffMove);}}this.updateMeetingStatus();this.updateA11y();}
  setRouteVisible(value){this.routeVisible=!!value;this.ensureLoop();}
  shouldRun(){return !this.reduced&&!document.hidden&&this.routeVisible&&this.intersecting;}
+ refreshShouldRun(){return !document.hidden&&this.routeVisible&&this.intersecting;}
+ ensureRefreshTimer(){
+  const run=this.refreshShouldRun();if(!run&&this.meetingTimer){window.clearTimeout(this.meetingTimer);this.meetingTimer=0;return;}
+  if(run&&!this.meetingTimer){const delay=60050-(Date.now()%60000);this.meetingTimer=window.setTimeout(()=>{this.meetingTimer=0;this.refreshMeeting();this.ensureRefreshTimer();},delay);}
+ }
  ensureLoop(){
-  if(!this.ready)return;const run=this.shouldRun();
+  this.ensureRefreshTimer();if(!this.ready)return;const run=this.shouldRun();
   if(run&&!this.raf){this.last=performance.now();this.raf=requestAnimationFrame(t=>this.tick(t));}
   if(!run&&this.raf){cancelAnimationFrame(this.raf);this.raf=0;this.draw();}
   if(!run)this.draw();
@@ -474,7 +494,7 @@ class Floor{
  }
  plant(c,x,y,scale){const s=scale||1;c.fillStyle="#694B35";c.fillRect(x,y+19*s,16*s,18*s);c.fillStyle="#8C6846";c.fillRect(x+2*s,y+19*s,12*s,3*s);const greens=["#1D5A3A","#287149","#3B8557"];for(let i=0;i<7;i++){c.fillStyle=greens[i%greens.length];const dx=(-8+(i*5)%25)*s,dy=(-2-(i%3)*8)*s;c.fillRect(x+4*s+dx,y+16*s+dy,9*s,13*s);}c.fillStyle="#17221C";c.fillRect(x+7*s,y+7*s,2*s,15*s);}
  drawHeader(c,clock){
-  const brandW=326,tape=this.marketTape||normalizeMarketTape(null),raw=tape.items.length?tape.items:[{symbol:"MARKET TAPE",available:false,stale:false}],ticker=raw.map(item=>{if(!item.available)return {text:item.symbol+"  UNAVAILABLE",color:"#6F7882"};const change=item.change?"  "+item.change:"",stale=item.stale?"  STALE":"";return {text:item.symbol+"  "+item.value+change+stale,color:item.stale?"#E8A33D":item.change&&item.change.startsWith("-")?"#F0524E":item.change?"#3DBD4A":"#AEB6C0"};});
+  const brandW=326,tape=this.marketTape||normalizeMarketTape(null),raw=tape.items.length?tape.items:[{symbol:"MARKET TAPE",available:false,stale:false}],now=this.officeNow||this.currentTime(),ticker=raw.map(item=>{if(!item.available)return {text:item.symbol+"  UNAVAILABLE",color:"#6F7882"};const change=item.change?"  "+item.change:"",isStale=marketItemStale(item,now),stale=isStale?"  STALE":"";return {text:item.symbol+"  "+item.value+change+stale,color:isStale?"#E8A33D":item.change&&item.change.startsWith("-")?"#F0524E":item.change?"#3DBD4A":"#AEB6C0"};});
   c.fillStyle="#090C10";c.fillRect(0,0,W,32);c.save();c.beginPath();c.rect(brandW,0,W-brandW,29);c.clip();c.font="bold 10px Arial";c.textBaseline="middle";
   const widths=ticker.map(item=>Math.max(138,Math.ceil(c.measureText(item.text).width)+48)),total=widths.reduce((a,b)=>a+b,0),offset=total?(clock*24)%total:0,cycles=Math.ceil((W-brandW)/Math.max(1,total))+2;for(let cycle=-1;cycle<=cycles;cycle++){let x=brandW+18-offset+cycle*total;for(let i=0;i<ticker.length;i++){c.fillStyle=ticker[i].color;c.fillText(ticker[i].text,x,15);x+=widths[i];}}c.restore();
   c.fillStyle="#090C10";c.fillRect(0,0,brandW,29);c.fillStyle="#E01F26";c.fillRect(0,0,36,29);c.fillStyle="#FFFFFF";c.font="bold 12px Arial";c.fillText("6S",10,15);c.fillStyle="#F5F6F7";c.font="bold 11px Arial";c.fillText("SIX SOUTH CAPITAL",48,12);c.fillStyle="#8F99A4";c.font="7px Arial";c.fillText("6S VIRTUAL OFFICE",48,22);c.fillStyle="#38424C";c.fillRect(brandW-2,0,2,29);c.fillStyle="#E01F26";c.fillRect(0,29,W,3);
@@ -497,7 +517,7 @@ class Floor{
 
 let floor=null;
 function readonlyMeeting(value){return Object.freeze(Object.assign({},value,{participantRoles:Object.freeze([...(value.participantRoles||[])])}));}
-function readonlyDeskClock(value){return Object.freeze({role:String(value&&value.role||""),hub:String(value&&value.hub||"Unassigned"),timeZone:value&&value.timeZone||null,weekday:String(value&&value.weekday||""),deskTime:String(value&&value.deskTime||"--:--"),phase:String(value&&value.phase||"resting"),phaseLabel:String(value&&value.phaseLabel||"Resting (illustrative)"),working:!!(value&&value.working),illustrative:true});}
+function readonlyDeskClock(value){return Object.freeze({role:String(value&&value.role||""),hub:String(value&&value.hub||"Unassigned"),timeZone:value&&value.timeZone||null,weekday:String(value&&value.weekday||""),deskTime:String(value&&value.deskTime||"--:--"),phase:String(value&&value.phase||"working"),phaseLabel:String(value&&value.phaseLabel||"Working at assigned desk (illustrative)"),working:value&&typeof value.working==="boolean"?value.working:true,illustrative:true});}
 window.SixSouthOffice=Object.freeze({
  render(args){if(!floor)floor=new Floor();if(floor&&floor.canvas)floor.update(args);},
  setVisible(value){if(floor&&floor.canvas)floor.setRouteVisible(value);},

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Six South · 6S</title>
 <style>
@@ -76,7 +77,7 @@ td.num,th.num{text-align:right}
 tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:var(--panel2)}
 .stale{opacity:.5}
-.stale td:first-child::after{content:" \23F8";font-size:10px}
+.stale td:first-child::after{content:" · STALE";font-size:9px;color:var(--muted)}
 .scroll{overflow-x:auto}
 
 .bookhead{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
@@ -97,6 +98,12 @@ tbody tr:hover td{background:var(--panel2)}
 .legend span::before{content:"";display:inline-block;width:14px;height:0;border-top:2px solid;margin-right:5px;vertical-align:middle}
 
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.book-kpis{grid-template-columns:repeat(6,minmax(0,1fr))}
+.book-layout{grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr)}
+.about-one{grid-template-columns:1fr}
+.about-pipeline{grid-template-columns:minmax(0,1.5fr) minmax(320px,1fr)}
+.about-authority{grid-template-columns:minmax(320px,1fr) minmax(0,1.2fr)}
+.about-cadence{grid-template-columns:minmax(0,1.2fr) minmax(320px,1fr)}
 .diag h4{font-size:11px;font-weight:700;color:var(--ink);margin:0 0 4px}
 .roster{display:grid;grid-template-columns:1fr 1fr;gap:1px 12px;font-size:11px}
 .roster .r{display:flex;justify-content:space-between;gap:8px;padding:2.5px 0;border-bottom:1px dotted var(--hair)}
@@ -159,20 +166,27 @@ tbody tr:hover td{background:var(--panel2)}
 .dotN{color:var(--north)} .dotS{color:var(--south)}
 .tag{background:var(--panel2);border:1px solid var(--hair);padding:0 6px;font-size:10px;color:var(--muted)}
 footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px solid var(--hair);margin-top:8px}
-@media (max-width:1150px){
+@media (max-width:1300px){
   .grid{grid-template-columns:1fr 1fr}
   .grid .col:last-child{grid-column:1/-1}
   .office-meta{grid-template-columns:1fr 1fr}
+  .book-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-@media (max-width:820px){
+@media (max-width:960px){
   .grid{grid-template-columns:1fr}
   .strip{grid-template-columns:repeat(2,1fr)}
+  .book-layout,.about-pipeline,.about-authority,.about-cadence{grid-template-columns:1fr}
+  .book-layout>.col:last-child,.about-pipeline>.col:last-child,.about-authority>.col:last-child,.about-cadence>.col:last-child{grid-column:auto}
   .grid2,.roster{grid-template-columns:1fr}
   .office-meta{grid-template-columns:1fr}
   .office-meta>div{padding:6px 9px}
   .office-canvas{width:920px}
   .office-help{position:sticky;display:inline-block;float:right;margin:-25px 7px 7px 0}
   .office-rhythm .note{margin-left:0;flex-basis:100%}
+}
+@media (max-width:560px){
+  .book-kpis,.strip{grid-template-columns:1fr}
+  .wstab{padding:6px 9px}
 }
 </style>
 </head>
@@ -193,7 +207,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
       <span class="chip" id="asof">—</span>
     </div>
   </div>
-  <div class="tabrow">
+  <div class="tabrow" aria-label="Dashboard sections">
     <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
     <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
@@ -273,8 +287,8 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
       <div class="panel">
         <div class="ptitle"><span class="dot"></span>Desk feed</div>
         <div class="pbody flush">
-          <div class="tabs" id="tabs"></div>
-          <div class="feed" id="feed"></div>
+          <div class="tabs" id="tabs" role="tablist" aria-label="Desk feed types"></div>
+          <div class="feed" id="feed" role="tabpanel" aria-live="polite"></div>
         </div>
       </div>
     </div>
@@ -285,21 +299,29 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   <div id="view-structure" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
-    investment advice. Prices via public feeds; ⏸ marks stale data held at last good mark.
+    investment advice. Prices via public feeds; STALE marks data held at its last good observation.
     ^JKSE is a price index (South Book relative return is dividend-proxied in the engine).
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js?v=20260719-base-sprites-v4"></script>
+<script src="office-floor.js?v=20260719-public-truth-v6"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
 const qs=new URLSearchParams(location.search);
-if(qs.get('token')){ sessionStorage.setItem('dt',qs.get('token')); history.replaceState({},'',location.pathname); }
+if(qs.get('token')){ sessionStorage.setItem('dt',qs.get('token')); history.replaceState({},'',location.pathname+location.hash); }
 const T=sessionStorage.getItem('dt');
-// 10-min bucket buster: a new URL each bucket forces CDN+browser to refetch, so
-// no viewer ever sees data older than ~10 minutes without any manual refresh.
-const api=n=>fetch('data/'+n+'.json?b='+Math.floor(Date.now()/6e5)).then(r=>r.ok?r.json():Promise.reject()).catch(()=>fetch('/api/'+n,{headers:T?{'X-Dash-Token':T}:{}}).then(r=>r.ok?r.json():null).catch(()=>null));
+// 10-min bucket buster refreshes the published snapshot; absolute observation
+// timestamps below still determine whether that snapshot itself is stale.
+async function fetchJSON(url,options={}){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);
+  try{const r=await fetch(url,{...options,signal:controller.signal});return r.ok?await r.json():null;}
+  catch(_){return null;}finally{clearTimeout(timer);}
+}
+const api=async n=>{
+  const staticData=await fetchJSON('data/'+n+'.json?b='+Math.floor(Date.now()/6e5));
+  return staticData!==null?staticData:fetchJSON('/api/'+n,{headers:T?{'X-Dash-Token':T}:{}});
+};
 
 // ---- formatting & safe rendering ----
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -307,6 +329,14 @@ const fmt=(x,d=2)=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maxim
 const fmt0=x=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:0});
 const pct=x=>x==null?'—':`${x>0?'+':''}${fmt(x)}%`;
 const cls=x=>x==null?'':(x>=0?'up':'down');
+const validNumber=x=>x!==null&&x!==''&&Number.isFinite(Number(x));
+const parseTime=value=>{const ms=Date.parse(value||'');return Number.isFinite(ms)?ms:null;};
+const ageHours=value=>{const ms=parseTime(value),delta=ms==null?null:Date.now()-ms;return delta==null||delta<0?null:delta/36e5;};
+const isRecord=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
+const asRecord=v=>isRecord(v)?v:{};
+const asArray=v=>Array.isArray(v)?v:[];
+const records=v=>asArray(v).filter(isRecord);
+const summaryReady=v=>isRecord(v)&&isRecord(v.books)&&isRecord(v.books.GLOBAL)&&isRecord(v.books.INDO);
 // fund-minus-benchmark spread in pp; prefers the published field, falls back to computing it
 const alphaPP=s=>s.alpha_since_inception_pp!=null?s.alpha_since_inception_pp
   :(s.since_inception_pct!=null&&s.bench_since_inception_pct!=null
@@ -330,6 +360,7 @@ function md(t){                         // escape-first mini markdown (no raw HT
 // ---- inline SVG line chart (dependency-free, terminal-styled) ----
 // opts: fill=true shades under the FIRST series; pills=true draws last-value
 // badges at the right edge (bg = series color, white text).
+let chartSequence=0;
 function chart(labels,datasets,o){
   o=o||{}; const W=o.w||660,Hh=o.h||220,padL=52,padR=o.pills?54:12,padT=8,padB=20;
   const vals=[]; datasets.forEach(d=>d.vals.forEach(v=>{if(v!=null&&!isNaN(v))vals.push(v)}));
@@ -365,44 +396,68 @@ function chart(labels,datasets,o){
     `<text x="${padL-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" class="axl">${o.fmtY?o.fmtY(v):fmt(v)}</text>`).join('');
   const gx=`<text x="${padL}" y="${Hh-4}" class="axl">${esc(labels[0])}</text>`+
            `<text x="${W-padR}" y="${Hh-4}" text-anchor="end" class="axl">${esc(labels[n-1])}</text>`;
-  return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img">${gy}${gx}${paths}${pills}</svg>`;
+  const chartId=`chart-${++chartSequence}`,title=String(o.title||'Time-series chart');
+  const description=String(o.description||`${datasets.map(d=>d.name).join(' and ')} from ${labels[0]} to ${labels[n-1]}`);
+  return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img" aria-labelledby="${chartId}-title ${chartId}-desc"><title id="${chartId}-title">${esc(title)}</title><desc id="${chartId}-desc">${esc(description)}</desc>${gy}${gx}${paths}${pills}</svg>`;
 }
 
-let S,N,L,SL,RO,AN,ST,OS,MT,H={};
+let S,N,L,SL,RO,AN,ST,OS,MT,H={},freshnessTimer=null,bootTimer=null,bootGeneration=0;
 async function boot(){
-  [S,N,L,SL,RO,AN,ST,OS,MT]=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('roster'),api('analytics'),api('structure'),api('office_state'),api('market_tape')]);
-  H.GLOBAL=await api('holdings_GLOBAL')||[]; H.INDO=await api('holdings_INDO')||[];
-  if(!S){document.getElementById('sub').textContent='dashboard data not published yet — run scripts/dashboard_push.py';return;}
-  renderTop(); renderBanners(); renderStrip();
-  renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
-  renderTotal(); renderAnalytics(); renderDiag(); renderOffice();
-  if(!curTab)curTab='reports'; tabs(curTab);
-  route();
-  setTimeout(boot,300000);            // refresh every 5 min
+  const generation=++bootGeneration;let completed=false;if(bootTimer){clearTimeout(bootTimer);bootTimer=null;}
+  try{
+    const feeds=await Promise.all([api('summary'),api('nav_history'),api('limits'),api('sleeves'),api('roster'),api('analytics'),api('structure'),api('office_state'),api('market_tape')]);
+    const holdings=await Promise.all([api('holdings_GLOBAL'),api('holdings_INDO')]);
+    if(generation!==bootGeneration)return;
+    [S,N,L,SL,RO,AN,ST,OS,MT]=feeds;H.GLOBAL=records(holdings[0]);H.INDO=records(holdings[1]);
+    if(!summaryReady(S)){S=null;document.getElementById('sub').textContent='dashboard data incomplete — retrying automatically';return;}
+    N=asRecord(N);L=asRecord(L);SL=asRecord(SL);RO=asRecord(RO);AN=asRecord(AN);
+    ST=asRecord(ST);OS=asRecord(OS);MT=asRecord(MT);
+    renderTop(); renderBanners(); renderStrip();
+    renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
+    renderTotal(); renderAnalytics(); renderDiag(); renderOffice();
+    if(!curTab)curTab='reports'; tabs(curTab);
+    route();
+    if(!freshnessTimer)freshnessTimer=setInterval(()=>{if(S)renderBanners();},60000);
+    completed=true;
+  }catch(_error){
+    if(generation===bootGeneration)document.getElementById('sub').textContent='dashboard display interrupted — retrying automatically';
+  }finally{
+    if(generation===bootGeneration){
+      if(completed)bootTimer=setTimeout(boot,300000);
+      else bootTimer=setTimeout(boot,15000);
+    }
+  }
 }
 
 // ---- workspace routing (Fund Monitor / North Book / South Book) ----
 const BOOK_OF={north:'GLOBAL',south:'INDO'};
+let activeWorkspace=null,bookViewGeneration=0;
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
 function route(){
   let h=(location.hash||'#monitor').slice(1);
   if(h==='structure')h='about';        // legacy links
   const cur=(BOOK_OF[h]||h==='about')?h:'monitor';
+  const previousWorkspace=activeWorkspace;activeWorkspace=cur;const viewGeneration=++bookViewGeneration;
   ['monitor','north','south','about'].forEach(k=>{
-    const b=document.getElementById('ws-'+k); if(b)b.className='wstab'+(k===cur?' on':'');});
+    const b=document.getElementById('ws-'+k); if(!b)return;
+    b.className='wstab'+(k===cur?' on':'');
+    if(k===cur)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   const monitorVisible=cur==='monitor';
   document.getElementById('view-monitor').style.display=monitorVisible?'':'none';
   document.getElementById('view-book').style.display=BOOK_OF[cur]?'':'none';
   document.getElementById('view-structure').style.display=cur==='about'?'':'none';
-  if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur]);
+  if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur],viewGeneration);
   if(cur==='about')renderStructureView();
+  if(cur==='monitor'&&previousWorkspace&&previousWorkspace!=='monitor'&&curTab)tabs(curTab);
   if(window.SixSouthOffice&&window.SixSouthOffice.setVisible)window.SixSouthOffice.setVisible(monitorVisible);
 }
 window.addEventListener('hashchange',route);
 
-async function renderBookView(b){
+async function renderBookView(b,generation=++bookViewGeneration){
   const el=document.getElementById('view-book');
-  const s=S.books[b], ser=(N&&N[b])||[], pm=pmPersona(b);
+  const active=()=>generation===bookViewGeneration&&activeWorkspace===(b==='GLOBAL'?'north':'south');
+  if(!active())return;
+  const s=S.books[b], ser=records(N&&N[b]), pm=pmPersona(b);
   const d=(AN&&AN.books&&AN.books[b])||{}, m=d.metrics||{};
   const cashPct=s.nav?fmt(s.cash/s.nav*100,1):null;
   const si=s.since_inception_pct;
@@ -410,13 +465,17 @@ async function renderBookView(b){
     chart(ser.map(r=>String(r.date).slice(5)),
       [{name:'Fund',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
        {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
-      {h:250,fmtY:v=>fmt(v,1),fill:true,pills:true});
+      {h:250,fmtY:v=>fmt(v,1),fill:true,pills:true,
+       title:`${bookName(b)} official performance versus benchmark`,
+       description:'Official total-return marks rebased to 100 at inception.'});
   const compact=v=>Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(v);
   const raw=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
     chart(ser.map(r=>String(r.date).slice(5)),
       [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_ccy)}],
-      {h:160,fmtY:compact,fill:true,pills:true});
-  const hs=H[b]||[];
+      {h:160,fmtY:compact,fill:true,pills:true,
+       title:`${bookName(b)} official NAV in ${s.ccy||'book currency'}`,
+       description:'Official book-currency NAV marks only.'});
+  const hs=records(H[b]);
   const hrows=hs.map(h2=>`<tr class="${h2.stale?'stale':''}">
     <td class="mono">${esc(h2.ticker)}</td><td>${esc(h2.instrument)}</td>
     <td class="num mono">${fmt0(h2.qty)}</td>
@@ -424,34 +483,34 @@ async function renderBookView(b){
     <td class="num mono">${fmt0(h2.mv)}</td>
     <td class="num mono ${cls(h2.pnl_pct)}">${pct(h2.pnl_pct)}</td></tr>`).join('')
     ||`<tr><td colspan="6" class="muted">No positions yet — cash is a position.</td></tr>`;
-  const cell=(k,v,c='')=>`<div class="cell"><div class="k">${k}</div><div class="v mono ${c}">${v}</div></div>`;
+  const cell=(k,v,c='')=>`<div class="cell"><div class="k">${esc(k)}</div><div class="v mono ${esc(c)}">${esc(v)}</div></div>`;
   el.innerHTML=`
     <div class="panel" style="margin-top:8px">
       <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div>
         <h2>${esc(bookName(b))}</h2><span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}
-        <span class="aux muted small" style="margin-left:auto">${pm?esc(pm)+' · PM':''} · marked ${esc(s.mark||'—')} · ${esc(String(s.asof||'').slice(0,16))}</span></div>
+        <span class="aux muted small" style="margin-left:auto">${pm?esc(pm)+' · PM · ':''}${esc(s.mark||'unknown')} snapshot · ${esc(String(s.asof||'').slice(0,16).replace('T',' '))}</span></div>
       <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}<span class="chg ${cls(si)}">${pct(si)}</span></div>
       <div class="govnote">${govNote()}</div>
     </div>
-    <div class="strip" style="grid-template-columns:repeat(6,1fr)">
-      ${cell('Since inception',pct(si),cls(si))}
+    <div class="strip book-kpis">
+      ${cell('Since inception (official)',pct(si),cls(si))}
       ${cell('vs benchmark',alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp',cls(alphaPP(s)))}
       ${cell('Benchmark (cum)',pct(s.bench_since_inception_pct),'')}
       ${cell('Cash %',cashPct==null?'—':cashPct+'%','')}
       ${cell('Names',String(s.n_names||0),'')}
       ${cell('Drawdown',s.drawdown_pct==null?'—':fmt(s.drawdown_pct)+'%',s.drawdown_pct<0?'down':'')}
     </div>
-    <div class="grid" style="grid-template-columns:1.6fr 1fr">
+    <div class="grid book-layout">
       <div class="col">
         <div class="panel">
-          <div class="ptitle"><span class="dot"></span>Performance — fund vs benchmark<span class="aux">total-return · both series rebased to 100 at inception</span></div>
+          <div class="ptitle"><span class="dot"></span>Performance — fund vs benchmark<span class="aux">official total-return marks · both series rebased to 100 at inception</span></div>
           <div class="pbody">
             <div class="legend"><span style="color:var(--north)">Fund (inception=100)</span><span style="color:var(--bench)">Benchmark (inception=100)</span></div>
             ${perf}
           </div>
         </div>
         <div class="panel">
-          <div class="ptitle"><span class="dot"></span>NAV (${esc(s.ccy||'')})<span class="aux">book currency, official + indicative marks</span></div>
+          <div class="ptitle"><span class="dot"></span>NAV (${esc(s.ccy||'')})<span class="aux">book currency · official marks only</span></div>
           <div class="pbody">${raw}</div>
         </div>
         <div class="panel">
@@ -492,7 +551,8 @@ async function renderBookView(b){
         </div>
       </div>
     </div>`;
-  const tr=(await api('trades')||[]).filter(t=>t.book===b);
+  const tradeData=await api('trades');if(!active())return;
+  const tr=records(tradeData).filter(t=>t.book===b);
   const trows=tr.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
     <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
     <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${fmt(t.price,4)}</td>
@@ -501,16 +561,18 @@ async function renderBookView(b){
   if(trEl)trEl.innerHTML=trows?`<div class="scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Ticker</th>
     <th class="num">Qty</th><th class="num">Price</th><th class="num">Cash Δ</th></tr></thead><tbody>${trows}</tbody></table></div>`
     :'<div class="item muted">No trades in this book yet.</div>';
-  const dec=((await api('decisions'))||[]).filter(x=>(x.meta||{}).book===b).slice(0,12);
+  const decisionData=await api('decisions');if(!active())return;
+  const dec=records(decisionData).filter(x=>asRecord(x.meta).book===b).slice(0,12);
   const deEl=document.getElementById('bkDecisions');
   if(deEl)deEl.innerHTML=dec.map(x=>{const mm=x.meta||{};return `<div class="item"><div class="meta">
     <span>${esc((mm.date||'').slice(0,10))}</span>${mm.kind?`<span class="tag">${esc(mm.kind)}</span>`:''}
-    <span>${esc(mm.title||x.file)}</span>${x.persona?`<span>${who(x.persona,'')}</span>`:''}</div>
+    <span>${esc(mm.title||'Decision')}</span>${x.persona?`<span>${who(x.persona,mm.role||mm.actor||'')}</span>`:''}</div>
     <div class="body">${md(x.body)}</div></div>`;}).join('')||'<div class="item muted">No decisions journaled for this book yet.</div>';
-  const th=((await api('theses'))||[]).filter(x=>(x.meta||{}).book===b).slice(0,12);
+  const thesisData=await api('theses');if(!active())return;
+  const th=records(thesisData).filter(x=>asRecord(x.meta).book===b).slice(0,12);
   const thEl=document.getElementById('bkTheses');
   if(thEl)thEl.innerHTML=th.map(x=>{const mm=x.meta||{},ex=x.excerpt||{};return `<div class="item"><div class="meta">
-    <span class="mono">${esc(mm.id||x.file)}</span><span>${esc(mm.ticker||'')}</span>
+    <span class="mono">${esc(mm.id||'Thesis')}</span><span>${esc(mm.ticker||'')}</span>
     <span class="tag">${esc(mm.status||'')}</span>${mm.verdict?`<span class="tag">${esc(mm.verdict)}</span>`:''}
     ${mm.sleeve?`<span class="tag">${esc(mm.sleeve)}</span>`:''}</div>
     ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}</div>`;}).join('')
@@ -525,11 +587,11 @@ function renderOffice(){
 async function renderStructureView(){
   const el=document.getElementById('view-structure'); if(!el)return;
   if(!ST)ST=await api('structure');
-  const st=ST||{}, px=(L&&L.limits&&L.limits.pipeline)||{};
-  const cap=px.max_new_theses_per_book_per_week!=null?px.max_new_theses_per_book_per_week:3;
+  const st=asRecord(ST), px=asRecord(L&&L.limits&&L.limits.pipeline);
+  const rawCap=Number(px.max_new_theses_per_book_per_week),cap=Number.isFinite(rawCap)?rawCap:3;
   const bx=(x,y,w,t1,t2,stroke,h)=>{h=h||40;return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="var(--panel2)" stroke="${stroke||'var(--hair)'}"/>`+
-    `<text x="${x+w/2}" y="${y+(t2?16:h/2+3.5)}" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="700">${t1}</text>`+
-    (t2?`<text x="${x+w/2}" y="${y+30}" text-anchor="middle" fill="var(--muted)" font-size="8.5">${t2}</text>`:'');};
+    `<text x="${x+w/2}" y="${y+(t2?16:h/2+3.5)}" text-anchor="middle" fill="var(--ink)" font-size="10" font-weight="700">${esc(t1)}</text>`+
+    (t2?`<text x="${x+w/2}" y="${y+30}" text-anchor="middle" fill="var(--muted)" font-size="8.5">${esc(t2)}</text>`:'');};
   const ln=(x1,y1,x2,y2,dash)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--dim)" stroke-width="1" ${dash?'stroke-dasharray="3 3"':''} marker-end="url(#ah)"/>`;
   const pl=(pts,dash,arrow)=>`<polyline points="${pts}" fill="none" stroke="var(--dim)" stroke-width="1" ${dash?'stroke-dasharray="3 3"':''} ${arrow?'marker-end="url(#ah)"':''}/>`;
   const band=(y,t)=>`<text x="26" y="${y}" fill="var(--dim)" font-size="8.5" letter-spacing=".08em">${t}</text>`;
@@ -539,7 +601,7 @@ async function renderStructureView(){
     ['Analyst draft','estimates first','var(--north)'],['Bear attack','forces revision','var(--north)'],['Judge','kill is final','var(--north)']];
   const R2=[['Risk check','VETO absolute'],['PM sizing','deviate down only','var(--north)'],['Order ticket','limit + chase cap'],
     ['Fill next open','deterministic','var(--up)'],['Monitor','kill criteria'],['Exit','cap-exempt']];
-  let svg=`<svg viewBox="0 0 960 306" class="chart" role="img" style="max-width:1050px">`+
+  let svg=`<svg viewBox="0 0 960 306" class="chart" role="img" aria-labelledby="pipeline-title pipeline-desc" style="max-width:1050px"><title id="pipeline-title">Six South idea-to-learning pipeline</title><desc id="pipeline-desc">Research proceeds from screening through independent attack, judgment, risk, sizing, execution, monitoring, post-mortem and lessons.</desc>`+
     `<defs><marker id="ah" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="var(--dim)"/></marker></defs>`+
     bx(330,8,300,'Macro desk — Severin + Ferrand','regime · tilts · markers frontmatter','var(--south)')+
     ln(480,48,480,60,1)+
@@ -564,7 +626,7 @@ async function renderStructureView(){
     `<text x="26" y="294" fill="var(--dim)" font-size="8.5">learned rules recalibrate every desk — losses AND lucky wins both teach</text>`+
     `</svg>`;
   // org chart — authority chain + independent functions
-  const orgSvg=`<svg viewBox="0 0 460 344" class="chart" role="img" style="max-width:520px">`+
+  const orgSvg=`<svg viewBox="0 0 460 344" class="chart" role="img" aria-labelledby="org-title org-desc" style="max-width:520px"><title id="org-title">Six South desk authority</title><desc id="org-desc">The owner sets rules; Judge and Risk are independent; portfolio managers oversee book analysts; macro, Bear, review and operations remain outside the approval chain.</desc>`+
     `<defs><marker id="ah2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="var(--dim)"/></marker></defs>`+
     bx(140,6,180,'Owner (human)','constitution · amendments · capital')+
     `<polyline points="230,46 230,56 120,56 120,64" fill="none" stroke="var(--dim)" stroke-width="1"/>`+
@@ -587,26 +649,26 @@ async function renderStructureView(){
     bx(250,300,180,'Ledger — Ops','scripts · plumbing · zero judgment')+
     `</svg>`;
   const publicSession={US_CLOSE:'North close review',IDX_PREOPEN:'South pre-open review',IDX_CLOSE:'South close review',US_PREOPEN:'North pre-open review',IDEATION:'Idea research',WEEKLY_DEEP:'Weekly deep research',MONTHLY_IC:'Monthly investment review'};
-  const schedRows=(st.schedule||[]).map(r=>`<tr><td>${esc(publicSession[r.session]||r.session||'Scheduled desk review')}</td>
-    <td>${esc(r.days)}</td><td class="mono">${esc((r.times_wib||[]).join(' · ')||'—')}</td></tr>`).join('');
+  const schedRows=records(st.schedule).map(r=>`<tr><td>${esc(publicSession[r.session]||r.session||'Scheduled desk review')}</td>
+    <td>${esc(r.days)}</td><td class="mono">${esc(asArray(r.times_wib).join(' · ')||'—')}</td></tr>`).join('');
   const coverage={GLOBAL:'North Book',INDO:'South Book',SHARED:'Cross-book',INDEPENDENT:'Independent'};
-  const rosterRows=((RO&&RO.roster)||[]).map(e=>`<tr><td><b>${esc(e.persona||'')}</b> <span class="muted">· ${esc(e.title||'Desk agent')}</span></td>
+  const rosterRows=records(RO&&RO.roster).map(e=>`<tr><td><b>${esc(e.persona||'')}</b> <span class="muted">· ${esc(e.title||'Desk agent')} · ${esc(e.role||'')}</span></td>
     <td class="muted">${esc(coverage[e.book]||e.book||'Cross-book')}</td></tr>`).join('');
   const bkl=(L&&L.limits&&L.limits.books)||{};
   const cpt=v=>v==null?null:Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(v);
   const capN=cpt(bkl.GLOBAL&&bkl.GLOBAL.initial_capital)||'1M', capS=cpt(bkl.INDO&&bkl.INDO.initial_capital)||'15B';
-  const gl=(t,d)=>`<div style="padding:6px 0;border-bottom:1px dotted var(--hair)"><b style="font-size:11.5px">${t}</b><div class="muted" style="font-size:11px;margin-top:1px">${d}</div></div>`;
+  const gl=(t,d)=>`<div style="padding:6px 0;border-bottom:1px dotted var(--hair)"><b style="font-size:11.5px">${esc(t)}</b><div class="muted" style="font-size:11px;margin-top:1px">${esc(d)}</div></div>`;
   el.innerHTML=`
-    <div class="grid" style="grid-template-columns:1fr;margin-top:8px">
+    <div class="grid about-one" style="margin-top:8px">
       <div class="panel"><div class="ptitle"><span class="dot"></span>About Six South (6S)<span class="aux">"Two books, one bearing" · inception ${esc(S.inception||'2026-07-06')}</span></div>
         <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
           <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working on a published cadence. No human picks the trades. The owner maintains the rulebook; the fund does the investing.</p>
           <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
-          <p>The virtual office displays three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. They provide local market context only, not avatar schedules or persona locations. All 11 avatars illustratively work at their assigned desks between exact meetings; meeting participants walk to the central room and return to work when the published or valid live meeting ends.</p>
-          <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸). All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
+          <p>The virtual office displays three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. They provide local market context only, not avatar schedules or persona locations. All 11 avatars illustratively work at their assigned desks between exact meetings; scheduled participants walk to the central room and return to work when the published meeting ends.</p>
+          <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or marked STALE. All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
         </div></div></div></div>
     </div>
-    <div class="grid" style="grid-template-columns:1.5fr 1fr">
+    <div class="grid about-pipeline">
       <div class="panel"><div class="ptitle"><span class="dot"></span>Idea pipeline — how the fund decides<span class="aux">every stage writes to disk before the next begins</span></div>
         <div class="pbody">${svg}</div></div>
       <div class="panel"><div class="ptitle"><span class="dot"></span>In plain English</div>
@@ -620,7 +682,7 @@ async function renderStructureView(){
           <li><strong>Learn.</strong> Every exit — win or loss — gets an autopsy. Generalizable lessons are written into the desks' own rulebooks, one at a time.</li>
         </ul></div></div></div></div>
     </div>
-    <div class="grid" style="grid-template-columns:1fr 1.2fr">
+    <div class="grid about-authority">
       <div class="panel"><div class="ptitle"><span class="dot"></span>Desk hierarchy — authority<span class="aux">solid = reporting line</span></div>
         <div class="pbody">${orgSvg}</div></div>
       <div class="col">
@@ -633,7 +695,7 @@ async function renderStructureView(){
           </div></div></div></div>
       </div>
     </div>
-    <div class="grid" style="grid-template-columns:1.2fr 1fr">
+    <div class="grid about-cadence">
       <div class="col">
         <div class="panel"><div class="ptitle"><span class="dot"></span>Published working cadence (WIB)</div>
           <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Activity</th><th>Days</th><th>Times</th></tr></thead>
@@ -653,12 +715,12 @@ async function renderStructureView(){
             <li><strong>Fail closed:</strong> if required data or controls are unavailable, the fund stops trading and reports the issue.</li>
             <li><strong>Numbers before narratives:</strong> prices, NAV, fills, risk limits and analytics are calculated consistently before investment judgment is applied.</li>
             <li><strong>Anti-bias law:</strong> estimates committed before market data; variant perception mandatory; every thesis Bear-attacked; Judge kill is final.</li>
-            <li><strong>Caps:</strong> ≤${cap} deep-dives/book/week · ≤12 idea cards/book · drawdown governors ${govNote()||'—'}.</li>
+            <li><strong>Caps:</strong> ≤${esc(cap)} deep-dives/book/week · ≤12 idea cards/book · drawdown governors ${esc(govNote()||'—')}.</li>
             <li><strong>Audit trail:</strong> append-only ledger is the source of truth; every session commits to git; lessons commit one-by-one.</li>
           </ul></div></div></div></div>
       </div>
     </div>
-    <div class="grid" style="grid-template-columns:1fr">
+    <div class="grid about-one">
       <div class="panel"><div class="ptitle"><span class="dot"></span>How to read this dashboard</div>
         <div class="pbody"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 24px">
           ${gl('NAV','A book’s total value in its own currency (cash + positions). "Official" marks print each morning; intraday marks are labeled indicative.')}
@@ -687,20 +749,26 @@ function renderTop(){
 }
 
 function renderBanners(){
-  const hb=S.heartbeat||{},fr=S.flow_regime||{},seen=hb.age_hours!=null?`${fmt(hb.age_hours,1)} h ago`:'time unavailable';
+  const hb=S.heartbeat||{},fr=S.flow_regime||{},liveAge=ageHours(hb.ended);
+  const heartbeatMs=parseTime(hb.ended),invalidHeartbeat=Boolean(hb.ended)&&(heartbeatMs==null||heartbeatMs>Date.now());
+  const effectiveAge=liveAge!=null?liveAge:(validNumber(hb.age_hours)?Number(hb.age_hours):null);
+  const seen=invalidHeartbeat?'invalid future timestamp':(effectiveAge!=null?`${fmt(effectiveAge,1)} h ago`:'time unavailable');
+  const heartbeatStale=Boolean(hb.stale)||invalidHeartbeat||effectiveAge==null||effectiveAge>26;
   document.getElementById('banners').innerHTML=
-    `<span>LAST PUBLISHED UPDATE <b>${seen}</b>${hb.stale?' <span class="tag">STALE</span>':''}</span>`+
+    `<span>LAST OBSERVED FUND RUN <b>${esc(seen)}</b>${heartbeatStale?' <span class="tag">STALE</span>':''}</span>`+
     `<span>FOREIGN FLOW <b>${esc(fr.regime||'—')}</b>${fr.breadth_pos_pct!=null?` · ${fmt(fr.breadth_pos_pct,0)}% net-bought`:''}${fr.stale?' <span class="tag">stale</span>':''}</span>`;
 }
 
 function renderStrip(){
   const g=S.books.GLOBAL,i=S.books.INDO;
-  const usd=(g.nav_usd||0)+(i.nav_usd||0);
+  const complete=validNumber(g.nav_usd)&&validNumber(i.nav_usd);
+  const usd=complete?Number(g.nav_usd)+Number(i.nav_usd):null;
+  const marks=[g.mark,i.mark].filter(Boolean),markLabel=marks.length===2&&marks[0]===marks[1]?marks[0]:'mixed marks';
   const cells=[
-    ['Total NAV (USD)','$'+fmt0(usd),''],
-    [`${bookName('GLOBAL')} — since inception`,pct(g.since_inception_pct),cls(g.since_inception_pct)],
-    [`${bookName('INDO')} — since inception`,pct(i.since_inception_pct),cls(i.since_inception_pct)],
-    ['Benchmarks (N / S)',`${pct(g.bench_since_inception_pct)} / ${pct(i.bench_since_inception_pct)}`,'']];
+    [`Current total NAV (USD) · ${markLabel}`,complete?'$'+fmt0(usd):'— (incomplete)',''],
+    [`${bookName('GLOBAL')} — inception / official`,pct(g.since_inception_pct),cls(g.since_inception_pct)],
+    [`${bookName('INDO')} — inception / official`,pct(i.since_inception_pct),cls(i.since_inception_pct)],
+    ['Official benchmarks (N / S)',`${pct(g.bench_since_inception_pct)} / ${pct(i.bench_since_inception_pct)}`,'']];
   document.getElementById('strip').innerHTML=cells.map(c=>
     `<div class="cell"><div class="k">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}</div></div>`).join('');
 }
@@ -718,11 +786,10 @@ function govNote(){
   return `REVIEW ≤ ${fmt(dg.review_trigger_pct,0)}% · DE-GROSS ≤ ${fmt(dg.degross_trigger_pct,0)}%`;
 }
 function pmPersona(b){
-  if(!RO||!RO.roster)return'';
-  const e=RO.roster.find(x=>x.role==='PM_'+b); return e?e.persona:'';
+  const e=records(RO&&RO.roster).find(x=>x.role==='PM_'+b); return e?e.persona:'';
 }
 function renderBook(b,el){
-  const s=S.books[b],hs=H[b]||[],pm=pmPersona(b);
+  const s=S.books[b],hs=records(H[b]),pm=pmPersona(b);
   const rows=hs.map(h=>`<tr class="${h.stale?'stale':''}">
     <td class="mono">${esc(h.ticker)}</td><td>${esc(h.instrument)}</td>
     <td class="num mono">${fmt0(h.qty)}</td>
@@ -734,13 +801,13 @@ function renderBook(b,el){
   document.getElementById(el).innerHTML=`
     <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div><h2>${esc(bookName(b))}</h2>
       <span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}</div>
-    <div class="pm">${pm?esc(pm)+' · ':''}${b==='GLOBAL'?'North Book (USD)':'South Book (IDR)'}</div>
+    <div class="pm">${pm?esc(pm)+' · PM · ':''}${b==='GLOBAL'?'North Book (USD)':'South Book (IDR)'} · ${esc(s.mark||'unknown')} snapshot ${esc(String(s.asof||'').slice(0,16).replace('T',' '))}</div>
     <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}<span class="chg ${cls(si)}">${pct(si)}</span></div>
     <div class="govnote">${govNote()}</div>
     <div class="kv">
-      <div><div class="k">Since inception</div><div class="v mono ${cls(si)}">${pct(si)}</div></div>
+      <div><div class="k">Since inception · official</div><div class="v mono ${cls(si)}">${pct(si)}</div></div>
       <div><div class="k">vs benchmark</div><div class="v mono ${cls(alphaPP(s))}">${alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp'}</div></div>
-      <div><div class="k">Cash / names</div><div class="v mono">${fmt0(s.cash)} · ${s.n_names||0}</div></div>
+      <div><div class="k">Cash / names</div><div class="v mono">${fmt0(s.cash)} · ${fmt0(s.n_names)}</div></div>
     </div>
     <div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th><th class="num">Qty</th>
       <th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
@@ -749,36 +816,46 @@ function renderBook(b,el){
     <div style="padding:2px 10px 10px">${miniChart(b)}</div>`;
 }
 function miniChart(b){
-  const ser=(N&&N[b])||[]; if(ser.length<2)return'<div class="muted small">not enough NAV history yet</div>';
+  const ser=records(N&&N[b]); if(ser.length<2)return'<div class="muted small">not enough NAV history yet</div>';
   return chart(ser.map(r=>String(r.date).slice(5)),
     [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
      {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
-    {h:170,fmtY:v=>fmt(v,1),fill:true,pills:true});
+    {h:170,fmtY:v=>fmt(v,1),fill:true,pills:true,
+     title:`${bookName(b)} official performance versus benchmark`,
+     description:'Official total-return marks rebased to 100 at inception.'});
 }
 function renderTotal(){
-  const t=(N&&N.USD_TOTAL)||[];
+  const t=records(N&&N.USD_TOTAL);
+  const latest=t.length?t[t.length-1]:null;
+  document.getElementById('anAux').textContent=latest
+    ?`official paired marks · latest ${String(latest.date||'—')}`
+    :'official paired marks only';
   document.getElementById('chTotal').innerHTML=t.length<2
     ?'<div class="muted small">consolidated series appears once both books print an official mark the same day</div>'
     :chart(t.map(r=>String(r.date).slice(5)),[{name:'Total',color:'#3E8EDD',vals:t.map(r=>r.nav_usd)}],
-      {h:230,fmtY:v=>'$'+fmt0(v),fill:true,pills:true});
+      {h:230,fmtY:v=>'$'+fmt0(v),fill:true,pills:true,
+       title:'Consolidated official NAV in US dollars',
+       description:'Paired official North and South book marks; current indicative snapshots are excluded.'});
 }
 
 function renderAnalytics(){
   const el=document.getElementById('analytics'); if(!el)return;
   if(!AN||!AN.books){el.innerHTML='<div class="small muted">analytics not published yet</div>';return;}
-  const anyLow=Object.values(AN.books).some(b=>b.metrics&&b.metrics.low_n);
-  document.getElementById('anNote').textContent=anyLow?`${Object.values(AN.books)[0].metrics.n_obs} obs — annualized figures not yet meaningful (need ${AN.method.min_obs_for_stable_stats}+)`:`${Object.values(AN.books)[0].metrics.n_obs} obs`;
+  const books=['GLOBAL','INDO'].map(key=>({key,metrics:(AN.books[key]||{}).metrics||{}}));
+  const anyLow=books.some(b=>b.metrics.low_n),counts=books.map(b=>`${bookName(b.key)} ${b.metrics.n_obs??'—'}`).join(' / ');
+  const minimum=AN.method&&AN.method.min_obs_for_stable_stats;
+  document.getElementById('anNote').textContent=anyLow?`${counts} obs · annualized figures not meaningful${minimum!=null?` until ${minimum}+`:''}`:`${counts} obs`;
   el.innerHTML=['GLOBAL','INDO'].map(anBlock).join('');
 }
 function anBlock(b){
   const fm=(v,suf='')=>v==null?'—':`${v>0?'+':''}${fmt(v)}${suf}`;
   const row=(k,v)=>`<tr><td class="muted" style="padding:2.5px 0;border-bottom:1px dotted var(--hair)">${k}</td><td class="num mono" style="border-bottom:1px dotted var(--hair)">${v}</td></tr>`;
-  const d=(AN&&AN.books&&AN.books[b])||{},m=d.metrics||{},att=d.attribution||[];
+  const d=asRecord(AN&&AN.books&&AN.books[b]),m=asRecord(d.metrics),att=records(d.attribution);
   const attRows=att.length?att.map(a=>`<tr><td class="muted" style="padding:2.5px 0;border-bottom:1px dotted var(--hair)">${esc(a.bucket)}</td><td class="num mono ${cls(a.contribution_pp)}" style="border-bottom:1px dotted var(--hair)">${fm(a.contribution_pp,'pp')}</td></tr>`).join(''):row('—','no contributions yet');
-  return `<div class="diag"><h4>${bookName(b)}</h4>
-      <div class="small muted" style="margin:1px 0 6px">benchmark: ${esc(d.benchmark||'—')} · rf ${fmt(m.rf_annual_pct)}%</div>
+  return `<div class="diag"><h4>${esc(bookName(b))}</h4>
+      <div class="small muted" style="margin:1px 0 6px">TWR from first official mark · benchmark: ${esc(d.benchmark||'—')} · rf ${fmt(m.rf_annual_pct)}%</div>
       <table style="font-size:11.5px">
-        ${row('Return (cum / ann)',`${fm(m.cum_return_pct,'%')} / ${fm(m.ann_return_pct,'%')}${m.low_n?' <span class=muted>*</span>':''}`)}
+        ${row('TWR (cum / ann)',`${fm(m.cum_return_pct,'%')} / ${fm(m.ann_return_pct,'%')}${m.low_n?' <span class=muted>*</span>':''}`)}
         ${row('Benchmark (cum)',fm(m.bench_cum_return_pct,'%'))}
         ${row('Active return',`<span class="${cls(m.active_cum_pp)}">${fm(m.active_cum_pp,'pp')}</span>`)}
         ${row('Volatility (ann)',fm(m.ann_vol_pct,'%'))}
@@ -794,30 +871,42 @@ function anBlock(b){
 
 function renderDiag(){
   // roster
-  const rr=(RO&&RO.roster)||[];
+  const rr=records(RO&&RO.roster);
   document.getElementById('roster').innerHTML=rr.map(e=>
-    `<div class="r"><span><b>${esc(e.persona)}</b> <span class="muted">· ${esc(e.title||'Desk agent')}</span></span></div>`).join('')||'<span class="muted small">roster unavailable</span>';
+    `<div class="r"><span><b>${esc(e.persona)}</b> <span class="muted">· ${esc(e.title||'Desk agent')} · ${esc(e.role||'')}</span></span></div>`).join('')||'<span class="muted small">roster unavailable</span>';
   // sleeves
   const se=document.getElementById('sleeves');
   if(!SL||!SL.n){se.innerHTML='<span class="muted">no closed theses yet — hit rates populate as positions resolve.</span>';}
   else{
     const ov=SL.overall||{};
-    let rows=`<div class="r"><span><b>overall</b></span><span>${ov.n} · ${ov.hit_rate!=null?Math.round(ov.hit_rate*100)+'%':'—'}${ov.avg_realized_pct!=null?' · '+pct(ov.avg_realized_pct):''}</span></div>`;
-    const sl=SL.sleeves||{};
-    for(const k of Object.keys(sl)){const a=sl[k];
-      rows+=`<div class="r"><span>${esc(k)}</span><span>${a.n} · ${a.hit_rate!=null?Math.round(a.hit_rate*100)+'%':'—'}${a.avg_realized_pct!=null?' · '+pct(a.avg_realized_pct):''}</span></div>`;}
+    let rows=`<div class="r"><span><b>overall</b></span><span>${fmt0(ov.n)} · ${ov.hit_rate!=null?Math.round(ov.hit_rate*100)+'%':'—'}${ov.avg_realized_pct!=null?' · '+pct(ov.avg_realized_pct):''}</span></div>`;
+    const sl=asRecord(SL.sleeves);
+    for(const k of Object.keys(sl)){const a=asRecord(sl[k]);
+      rows+=`<div class="r"><span>${esc(k)}</span><span>${fmt0(a.n)} · ${a.hit_rate!=null?Math.round(a.hit_rate*100)+'%':'—'}${a.avg_realized_pct!=null?' · '+pct(a.avg_realized_pct):''}</span></div>`;}
     se.className='roster'; se.style.gridTemplateColumns='1fr'; se.innerHTML=rows;
   }
 }
 
 // ---- feeds ----
-let curTab='';
+let curTab='',feedGeneration=0;
 const TABS={reports:'Daily',rebalance:'Rebalance',decisions:'Decisions',
             trades:'Trades',theses:'Theses',lessons:'Lessons',postmortems:'Post-mortems'};
-function tabs(on){curTab=on;
+function tabs(on){curTab=on;const generation=++feedGeneration;
   document.getElementById('tabs').innerHTML=Object.entries(TABS).map(([k,v])=>
-    `<button class="tab ${k===on?'on':''}" onclick="tabs('${k}')">${esc(v)}</button>`).join('');
-  feed(on);
+    `<button class="tab ${k===on?'on':''}" id="feed-tab-${k}" role="tab" data-feed="${k}" aria-controls="feed" aria-selected="${k===on?'true':'false'}" tabindex="${k===on?'0':'-1'}">${esc(v)}</button>`).join('');
+  const buttons=[...document.querySelectorAll('#tabs [role="tab"]')];
+  buttons.forEach((button,index)=>{
+    button.addEventListener('click',()=>tabs(button.dataset.feed));
+    button.addEventListener('keydown',event=>{
+      let next=null;
+      if(event.key==='ArrowRight')next=(index+1)%buttons.length;
+      if(event.key==='ArrowLeft')next=(index-1+buttons.length)%buttons.length;
+      if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;
+      if(next!==null){event.preventDefault();tabs(buttons[next].dataset.feed);document.getElementById(`feed-tab-${buttons[next].dataset.feed}`).focus();}
+    });
+  });
+  document.getElementById('feed').setAttribute('aria-labelledby',`feed-tab-${on}`);
+  feed(on,generation);
 }
 function bdot(b){return b==='GLOBAL'?`<span class="dotN" title="${esc(bookName('GLOBAL'))}">●</span>`
   :(b==='INDO'?`<span class="dotS" title="${esc(bookName('INDO'))}">●</span>`:'');}
@@ -825,29 +914,31 @@ function who(name,role){return name?`<span class="who">${esc(name)}</span>${role
 function poss(name,noun){return name?`<span class="who">${esc(name)}</span><span class="muted">’s ${esc(noun)}</span>`:'';}
 const empty=m=>`<div class="item muted">${esc(m||'Nothing here yet.')}</div>`;
 
-async function feed(kind){
+async function feed(kind,generation){
+  const active=()=>generation===feedGeneration&&curTab===kind&&(activeWorkspace===null||activeWorkspace==='monitor');
+  if(!active())return;
   const box=document.getElementById('feed'); box.innerHTML='<div class="item muted">Loading…</div>';
   if(kind==='reports'){
-    const r=await api('reports'); const list=(r&&r.daily)||[];
-    box.innerHTML=list.map(x=>`<div class="item"><div class="meta"><span>${esc(x.file)}</span>
-      ${x.meta&&x.meta.book?bdot(x.meta.book):''}</div><div class="body">${md(x.body)}</div></div>`).join('')||empty();
+    const r=await api('reports');if(!active())return; const list=records(r&&r.daily);
+    box.innerHTML=list.map(x=>{const m=x.meta||{};return `<div class="item"><div class="meta"><span>${esc((m.date||'').slice(0,10)||'Daily report')}</span>
+      ${m.book?bdot(m.book):''}${m.session?`<span class="tag">${esc(m.session)}</span>`:''}</div><div class="body">${md(x.body)}</div></div>`;}).join('')||empty();
   }else if(kind==='rebalance'){
-    const r=await api('reports'); const list=(r&&r.rebalance)||[];
+    const r=await api('reports');if(!active())return; const list=records(r&&r.rebalance);
     box.innerHTML=list.map(x=>`<div class="item"><div class="meta">
       ${x.meta&&x.meta.book?bdot(x.meta.book):''}<span>${esc((x.meta&&x.meta.date||'').slice(0,10))}</span>
       ${x.persona?`<span>${poss(x.persona,'memo')}</span>`:''}
       ${x.judged_by?`<span>· ${poss(x.judged_by,'verdict')}${x.meta&&x.meta.judge_verdict?` <span class="tag">${esc(x.meta.judge_verdict)}</span>`:''}</span>`:''}</div>
       <div class="body">${md(x.body)}</div></div>`).join('')||empty();
   }else if(kind==='decisions'){
-    const r=await api('decisions')||[];
+    const r=records(await api('decisions'));if(!active())return;
     box.innerHTML=r.map(x=>{const m=x.meta||{};return `<div class="item"><div class="meta">
       ${bdot(m.book)}<span>${esc((m.date||'').slice(0,10))}</span>
       ${m.kind?`<span class="tag">${esc(m.kind)}</span>`:''}
-      <span>${esc(m.title||x.file)}</span>${x.persona?`<span>${who(x.persona,'')}</span>`:''}
+      <span>${esc(m.title||'Decision')}</span>${x.persona?`<span>${who(x.persona,m.role||m.actor||'')}</span>`:''}
       ${m.thesis?`<span class="mono">${esc(m.thesis)}</span>`:''}</div>
       <div class="body">${md(x.body)}</div></div>`;}).join('')||empty();
   }else if(kind==='trades'){
-    const r=await api('trades')||[];
+    const r=records(await api('trades'));if(!active())return;
     const rows=r.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
       <td>${bdot(t.book)} ${esc(t.book||'')}</td>
       <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
@@ -858,9 +949,9 @@ async function feed(kind){
       <th class="num">Cash Δ</th></tr></thead><tbody>${rows}</tbody></table></div>
       ${rows?'':'<div class="muted">No trades yet.</div>'}</div>`;
   }else if(kind==='theses'){
-    const r=await api('theses')||[];
+    const r=records(await api('theses'));if(!active())return;
     box.innerHTML=r.map(x=>{const m=x.meta||{},ex=x.excerpt||{};return `<div class="item"><div class="meta">
-      ${bdot(m.book)}<span class="mono">${esc(m.id||x.file)}</span><span>${esc(m.ticker||'')}</span>
+      ${bdot(m.book)}<span class="mono">${esc(m.id||'Thesis')}</span><span>${esc(m.ticker||'')}</span>
       <span>${esc(m.horizon||'')} horizon</span><span class="tag">${esc(m.status||'')}</span>
       ${m.sleeve?`<span class="tag">${esc(m.sleeve)}</span>`:''}${m.archetype?`<span class="tag">${esc(m.archetype)}</span>`:''}
       ${m.verdict?`<span class="tag">${esc(m.verdict)}</span>`:''}</div>
@@ -870,14 +961,14 @@ async function feed(kind){
       ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}
       ${ex.kill_criteria?`<div class="body"><h4>Kill criteria</h4>${md(ex.kill_criteria)}</div>`:''}</div>`;}).join('')||empty();
   }else if(kind==='lessons'){
-    const r=await api('lessons')||[];
-    box.innerHTML=r.map(x=>`<div class="item"><div class="meta"><span>${esc(x.file)}</span>
+    const r=records(await api('lessons'));if(!active())return;
+    box.innerHTML=r.map(x=>`<div class="item"><div class="meta"><span>${esc(((x.meta||{}).date||'').slice(0,10)||'Lesson')}</span>
       ${x.persona?`<span>${who(x.persona,'')}</span>`:''}
       ${x.meta&&x.meta.scope?`<span class="tag">${esc(x.meta.scope)}</span>`:''}</div>
       <div class="body">${md(x.body)}</div></div>`).join('')
       ||empty('No lessons yet — the fund has not been wrong yet, or has not noticed.');
   }else if(kind==='postmortems'){
-    const r=await api('postmortems')||[];
+    const r=records(await api('postmortems'));if(!active())return;
     box.innerHTML=r.map(x=>{const m=x.meta||{};return `<div class="item"><div class="meta">
       ${bdot(m.book)}<span>${esc((m.date||'').slice(0,10))}</span><span class="mono">${esc(m.ticker||m.thesis||'')}</span>
       ${x.persona?`<span>${who(x.persona,'')}</span>`:''}</div>
