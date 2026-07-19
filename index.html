@@ -208,9 +208,9 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   <div class="strip" id="strip"></div>
 
   <section class="panel office-panel" aria-labelledby="officeHeading">
-    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="aux">11 fictional agents · market-clock routines · published meetings and handoffs</span></div>
+    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="aux">11 fictional agents · working at assigned desks between exact meetings</span></div>
     <div class="office-meta">
-      <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Waiting for the next published update</span><span class="office-run-status" id="officeStatus">—</span></div></div>
+      <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Illustrative working floor · 11 at assigned desks</span><span class="office-run-status" id="officeStatus">—</span></div></div>
       <div><div class="k">Meeting room</div><div class="v" id="officeMeetingStatus" role="status" aria-live="polite">Available · no meeting in progress</div></div>
       <div><div class="k">Next scheduled session</div><div class="v mono" id="officeNext">—</div></div>
       <div><div class="k">Market tape</div><div class="v" id="officeMarketMeta">Waiting for published market data</div></div>
@@ -218,14 +218,14 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     <div class="office-stage" id="office">
       <canvas class="office-canvas" id="officeCanvas" width="1440" height="576" aria-hidden="true"></canvas>
       <div class="office-loading" id="officeLoading">Loading the 6S Virtual Office…</div>
-      <span class="office-help">Illustrative routine unless marked published or observed</span>
+      <span class="office-help">Working animation is illustrative · meeting and run provenance stays explicit</span>
       <p class="sr-only" id="officeMarketA11y" aria-live="polite"></p>
     </div>
     <div class="office-workflow" aria-label="Research and execution workflow">
       <b>Research workflow</b><span>Analyst</span><span class="arrow">→</span><span>Bear review</span><span class="arrow">→</span><span>Analyst revision</span><span class="arrow">→</span><span>Judge</span><span class="arrow">→</span><span>Risk</span><span class="arrow">→</span><span>PM</span><span class="arrow">→</span><span>Ops / fills</span><span class="arrow">→</span><span>Postmortem</span><span class="office-handoff" id="officeHandoff" aria-live="polite">No active desk handoff</span>
     </div>
-    <div class="office-rhythm" aria-label="Illustrative market coverage desk clocks">
-      <b>Coverage clocks</b><span class="hub">North · New York</span><span class="hub">Macro · London</span><span class="hub">South + control · Jakarta</span><span class="note">Illustrative arrival, work, break and rest rhythm · exact meetings and validated handoffs take priority</span>
+    <div class="office-rhythm" aria-label="Market coverage clocks and always-working office behavior">
+      <b>Coverage clocks</b><span class="hub">North · New York</span><span class="hub">Macro · London</span><span class="hub">South + control · Jakarta</span><span class="note">Local market time only · all 11 avatars work at assigned desks between exact meetings</span>
     </div>
     <details class="office-access">
       <summary id="officeRosterSummary">Accessible desk roster — loading</summary>
@@ -290,7 +290,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js?v=20260719-finance-vest-desk-rhythm-v2"></script>
+<script src="office-floor.js?v=20260719-always-working-vest-v3"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -602,7 +602,7 @@ async function renderStructureView(){
         <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
           <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working on a published cadence. No human picks the trades. The owner maintains the rulebook; the fund does the investing.</p>
           <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
-          <p>The virtual office follows three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. Arrival, work, lunch and rest animation is an illustrative routine—not a claim that a persona or person is present in that city. Published meetings and validated live desk handoffs override that routine.</p>
+          <p>The virtual office displays three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. They provide local market context only, not avatar schedules or persona locations. All 11 avatars illustratively work at their assigned desks between exact meetings; meeting participants walk to the central room and return to work when the published or valid live meeting ends.</p>
           <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or stale (⏸). All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
         </div></div></div></div>
     </div>
