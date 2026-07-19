@@ -485,48 +485,9 @@ class Floor{
   a.visualMode=mode;let frame=1,row=a.dir==="up"?1:a.dir==="left"||a.dir==="right"?2:0,flip=a.dir==="left";
   if(mode==="walk")frame=[0,1,2,1][Math.floor(a.frameTime/.16)%4];else if(mode==="type")frame=3+Math.floor(a.frameTime/.28)%2;else if(mode==="read"||mode==="review")frame=5+Math.floor(a.frameTime/.38)%2;
   const bob=mode!=="walk"&&(mode==="type"||mode==="read"||mode==="review")?Math.floor((Math.sin(clock*4+a.index)+1)/2):0,x=Math.round(a.x),y=Math.round(a.y),dx=x-16,dy=y-55-bob;c.fillStyle="rgba(0,0,0,.42)";c.fillRect(x-12,y+5,24,5);
-  c.save();if("filter" in c)c.filter="hue-rotate("+a.hue+"deg)";if(flip){c.translate(x,0);c.scale(-1,1);c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,-16,dy,32,64);}else c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,dx,dy,32,64);c.restore();this.drawFinanceVest(c,x,dy,row,flip,mode,frame);
+  c.save();if("filter" in c)c.filter="hue-rotate("+a.hue+"deg)";if(flip){c.translate(x,0);c.scale(-1,1);c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,-16,dy,32,64);}else c.drawImage(this.images[a.sheet],frame*16,row*32,16,32,dx,dy,32,64);c.restore();
   if(mode==="wait"||mode==="review"){c.fillStyle="#F3F4F6";c.fillRect(x+14,dy-2,15,13);c.fillStyle=mode==="review"?"#E84A93":"#E8A33D";c.font="bold 9px Arial";c.fillText(mode==="review"?"?":"…",x+18,dy+5);}
   if(mode==="read"){c.fillStyle="#E8EAED";c.fillRect(x+10,y-22,10,13);c.fillStyle="#3E8EDD";c.fillRect(x+10,y-22,2,13);c.fillStyle="#697580";c.fillRect(x+13,y-18,5,1);c.fillRect(x+13,y-15,4,1);}
-  c.restore();
- }
- drawFinanceVest(c,x,dy,row,flip,mode,frame){
-  // A fitted sleeveless overlay: it begins below the sprite's collar and remains
-  // inside the torso in every pose, leaving the face, shirt sleeves, arms and
-  // trousers untouched. Hands, keyboards and reading/review props draw later.
-  const activePose=mode==="type"||mode==="read"||mode==="review",stride=mode==="walk"&&frame===1?1:0,top=dy+22+stride,bottom=top+(activePose?16:17);
-  const polygon=points=>{c.beginPath();c.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)c.lineTo(points[i][0],points[i][1]);c.closePath();c.fill();};c.save();
-  if(flip){c.translate(x,0);c.scale(-1,1);c.translate(-x,0);}
-  if(row===2){
-   // Side profile is deliberately slim so the near arm remains readable.
-   c.fillStyle="#071521";polygon([[x-3,top+1],[x+2,top+1],[x+4,top+5],[x+3,bottom],[x-3,bottom],[x-4,top+5]]);
-   c.fillStyle="#102C47";polygon([[x-2,top+2],[x+1,top+2],[x+3,top+5],[x+2,bottom-1],[x-2,bottom-1],[x-3,top+5]]);
-   c.fillStyle="#1B4262";c.fillRect(x-2,top+4,2,bottom-top-6);
-   c.fillStyle="#294F6D";for(let q=top+7;q<bottom-1;q+=4)c.fillRect(x-2,q,4,1);
-   c.fillStyle="#7D93A3";c.fillRect(x+2,top+6,1,bottom-top-7);
-   c.fillStyle="#30A0B5";c.fillRect(x,top+8,3,1);c.fillStyle="#E8A33D";c.fillRect(x,top+9,3,1);
-  }else if(row===1){
-   // The back keeps a shallow collar and an uninterrupted quilted panel.
-   c.fillStyle="#071521";polygon([[x-4,top],[x-7,top+3],[x-7,top+7],[x-6,bottom],[x+6,bottom],[x+7,top+7],[x+7,top+3],[x+4,top]]);
-   c.fillStyle="#102C47";polygon([[x-3,top+1],[x-6,top+4],[x-5,bottom-1],[x+5,bottom-1],[x+6,top+4],[x+3,top+1]]);
-   c.fillStyle="#1B4262";c.fillRect(x-4,top+3,8,2);
-   c.fillStyle="#294F6D";for(let q=top+7;q<bottom-1;q+=4)c.fillRect(x-5,q,10,1);
-   c.fillStyle="#071521";c.fillRect(x-5,bottom-1,10,1);
-  }else{
-   // Two narrow front panels create real armholes and preserve the base shirt's
-   // collar in the V; there is no painted shoulder/sleeve area.
-   c.fillStyle="#071521";
-   polygon([[x-3,top],[x-6,top+2],[x-7,top+6],[x-6,bottom],[x-1,bottom],[x-1,top+6]]);
-   polygon([[x+3,top],[x+6,top+2],[x+7,top+6],[x+6,bottom],[x+1,bottom],[x+1,top+6]]);
-   c.fillStyle="#102C47";
-   polygon([[x-3,top+1],[x-5,top+3],[x-6,top+6],[x-5,bottom-1],[x-1,bottom-1],[x-1,top+7]]);
-   polygon([[x+3,top+1],[x+5,top+3],[x+6,top+6],[x+5,bottom-1],[x+1,bottom-1],[x+1,top+7]]);
-   c.fillStyle="#1B4262";c.fillRect(x-5,top+5,2,bottom-top-7);c.fillRect(x+3,top+5,2,bottom-top-7);
-   c.fillStyle="#294F6D";for(let q=top+8;q<bottom-1;q+=4){c.fillRect(x-5,q,4,1);c.fillRect(x+1,q,4,1);}
-   c.fillStyle="#7D93A3";c.fillRect(x,top+6,1,bottom-top-7);c.fillStyle="#071521";c.fillRect(x-5,bottom-1,10,1);
-   // Tiny heritage-style chest label, kept wholly on the vest panel.
-   c.fillStyle="#30A0B5";c.fillRect(x+2,top+8,3,1);c.fillStyle="#E84A93";c.fillRect(x+2,top+9,3,1);c.fillStyle="#E8A33D";c.fillRect(x+2,top+10,3,1);
-  }
   c.restore();
  }
  drawAgentLabel(c,a){
@@ -542,6 +503,6 @@ window.SixSouthOffice=Object.freeze({
  setVisible(value){if(floor&&floor.canvas)floor.setRouteVisible(value);},
  meetingAt(structure,iso){return readonlyMeeting(scheduleMeetingAt(structure,new Date(iso)));},
  deskClockAt(role,iso){const validDate=iso instanceof Date&&Number.isFinite(iso.getTime()),validString=typeof iso==="string"&&iso.trim()!==""&&Number.isFinite(new Date(iso).getTime()),when=validDate?new Date(iso.getTime()):validString?new Date(iso):new Date(NaN);return readonlyDeskClock(deskClockAt(role,when));},
- inspect(){if(!floor)return null;return Object.freeze({now:(floor.officeNow||floor.currentTime()).toISOString(),meeting:readonlyMeeting(floor.meeting),agents:Object.freeze(floor.agents.map(agent=>{const desk=agent.lifecycle||safeDeskClock(agent.role);return Object.freeze({role:agent.role,current:Object.freeze([agent.col,agent.row]),target:Object.freeze([...(agent.target||[])]),pathLength:agent.path.length,meetingAssigned:!!agent.meetingAssigned,returningMeeting:!!agent.returningMeeting,controlledMove:!!agent.controlledMove,dutyPhase:String(agent.dutyPhase||desk.phase),hub:String(desk.hub),timeZone:desk.timeZone,deskTime:String(desk.deskTime),visualMode:String(agent.visualMode||"idle"),routinePlace:String(agent.routinePlace||""),financeVest:true});}))});}
+ inspect(){if(!floor)return null;return Object.freeze({now:(floor.officeNow||floor.currentTime()).toISOString(),meeting:readonlyMeeting(floor.meeting),agents:Object.freeze(floor.agents.map(agent=>{const desk=agent.lifecycle||safeDeskClock(agent.role);return Object.freeze({role:agent.role,current:Object.freeze([agent.col,agent.row]),target:Object.freeze([...(agent.target||[])]),pathLength:agent.path.length,meetingAssigned:!!agent.meetingAssigned,returningMeeting:!!agent.returningMeeting,controlledMove:!!agent.controlledMove,dutyPhase:String(agent.dutyPhase||desk.phase),hub:String(desk.hub),timeZone:desk.timeZone,deskTime:String(desk.deskTime),visualMode:String(agent.visualMode||"idle"),routinePlace:String(agent.routinePlace||"")});}))});}
 });
 })();
