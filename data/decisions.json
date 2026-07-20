@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-07-20T08:45:00+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN \u2014 no actions (all theses KILL, no positions, no pending)",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "## Session review summary\n\n**QC**: WARN (PRICE_CACHE_OLD, 50h stale) \u2014 not CRITICAL, proceed.\n\n**Governor**: Both books NONE \u2014 no de-gross action.\n\n**Kill exits (3a)**: No holdings \u2014 gross_exposure_pct 0.0, empty holdings, no positions to kill. fund record empty. No breach.\n\n**Governor de-gross (3b)**: N/A \u2014 both books in NONE state.\n\n**Entries for judged theses (3c)**: All 6 theses (T-INDO-PNBN-001, T-INDO-DSNG-001, T-INDO-ELSA-001, T-GLOBAL-SMFG-001, T-GLOBAL-NVO-001, T-GLOBAL-TXN-001) are verdict KILL, killed 2026-07-13. No theses in judged/live with PASS/PASS_REDUCED. No entry opportunities.\n\n**Orders**: None created or cancelled.\n\n**Risk check (4)**: Skipped \u2014 no tickets created.\n\n**Time check (6)**: No tickets created, no slip to report.\n\n**Bash/sandbox note**: venv Bash unavailable this session (EPERM on session-env directory creation). State files read directly for analysis. Journal entry written manually.\n\nNext actionable event: next scheduled IDX_CLOSE or IDEATION session.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-07-18 10:08:39.650388+07:00",
       "book": "INDO",
       "title": "WEEKLY_DEEP sourcing triage 2026-07-18",
