@@ -1,5 +1,16 @@
 [
   {
+    "meta": {
+      "date": "2026-07-23T08:45:56.614906+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-07-23: no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "IDX_PREOPEN session 2026-07-23 08:45 WIB. QC WARN (dossier fund record 844 words > 800 \u2014 minor, not CRITICAL). Governor NONE (no DEGROSS). No INDO judged_unticketed theses with sized entries (T-GLOBAL-0700HK-001 is GLOBAL book, not INDO; sizing is pm_pct=null / Kelly <=0 anyway). No kill exits due. No tickets created. All clear \u2014 exiting.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-07-22 (Wed)\n\n## State at entry\n- QC: OK, no flags. Governor: both books NONE, all-cash, zero drawdown.\n- No kill actions, open reviews, or live theses. No watchlists, no fund record.\n- Existing cards (from Mon 07-21 / Fri 07-18): GLOBAL 4 (MSFT, JPM, GE, LLY), INDO 5 (ADRO-WATCH, TLKM, INCO, MEDC, AMMN).\n- Sandbox EPERM persists (same as 07-21) \u2014 fund record, fund record, and all bash/Python blocked.\n\n## Ingestion sweep\n- 6 xlsx files in data/fundamentals_inbox/ (NVO, SMFG, TXN, DSNG, ELSA, PNBN \u2014 all killed-thesis tickers from 07-13).\n- 2 dossiers already exist from 07-21: NVO, TXN.\n- 4 dossier-writer agents spawned for SMFG, DSNG, ELSA, PNBN (web-research fallback since xlsx unparseable via Read tool). **All 4 confirmed complete** \u2705 (SMFG, DSNG, ELSA, PNBN), joining NVO and TXN from 07-21.\n- **All 6 of 6 inbox tickers now have dossiers.** Raw files remain in inbox (mv to market-data snapshot blocked by sandbox). Ops should: (a) resolve sandbox, (b) move all 6 ingested files from inbox to market-data snapshot\n- Weekday ingestion queue fully caught up modulo sandbox file-move.\n\n## Screen sweep\n- fund record unavailable (sandbox EPERM). No screen\u2026",
     "persona": ""
