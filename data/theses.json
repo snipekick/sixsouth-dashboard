@@ -81,6 +81,26 @@
   },
   {
     "meta": {
+      "id": "T-GLOBAL-SMFG-002",
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "quality_bank_rerating",
+      "catalyst_date": null,
+      "last_reviewed": null
+    },
+    "analyst": "Sloane",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "",
+      "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
       "id": "T-GLOBAL-SONY-001",
       "book": "GLOBAL",
       "ticker": "SONY",
@@ -177,6 +197,26 @@
     "excerpt": {
       "variant_perception": "**Market believes:** ELSA is a generic small-cap Indonesian O&G price-beta name riding a momentum pop (it screens WASHOUT/NEGLECTED/MOMENTUM simultaneously) \u2014 that the +43.5% 6m / +17.6% 1m re-rating is speculative, flow- or PDSI-merger-rumor-driven, into a softening-Brent backdrop (Brent down from ~$117 April-2026 peak to ~$85 June-2026, EIA forecasting further easing toward ~$74 in Q3), and will fade once oil sentiment cools.\n\n**Why wrong:** Elnusa's addressable market is not primarily a spot-Brent bet. It runs off SKK Migas's multi-year, government-mandated upstream *activity* program (the \"Triple 100\" well-count target and the 1-million-BOPD production goal), budgeted on a multi-year PSC/cost-recovery cycle that is lagged relative to, not synchronous with, month-to-month Brent moves. Elnusa's own disclosed upstream contract backlog has more than **doubled year-on-year** (~Rp4.4tn \u2192 ~Rp9.9tn, 9M2024 vs 9M2025) \u2014 a real, filing-adjacent operational data point that predates and is largely independent of the 1-month price pop, and that thin sell-side coverage (screen tags this NEGLECTED rank-1) has plausibly not fully modeled. The dividend (45% payout, well-covered >4x by through-cycle FCF) provides a valuation floor a pure price-beta framing ignores.\n\n**What proves us wrong:** A sustained decline in disclosed upstream contract backlog (kill kpi below); Brent staying under ~$70 for several quarters actually stalling the 2026 well-count program (evidence: KKKS deferring\u2026",
       "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
+      "id": "T-INDO-ELSA-002",
+      "book": "INDO",
+      "ticker": "ELSA.JK",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "neglected_midcap_discovery",
+      "catalyst_date": "2026-08-30",
+      "last_reviewed": null
+    },
+    "analyst": "Dani",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** The +29% 12m / +15% 1m re-rating is commodity beta \u2014 a small-cap O&G name riding a sentiment bounce into a CAUTIOUS, BoP-pressured regime (Brent easing toward ~$74 Q3; commodity bloc NEUTRAL, fund record 2026-07-11), the 51%-Pertamina tie capping upside and the FY2025 upstream decline (-18%) proving the doubled backlog is not converting. \"Cheap for a reason.\"\n\n**Why wrong:** ELSA's addressable market is not spot-Brent \u2014 it is a lagged, government-mandated upstream *activity* program (SKK Migas Triple-100, 1mm BOPD target) budgeted on a multi-year PSC cycle. The driver is company-specific: the upstream backlog more than doubled to ~Rp9.9tn (9M2025) and converts on a FY2025->FY2026 lag \u2014 the FY2025 upstream decline reflects contracts won late in 2025 hitting the P&L in 2026, the exact lag neglected_midcap_discovery monetizes (the market DISCOVERS the name when conversion shows in a dated print). At 0.91x P/B, net cash Rp1.94tn and a gross 6.5% yield, downside is anchored; the discovery event (HY2026 print, 2026-08-30) is dated and binary.\n\n**What proves us wrong:** (a) HY2026 upstream revenue still negative YoY \u2014 conversion falsified twice (kill-kpi #2); (b) dividend cut or flat payout signaling cash extraction; (c) no discovery catalyst (coverage initiation, index action, or an FY2026 growth print) by 2027-04-30.",
+      "kill_criteria": "Two material changes since the kill: (1) the archetype is corrected from the sign-inverted `commodity_capex_turnaround` to `neglected_midcap_discovery` (the fit the prior revision conceded); (2) a **dated discovery catalyst now exists** (HY2026 results due 2026-08-30) where T-INDO-ELSA-001's catalyst_date was null, the archetype's hard requirement. Idea card ADVANCE (2026-08-04) confirms 685, above the prior 640 entry."
     }
   },
   {
