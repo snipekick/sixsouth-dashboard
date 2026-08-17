@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-08-17T20:01:17.914796+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK not ticketable, no action",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "State at entry: QC WARN (3 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d, fx_carry_rates.EUR asof 2026-06-17 >60d, fx_carry_rates.JPY asof 2026-06-16 >60d. Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; kill_monitoring_suspended empty). Nothing to verify.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells emitted, no de-gross mix to choose. No buys in NONE anyway.\nc. Entries \u2014 T-GLOBAL-0700HK-001 is NOT ticketable: sizing.pm_pct is null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly <= 0, ADV unknown), and the sizing block states 'PM cannot deviate up from 0'. EV -8.75% (negative). Judge's three Phase-2 deliverables (3-yr avg ROIIC, SBC forward trajectory, entry multiple + KPI kill levels) still outstanding \u2014 last_reviewed null; risk-check judgment note #6 says sizing is VETOed until they are satisfied. No qty to ticket; runbook\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-06 (Thu)\n\n## State at entry\n- QC: OK (0 flags; prices live, both screens ran clean). Brief noted judged_unticketed T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue \u2014 not mine to execute).\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews. Pending orders: none.\n- Existing cards: GLOBAL 12 active (all ADVANCE), INDO 12 active (10 ADVANCE + ADRO-W + PWON-W). Both at the 12-card cap.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Note: 08-05 CONSTRUCT processed 2 of 19 ADVANCE cards (SMFG, ELSA), both KILLED. Kill ledger rows T-GLOBAL-SMFG-002 and T-INDO-ELSA-002 are present in fund record (ops done). The stage_log timestamp-inversion + stale-data process flags are ops/tooling items, not mine.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ empty (ancillary scripts only). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names, 11 NEGLECTED +\u2026",
     "persona": ""
