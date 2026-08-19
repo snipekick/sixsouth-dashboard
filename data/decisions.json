@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-08-19T20:00:43.249785+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK not ticketable, no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "State at entry: QC WARN (5 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d; published cash-rate policy asofs >60d: cash_yield_proxy_annual_pct.INDO 2026-06-18, fx_carry_rates.EUR 2026-06-17, fx_carry_rates.JPY 2026-06-16, fx_carry_rates.BRL 2026-06-18. Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; no live positions in GLOBAL). Nothing to verify; no fail-closed breach.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN); nothing ticketable before tonight's US open.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-08-19 (Wed 13:00 WIB)\n\n## State at entry\n- Governor: both books NONE, all-cash, zero drawdown. GLOBAL NAV $1,005,134 / INDO NAV IDR 15,099,720,146.\n- QC: WARN (5 flags \u2014 fund record 08-04 stale, published cash-rate policy asofs >60d; data staleness, non-blocking, not mine to fix).\n- No pending orders, no live theses. 1 judged_unticketed (T-GLOBAL-0700HK-001, PASS_REDUCED, 0% sizing \u2014 unchanged).\n- Flow regime: INDO STALE (no fresh foreign-flow data). Macro regime unchanged (2026-07-11, balance_of_payments_pressure / CAUTIOUS).\n\n## Step 1 \u2014 Queue inventory\n- **Parked drafts (status: draft/attacked, verdict: null)**: NONE. All 14 prior theses are status: judged.\n- **ADVANCE idea cards (promoted, never constructed)**: 19 cards (10 GLOBAL + 9 INDO), per the 08-17 IDEATION queue note.\n\n## Step 2 \u2014 Construction chains (\u22642 per book, per WEEKLY_DEEP \u00a77)\n\n### T-GLOBAL-TXN-002 (TXN \u2014 Texas Instruments, GLOBAL, kill-revisit of T-001 killed 07-13 valuation at $311.46)\n- Idea card GLOBAL-TXN (ADVANCE, 08-04, MOMENTUM). Screen today: MOMENTUM #12, $272.24, mom12 +49%, -17.65% off high.\n- Analyst (Sloane): momentum_continuation, p_up 0.44, entry $272 / kill\u2026",
     "persona": ""
