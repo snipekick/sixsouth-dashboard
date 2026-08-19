@@ -21,6 +21,26 @@
   },
   {
     "meta": {
+      "id": "T-GLOBAL-AMD-001",
+      "book": "GLOBAL",
+      "ticker": "AMD",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "momentum_continuation",
+      "catalyst_date": null,
+      "last_reviewed": null
+    },
+    "analyst": "Sloane",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** AMD is a losing NVIDIA-beta. The Q2'26 print (record revenue, DC +107%) still fell ~9% after hours because the Q3 guide \"only\" beat the published midpoint expectation, not the whisper \u2014 proof the multiple is stretched. MI400 is architecturally behind Blackwell/Rubin; ROCm will never match CUDA; ~80-85% NVIDIA accelerator share caps AMD.\n\n**Why wrong:** Three primary-source facts the market mis-prices. (1) **The dated 2027 guide**: Su (Q2'26 call) guided DC revenue to \"more than double\" in 2027, growth \"well above 100%,\" calling a ~$30B 2027 Instinct estimate \"probably too low\" \u2014 the market read the Q3 guide as a miss, ignoring that 2027, not Q3, is the story. (2) **MI450 is competitive on inference TCO**: 432GB HBM4 (vs Rubin R200's 288GB) fits a 405B-parameter FP8 model on one GPU; AMD claims Helios delivers up to +30% tokens/dollar vs Rubin NVL72. (3) **The TAM is expanding, not fixed**: hyperscaler capex ~$725B in 2026 (+77% YoY), ~$1T 2027E; OpenAI 6GW + Meta 6GW + Anthropic 2GW MI450 commitments scale AMD ~2x WITHOUT stealing NVIDIA share. The non-AI base (Client +23%, Embedded +19% at 40% op margin) is self-funding through the ramp.\n\n**What proves us wrong:** MI450 independent benchmarks at TCO parity-or-worse; any named hyperscaler cuts 2027 capex; DC op margin compresses below ~27%; or Helios/MI450 revenue in the Q4'26 print lags the embedded ramp.\n\n**Edge taxonomy:** **(a) analytical** \u2014 the market mis-models AMD as share-loss in a fixed pie; it\u2026",
+      "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
       "id": "T-GLOBAL-NOC-001",
       "book": "GLOBAL",
       "ticker": "NOC",
@@ -141,6 +161,26 @@
   },
   {
     "meta": {
+      "id": "T-GLOBAL-TXN-002",
+      "book": "GLOBAL",
+      "ticker": "TXN",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "momentum_continuation",
+      "catalyst_date": null,
+      "last_reviewed": null
+    },
+    "analyst": "Sloane",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** the FCF recovery is a one-time capex unwind; TXN is an expensive slow compounder with a disqualifying China overhang \u2014 the 7/13 valuation kill at $311 was fair, and the 12.6% pullback merely corrects froth.\n\n**Why wrong:** the FCF inflection is structural, not a one-off. Capex is permanently ~10-15% of revenue (mgmt framework, 10-Q) after the 300mm buildout; CFO margin is a durable ~45% (8-K TTM). Q2'26 confirms with a primary print: TTM FCF $6.5B rising toward my $9.6/share FY26E (above the $8+ guide), Analog OM 45.6% (300mm cost moat widening, not peaking), inventory days 196 (channel clean). The market under-weights the AI analogue: data-center power grew ~90% YoY (dossier) \u2014 an AI-infrastructure franchise still priced like a cyclical. China is not yet the killer the prior kill assumed: Q2 China revenue +24% YoY to 22% of total, with no probe impact disclosed. At $272 the market pays ~28x FY26E EV/EBIT and ~30x FY27E EPS \u2014 a quality-compounder multiple, not a bubble, on a ~10% FCF grower at ~32% ROIC.\n\n**What proves us wrong:** Q3/Q4'26 prints with FCF/share below the ~$9 run-rate; a MOFCOM preliminary dumping ruling with material share loss; inventory days breaking >250; or the FCF multiple compressing toward the DCF zone (~$120-150) \u2014 the $212 momentum-structure kill fires first on that last path.",
+      "kill_criteria": "Pullback resets entry $311\u2192$272 (\u221212.6%). Q2'26 (8-K 7/22): rev +23% YoY, EPS $2.14 (+52%), TTM FCF $6.5B, Analog OM 45.6%, capex confirmed $2-3B, inventory days 196. China: Q2 rev +24% to 22% of total (10-Q); zero anti-dumping/export-control disclosure in the Q2 10-Q \u2014 the Sept-2025 MOFCOM probe is an overhang, not a realized loss. FCF harvest: my FY26E $9.6/share exceeds the $8+ guide."
+    }
+  },
+  {
+    "meta": {
       "id": "T-INDO-ASII-001",
       "book": "INDO",
       "ticker": "ASII.JK",
@@ -177,6 +217,26 @@
     "excerpt": {
       "variant_perception": "**Market believes:** The ~30% Apr->Jul 2026 slide (Rp1,665-1,670 in April to Rp1,170 now) is simply beta to the IDX small-cap/foreign-outflow washout (CNBC Indonesia: Rp22tn foreign net sell in March 2026; weak rupiah; the macro brief's BoP-pressure regime) \u2014 nothing company-specific to re-price.\n\n**Why wrong:** FY2025 audited results and the 9-Jun-2026 RUPST \u2014 filed in a 370-page report and Indonesian-language trade press a thin analyst base is unlikely to have fully digested \u2014 show a materially improved company: EBITDA +31.7% to a record, NI +60.2%, net-debt/equity nearly halved, dividend nearly doubled (Rp24->Rp47). The stock kept falling *through* the RUPST/dividend window into July \u2014 the print didn't stop the slide, consistent with slow LK-detail incorporation in a ~Rp8.6bn/day name, not with the market having processed and rejected the improved fundamentals.\n\n**What proves us wrong:** If H1/Q2 2026 results (due ~30-Aug-2026) show FFB/CPO deceleration, OER's slide becoming a genuine cost/quality problem, or the stock fails to stabilize even after that print, that confirms the market's read (deserved de-rating, no discovery catalyst) over ours.",
       "kill_criteria": "I independently verified the primary filings (indopremier FY2025 statements, haisawit/bisnis/palmoilmagazine/idnfinancials trade press, RUPST releases, stockanalysis/investing.com balance-sheet data, TradingView/Kontan price data). Three of the trade's load-bearing claims survive; two do not, the catalyst logic is factually inverted, and the sizing math fails its own EV test.\n\n**0. Fact-check of the three load-bearing numbers.**\n- *Net income +60.2% (Rp1.84tn attributable, +61.1%): CONFIRMED.* Rp1,840.5bn vs Rp1,142.5bn FY24, EPS Rp173.63 \u2192 trailing P/E 6.74x at Rp1,170. Solid. (indopremier FY2025; haisawit; palmoilmagazine.)\n- *Dividend Rp47/sh, total Rp498.2bn, RUPST 9-Jun-2026: CONFIRMED*, \"highest in 5 years\" (idnfinancials), prior FY24 Rp24 \u2014 near-doubling holds. But this is now a SPENT catalyst: cum 18-Jun, paid 8-Jul \u2014 as of today (11-Jul) the stock is ex-dividend and the yield-buyers have their cash.\n- *EBITDA +31.7% to Rp4,077,998mn / 33.1% margin: NOT CONFIRMED \u2014 margin materially overstated.* Two independent third-party computations put FY25 EBITDA at ~Rp2,895bn / **23.5% margin** (indopremier line-item; haisawit \"EBITDA margin 23,5%\"). Your headline Rp4,078bn (33.1%) EXCEEDS reported gross profit (Rp3,850bn, 31.3%) and implies D&A of ~Rp1,249bn \u2014 yet your OWN appendix NAV build uses D&A \u2248Rp724bn and a through-cycle EBITDA basis of ~Rp2,663bn (\u224823%). You cannot reconcile your headline with your own valuation inputs. The +~32% GROWTH direction is real; the\u2026"
+    }
+  },
+  {
+    "meta": {
+      "id": "T-INDO-DSNG-002",
+      "book": "INDO",
+      "ticker": "DSNG.JK",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "commodity_capex_turnaround",
+      "catalyst_date": "2026-08-30",
+      "last_reviewed": null
+    },
+    "analyst": "Dani",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** At 1,355 (~7.8x trailing, ~3.5% yield) DSNG is still cheap; Q1 growth plus B40 justify the recovery off the June low.\n**Why wrong:** 7.8x is peak-earnings optics \u2014 at through-cycle CPO (~US$950-1,000) NAV is ~Rp566-1,320, below the 1,355 price (Appendix). Market pays for spot (~US$1,048) to persist; VAL_COMMODITY_CYCLICAL pt6: supply arrives 2-4y after price peaks. Q1 is the decelerated base case (+17% NI vs +61% FY25), not a fresh trigger.\n**What proves us wrong:** CPO holds \u2265US$1,100 through FY2027 AND H1 FY2026 NI >+20% AND FY2025 AR gearing \u22640.35x \u2014 evidence the through-cycle price reset, not just elevated spot.",
+      "kill_criteria": "T-001 killed at 1,180 (price above through-cycle NAV ~Rp590-965, negative EV). Since 2026-07-13: (1) Q1 FY2026 revenue/NI/EBITDA all up YoY \u2014 the \"30-Aug deceleration\" trigger resolves toward continued (decelerated) growth; (2) net debt confirmed toward Bear's 0.42x (dossier), not 0.3x \u2014 lowers NAV; (3) price re-rated 1,180\u21921,355 (+15%) \u2014 deeper into the incentive-price trap. Gap NOT resolved: through-cycle NAV still below entry (Appendix)."
     }
   },
   {
@@ -276,6 +336,26 @@
     "judged_by": "Aldrich",
     "excerpt": {
       "variant_perception": "**Market believes:** PNBN is a structurally low-ROE, thinly-traded, family-controlled bank in a multi-year downtrend (mom12 -17.07%, cagr -14.35%/yr) that deserves its sub-0.4x P/BV, and that the unresolved ANZ/Gunawan ownership overhang plus a rising 9M2025 provisioning line (+35.1% yoy) are reasons to avoid it until the picture clears \u2014 exactly the kind of name thin sell-side coverage lets sit unrepriced in either direction.\n**Why wrong:** The magnitude of the price move (-25.96% off the 52w high) is running well ahead of the magnitude of the fundamental move over the comparable window \u2014 NIM fell 61bp (4.93%\u21924.32%, FY2023\u2192FY2025) and ROE fell 54bp (5.42%\u21924.88%), while the bank stayed solidly profitable, kept a ~35-36% dividend payout intact, improved NPL gross every year (3.53%\u21922.82%), improved BOPO back to 70.22% after a one-off H1'24 opex spike, and sits on a 37.07% CAR with no notation/manipulation-class governance flag found. Thin coverage means no one is marking this to a normalized-cycle model \u2014 the tape is extrapolating the trailing quarter's rising provisioning line without weighing it against the (also real) capital fortress and maintained payout. **Important honesty check:** my own VAL_BANKS math does NOT call PNBN cheap vs COE (warranted P/BV 0.20-0.27x =3, observable, current, each citing a dossier/filing line)\n1. NPL net rose from 0.90% (FY2024) to 1.04% (FY2025) even as NPL gross \"improved\" from 3.05% to 2.82% over the same year \u2014 coverage is thinning, not\u2026",
+      "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
+      "id": "T-INDO-TAPG-001",
+      "book": "INDO",
+      "ticker": "TAPG.JK",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "neglected_midcap_discovery",
+      "catalyst_date": "2027-03-31",
+      "last_reviewed": null
+    },
+    "analyst": "Dani",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** The +34.9% mom6 is commodity beta \u2014 a leveraged play on an elevated CPO reference (US$996 Aug-26) that reverts once Malaysia/Indonesia supply catches up; HY2026's +20% profit is peak-cycle and not extrapolable; the thin 12\u201317% float and ~82% family control make the neglect deserved.\n\n**Why wrong:** The market misreads a trough-surviving dividend machine as peak-beta. Cash cost ~US$550/t (1st\u20132nd quartile) vs through-cycle US$865 \u2192 ~36% cash margin even at the 10y-avg price; net cash ~IDR 0.6tn \u2192 no balance-sheet risk through a trough; ~90% payout is cash-covered 1.9x (OCF 3,400 vs dividend 1,807). It is the largest planter by mcap (~IDR 36.5tn) yet screens thin-coverage \u2014 the neglected_midcap_discovery pattern. The HY2026 print (Q2 NI +46% YoY on ASP +8%/cost +1%) beat and was only partially absorbed (mom1 +19.4% through the print window); the ~9x \u2192 ~12x re-rating needs the market to credit cost/dividend durability, which coverage/liquidity has not yet done.\n\n**What proves us wrong:** (1) FY2026 print shows OER decline or cash-margin compression beyond the CPO move; (2) FY2026 dividend =3, observable, current, each cited)\n1. **No through-cycle margin of safety:** through-cycle EPS ~100 \u2192 at 1,840 the stock is ~17\u201320x through-cycle, ~30\u201350% above through-cycle value (~1,050\u20131,400 at 10\u201312x) \u2014 the DSNG no-margin-of-safety pattern (build: 1H-26 unit economics + WB Pink Sheet 10y avg US$865).\n2. **Neglect partly deserved \u2014 float:** free float ~12\u201317%\u2026",
       "kill_criteria": ""
     }
   }
