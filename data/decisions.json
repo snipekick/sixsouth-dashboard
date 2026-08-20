@@ -17,6 +17,17 @@
   },
   {
     "meta": {
+      "date": "2026-08-20T20:01:02.612892+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK still 0% sizing, no tickets",
+      "thesis": "T-GLOBAL-0700HK-001",
+      "kind": "other"
+    },
+    "body": "State at entry: QC WARN (5 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d; published cash-rate policy asofs >60d (cash_yield_proxy_annual_pct.INDO 2026-06-18, fx_carry_rates.EUR 2026-06-17, fx_carry_rates.JPY 2026-06-16, fx_carry_rates.BRL 2026-06-18). Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; no live GLOBAL positions). Nothing to verify; no fail-closed breach.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN); nothing ticketable before tonight US open.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-08-19T08:45:40.210775+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-08-19: no action",
