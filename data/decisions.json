@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# 2026-08-22 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (5 stale-feed flags: fund record asof 08-04; published cash-rate policy cash_yield_proxy.INDO + fx_carry EUR/JPY/BRL asof mid-June; INDO foreign-flow layer STALE n=0). Both books 100% cash, 0 holdings, 0 live theses, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing), governor NONE. No orders, no kill actions, no reviews open.\n\n## Step 1 \u2014 Triage\n\n- audit record all 5 files resolved/triaged (07-11 claude_exit, 07-11 risk_check, 07-12 thesis_lint isoformat, 07-18 IDEATION claude_exit false-alarm, 07-18 analyst NOC api_error). No open blocker.\n- HUMAN_ATTENTION backlog: kill-ledger rows for NOC (07-22) and the four 08-19 CONSTRUCT kills (AMD, TXN-002, DSNG-002, TAPG-001) all present in fund record \u2014 ops applied. Office_state `--session` enum gap (CONSTRUCT/IDEATION refused) is journaled (08-19), non-blocking for WEEKLY_DEEP. Stale-feed refresh (08-22 06:30 US_CLOSE entry) is a live OPS feed action \u2014 re-escalated at session end; `fund record refresh-adv` in step 2 refreshed fund record (15 tickers, 0 missing), but published cash-rate policy asofs (cash_yield_proxy.INDO, fx_carry EUR/JPY/BRL) remain\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-08-21T08:45:43.970215+07:00",
       "book": "INDO",
