@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-08-31T20:01:13.978461+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 GLOBAL/INDO all-cash, no tickets (0700HK closed at 0% sizing)",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "State at entry: QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 staleness, not CRITICAL), GLOBAL governor NONE 100% cash gross 0%, INDO governor NONE 100% cash gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Single flag is a 60d-staleness on an INDO published cash-rate policy field; informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; no live theses/positions). Nothing to verify; no fail-closed breach.\nb. Governor de-gross \u2014 governor NONE in both books, gross 0%. No deterministic sells, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct 0.0, script_pct 0.0 (Kelly = WARN); nothing ticketable before tonight's US open.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-28 (Fri)\n\n## State at entry\n- QC: OK, 0 flags. Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `china_impulse` still \"no-reflation, property risk-containment (data not fresh)\".\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/KLBF/MEDC ADVANCE + ADRO/GGRM/INCO WATCH) + AKRA/DSNG/ELSA/PWON/TAPG/TOWR DISCARD. Both under the 12-card cap. Oldest active asof 08-17 (11d) \u2014 well inside the 21-day window.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
