@@ -1,5 +1,16 @@
 [
   {
+    "meta": {
+      "date": "2026-08-31T08:45:55.758031+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN pass: no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Triggers reviewed 2026-08-31 08:45 WIB: QC WARN (price cache 47h old; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) - not CRITICAL, no fail-closed. Governor NONE both books - no de-gross, no VETO. pending_orders empty. kill_actions_due empty - no kill exits to verify/write. judged_unticketed T-GLOBAL-0700HK-001 is GLOBAL-book, out of scope for INDO ticketing. No INDO thesis judged+sized+waiting on level (live=0, n_names=0). INDO flow regime STALE - not estimated. Cash 100%, no positions. No tickets created; no action.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-28 (Fri)\n\n## State at entry\n- QC: OK, 0 flags. Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `china_impulse` still \"no-reflation, property risk-containment (data not fresh)\".\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/KLBF/MEDC ADVANCE + ADRO/GGRM/INCO WATCH) + AKRA/DSNG/ELSA/PWON/TAPG/TOWR DISCARD. Both under the 12-card cap. Oldest active asof 08-17 (11d) \u2014 well inside the 21-day window.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
