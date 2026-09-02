@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-09-02T20:01:15.379021+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass: no tickets; 0700.HK closed at 0%; QC WARN",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Session US_PREOPEN 2026-09-02 20:00 (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping). Governor NONE, GLOBAL all-cash 100% cash / 0% gross, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, no live theses/positions \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS, nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill, PM decision 2026-08-22 WEEKLY_DEEP; Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed). Runbook: qty from sizing.pm_pct, never resize \u2192 0 qty = no valid entry to ticket; no live order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged FX thesis awaiting level on GLOBAL; no ticket. Step 5: no tickets created, risk_check --orders N/A. All decisions pass. Exiting runbook.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-09-02 (Wed)\n\n## State at entry\n- Queue: 1 parked draft (T-GLOBAL-COST-001, created 08-26, >5 trading days old \u2192 mandatory freshness pass) + ADVANCE cards without theses (GLOBAL JPM/LLY/UNH/XOM; INDO AMMN/KLBF/MEDC).\n- Both books all-cash, governor NONE, 0 holdings, 0 live theses. Macro regime unchanged (08-22 FULL rebuild): balance_of_payments_pressure, NEUTRAL appetite; tilts nickel FAVOR, thermal coal NEUTRAL, oil-import AVOID (Brent ~94), INDO rate-sensitive AVOID.\n\n## Chains advanced (\u22642 per book per WEEKLY_DEEP \u00a77)\n- **GLOBAL-COST** (parked draft, freshness pass \u2192 attacked \u2192 full-concession revision \u2192 re-attack \u2192 Judge) \u2192 **KILL (valuation)**. Honest EV \u221227.8% on conceded inputs (p_up 0.35, up +12, down \u221250); 47x-forward premium-multiple survival bet fails the derated-compounder base rate. Card GLOBAL-COST \u2192 DISCARD.\n- **GLOBAL-UNH** (fresh MOMENTUM ADVANCE) \u2192 **KILL (valuation)**. Honest EV \u22123.5%/3y (~\u22121.2%/yr) below risk-free and the ~7.2% hurdle; target 479 = DCF mid-case, zero margin of safety, no catalyst; MOMENTUM +40% runner mislabeled as derated compounder. Card GLOBAL-UNH \u2192 DISCARD.\n- **INDO-KLBF** (fresh UNSCREENED ADVANCE) \u2192\u2026",
     "persona": ""
