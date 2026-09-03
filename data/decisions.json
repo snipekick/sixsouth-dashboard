@@ -6,6 +6,17 @@
   },
   {
     "meta": {
+      "date": "2026-09-03T20:01:21.319723+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass: no tickets; 0700.HK closed at 0%; QC WARN",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Session US_PREOPEN 2026-09-03 20:00 (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping). Governor NONE, GLOBAL all-cash 100% cash / 0% gross, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, no live theses/positions \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS, nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill, PM decision 2026-08-22 WEEKLY_DEEP; Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed). Runbook: qty from sizing.pm_pct, never resize, so 0 qty = no valid entry to ticket; no live order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged FX thesis awaiting level on GLOBAL; no ticket. Step 5: no tickets created, risk_check --orders N/A. All decisions pass. Exiting runbook.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-02T08:45:59.831916+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 09-02: no action \u2014 all three categories clean",
