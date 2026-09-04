@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-09-04T20:01:08.633392+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass: no tickets; 0700.HK closed at 0%; QC WARN",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Session US_PREOPEN 2026-09-04 20:00 WIB (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping, carried into this entry). Governor NONE (state file confirms GLOBAL live=false, state=NONE), GLOBAL all-cash 100% cash / 0% gross / 0 names, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, theses.live 0 \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS (governor NONE), nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill; PM decision 2026-08-22 WEEKLY_DEEP, Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed; no re-open without material new evidence). Runbook rule: qty from sizing.pm_pct, never resize here, so 0 qty = no valid entry to ticket; no stale order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged Macro-FX thesis awaiting level on GLOBAL; no FX ticket. Step 5: no\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-09-03 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item; ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures (INDO screen emitted only the benign numpy divide warning). HUMAN_ATTENTION head: `2026-09-03T09:15+07:00` IDX_PREOPEN/claude_timeout rc=TIMEOUT \u2014 prior-session blocker, already tracked, not mine.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `idx_foreign_flow_feed` STALE \u2014 flow narratives stay quarantined.\n- Cards at entry: GLOBAL 13 files = 7 active (JPM/LLY/XOM ADVANCE +\u2026",
     "persona": ""
