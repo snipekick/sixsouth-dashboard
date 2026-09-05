@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "meta": {},
+    "body": "# LESSON-0002\nstamp: CONSOLIDATION-2026-09\n\n## context\nMONTHLY_IC 2026-09-05. Four repeat kill pairs exist in the ledger: TXN, SMFG, ELSA, DSNG (two kills each). A second kill of the same name is not automatically a re-affirmation of the first kill's reason.\n\n## belief\nRe-killing a name whose thesis was previously killed re-affirms the first kill's dispositive reason, without re-testing whether that reason has gone stale.\n\n## outcome\nRepeat kills did not all earn. TXN: both kills avoided further loss (07-13 \u221217.0%, 08-19 \u22125.1%). DSNG: the second kill left +20.6% more. SMFG: the second kill left +9.8% more. ELSA: the second kill left +5.0% more.\n\n## cause\n`thesis_wrong` at the second decision \u2014 external re-rating (complex/macro) was not distinguished from name-specific deterioration. Where the first reason was a name/valuation call but the complex or macro had re-rated, the second kill repeated a now-stale reason.\n\n## rule\nBefore a second kill of a previously killed name, re-test whether the first reason is now wrong (external re-rating vs name-specific deterioration); TXN-style repeats earn, DSNG-style repeats cost.\n\n## affected_agent\nJUDGE\n\n## evidence\n- T-GLOBAL-TXN-001 (07-13\u2026",
+    "persona": "Pecora"
+  },
+  {
+    "meta": {},
+    "body": "# LESSON-0001\nstamp: CONSOLIDATION-2026-09\n\n## context\nMONTHLY_IC 2026-09-05. IDX agri/CPO names were killed while the commodity complex re-rated around them. War-premium tape intact (Brent ~95.9). Two of the three source kills carried valuation reason_tags; one carried process.\n\n## belief\n\"Expensive on its own numbers\" was judged from the name's own P&L / spot earnings, without carrying the commodity/energy complex and the macro tilt (CPO/agri complex, energy spot, war premium) inside the valuation frame.\n\n## outcome\nKills avoided ~zero loss and left large gains: DSNG.JK 07-13 valuation +39.0%; TAPG.JK 08-19 valuation +21.9%; LSIP.JK 07-22 process +25.7%. The names re-rated with the complex after being killed.\n\n## cause\n`thesis_wrong` \u2014 valuation frame anchored to the name's own numbers while the commodity complex and macro regime were re-rating above them. The through-cycle marker was not re-set when the complex moved.\n\n## rule\nValue IDX agri/CPO names with the commodity-complex and macro tilt inside the valuation frame (spot, war premium), not the name's own P&L alone; a name re-rating with the complex is not \"expensive on its own numbers.\"\n\n## affected_agent\nANALYST_INDO\n\n##\u2026",
+    "persona": "Pecora"
+  }
+]
