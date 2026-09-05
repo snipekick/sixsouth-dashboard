@@ -61,6 +61,26 @@
   },
   {
     "meta": {
+      "id": "T-GLOBAL-JPM-001",
+      "book": "GLOBAL",
+      "ticker": "JPM",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "quality_bank_rerating",
+      "catalyst_date": null,
+      "last_reviewed": "2026-09-05"
+    },
+    "analyst": "Sloane",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** NIM falls as cuts land, credit (card 3.34% NCO) is turning, and the 3.2x TBV premium is a peak-earnings trap \u2014 so JPM is a fade/short or, at best, fair-value with no upside.\n\n**Why wrong:** The market mis-models NII as rate-elastic when the franchise has already repriced: H1-26 NII +9% with net yield ex-Markets down only 6bp through the delivered cuts (10-Q). Strip the one-offs and 1Q-2Q26 ROTCE is still ~23-24% vs 20-21% a year earlier \u2014 the premium is warranted, not euphoric. Residual income at COE 9.3% (UST10 4.77%, FRED 09-03 + USD ERP 4.5%), ROTCE ~20.5%, g 3.5% => warranted ~2.9-3.3x TBV; current ~3.16x is fair, so return is TBV compounding (~6%/yr) + 1.7% dividend + ~2.5%/yr buyback accretion, not de-rating.\n\n**What proves us wrong:** ROTCE 4% without reserve build; UST10 >5.3% pushing COE above 9.8% and warranted below ~2.7x.",
+      "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
       "id": "T-GLOBAL-MUFG-001",
       "book": "GLOBAL",
       "ticker": "MUFG",
@@ -236,6 +256,26 @@
     "judged_by": "Aldrich",
     "excerpt": {
       "variant_perception": "**Market believes:** UNH is a sub-5%-margin insurer that \"already recovered\" (mom12 +40%); the 2025 earnings collapse was the first wave of a structural medical-cost problem, so the ~20x multiple is fair and the political overhang caps any re-rating.\n\n**Why wrong:** The market prices UNH as a pure insurer, but ~60% of revenue and the growth engine is Optum (care delivery, pharmacy, data) \u2014 Optum H1'26 EFO $7,345M at 5.7% margin, up from 3.5% FY25. The 2025 collapse was a discrete MLR spike + cyberattack, not share loss. As MCR normalizes to ~88% (Q2'26 already 86.7%) and Optum Health margin recovers (4.9% H1'26 vs \u22120.3% FY25), EPS compounds ~9\u201310%/yr with a \u2265$5B buyback. At 20x FY26E adj EPS the market pays a trough multiple for a recovering compounder \u2014 the derated_compounder_rerating pattern. DCF mid-case ~$479 (COE 9.5%, growth fade 10%\u21924%, terminal g 4%) vs entry $396 = ~17% discount.\n\n**What proves us wrong:** MCR re-accelerates above ~89% (medical-cost inflation returns); Optum Health margin stalls below ~4%; UHC membership attrition accelerates (already \u2212525K sequentially in Q2'26); or a structural MA Star Ratings revenue cut compresses the multiple below ~16x.\n\n**Edge taxonomy:** analytical (primary \u2014 market mis-models the mix, pricing UNH as an insurer rather than a health-services compounder where Optum is the growth engine) + time-arbitrage (market can't hold a 3y MCR-normalization + Optum-margin-recovery view through political/regulatory noise).",
+      "kill_criteria": ""
+    }
+  },
+  {
+    "meta": {
+      "id": "T-GLOBAL-XOM-001",
+      "book": "GLOBAL",
+      "ticker": "XOM",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "commodity_capex_turnaround",
+      "catalyst_date": null,
+      "last_reviewed": "2026-09-05"
+    },
+    "analyst": "Sloane",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** The ~$159 price capitalizes ~$95 war-premium earnings as ephemeral; a Brent normalization to ~$70 knocks XOM back to ~$110\u2013120, the buyback gets cut, and the energy complex should be avoided until the premium clears \u2014 hence the macro desk's NEUTRAL bloc stance and the market's refusal to pay growth multiples for oil.\n\n**Why wrong:** The market models XOM as spot-Brent \u00d7 static barrels, underweighting the **per-share floor that rises each year regardless of Brent**: low-cost volumes already delivered (Permian 9% CAGR to 2030, Guyana +250 Kbd in 4Q26) and ~$20B/yr of buybacks shrink the count ~2%/yr, so EPS compounds ~5%/yr at a *constant* oil price. The dividend is not the risk the market prices: it was covered 1.37x by FCF in the weakest cash year of the window (FY25) and XOM has not cut it in 40+ years; the flexible buyback \u2014 not the dividend \u2014 is the shock absorber in a downturn. At ~14x FY26E and ~10x through-cycle EBITDA, the equity prices the windfall but not the compounding, and a fortress balance sheet means the \"Brent collapses and the dividend breaks\" tail the market leans on has no balance-sheet mechanism behind it.\n\n**What proves us wrong:** Brent durably below ~$81.5 (macro review marker), a dividend cut, a Permian decline or Guyana FPSO slip, or a buyback suspension that reveals the program was not FCF-durable.\n\n**Edge taxonomy:** analytical (market mis-models the mechanism \u2014 static-barrel spot framing ignores the volume + buyback per-share\u2026",
       "kill_criteria": ""
     }
   },
