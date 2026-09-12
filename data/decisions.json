@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# 2026-09-12 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 deliberately left stale, IDX source unreachable, ops lane). GLOBAL: nav $1.01M, 100% cash, 0 holdings, dd \u22120.01%, governor NONE. INDO: nav Rp 15.15B, 100% cash, 0 holdings, governor NONE. Both books zero holdings, zero live theses, zero pending orders. 1 judged_unticketed: T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x \u2192 0% sizing, concluded 08-22). INDO foreign-flow layer STALE (n=0).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\naudit record all historical (07\u201309). 09-03 US_CLOSE + IDX_PREOPEN claude_timeout rc=TIMEOUT \u2014 tracked in HUMAN_ATTENTION. HUMAN_ATTENTION head (2026-09-11): ops resolved the __pycache__ manifest bug; engine backlog applied; verified_bootstrap re-anchored; cash-yield \u2212800.18 USD correction applied; 30 NAV rows reconstructed. Open ops items: (1) jkse_dividend_yield_proxy stale \u2014 external source needed; (2) fund record backfill after next official marks. No new blockers.\n\n## Step 2 \u2014 Telemetry / feeds\n\noffice_state observe --session WEEKLY_DEEP --stage ops: write_failed (known fail-soft\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-09-11T20:03:30.333045+07:00",
       "book": "GLOBAL",
