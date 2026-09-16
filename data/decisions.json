@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-09-16 13:00:00+07:00",
+      "book": "INDO",
+      "title": "VETO TINS.JK buy (dossier absent)",
+      "thesis": "T-INDO-TINS-001",
+      "kind": "risk_veto"
+    },
+    "body": "Deterministic VETO from fund record: **dossier  absent.**\n\nFail-closed gate (fund record lines 561-565): dossier missing, malformed, incomplete, or stale > dossier_freeze_days = new equity risk blocked.\n\nThis is the Phase 1 gate \u2014 thesis is not killed by Judge, but fails the pipeline gate for entry sizing. Phase 2 (dossier diligence) is the required path.\n\nQC state: WARN only (MARKET_PARAM_STALE). Governor INDO: NONE. Book NAV: valid.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-15T08:47:48.494953+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-09-15 \u2014 no action",
