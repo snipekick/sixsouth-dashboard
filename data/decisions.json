@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-09-17T08:50:52.746103+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-09-17: no action \u2014 no eligible entries, no kills, no de-gross",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "IDX_PREOPEN 2026-09-17 08:45 WIB.\n\nDecision basis: reviewed all trigger conditions; no action taken.\n\nQC = WARN (single flag: jkse_dividend_yield_proxy_annual_pct market param stale asof 2026-06-30 >60d). Not CRITICAL \u2014 trading actions permitted.\n\nGovernor: NONE (both books). No de-gross condition.\n\nKill exits (step 3a): brief shows kill_actions_due: [], no kill actions pending. Verified none missing a ticket.\n\nGovernor de-gross (step 3b): governor is NONE \u2014 not applicable.\n\nEntries (step 3c): zero eligible INDO entries. The only judged-unticketed thesis in the brief is T-GLOBAL-0700HK-001 \u2014 GLOBAL book (not INDO), verdict PASS_REDUCED 0.5x, pm_pct 0.0 explicitly concluded by PM (WEEKLY_DEEP 2026-08-22), no ticket staged, closed as judged_unticketed. No INDO thesis is simultaneously (1) judged + (2) risk-checked + (3) sized (sizing.pm_pct present and non-zero) with an entry level waiting. All sampled INDO theses are either KILL verdict (T-INDO-ASII-001, T-INDO-JSMR-001, T-INDO-KLBF-001, T-INDO-DSNG-001) or PASS_REDUCED but VETOed with no entry level (T-INDO-MEDC-001: VETO hard gates \u2014 no dossier, no market cap record; entry_plan.level: null).\n\nNo tickets created. No risk_check run\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-16 13:00:00+07:00",
       "book": "INDO",
       "title": "VETO TINS.JK buy (dossier absent)",
