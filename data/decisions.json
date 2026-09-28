@@ -1,5 +1,16 @@
 [
   {
+    "meta": {
+      "date": "2026-09-28T08:46:56.708140+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-09-28: triggers reviewed, no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (not CRITICAL) so session proceeds. Governor NONE for both books, dd 0.0 \u2014 no de-gross. no kill_actions_due and zero live theses \u2014 nothing to verify on kill exits; no tickets to ticket from step 3a. Pending orders: none. Entries step: T-INDO-ERAA-001 remains DEFERRED \u2014 the WEEKLY_DEEP feed gate is still binding at this pre-open: fund record records {} (generated 2026-09-26 10:19) and fund record (asof 2026-09-26 10:01) still lacks the ERAA key, so size_position stays fail-closed script_pct 0.0 and pm_pct cannot deviate up; PM ruling 2026-09-26 'place nothing until adv/mcap feed resolves' stands. No ticket written, no re-cut attempted (never dodge a veto). T-GLOBAL-0700HK-001 not eligible: GLOBAL book (this desk is INDO) and PM clearly closed it at 0.0 with no-reopen-without-material-new-evidence 2026-08-22. Governor target 50.0, cash 100%. No tickets created at or after 09:00 WIB; no slip. Feed-resolution ops items (fund record refresh, refresh-adv, then size_position re-run for ERAA) already on HUMAN_ATTENTION from 2026-09-26 WEEKLY_DEEP \u2014 leaving with ops, not duplicated here.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# 2026-09-26 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (4 flags): (1) fund record 2026-09-12 >10d \u2014 RESOLVED in-session (refresh-adv wrote 2026-09-26, 27 tickers, 0 missing); (2) published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 ops lane, re-escalated; (3) published cash-rate policy fx_carry_rates.EUR asof 2026-07-23 >60d \u2014 ops lane, re-escalated (macros flagged the USD cash proxy 3.63% as additionally STALE post-hike on 09-15/16); (4) dossier fund record 809w >800 \u2014 RESOLVED in-session (re-written 739w, valid contract). Both books 100% cash, 0 holdings, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing, concluded). T-INDO-MEDC-001 + T-INDO-TINS-001 judged PASS_REDUCED in prior sessions but risk-vetoed (dossier/mcap gates). INDO foreign-flow feed STALE (0 fresh).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\n- audit record all recent blockers are benign recurring provider-side API 400s (messages content validation); journaled/tracked, no action.\n- HUMAN_ATTENTION backlog: no new unresolved items; ops-lane items re-escalated at end (mcap gate, published cash-rate policy staleness).\n\n## Step 2 \u2014 Telemetry / feeds\n\u2026",
     "persona": ""
