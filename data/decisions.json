@@ -1,6 +1,39 @@
 [
   {
     "meta": {
+      "date": "2026-09-29T08:46:53.331941+07:00",
+      "book": "INDO",
+      "title": "IDX pre-open entry pass: ERAA \u2014 PM deferral stands, no ticket",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "other"
+    },
+    "body": "judged_unticketed trigger reviewed. sizing.pm_pct = 0.0 (size_position fail-closed: fund record still lacks the ERAA key \u2014 feed gap, not a liquidity judgment); PM ruling in-thesis is DEFER: place nothing until refresh-adv + universe refresh re-runs size_position, then pm_pct <= min(script, 5.0% at-cost). QC additionally flags ERAA price stale today \u2014 no level fill off a stale quote anyway. Step-3c requires an already-sized thesis waiting on level; ERAA is not sized. No order written. Stale-entry cancellation: n/a (no pending order).",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-09-29T08:46:53.489230+07:00",
+      "book": "INDO",
+      "title": "IDX pre-open entry pass: 0700HK \u2014 GLOBAL book, concluded at 0% sizing",
+      "thesis": "T-GLOBAL-0700HK-001",
+      "kind": "other"
+    },
+    "body": "judged_unticketed trigger reviewed. GLOBAL-book thesis (out of IDX session scope) and closed: pm_pct 0.0, PASS_REDUCED 0.5x binds like a kill, 'no re-open without material new evidence' \u2014 none presented. No ticket.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-09-29T08:46:53.644925+07:00",
+      "book": "INDO",
+      "title": "IDX pre-open 2026-09-29 08:45: triggers reviewed \u2014 no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (not CRITICAL): stale price ERAA; published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30, EUR carry 2026-07-23, GBP carry 2026-07-30 all >60d \u2014 feed/config lag, none blocking. Governor NONE (no de-gross). kill_actions_due empty \u2014 every fired kill has a ticket/fill by construction. orders_pending empty (no tickets). Theses: 0 live, 2 judged_unticketed (ERAA deferred, 0700HK GLOBAL/closed) \u2014 both passed on, see tagged entries. No trades, no kill slips, no post-09:00 tickets.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-28T08:46:56.708140+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-09-28: triggers reviewed, no action",
