@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-09-30T20:04:24.057495+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-09-30 20:00 WIB: no tickets \u2014 both judged_unticketed theses sized 0.0",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "Step1 brief: QC WARN (5 flags, all stale-price/published cash-rate policy asof: ERAA price; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30; fx_carry_rates EUR/JPY/GBP asof 2026-07-23/31/30). NOT CRITICAL -> judgment proceeded. Governor NONE both books; kill_actions_due empty; kill_confirm {} (no fired kill lacking a ticket); orders_pending empty.\n\nCategory 3c review of judged_unticketed:\n- T-GLOBAL-0700HK-001: sizing.pm_pct=0.0. PM decision 2026-08-22 (WEEKLY_DEEP): PASS_REDUCED fraction binds like kill; thesis concluded at 0% sizing, no re-open without material new evidence. No ticket (runbook: no resize here).\n- T-INDO-ERAA-001: sizing.pm_pct=0.0 (size_position fail-closed: fund record lacks ERAA key). PM ruling DEFER until refresh-adv + universe refresh re-stage size_position; 'place nothing today'. Also INDO-heavy, out of scope for GLOBAL US-preopen sleeve. No ticket.\n\nNo kill exits to verify beyond wrapper's fund record scan (none fired). No de-gross (governor NONE). No FX tickets (none judged-awaiting in scope).\n\nNo risk_check --orders needed (zero tickets created). Warnings carried per runbook: ERAA stale price + 4 stale published cash-rate policy; noted for ops, not\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-09-30 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (5 flags, all ops-lane, none session-actionable): `stale prices: ['ERAA']` (feed root of the 09-26 fund record escalation, owns the T-INDO-ERAA-001 deferral); `published cash-rate policy` staleness family \u2014 `jkse_dividend_yield_proxy_annual_pct asof 2026-06-30`, `fx_carry_rates.EUR asof 2026-07-23`, `fx_carry_rates.JPY asof 2026-07-31`, `fx_carry_rates.GBP asof 2026-07-30` \u2014 all >60d, already escalated 09-26. Governor NONE both books, 100% cash, 0 holdings, 0 live theses, pending_orders empty, kill_actions_due empty, reviews none.\n\n**Queue: EMPTY \u2014 no chains advanced, no spawns, ~zero tokens. This is the success case, not a failure.**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. Cards: WATCH 6 (GLOBAL BAC/LLY/MS/SMFG; INDO AMMN/TINS), DISCARD 2 (QCOM/ELSA), PROMOTED 2 (ERAA, MEDC). Both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001).\n\n## Non-queue items reviewed and\u2026",
     "persona": ""
