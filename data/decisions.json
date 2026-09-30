@@ -16,6 +16,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-09-30 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (5 flags, all ops-lane, none session-actionable): `stale prices: ['ERAA']` (feed root of the 09-26 fund record escalation, owns the T-INDO-ERAA-001 deferral); `published cash-rate policy` staleness family \u2014 `jkse_dividend_yield_proxy_annual_pct asof 2026-06-30`, `fx_carry_rates.EUR asof 2026-07-23`, `fx_carry_rates.JPY asof 2026-07-31`, `fx_carry_rates.GBP asof 2026-07-30` \u2014 all >60d, already escalated 09-26. Governor NONE both books, 100% cash, 0 holdings, 0 live theses, pending_orders empty, kill_actions_due empty, reviews none.\n\n**Queue: EMPTY \u2014 no chains advanced, no spawns, ~zero tokens. This is the success case, not a failure.**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. Cards: WATCH 6 (GLOBAL BAC/LLY/MS/SMFG; INDO AMMN/TINS), DISCARD 2 (QCOM/ELSA), PROMOTED 2 (ERAA, MEDC). Both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001).\n\n## Non-queue items reviewed and\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-09-29T08:46:53.331941+07:00",
       "book": "INDO",
