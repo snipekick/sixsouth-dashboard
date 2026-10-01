@@ -17,6 +17,17 @@
   },
   {
     "meta": {
+      "date": "2026-10-01T20:02:11.165198+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-01 20:00 WIB: no tickets \u2014 both judged_unticketed theses sized 0.0",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Step1 brief: QC WARN (5 flags, all stale-price/published cash-rate policy asof: ERAA price; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30; fx_carry_rates EUR/JPY/GBP asof 2026-07-23/31/30), NOT CRITICAL -> judgment proceeded. Governor NONE both books; kill_actions_due empty; no fired kill lacking a ticket; orders_pending empty; GLOBAL 100% cash, dd 0.\n\nCategory 3c review of judged_unticketed (AWAITING_LEVEL):\n- T-GLOBAL-0700HK-001: sizing.pm_pct=0.0. PM decision 2026-08-22 (WEEKLY_DEEP): PASS_REDUCED fraction binds like kill; thesis concluded at 0% sizing, closed as judged_unticketed, no re-open without material new evidence (sponsoring analyst may resubmit). No ticket (runbook: never resize here).\n- T-INDO-ERAA-001: sizing.pm_pct=0.0 (size_position fail-closed: fund record lacks ERAA key). PM ruling DEFER until refresh-adv + universe refresh re-stages size_position; 'place nothing today'; spot 600 is not the trade, 560-limit at max_chase 0 waits on the Q3-2026 print. HUMAN_ATTENTION (2026-10-01 IDX pre-open) confirms feed still dead: last_prices ERAA row still price null/stale, bare 'ERAA' fetch cannot resolve vs .JK-suffixed peers. Deferral stands. No ticket.\n\nNo kill\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-30T08:47:13.374888+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-09-30: no action \u2014 no tickets, no kills, feed-gated entries",
