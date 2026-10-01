@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-10-01T08:46:36.636027+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-10-01: no action \u2014 no tickets, no kills, entries 0/2 ticketable",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (stale ERAA price; published cash-rate policy dividend-proxy + FX-carry EUR/JPY/GBP asof >60d) \u2014 not CRITICAL, no trading-action block. Kill exits: none due (kill_actions_due empty, live_theses 0, pending_orders empty). Governor DEGROSS: no (governor NONE both books). Entries (step 3c): T-INDO-ERAA-001 remains feed-blocked \u2014 HUMAN_ATTENTION head (2026-10-01T06:30) confirms the price layer is still dead for ERAA (cache row price:null, fetch emits bare ERAA not .JK), fund record still lacks the ERAA key, sizing anchor stays 0.0; PM deferral (judged 2026-09-26) stands, 560-limit entry untouched. T-GLOBAL-0700HK-001 is out of scope: GLOBAL book (not South/INDO) and PM-concluded at 0% sizing 2026-08-22 WEEKLY_DEEP (Kelly<=0, ADV-unknown fail-closed), closed as judged_unticketed with no re-open without material new evidence. No tickets created this session; nothing passed risk_check (nothing written).",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-09-30T08:47:13.374888+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-09-30: no action \u2014 no tickets, no kills, feed-gated entries",
