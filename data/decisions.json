@@ -17,6 +17,17 @@
   },
   {
     "meta": {
+      "date": "2026-10-02T20:02:32.969780+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-02: pass \u2014 no trading actions",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (carried 5 flags: stale ERAA price (3 sessions, HA tracked); published cash-rate policy jkse_dividend_yield_proxy_annual_pct >60d; fx_carry_rates EUR/JPY/GBP >60d). Not CRITICAL \u2014 both books 100% cash, zero exposure, dd 0.0. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kills to verify; wrapper wrote none.\n(3b) Governor de-gross: governor_state NONE/live=false for GLOBAL and INDO \u2014 no obligation.\n(3c) Entries: only judged_unticketed names are T-GLOBAL-0700HK-001 and T-INDO-ERAA-001, both non-tradeable.\n  - 0700HK: PM ruled pm_pct 0.0 (size_position fail-closed: Kelly<=0, ADV-unknown liquidity cap), concluded 2026-08-22 WEEKLY_DEEP at 0% sizing; entry_plan level 468 also stale (2026-07-22). No re-open without material new evidence. PASS_REDUCED 0.5x binds like a kill.\n  - ERAA: PM ruling DEFER until adv/mcap feed resolves; verified today that fund record still lacks ERAA key, last_prices price null/stale/missing+cached, mcap records empty (DEGRADED feed); QC flags ERAA stale 3 sessions. Also INDO book \u2014 not this GLOBAL session's mandate. spot-600 never the trade; entry gate 2026-10-31 Q3 print; deferral costs only ~0.16% dividend carry.\n(4) FX sleeve\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-01T08:46:36.636027+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-01: no action \u2014 no tickets, no kills, entries 0/2 ticketable",
