@@ -1,5 +1,16 @@
 [
   {
+    "meta": {
+      "date": "2026-10-06T08:47:32.103714+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-10-06: pass \u2014 no trading actions; ERAA entry stays deferred (PM re-size pending)",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "other"
+    },
+    "body": "QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d). Not CRITICAL \u2014 both books 100% cash, dd 0.0, zero exposure. Trading permitted; the stale index-yield proxy is unused by any position today, no action.\n\n(3a) Kill exits: kill_actions_due [] and no live theses/holdings (n_names 0 both books) \u2014 no fired kill to verify; wrapper wrote none. Nothing missing, no fail-closed breach.\n\n(3b) Governor de-gross: governor_state NONE / live=false for INDO and GLOBAL (dd 0.0) \u2014 no de-gross obligation; buys not vetoed.\n\n(3c) Entries: the only INDO judged_unticketed name is T-INDO-ERAA-001 (judged, Risk check CLEAR_WITH_NOTES, Judge PASS_REDUCED 0.5x). The adv/mcap feed gap that forced the 2026-09-26 PM defer has RESOLVED: market-data snapshot now carries ERAA.JK (IDR 76.9B/day) and market-data snapshot records are non-empty incl ERAA.JK (IDR 9.34T) \u2014 both fixed by OPS 2026-10-05. A diagnostic re-run of fund record now returns recommended_pct 10.0% (constitution cap binds); Judge PASS_REDUCED 0.5x -> 5.0% at-cost. HOWEVER no ticket is staged: the thesis sizing block still records pm_pct 0.0 (fail-closed at judgment), and this runbook takes\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-05 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops lane; the EUR/JPY/GBP carry-param family from the 09-26 escalation no longer flags). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN heartbeat_gap (45h gap before IDX_PREOPEN) \u2014 ops lane, not session-actionable.\n- Macro regime (frontmatter 2026-10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` (2 WATCH) + `BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` (2 WATCH) + `ERAA`/`MEDC` PROMOTED + `ELSA` DISCARD. Oldest active-asof MEDC 09-12 (23d, PROMOTED \u2014 first to cross 21d), MS 09-15 (20d), TINS 09-15 (20d), BAC 09-16 (19d), ERAA 09-16 (19d).\n\n## Ingestion sweep\n\u2026",
     "persona": ""
