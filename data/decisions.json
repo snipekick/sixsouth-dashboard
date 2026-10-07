@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-10-07T08:45:58.409064+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN: triggers reviewed, no action (all three categories pass)",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "other"
+    },
+    "body": "08:45 WIB pre-open. QC=WARN (MARKET_PARAM_STALE jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d, first_seen 2026-08-31) \u2014 not CRITICAL, trading permitted. (a) Kill exits: kill_actions_due empty, kill_confirm empty, INDO all-cash n_names=0 \u2014 no fired kill to reconcile, no missing ticket. (b) Governor de-gross: INDO state NONE, dd 0.0, degross_since null \u2014 no deterministic sells emitted, no mix to choose. (c) Entries: sole judged_unticketed INDO name T-INDO-ERAA-001 (judged, PASS_REDUCED 0.5x, risk-checked CLEAR_WITH_NOTES) carries sizing.pm_pct=0.0 / script_pct=0.0 \u2014 size_position fail-closed on liquidity_cap 0.0 (fund record lacks ERAA key, fund record empty, feed DEGRADED). PM decision is explicit DEFER: 'Place nothing today', re-stage after refresh-adv + universe refresh re-run size_position. pm_pct 0.0 => no quantity, no ticket. Spot 600 is not the trade; entry is a 560 limit with max_chase 0 gated on the 2026-10-31 Q3 print, so deferral costs only ~0.16% dividend carry, never the entry price. No orders created, risk_check not required. GLOBAL-book judged_unticketed names (T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001) are out of scope for this South/INDO session.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-06T08:47:32.103714+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-06: pass \u2014 no trading actions; ERAA entry stays deferred (PM re-size pending)",
