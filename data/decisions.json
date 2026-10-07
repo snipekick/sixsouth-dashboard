@@ -1,6 +1,39 @@
 [
   {
     "meta": {
+      "date": "2026-10-07T13:13:37.601196+07:00",
+      "book": "INDO",
+      "title": "T-INDO-ERAA-001 re-size: ticket VETOed (missing dossier), no ticket",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "sizing"
+    },
+    "body": "Sizing decision unchanged: pm_pct 5.0% at-cost (Judge PASS_REDUCED 0.5x x script 10.0 = 5.0, capped by Voss hard_max 5.0%), LIMIT 560 max_chase 0, qty 1,358,100.\n\nSTAGING FAILED: the ops handoff staged ORD-20261007131050-ERAA.JK-e360 and fund record --orders VETOed and DELETED it: 'dossier missing, malformed, incomplete, or > 60d stale - frozen for new risk'. ERAA has no dossier in data/dossiers/ (only DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN). The gate is _dossier_frozen (fund record learning_triggers.dossier_freeze_days 60, enforcement fund record) - standing fail-closed law; VETO is absolute.\n\nOutcome: NO ticket. The re-stage blocker moved from the adv/mcap feed (resolved OPS 2026-10-05) to the ABSENT DOSSIER. Re-stage requires a valid data/dossiers/ERAA.md (complete, kind!=stub, ticker match, <=60d), built by the IDEATION ingestion path or an ops/analyst dossier build - CONSTRUCT sources nothing. pm_pct 5.0 remains the anchor. Escalated to HUMAN_ATTENTION.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-07T13:09:37.550941+07:00",
+      "book": "INDO",
+      "title": "T-INDO-ERAA-001 re-size: feed resolved, stage 1,358,100 @ 560 limit",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "sizing"
+    },
+    "body": "Re-staged after the adv/mcap feed gap resolved (OPS 2026-10-05): fund record now carries ERAA.JK (ADV IDR 76.9B/day) and fund record records are non-empty incl. ERAA.JK (~IDR 9.34T). The prior DEFER (2026-09-26) rested on fund record failing closed (recommended_pct 0.0) \u2014 that anchor is now live.\n\nScript output (authoritative): recommended_pct 10.0, liquidity_cap_pct 707.71, constitution_cap_pct 10.0, hard_max_pct 10.0; binding constraint = constitution_cap (10.0% NAV). Liquidity is NOT the bind: 20% of ADV 76.9B/day = IDR 15.38B/day, a 760M ticket exits in ~0.05 day.\n\nCeiling: Judge PASS_REDUCED 0.5x applied to script recommended_pct 10.0 -> 5.0; Voss independent hard_max 5.0% at-cost NAV (10% cap x 0.5x). pm_pct = min(0.5 x 10.0, 5.0) = min(5.0, 5.0) = 5.0. Downward deviation from the raw script recommendation (10.0 -> 5.0) is the Judge fraction + Voss ceiling, both binding; no further PM deviation.\n\nSuggested-vs-chosen: script 10.0% vs pm 5.0%. Ticket at the 560 ENTRY LIMIT (cost basis, not spot ~600): qty = floor(5.0% x 15,211,594,336 / 560) = 1,358,178 -> board-lot(100) rounded DOWN = 1,358,100. Cost IDR 760,536,000 = 4.9997% at-cost NAV (<=10% cap); at-market (x600) 5.36%\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-07 13:11:01.947899+07:00",
+      "book": "INDO",
+      "title": "VETO ERAA.JK buy 1358100.0",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "risk_veto"
+    },
+    "body": "Order `ORD-20261007131050-ERAA.JK-e360` VETOed and removed by risk_check: dossier missing, malformed, incomplete, or > 60d stale \u2014 frozen for new risk",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-07T08:45:58.409064+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN: triggers reviewed, no action (all three categories pass)",
@@ -11,8 +44,24 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-07T13:14:21.421606+07:00",
+      "book": "INDO",
+      "title": "CONSTRUCT 2026-10-07 session \u2014 queue empty; ERAA re-stage attempted, VETOed on dossier gate, no ticket",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "## Step 1 \u2014 State slice & queue inventory\nQC WARN (1 flag, ops lane, not session-actionable): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d. Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders [], kill_actions_due [], reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\nCONSTRUCTION QUEUE (runbook step 1): (a) parked drafts (status draft/attacked, no verdict): NONE \u2014 all 32 theses are judged (30) or killed (2). (b) ADVANCE idea cards promoted but never constructed: NONE \u2014 the 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2, and both PROMOTED (ERAA, MEDC) already have constructed theses. So the (a)/(b) queue is EMPTY.\n\n## Step 2 \u2014 Construction chains\nNone advanced (queue empty). No analyst/Bear/Judge spawns.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a satisfied re-stage condition)\nT-INDO-ERAA-001 is a judged PASS_REDUCED 0.5x whose ticket was DEFERRED (2026-09-26) on a DEGRADED adv/mcap feed, with the explicit re-stage condition 'refresh-adv + universe refresh then size_position', and was handed to 'the next WEEKLY_DEEP/CONSTRUCT (PM)' by the 2026-10-06 IDX_PREOPEN journal. OPS\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-07 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops lane; standing since 09-26, ops confirmed 10-05 there is no authoritative index-level source \u2014 deliberately not stamped on a guess). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 \u2014 ops lane, not session-actionable.\n- Macro regime (frontmatter 2026-10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`LLY`/`SMFG` (3 WATCH) + `BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`DMAS`/`TAPG`/`TINS` (4 WATCH) + `ERAA`/`MEDC` PROMOTED + `ELSA`/`PTBA` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only README + two helper scripts\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-10-07 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (1 flag, ops lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source). Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders empty, kill_actions_due empty, reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\n**Construction queue (runbook step 1) \u2014 EMPTY:**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. The 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2 (ERAA, MEDC); both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001). No `verdict: ADVANCE` card exists anywhere in `fund record`.\n\n## Step 2 \u2014 Construction chains\n\nNone advanced (queue empty). No analyst / Drew / Aldrich spawns; ~zero sourcing tokens.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a now-satisfied re-stage condition)\n\nThe queue\u2026",
     "persona": ""
   },
   {
@@ -808,17 +857,6 @@
       "kind": "review"
     },
     "body": "## Sourcing triage \u2014 INDO \u2014 2026-07-11 (Sunda / ANALYST_INDO)\n\nBlank-slate book (0 positions, 0% gross, inception 2026-07-06); no fund record or watchlist revisit candidates exist yet. Screen: market-data snapshot (36 rows, WASHOUT/NEGLECTED/MOMENTUM). Foreign-flow feed is STALE (0 fresh readings) \u2014 flow_z60 ignored everywhere, including on em_flows-sensitive names (BBCA, BBRI, GOTO) where it would normally matter; flagged as a live blind spot, not a \"no signal\" read.\n\n### Ranked list (all names seriously considered)\n1. DSNG.JK (NEGLECTED, CPO) \u2014 PICK. Deepest genuine washout with fundamentals intact (off-high -37.5%, cagr +44.3%); best mispricing-to-liquidity ratio in the CPO cluster.\n2. PNBN.JK (WASHOUT, bank) \u2014 PICK. Thin-coverage mid-cap bank, real washout but cagr -14.35% \u2014 value-trap-or-mispricing question only LK footnotes resolve; VAL_BANKS card at construction.\n3. JPFA.JK (WASHOUT/NEGLECTED, poultry) \u2014 runner-up, not picked. Thin coverage, washout-then-recovery pattern; first swap-in if DSNG/PNBN falter in dossier stage.\n4. SGRO.JK (NEGLECTED, CPO) \u2014 PASS. Most extreme washout in the whole screen but ADV ~392mn IDR, roughly 10x thinner than DSNG \u2014 monitor-only, real\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-11 21:17:47.168045+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP sourcing triage 2026-07-11",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "## Sourcing triage \u2014 GLOBAL \u2014 2026-07-11 (Sloane / ANALYST_GLOBAL)\n\nBlank-slate book (0 positions, 0% gross, inception 2026-07-06); no fund record or watchlist revisit candidates exist yet. Screen: market-data snapshot (24 rows, WASHOUT/MOMENTUM, no NEGLECTED sleeve this week). flow_z60 ignored throughout (GLOBAL foreign-flow layer is vestigial/IDX-only).\n\n### Ranked list (all names seriously considered)\n1. NVO (WASHOUT) \u2014 PICK. -36.8% 12m but +15.6% 1m stabilization; GLP-1 franchise cash generation vs possible over-extrapolated share-loss narrative worth independent document work.\n2. SMFG (MOMENTUM) \u2014 PICK. Only name at 0% off 52w high with below-average vol; BOJ policy normalization \u2192 traceable NIM re-rate, not a chase.\n3. TXN (MOMENTUM) \u2014 PICK. Most restrained momentum in the sleeve (+32% vs +625% MU); capex/inventory cycle inflection, moderate (not heavy) coverage leaves room for original work.\n4. 2318.HK (WASHOUT) \u2014 PASS (close). Near-zero bench correlation is a genuine diversifier but Chinese insurer investment-portfolio opacity is a week-one hazard; deferred, not killed.\n5. ASML \u2014 PASS. Real document trail but heavy coverage means bookings-vs-China-restriction read is\u2026",
     "persona": ""
   }
 ]
