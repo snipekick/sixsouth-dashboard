@@ -60,6 +60,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-07T20:01:36.842734+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-07: pass \u2014 no trading actions",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "20:00 WIB pre-open, North Book. QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d, carried since 2026-08-31) \u2014 not CRITICAL, trading permitted. Both books 100% cash, 0 names, dd 0.0, governor NONE. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kill to reconcile; wrapper wrote none; GLOBAL all-cash n_names=0, so no live ticket or fill to verify. No missing-ticket breach.\n(3b) Governor de-gross: governor_state NONE (GLOBAL, live=false) \u2014 no deterministic sells emitted, no mix to choose; buys vetoed by rule anyway.\n(3c) Entries: sole GLOBAL judged_unticketed names are T-GLOBAL-NVO-002 and T-GLOBAL-0700HK-001, both non-tradeable \u2014 sized to zero, no ticket.\n  - T-GLOBAL-NVO-002 (judged, PASS_REDUCED): sizing pm_pct 0.0 / script_pct 0.0 \u2014 size_position Kelly<=0 at spot 37.00 (quarter-Kelly after haircut binding); Judge 0x multiplies any size to zero, binds like a kill. deviation_reason: 'No ticket staged.' No re-open without material new evidence.\n  - T-GLOBAL-0700HK-001 (judged, PASS_REDUCED, risk_checked): sizing pm_pct 0.0 / script_pct 0.0 \u2014 Kelly<=0, ADV-unknown liquidity cap fail-closed; PM ruling recorded\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-10-07 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (1 flag, ops lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source). Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders empty, kill_actions_due empty, reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\n**Construction queue (runbook step 1) \u2014 EMPTY:**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. The 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2 (ERAA, MEDC); both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001). No `verdict: ADVANCE` card exists anywhere in `fund record`.\n\n## Step 2 \u2014 Construction chains\n\nNone advanced (queue empty). No analyst / Drew / Aldrich spawns; ~zero sourcing tokens.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a now-satisfied re-stage condition)\n\nThe queue\u2026",
     "persona": ""
@@ -846,17 +857,6 @@
       "kind": "review"
     },
     "body": "GLOBAL book: 0 positions, 0% gross, 100% cash (NAV $1,000,582.19), pre-ramp since inception 2026-07-06 \u2014 nothing to re-affirm, no market-value/target/kill triggers to act on. This week's 3 deep-dive construction chains (NVO, SMFG, TXN) all completed the full pipeline (analyst draft -> Bear attack KILL_RECOMMENDED -> analyst revision -> Bear re-attack reaffirmed -> Judge verdict) and were ALL judged KILL: NVO (reason_tag process; merits: analyst's own base-case DCF sat below entry, CagriSema lost its head-to-head to Zepbound, expected_pct -33.5%/3y), SMFG (process; base_rate archetype mismatch + no surviving variant perception, expected_pct -3.65%/3y), TXN (valuation; entry priced ~27-40x own fair EV/EBIT anchor of 12-14x, expected_pct -48.18%/3y). A 3-for-3 kill rate in the first real deep-dive batch is notable but reads as the bar working as designed (each kill is merits-based and independently reproduced by two adversarial passes), not evidence the screen is broken -- not lowering the bar to force a trade. Pipeline continues: next WEEKLY_DEEP resumes sourcing from fund record + kill_ledger/watchlist revisit scan (all 3 killed tickers now carry documented reason_tags for future\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-11 21:17:50.161546+07:00",
-      "book": "INDO",
-      "title": "WEEKLY_DEEP sourcing triage 2026-07-11",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "## Sourcing triage \u2014 INDO \u2014 2026-07-11 (Sunda / ANALYST_INDO)\n\nBlank-slate book (0 positions, 0% gross, inception 2026-07-06); no fund record or watchlist revisit candidates exist yet. Screen: market-data snapshot (36 rows, WASHOUT/NEGLECTED/MOMENTUM). Foreign-flow feed is STALE (0 fresh readings) \u2014 flow_z60 ignored everywhere, including on em_flows-sensitive names (BBCA, BBRI, GOTO) where it would normally matter; flagged as a live blind spot, not a \"no signal\" read.\n\n### Ranked list (all names seriously considered)\n1. DSNG.JK (NEGLECTED, CPO) \u2014 PICK. Deepest genuine washout with fundamentals intact (off-high -37.5%, cagr +44.3%); best mispricing-to-liquidity ratio in the CPO cluster.\n2. PNBN.JK (WASHOUT, bank) \u2014 PICK. Thin-coverage mid-cap bank, real washout but cagr -14.35% \u2014 value-trap-or-mispricing question only LK footnotes resolve; VAL_BANKS card at construction.\n3. JPFA.JK (WASHOUT/NEGLECTED, poultry) \u2014 runner-up, not picked. Thin coverage, washout-then-recovery pattern; first swap-in if DSNG/PNBN falter in dossier stage.\n4. SGRO.JK (NEGLECTED, CPO) \u2014 PASS. Most extreme washout in the whole screen but ADV ~392mn IDR, roughly 10x thinner than DSNG \u2014 monitor-only, real\u2026",
     "persona": ""
   }
 ]
