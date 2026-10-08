@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-10-08T08:46:28.312855+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-10-08 - triggers reviewed, no tickets (ERAA blocked by standing dossier gate)",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Triggers reviewed at 08:45 WIB; no ticket staged. (1) QC WARN, 1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d - long-documented, no authoritative index-level IHSG yield reachable (idx.co.id blocks automated access); not CRITICAL, no trading impact, both books all-cash. (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 - no fired kill exists, so no missing-ticket breach to escalate. (3) Governor: NONE for INDO and GLOBAL, dd 0.0 - no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, pm_pct 5.0% at-cost, qty 1358100 @ limit 560, max_chase 0). NOT staged: the identical order ORD-20261007131050-ERAA.JK-e360 was staged by CONSTRUCT 2026-10-07 and VETOed+deleted by fund record on the standing dossier-freeze gate (no data/dossiers/ERAA.md, fund record learning_triggers.dossier_freeze_days 60). Re-verified this session: the ERAA dossier is still absent, so the blocker is unchanged and the VETO is absolute. Per runbook step 4 (accept a VETO, never re-cut the same order to dodge a limit) the ticket is not re-staged\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-07T13:13:37.601196+07:00",
       "book": "INDO",
       "title": "T-INDO-ERAA-001 re-size: ticket VETOed (missing dossier), no ticket",
@@ -846,17 +857,6 @@
       "kind": "review"
     },
     "body": "INDO book: 0 positions, 0% gross, 100% cash (NAV Rp15,011,301,369.86), pre-ramp since inception 2026-07-06 -- nothing to re-affirm, no market-value/target/kill triggers to act on. Foreign-flow feed remains STALE (0 fresh readings) -- flagged, not estimated. This week's 3 deep-dive construction chains (DSNG.JK, ELSA.JK, PNBN.JK) all completed the full pipeline (analyst draft -> Bear attack KILL_RECOMMENDED -> analyst revision -> Bear re-attack reaffirmed -> Judge verdict) and were ALL judged KILL: DSNG.JK (valuation; coverage-lag mechanism empirically refuted by the stock's own post-RUPST bounce, expected_pct -8.9%/3y, no NAV margin of safety), ELSA.JK (process; also uncited 4.0x EV/EBITDA multiple and a conceded sign-inverted archetype, expected_pct -3.8%/3y vs a ~6.5%/yr FR carry), PNBN.JK (valuation; own VAL_BANKS math shows warranted P/BV 0.20-0.27x vs 0.38x traded, expected_pct -24.3%/3y, ~-23.5%/yr equity risk premium vs the FR sovereign sleeve in the same book). A 3-for-3 kill rate in the first real deep-dive batch is notable but reads as the bar working as designed, not evidence the screen is broken -- not lowering the bar to force a trade, and not reaching for the FR\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-12 12:07:10.419132+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP portfolio review 2026-07-12 \u2014 no holdings, pipeline update",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "GLOBAL book: 0 positions, 0% gross, 100% cash (NAV $1,000,582.19), pre-ramp since inception 2026-07-06 \u2014 nothing to re-affirm, no market-value/target/kill triggers to act on. This week's 3 deep-dive construction chains (NVO, SMFG, TXN) all completed the full pipeline (analyst draft -> Bear attack KILL_RECOMMENDED -> analyst revision -> Bear re-attack reaffirmed -> Judge verdict) and were ALL judged KILL: NVO (reason_tag process; merits: analyst's own base-case DCF sat below entry, CagriSema lost its head-to-head to Zepbound, expected_pct -33.5%/3y), SMFG (process; base_rate archetype mismatch + no surviving variant perception, expected_pct -3.65%/3y), TXN (valuation; entry priced ~27-40x own fair EV/EBIT anchor of 12-14x, expected_pct -48.18%/3y). A 3-for-3 kill rate in the first real deep-dive batch is notable but reads as the bar working as designed (each kill is merits-based and independently reproduced by two adversarial passes), not evidence the screen is broken -- not lowering the bar to force a trade. Pipeline continues: next WEEKLY_DEEP resumes sourcing from fund record + kill_ledger/watchlist revisit scan (all 3 killed tickers now carry documented reason_tags for future\u2026",
     "persona": ""
   }
 ]
