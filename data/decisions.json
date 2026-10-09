@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-10-09T08:46:18.466176+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-10-09 - triggers reviewed, no tickets (ERAA still blocked by standing dossier gate)",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Triggers reviewed at 08:45 WIB; no ticket staged. (1) QC WARN, 1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d - long-documented, no authoritative index-level IHSG yield reachable; not CRITICAL, no trading impact, both books all-cash (INDO and GLOBAL 100% cash, n_names 0). (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 - no fired kill exists, so no missing-ticket breach to escalate; fund record empty. (3) Governor: NONE for INDO and GLOBAL, dd 0.0 - no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, pm_pct 5.0% at-cost, qty 1358100 @ limit 560, max_chase 0, sizing block present). NOT staged: the identical order ORD-20261007131050-ERAA.JK-e360 was staged by CONSTRUCT 2026-10-07 and VETOed+deleted by fund record on the standing dossier-freeze gate (no data/dossiers/ERAA.md, fund record learning_triggers.dossier_freeze_days 60). Re-verified this session: the ERAA dossier is still absent (data/dossiers holds only DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN), so the blocker is unchanged and the VETO is absolute. Per\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-08T08:46:28.312855+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-08 - triggers reviewed, no tickets (ERAA blocked by standing dossier gate)",
@@ -840,17 +851,6 @@
       "kind": "review"
     },
     "body": "## Sourcing triage \u2014 GLOBAL \u2014 2026-07-18 (Sloane / ANALYST_GLOBAL)\n\nBlank-slate book (0 positions). Kill-ledger revisit scan first: NVO/SMFG/TXN were Judge-KILLed 2026-07-13 (judge_kill_cooldown_days=60, live until ~2026-09-11) \u2014 excluded from consideration regardless of price even though SMFG (24.95 vs 25.74 entry) and TXN (284.02 vs 296 entry) now sit marginally below their old entry levels: both kills were valuation/EV-math based (SMFG's own honest numbers clear only -3.65%/-4.85% vs ~13% risk-free cash; TXN's own fair-value math computes $85-102/share vs a $284-296 entry/current range), not entry-price based, so a 3-4% pullback does not cure either flaw. No watchlist entries exist. Screen: market-data snapshot (24 rows, WASHOUT/MOMENTUM, no NEGLECTED sleeve this week). flow_z60 ignored throughout (GLOBAL foreign-flow layer is vestigial/IDX-only).\n\n### Names re-considered from last week's 2026-07-11 triage (pass reasoning re-checked, not re-litigated from scratch)\n- ASML, CAT, MU, AMD, 2020.HK \u2014 all still show the SAME structural PASS reason this week (heavy-coverage/consensus-priced, or momentum accelerating further, or thinnest-liquidity-weakest-fundamentals) \u2014 momentum in\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 10:16:34.036671+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP portfolio review 2026-07-18 \u2014 no holdings",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "Portfolio review (Harrison, PM_GLOBAL) \u2014 GLOBAL book: 0 positions, 0% gross, 100% cash, drawdown 0%, governor NONE. No holding-level distance-to-kill/target review applicable (nothing held). No market-value concentration (>15% NAV) possible at 0 names. Nothing to re-affirm this week; construction pipeline (step 7) is this book's only active work.",
     "persona": ""
   }
 ]
