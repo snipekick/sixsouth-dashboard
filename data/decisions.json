@@ -17,6 +17,17 @@
   },
   {
     "meta": {
+      "date": "2026-10-09T20:02:12.313535+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-09 \u2014 judgment pass, no tickets",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "20:00 WIB, North Book. QC WARN (carried): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 IDX-only param, no GLOBAL impact. Both books all-cash (GLOBAL nav 1,009,534.77 USD; INDO nav 15.216bn IDR), governor NONE both books -> no de-gross. Kills: kill_actions_due empty, kill_monitoring_suspended empty, 0 live positions -> no fired kill to verify, no fail-closed breach. Entries (step 3c, GLOBAL): judged_unticketed resolves to zero for all three \u2014 (1) T-GLOBAL-NVO-002 verdict PASS_REDUCED is NO_TRADE stamped 0x, pm_pct 0.0, no ticket; (2) T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly nothing to propose. No tickets created -> step 5 risk_check --orders not re-run (orders_pending empty). Zero-deployment cost noted per the 2026-09-05 directive: GLOBAL sits 100pct cash at the ~3.88pct USD cash proxy vs the benchmark; the binding gate to North-book deployment is the ABSENT ERAA dossier \u2014 a RESEARCH/INGESTION gate, not EV/liquidity \u2014 already escalated 2026-10-07 (3rd+ consecutive week at 0pct). No new escalation.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-08T08:46:28.312855+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-08 - triggers reviewed, no tickets (ERAA blocked by standing dossier gate)",
@@ -834,17 +845,6 @@
       "kind": "other"
     },
     "body": "Per constitution section 3 (consensus quarantine): \"An agent meeting banned data logs a persistent CONTAMINATION journal entry and discards it.\"\n\nDuring Phase-1 (fundamentals-only) research on T-INDO-LSIP-001 (PP London Sumatra), an early WebSearch results summary surfaced a trailing PE ratio (4.73), forward PE (5.12), and a market-cap figure (IDR 8.93tn) before the analyst restricted subsequent searches to primary-source domains. These are price-derived, market-implied numbers banned from the Phase-1 context per the two-phase analyst protocol.\n\nDisposition: the analyst discarded these figures immediately upon recognizing them and confirmed none appear anywhere in the NAV/estimate work committed to the thesis file \u2014 all subsequent research used company primary filings (annual report/financial statements) and public commodity-price series only. No re-work needed; no committed estimate, archetype selection, or base_rate anchor was influenced by the leaked figures.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 10:26:49.591248+07:00",
-      "book": "INDO",
-      "title": "CONTAMINATION \u2014 incidental price-derived data during Phase 1",
-      "thesis": "T-INDO-ASII-001",
-      "kind": "other"
-    },
-    "body": "Per constitution section 3 (consensus quarantine): \"An agent meeting banned data logs a persistent CONTAMINATION journal entry and discards it.\"\n\nDuring Phase-1 (fundamentals-only) research on T-INDO-ASII-001 (Astra International), a WebSearch query on Astra's dividend policy surfaced an aggregator snippet referencing \"dividend yields between 1.3-1.9%\". Dividend yield is a price-derived, market-implied number, banned from the Phase-1 context per the two-phase analyst protocol (no prices, no market-implied numbers) even though it is not itself a sell-side rating/price-target/recommendation-count.\n\nDisposition: the analyst did not use, cite, or anchor any part of the thesis on this figure \u2014 only IDR-per-share dividend amounts and payout-ratio percentages (non-price-derived) were used in the Phase-1 build. The number is discarded per protocol; logging here per the constitution's mandatory-log requirement. No re-work needed since the figure was never incorporated into any committed estimate or the base_rate/archetype selection.",
     "persona": ""
   }
 ]
