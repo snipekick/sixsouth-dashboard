@@ -1,6 +1,50 @@
 [
   {
     "meta": {
+      "date": "2026-10-10T10:13:58.776233+07:00",
+      "book": "INDO",
+      "title": "WEEKLY_DEEP 2026-10-10 sourcing triage \u2014 ranked, INDO",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "INDO (Dani). (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: ELSA cheap-hook fires (630 below the 08-05 kill entry 695) but the re-card gate is evidence/catalyst-only, never price => DISCARD stands; TAPG is ABOVE its prior kill (2,010 vs 1,830) => a fresh look, not a below-entry revisit. (c) WATCH cards: DMAS.JK \u2014 NEGLECTED (non-MOMENTUM), PROPERTY but the AGAINST card names a live variant (Kota Deltamas is an INDUSTRIAL township selling land to manufacturers/FDI, not mortgage-financed residential), P/E 5.6, ~16% yield, RNAV-anchored => DEEP-DIVE; TAPG.JK \u2014 NEGLECTED (non-MOMENTUM), CPO cash-generative mid-cap, -22% off high, EV +11.2% base => DEEP-DIVE; TINS.JK \u2014 fires both sleeves and sits on the desk #1 FAVOR tilt (ID tin supply discipline) but entry is fully extended (mom12 +285%), the card itself says \"scout, not chase\" => stays WATCH. (d) cold rows not needed (quota met). Picks: DMAS, TAPG (both non-MOMENTUM => rule satisfied).",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-10 10:11:21.859229+07:00",
+      "book": "INDO",
+      "title": "VETO ERAA.JK buy 1358700.0",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "risk_veto"
+    },
+    "body": "Order `ORD-20261010101116-ERAA.JK-008e` VETOed and removed by risk_check: trade 5.5% NAV > 5.0% cap",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-10T10:12:36.814243+07:00",
+      "book": "INDO",
+      "title": "Re-stage ERAA.JK \u2014 dossier blocker cleared; ticket PASSes risk_check",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "other"
+    },
+    "body": "WEEKLY_DEEP 2026-10-10. The step-3 ingestion path built data/dossiers/ERAA.fund record (kind full, fundamentals_complete true, asof 2026-10-10) from a fresh yfinance ERAA.JK export, clearing the standing _dossier_frozen VETO that blocked T-INDO-ERAA-001 since 2026-10-07. Re-staged ORD-20261010101159-ERAA.JK-2bf6: INDO equity buy ERAA.JK qty 1,237,200 LIMIT 560 max_chase 0, thesis T-INDO-ERAA-001 (judged PASS_REDUCED 0.5x). Sizing: qty bound by max_single_trade_pct_nav 5.0 at market 615 (=5.00% NAV); at-cost 4.55% <= Voss hard_max 5.0. fund record --orders verdict PASS within constitution (ledger_rows 89). Placed nothing today; ticket staged for the next IDX pre-open. The 2026-10-31 Q3-2026 LK print remains the entry gate. First risk-PASSed ticket in the fund's record (previously 24 kills / 0 tickets).",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-10T10:13:58.618131+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP 2026-10-10 sourcing triage \u2014 ranked, both books",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "GLOBAL (Sloane). (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: none clean \u2014 NVO already re-visited (T-GLOBAL-NVO-002, PASS_REDUCED 0x); SMFG re-advance gates unmet (needs Q1-FY26 ROE>9% evidence or P/BV DEEP-DIVE; ABBV \u2014 defensive compounder, WITH the CAUTIOUS risk appetite, +9% EV, at 52w high => DEEP-DIVE. SMFG, LLY stay WATCH (gates unmet). (d) cold rows not needed (quota met). NOTE: GLOBAL screen is MOMENTUM-only this week (0 NEGLECTED / 0 WASHOUT), so the \">=1 non-MOMENTUM\" rule is UNAVAILABLE and waived for this book. Picks: SAP, ABBV.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-09T08:46:18.466176+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-09 - triggers reviewed, no tickets (ERAA still blocked by standing dossier gate)",
@@ -801,50 +845,6 @@
       "kind": "pass"
     },
     "body": "## Session review summary\n\n**QC**: WARN (PRICE_CACHE_OLD, 50h stale) \u2014 not CRITICAL, proceed.\n\n**Governor**: Both books NONE \u2014 no de-gross action.\n\n**Kill exits (3a)**: No holdings \u2014 gross_exposure_pct 0.0, empty holdings, no positions to kill. fund record empty. No breach.\n\n**Governor de-gross (3b)**: N/A \u2014 both books in NONE state.\n\n**Entries for judged theses (3c)**: All 6 theses (T-INDO-PNBN-001, T-INDO-DSNG-001, T-INDO-ELSA-001, T-GLOBAL-SMFG-001, T-GLOBAL-NVO-001, T-GLOBAL-TXN-001) are verdict KILL, killed 2026-07-13. No theses in judged/live with PASS/PASS_REDUCED. No entry opportunities.\n\n**Orders**: None created or cancelled.\n\n**Risk check (4)**: Skipped \u2014 no tickets created.\n\n**Time check (6)**: No tickets created, no slip to report.\n\n**Bash/sandbox note**: venv Bash unavailable this session (EPERM on session-env directory creation). State files read directly for analysis. Journal entry written manually.\n\nNext actionable event: next scheduled IDX_CLOSE or IDEATION session.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 10:08:39.650388+07:00",
-      "book": "INDO",
-      "title": "WEEKLY_DEEP sourcing triage 2026-07-18",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "## Sourcing triage \u2014 INDO \u2014 2026-07-18 (Sunda / ANALYST_INDO)\n\nBlank-slate book (0 positions). Kill-ledger revisit scan first: DSNG.JK/ELSA.JK/PNBN.JK were Judge-KILLed 2026-07-13 (judge_kill_cooldown_days=60, live until ~2026-09-11) \u2014 excluded from consideration regardless of price. All 3 now sit ABOVE their old entry levels anyway (DSNG 1215 vs 1170 entry; ELSA 640 vs 620; PNBN 915 vs 880), so the mechanical \"at/below prior entry math\" revisit test doesn't even apply to them this week; moot given the cooldown regardless. No watchlist entries exist. Foreign-flow feed remains STALE (0 fresh readings) \u2014 flow_z60 ignored everywhere. Screen: market-data snapshot (36 rows, WASHOUT/NEGLECTED/MOMENTUM).\n\n### Names re-considered from last week's 2026-07-11 triage (pass reasoning re-checked, not re-litigated from scratch)\n- SGRO.JK (NEGLECTED, CPO) \u2014 still the deepest washout in the book (off -56.62%) but ADV ~428mn IDR, essentially unchanged from last week's ~392mn IDR \u2014 the \"10x thinner than DSNG, real ARA/ARB unsizeability risk\" pass reason is unchanged (and DSNG is gone this week anyway). PASS again, monitor-only.\n- AADI.JK (MOMENTUM, coal) \u2014 same \"macro/China-import-policy edge\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 10:16:36.000962+07:00",
-      "book": "INDO",
-      "title": "WEEKLY_DEEP portfolio review 2026-07-18 \u2014 no holdings",
-      "thesis": null,
-      "kind": "review"
-    },
-    "body": "Portfolio review (Kretek, PM_INDO) \u2014 INDO book: 0 positions, 0% gross, 100% cash, drawdown 0%, governor NONE. No holding-level distance-to-kill/target review applicable (nothing held). No market-value concentration (>15% NAV) possible at 0 names. Foreign-flow feed remains STALE \u2014 flagged, not actionable against a holding that doesn't exist. Nothing to re-affirm this week; construction pipeline (step 7) is this book's only active work.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 13:42:07.389840+07:00",
-      "book": "INDO",
-      "title": "IDEATION 2026-07-18 \u2014 INDO cards",
-      "thesis": null,
-      "kind": "other"
-    },
-    "body": "ADVANCE: TLKM.JK (WASHOUT #2, BI-tightening telco drawdown, EV +8.75-9.0%), ADRO.JK (MOMENTUM #3, coal momentum + dividend anchor, EV +9.0%). WATCH: PWON.JK (WASHOUT #5, property developer, EV +1.6% borderline, BI headwind \u2014 needs rate pivot signal). NOT CARDED: ASII.JK/DSNG.JK/ELSA.JK/JSMR.JK/LSIP.JK/PNBN.JK (existing theses), MAPI.JK/GGRM.JK (thin moats, wait for fundamental inflection). Session state: 100% cash, 6 judged-unticketed theses pending next trading session.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-18 10:31:41.198360+07:00",
-      "book": "INDO",
-      "title": "CONTAMINATION \u2014 incidental price-derived data during Phase 1",
-      "thesis": "T-INDO-LSIP-001",
-      "kind": "other"
-    },
-    "body": "Per constitution section 3 (consensus quarantine): \"An agent meeting banned data logs a persistent CONTAMINATION journal entry and discards it.\"\n\nDuring Phase-1 (fundamentals-only) research on T-INDO-LSIP-001 (PP London Sumatra), an early WebSearch results summary surfaced a trailing PE ratio (4.73), forward PE (5.12), and a market-cap figure (IDR 8.93tn) before the analyst restricted subsequent searches to primary-source domains. These are price-derived, market-implied numbers banned from the Phase-1 context per the two-phase analyst protocol.\n\nDisposition: the analyst discarded these figures immediately upon recognizing them and confirmed none appear anywhere in the NAV/estimate work committed to the thesis file \u2014 all subsequent research used company primary filings (annual report/financial statements) and public commodity-price series only. No re-work needed; no committed estimate, archetype selection, or base_rate anchor was influenced by the leaked figures.",
     "persona": ""
   }
 ]
