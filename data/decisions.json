@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-10-12 11:00:12.528443+07:00",
+      "book": "INDO",
+      "title": "VETO ERAA.JK buy 1237200.0",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "risk_veto"
+    },
+    "body": "Order `ORD-20261010101159-ERAA.JK-2bf6` VETOed and removed by risk_check: trade 5.1% NAV > 5.0% cap",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-12T08:46:50.213791+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-10-12 - triggers reviewed, no new tickets (ERAA ticket live + risk-PASS, no kills, governor NONE)",
@@ -8,6 +19,11 @@
       "kind": "other"
     },
     "body": "Triggers reviewed at 08:45 WIB; no new ticket staged, no cancel. (1) QC WARN (not CRITICAL), 2 flags: 'price cache 47h old' (cache-age) and 'published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d' (long-documented, ops/human-owned; escalated 2026-08-22/09-05/10-03); no trading impact, both books all-cash (INDO + GLOBAL 100% cash, n_names 0). (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 -> no fired kill on any position exists, so no missing-ticket breach to escalate; fund record empty. The four kill_ledger rows dated 2026-10-12 (T-GLOBAL-ABBV-001, T-GLOBAL-SAP-001, T-INDO-DMAS-001, T-INDO-TAPG-002) are all status judged / verdict KILL - thesis-level rejections never ticketed; both books hold 0 positions, so no exit ticket is owed. (3) Governor: NONE for INDO and GLOBAL, dd 0.0, degross_since null -> no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, sizing.pm_pct 5.0% at-cost, sizing block present). Its ticket ALREADY EXISTS and is live: ORD-20261010101159-ERAA.JK-2bf6 (book INDO, equity, ERAA.JK, buy, qty 1237200\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-10-12 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN heartbeat_gap (no session 46h before IDX_PREOPEN; ops lane).\n- Macro regime (frontmatter asof 2026-10-10; prose note 10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`SAP` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `LLY`/`SMFG` WATCH, `BAC`/`MS`/`QCOM` DISCARD. INDO `DMAS`/`TAPG` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `ERAA`/`MEDC` PROMOTED (theses alive), `AMMN`/`TINS` WATCH\u2026",
     "persona": ""
   },
   {
@@ -835,16 +851,6 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-07-22 (Wed 19:15 WIB)\n\n## State at entry\n- Governor: both books NONE, all-cash, zero drawdown\n- QC: WARN (1 flag: DOSSIER_LONG fund record 844w > 800)\n- No pending orders, no live theses\n- Sandbox EPERM persists on `internal workspace record` (shell temp dir); Python scripts execute successfully but shell exits non-zero. Different from prior sessions where ALL scripts were blocked.\n- Prices fetched successfully for 0700.HK (468), NOC (490), LSIP.JK (1340)\n\n## Step 1 \u2014 Queue inventory\n- **Parked drafts (status: draft, verdict: null)**: T-GLOBAL-NOC-001 (GLOBAL), T-INDO-LSIP-001 (INDO). Both drafted 2026-07-18.\n- **Judged unticketed**: T-GLOBAL-0700HK-001 (PASS_REDUCED, Phase 2 deferred from prior session)\n- **ADVANCE cards**: 14 cards with asof 2026-07-18 \u2014 not touched (CONSTRUCT sources nothing; need 2026-07-25 WEEKLY_DEEP triage)\n\n## Step 2 \u2014 Construction chains\n\n### T-GLOBAL-NOC-001 (Northrop Grumman, NOC)\n- Lint: initial FAIL (kill criteria, ev_math, disconfirming facts, variant perception, pre-mortem all empty). Fixed.\n- **Bear (Drew): KILL_RECOMMENDED**. Disconfirming facts fabricated (cited Q2/Q3 2026 10-Qs from the future). NOC not a\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# CONSTRUCT Session Journal \u2014 2026-07-22 (Wed 13:00 WIB)\n\n## Queue: EMPTY \u2014 no work to advance\n\n- **Parked drafts (status: draft/attacked, no verdict):** 0. All 6 existing theses (SMFG, PNBN, TXN, NVO, DSNG, ELSA) are `verdict: KILL` from 2026-07-13 WEEKLY_DEEP.\n- **ADVANCE cards promoted by WEEKLY_DEEP:** 0. IDEATION has produced cards (GLOBAL 7, INDO 8 as of 07-22) but none have been through a Saturday WEEKLY_DEEP triage yet. Next WEEKLY_DEEP: 2026-07-25.\n\n**Session outcome:** No chains run, no tickets staged. Zero tokens consumed on construction work. Exit clean \u2014 empty queue is success per runbook.\n\n**Note:** Sandbox EPERM on `internal workspace record` persists \u2014 fund record and fund record could not be executed; inventory was manually reconstructed from state files (consistent with prior sessions' workaround pattern documented in fund record).\n\n## SUPERSEDED \u2014 ops note (owner's assistant), 2026-07-22 19:0x\nThe \"queue EMPTY\" finding above is FALSE: six draft theses with `verdict: null`\n(T-GLOBAL-NOC/SONY/0700HK-001, T-INDO-ASII/JSMR/LSIP-001) existed at run time and\nwere missed because the sandbox EPERM forced a manual inventory. The EPERM is fixed\n(sandbox now allows the\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-07-21 (Tue)\n\n## State at entry\n- QC: OK, no flags. Governor: both books NONE, all-cash, zero drawdown.\n- No kill actions, open reviews, or live theses. Watchlists empty.\n- Existing cards (from Fri 07-18): MSFT (ADVANCE/WASHOUT), ADRO (ADVANCE/MOMENTUM), TLKM (ADVANCE/WASHOUT).\n\n## Ingestion sweep\n- 6 xlsx files exist in data/fundamentals_inbox/ (NVO, SMFG, TXN, DSNG, ELSA, PNBN \u2014 all killed-thesis tickers from 07-13).\n- **2 of 6 processed** (NVO, TXN \u2014 dossiers written via web research fallback since xlsx unreadable). SMFG dossier not written (agent failed). 3 INDO inbox files (DSNG, ELSA, PNBN) not attempted.\n- Raw files remain in inbox (mv to market-data snapshot blocked by sandbox). Ops should: (a) resolve sandbox, (b) run ingestion on remaining 4 files, (c) move all 6 ingested files.\n- 2 dossiers exist (NVO, TXN).\n\n## Screen sweep\n- fund record output for today and 07-20 unavailable (empty/missing cache files). fund record is empty `{}`.\n- Cards written on macro regime + universe rotation basis only; sleeve tagged UNSCREENED throughout.\n- Macro regime (asof 07-11): balance_of_payments_pressure, CAUTIOUS. FAVOR: nickel supply-discipline\u2026",
     "persona": ""
   }
 ]
