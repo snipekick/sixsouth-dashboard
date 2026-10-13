@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-10-13 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-13T08:47; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-10-12 11:00:12.528443+07:00",
       "book": "INDO",
@@ -846,17 +851,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-07-22 (Wed)\n\n## State at entry\n- QC: OK, no flags. Governor: both books NONE, all-cash, zero drawdown.\n- No kill actions, open reviews, or live theses. No watchlists, no fund record.\n- Existing cards (from Mon 07-21 / Fri 07-18): GLOBAL 4 (MSFT, JPM, GE, LLY), INDO 5 (ADRO-WATCH, TLKM, INCO, MEDC, AMMN).\n- Sandbox EPERM persists (same as 07-21) \u2014 fund record, fund record, and all bash/Python blocked.\n\n## Ingestion sweep\n- 6 xlsx files in data/fundamentals_inbox/ (NVO, SMFG, TXN, DSNG, ELSA, PNBN \u2014 all killed-thesis tickers from 07-13).\n- 2 dossiers already exist from 07-21: NVO, TXN.\n- 4 dossier-writer agents spawned for SMFG, DSNG, ELSA, PNBN (web-research fallback since xlsx unparseable via Read tool). **All 4 confirmed complete** \u2705 (SMFG, DSNG, ELSA, PNBN), joining NVO and TXN from 07-21.\n- **All 6 of 6 inbox tickers now have dossiers.** Raw files remain in inbox (mv to market-data snapshot blocked by sandbox). Ops should: (a) resolve sandbox, (b) move all 6 ingested files from inbox to market-data snapshot\n- Weekday ingestion queue fully caught up modulo sandbox file-move.\n\n## Screen sweep\n- fund record unavailable (sandbox EPERM). No screen\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-22T20:01:33.077891+07:00",
-      "book": "GLOBAL",
-      "title": "SESSION_US_PREOPEN 2026-07-22 \u2014 pass",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (DOSSIER_LONG fund record 844>800, non-critical). All judged kills (NOC, LSIP, SONY, ASII, JSMR) had no live positions \u2014 no liquidation needed. Governor NONE both books \u2014 no DEGROSS. T-GLOBAL-0700HK-001 (Tencent) PASS_REDUCED but sized at 0% (Kelly \u22640, pm_pct=null) \u2014 no entry ticket possible. No FX theses active. Kill ledger entries for NOC and LSIP confirmed added by OPS (commit a2ceaa2) \u2014 HUM_ATTENTION stale entries about blocked writes. No tickets written this session.",
     "persona": ""
   }
 ]
