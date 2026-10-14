@@ -6,6 +6,11 @@
   },
   {
     "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-10-14 (Wed 13:00 WIB)\n\n## State at entry\n- QC WARN (1 flag, ops/human lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source; escalated 08-22/09-05/10-03).\n- Both books 100% cash, dd 0.0, governor NONE, n_names 0; pending_orders [], kill_actions_due [], reviews_open []. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n- human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-14T08:47; ops lane).\n\n## Step 1 \u2014 Queue inventory (runbook step 1) \u2014 EMPTY\n- **(a) Parked drafts** (`status: draft`/`attacked`, no verdict): **none.** All 40 theses are `judged` (38) or `killed` (2: T-GLOBAL-AAPL-001, T-GLOBAL-TSM-001). No decaying mid-pipeline thesis exists. (`fund record` is the template, not a thesis.)\n- **(b) ADVANCE idea cards promoted by a prior WEEKLY_DEEP triage but never constructed**: **none.** 15 cards in `fund record`: WATCH 4 (GLOBAL LLY/SMFG; INDO AMMN/TINS), DISCARD 9 (GLOBAL ABBV/BAC/MS/QCOM/SAP; INDO DMAS/ELSA/PTBA/TAPG), PROMOTED 2 (INDO ERAA/MEDC). Both PROMOTED cards\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-13 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-13T08:47; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
   },
@@ -846,17 +851,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-04 (Tue)\n\n## State at entry\n- QC: WARN (2 flags: price cache 286h old; fund record 2026-07-18 older than 10d \u2014 informational for ops, not action-forcing).\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews. Pending orders: none.\n- Existing cards: GLOBAL 11 (CAT, MSFT, NEM, JPM, GE, LLY, COST, XOM, MUFG, AMD, UNH), INDO 11 (PWON, TLKM, ADRO-W, INCO, MEDC, AMMN, TOWR, KLBF, DSNG, AKRA, GGRM).\n- Screens available today (both books, prices live). Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives; NEUTRAL commodity bloc.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ contains only ancillary scripts (no raw data files). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names screened, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names screened, 11 NEGLECTED + 12 MOMENTUM (overlap: LSIP, ELSA, TAPG).\n- Cross-referenced against fund record watchlists (both empty), and fund record (11 entries).\n\n## Coverage rotation rationale\n- **The kill-revisit hook fired for\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-07-23T08:45:56.614906+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-07-23: no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "IDX_PREOPEN session 2026-07-23 08:45 WIB. QC WARN (dossier fund record 844 words > 800 \u2014 minor, not CRITICAL). Governor NONE (no DEGROSS). No INDO judged_unticketed theses with sized entries (T-GLOBAL-0700HK-001 is GLOBAL book, not INDO; sizing is pm_pct=null / Kelly <=0 anyway). No kill exits due. No tickets created. All clear \u2014 exiting.",
     "persona": ""
   }
 ]
