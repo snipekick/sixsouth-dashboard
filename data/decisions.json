@@ -5,6 +5,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-14T20:09:40.106750+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-14 \u2014 no trading actions; both GLOBAL judged theses size-to-zero",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "North Book, 20:00 WIB US_PREOPEN (six South duty / North Book; tier cheap). QC WARN, not CRITICAL \u2014 single flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d (standing since 08-31; IDX-only input, not consumed by North Book; ops/human-owned, already escalated 08-22/09-05/10-03; fail-closed blocks any action that would use it). Flag carried, no action. (a) Kill exits: none fired \u2014 kill_actions_due empty, live_theses empty, kill_monitoring_suspended empty; nothing to verify against a live ticket or fill. No breach. (b) Governor de-gross: governor NONE both books, GLOBAL gross 0.0% / dd 0.0% / n_names 0 \u2014 no DEGROSS, no de-gross mix to choose. (c) Entries: no GLOBAL thesis qualifies. The two GLOBAL judged-unticketed are both size-to-zero \u2014 T-GLOBAL-NVO-002 (PASS_REDUCED/NO_TRADE, sizing.pm_pct 0.0, own-Kelly<=0 at spot, expected -13.0%/3y vs +11.6% cash) and T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x, sizing.pm_pct 0.0, Kelly<=0, three Judge-ordered Phase-2 deliverables never completed). Quantity from sizing.pm_pct is zero for both \u2014 no ticket, no resize (never resize here). T-INDO-ERAA-001 is South Book (INDO/PM_INDO), out of scope for a North\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-10-14 (Wed 13:00 WIB)\n\n## State at entry\n- QC WARN (1 flag, ops/human lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source; escalated 08-22/09-05/10-03).\n- Both books 100% cash, dd 0.0, governor NONE, n_names 0; pending_orders [], kill_actions_due [], reviews_open []. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n- human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-14T08:47; ops lane).\n\n## Step 1 \u2014 Queue inventory (runbook step 1) \u2014 EMPTY\n- **(a) Parked drafts** (`status: draft`/`attacked`, no verdict): **none.** All 40 theses are `judged` (38) or `killed` (2: T-GLOBAL-AAPL-001, T-GLOBAL-TSM-001). No decaying mid-pipeline thesis exists. (`fund record` is the template, not a thesis.)\n- **(b) ADVANCE idea cards promoted by a prior WEEKLY_DEEP triage but never constructed**: **none.** 15 cards in `fund record`: WATCH 4 (GLOBAL LLY/SMFG; INDO AMMN/TINS), DISCARD 9 (GLOBAL ABBV/BAC/MS/QCOM/SAP; INDO DMAS/ELSA/PTBA/TAPG), PROMOTED 2 (INDO ERAA/MEDC). Both PROMOTED cards\u2026",
     "persona": ""
@@ -846,11 +857,6 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-08-05 (Wed 13:00 WIB)\n\n## State at entry\n- Governor: both books NONE, all-cash, zero drawdown\n- QC: OK (0 flags)\n- No pending orders, no live theses\n- 1 judged_unticketed: T-GLOBAL-0700HK-001 (PASS_REDUCED, 0% sizing from prior session)\n\n## Step 1 \u2014 Queue inventory\n- **Parked drafts (status: draft/attacked, verdict: null)**: NONE. All 14 theses are status: judged.\n- **ADVANCE idea cards**: 12 GLOBAL + 7 INDO = 19 cards, oldest 2026-07-18, newest 2026-08-04.\n\n## Step 2 \u2014 Construction chains\n\n### T-GLOBAL-SMFG-002 (SMFG \u2014 Sumitomo Mitsui Financial Group ADR)\n- Kill-revisit of T-GLOBAL-SMFG-001 (killed 2026-07-13, process). Idea card: ADVANCE (2026-08-04).\n- Screen: MOMENTUM #9, mom12 +57%, last $25.88, ADV $47.9M. Regime: WITH (japan_reflation).\n- Archetype: quality_bank_rerating (rate 0.48). Analyst argued keeping it despite prior conceded mismatch.\n- **Lint**: PASS (initial), PASS (after revision, price fix needed for consistency).\n- **Bear (Drew): KILL_RECOMMENDED**. P/BV denominator switch (total equity ~1.5x vs attributable ~1.6-1.7x). Dossier shows \u00a51.14tn net income vs thesis \u00a51.583tn (39% gap). Same archetype mismatch as T-001. On delivered\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-04 (Tue)\n\n## State at entry\n- QC: WARN (2 flags: price cache 286h old; fund record 2026-07-18 older than 10d \u2014 informational for ops, not action-forcing).\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews. Pending orders: none.\n- Existing cards: GLOBAL 11 (CAT, MSFT, NEM, JPM, GE, LLY, COST, XOM, MUFG, AMD, UNH), INDO 11 (PWON, TLKM, ADRO-W, INCO, MEDC, AMMN, TOWR, KLBF, DSNG, AKRA, GGRM).\n- Screens available today (both books, prices live). Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives; NEUTRAL commodity bloc.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ contains only ancillary scripts (no raw data files). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names screened, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names screened, 11 NEGLECTED + 12 MOMENTUM (overlap: LSIP, ELSA, TAPG).\n- Cross-referenced against fund record watchlists (both empty), and fund record (11 entries).\n\n## Coverage rotation rationale\n- **The kill-revisit hook fired for\u2026",
     "persona": ""
   }
 ]
