@@ -1,5 +1,27 @@
 [
   {
+    "meta": {
+      "date": "2026-10-16T03:24:48.801453+07:00",
+      "book": "INDO",
+      "title": "SIZED TINS 1.725% NAV - Judge 0.50 x script 3.45 (limit 780, unfillable resting bid)",
+      "thesis": "T-INDO-TINS-001",
+      "kind": "sizing"
+    },
+    "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 3.45% NAV (binding quarter-Kelly after haircut; kelly_full 13.78%, liquidity cap 1801.5%, stress-day book loss 0.28% NAV  pm_pct 1.725% NAV (exact product 3.45x0.50 = 1.725, the lint bound; no further deviation). Entry plan: mode=limit, level 780 IDR (the analyst value-anchored level STANDS - moving it up destroys the EV: at the 1y low 1,100 up_pct +13.6% / down_pct -60.9% -> negative two-point EV), max_chase_pct 5 (max fill 819, still ~80% below spot), valid_until 2026-12-31. Carried note (not cured): 780 sits below the 1y low 1,100 -> an unfillable resting ticket; capital will not deploy absent an ~81% collapse, so this is a patient value discipline, not an executable path at spot 4,170. Next tranche (script): 320,700 sh = 3,207 lots = 1.725% NAV, remaining 0.0%. Price-at-decision: TINS.JK spot 4,170 IDR (asof 2026-10-15). Rules applied: none.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-16T03:24:48.993565+07:00",
+      "book": "INDO",
+      "title": "SIZED MEDC 6.00% NAV - Judge 0.60 x script 10.0 (limit 1,400)",
+      "thesis": "T-INDO-MEDC-001",
+      "kind": "sizing"
+    },
+    "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 10.0% NAV (binding constitution_cap; kelly_quarter 21.48%, liquidity 733.29%, stress-day book loss 0.42% NAV  pm_pct 6.00% NAV (exact product 10.0x0.60 = 6.0), no further deviation. Entry plan: mode=limit, level 1,400 IDR (the analyst value-anchored level STANDS; two-point EV +15.0% at 1,400 vs a thin +7.0% at spot 1,515), max_chase_pct 5 -> max fill 1,470 stays below spot (no chase into the market), valid_until 2026-12-31. Both 2026-09-16 VETO hard gates re-verified remediated (dossier fresh asof 2026-10-16; mcap IDR 33.99T >= 1T floor). Next tranche (script): 507,600 sh = 5,076 lots = 4.899% NAV (capped at 98% of the 5% single-trade cap); remaining 1.101% NAV stages after the first fill. Price-at-decision: MEDC.JK spot 1,515 IDR (asof 2026-10-15). Rules applied: none.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-15 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-15T08:53; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
@@ -847,22 +869,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-17 (Mon)\n\n## State at entry\n- QC: WARN, 3 flags \u2014 fund record (08-04) >10d, fx_carry_rates EUR (06-17) / JPY (06-16) >60d. Data staleness only; not mine to fix. Prices live, both screens ran clean.\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews \u2014 nothing to carry to the next trading session. Pending orders: none.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- The 08-06 journal flagged the 07-18 cohort (GLOBAL MSFT/NEM, INDO TLKM) to cross 21 days on 08-08 \u2014 \"re-affirm or drop.\" Today they are 30d old; age-based hygiene is due for the first time.\n- Existing cards at entry: GLOBAL 12 active (at cap: 11 ADVANCE + SMFG-W), INDO 11 active (10 ADVANCE + ADRO-W).\n\n## Ingestion sweep\n- data/fundamentals_inbox/ empty (README + two helper scripts only). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names, 9 NEGLECTED + 12 MOMENTUM\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-17T20:01:17.914796+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK not ticketable, no action",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "State at entry: QC WARN (3 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d, fx_carry_rates.EUR asof 2026-06-17 >60d, fx_carry_rates.JPY asof 2026-06-16 >60d. Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; kill_monitoring_suspended empty). Nothing to verify.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells emitted, no de-gross mix to choose. No buys in NONE anyway.\nc. Entries \u2014 T-GLOBAL-0700HK-001 is NOT ticketable: sizing.pm_pct is null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly <= 0, ADV unknown), and the sizing block states 'PM cannot deviate up from 0'. EV -8.75% (negative). Judge's three Phase-2 deliverables (3-yr avg ROIIC, SBC forward trajectory, entry multiple + KPI kill levels) still outstanding \u2014 last_reviewed null; risk-check judgment note #6 says sizing is VETOed until they are satisfied. No qty to ticket; runbook\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-06 (Thu)\n\n## State at entry\n- QC: OK (0 flags; prices live, both screens ran clean). Brief noted judged_unticketed T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue \u2014 not mine to execute).\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews. Pending orders: none.\n- Existing cards: GLOBAL 12 active (all ADVANCE), INDO 12 active (10 ADVANCE + ADRO-W + PWON-W). Both at the 12-card cap.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Note: 08-05 CONSTRUCT processed 2 of 19 ADVANCE cards (SMFG, ELSA), both KILLED. Kill ledger rows T-GLOBAL-SMFG-002 and T-INDO-ELSA-002 are present in fund record (ops done). The stage_log timestamp-inversion + stale-data process flags are ops/tooling items, not mine.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ empty (ancillary scripts only). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names, 11 NEGLECTED +\u2026",
     "persona": ""
   }
 ]

@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "judged",
-    "verdict": "PASS_REDUCED",
+    "status": "attacked",
+    "verdict": null,
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
@@ -28,26 +28,26 @@
     "analyst": "Sloane"
   },
   "levels": {
-    "entry": 468.0,
-    "target": 632.0,
-    "kill": 304.0,
+    "entry": 330.0,
+    "target": 370.0,
+    "kill": 180.0,
     "max_chase_pct": 3.0,
     "entry_mode": "limit",
-    "target_rationale": "entry * (1 + up_pct) = 468 * 1.35 = 632; HKD; Phase 2 market price asof 2026-07-22 open",
+    "target_rationale": "target = base-case per-share value (HK$370): DCF of consolidated owner earnings CNY130bn (COE 9.5%, terminal g 4.0%, ROIIC fade) + investment portfolio at 50% of FY25 listed FV; pure operating-core DCF floor HK$330. Re-derived from the model, NOT back-solved from a chosen up_pct.",
     "price": 417.79998779296875,
     "price_asof": "2026-10-15"
   },
   "ev": {
-    "p_up": 0.35,
-    "up_pct": 35.0,
-    "p_down": 0.65,
-    "down_pct": -35.0,
-    "net_div_yield_pct_pa": 0.0,
+    "p_up": 0.4,
+    "up_pct": 12.1,
+    "p_down": 0.6,
+    "down_pct": -45.5,
+    "net_div_yield_pct_pa": 1.5,
     "fee_tax_drag_pct": 1.0,
-    "expected_pct": -11.5,
+    "expected_pct": -19.0,
     "horizon_years": 3.0,
-    "carry_pct": -1.0,
-    "kelly_full_pct": -94.0
+    "carry_pct": 3.5,
+    "kelly_full_pct": -289.4
   },
   "sizing": {
     "script_pct": 0.0,
@@ -68,14 +68,14 @@
     {
       "metric": "price",
       "op": "<",
-      "value": 304.0,
+      "value": 180.0,
       "action": "exit_full",
-      "note": "thesis-invalidating level (entry * 0.65 per down_pct -35%); NOT a stop; Phase 2 asof 2026-07-22"
+      "note": "falsification level = bear-case per-share value (HK$180: compounder broken \u2014 SBC/revenue >6%, growth stalls to 2.5%, COE 10%, no portfolio credit, 2021-22 trough ~13x owner earnings); NOT a stop. Phase 2 asof 2026-10-16 (last HK$417.80)"
     },
     {
       "metric": "date",
       "op": ">",
-      "value": "2027-07-22",
+      "value": "2027-10-16",
       "action": "review",
       "condition": "review if Marketing Services revenue growth has decelerated to <10% YoY for two consecutive quarters \u2014 the ad-monetisation headroom thesis is falsified"
     },
@@ -86,9 +86,79 @@
       "action": "review",
       "name": "marketing_services_revenue_growth_yoy_pct",
       "source": "Tencent quarterly results announcement (segment revenue table)"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 6.0,
+      "action": "review",
+      "name": "sbc_to_revenue_pct",
+      "source": "Tencent quarterly results announcement (share-based compensation reconciliation table)"
     }
   ],
-  "model": null,
+  "model": {
+    "currency": "CNY",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        660.3,
+        751.8,
+        819.5,
+        889.2,
+        960.3
+      ],
+      "ebit": [
+        208.8,
+        248.8,
+        274.5,
+        300.5,
+        326.5
+      ],
+      "net_income": [
+        194.1,
+        224.8,
+        245.9,
+        266.8,
+        288.1
+      ],
+      "eps": [
+        20.49,
+        24.15,
+        27.47,
+        30.15,
+        32.93
+      ],
+      "dps": [
+        3.16,
+        4.15,
+        4.67,
+        5.28,
+        5.93
+      ]
+    },
+    "valuation": {
+      "method": "DCF (Damodaran): consolidated owner earnings (IFRS NI, SBC subtracted as compensation) CNY130bn, COE 9.5% (upper USD band 8-10%, China premium), terminal g 4.0%, ROIIC fade 40%->WACC by yr10; + invest",
+      "bear": {
+        "value": 180.0,
+        "basis": "falsification: compounder broken (SBC/revenue >6%, growth stalls to 2.5%, COE 10%, terminal g 2.5%), no portfolio credit \u2014 2021-22 trough ~13x owner earnings"
+      },
+      "base": {
+        "value": 370.0,
+        "basis": "DCF core owner earnings CNY130bn (g 9%->4%) + portfolio at 50% of listed FV; pure operating-core DCF alone = HK$330"
+      },
+      "bull": {
+        "value": 540.0,
+        "basis": "DCF core CNY140bn (g 11%->4.5%, COE 9.0%) + portfolio at 60% of listed FV"
+      }
+    }
+  },
   "stage_log": [
     {
       "stage": "draft",
@@ -119,6 +189,18 @@
       "at": "2026-07-22T15:00:00+07:00",
       "actor": "Voss",
       "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "revise",
+      "at": "2026-10-16T02:34:31+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-16T02:56:24+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
     }
   ],
   "kill_outcome": null,
@@ -172,6 +254,16 @@
       "heading": "PM decision",
       "detail": null,
       "markdown": "**pm_pct: 0.0** \u2014 script_pct is 0.0 (Kelly <= 0, ADV-unknown liquidity cap fail-closed); deviation only downward, so pm_pct = 0.0. PASS_REDUCED 0.5x fraction binds like a kill: no ticket staged, no capital deployed. The three Judge-ordered Phase-2 deliverables (3-yr average ROIIC with FY22 data, forward SBC trajectory, entry multiple post-consensus-quarantine with kill levels) were never completed; without them the negative-EV math cannot be re-sized. Recorded 2026-08-22 WEEKLY_DEEP (PM/Gunawan): thesis concluded at 0% sizing \u2014 closed as judged_unticketed, no re-open without material new evidence (sponsoring analyst may resubmit)."
+    },
+    {
+      "heading": "Revision",
+      "detail": "REVISE \u2014 Phase-2 valuation completed",
+      "markdown": "Judge's three ordered deliverables, done.\n\n**1. ROIIC.** FY22 still not pullable this pass, so I do not claim a 3-year average; I adopt the Revision's ~40% haircut on the single-year 96.6% margin-expansion artifact. g = reinvestment 20.9% x ROIIC 40% = ~8.4% \u2014 this, not 20%, drives the model.\n\n**2. SBC forward.** SBC/revenue drifts from 4.2% toward ~5.5-6%. Owner earnings normalised to CNY130bn (from 150.7bn); that is the DCF base, SBC subtracted as compensation.\n\n**3. Entry multiple + KPI kills.** Base-case DCF: consolidated owner earnings CNY130bn, COE 9.5%, terminal g 4.0%, ROIIC fade 40%->WACC by yr10, net debt CNY265.4bn -> HK$330/share (CNY->HKD 1.09). Adding the investment portfolio at 50% of FY25 listed FV -> HK$370. Bear (falsification): growth to 2.5%, COE 10%, no portfolio credit -> HK$180. Levels: entry HK$330 (= operating-core DCF), target HK$370 (base), kill HK$180 (bear). KPI kills added: SBC/revenue >6%, Marketing Services growth <10% for two quarters.\n\n**Does a positive-EV construction exist? No.** At entry 330: up +12.1%, down -45.5%, p_up 0.40, expected -19.0%, quarter-Kelly 0. up/|down| 0.27. Positive EV requires entry <= HK$265 \u2014 37% below the HK$417.80 market and inside the thesis's own falsification zone; that is not a sensible entry. The base-case value (HK$330-370) sits BELOW the market price: the market implies owner earnings CNY161.7bn vs my 130bn. This is not an under-set target and not a stop-placed kill \u2014 it is **genuinely no trade** at any sensible entry. Judge to re-rule (likely KILL)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "re-attack, 2026-10-16",
+      "markdown": "**0. Fact-check.** Core P&L verifies (rev/EBIT/NI/EPS = dossier). FY25 cash-flow lines diverge/self-contradict: bridge op-profit 241.6 vs model EBIT 248.8; FCF 182.6 vs 190.2; capex 79.2 vs 112.9; EBITDA 310.8 vs 356.7. Cited but unreconciled. [MATERIAL]\n\n**1. Owner earnings double-haircut.** The bridge already subtracts SBC (182.6\u221231.9=150.7); the revision cuts to 130bn with no arithmetic shown \u2014 an opaque second ~14% cut. At the bridge's own 150.7bn, core \u2248HK$381 + portfolio \u2248HK$420 \u2248 market. The no-trade verdict rests on this unshown step. Fragile \u2014 single-assumption dependency. [MATERIAL]\n\n**2. Variant perception void by the analyst's own model.** VP claims 12\u201315% OE growth; the model's g = 20.9% \u00d7 40% = 8.4% \u2014 inside the \"market prices 8\u201310%\" the thesis calls mispricing. No edge is modeled; +12% is margin-of-safety, not re-rating. [MATERIAL]\n\n**3. No dated catalyst** (catalyst_date null); re-rating assumed, never triggered. [MINOR]\n\n**4. Archetype** 0.40 is right, but up/down 12.1/\u221245.5 vs base +50/\u221230, and the portfolio credit is a holdco element argued at 0.40 not 0.33. [MINOR]\n\n**5. Construction defect \u2014 under-set target, not a stop.** up/|down| 0.27 vs library 1.67. Kill 180 IS the falsification level (honest); the TARGET is the defect \u2014 base fair value (370), not the re-rated value (bull 540). At target 540/entry 330 EV\u2248\u22121.4%; entry 320\u2248+1.8%. \"entry \u2264265 is inside the falsification zone\" is false \u2014 265 is above the 180 kill. [MATERIAL]\n\n**6. New disconfirming fact.** 0700.HK fell HK$642.5 (2025-09-15) \u2192 HK$417.8 (2026-10-12), \u221235%, ~1% off its 1y low (411.8) \u2014 fund record. A year of de-rating to fresh lows is the structural-de-rating trap the base_rate notes warn against. [MATERIAL]\n\n**7. Pre-mortem gap.** It assumes things break; the unmentioned mode is nothing breaks and you still lose \u2014 the market sits 13% above the analyst's own fair value. [MINOR]\n\n**8. Anti-gaming.** (a) ev_math doesn't reconcile: stated \u221219.0% vs 0.40\u00b712.1+0.60\u00b7\u221245.5+0.5 = \u221222.0% (Judge flagged this before). (b) Revision claims \"FY22 not pullable,\" yet the dossier (asof 2026-10-16) carries FY22; Judge deliverable #1 was not delivered. Both to QC_FLAGS. [MATERIAL]\n\n**10. I stop objecting at entry \u2248HK$265** (EV>0 needs <257) \u2014 but rebuild the target at the re-rated value first. Good business; today's price is not the entry.\n\n**11. Verdict: MAJOR_REVISION** \u2014 the no-trade call is right on price but reached via a mis-built construction and a model that no longer embodies its own variant perception."
     }
   ]
 }

@@ -28,31 +28,31 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": null,
-    "target": null,
-    "kill": null,
-    "max_chase_pct": 3.0,
+    "entry": 780.0,
+    "target": 1250.0,
+    "kill": 430.0,
+    "max_chase_pct": 5.0,
     "entry_mode": "limit",
-    "target_rationale": null,
+    "target_rationale": "Base-case through-cycle NAV/share at the $26k/MT LME anchor (~$25k/MT realized): through-cycle EPS ~Rp80 at ~15x, NAV cross-check (12y reserve life, 11% WACC, net cash). Target = base case, not a spot-cycle bet.",
     "price": 4170.0,
     "price_asof": "2026-10-15"
   },
   "ev": {
     "p_up": 0.42,
-    "up_pct": 75.0,
+    "up_pct": 60.0,
     "p_down": 0.58,
-    "down_pct": -35.0,
+    "down_pct": -45.0,
     "net_div_yield_pct_pa": 2.0,
     "fee_tax_drag_pct": 1.5,
-    "expected_pct": 15.7,
+    "expected_pct": 3.6,
     "horizon_years": 3.0,
     "carry_pct": 4.5,
-    "kelly_full_pct": 64.7
+    "kelly_full_pct": 13.8
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 3.45,
+    "pm_pct": 1.725,
+    "deviation_reason": "Judge PASS_REDUCED 0.50 applied unsoftened to script recommended_pct 3.45 (binding: quarter-Kelly after haircut; kelly_full 13.78%) \u2192 exact PM cap 1.725% NAV (lint bound = 3.45 x 0.5); fraction binds like a KILL, no further deviation."
   },
   "base_rate": {
     "rate": 0.42,
@@ -68,8 +68,9 @@
     {
       "metric": "price",
       "op": "<",
+      "value": 430.0,
       "action": "exit_full",
-      "note": "thesis-invalidating level, NOT a stop; entry/kill levels set in Phase 2"
+      "note": "thesis-invalidating level, NOT a stop: the bear/falsification NAV at the $18k/MT LME KPI (through-cycle NI ~0, trough ~0.4x book). ~45% below the 780 entry as the Judge's Revision directed. IDX ARB gap risk NOT folded into the two-point down_pct (a PM sizing input)."
     },
     {
       "metric": "date",
@@ -87,7 +88,69 @@
       "source": "World Bank Pink Sheet LME refined tin (99.85% purity)"
     }
   ],
-  "model": null,
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        10856.4,
+        11552.7,
+        19800.0,
+        13200.0,
+        10000.0
+      ],
+      "ebit": [
+        1797.0,
+        1731.7,
+        6400.0,
+        2400.0,
+        1050.0
+      ],
+      "net_income": [
+        1249.3,
+        1313.6,
+        5000.0,
+        1700.0,
+        620.0
+      ],
+      "eps": [
+        168.0,
+        176.0,
+        671.0,
+        228.0,
+        83.0
+      ],
+      "dps": [
+        0.0,
+        63.7,
+        240.0,
+        82.0,
+        30.0
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle NAV (DCF) at $26k/MT LME (~$25k/MT realized), cross-checked vs through-cycle P/E",
+      "bear": {
+        "value": 430.0,
+        "basis": "NAV/earnings at the $18k/MT LME falsification price: through-cycle NI ~0, trough ~0.4x book"
+      },
+      "base": {
+        "value": 1250.0,
+        "basis": "Through-cycle at the $26k/MT anchor: EPS ~Rp80 at ~15x; 12y reserve-life NAV at 11% WACC + net cash"
+      },
+      "bull": {
+        "value": 2400.0,
+        "basis": "AI-re-rated incentive price ~$32k/MT sustained: through-cycle EPS ~Rp240 at ~10x"
+      }
+    }
+  },
   "stage_log": [
     {
       "stage": "draft",
@@ -122,6 +185,18 @@
     {
       "stage": "risk_checked",
       "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "phase2",
+      "at": "2026-10-16T02:30:14+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-10-16T03:04:51+07:00",
       "actor": "Voss",
       "role": "RISK_OFFICER"
     }
@@ -179,9 +254,19 @@
       "markdown": "(Voss; deterministic VETO is absolute.)\n\n**VETO \u2014 fail-closed on dossier.**\n\nDossier `data/dossiers/TINS.md` is absent. Per the risk checker lines 561-565:\n> \"dossier missing, malformed, incomplete, or > {lim['learning_triggers']['dossier_freeze_days']}d stale \u2014 frozen for new risk\"\n\nThis is the fail-closed gate for equity buys. The thesis itself documents that every load-bearing figure is PRIMARY UNAVAILABLE and unverified against a primary filing \u2014 the dossier absence is not a technical gap; it is the substance of the Phase 2 hard-gate.\n\n**QC state:** level=WARN (MARKET_PARAM_STALE only \u2014 soft, non-blocking). No hard CRITICAL codes.\n**Governor (INDO):** state=NONE, not DEGROSS. Drawdown indicative = 0%. No buy-block.\n**Book NAV:** Rp 15.16B \u2014 valid, finite, positive. Cash = 100% (deployed capital = zero).\n**Pending orders:** none for TINS.\n\n**Deterministic VETO trigger:**\n- `data/dossiers/TINS.md` does not exist \u2192 `_dossier_frozen()` returns True \u2192 VETO.\n\nAll other constitution checks (taxonomy, market cap, ADV, position caps, sector/factor caps, gross exposure, cash floor, turnover, board lot, governor state, cooldowns) are untested at this stage because the dossier gate fires first.\n\n**Outcome: VETO. No Phase 2 entry pricing or PM sizing. Thesis passes to Phase 2 diligence only.**"
     },
     {
+      "heading": "Phase 2 \u2014 levels & valuation",
+      "detail": null,
+      "markdown": "Dossier filed (asof 2026-10-16). Levels set from the through-cycle NAV at the $26k/MT LME anchor (~$25k/MT realized): base case ~Rp1,250/share (through-cycle EPS ~Rp80 at ~15x; 12y reserve-life NAV at 11% WACC + net cash). Spot 4,170 IDR is ~3.3x that \u2014 the +285% re-rate already prices spot continuation, so the entry is a value-anchored limit at Rp780, below spot (\"a price that is too high today is a PASS at a price\"). Target Rp1,250 = the base case; kill Rp430 = the falsification case (NAV/earnings at the $18k/MT KPI, trough ~0.4x book), i.e. \u221245% as the Judge's Revision directed. p_up held at the archetype prior 0.42; expected_pct +3.6% over the 3y horizon."
+    },
+    {
       "heading": "PM decision",
       "detail": null,
-      "markdown": "(sizing block above records the sizing engine output; deviation only downward.)"
+      "markdown": "**SIZED \u2014 1.725% NAV (2026-10-16, CONSTRUCT).** `the sizing engine` anchor `recommended_pct` **3.45% NAV** (binding: quarter-Kelly after haircut; kelly_full 13.78%, liquidity cap 1801.5%, stress-day book loss 0.28% NAV \u226a 12% budget). Judge PASS_REDUCED **0.50 binds like a KILL** \u2192 pm_pct **1.725% NAV** (exact product 3.45 \u00d7 0.50 = 1.725, the lint bound; the script's \"1.73\" is a rounded display), applied unsoftened; no further deviation. Entry plan: **mode limit at the analyst's value-anchored level 780 IDR** \u2014 the level stands (moving it up destroys the EV: at the 1y low 1,100 up_pct falls to +13.6% and down_pct to \u221260.9%, a negative two-point EV) \u2014 max_chase 5% (max fill 819), valid_until 2026-12-31. **Note carried, not cured:** 780 sits below the 1y low (1,100), so this is an unfillable resting bid \u2014 capital will not deploy absent an ~81% collapse; it is a patient value discipline, not an executable path at spot 4,170. Next tranche (script): **320,700 sh (3,207 lots) = 1.725% NAV**, no remainder. Not my ticket to type \u2014 the entry stager stages it after the dry-run risk check."
+    },
+    {
+      "heading": "Risk review",
+      "detail": null,
+      "markdown": "**Layer 1 (deterministic) \u2014 PASS, no VETO.**\n- Dossier `data/dossiers/TINS.fund record` present; frontmatter valid (`fundamentals_complete: true`, `kind: auto`, `asof 2026-10-16`), mtime 2026-10-16 \u2192 age 0d  2027-12-31 (review); kpi `realized_tin_price_usd_mt`  script_pct` breach. Anchor stated; the 0.50 binds like a KILL and is applied unsoftened.\n7. **Horizon balance.** Long-horizon thesis; book long-horizon count below min (NORM \u2014 journaled, never forced).\n\n**Note (not a veto) \u2014 entry limit 780 vs spot 4,170.** The limit sits **81.3% below spot** (max_chase 5% \u2192 819, still ~80% below); the ticket will rest unfilled and expires in `order_expiry_venue_days` = 3. Read: **genuine value discipline AND a liquidity-of-idea problem** \u2014 780 is below even the base-case NAV (1,250) and far below spot, so it is honest refusal to pay the market's price, but it is **unreachable absent an ~81% collapse**, leaving no executable path to the thesis at the market's price. Not a veto; PM/analyst decide whether to re-price or park the idea.\n\n**Contract: CLEAR_WITH_NOTES.**"
     }
   ]
 }

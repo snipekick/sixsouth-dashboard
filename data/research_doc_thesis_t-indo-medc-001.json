@@ -28,31 +28,31 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": null,
-    "target": null,
-    "kill": null,
-    "max_chase_pct": 3.0,
+    "entry": 1400.0,
+    "target": 2250.0,
+    "kill": 920.0,
+    "max_chase_pct": 5.0,
     "entry_mode": "limit",
-    "target_rationale": "Phase 2: placed from bottom-up NAV/share outcome, not before",
+    "target_rationale": "Phase 2: base-case through-cycle NAV/share (model.valuation.base) in IDR at USD/IDR 16,100",
     "price": 1515.0,
     "price_asof": "2026-10-15"
   },
   "ev": {
     "p_up": 0.42,
-    "up_pct": 75.0,
+    "up_pct": 60.7,
     "p_down": 0.58,
-    "down_pct": -35.0,
-    "net_div_yield_pct_pa": 0.0,
+    "down_pct": -34.3,
+    "net_div_yield_pct_pa": 3.3,
     "fee_tax_drag_pct": 0.5,
-    "expected_pct": 10.7,
+    "expected_pct": 15.0,
     "horizon_years": 3.0,
-    "carry_pct": -0.5,
-    "kelly_full_pct": 40.5
+    "carry_pct": 9.4,
+    "kelly_full_pct": 85.9
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 6.0,
+    "deviation_reason": "Judge PASS_REDUCED 0.60 applied to script recommended_pct 10.0 (binding: constitution_cap; kelly_quarter 21.48%) \u2192 PM cap 6.00% NAV; fraction binds, no further deviation."
   },
   "base_rate": {
     "rate": 0.42,
@@ -68,8 +68,9 @@
     {
       "metric": "price",
       "op": "<",
+      "value": 920.0,
       "action": "exit_full",
-      "note": "thesis-invalidating level = a settled through-cycle <$45 Brent environment with upstream FCF negative AND reserve-replacement <1.0; NOT a stop; Phase 2 fills from NAV math"
+      "note": "falsification level = bear-case NAV/share (a settled ~$45 Brent through-cycle with upstream FCF ~0 AND reserve-replacement <1.0); NOT a stop; Phase 2 traced to model.valuation.bear"
     },
     {
       "metric": "date",
@@ -87,7 +88,69 @@
       "source": "AR2025 2P table (page 75): 2P 564 mmboe 2025 vs 493 mmboe 2024 (rr>1.0 confirmed FY25); monitor Block A runoff"
     }
   ],
-  "model": null,
+  "model": {
+    "currency": "USD",
+    "unit": "m",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        2399.2,
+        2395.0,
+        2470.0,
+        2540.0,
+        2610.0
+      ],
+      "ebit": [
+        715.8,
+        694.3,
+        720.0,
+        750.0,
+        775.0
+      ],
+      "net_income": [
+        367.4,
+        100.9,
+        300.0,
+        330.0,
+        350.0
+      ],
+      "eps": [
+        0.0147,
+        0.0041,
+        0.0122,
+        0.0134,
+        0.0142
+      ],
+      "dps": [
+        0.0028,
+        0.0032,
+        0.0032,
+        0.0034,
+        0.0036
+      ]
+    },
+    "valuation": {
+      "method": "SOTP/NAV at through-cycle prices \u2014 E&P EBITDA ~$1.09B x 5.0x + Medco Power DCF on contracted cashflows ~$1.0B, less ~$3.0B net debt; per-share converted to IDR at USD/IDR 16,100 (24,680.6m shares)",
+      "bear": {
+        "value": 920.0,
+        "basis": "~$45 Brent through-cycle: upstream FCF ~0, consolidated trough EBITDA ~$1.0B at a distressed ~4.4x, less ~$3.0B net debt \u2192 ~IDR 920/share"
+      },
+      "base": {
+        "value": 2250.0,
+        "basis": "through-cycle SOTP above (E&P ~$1.09B x 5.0x + Power ~$1.0B, less $3.0B net debt) \u2192 ~IDR 2,250/share = target"
+      },
+      "bull": {
+        "value": 2900.0,
+        "basis": "war-premium Brent sustained + Corridor 24% / Block B ramp to 170+ mboepd; ~5.5x on ~$1,350M EBITDA plus power buildout"
+      }
+    }
+  },
   "stage_log": [
     {
       "stage": "draft",
@@ -109,7 +172,7 @@
     },
     {
       "stage": "revised",
-      "at": "2026-09-16T13:15:00+07:00",
+      "at": "2026-09-16T13:00:00+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
     },
@@ -134,6 +197,18 @@
     {
       "stage": "vetoed",
       "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "phase2",
+      "at": "2026-10-16T02:32:50+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-10-16T02:51:47+07:00",
       "actor": "Voss",
       "role": "RISK_OFFICER"
     }
@@ -193,7 +268,17 @@
     {
       "heading": "PM decision",
       "detail": null,
-      "markdown": "(Phase 2 \u2014 blocked by VETO. Will follow if analyst creates dossier + refreshes mcap and\nre-submits.)"
+      "markdown": "**SIZED \u2014 6.00% NAV (2026-10-16, CONSTRUCT).** `the sizing engine` anchor `recommended_pct` **10.0% NAV** (binding: constitution_cap; kelly_quarter 21.48%, liquidity 733.29%, stress-day book loss 0.42% NAV \u226a 12% budget). Judge PASS_REDUCED **0.60 binds** \u2192 pm_pct **6.00% NAV**, no further deviation. Entry plan: **mode limit at the analyst's value-anchored level 1,400 IDR** (spot 1,515, ~7.6% below; two-point EV +15.0% at 1,400 vs a thin +7.0% at spot) \u2014 max_chase 5% \u2192 max fill 1,470 stays below spot (no chase into the market), valid_until 2026-12-31. Both 2026-09-16 VETO hard gates re-verified remediated (dossier fresh asof 2026-10-16; mcap IDR 33.99T). Next tranche (script): **507,600 sh (5,076 lots) = 4.899% NAV**, capped at 98% of the 5% single-trade cap; remaining 1.101% NAV stages after the first fill. Not my ticket to type \u2014 the entry stager stages it after the dry-run risk check."
+    },
+    {
+      "heading": "Phase 2 \u2014 levels",
+      "detail": null,
+      "markdown": "Both VETO hard gates are remediated: `data/dossiers/MEDC.fund record` now exists and `the market-cap feed` carries a\nMEDC.JK record (mcap ~IDR 34.0T). Levels are read off the model, not a chosen band. Entry **1,400 IDR**\nis a value-anchored limit ~7.6% below the 1,515 close: at spot the honest EV is a thin **+7.0%**\n(0.42\u00b748.5 \u2212 0.58\u00b739.3 + 9.9 \u2212 0.5), so the limit is set at a margin-of-safety discount where base NAV\n(2,250) still leaves +60.7% and bear NAV (920) a survivable \u221234.3% \u2014 restoring EV to **+15.0%**. Target\n**2,250** = base NAV/share (through-cycle SOTP); kill **920** = bear NAV/share (~$45 Brent through-cycle,\nupstream FCF ~0) \u2014 the falsification level, not a stop. ADV ~IDR 80B/day supports a 20%-participation exit\nin a few sessions; ARA/ARB bands are not binding at this liquidity. Flows feed STALE \u2014 no flow narrative\nunderwritten."
+    },
+    {
+      "heading": "Risk review",
+      "detail": null,
+      "markdown": "Layer 1 \u2014 `the risk checker --book INDO`: book compliant (NAV IDR 15,229,940,237.54, cash 100%, governor NONE,\nweek_trades 0). The 2026-09-16 VETO's two hard gates are re-verified remediated by direct call, not taken on\nreport:\n- dossier gate \u2014 `_dossier_frozen(\"MEDC.JK\")` = **False**; `data/dossiers/MEDC.fund record` present,\n  `fundamentals_complete: true`, `asof: 2026-10-16` (fresh, \u226460d).\n- market-cap gate \u2014 `market_cap(\"MEDC.JK\",\"INDO\")` = **IDR 33,999,536,551,750** (asof 2026-10-05,\n  yfinance.fast_info), **> floor IDR 1,000,000,000,000**. the market-cap feed schema_version 1, generated 2026-10-05\n  (age 11d \u2264 45d).\nBoth PASS. No VETO.\n\nLayer 2 (numbers):\n1. **Factor tags** \u2014 the INDO universe `MEDC.JK`: factor=`oil_gas`, factor2=`energy`, sector=ENERGY. Both\n   tags \u2208 closed `factor_taxonomy`. Buyable.\n2. **Stress-table honesty** \u2014 worst per-factor stress move = **-7.0%** (oil_gas; energy -6.0). At the binding\n   PM cap **6.00% NAV**: post-trade **stress-day book loss = 0.42% NAV (IDR 63,965,749)**. Governor headroom\n   from dd 0.0%: **7.58pp to -8% REVIEW / 14.58pp to -15% DEGROSS**. Book heat after 0.42% \u226a 12.0% budget.\n3. **Concentration in disguise** \u2014 single-name, empty book: no live overlap today. Flag: the position is\n   counted under **both** `oil_gas` and `energy` (factor ruler double-counts the same underlying Brent/gas\n   beta); any future energy-name add stacks both buckets. Not blocking at 6.00% NAV.\n4. **Liquidity realism** \u2014 ADV IDR 79,771,692,717/day; 20% participation = IDR 15,954,338,543/day. Full 6.00%\n   position (IDR 913,796,414) exits in **0.06 days** (\u226a 7d). Liquidity cap 733% NAV \u2014 non-binding. PASS.\n5. **Kill-criteria hygiene** \u2014 price  2027-09-30\n   (review), kpi reserve_replacement_ratio < 1.0 (source AR2025 2P table p.75). All machine-monitorable with\n   named sources. Note: kill 920 = -34.3% below entry 1,400 \u2014 a deep falsification level, not a near-term\n   risk stop; the position has no tight loss bound by design.\n6. **Sizing audit** \u2014 anchor `recommended_pct` = **10.0% NAV** (binding: constitution_cap; kelly_quarter\n   21.48%, liquidity 733.29%). Judge PASS_REDUCED **0.60** binds \u2192 **PM cap 6.00% NAV**. PM has not sized; no\n   breach. Sizer confirms \"PM multiplies recommended_pct by 0.6 (= 6.00% NAV)\".\n\nVerdict: **CLEAR_WITH_NOTES** \u2014 both hard gates remediated, tags in taxonomy, liquidity and heat trivial;\nnotes are the double-factor-tag count and the -34.3% kill depth."
     }
   ]
 }

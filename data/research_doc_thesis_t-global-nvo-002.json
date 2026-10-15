@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "judged",
-    "verdict": "PASS_REDUCED",
+    "status": "attacked",
+    "verdict": null,
     "size_multiplier": null,
     "supersedes": "T-GLOBAL-NVO-001",
     "catalyst_date": null,
@@ -28,26 +28,26 @@
     "analyst": "Sloane"
   },
   "levels": {
-    "entry": 37.0,
+    "entry": 24.0,
     "target": 57.21,
     "kill": 16.59,
     "max_chase_pct": 3.0,
     "entry_mode": "limit",
     "target_rationale": "Bull DCF $57.21 (WACC 9.0%, t-g 3.5%, t-ROIIC 20%) \u2014 the reachable re-rate leg WITHOUT a rate cut; the 8.5% WACC full-re-rate $74.01 is foreclosed by the delivered hike + DXY at 52w-high + CAUTIOUS (BEAR pt 4). +54.6% still exceeds the archetype's +50% base_up and is a return TOWARD, not to, the 2021-24 25-35x range",
-    "price": 39.435001373291016,
+    "price": 39.41999816894531,
     "price_asof": "2026-10-15"
   },
   "ev": {
     "p_up": 0.28,
-    "up_pct": 54.6,
+    "up_pct": 138.4,
     "p_down": 0.72,
-    "down_pct": -55.2,
+    "down_pct": -30.9,
     "net_div_yield_pct_pa": 4.0,
     "fee_tax_drag_pct": 0.5,
-    "expected_pct": -13.0,
+    "expected_pct": 28.0,
     "horizon_years": 3.0,
     "carry_pct": 11.5,
-    "kelly_full_pct": -44.9
+    "kelly_full_pct": 96.3
   },
   "sizing": {
     "script_pct": 0.0,
@@ -119,6 +119,18 @@
       "at": "2026-10-03T16:20:00+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "revise",
+      "at": "2026-10-16T02:30:02+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-16T03:07:27+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
     }
   ],
   "kill_outcome": null,
@@ -172,6 +184,16 @@
       "heading": "Judge verdict",
       "detail": null,
       "markdown": "**Verdict: NO_TRADE \u2014 stamped `PASS_REDUCED` at 0\u00d7 of the sizing engine recommended_pct** (lint's enum carries no NO_TRADE; 0\u00d7 is the fund's size-to-zero class). **Not a KILL: no kill-ledger row, no 60-day cooldown.** Lane chosen explicitly: this is a size-to-zero, not a killed-idea. The thesis's own base DCF ($38.25) validates spot (\u00b14%); what fails is the hurdle \u2014 expected \u221213.0%/3y (\u22124.5%/yr) vs ~3.88% cash is a negative equity-risk premium, own-Kelly \u2264 0. The idea is unpayable at this price, not wrong.\n\n**Standing correction applied** (my ledger: 24 kills / 0 passes, killed names +7.0% above kill). Gains-left stress first: even at the FULL unshaded registry prior 0.40, spot $37.32 = \u22120.5%/3y vs +11.6% cash; a spot premium exists only on the 8.5%-WACC $74.01 leg that the delivered hike, DXY 52w-high and CAUTIOUS foreclose. The no-trade leaves nothing the hurdle should own. The wrongly-killed direction then decides the lane: a KILL spends the 60-day cooldown and locks out the \u2264$24 capitulation ticket, which can fire before Feb-27 with no superseding \"new evidence\" \u2014 a pure price drop supplies none. LESSON-0002 honored: T-001's reason (paying above fair value) has inverted; I will not stack a valuation kill on an inverted one.\n\n**Drew's conditioning question \u2014 RULED.** Future entry requires (A) positive Feb-27 resolution \u2014 FY27 opening guidance shows NO second consecutive CER decline, restoring p_up toward 0.40 \u2014 AND price \u2264 $28 (+28.8%/3y at 0.40); OR (B) capitulation \u2264 $24 with no resolution (+28.0%/3y at the fully-shaded 0.28). Both clauses carry the no-negative-resolution gate (orforglipron not out-scaling Wegovy oral; no LOE widening; no margin miss). The edge-free $28-with-silence entry (+11.4 vs +11.6 cash) is NOT armed. Enrolled in watchlist_GLOBAL: machine trigger price \u2264 24; clause A is human-judged at the Feb-27 guide.\n\n**Protocol:** complete \u2014 lint PASS (tolerated WARN: 2781 words, append-only logs); stage_log monotonic (draft 10:31 \u2192 attacked 12:20 \u2192 revision 14:00 \u2192 re_attacked 15:30 +07; estimates 03:29Z precede draft); Bear points 0\u20138 all answered, re-attack confirms none open; revision 290 \u2264 300 words; every post-attack move was a cut (p_up 0.35\u21920.28, target $70\u219257.21, trigger 31\u219228).\n\n(Aldrich; stamps frontmatter status: judged, verdict: PASS_REDUCED [NO_TRADE, 0\u00d7].)"
+    },
+    {
+      "heading": "Revision",
+      "detail": "(REVISE \u2014 entry re-derivation) \u2014 ANALYST_GLOBAL",
+      "markdown": "Mechanical re-derivation on the Judge's REVISE return: the defect was the ENTRY, not the thesis. At spot $37.32 the entry sat above the fund's payable hurdle, so PASS_REDUCED was stamped 0\u00d7 \u2014 yet the value-derived levels themselves held. Target ($57.21 bull DCF) and kill ($16.59 bear DCF) are UNCHANGED; a $37 entry simply makes up_pct 54.6 / down_pct \u221255.2 on the fully-shaded p_up 0.28 \u2192 expected \u221213.0%/3y, own-Kelly \u2264 0. The thesis's own base DCF ($38.25) validated spot, so the mispricing was never in the base case \u2014 it was in the price paid for the re-rate odds. Fix the price, not the story.\n\nNew entry **$24.00** \u2014 the top of the Judge's capitulation band (\u2264$24), the highest price at which the fully-shaded prior pays the hurdle. kill 16.59  0.\n\n**Flag \u2014 mechanical, not new evidence:** up_pct rises >20% relative (54.6 \u2192 138.4) solely because the entry denominator fell; per the desk rule a >20% relative ev_math move returns the thesis to Drew before the Judge. Target, kill and p_up 0.28 are all HELD \u2014 nothing was raised and no new-evidence citation is claimed.\n\nWhy the entry and not the thesis: Drew's re-attack closed SURVIVES_WITH_SCARS \u2014 the falsification level, the reachable bull target and the shaded prior all survived; only the price at which the fund buys the asymmetry was mis-set. Status \u2192 attacked, verdict \u2192 null; re-judged at Aldrich."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "(re-attack, 2026-10-16) \u2014 Drew \u2014 verdict: SURVIVES_WITH_SCARS",
+      "markdown": "0. **Fact-check:** the three load-bearing numbers hold \u2014 target 57.21, kill 16.59, p_up 0.28 verified in frontmatter, unchanged from my 10-03 re-attack. Entry 24.00 new. Arithmetic re-derived: up 57.21/24\u22121=+138.4 \u2713; down 16.59/24\u22121=\u221230.9 \u2713; expected 0.28\u00d7138.4+0.72\u00d7(\u221230.9)+11.5=+28.0 \u2713; carry-adj payoff (138.4+11.5)/(30.9\u221211.5)=7.73 \u2014 no symmetry defect. **But the Revision's stated rationale is arithmetically FALSE**: \"the highest price at which the fully-shaded prior pays the hurdle.\" Solve 0.28\u00d7(57.21/E\u22121)+0.72\u00d7(16.59/E\u22121)+11.5=11.6 \u2192 **E=$27.94**. $24 sits $3.94 (16%) BELOW hurdle-parity \u2014 it is the Judge's band cap, not the EV-optimal level. [MATERIAL]\n1. Widest error bar \u2014 the +4/+7/+7 re-acceleration \u2014 now largely CURED: the flat-0% re-run (~$27-30) sits ABOVE the $24 entry, so the trade no longer dies on one assumption. Concede. [MINOR]\n2. Variant perception unchanged and still narrow; nothing resolves before the Feb-27 guide. [MINOR]\n3. Base rate 0.28 held, inside my 0.25-0.30 band; each cut maps to a named point. [MINOR]\n4. **Construction, both directions.** Optimistic tail clean (payoff 7.73). The defect is now the OPPOSITE: the entry is set below hurdle-parity, so the ticket fires only on a ~39% drawdown \u2014 the conservatism compounds into unrealizability. [MATERIAL]\n5. **New disconfirming fact (not in thesis):** NVO's 1-year low is **$36.04 (2026-03-23)** \u2014 $24 is **33% below any print in 12 months**; spot $39.42 (10-15, +3.41% day) is moving away. Source: market-data snapshot series NVO. The entry is a wish, not a price the market has offered. [MATERIAL]\n6. Steelman: the failure I add is not a loss but a **dead slot** \u2014 the fund never fills, the research budget is spent, the V-shape from $37 is missed; or the fill arrives WITH a Feb-27 kill trigger, a value trap. [MINOR]\n7. Anti-gaming: stage_log monotonic (\u2026judged 16:20 \u2192 revise 10-16T02:30 \u2192 re_attacked); estimates_committed_at 03:29Z untouched; diff touches only entry/ev_math/status/log \u2014 no retro-edit. **Stale text flagged:** base_rate.source still reads \"entry 37\"; sizing.deviation_reason still reads \"Kelly \u2264 0 at spot\" \u2014 both superseded by entry 24. Escalate to QC_FLAGS. [MINOR]\n8. **Stop-objecting price:** I stop objecting at any entry \u2264 ~$28 GATED on the Feb-27 re-acceleration (clause A) \u2014 where the prior pays the hurdle and the level is fillable. The $24 ticket is not objectionable on EV, only on reachability.\n\nstage_log: {stage: re_attacked, at: 2026-10-16T03:07:27+07:00, actor: \"Drew (BEAR)\"}"
     }
   ]
 }
