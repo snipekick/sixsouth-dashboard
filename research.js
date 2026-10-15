@@ -178,6 +178,9 @@ function entryLine(es){
   if(es.state==='blocked')return `<p class="small"><b>Entry:</b> blocked — ${esc(es.why||'')}${at}</p>`;
   return `<p class="small muted"><b>Entry:</b> not staged — ${esc(es.why||'')}${at}</p>`;
 }
+// model cells: per-share lines in a hard currency can be fractions of a cent (MEDC EPS US$0.0041)
+function mnum(x){const n=Number(x),a=Math.abs(n);const d=a>0&&a<1?Math.min(6,3-Math.floor(Math.log10(a))):2;
+  return n.toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:Math.min(2,d)});}
 function modelPanel(doc){
   const m=doc.model;
   if(!m){
@@ -186,7 +189,7 @@ function modelPanel(doc){
   }
   const years=m.years||[],lines=asRecord(m.lines);
   const head=`<tr><th>${esc(m.currency||'')} ${esc(m.unit||'')}</th>${years.map(y=>`<th class="num">${esc(y)}</th>`).join('')}</tr>`;
-  const body=Object.entries(lines).map(([k,v])=>`<tr><td>${esc(k.replace(/_/g,' '))}</td>${years.map((_,i)=>`<td class="num mono">${validNumber((v||[])[i])?fmt(v[i],2):'—'}</td>`).join('')}</tr>`).join('');
+  const body=Object.entries(lines).map(([k,v])=>`<tr><td>${esc(k.replace(/_/g,' '))}</td>${years.map((_,i)=>`<td class="num mono">${validNumber((v||[])[i])?mnum(v[i]):'—'}</td>`).join('')}</tr>`).join('');
   const val=asRecord(m.valuation);
   const scen=['bear','base','bull'].filter(k=>val[k]).map(k=>`<tr><td>${esc(k)}</td><td class="num mono">${px(val[k].value)}</td><td class="muted">${esc(val[k].basis||'')}</td></tr>`).join('');
   return panel('Financial model',`<div class="scroll"><table class="rtable">${'<thead>'+head+'</thead>'}<tbody>${body}</tbody></table></div>
