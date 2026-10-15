@@ -156,7 +156,7 @@ async function renderTheses(el){
   const body=rows.map(t=>`<tr class="clickable" data-href="#research/thesis/${esc(t.id)}">
     <td class="mono">${esc(dateOnly(t.drafted))}</td><td>${bookChip(t.book)}</td>
     <td class="mono"><a href="#research/thesis/${esc(t.id)}">${esc(t.ticker)}</a></td><td>${esc(t.name)}</td>
-    <td class="muted">${esc(String(t.archetype||'').replace(/_/g,' '))}</td><td>${verdictBadge(t.verdict,t.size_multiplier)}</td>
+    <td class="muted">${esc(String(t.archetype||'').replace(/_/g,' '))}</td><td>${verdictBadge(t.verdict,t.size_multiplier)}${t.entry_state?` <span class="tag" title="where the entry stands">${esc(t.entry_state)}</span>`:''}</td>
     <td class="num mono ${cls(t.expected_pct)}">${sgn(t.expected_pct)}</td><td class="num mono">${validNumber(t.p_up)?fmt(t.p_up*100,0)+'%':'—'}</td>
     <td class="num mono">${px(t.entry)} / ${px(t.target)} / ${px(t.kill)}</td><td class="num mono">${px(t.price)}</td>
     <td class="num mono ${cls(-(t.kill_move_pct||0))}">${t.verdict==='KILL'&&validNumber(t.kill_move_pct)?sgn(t.kill_move_pct):''}</td></tr>`).join('');
@@ -170,6 +170,14 @@ async function renderTheses(el){
   hook('rfBook','book','change');hook('rfVerdict','verdict','change');hook('rfQ','q','input');
 }
 
+function entryLine(es){
+  if(!es||!es.state)return '';
+  const at=es.asof?` <span class="muted">(${esc(String(es.asof).slice(0,10))})</span>`:'';
+  if(es.state==='staged')return `<p class="small"><b>Entry:</b> ticket staged at ${esc(px(es.limit))} — it fills only if the next open trades within its limit${at}.</p>`;
+  if(es.state==='waiting')return `<p class="small"><b>Entry:</b> waiting for price — the market is ${esc(fmt(es.gap_pct,1))}% above the most this thesis may pay (${esc(px(es.max_fill))}); no order rests until the price comes within range${at}.</p>`;
+  if(es.state==='blocked')return `<p class="small"><b>Entry:</b> blocked — ${esc(es.why||'')}${at}</p>`;
+  return `<p class="small muted"><b>Entry:</b> not staged — ${esc(es.why||'')}${at}</p>`;
+}
 function modelPanel(doc){
   const m=doc.model;
   if(!m){
@@ -202,6 +210,31 @@ function evPanel(doc){
     </div>${s.deviation_reason?`<p class="small muted">PM: ${esc(s.deviation_reason)}</p>`:''}`,
     'two-point EV · Kelly is capped at a quarter and by the risk rules');
 }
+function csvCell(v){let s=v==null?'':String(v);
+  if(/^[=+\-@\t\r]/.test(s)&&!/^[+-]?\d+(\.\d+)?$/.test(s))s="'"+s;   // spreadsheet formula guard; numbers pass
+  return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
+function thesisCsv(doc){
+  const m=asRecord(doc.meta),lv=asRecord(doc.levels),e=asRecord(doc.ev),sz=asRecord(doc.sizing),br=asRecord(doc.base_rate),lib=asRecord(br.library);
+  const rows=[['Six South thesis model export'],['thesis',m.id],['company',m.name],['ticker',m.ticker],['book',m.book],
+    ['verdict',m.verdict],['size_multiplier',m.size_multiplier],['archetype',m.archetype],['horizon_years',e.horizon_years],[],
+    ['levels'],['entry',lv.entry],['target',lv.target],['kill (falsification)',lv.kill],['last price',lv.price],['price asof',lv.price_asof],[],
+    ['expected value'],['leg','probability','return %'],['thesis works (target)',e.p_up,e.up_pct],['thesis falsified (kill)',e.p_down,e.down_pct],
+    ['net dividend yield %/yr','',e.net_div_yield_pct_pa],['fees & taxes %','',e.fee_tax_drag_pct],['expected return %','',e.expected_pct],
+    ['kelly (full) % NAV','',e.kelly_full_pct],[],
+    ['base rate'],['archetype library p(works)',lib.rate],['used p(up)',br.rate],['library up %',lib.base_up_pct],['library down %',lib.base_down_pct],[],
+    ['sizing'],['script % NAV',sz.script_pct],['PM % NAV',sz.pm_pct],['deviation',sz.deviation_reason]];
+  const md=doc.model;
+  if(md&&Array.isArray(md.years)){rows.push([],['financial model',md.currency||'',md.unit||'']);rows.push(['line',...md.years]);
+    Object.entries(asRecord(md.lines)).forEach(([k,v])=>rows.push([k,...(Array.isArray(v)?v:[])]));
+    const val=asRecord(md.valuation);rows.push([],['valuation',val.method||'']);
+    ['bear','base','bull'].forEach(k=>{if(val[k])rows.push([k,val[k].value,val[k].basis||'']);});}
+  return rows.map(r=>r.map(csvCell).join(',')).join('\n')+'\n';
+}
+function downloadCsv(doc){
+  try{const blob=new Blob([thesisCsv(doc)],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);a.download=`${String(asRecord(doc.meta).id||'thesis')}-model.csv`;document.body.appendChild(a);a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);}catch(_e){}
+}
 async function renderThesis(el,id){
   el.innerHTML=nav('theses')+'<div class="muted small rpad">loading thesis…</div>';
   const ix=await loadIndex();const t=records(ix&&ix.theses).find(x=>x.id===id);
@@ -213,7 +246,7 @@ async function renderThesis(el,id){
   const openByDefault=new Set(['Variant perception','Bear attack','Judge verdict','PM decision']);
   const sectionHtml=secs.map(s=>`<details class="rsec"${openByDefault.has(s.heading)?' open':''}><summary>${esc(s.heading)}${s.detail?` <span class="muted small">${esc(s.detail)}</span>`:''}</summary><div class="rbody">${mdx(s.markdown)}</div></details>`).join('');
   el.innerHTML=nav('theses')+`
-    <div class="rcrumb"><a href="#research/theses">← all theses</a> · <a href="#research/stock/${encodeURIComponent(m.ticker||'')}">${esc(m.ticker)} coverage</a></div>
+    <div class="rcrumb"><a href="#research/theses">← all theses</a> · <a href="#research/stock/${encodeURIComponent(m.ticker||'')}">${esc(m.ticker)} coverage</a> · <button class="rbtn" id="rCsv">Download model (CSV)</button></div>
     <div class="panel rpanel"><div class="rhead">
       <div><h2>${esc(m.name||m.ticker)} <span class="mono muted">${esc(m.ticker)}</span></h2>
       <div class="rmeta">${bookChip(m.book)} ${verdictBadge(m.verdict,m.size_multiplier)} <span class="tag">${esc(m.status||'')}</span>
@@ -222,13 +255,14 @@ async function renderThesis(el,id){
       <div class="small muted">${esc(m.id)} · drafted ${esc(dateOnly(m.drafted))}${m.judged?` · judged ${esc(dateOnly(m.judged))}`:''}${m.supersedes?` · supersedes ${esc(m.supersedes)}`:''}</div></div>
     </div>
     <div class="strip rstrip">${metric('Entry',px(lv.entry))}${metric('Target',px(lv.target))}${metric('Kill (falsification)',px(lv.kill))}${metric('Last price',px(lv.price)+(lv.price_asof?` <span class="small muted">${esc(lv.price_asof)}</span>`:''))}</div>
-    <div class="pbody">${ladder(lv)}${lv.target_rationale?`<p class="small muted"><b>Target basis:</b> ${esc(lv.target_rationale)}</p>`:''}
+    <div class="pbody">${ladder(lv)}${lv.target_rationale?`<p class="small muted"><b>Target basis:</b> ${esc(lv.target_rationale)}</p>`:''}${entryLine(doc.entry_status)}
       ${ko?`<p class="small"><b>Kill outcome:</b> killed ${esc(ko.killed||'')} at ${esc(px(ko.px_at_kill))} (${esc(ko.reason||'')}); now ${esc(px(ko.px_now))} → <span class="${cls(-(ko.move_pct||0))}">${sgn(ko.move_pct)}</span> ${validNumber(ko.move_pct)?(ko.move_pct<0?'— the kill avoided a loss.':'— the kill missed a gain.'):''}</p>`:''}</div></div>
     <div class="rgrid2"><div class="col">${modelPanel(doc)}${evPanel(doc)}</div>
       <div class="col">${panel('Decision trail',`<ol class="rtimeline">${stages||'<li class=muted>no stage log</li>'}</ol>`,'who did what, when')}
         ${panel('Kill criteria',`<ul class="rlist">${kc||'<li class=muted>none</li>'}</ul>`,'machine-checked; a price kill is a falsification level, not a stop')}</div></div>
     <div class="panel rpanel"><div class="ptitle"><span class="dot"></span>The thesis, in the desk's words<span class="aux"><button class="rbtn" id="rExpand">expand all</button></span></div>
       <div class="pbody">${sectionHtml||'<div class="muted small">no body</div>'}</div></div>`;
+  const cs=document.getElementById('rCsv');if(cs)cs.addEventListener('click',()=>downloadCsv(doc));
   const ex=document.getElementById('rExpand');if(ex)ex.addEventListener('click',()=>{const all=[...el.querySelectorAll('details.rsec')];const open=all.some(d=>!d.open);all.forEach(d=>{d.open=open;});ex.textContent=open?'collapse all':'expand all';});
 }
 
@@ -332,7 +366,7 @@ function renderLearn(el){
       ${step(5,'Revision','The analyst answers every numbered point. Cutting a number must name the attack that bought it; raising one needs new, cited evidence.')}
       ${step(6,'Judge','Aldrich rules: PASS (full size), PASS_REDUCED (a starter, half or three-quarter position), REVISE (built wrong — back to the analyst) or KILL (a dispositive flaw). Uncertainty shrinks a position; it does not kill it.')}
       ${step(7,'Risk & sizing','A deterministic risk check enforces the fund rules (no leverage, position, sector, factor, liquidity caps); the PM sizes from the sizing engine and may only go smaller.')}
-      ${step(8,'Staging & fills','Approved, sized theses are ticketed automatically before the market opens and fill at the next open only within their limit price — with real fees, taxes, board lots and slippage.')}
+      ${step(8,'Staging & fills','Approved, sized theses are ticketed automatically before the market opens and fill at the next open only within their limit price — with real fees, taxes, board lots and slippage. An approval can name a price below the market (“PASS at a price”): until the market comes within 10% of it, the thesis waits as a price trigger with no resting order.')}
       ${step(9,'Monitor & exit','Kill criteria are checked every session; a confirmed kill exits deterministically. Winners are governed too: target hits and oversized positions force a written re-underwrite.')}
       ${step(10,'Post-mortem & lessons','Every exit is reviewed; lessons become rules in the desk files. Kills are scored against what the stock did afterwards.')}
       </ol>`)}
@@ -350,6 +384,7 @@ function renderLearn(el){
       <li><b>Kelly sizing.</b> Kelly = p/loss − q/gain gives the bet size that maximises long-run growth. The fund uses at most a quarter of it, then caps by liquidity, factor and position limits.</li>
       <li><b>Kill criteria are not stop-losses.</b> The price kill is the level at which the thesis is <i>falsified</i>, derived from valuation; date and KPI criteria force a review.</li>
       <li><b>Variant perception.</b> What the market believes, why it is wrong, and what would prove us wrong — without the third part there is no thesis.</li>
+      <li><b>Entry status.</b> An approved thesis shows where its entry stands: <i>staged</i> (a ticket for the next open), <i>waiting</i> for price, <i>blocked</i> by a named rule, or <i>not staged</i> (e.g. not yet sized by the PM).</li>
       <li><b>Consensus quarantine.</b> Sell-side targets and ratings never enter a model; consensus numbers are viewed only after the desk's own estimates are committed.</li></ul>`)}
     ${panel('Glossary',`<table class="rtable"><tbody>
       <tr><td><b>NAV</b></td><td>Net asset value — cash plus positions marked to market.</td></tr>
@@ -367,6 +402,7 @@ function renderLearn(el){
 /* ------------------------------------------------------------------ router */
 async function renderResearch(path){
   const el=document.getElementById('view-research');if(!el)return;
+  if(typeof window.scrollTo==='function')window.scrollTo(0,0);
   const parts=String(path||'').split('/').filter(Boolean);const view=parts[0]||'overview';
   const arg=parts.slice(1).join('/');
   try{
@@ -381,7 +417,6 @@ async function renderResearch(path){
     else if(view==='learn')renderLearn(el);
     else await renderOverview(el);
   }catch(_e){el.innerHTML=nav(view)+'<div class="muted small rpad">research view could not be rendered — retrying on the next refresh</div>';}
-  if(!/^(thesis|stock|doc)$/.test(view))window.scrollTo(0,0);
 }
 if(typeof document!=='undefined'&&typeof document.addEventListener==='function'){
   document.addEventListener('click',evt=>{
@@ -389,5 +424,5 @@ if(typeof document!=='undefined'&&typeof document.addEventListener==='function')
     if(row&&!evt.target.closest('a')){location.hash=row.dataset.href.slice(1);}
   });
 }
-window.SixSouthResearch={render:renderResearch,refresh:()=>{RS.index=null;RS.prices=null;RS.docs.clear();}};
+window.SixSouthResearch={render:renderResearch,mdx,thesisCsv,refresh:()=>{RS.index=null;RS.prices=null;RS.docs.clear();}};
 })();

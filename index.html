@@ -117,6 +117,7 @@ tbody tr:hover td{background:var(--panel2)}
 .chart .refline{stroke:#4B5058;stroke-width:1;stroke-dasharray:3 3}
 .chart .tip{font-size:10px;font-family:Arial,Helvetica,sans-serif}
 .chart .hit{cursor:crosshair}
+a.rlink{color:#8EC1F0;text-decoration:none;font-size:11px} a.rlink:hover{text-decoration:underline}
 
 /* 6S Virtual Office — canvas is visual; the status and full roster remain semantic DOM. */
 .office-panel{margin:8px 0 0;overflow:hidden}
@@ -358,7 +359,7 @@ details.rsec>summary:hover{color:#fff}
 </div>
 
 <script src="office-floor.js?v=20260719-public-truth-v6"></script>
-<script src="research.js?v=20261015-v4"></script>
+<script src="research.js?v=20261016-v41"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -709,7 +710,8 @@ async function renderBookView(b,generation=++bookViewGeneration){
     <span class="mono">${esc(mm.id||'Thesis')}</span><span>${esc(mm.ticker||'')}</span>
     <span class="tag">${esc(mm.status||'')}</span>${mm.verdict?`<span class="tag">${esc(mm.verdict)}</span>`:''}
     ${mm.sleeve?`<span class="tag">${esc(mm.sleeve)}</span>`:''}</div>
-    ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}</div>`;}).join('')
+    ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}
+    ${mm.id?`<div class="body"><a class="rlink" href="#research/thesis/${encodeURIComponent(mm.id)}">Full thesis →</a></div>`:''}</div>`;}).join('')
     ||'<div class="item muted">No theses for this book yet.</div>';
 }
 
@@ -877,7 +879,8 @@ function renderTop(){
   document.getElementById('asof').textContent=`as of ${String(S.asof||'').slice(0,16).replace('T',' ')} WIB`;
   const qc=document.getElementById('qc'); qc.textContent=`QC ${S.qc}`; qc.className='chip'+(S.qc==='OK'?' ok':' alert');
   const fr=S.flow_regime||{},fe=document.getElementById('flow');
-  fe.textContent=`flow: ${fr.regime||'—'}${fr.median_z_60d!=null?' z '+fr.median_z_60d:''}`;
+  const noFeed=!fr.asof&&!Number(fr.n_tickers);
+  fe.textContent=noFeed?'flows: no feed':`flow: ${fr.regime||'—'}${fr.median_z_60d!=null?' z '+fr.median_z_60d:''}`;
   fe.className='chip'+(fr.stale?'':(fr.regime==='FOREIGN OUTFLOW'?' alert':''));
   fe.title=fr.asof?`foreign net-flow regime · ${fr.n_tickers} names · asof ${fr.asof}`:'flows unavailable';
 }
@@ -890,7 +893,8 @@ function renderBanners(){
   const heartbeatStale=Boolean(hb.stale)||invalidHeartbeat||effectiveAge==null||effectiveAge>26;
   document.getElementById('banners').innerHTML=
     `<span>LAST OBSERVED FUND RUN <b>${esc(seen)}</b>${heartbeatStale?' <span class="tag">STALE</span>':''}</span>`+
-    `<span>FOREIGN FLOW <b>${esc(fr.regime||'—')}</b>${fr.breadth_pos_pct!=null?` · ${fmt(fr.breadth_pos_pct,0)}% net-bought`:''}${fr.stale?' <span class="tag">stale</span>':''}</span>`;
+    `<span>FOREIGN FLOW <b>${esc(!fr.asof&&!Number(fr.n_tickers)?'no feed configured':(fr.regime||'—'))}</b>${fr.breadth_pos_pct!=null?` · ${fmt(fr.breadth_pos_pct,0)}% net-bought`:''}${fr.stale&&(fr.asof||Number(fr.n_tickers))?' <span class="tag">stale</span>':''}</span>`+
+    `<span><a class="rlink" href="#research">Research library →</a></span>`;
 }
 
 function renderStrip(){
@@ -1101,7 +1105,8 @@ async function feed(kind,generation){
         ${x.attacked_by?`<span>· ${poss(x.attacked_by,'attack')}</span>`:''}
         ${x.judged_by?`<span>· ${poss(x.judged_by,'verdict')}</span>`:''}</div>
       ${ex.variant_perception?`<div class="body"><h4>Variant perception</h4>${md(ex.variant_perception)}</div>`:''}
-      ${ex.kill_criteria?`<div class="body"><h4>Kill criteria</h4>${md(ex.kill_criteria)}</div>`:''}</div>`;}).join('')||empty();
+      ${ex.kill_criteria?`<div class="body"><h4>Kill criteria</h4>${md(ex.kill_criteria)}</div>`:''}
+      ${m.id?`<div class="body"><a class="rlink" href="#research/thesis/${encodeURIComponent(m.id)}">Read the full thesis, model and decision trail →</a></div>`:''}</div>`;}).join('')||empty();
   }else if(kind==='lessons'){
     const r=records(await api('lessons'));if(!active())return;
     box.innerHTML=r.map(x=>`<div class="item"><div class="meta"><span>${esc(((x.meta||{}).date||'').slice(0,10)||'Lesson')}</span>
