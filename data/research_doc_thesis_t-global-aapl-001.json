@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-AAPL-001",
+  "title": "Apple (AAPL)",
+  "meta": {
+    "id": "T-GLOBAL-AAPL-001",
+    "book": "GLOBAL",
+    "ticker": "AAPL",
+    "name": "Apple",
+    "sector": "TECH",
+    "factors": [
+      "us_tech",
+      "us_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "killed",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-12T10:38:09+07:00",
+    "drafted": "2026-09-12T10:38:09+07:00",
+    "judged": null,
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 332.27,
+    "target": 360.0,
+    "kill": 259.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Phase 2 DCF of committed EPS stream (cost of equity 8%, terminal growth 5% \u2014 Services-mix fade), not a re-rating multiple; ~8% above current, i.e. market sits essentially AT fair value",
+    "price": 342.5299987792969,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 8.3,
+    "p_down": 0.5,
+    "down_pct": -22.0,
+    "net_div_yield_pct_pa": 0.45,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -7.0,
+    "horizon_years": 0.75,
+    "carry_pct": -0.16,
+    "kelly_full_pct": -388.8
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library momentum_continuation \u2014 candidate near 52w high +33.8% mom12; NOT de-rated, so derated_compounder_rerating would be dishonest",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 259.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop: a -22% break refutes the momentum continuation + fundamental upgrade reason"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 65.0,
+      "action": "review",
+      "name": "services_gross_margin",
+      "source": "Apple 10-K segment gross-margin disclosure (Services ~70%, hardware ~36%)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-12T10:38:09+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "killed",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-AAPL-001",
+    "ticker": "AAPL",
+    "book": "GLOBAL",
+    "killed": "2026-09-16",
+    "px_at_kill": 331.3399963378906,
+    "reason": "other",
+    "px_now": 342.5299987792969,
+    "px_asof": "2026-10-15",
+    "move_pct": 3.4
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-09-12T10:38:09+07:00, before any market number",
+      "markdown": "**Earnings Quality Gate (EARNINGS_QUALITY_FLAGS)** \u2014 conducted on SEC XBRL primary data.\n\n1. **Accruals / cash conversion**: FY2025 net income $112.0B (SEC XBRL). Apple's cash flow from operations has historically exceeded net income (10-K cash-flow statement, ~$117\u2013120B range); margin expansion has been matched by rising FCF, not receivable build. Exact CFO figure not re-pulled this session \u2014 flagged \"available (10-K CFO > NI)\". No earnings-outrunning-cash signature.\n2. **Divergence flags**: none \u2014 no receivables growing >1.5\u00d7 revenue, no inventory divergence, no capitalized-cost creep; gross-margin expansion (46.2% FY24 \u2192 46.9% FY25) is Services-mix driven and cash-backed.\n3. **IDX regime flags**: N/A \u2014 US-listed common; no special-monitoring board.\n4. **Related-party gravity**: none found \u2014 checked; no material affiliate revenue/loans disclosed.\n5. **Structure flags**: none found \u2014 checked; clean single-line franchise.\n6. **HK/ADR specifics**: N/A (US common, not ADR/VIE).\n\n**GATE RESULT: PASS** \u2014 no manipulation-class or optics-class flags.\n\n**Unit economics \u2192 revenue.** FY2025 net sales $416.161B (+6.4% y/y vs FY2024 $391.0B), SEC 10-K. FY2026 (in progress, 9-mo to 2026-06-27, SEC): Q1 $143.8B + Q2 $111.2B + Q3 $109.4B = **$364.4B, already ~88% of FY2025 full-year** on a Q4-heavy calendar \u2192 FY2026 tracking ~$480\u2013500B (+17% y/y). Services (~24% of revenue, ~70% GM, installed base ~1.7\u20132.2B devices, disclosed in 10-K) is the margin engine; Products (~76%) hardware at ~36% GM with the AI/Apple-Intelligence upgrade cycle driving refresh.\n\n**Margins \u2192 earnings \u2192 FCF.** FY2025 (SEC 10-K): GM 46.9% ($195.2B/$416.2B), operating margin 32.0% ($133.05B), net margin 26.9%, NI $112.0B, diluted EPS ~$7.27 (on ~15.4B diluted shares). FY2025 cash $35.9B (SEC); net cash remains substantial but is being run down via buybacks. FY2026 9-mo NI already $101.5B (SEC) vs FY2025 full-year $112.0B \u2192 FY2026 NI tracking ~$135\u2013140B as Services mix + buyback compound.\n\n**SBC**: ~$7\u20138B/yr (10-K) \u2014 treated as compensation; subtracted in owner earnings.\n\n**Forward estimate (committed, never edited):**\n- **FY2026E**: revenue ~$488B (+17%), GM ~47.4%, NI ~$138B, **EPS ~$9.0** (~+24% y/y on buyback).\n- **FY2027E**: revenue ~$525B (+8%), NI ~$152B, **EPS ~$10.1** (+12%).\n- **FY2028E**: revenue ~$565B (+8%), NI ~$165B, **EPS ~$11.2** (+11%).\n\nLoad-bearing assumptions (carry >70% of value, each cited):\n1. **Services mix & gross-margin expansion** (GM 46.9% FY25 \u2192 ~47.5% by FY27): Services ~70% GM vs hardware ~36%, outgrowing Products. Source: SEC FY25 GM 46.9%; 10-K segment gross-margin disclosure (Services ~70% vs hardware ~36%).\n2. **Revenue growth +17% (FY26) phasing to +8%**: FY26 9-mo revenue $364.4B actuals (SEC); installed-base refresh (1.7\u20132.2B devices) + Apple Intelligence upgrade cycle. Source: SEC 10-K/10-Q revenue line.\n3. **EPS compounding ~+11%/yr on ~2\u20133%/yr share-count reduction**: ~$90\u2013110B/yr buyback + dividend, funded by >$100B FCF. Source: 10-K cash-flow/buyback, net-cash reduction.\n\nUnavailable (NOT fabricated): exact FY25 Services dollar revenue and exact FY25 CFO not re-pulled this session \u2014 the gate/estimates rely on the SEC-sourced mix/margin evidence and note the shortfall. Uncited load-bearing assumption: **none** \u2014 all three carry cited sources."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: Apple is a \"boring\", fully-valued mega-cap staple \u2014 Services growth is well-known and the ~30x multiple already prices the installed base, so there is nothing left unless AI (Apple Intelligence) converts an upgrade supercycle that skeptics doubt."
+    },
+    {
+      "heading": "Base-rate anchoring",
+      "detail": null,
+      "markdown": "AAPL entries today are **not de-rated** \u2014 it is ~2% off its 52-week high with +33.8% mom12 (MOMENTUM #11). The honest archetype is therefore **momentum_continuation** (rate 0.50, +30/\u221222), not derated_compounder_rerating (which requires prior multiple compression; arguing it here would be dishonest). This is momentum *with a fundamental reason*: gross-margin mix-shift + an executing upgrade supercycle + buyback, not momentum alone (auto-kill without a fundamental reason). p_up anchored at registry 0.50, no deviation argued in Phase 1."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": "Phase 2 \u2014 real market data",
+      "markdown": "Market asof 2026-09-11: ~$332.27, ~4% off 52w high ($344.57), 52w low $229.02, mom12 +33.8%; ~37x FY26E EPS, ~33x FY27E \u2014 the premium is already paid.\n**Market believes (three headlines):** \"AI upgrade supercycle; Services margins ~70%; record buyback.\" That IS the bull case \u2014 no headline unpriced.\n**Why wrong / edge:** The dots (SEC 9-mo rev $364.4B +17%; Services ~70% GM; buyback) are public and well-covered. No analytical mis-model; no time-arbitrage (mega-cap, full coverage); no structural-flow edge. **No recoverable edge at current price.**\n**What proves us wrong:** GM =1.3); own-Kelly -82.5% -> sizes to zero (the TSM condition). Delivered as such: no trade at current price; revisit on a washout to ~$300."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "- 13F crowding: largest / top-3 holding in essentially every broad US fund \u2014 structurally crowded; specific 13F concentration not pulled (unavailable, not fabricated).\n- Insider (Form 4): not pulled this session \u2014 unavailable.\n- Index/passive: largest S&P 500 constituent (~7% wgt), top position in SPY/QQQ; passive bid is a persistent tailwind, not a trap (no imminent add/delete). No forced-seller edge available.\n- Short interest: not pulled this session \u2014 unavailable (no fabrication).\n- Consensus sell-side: quarantined, not viewed (CONTAMINATION rule respected)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a filing line",
+      "markdown": "1. **Services margin erodes**: 10-K discloses Services ~70% GM \u2014 a slip to <65% breaks the mix math that carries the estimate (kpi kill trigger). Current: not observed.\n2. **Revenue growth rolls over**: SEC FY26 9-mo revenue $364.4B \u2014 a sequential/quarterly deceleration of the upgrade cycle below ~+8% undermines the +17% base case.\n3. **GM compression**: SEC FY25 GM 46.9% \u2014 a reversal toward FY23-level (~44%) on cost/commodity pressure unwinds the margin-mix thesis.\n4. **Buyback slows**: 10-K net-cash rundown \u2014 a materially reduced buyback (below ~$80B/yr) cuts the EPS-compounding second leg.\n5. **Apple Intelligence fails as an upgrade driver**: if the AI/edge refresh does not lift iPhone ASP/units into FY27 (10-K product-line disclosure), the supercycle is consensus-momentum, not fundamental."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Sep 2029 and this position lost ~22%. The most likely reason: the FY2026 AI upgrade supercycle was a pulled-forward, one-cycle event (like the COVID/5G iPhone 12 cycle), revenue re-decelerated to mid-single-digit, Services growth matured, and the near-all-time-high multiple de-rated \u2014 the classic momentum continuation that runs fine until the fundamental reason stops, then mean-reverts hard. Second joint: GM rollback on AI component costs and onshoring capex, breaking the margin-mix leg. Third: a regulatory hit to App-Store Services economics cutting the ~70% Services margin."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew (BEAR) \u2014 VAL_MOMENTUM_CONTINUATION attack on T-GLOBAL-AAPL-001**\n\n1. **FY26 +17% revenue requires Q4 acceleration the 9-mo run-rate does not support.** 9-mo actuals ($364.4B) run ~$485M/day. Q4 FY26 needs ~$124B (+13% y/y) to reach $488B. If Q4 is flat at ~$112B (historical iPhone-cycle topping pattern), FY26 lands ~$476B, EPS drops to ~$8.6, and entry-room math breaks. Falsifiable: Q4 revenue in January 2027 SEC filing.\n\n2. **Services ~70% GM is the prior-year (FY24) figure; FY25 actual not re-pulled.** The earnings-quality gate explicitly admits this. If FY25 Services GM is 67% instead of 70%, the GM-mix trajectory to 47.5% by FY27 is already off-rail. A single FY25 10-Q line item disproves or validates this. The thesis builds a multi-billion-dollar estimate on an unverified segment disclosure.\n\n3. **The AI supercycle is narrative with no unit/ASP build.** \"Installed-base refresh + Apple Intelligence\" is asserted, not modeled. No iPhone unit forecast, no ASP assumption, no revenue bridge from prior cycles. The iPhone 12 COVID supercycle peaked at +24% iPhone revenue y/y. Falsifiable: if any single FY26 quarter shows iPhone revenue growth below +12% y/y, the supercycle is not occurring. The thesis needs to name which quarter tests it before entry.\n\n4. **37x FY26E at a 52w-high proximity is the highest-risk entry point for a momentum-continuation thesis.** The base-rate source itself (Jegadeesh & Titman; AQR momentum-crash paper) flags procyclical reversal zones. AAPL's historical vol is 22\u201325%; a single macro shock \u2014 rate spike, AI disappointment, China regulatory action on App Store \u2014 triggers the kill level at $259 before any fundamental data can be collected. Momentum continuation works until it doesn't, and this name is priced for perfection at the upper bound of its range.\n\n5. **EV math that produces -7.0% expected return and -82.5% Kelly is not a risk \u2014 it is a completed verdict.** The analyst papered over this with \"no trade, revisit at ~$300,\" but that caveat has no catalyst, no timeline, and no probability. A deferred rationalization is not a trading plan. A thesis that mathematically says do not own the name at this price should not advance to sizing.\n\n**Verdict: KILL_RECOMMENDED** \u2014 The analyst already proved the thesis fails at current price. Wait for a washout or produce a revised entry price with verified FY25 Services GM before advancing to Judge."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)"
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

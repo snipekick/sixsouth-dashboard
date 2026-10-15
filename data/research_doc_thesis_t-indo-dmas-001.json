@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-DMAS-001",
+  "title": "Puradelta Lestari (DMAS.JK)",
+  "meta": {
+    "id": "T-INDO-DMAS-001",
+    "book": "INDO",
+    "ticker": "DMAS.JK",
+    "name": "Puradelta Lestari",
+    "sector": "PROPERTY",
+    "factors": [
+      "property_rates",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "property_nav_discount_narrowing",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-10T10:16:23+07:00",
+    "drafted": "2026-10-10T10:16:23+07:00",
+    "judged": "2026-10-10T12:24:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 165.0,
+    "target": 190.0,
+    "kill": 120.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Book-value-anchored: fair value 190 = 1.31x book at the tape's own fwd multiple (~6.5x on implied 29.1 EPS) \u2014 a discount-closing, not the 1.68x-book/8x re-rate the old 245 implied. No premium re-rate assumed; entry 165 demands a 10% margin to that value. Kill 120 sits below the 2025 low 127.",
+    "price": 186.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.38,
+    "up_pct": 15.2,
+    "p_down": 0.62,
+    "down_pct": -27.3,
+    "net_div_yield_pct_pa": 5.4,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": 0.9,
+    "horizon_years": 2.5,
+    "carry_pct": 12.0,
+    "kelly_full_pct": 20.4
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.38,
+    "source": "the base-rate library property_nav_discount_narrowing (house prior; IDX developer discount cycles BSDE/CTRA/PWON/SMRA class; n=12)",
+    "library": {
+      "rate": 0.38,
+      "base_up_pct": 45.0,
+      "base_down_pct": -25.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 120.0,
+      "action": "exit_full",
+      "note": "below the 2025 low (127.0): the market fully writes off the land-bank premium over historic cost and the narrowing premise is dead \u2014 thesis-invalidating level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-11-30",
+      "action": "review",
+      "condition": "Q3-2026 results published without confirming the H1-2026 land-sale run-rate and the 16.5/share dividend"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 2000.0,
+      "action": "review",
+      "name": "annualised revenue run-rate (IDR bn)",
+      "source": "quarterly filings"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-10T10:16:23+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-10T10:55:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-10T12:24:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-DMAS-001",
+    "ticker": "DMAS.JK",
+    "book": "INDO",
+    "killed": "2026-10-12",
+    "px_at_kill": 184.0,
+    "reason": "other",
+    "px_now": 186.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 1.1
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Estimates are built from the dossier alone; no price file, screen or tape was read before the timestamp above.\n\n- **FY2026E net income IDR 1,400bn.** H1-2026 net income is 1,192.3 (Q1 818.3, Q2 374.0). H2 land sales are lumpy and Q2 already stepped down; I now anchor to the export's forward implication (fwd P/E 6.32 \u2192 EPS 29.1 / NI ~1,403) rather than annualising the Q1 spike. EPS \u2248 IDR 29.1.\n- **Normalised mid-cycle EPS \u2248 IDR 26.** FY2022-2024 net income was 1,217.3 / 1,209.8 / 1,333.7 \u2014 a ~1,254bn mean base (25.9/share) that FY2025 broke to 800.3 and FY2026 has overshot. I use the pre-2025 mid-cycle level, not the spike, for the multiple.\n- **Balance sheet.** Equity 6,609.8 (book 145.4/share); total debt 0-1.1. Cash is contested: key-stats 2,085.0 (2026-10-10) vs the FY2025 balance sheet's 377.0 (7.8/share) \u2014 an unreconciled 5.5x gap, so I carry net cash IDR 7.8-43/share. Interest coverage is not a live question either way (debt \u2248 0).\n- **Recurring-income coverage.** Hotel and rented-factory space are a minority of gross profit (operating margin 62-65% is land-driven). Recurring income would not cover a large payout; the dividend is a development-income payout underwritten on through-cycle land sales.\n- **Dividend.** Stated 16.5/share \u2248 IDR 795bn at 48.198bn shares. FCF covered it only in 2022 (1,178.8) and 2023 (1,298.7); 2024 FCF 675.4 fell ~120bn short and FY2025 FCF \u221230.2 missed outright \u2014 so the payout is balance-sheet-funded, not covered through-cycle.\n- **Fair value = IDR 190/share.** Book 145.4 marked for a land bank carried at historic cost, but haircut for unproven presales durability and a soft industrial-FDI backdrop; \u22481.31x book and \u22486.5x the tape's implied 29.1 EPS \u2014 a discount-closing, not the 1.68x-book / 8x normalised EPS the old 245 implied. **Entry 165, target 190, kill 120.**"
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "I believed IDX property developers sit at a chronic discount to RNAV that only closes on a visible presales inflection or BI rate cuts, and that the market reads DMAS as a mortgage-cycle residential developer rather than an industrial-land seller \u2014 so I started this work sceptical that a property name could clear the desk's INDO rate-sensitive AVOID tilt."
+    },
+    {
+      "heading": "Market data \u2014 Phase 2",
+      "detail": null,
+      "markdown": "Screen (2026-10-10): price IDR 184; ADV IDR 52.46bn/day; mcap IDR 8,868.5bn; 52-week high 214 / low 127 (\u221214.0% off the high). Momentum: mom12 +58.16%, mom6 +56.49%, mom1 \u22124.66% (rolling over); vol 48.96%; corr_bench 0.44. Fires both sleeves (#5 NEGLECTED, #2 MOMENTUM). Catalyst: Q3-2026 results ~end-Oct 2026.\n\n**Eligibility vs INDO floors** (mcap \u2265 IDR 1T; ADV \u2265 IDR 2B): mcap 8,868.5bn clears ~8.9x; ADV 52.46bn clears ~26x. ADV has fallen from the card's 68bn (2026-10-05), and mom1 is negative while mom12/mom6 stay high: the tape is cooling into the Q3 print, so entry can sit below spot."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** DMAS is a rate-sensitive IDX property developer. Its ~5.8x P/E and yield are read as a melting-ice-cube land-sale spike (Q1-2026 revenue 1,053.2 collapsing to 750.2 in Q2), and the desk's INDO rate-sensitive AVOID tilt \u2014 Fed +25bp, DXY at a 52-week high, BI on hold \u2014 keeps the discount to RNAV wide.\n\n**Why wrong:** The demand mechanism is industrial/FDI land, not mortgage-financed residential \u2014 Kota Deltamas sells to manufacturers and FDI through Greenland International Industrial Center and rented factory space, so the mortgage-affordability leg of the AVOID tilt does not bind this name. The tilt's discount-rate leg still bites, because industrial-FDI capex is itself funding-sensitive, and it hits the multiple (keeping the discount wide) rather than earnings \u2014 DMAS is debt-free earning 62%+ margins. So the variant only half-holds: the mortgage mechanism is absent, the rate mechanism is present but earnings-immaterial. The AGAINST card is \"valid only while the variant holds\", so its condition is NOT met \u2014 the card is DISCARDed and no variant edge is claimed. That argues for a book-value buy on a lower entry, not a premium re-rate or a narrowing bet.\n\n**Deep-dive answers.** (1) *Timing spike or durable presales?* Evidence leans timing: H1-2026 NI 1,192.3 already exceeds all of FY2025 (800.3), but Q2 stepped down hard (revenue 750.2 vs 1,053.2; NI 374.0 vs 818.3) and no Q3 backlog is disclosed \u2014 I underwrite the spike as timing and use normalised EPS 26, not 29.1. (2) *RNAV discount at stated haircuts?* Land is carried at historic cost; haircutting unproven presales and a soft industrial-FDI backdrop gives fair value 190 = 1.31x book = ~6.5x the tape's implied 29.1 EPS, ~3% above spot 184. Recurring income (hotel, rented factory) is a minority of gross profit and does not cover a large payout; interest coverage is not a live question. (3) *~16% yield defended?* At spot the stated 16.5/share is only ~8.8-9.0% gross (dossier 8.78%) \u2014 the card's \"~16%\" is not reproducible at 184, so the income leg is roughly half the card's claim. It is a development-income payout, covered 2022-23 only: not a one-off special, but not riskless either.\n\n**What proves us wrong:** Q3-2026 results (~end-October) showing H1-2026 was a pulled-forward sale with no backlog behind it \u2014 revenue reverting below the ~500bn/quarter 2025 run-rate \u2014 and/or a cut to the 16.5/share dividend, or a BI hike that visibly stalls industrial presales. If the spike was timing and the payout is not defended, the RNAV discount is deserved and this is a value trap."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier line",
+      "markdown": "1. FY2025 revenue fell to 1,309.1 from 2,032.7 (\u221235.6%) and net income to 800.3 from 1,333.7 \u2014 the run-rate immediately before the 2026 spike was contracting, not durable (\"Financial history\").\n2. FY2025 free cash flow was \u221230.2bn while the stated 16.5/share dividend implies ~IDR 795bn of outflow \u2014 the payout was not covered by FY2025 cash generation (\"Balance sheet & cash flow\"; \"Valuation stats\").\n3. Q2-2026 revenue fell to 750.2 from Q1-2026's 1,053.2 (\u221228.8%) and net income to 374.0 from 818.3 (\u221254.3%) \u2014 intra-year lumpiness confirms land-sale timing risk (\"Quarterly\").\n4. Total assets shrank to 7,121.9 in 2025 from 8,254.7 in 2024 and cash to 377.0 from 1,759.5 \u2014 the balance sheet contracted through 2025, so the 2026 cash figure is not a stable base (\"Balance sheet & cash flow\").\n5. No Q3-2026 row appears in the export and no dated catalyst is named; the whole thesis rests on an unverified print due ~end-October 2026 (\"Quarterly\"; \"Catalyst calendar\").\n6. The screen's mom1 of \u22124.66% and \u221211.54% off the 52-week high contradict the mom12/mom6 strength \u2014 the tape has already begun to doubt the spike (\"screen 2026-10-10\")."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. The most likely reason is that the 2026 land-sale spike was a pull-forward, not a new run-rate: industrial land sales reverted toward the ~500bn/quarter 2025 pace, the 16.5/share dividend was cut as FY2025's negative FCF repeated, and the RNAV discount never narrowed because the desk's INDO rate-sensitive AVOID tilt was right on the discount-rate leg even though the mortgage mechanism never bound. A soft industrial-FDI cycle re-marked the land bank down; the position paid for underwriting a spike as a base case."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Target refutes itself.** 245 = 1.68x book (from 1.27x) and \"8x\" normalised EPS (from 5.8x trailing) \u2014 both ARE re-rates, which the thesis disclaims. At its own capped 6.3x fwd, fair value \u2248164-184, at/below spot.\n2. **Normalised EPS inflated.** FY22-24 NI 1,217.3/1,209.8/1,333.7 \u2192 mean EPS 26.0 (best year 27.7). \"\u224830\" beats every base year; at 26, 245 = 9.4x mid-cycle \u2014 a premium, not \"\u22488x\".\n3. **FY2026E 1,850 is above the tape.** Export fwd P/E 6.32 implies EPS 29.1 / NI ~1,403; the \"conservative\" H2 is +32% above the export's own forward implication.\n4. **Net cash unattested.** 43/share uses cash 2,085.0; the thesis's own fact #4 cites FY2025 cash 377.0 \u2192 7.8/share. A 5.5x gap, unreconciled; \"interest-immaterial\" rests on the bigger number.\n5. **Coverage overstated.** 2024 FCF 675.4 < the 795bn payout (\u2212120bn); only 2022-23 covered. FY2025 FCF \u221230.2, cash 1,759.5\u2192377.0 \u2014 balance-sheet funded, not \"covered through-cycle\".\n6. **5.4% net yield unattested** (dossier gross 8.78%; ~7.2% net of WHT).\n7. **EV is a 2.5-year total.** Lint horizon_y=2.5 \u2192 13.6% \u2248 5.2%/yr vs cash proxy 3.63-3.88%: ~1.4%/yr excess for 60% loss odds.\n8. **Downside uncapped.** Kill 145 is \"NOT a stop\", yet down_pct \u221220.3 treats it as a floor; 2025 low 127 = \u221230%.\n9. **AGAINST variant self-invalidates.** Thesis concedes it \"only half-holds\"; the card is valid \"only while the variant holds; else DISCARD\". Dossier lists residential/shophouses first; screen factor property_rates, factor2 domestic_cycle \u2014 mortgage/consumer-cycle exposed, BI-rate sensitive.\n10. **No narrowing catalyst.** The archetype needs the discount to close on a presales inflection or rate cuts; the thesis calls the spike timing and concedes the rate leg keeps it wide. Nothing closes 184\u2192245.\n11. **Macro conflict live.** AVOID names property; BoP-pressure/CAUTIOUS, tilts unchanged 2026-10-10, DXY 102.23 at the 52w high.\n12. **Hygiene.** catalyst_date 2026-10-31 is fabricated (dossier: \"No dated catalyst\"); off-high \u221211.54% conflicts with 52w high 214 at 184 (\u221214.0%); \"no market number read\" is hollow \u2014 the dossier is itself a market-data doc, and 245/entry 182 look tuned to spot.\n\nDrew: KILL_RECOMMENDED \u2014 the target needs a re-rate the thesis forbids, there is no narrowing catalyst, and the net-cash/yield legs are unattested."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **Conceded.** 245 = 1.68x book (1.27x now) and ~8x normalised EPS (5.81x trailing) *is* the re-rate the thesis disclaimed. Target cut to 190 = 1.31x book, ~6.5x the tape's implied 29.1 EPS \u2014 no material re-rate.\n2. **Conceded.** The thesis's own base (NI ~1,250bn \u00f7 48.198bn) = 25.9 EPS, not 30. Normalised EPS \u2192 26; 245 was 9.4x, confirming the point.\n3. **Conceded.** FY2026E cut 1,850 \u2192 1,400 (fwd P/E 6.32 implies 29.1 EPS / 1,403 NI).\n4. **Conceded.** Net cash used key-stats 2,085.0, unreconciled with FY2025 cash 377.0 (7.8/share). Now carried 7.8\u201343/share; interest-immaterial survives (debt 0\u20131.1).\n5. **Conceded.** 2024 FCF 675.4 < the ~795 payout; only 2022\u201323 covered. \"Through-cycle\" \u2192 \"covered 2022\u201323, balance-sheet-funded 2024\u201325\".\n6. **Partly conceded.** 5.4% net is ~1.8pp below the dossier's 8.78% gross / ~7.2% net \u2014 conservative, not inflated; derivation now stated.\n7. **Conceded.** 13.6% over 2.5y \u2248 5.4%/yr; revised EV 0.9% total (\u22480.4%/yr) \u2014 no edge.\n8. **Conceded.** Kill 145 was a falsification level, not a floor; down_pct \u221220.3 treated it as one. Kill \u2192 120, down_pct \u2192 \u221227.3 (through the 2025 low 127).\n9. **Conceded.** The variant \"only half-holds\" \u2192 the AGAINST card's condition (\"valid only while the variant holds; else DISCARD\") is NOT met. Card DISCARDed; no variant edge claimed.\n10. **Conceded.** Nothing closes the discount; this is now a book-value buy on a lower entry, not a narrowing bet.\n11. **Conceded.** Rate leg live (DXY 102.23 at 52w high, tilts unchanged); it caps the multiple.\n12. **Conceded.** catalyst_date nulled (dossier: \"No dated catalyst\"); off-high corrected to \u221214.0% (214 at 184).\n\nNet: entry 182\u2192165, target 245\u2192190, kill 145\u2192120, EPS 30\u219226, FY26E 1,850\u21921,400, p_up 0.40\u21920.38; EV \u2248 +0.9%. Drew's KILL largely lands; edge is ~nil."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL**\n\n1. No variant perception survives. The AGAINST card is DISCARDed and the Revision itself claims no variant edge (\"no variant edge claimed\"). A thesis with no edge over the market cannot pass; FAIL closed applies directly.\n2. EV fails the cash proxy. Revised EV \u2248 +0.9% total over 2.5y (~0.4%/yr) against a 3.63-3.88%/yr cash proxy \u2014 negative excess for 62% loss odds. The Revision's own arithmetic kills the trade.\n3. Drew's KILL_RECOMMENDED is uncured. Eleven of twelve points conceded outright; the Revision does not restore an edge, it confirms one is absent. An uncured KILL_RECOMMENDED is a KILL.\n4. The central assumption is unverifiable. Net cash 7.8-43/share carries an unreconciled 5.5x gap; no Q3 print exists and the analyst nulled the catalyst date. The FY2026E anchor is the export's own forward implication, not independent evidence.\n5. Kill 120 (below the 2025 low, land-bank premium written off) is a genuine falsification level, not a stop \u2014 but a valid falsification level limits loss, it does not manufacture an edge. With target 190 only ~15% up and kill ~27% down, the asymmetry is adverse.\n6. Macro confirms: INDO rate-sensitive AVOID tilt live, DXY at a 52w high capping the multiple; the analyst concedes nothing closes the discount.\n\nThe desk's over-killing record is noted, but no real edge exists to preserve. KILL is final; DMAS.JK is blocked from re-entry for 60 days."
+    }
+  ]
+}

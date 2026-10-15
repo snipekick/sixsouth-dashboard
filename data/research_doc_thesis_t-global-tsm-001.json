@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-TSM-001",
+  "title": "Taiwan Semiconductor (ADR) (TSM)",
+  "meta": {
+    "id": "T-GLOBAL-TSM-001",
+    "book": "GLOBAL",
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor (ADR)",
+    "sector": "SEMIS",
+    "factors": [
+      "semis_ai",
+      "china_growth"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "killed",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-12T11:11:12+07:00",
+    "drafted": "2026-09-12T11:11:12+07:00",
+    "judged": null,
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 430.0,
+    "target": 494.0,
+    "kill": 300.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "FCFF DCF (9% COE, 3.5% terminal g), structural-AI margin-persistence (OM fades to ~54%, rev +25/+20/+15/+10/+8% FY27-31) over FY2026 base; equity +$120bn net cash /5.19bn ADS = ~$494/ADS. Base case (OM reversion ~50-51%) values ~$418-445/ADS = current price; upside needs the AI-margin-hold to be structural. Target is valuation-produced, not momentum extrapolation.",
+    "price": 421.9049987792969,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 15.0,
+    "p_down": 0.5,
+    "down_pct": -30.0,
+    "net_div_yield_pct_pa": 0.65,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -7.3,
+    "horizon_years": 0.75,
+    "carry_pct": 0.19,
+    "kelly_full_pct": -161.5
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library momentum_continuation (rate 0.50, base_up 30%, base_down -22%, horizon 0.75y, n=200)",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 300.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating, NOT a stop \u2014 implies the structural AI-margin-hold false: ~19-20x FY2027E EPS at reverted margins, margin premium AND AI multiple compress. Long thesis falsified."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-10-15",
+      "action": "review",
+      "condition": "Q3 2026 earnings (~mid-Oct): review if GM <~63% (from 67.7% Q2'26) or OM <~54%, or HPC/AI commentary signals deceleration/cancellations"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 60.0,
+      "action": "review",
+      "name": "gross_margin_pct",
+      "source": "TSMC quarterly IR (Q2'26 GM 67.7%; FY24 GM 56.1% per 20-F)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-12T11:11:12+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "killed",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-TSM-001",
+    "ticker": "TSM",
+    "book": "GLOBAL",
+    "killed": "2026-09-16",
+    "px_at_kill": 413.75,
+    "reason": "other",
+    "px_now": 421.9049987792969,
+    "px_asof": "2026-10-15",
+    "move_pct": 2.0
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 before any market number",
+      "markdown": "**Sources (primary; no consensus):** TSMC FY2025 Form 20-F via SEC EDGAR XBRL (CIK 1046179) FY22-24 statements; TSMC IR quarterly pages for FY2025, H1-2026 actuals, FY2026 guidance. WebSearch returned empty bodies; one earnings PDF 404'd; anything not pulled from a primary source is [UNAVAILABLE], never guessed.\n\n**EARNINGS_QUALITY_FLAGS (first):** Accruals (NI\u2212CFO)/avg assets = \u22127.4% (FY23), \u221210.9% (FY24); CFO/NI 1.46x\u21921.58x \u2014 deep, worsening (cash outruns NI via large D&A add-back), a quality POSITIVE. No divergence; margin up WITH better cash conversion. Taiwan-domiciled consolidated 20-F filer, not PRC/HFCAA; KPMG long-tenured; no material-weakness flag. No related-party extraction. **Gate clears.**\n\n**Revenue (>70% of value \u2014 foundry demand):** FY2025 Q1 $25.53, Q2 $30.07, Q3 $33.10, Q4 $33.73bn = **$122.43bn (+38.7% vs FY24 $88.27bn)**. FY2026 Q1 $35.90, Q2 $40.20bn, Q3 guide $44.6-45.8bn; +~$48-50bn Q4 \u21d2 **FY2026E \u2248 $170bn \u2248 +39% YoY** on a verified H1 base. AI/HPC-led; not extrapolated as forever-rate.\n\n**Margins:** GM FY24 56.1% \u2192 FY25 ~59.5% \u2192 FY26 Q1 66.2% / Q2 67.7% (guide 65-67%). OM FY24 45.7% \u2192 FY25 ~50.7% \u2192 FY26 Q1 58.1% / Q2 60.3%. **FY2026E OM ~58% (op \u2248 $99.5bn).** Question: is 66-68% GM / 58-60% OM a NEW structural plateau or a cyclic peak? DCF runs both; base fades OM to ~50-51%; I do not assume the 60% peak is permanent.\n\n**Tax/capex:** Effective tax ~12.4% (model ~13%, Arizona drag). D&A FY24 $19.9bn rising. Capex FY24 $29.2bn = **33% of revenue** (load-bearing capital anchor); FCF $55.7bn CFO \u2212 $29.2bn = $26.5bn (thin over a semi-fixed, fast capex base \u2014 the fragility the kill targets).\n\n**EPS/ADS:** FY24 US$6.90; FY25E ~$10.2; **FY2026E \u2248 $86bn \u00d7 0.865 \u00f7 5.19bn ADS \u2248 $16.6/ADS.** At $430 entry \u2248 **25.9x FY2026E, ~42x trailing FY25E** \u2014 the multiple already prices a bullish structural-AI view.\n\n**Valuation (FCFF DCF, COE 9%, terminal g 3.5%, 6y):** Base (OM fade 58\u219250%): EV \u2248$2.0-2.1tr + $120bn net cash \u21d2 **~$418-445/ADS = current price, no margin of safety.** Structural (OM ~54%): EV \u2248$2.44tr \u21d2 **~$494/ADS (+15% over entry).** Sensitivity: rev \u221215% FY27 \u2192 sub-$400; COE 9%\u00b150bp \u2248 \u00b18%. Decisive: is the margin hold structural."
+    },
+    {
+      "heading": "Phase 2 market confirmation",
+      "detail": null,
+      "markdown": "Current TSM ADR **$433.24** (fund feed via yfinance, 2026-09-12, not stale; screen mom12 +66.6%, off-52w-high \u22129.28%). Spot \u2265 entry $430 and \u2265 base-case fair value ($418-445) \u2014 the AI boom is already in the price. Kill < entry < target: 300 < 430 < 494 \u2713. ev_math confirmed (implied \u22127.5%). **Symmetry: up/|down| = 15.1/30.1 \u2248 0.50 vs library 1.36, < 1.3 \u2192 quarter-Kelly = 0. Own-Kelly \u2212171bp vs library-Kelly +61bp.** The negative-expectation long is the deliverable, confirmed on live data \u2014 both legs honestly placed."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "Priors (one sentence, pre-document)",
+      "markdown": "Market believes TSMC is the dominant advanced-node foundry in a structural AI supercycle \u2014 near-monopoly 3nm/5nm pricing power, every US hyperscaler fabbed here, already +66%/12m, Taiwan/China risks distant tails \u2014 a crowded mega-cap only the cycle itself can hurt."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** 66-68% GM / 58-60% OM and +30-40% revenue are the durable AI-supercycle new normal; ~26x forward reasonable; the run continues; China/geopolitical risk near-zero.\n\n**Why wrong:** We agree direction and margins are real (Q2'26 $40.2bn, GM 67.7%, OM 60.3% \u2014 filing-confirmed); we differ on PRICE and CYCLE READ. (a) GM 67.7% is ~12-14pp above FY24's 56.1%; even partial reversion to FY25 (~59.5/50.7) cuts FY27E EPS ~25%, and it's priced for a PERMANENT plateau. (b) Our base-case DCF (~$418-445) \u2248 current price ($433.24) \u2014 **no margin of safety**; the only upside leg underwrites the more aggressive structural-AI hold as base: thin, momentum-flavoured at cyclic-peak margins. Screen tags `china_growth` under no-reflation China (macro_regime 2026-09-12) but marginal demand is US/HPC-led \u2014 the tag is the wrong box, not cheapness; if systematics discount TSM as China-beta, a modest structural-flow component exists.\n\n**Proves us wrong:** if FY2026 H2 margins HOLD 65-68% GM / 56-60% OM through Q3 (2026-10-15) and Q4 with strong AI commentary, AND ~26x forward holds/extends without reverting toward our ~20x anchor \u2014 the market underwrites the structural plateau and we are wrong to stop at +15%. The margin-hold is the crux."
+    },
+    {
+      "heading": "Edge taxonomy",
+      "detail": null,
+      "markdown": "**(a) Analytical** \u2014 the discipline is the CYCLE READ and price paid: we run margin-fade vs margin-hold DCF and show the base case is fully priced (no MoS), not just endorsing momentum. Secondary (d) structural-flow: the `china_growth` mislabel on a US-AI name. NOT (b) strong informational-synthesis, NOT (c) time-arbitrage rescuing valuation. **Honest:** momentum-continuation at cyclic-peak margins, base case fully priced; momentum is the book's weakest edge (procyclical). Our numbers land this LOW/zero expected-value long \u2014 reported as a finding, not hidden."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "- **13F crowding:** mega-cap semis-AI, heavy institutional/hedge-fund/quant ownership \u2014 a crowded momentum hotel; levered holders are exit-door risk. No fund-level aggregate pulled [UNAVAILABLE].\n- **Insider:** primary is Taiwan (TWSE); NYSE ADS carry no US Form 4 stream; HKEX DI doesn't apply to a Taiwan primary \u2014 [UNAVAILABLE].\n- **Index/passive:** heavyweight in ACWI/MSCI EM/World, heavily passive-owned \u2014 the +66% run and \u22129% off-high are partly index-flow-driven; no pending add/delete known [UNAVAILABLE to confirm an event].\n- **Float:** very large; ADV ~$4.1bn (screen) \u2014 ample, easy 7-day exit at 20% participation; not binding.\n- No consensus price-target data viewed (quarantined)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, cited",
+      "markdown": "1. Margin fragility: Q2'26 GM 67.7% / OM 60.3% (IR) vs FY24 GM 56.1% / OM 45.7% (20-F) \u2014 even partial reversion to FY25 (~59.5/50.7) cuts forward EPS ~25% AND compresses ~26x simultaneously; \u221230% at kill is a floor, not a ceiling.\n2. Capital intensity + thin FCF: FY24 capex $29.2bn = 33% of revenue, D&A $19.9bn, CFO $55.7bn \u2192 FCF $26.5bn (20-F). Capex semi-fixed; a demand ramp-down doesn't retire the committed buildout, so FCF collapses faster than revenue in a rollover.\n3. Base case fully priced: $433.24 spot vs ~$418-445 base-case DCF \u2014 no margin of safety; only the structural-AI leg (+15% to $494) is upside, requiring a plateau ~12-14pp above FY24."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2027 and this long lost ~30% \u2014 kill (~$300) fired. Most likely we were RIGHT AI demand was real but WRONG the 2026 margin plateau (~67% GM / ~60% OM) was structural \u2014 as leading-edge capacity came on and hyperscaler ordering normalized, GM reverted toward ~56-60% and OM ~50%, hitting BOTH legs (EPS \u221225% AND the multiple compressed toward ~20x), so a ~30% drawdown arrived faster than the +15% structural case could bank. Secondary: the `china_growth`-tagged exposure plus a Taiwan escalation widened the discount as the crowded AI trade unwound (momentum-crash risk), and thin FCF over fixed 33% capex gave no buffer. The margin-hold was the load-bearing bet; I flag it first for Drew."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**Drew (BEAR) \u2014 VAL_MOMENTUM_CONTINUATION attack on T-GLOBAL-TSM-001**\n\n1. **The long is negative-EV by the thesis's own arithmetic.** ev_math: p_up 0.50/up 15% vs p_down 0.50/down \u221230% \u21d2 expected \u22127.3%; own-Kelly \u2212171bp; quarter-Kelly = 0. A model that says a position loses ~7% on expectation cannot support a long entry. Defending the long requires proving the down-probability legs are wrong \u2014 the thesis never does; it asserts them with the cash-69-margin asymmetry (up 15 / down 30).\n\n2. **The valuation is circular with the screen.** The same H1-26 margins feed the +66% momentum screen AND the DCF. Base case (~$418\u2013445) \u2248 spot ($433). Every outcome converges on \"fully priced\"; only the structural leg (+15% to $494) is upside, and it REQUIRES OM to hold ~12\u201314pp above FY24 baseline. Falsifiable challenge: cite any foundry cycle since 2000 where OM stayed that far above its mid-cycle baseline for two+ years \u2014 TSMC's own history (FY23 OM ~41%, FY24 ~45.7%) says no.\n\n3. **Kill at $300 is not a \u221230% floor; realistic rollover is worse.** Reversion to FY25 (~59.5 GM/50.7 OM) cuts FY27E EPS ~25% AND compresses ~26x toward ~20x simultaneously \u2014 that is ~40\u201345% combined, not 30%. The $300 kill sits atop the down-probability mass, not below it. The thesis understates its own downside; \u221230% is the mean, not the tail.\n\n4. **No dated catalyst justifies paying full value today.** The sole review trigger is Q3 earnings (2026-10-15); nothing between now and then is a priced, incremental, falsifiable event. Entry at $430, max-chase 3%, no MoS, peak margins \u2014 this is momentum chase at the exact moment the thesis admits the multiple already prices the bullish case. Falsifiable: name the catalyst in the next 4 weeks that is not already in the price.\n\n5. **The edge taxonomy is self-refuting.** It concedes momentum is \"the book's weakest edge (procyclical),\" tags `china_growth` (systematics = China-beta discount), and its edge is \"analytical discipline\" on a fully-priced name. Discipline that yields quarter-Kelly = 0 recommends no-position, not long. Absent a specific, dated, falsifiable mispricing, a live long fails below the bar the thesis itself sets.\n\n**Verdict: KILL_RECOMMENDED**\nThe thesis's own numbers (negative expected value, zero Kelly, base case = spot, margin-hold as the only upside) describe a fully-priced, no-catalyst long whose realistic downside exceeds its stated \u221230% kill; there is no honest edge to justify opening the position."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states size fraction.)"
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

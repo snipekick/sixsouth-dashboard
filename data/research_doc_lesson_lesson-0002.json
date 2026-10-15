@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "lesson",
+  "id": "lesson-lesson-0002",
+  "title": "LESSON 0002",
+  "meta": {
+    "id": "LESSON-0002"
+  },
+  "sections": [
+    {
+      "heading": "Overview",
+      "detail": null,
+      "markdown": "# LESSON-0002\nstamp: CONSOLIDATION-2026-09"
+    },
+    {
+      "heading": "context",
+      "detail": null,
+      "markdown": "MONTHLY_IC 2026-09-05. Four repeat kill pairs exist in the ledger: TXN, SMFG, ELSA, DSNG (two kills each). A second kill of the same name is not automatically a re-affirmation of the first kill's reason."
+    },
+    {
+      "heading": "belief",
+      "detail": null,
+      "markdown": "Re-killing a name whose thesis was previously killed re-affirms the first kill's dispositive reason, without re-testing whether that reason has gone stale."
+    },
+    {
+      "heading": "outcome",
+      "detail": null,
+      "markdown": "Repeat kills did not all earn. TXN: both kills avoided further loss (07-13 \u221217.0%, 08-19 \u22125.1%). DSNG: the second kill left +20.6% more. SMFG: the second kill left +9.8% more. ELSA: the second kill left +5.0% more."
+    },
+    {
+      "heading": "cause",
+      "detail": null,
+      "markdown": "`thesis_wrong` at the second decision \u2014 external re-rating (complex/macro) was not distinguished from name-specific deterioration. Where the first reason was a name/valuation call but the complex or macro had re-rated, the second kill repeated a now-stale reason."
+    },
+    {
+      "heading": "rule",
+      "detail": null,
+      "markdown": "Before a second kill of a previously killed name, re-test whether the first reason is now wrong (external re-rating vs name-specific deterioration); TXN-style repeats earn, DSNG-style repeats cost."
+    },
+    {
+      "heading": "affected_agent",
+      "detail": null,
+      "markdown": "JUDGE"
+    },
+    {
+      "heading": "evidence",
+      "detail": null,
+      "markdown": "- T-GLOBAL-TXN-001 (07-13 valuation, \u221217.0%) and T-GLOBAL-TXN-002 (08-19 valuation, \u22125.1%) \u2014 reaffirmed correctly\n- T-INDO-DSNG-001 (07-13 valuation, +39.0%) then T-INDO-DSNG-002 (08-19 liquidity, +20.6%) \u2014 second kill continued a stale reason\n- T-GLOBAL-SMFG-001 (07-13 process, +6.1%) then T-GLOBAL-SMFG-002 (08-05 valuation, +9.8%) \u2014 second kill left gains\n- T-INDO-ELSA-001 (07-13 process, +14.1%) then T-INDO-ELSA-002 (08-05 process, +5.0%) \u2014 second kill left gains\n- Applicability: JUDGE verdict text (step 7, reason_tag) covers the single dispositive reason but has no second-kill re-test; this rule adds that specific test. The calibration-feedback role text covers generic drift; this names the exact trigger."
+    }
+  ]
+}

@@ -1,0 +1,3136 @@
+{
+  "schema_version": 1,
+  "asof": "2026-10-16T02:12:55+07:00",
+  "counts": {
+    "theses": 40,
+    "ideas": 15,
+    "stocks": 36,
+    "dossiers": 12,
+    "ic": 2,
+    "daily": 42,
+    "lessons": 3,
+    "postmortems": 0
+  },
+  "pipeline": {
+    "by_verdict": {
+      "PASS_REDUCED": 5,
+      "KILL": 35
+    },
+    "by_book": {
+      "GLOBAL": 23,
+      "INDO": 17
+    }
+  },
+  "kill_scorecard": {
+    "n": 35,
+    "scored": 35,
+    "avoided": 14,
+    "missed": 21,
+    "avg_move_pct": 1.2,
+    "rows": [
+      {
+        "thesis_id": "T-GLOBAL-NVO-001",
+        "ticker": "NVO",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 49.47999954223633,
+        "reason": "process",
+        "px_now": 39.435001373291016,
+        "px_asof": "2026-10-15",
+        "move_pct": -20.3
+      },
+      {
+        "thesis_id": "T-GLOBAL-SMFG-001",
+        "ticker": "SMFG",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 25.739999771118164,
+        "reason": "process",
+        "px_now": 24.75,
+        "px_asof": "2026-10-15",
+        "move_pct": -3.8
+      },
+      {
+        "thesis_id": "T-GLOBAL-TXN-001",
+        "ticker": "TXN",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 311.4599914550781,
+        "reason": "valuation",
+        "px_now": 278.7699890136719,
+        "px_asof": "2026-10-15",
+        "move_pct": -10.5
+      },
+      {
+        "thesis_id": "T-INDO-DSNG-001",
+        "ticker": "DSNG.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 1180.0,
+        "reason": "valuation",
+        "px_now": 1465.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 24.2
+      },
+      {
+        "thesis_id": "T-INDO-ELSA-001",
+        "ticker": "ELSA.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 640.0,
+        "reason": "process",
+        "px_now": 670.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      },
+      {
+        "thesis_id": "T-INDO-PNBN-001",
+        "ticker": "PNBN.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 875.0,
+        "reason": "other",
+        "px_now": 820.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -6.3
+      },
+      {
+        "thesis_id": "T-GLOBAL-SONY-001",
+        "ticker": "SONY",
+        "book": "GLOBAL",
+        "killed": "2026-07-22",
+        "px_at_kill": 21.020000457763672,
+        "reason": "other",
+        "px_now": 24.75,
+        "px_asof": "2026-10-15",
+        "move_pct": 17.7
+      },
+      {
+        "thesis_id": "T-INDO-ASII-001",
+        "ticker": "ASII.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 5150.0,
+        "reason": "valuation",
+        "px_now": 4780.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -7.2
+      },
+      {
+        "thesis_id": "T-INDO-JSMR-001",
+        "ticker": "JSMR.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 2720.0,
+        "reason": "other",
+        "px_now": 2480.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -8.8
+      },
+      {
+        "thesis_id": "T-GLOBAL-NOC-001",
+        "ticker": "NOC",
+        "book": "GLOBAL",
+        "killed": "2026-07-22",
+        "px_at_kill": 490.0,
+        "reason": "process",
+        "px_now": 498.4750061035156,
+        "px_asof": "2026-10-15",
+        "move_pct": 1.7
+      },
+      {
+        "thesis_id": "T-INDO-LSIP-001",
+        "ticker": "LSIP.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 1340.0,
+        "reason": "process",
+        "px_now": 1480.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 10.4
+      },
+      {
+        "thesis_id": "T-GLOBAL-SMFG-002",
+        "ticker": "SMFG",
+        "book": "GLOBAL",
+        "killed": "2026-08-05",
+        "px_at_kill": 24.860000610351562,
+        "reason": "valuation",
+        "px_now": 24.75,
+        "px_asof": "2026-10-15",
+        "move_pct": -0.4
+      },
+      {
+        "thesis_id": "T-INDO-ELSA-002",
+        "ticker": "ELSA.JK",
+        "book": "INDO",
+        "killed": "2026-08-05",
+        "px_at_kill": 695.0,
+        "reason": "process",
+        "px_now": 670.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -3.6
+      },
+      {
+        "thesis_id": "T-GLOBAL-AMD-001",
+        "ticker": "AMD",
+        "book": "GLOBAL",
+        "killed": "2026-08-19",
+        "px_at_kill": 484.3900146484375,
+        "reason": "other",
+        "px_now": 561.3114013671875,
+        "px_asof": "2026-10-15",
+        "move_pct": 15.9
+      },
+      {
+        "thesis_id": "T-GLOBAL-TXN-002",
+        "ticker": "TXN",
+        "book": "GLOBAL",
+        "killed": "2026-08-19",
+        "px_at_kill": 272.239990234375,
+        "reason": "valuation",
+        "px_now": 278.7699890136719,
+        "px_asof": "2026-10-15",
+        "move_pct": 2.4
+      },
+      {
+        "thesis_id": "T-INDO-DSNG-002",
+        "ticker": "DSNG.JK",
+        "book": "INDO",
+        "killed": "2026-08-19",
+        "px_at_kill": 1360.0,
+        "reason": "liquidity",
+        "px_now": 1465.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 7.7
+      },
+      {
+        "thesis_id": "T-INDO-TAPG-001",
+        "ticker": "TAPG.JK",
+        "book": "INDO",
+        "killed": "2026-08-19",
+        "px_at_kill": 1830.0,
+        "reason": "valuation",
+        "px_now": 2020.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 10.4
+      },
+      {
+        "thesis_id": "T-GLOBAL-MUFG-001",
+        "ticker": "MUFG",
+        "book": "GLOBAL",
+        "killed": "2026-08-24",
+        "px_at_kill": 22.040000915527344,
+        "reason": "other",
+        "px_now": 21.885000228881836,
+        "px_asof": "2026-10-15",
+        "move_pct": -0.7
+      },
+      {
+        "thesis_id": "T-INDO-TOWR-001",
+        "ticker": "TOWR.JK",
+        "book": "INDO",
+        "killed": "2026-08-24",
+        "px_at_kill": 448.0,
+        "reason": "valuation",
+        "px_now": 448.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 0.0
+      },
+      {
+        "thesis_id": "T-GLOBAL-COST-001",
+        "ticker": "COST",
+        "book": "GLOBAL",
+        "killed": "2026-09-02",
+        "px_at_kill": 939.9600219726562,
+        "reason": "other",
+        "px_now": 983.8300170898438,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      },
+      {
+        "thesis_id": "T-GLOBAL-UNH-001",
+        "ticker": "UNH",
+        "book": "GLOBAL",
+        "killed": "2026-09-02",
+        "px_at_kill": 396.29998779296875,
+        "reason": "valuation",
+        "px_now": 408.6449890136719,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.1
+      },
+      {
+        "thesis_id": "T-INDO-KLBF-001",
+        "ticker": "KLBF.JK",
+        "book": "INDO",
+        "killed": "2026-09-02",
+        "px_at_kill": 755.0,
+        "reason": "fragile_estimates",
+        "px_now": 790.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.6
+      },
+      {
+        "thesis_id": "T-GLOBAL-JPM-001",
+        "ticker": "JPM",
+        "book": "GLOBAL",
+        "killed": "2026-09-05",
+        "px_at_kill": 353.55999755859375,
+        "reason": "other",
+        "px_now": 334.7550048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": -5.3
+      },
+      {
+        "thesis_id": "T-GLOBAL-XOM-001",
+        "ticker": "XOM",
+        "book": "GLOBAL",
+        "killed": "2026-09-05",
+        "px_at_kill": 165.22999572753906,
+        "reason": "valuation",
+        "px_now": 174.40499877929688,
+        "px_asof": "2026-10-15",
+        "move_pct": 5.6
+      },
+      {
+        "thesis_id": "T-GLOBAL-AAPL-001",
+        "ticker": "AAPL",
+        "book": "GLOBAL",
+        "killed": "2026-09-16",
+        "px_at_kill": 331.3399963378906,
+        "reason": "other",
+        "px_now": 342.5299987792969,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.4
+      },
+      {
+        "thesis_id": "T-GLOBAL-TSM-001",
+        "ticker": "TSM",
+        "book": "GLOBAL",
+        "killed": "2026-09-16",
+        "px_at_kill": 413.75,
+        "reason": "other",
+        "px_now": 421.9049987792969,
+        "px_asof": "2026-10-15",
+        "move_pct": 2.0
+      },
+      {
+        "thesis_id": "T-GLOBAL-MSFT-001",
+        "ticker": "MSFT",
+        "book": "GLOBAL",
+        "killed": "2026-09-28",
+        "px_at_kill": 516.1699829101562,
+        "reason": "valuation",
+        "px_now": 540.4119873046875,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      },
+      {
+        "thesis_id": "T-GLOBAL-QCOM-001",
+        "ticker": "QCOM",
+        "book": "GLOBAL",
+        "killed": "2026-09-28",
+        "px_at_kill": 201.97000122070312,
+        "reason": "base_rate",
+        "px_now": 178.0500030517578,
+        "px_asof": "2026-10-15",
+        "move_pct": -11.8
+      },
+      {
+        "thesis_id": "T-GLOBAL-BAC-001",
+        "ticker": "BAC",
+        "book": "GLOBAL",
+        "killed": "2026-10-03",
+        "px_at_kill": 53.75,
+        "reason": "other",
+        "px_now": 51.81999969482422,
+        "px_asof": "2026-10-15",
+        "move_pct": -3.6
+      },
+      {
+        "thesis_id": "T-GLOBAL-MS-001",
+        "ticker": "MS",
+        "book": "GLOBAL",
+        "killed": "2026-10-03",
+        "px_at_kill": 190.30999755859375,
+        "reason": "other",
+        "px_now": 181.5050048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": -4.6
+      },
+      {
+        "thesis_id": "T-INDO-JSMR-002",
+        "ticker": "JSMR.JK",
+        "book": "INDO",
+        "killed": "2026-10-03",
+        "px_at_kill": 2540.0,
+        "reason": "other",
+        "px_now": 2480.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -2.4
+      },
+      {
+        "thesis_id": "T-GLOBAL-ABBV-001",
+        "ticker": "ABBV",
+        "book": "GLOBAL",
+        "killed": "2026-10-12",
+        "px_at_kill": 276.4700012207031,
+        "reason": "valuation",
+        "px_now": 285.1300048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.1
+      },
+      {
+        "thesis_id": "T-GLOBAL-SAP-001",
+        "ticker": "SAP",
+        "book": "GLOBAL",
+        "killed": "2026-10-12",
+        "px_at_kill": 214.77999877929688,
+        "reason": "other",
+        "px_now": 225.66000366210938,
+        "px_asof": "2026-10-15",
+        "move_pct": 5.1
+      },
+      {
+        "thesis_id": "T-INDO-DMAS-001",
+        "ticker": "DMAS.JK",
+        "book": "INDO",
+        "killed": "2026-10-12",
+        "px_at_kill": 184.0,
+        "reason": "other",
+        "px_now": 186.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 1.1
+      },
+      {
+        "thesis_id": "T-INDO-TAPG-002",
+        "ticker": "TAPG.JK",
+        "book": "INDO",
+        "killed": "2026-10-12",
+        "px_at_kill": 2010.0,
+        "reason": "other",
+        "px_now": 2020.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 0.5
+      }
+    ]
+  },
+  "macro": {
+    "doc": "research_doc_macro_regime",
+    "regime": "balance_of_payments_pressure",
+    "risk_appetite": "CAUTIOUS",
+    "asof": "2026-10-10",
+    "next_full_rebuild": "2026-11-07",
+    "authors": [
+      "Severin (global macro)",
+      "Ferrand (FX & transmission)"
+    ],
+    "tilts": [
+      {
+        "scope": "nickel / ID supply-discipline names",
+        "stance": "FAVOR",
+        "why": "ID-controlled supply story, not China-demand or funding dependent; war premium keeps energy input costs elevated"
+      },
+      {
+        "scope": "thermal coal",
+        "stance": "NEUTRAL",
+        "why": "war premium still bids the energy complex, but the structural export-tailwind fade into 2027 is unchanged"
+      },
+      {
+        "scope": "oil-import beneficiaries (ID current account)",
+        "stance": "AVOID",
+        "why": "Brent ~102.7 war premium keeps the ID import bill elevated; no Q3-easing premise to resurrect"
+      },
+      {
+        "scope": "INDO rate-sensitive (banks NIM, property, consumer discretionary)",
+        "stance": "AVOID",
+        "why": "Fed +25bp delivered tightens the carry gap and lifts funding cost; DXY at the 52-week high keeps EM funding tight"
+      },
+      {
+        "scope": "commodity bloc as one beta",
+        "stance": "NEUTRAL",
+        "why": "war premium lifts energy near-term but is a geopolitics overlay \u2014 underwrite name-by-name, do not chase"
+      }
+    ]
+  },
+  "theses": [
+    {
+      "id": "T-GLOBAL-ABBV-001",
+      "book": "GLOBAL",
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "sector": "HEALTHCARE",
+      "archetype": "momentum_continuation",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-10T10:16:39+07:00",
+      "judged": "2026-10-10T12:22:00+07:00",
+      "entry": 254.0,
+      "target": 315.0,
+      "kill": 200.0,
+      "price": 285.1300048828125,
+      "expected_pct": 2.15,
+      "p_up": 0.5,
+      "kelly_full_pct": 42.9,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 3.1,
+      "doc": "research_doc_thesis_t-global-abbv-001"
+    },
+    {
+      "id": "T-INDO-DMAS-001",
+      "book": "INDO",
+      "ticker": "DMAS.JK",
+      "name": "Puradelta Lestari",
+      "sector": "PROPERTY",
+      "archetype": "property_nav_discount_narrowing",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-10T10:16:23+07:00",
+      "judged": "2026-10-10T12:24:00+07:00",
+      "entry": 165.0,
+      "target": 190.0,
+      "kill": 120.0,
+      "price": 186.0,
+      "expected_pct": 0.9,
+      "p_up": 0.38,
+      "kelly_full_pct": 20.4,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 1.1,
+      "doc": "research_doc_thesis_t-indo-dmas-001"
+    },
+    {
+      "id": "T-GLOBAL-SAP-001",
+      "book": "GLOBAL",
+      "ticker": "SAP",
+      "name": "SAP SE (ADR)",
+      "sector": "TECH",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-10T10:16:22+07:00",
+      "judged": "2026-10-10T12:20:00+07:00",
+      "entry": 195.0,
+      "target": 260.0,
+      "kill": 147.0,
+      "price": 225.66000366210938,
+      "expected_pct": -0.3,
+      "p_up": 0.4,
+      "kelly_full_pct": -3.7,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 5.1,
+      "doc": "research_doc_thesis_t-global-sap-001"
+    },
+    {
+      "id": "T-INDO-TAPG-002",
+      "book": "INDO",
+      "ticker": "TAPG.JK",
+      "name": "Triputra Agro Persada",
+      "sector": "PLANTATION",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-10T10:15:51+07:00",
+      "judged": "2026-10-10T12:26:00+07:00",
+      "entry": 1840.0,
+      "target": 2196.0,
+      "kill": 1240.0,
+      "price": 2020.0,
+      "expected_pct": 4.7,
+      "p_up": 0.42,
+      "kelly_full_pct": 79.4,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 0.5,
+      "doc": "research_doc_thesis_t-indo-tapg-002"
+    },
+    {
+      "id": "T-GLOBAL-BAC-001",
+      "book": "GLOBAL",
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "sector": "FINANCIALS",
+      "archetype": "quality_bank_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-03T10:35:00+07:00",
+      "judged": "2026-10-03T16:30:00+07:00",
+      "entry": 53.75,
+      "target": 63.1,
+      "kill": 44.5,
+      "price": 51.81999969482422,
+      "expected_pct": 3.5,
+      "p_up": 0.48,
+      "kelly_full_pct": 104.0,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -3.6,
+      "doc": "research_doc_thesis_t-global-bac-001"
+    },
+    {
+      "id": "T-GLOBAL-MS-001",
+      "book": "GLOBAL",
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "sector": "FINANCIALS",
+      "archetype": "momentum_continuation",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "short",
+      "drafted": "2026-10-03T10:30:00+07:00",
+      "judged": "2026-10-03T14:10:00+07:00",
+      "entry": 190.31,
+      "target": 212.0,
+      "kill": 152.0,
+      "price": 181.5050048828125,
+      "expected_pct": -2.9,
+      "p_up": 0.5,
+      "kelly_full_pct": -122.1,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -4.6,
+      "doc": "research_doc_thesis_t-global-ms-001"
+    },
+    {
+      "id": "T-INDO-JSMR-002",
+      "book": "INDO",
+      "ticker": "JSMR.JK",
+      "name": "Jasa Marga",
+      "sector": "INFRASTRUCTURE",
+      "archetype": "infra_tower_compounder",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-03T10:30:00+07:00",
+      "judged": "2026-10-03T14:05:00+07:00",
+      "entry": 2540.0,
+      "target": 3200.0,
+      "kill": 2250.0,
+      "price": 2480.0,
+      "expected_pct": 14.9,
+      "p_up": 0.3,
+      "kelly_full_pct": null,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -2.4,
+      "doc": "research_doc_thesis_t-indo-jsmr-002"
+    },
+    {
+      "id": "T-GLOBAL-NVO-002",
+      "book": "GLOBAL",
+      "ticker": "NVO",
+      "name": "Novo Nordisk (ADR)",
+      "sector": "HEALTHCARE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-03T03:31:22+00:00",
+      "judged": "2026-10-03T16:20:00+07:00",
+      "entry": 37.0,
+      "target": 57.21,
+      "kill": 16.59,
+      "price": 39.435001373291016,
+      "expected_pct": -13.0,
+      "p_up": 0.28,
+      "kelly_full_pct": -44.9,
+      "pm_pct": 0.0,
+      "has_model": false,
+      "kill_move_pct": null,
+      "doc": "research_doc_thesis_t-global-nvo-002"
+    },
+    {
+      "id": "T-GLOBAL-MSFT-001",
+      "book": "GLOBAL",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "TECH",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-26T10:32:00+07:00",
+      "judged": "2026-09-26T11:00:00+07:00",
+      "entry": 505.0,
+      "target": 700.0,
+      "kill": 354.0,
+      "price": 540.4119873046875,
+      "expected_pct": -0.5,
+      "p_up": 0.4,
+      "kelly_full_pct": -4.6,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 4.7,
+      "doc": "research_doc_thesis_t-global-msft-001"
+    },
+    {
+      "id": "T-GLOBAL-QCOM-001",
+      "book": "GLOBAL",
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "sector": "SEMIS",
+      "archetype": "momentum_continuation",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-26T10:31:00+07:00",
+      "judged": "2026-09-26T11:20:00+07:00",
+      "entry": 190.0,
+      "target": 240.0,
+      "kill": 140.0,
+      "price": 178.0500030517578,
+      "expected_pct": -4.2,
+      "p_up": 0.4,
+      "kelly_full_pct": -62.9,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -11.8,
+      "doc": "research_doc_thesis_t-global-qcom-001"
+    },
+    {
+      "id": "T-INDO-ERAA-001",
+      "book": "INDO",
+      "ticker": "ERAA.JK",
+      "name": "Erajaya Swasembada",
+      "sector": "CONSUMER",
+      "archetype": "neglected_midcap_discovery",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-26T10:31:00+07:00",
+      "judged": "2026-09-26T11:15:00+07:00",
+      "entry": 560.0,
+      "target": 960.0,
+      "kill": 420.0,
+      "price": 615.0,
+      "expected_pct": 26.7,
+      "p_up": 0.44,
+      "kelly_full_pct": 212.9,
+      "pm_pct": 5.0,
+      "has_model": false,
+      "kill_move_pct": null,
+      "doc": "research_doc_thesis_t-indo-eraa-001"
+    },
+    {
+      "id": "T-GLOBAL-TSM-001",
+      "book": "GLOBAL",
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor (ADR)",
+      "sector": "SEMIS",
+      "archetype": "momentum_continuation",
+      "status": "killed",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-12T11:11:12+07:00",
+      "judged": null,
+      "entry": 430.0,
+      "target": 494.0,
+      "kill": 300.0,
+      "price": 421.9049987792969,
+      "expected_pct": -7.3,
+      "p_up": 0.5,
+      "kelly_full_pct": -161.5,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 2.0,
+      "doc": "research_doc_thesis_t-global-tsm-001"
+    },
+    {
+      "id": "T-INDO-TINS-001",
+      "book": "INDO",
+      "ticker": "TINS.JK",
+      "name": "Timah",
+      "sector": "METALS",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.5,
+      "horizon": "long",
+      "drafted": "2026-09-12T10:41:20+07:00",
+      "judged": "2026-09-16T13:00:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 4170.0,
+      "expected_pct": 15.7,
+      "p_up": 0.42,
+      "kelly_full_pct": 64.7,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": null,
+      "doc": "research_doc_thesis_t-indo-tins-001"
+    },
+    {
+      "id": "T-GLOBAL-AAPL-001",
+      "book": "GLOBAL",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "TECH",
+      "archetype": "momentum_continuation",
+      "status": "killed",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-12T10:38:09+07:00",
+      "judged": null,
+      "entry": 332.27,
+      "target": 360.0,
+      "kill": 259.0,
+      "price": 342.5299987792969,
+      "expected_pct": -7.0,
+      "p_up": 0.5,
+      "kelly_full_pct": -388.8,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 3.4,
+      "doc": "research_doc_thesis_t-global-aapl-001"
+    },
+    {
+      "id": "T-INDO-MEDC-001",
+      "book": "INDO",
+      "ticker": "MEDC.JK",
+      "name": "Medco Energi Internasional",
+      "sector": "ENERGY",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.6,
+      "horizon": "long",
+      "drafted": "2026-09-12T10:37:24+07:00",
+      "judged": "2026-09-16T13:00:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 1515.0,
+      "expected_pct": 10.7,
+      "p_up": 0.42,
+      "kelly_full_pct": 40.5,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": null,
+      "doc": "research_doc_thesis_t-indo-medc-001"
+    },
+    {
+      "id": "T-GLOBAL-JPM-001",
+      "book": "GLOBAL",
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "FINANCIALS",
+      "archetype": "quality_bank_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-05T10:25:00+07:00",
+      "judged": "2026-09-05T11:30:00+07:00",
+      "entry": 358.64,
+      "target": 410.0,
+      "kill": 287.0,
+      "price": 334.7550048828125,
+      "expected_pct": -1.0,
+      "p_up": 0.45,
+      "kelly_full_pct": -34.7,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -5.3,
+      "doc": "research_doc_thesis_t-global-jpm-001"
+    },
+    {
+      "id": "T-GLOBAL-XOM-001",
+      "book": "GLOBAL",
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "ENERGY",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-05T10:23:19+07:00",
+      "judged": "2026-09-05T10:59:41+07:00",
+      "entry": 159.47,
+      "target": 216.0,
+      "kill": 88.0,
+      "price": 174.40499877929688,
+      "expected_pct": -6.7,
+      "p_up": 0.4,
+      "kelly_full_pct": -41.9,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 5.6,
+      "doc": "research_doc_thesis_t-global-xom-001"
+    },
+    {
+      "id": "T-INDO-KLBF-001",
+      "book": "INDO",
+      "ticker": "KLBF.JK",
+      "name": "Kalbe Farma",
+      "sector": "HEALTHCARE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-02T13:51:38+07:00",
+      "judged": "2026-09-02T14:07:12+07:00",
+      "entry": 760.0,
+      "target": 1140.0,
+      "kill": 532.0,
+      "price": 790.0,
+      "expected_pct": 7.7,
+      "p_up": 0.4,
+      "kelly_full_pct": 56.9,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 4.6,
+      "doc": "research_doc_thesis_t-indo-klbf-001"
+    },
+    {
+      "id": "T-GLOBAL-UNH-001",
+      "book": "GLOBAL",
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "HEALTHCARE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-09-02T13:43:33+07:00",
+      "judged": "2026-09-02T14:00:22+07:00",
+      "entry": 396.3,
+      "target": 479.0,
+      "kill": 280.0,
+      "price": 408.6449890136719,
+      "expected_pct": -3.5,
+      "p_up": 0.4,
+      "kelly_full_pct": -57.1,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 3.1,
+      "doc": "research_doc_thesis_t-global-unh-001"
+    },
+    {
+      "id": "T-GLOBAL-COST-001",
+      "book": "GLOBAL",
+      "ticker": "COST",
+      "name": "Costco Wholesale",
+      "sector": "CONSUMER",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-26T06:16:14+00:00",
+      "judged": "2026-09-02T13:29:11+07:00",
+      "entry": 960.0,
+      "target": 1070.0,
+      "kill": 480.0,
+      "price": 983.8300170898438,
+      "expected_pct": -27.8,
+      "p_up": 0.35,
+      "kelly_full_pct": -374.6,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 4.7,
+      "doc": "research_doc_thesis_t-global-cost-001"
+    },
+    {
+      "id": "T-GLOBAL-MUFG-001",
+      "book": "GLOBAL",
+      "ticker": "MUFG",
+      "name": "Mitsubishi UFJ Financial (ADR)",
+      "sector": "FINANCIALS",
+      "archetype": "quality_bank_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-22T10:20:00+07:00",
+      "judged": "2026-08-22T11:46:00+07:00",
+      "entry": 22.04,
+      "target": 29.9,
+      "kill": 15.43,
+      "price": 21.885000228881836,
+      "expected_pct": 2.9,
+      "p_up": 0.42,
+      "kelly_full_pct": 29.3,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -0.7,
+      "doc": "research_doc_thesis_t-global-mufg-001"
+    },
+    {
+      "id": "T-INDO-TOWR-001",
+      "book": "INDO",
+      "ticker": "TOWR.JK",
+      "name": "Sarana Menara Nusantara",
+      "sector": "INFRASTRUCTURE",
+      "archetype": "infra_tower_compounder",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-22T10:14:21+07:00",
+      "judged": "2026-08-22T10:52:00+07:00",
+      "entry": 390.0,
+      "target": 527.0,
+      "kill": 312.0,
+      "price": 448.0,
+      "expected_pct": 15.6,
+      "p_up": 0.48,
+      "kelly_full_pct": 324.6,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 0.0,
+      "doc": "research_doc_thesis_t-indo-towr-001"
+    },
+    {
+      "id": "T-INDO-TAPG-001",
+      "book": "INDO",
+      "ticker": "TAPG.JK",
+      "name": "Triputra Agro Persada",
+      "sector": "PLANTATION",
+      "archetype": "neglected_midcap_discovery",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-19T06:18:00Z",
+      "judged": "2026-08-19T06:35:42Z",
+      "entry": 1840.0,
+      "target": 2500.0,
+      "kill": 1060.0,
+      "price": 2020.0,
+      "expected_pct": -8.3,
+      "p_up": 0.3,
+      "kelly_full_pct": -53.6,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 10.4,
+      "doc": "research_doc_thesis_t-indo-tapg-001"
+    },
+    {
+      "id": "T-INDO-DSNG-002",
+      "book": "INDO",
+      "ticker": "DSNG.JK",
+      "name": "Dharma Satya Nusantara",
+      "sector": "PLANTATION",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-19T06:16:00Z",
+      "judged": "2026-08-19T06:33:02Z",
+      "entry": 1355.0,
+      "target": 1500.0,
+      "kill": 750.0,
+      "price": 1465.0,
+      "expected_pct": -20.8,
+      "p_up": 0.28,
+      "kelly_full_pct": -292.5,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 7.7,
+      "doc": "research_doc_thesis_t-indo-dsng-002"
+    },
+    {
+      "id": "T-GLOBAL-TXN-002",
+      "book": "GLOBAL",
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "sector": "SEMIS",
+      "archetype": "momentum_continuation",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-19T06:13:10+00:00",
+      "judged": "2026-08-19T06:36:25+00:00",
+      "entry": 272.0,
+      "target": 353.6,
+      "kill": 212.16,
+      "price": 278.7699890136719,
+      "expected_pct": -10.33,
+      "p_up": 0.2,
+      "kelly_full_pct": -159.4,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 2.4,
+      "doc": "research_doc_thesis_t-global-txn-002"
+    },
+    {
+      "id": "T-GLOBAL-AMD-001",
+      "book": "GLOBAL",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "SEMIS",
+      "archetype": "momentum_continuation",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-19T06:12:00+00:00",
+      "judged": "2026-08-19T06:35:54+00:00",
+      "entry": 484.0,
+      "target": 630.0,
+      "kill": 339.0,
+      "price": 561.3114013671875,
+      "expected_pct": -5.1,
+      "p_up": 0.42,
+      "kelly_full_pct": -56.7,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 15.9,
+      "doc": "research_doc_thesis_t-global-amd-001"
+    },
+    {
+      "id": "T-GLOBAL-SMFG-002",
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "sector": "FINANCIALS",
+      "archetype": "quality_bank_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-05T06:12:27+00:00",
+      "judged": "2026-08-05T10:00:00+00:00",
+      "entry": 25.88,
+      "target": 29.76,
+      "kill": 18.12,
+      "price": 24.75,
+      "expected_pct": -13.5,
+      "p_up": 0.25,
+      "kelly_full_pct": -268.2,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -0.4,
+      "doc": "research_doc_thesis_t-global-smfg-002"
+    },
+    {
+      "id": "T-INDO-ELSA-002",
+      "book": "INDO",
+      "ticker": "ELSA.JK",
+      "name": "Elnusa",
+      "sector": "ENERGY",
+      "archetype": "neglected_midcap_discovery",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-08-05T06:11:38Z",
+      "judged": "2026-08-05T09:00:00Z",
+      "entry": 685.0,
+      "target": 1062.0,
+      "kill": 377.0,
+      "price": 670.0,
+      "expected_pct": -12.25,
+      "p_up": 0.2,
+      "kelly_full_pct": -56.1,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -3.6,
+      "doc": "research_doc_thesis_t-indo-elsa-002"
+    },
+    {
+      "id": "T-GLOBAL-NOC-001",
+      "book": "GLOBAL",
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "INDUSTRIALS",
+      "archetype": "turnaround_restructuring",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:39:15Z",
+      "judged": "2026-07-22T20:30:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 498.4750061035156,
+      "expected_pct": -9.5,
+      "p_up": 0.32,
+      "kelly_full_pct": -48.0,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 1.7,
+      "doc": "research_doc_thesis_t-global-noc-001"
+    },
+    {
+      "id": "T-INDO-LSIP-001",
+      "book": "INDO",
+      "ticker": "LSIP.JK",
+      "name": "PP London Sumatra Indonesia",
+      "sector": "PLANTATION",
+      "archetype": "holdco_discount_narrowing",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:26:56Z",
+      "judged": "2026-07-22T20:30:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 1480.0,
+      "expected_pct": -5.5,
+      "p_up": 0.33,
+      "kelly_full_pct": -35.8,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 10.4,
+      "doc": "research_doc_thesis_t-indo-lsip-001"
+    },
+    {
+      "id": "T-GLOBAL-SONY-001",
+      "book": "GLOBAL",
+      "ticker": "SONY",
+      "name": "Sony Group (ADR)",
+      "sector": "TECH",
+      "archetype": "holdco_discount_narrowing",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:24:01Z",
+      "judged": "2026-07-22T14:00:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 24.75,
+      "expected_pct": -20.0,
+      "p_up": 0.2,
+      "kelly_full_pct": -333.3,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 17.7,
+      "doc": "research_doc_thesis_t-global-sony-001"
+    },
+    {
+      "id": "T-INDO-JSMR-001",
+      "book": "INDO",
+      "ticker": "JSMR.JK",
+      "name": "Jasa Marga",
+      "sector": "INFRASTRUCTURE",
+      "archetype": "infra_tower_compounder",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:21:12Z",
+      "judged": "2026-07-22T14:00:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 2480.0,
+      "expected_pct": -0.03,
+      "p_up": 0.25,
+      "kelly_full_pct": 1548.0,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -8.8,
+      "doc": "research_doc_thesis_t-indo-jsmr-001"
+    },
+    {
+      "id": "T-GLOBAL-0700HK-001",
+      "book": "GLOBAL",
+      "ticker": "0700.HK",
+      "name": "Tencent Holdings",
+      "sector": "TECH_CHINA",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:19:44Z",
+      "judged": "2026-07-22T14:00:00+07:00",
+      "entry": 468.0,
+      "target": 632.0,
+      "kill": 304.0,
+      "price": 417.79998779296875,
+      "expected_pct": -11.5,
+      "p_up": 0.35,
+      "kelly_full_pct": -94.0,
+      "pm_pct": 0.0,
+      "has_model": false,
+      "kill_move_pct": null,
+      "doc": "research_doc_thesis_t-global-0700hk-001"
+    },
+    {
+      "id": "T-INDO-ASII-001",
+      "book": "INDO",
+      "ticker": "ASII.JK",
+      "name": "Astra International",
+      "sector": "AUTOS_CONGLOMERATE",
+      "archetype": "holdco_discount_narrowing",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-18T03:19:37+00:00",
+      "judged": "2026-07-22T14:00:00+07:00",
+      "entry": null,
+      "target": null,
+      "kill": null,
+      "price": 4780.0,
+      "expected_pct": -13.6,
+      "p_up": 0.15,
+      "kelly_full_pct": -404.8,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -7.2,
+      "doc": "research_doc_thesis_t-indo-asii-001"
+    },
+    {
+      "id": "T-GLOBAL-NVO-001",
+      "book": "GLOBAL",
+      "ticker": "NVO",
+      "name": "Novo Nordisk (ADR)",
+      "sector": "HEALTHCARE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T15:10:00+00:00",
+      "judged": "2026-07-12T06:30:00+00:00",
+      "entry": 46.0,
+      "target": 69.0,
+      "kill": 16.15,
+      "price": 39.435001373291016,
+      "expected_pct": -33.5,
+      "p_up": 0.2,
+      "kelly_full_pct": -101.4,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -20.3,
+      "doc": "research_doc_thesis_t-global-nvo-001"
+    },
+    {
+      "id": "T-GLOBAL-SMFG-001",
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "sector": "FINANCIALS",
+      "archetype": "quality_bank_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T15:10:00+00:00",
+      "judged": "2026-07-12T04:40:15+00:00",
+      "entry": 25.74,
+      "target": 31.5,
+      "kill": 19.31,
+      "price": 24.75,
+      "expected_pct": -3.65,
+      "p_up": 0.35,
+      "kelly_full_pct": -73.5,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -3.8,
+      "doc": "research_doc_thesis_t-global-smfg-001"
+    },
+    {
+      "id": "T-INDO-ELSA-001",
+      "book": "INDO",
+      "ticker": "ELSA.JK",
+      "name": "Elnusa",
+      "sector": "ENERGY",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T15:05:00Z",
+      "judged": "2026-07-12T12:15:00Z",
+      "entry": 620.0,
+      "target": 885.0,
+      "kill": 403.0,
+      "price": 670.0,
+      "expected_pct": -3.8,
+      "p_up": 0.22,
+      "kelly_full_pct": -32.1,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 4.7,
+      "doc": "research_doc_thesis_t-indo-elsa-001"
+    },
+    {
+      "id": "T-GLOBAL-TXN-001",
+      "book": "GLOBAL",
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "sector": "SEMIS",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T14:40:00+00:00",
+      "judged": "2026-07-12T04:45:34+00:00",
+      "entry": 296.0,
+      "target": 390.72,
+      "kill": 93.5,
+      "price": 278.7699890136719,
+      "expected_pct": -48.18,
+      "p_up": 0.15,
+      "kelly_full_pct": -205.0,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -10.5,
+      "doc": "research_doc_thesis_t-global-txn-001"
+    },
+    {
+      "id": "T-INDO-PNBN-001",
+      "book": "INDO",
+      "ticker": "PNBN.JK",
+      "name": "Bank Pan Indonesia",
+      "sector": "FINANCIALS",
+      "archetype": "washout_rebound",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T14:37:59Z",
+      "judged": "2026-07-12T16:42:18Z",
+      "entry": 880.0,
+      "target": 1050.0,
+      "kill": 460.0,
+      "price": 820.0,
+      "expected_pct": -24.3,
+      "p_up": 0.3,
+      "kelly_full_pct": -242.2,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": -6.3,
+      "doc": "research_doc_thesis_t-indo-pnbn-001"
+    },
+    {
+      "id": "T-INDO-DSNG-001",
+      "book": "INDO",
+      "ticker": "DSNG.JK",
+      "name": "Dharma Satya Nusantara",
+      "sector": "PLANTATION",
+      "archetype": "neglected_midcap_discovery",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-07-11T14:37:09Z",
+      "judged": "2026-07-12T11:30:00Z",
+      "entry": 1170.0,
+      "target": 1650.0,
+      "kill": 655.0,
+      "price": 1465.0,
+      "expected_pct": -8.9,
+      "p_up": 0.33,
+      "kelly_full_pct": -50.4,
+      "pm_pct": null,
+      "has_model": false,
+      "kill_move_pct": 24.2,
+      "doc": "research_doc_thesis_t-indo-dsng-001"
+    }
+  ],
+  "ideas": [
+    {
+      "book": "GLOBAL",
+      "ticker": "SAP",
+      "name": "SAP SE (ADR)",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-09",
+      "doc": "research_doc_idea_global-sap"
+    },
+    {
+      "book": "INDO",
+      "ticker": "ERAA.JK",
+      "name": "Erajaya Swasembada",
+      "verdict": "PROMOTED",
+      "regime": "WITH",
+      "sleeve": "NEGLECTED",
+      "asof": "2026-10-08",
+      "doc": "research_doc_idea_indo-eraa"
+    },
+    {
+      "book": "INDO",
+      "ticker": "PTBA.JK",
+      "name": "Bukit Asam",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "NEGLECTED",
+      "asof": "2026-10-06",
+      "doc": "research_doc_idea_indo-ptba"
+    },
+    {
+      "book": "INDO",
+      "ticker": "TINS.JK",
+      "name": "Timah",
+      "verdict": "WATCH",
+      "regime": "WITH",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-06",
+      "doc": "research_doc_idea_indo-tins"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-05",
+      "doc": "research_doc_idea_global-abbv"
+    },
+    {
+      "book": "INDO",
+      "ticker": "DMAS.JK",
+      "name": "Puradelta Lestari",
+      "verdict": "DISCARD",
+      "regime": "AGAINST",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-05",
+      "doc": "research_doc_idea_indo-dmas"
+    },
+    {
+      "book": "INDO",
+      "ticker": "TAPG.JK",
+      "name": "Triputra Agro Persada",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "NEGLECTED",
+      "asof": "2026-10-05",
+      "doc": "research_doc_idea_indo-tapg"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "verdict": "WATCH",
+      "regime": "WITH",
+      "sleeve": "UNSCREENED",
+      "asof": "2026-09-28",
+      "doc": "research_doc_idea_global-lly"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "verdict": "WATCH",
+      "regime": "WITH",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-09-28",
+      "doc": "research_doc_idea_global-smfg"
+    },
+    {
+      "book": "INDO",
+      "ticker": "AMMN.JK",
+      "name": "Amman Mineral Internasional",
+      "verdict": "WATCH",
+      "regime": "NEUTRAL",
+      "sleeve": "UNSCREENED",
+      "asof": "2026-09-28",
+      "doc": "research_doc_idea_indo-ammn"
+    },
+    {
+      "book": "INDO",
+      "ticker": "ELSA.JK",
+      "name": "Elnusa",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "NEGLECTED",
+      "asof": "2026-09-28",
+      "doc": "research_doc_idea_indo-elsa"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-09-26",
+      "doc": "research_doc_idea_global-qcom"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "verdict": "DISCARD",
+      "regime": "WITH",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-09-16",
+      "doc": "research_doc_idea_global-bac"
+    },
+    {
+      "book": "GLOBAL",
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-09-15",
+      "doc": "research_doc_idea_global-ms"
+    },
+    {
+      "book": "INDO",
+      "ticker": "MEDC.JK",
+      "name": "Medco Energi Internasional",
+      "verdict": "PROMOTED",
+      "regime": "WITH",
+      "sleeve": "UNSCREENED",
+      "asof": "2026-09-12",
+      "doc": "research_doc_idea_indo-medc"
+    }
+  ],
+  "stocks": [
+    {
+      "ticker": "0700.HK",
+      "book": "GLOBAL",
+      "name": "Tencent Holdings",
+      "sector": "TECH_CHINA",
+      "theses": [
+        {
+          "id": "T-GLOBAL-0700HK-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-07-22T14:00:00+07:00",
+          "drafted": "2026-07-18T03:19:44Z",
+          "doc": "research_doc_thesis_t-global-0700hk-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 417.79998779296875,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "AAPL",
+      "book": "GLOBAL",
+      "name": "Apple",
+      "sector": "TECH",
+      "theses": [
+        {
+          "id": "T-GLOBAL-AAPL-001",
+          "verdict": "KILL",
+          "status": "killed",
+          "judged": null,
+          "drafted": "2026-09-12T10:38:09+07:00",
+          "doc": "research_doc_thesis_t-global-aapl-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 342.5299987792969,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-AAPL-001",
+        "ticker": "AAPL",
+        "book": "GLOBAL",
+        "killed": "2026-09-16",
+        "px_at_kill": 331.3399963378906,
+        "reason": "other",
+        "px_now": 342.5299987792969,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.4
+      }
+    },
+    {
+      "ticker": "ABBV",
+      "book": "GLOBAL",
+      "name": "AbbVie",
+      "sector": "HEALTHCARE",
+      "theses": [
+        {
+          "id": "T-GLOBAL-ABBV-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-10T12:22:00+07:00",
+          "drafted": "2026-10-10T10:16:39+07:00",
+          "doc": "research_doc_thesis_t-global-abbv-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-05",
+          "doc": "research_doc_idea_global-abbv"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-10",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 285.1300048828125,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-ABBV-001",
+        "ticker": "ABBV",
+        "book": "GLOBAL",
+        "killed": "2026-10-12",
+        "px_at_kill": 276.4700012207031,
+        "reason": "valuation",
+        "px_now": 285.1300048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.1
+      }
+    },
+    {
+      "ticker": "AMD",
+      "book": "GLOBAL",
+      "name": "Advanced Micro Devices",
+      "sector": "SEMIS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-AMD-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-19T06:35:54+00:00",
+          "drafted": "2026-08-19T06:12:00+00:00",
+          "doc": "research_doc_thesis_t-global-amd-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 561.3114013671875,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-AMD-001",
+        "ticker": "AMD",
+        "book": "GLOBAL",
+        "killed": "2026-08-19",
+        "px_at_kill": 484.3900146484375,
+        "reason": "other",
+        "px_now": 561.3114013671875,
+        "px_asof": "2026-10-15",
+        "move_pct": 15.9
+      }
+    },
+    {
+      "ticker": "BAC",
+      "book": "GLOBAL",
+      "name": "Bank of America",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-BAC-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-03T16:30:00+07:00",
+          "drafted": "2026-10-03T10:35:00+07:00",
+          "doc": "research_doc_thesis_t-global-bac-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-09-16",
+          "doc": "research_doc_idea_global-bac"
+        }
+      ],
+      "dossier": null,
+      "price": 51.81999969482422,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-BAC-001",
+        "ticker": "BAC",
+        "book": "GLOBAL",
+        "killed": "2026-10-03",
+        "px_at_kill": 53.75,
+        "reason": "other",
+        "px_now": 51.81999969482422,
+        "px_asof": "2026-10-15",
+        "move_pct": -3.6
+      }
+    },
+    {
+      "ticker": "COST",
+      "book": "GLOBAL",
+      "name": "Costco Wholesale",
+      "sector": "CONSUMER",
+      "theses": [
+        {
+          "id": "T-GLOBAL-COST-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-02T13:29:11+07:00",
+          "drafted": "2026-08-26T06:16:14+00:00",
+          "doc": "research_doc_thesis_t-global-cost-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 983.8300170898438,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-COST-001",
+        "ticker": "COST",
+        "book": "GLOBAL",
+        "killed": "2026-09-02",
+        "px_at_kill": 939.9600219726562,
+        "reason": "other",
+        "px_now": 983.8300170898438,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      }
+    },
+    {
+      "ticker": "JPM",
+      "book": "GLOBAL",
+      "name": "JPMorgan Chase",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-JPM-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-05T11:30:00+07:00",
+          "drafted": "2026-09-05T10:25:00+07:00",
+          "doc": "research_doc_thesis_t-global-jpm-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 334.7550048828125,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-JPM-001",
+        "ticker": "JPM",
+        "book": "GLOBAL",
+        "killed": "2026-09-05",
+        "px_at_kill": 353.55999755859375,
+        "reason": "other",
+        "px_now": 334.7550048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": -5.3
+      }
+    },
+    {
+      "ticker": "LLY",
+      "book": "GLOBAL",
+      "name": "Eli Lilly",
+      "sector": "HEALTHCARE",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "WATCH",
+          "asof": "2026-09-28",
+          "doc": "research_doc_idea_global-lly"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
+      "ticker": "MS",
+      "book": "GLOBAL",
+      "name": "Morgan Stanley",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-MS-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-03T14:10:00+07:00",
+          "drafted": "2026-10-03T10:30:00+07:00",
+          "doc": "research_doc_thesis_t-global-ms-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-09-15",
+          "doc": "research_doc_idea_global-ms"
+        }
+      ],
+      "dossier": null,
+      "price": 181.5050048828125,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-MS-001",
+        "ticker": "MS",
+        "book": "GLOBAL",
+        "killed": "2026-10-03",
+        "px_at_kill": 190.30999755859375,
+        "reason": "other",
+        "px_now": 181.5050048828125,
+        "px_asof": "2026-10-15",
+        "move_pct": -4.6
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "book": "GLOBAL",
+      "name": "Microsoft",
+      "sector": "TECH",
+      "theses": [
+        {
+          "id": "T-GLOBAL-MSFT-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-26T11:00:00+07:00",
+          "drafted": "2026-09-26T10:32:00+07:00",
+          "doc": "research_doc_thesis_t-global-msft-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 540.4119873046875,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-MSFT-001",
+        "ticker": "MSFT",
+        "book": "GLOBAL",
+        "killed": "2026-09-28",
+        "px_at_kill": 516.1699829101562,
+        "reason": "valuation",
+        "px_now": 540.4119873046875,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      }
+    },
+    {
+      "ticker": "MUFG",
+      "book": "GLOBAL",
+      "name": "Mitsubishi UFJ Financial (ADR)",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-MUFG-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-22T11:46:00+07:00",
+          "drafted": "2026-08-22T10:20:00+07:00",
+          "doc": "research_doc_thesis_t-global-mufg-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 21.885000228881836,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-MUFG-001",
+        "ticker": "MUFG",
+        "book": "GLOBAL",
+        "killed": "2026-08-24",
+        "px_at_kill": 22.040000915527344,
+        "reason": "other",
+        "px_now": 21.885000228881836,
+        "px_asof": "2026-10-15",
+        "move_pct": -0.7
+      }
+    },
+    {
+      "ticker": "NOC",
+      "book": "GLOBAL",
+      "name": "Northrop Grumman",
+      "sector": "INDUSTRIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-NOC-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-22T20:30:00+07:00",
+          "drafted": "2026-07-18T03:39:15Z",
+          "doc": "research_doc_thesis_t-global-noc-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 498.4750061035156,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-NOC-001",
+        "ticker": "NOC",
+        "book": "GLOBAL",
+        "killed": "2026-07-22",
+        "px_at_kill": 490.0,
+        "reason": "process",
+        "px_now": 498.4750061035156,
+        "px_asof": "2026-10-15",
+        "move_pct": 1.7
+      }
+    },
+    {
+      "ticker": "NVO",
+      "book": "GLOBAL",
+      "name": "Novo Nordisk (ADR)",
+      "sector": "HEALTHCARE",
+      "theses": [
+        {
+          "id": "T-GLOBAL-NVO-002",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-10-03T16:20:00+07:00",
+          "drafted": "2026-10-03T03:31:22+00:00",
+          "doc": "research_doc_thesis_t-global-nvo-002"
+        },
+        {
+          "id": "T-GLOBAL-NVO-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T06:30:00+00:00",
+          "drafted": "2026-07-11T15:10:00+00:00",
+          "doc": "research_doc_thesis_t-global-nvo-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": {
+        "asof": null,
+        "kind": "analyst",
+        "doc": null
+      },
+      "price": 39.435001373291016,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "PASS_REDUCED",
+      "kill": {
+        "thesis_id": "T-GLOBAL-NVO-001",
+        "ticker": "NVO",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 49.47999954223633,
+        "reason": "process",
+        "px_now": 39.435001373291016,
+        "px_asof": "2026-10-15",
+        "move_pct": -20.3
+      }
+    },
+    {
+      "ticker": "QCOM",
+      "book": "GLOBAL",
+      "name": "Qualcomm",
+      "sector": "SEMIS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-QCOM-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-26T11:20:00+07:00",
+          "drafted": "2026-09-26T10:31:00+07:00",
+          "doc": "research_doc_thesis_t-global-qcom-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-09-26",
+          "doc": "research_doc_idea_global-qcom"
+        }
+      ],
+      "dossier": null,
+      "price": 178.0500030517578,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-QCOM-001",
+        "ticker": "QCOM",
+        "book": "GLOBAL",
+        "killed": "2026-09-28",
+        "px_at_kill": 201.97000122070312,
+        "reason": "base_rate",
+        "px_now": 178.0500030517578,
+        "px_asof": "2026-10-15",
+        "move_pct": -11.8
+      }
+    },
+    {
+      "ticker": "SAP",
+      "book": "GLOBAL",
+      "name": "SAP SE (ADR)",
+      "sector": "TECH",
+      "theses": [
+        {
+          "id": "T-GLOBAL-SAP-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-10T12:20:00+07:00",
+          "drafted": "2026-10-10T10:16:22+07:00",
+          "doc": "research_doc_thesis_t-global-sap-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-09",
+          "doc": "research_doc_idea_global-sap"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-10",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 225.66000366210938,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-SAP-001",
+        "ticker": "SAP",
+        "book": "GLOBAL",
+        "killed": "2026-10-12",
+        "px_at_kill": 214.77999877929688,
+        "reason": "other",
+        "px_now": 225.66000366210938,
+        "px_asof": "2026-10-15",
+        "move_pct": 5.1
+      }
+    },
+    {
+      "ticker": "SMFG",
+      "book": "GLOBAL",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-SMFG-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-05T10:00:00+00:00",
+          "drafted": "2026-08-05T06:12:27+00:00",
+          "doc": "research_doc_thesis_t-global-smfg-002"
+        },
+        {
+          "id": "T-GLOBAL-SMFG-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T04:40:15+00:00",
+          "drafted": "2026-07-11T15:10:00+00:00",
+          "doc": "research_doc_thesis_t-global-smfg-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "WATCH",
+          "asof": "2026-09-28",
+          "doc": "research_doc_idea_global-smfg"
+        }
+      ],
+      "dossier": {
+        "asof": null,
+        "kind": "analyst",
+        "doc": null
+      },
+      "price": 24.75,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-SMFG-001",
+        "ticker": "SMFG",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 25.739999771118164,
+        "reason": "process",
+        "px_now": 24.75,
+        "px_asof": "2026-10-15",
+        "move_pct": -3.8
+      }
+    },
+    {
+      "ticker": "SONY",
+      "book": "GLOBAL",
+      "name": "Sony Group (ADR)",
+      "sector": "TECH",
+      "theses": [
+        {
+          "id": "T-GLOBAL-SONY-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-22T14:00:00+07:00",
+          "drafted": "2026-07-18T03:24:01Z",
+          "doc": "research_doc_thesis_t-global-sony-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 24.75,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-SONY-001",
+        "ticker": "SONY",
+        "book": "GLOBAL",
+        "killed": "2026-07-22",
+        "px_at_kill": 21.020000457763672,
+        "reason": "other",
+        "px_now": 24.75,
+        "px_asof": "2026-10-15",
+        "move_pct": 17.7
+      }
+    },
+    {
+      "ticker": "TSM",
+      "book": "GLOBAL",
+      "name": "Taiwan Semiconductor (ADR)",
+      "sector": "SEMIS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-TSM-001",
+          "verdict": "KILL",
+          "status": "killed",
+          "judged": null,
+          "drafted": "2026-09-12T11:11:12+07:00",
+          "doc": "research_doc_thesis_t-global-tsm-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 421.9049987792969,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-TSM-001",
+        "ticker": "TSM",
+        "book": "GLOBAL",
+        "killed": "2026-09-16",
+        "px_at_kill": 413.75,
+        "reason": "other",
+        "px_now": 421.9049987792969,
+        "px_asof": "2026-10-15",
+        "move_pct": 2.0
+      }
+    },
+    {
+      "ticker": "TXN",
+      "book": "GLOBAL",
+      "name": "Texas Instruments",
+      "sector": "SEMIS",
+      "theses": [
+        {
+          "id": "T-GLOBAL-TXN-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-19T06:36:25+00:00",
+          "drafted": "2026-08-19T06:13:10+00:00",
+          "doc": "research_doc_thesis_t-global-txn-002"
+        },
+        {
+          "id": "T-GLOBAL-TXN-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T04:45:34+00:00",
+          "drafted": "2026-07-11T14:40:00+00:00",
+          "doc": "research_doc_thesis_t-global-txn-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": {
+        "asof": null,
+        "kind": "analyst",
+        "doc": null
+      },
+      "price": 278.7699890136719,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-TXN-001",
+        "ticker": "TXN",
+        "book": "GLOBAL",
+        "killed": "2026-07-13",
+        "px_at_kill": 311.4599914550781,
+        "reason": "valuation",
+        "px_now": 278.7699890136719,
+        "px_asof": "2026-10-15",
+        "move_pct": -10.5
+      }
+    },
+    {
+      "ticker": "UNH",
+      "book": "GLOBAL",
+      "name": "UnitedHealth Group",
+      "sector": "HEALTHCARE",
+      "theses": [
+        {
+          "id": "T-GLOBAL-UNH-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-02T14:00:22+07:00",
+          "drafted": "2026-09-02T13:43:33+07:00",
+          "doc": "research_doc_thesis_t-global-unh-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 408.6449890136719,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-UNH-001",
+        "ticker": "UNH",
+        "book": "GLOBAL",
+        "killed": "2026-09-02",
+        "px_at_kill": 396.29998779296875,
+        "reason": "valuation",
+        "px_now": 408.6449890136719,
+        "px_asof": "2026-10-15",
+        "move_pct": 3.1
+      }
+    },
+    {
+      "ticker": "XOM",
+      "book": "GLOBAL",
+      "name": "ExxonMobil",
+      "sector": "ENERGY",
+      "theses": [
+        {
+          "id": "T-GLOBAL-XOM-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-05T10:59:41+07:00",
+          "drafted": "2026-09-05T10:23:19+07:00",
+          "doc": "research_doc_thesis_t-global-xom-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 174.40499877929688,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-GLOBAL-XOM-001",
+        "ticker": "XOM",
+        "book": "GLOBAL",
+        "killed": "2026-09-05",
+        "px_at_kill": 165.22999572753906,
+        "reason": "valuation",
+        "px_now": 174.40499877929688,
+        "px_asof": "2026-10-15",
+        "move_pct": 5.6
+      }
+    },
+    {
+      "ticker": "AMMN.JK",
+      "book": "INDO",
+      "name": "Amman Mineral Internasional",
+      "sector": "COPPER_GOLD",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "WATCH",
+          "asof": "2026-09-28",
+          "doc": "research_doc_idea_indo-ammn"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
+      "ticker": "ASII.JK",
+      "book": "INDO",
+      "name": "Astra International",
+      "sector": "AUTOS_CONGLOMERATE",
+      "theses": [
+        {
+          "id": "T-INDO-ASII-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-22T14:00:00+07:00",
+          "drafted": "2026-07-18T03:19:37+00:00",
+          "doc": "research_doc_thesis_t-indo-asii-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 4780.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-ASII-001",
+        "ticker": "ASII.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 5150.0,
+        "reason": "valuation",
+        "px_now": 4780.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -7.2
+      }
+    },
+    {
+      "ticker": "DMAS.JK",
+      "book": "INDO",
+      "name": "Puradelta Lestari",
+      "sector": "PROPERTY",
+      "theses": [
+        {
+          "id": "T-INDO-DMAS-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-10T12:24:00+07:00",
+          "drafted": "2026-10-10T10:16:23+07:00",
+          "doc": "research_doc_thesis_t-indo-dmas-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-05",
+          "doc": "research_doc_idea_indo-dmas"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-10",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 186.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-DMAS-001",
+        "ticker": "DMAS.JK",
+        "book": "INDO",
+        "killed": "2026-10-12",
+        "px_at_kill": 184.0,
+        "reason": "other",
+        "px_now": 186.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 1.1
+      }
+    },
+    {
+      "ticker": "DSNG.JK",
+      "book": "INDO",
+      "name": "Dharma Satya Nusantara",
+      "sector": "PLANTATION",
+      "theses": [
+        {
+          "id": "T-INDO-DSNG-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-19T06:33:02Z",
+          "drafted": "2026-08-19T06:16:00Z",
+          "doc": "research_doc_thesis_t-indo-dsng-002"
+        },
+        {
+          "id": "T-INDO-DSNG-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T11:30:00Z",
+          "drafted": "2026-07-11T14:37:09Z",
+          "doc": "research_doc_thesis_t-indo-dsng-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 1465.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-DSNG-001",
+        "ticker": "DSNG.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 1180.0,
+        "reason": "valuation",
+        "px_now": 1465.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 24.2
+      }
+    },
+    {
+      "ticker": "ELSA.JK",
+      "book": "INDO",
+      "name": "Elnusa",
+      "sector": "ENERGY",
+      "theses": [
+        {
+          "id": "T-INDO-ELSA-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-05T09:00:00Z",
+          "drafted": "2026-08-05T06:11:38Z",
+          "doc": "research_doc_thesis_t-indo-elsa-002"
+        },
+        {
+          "id": "T-INDO-ELSA-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T12:15:00Z",
+          "drafted": "2026-07-11T15:05:00Z",
+          "doc": "research_doc_thesis_t-indo-elsa-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-09-28",
+          "doc": "research_doc_idea_indo-elsa"
+        }
+      ],
+      "dossier": null,
+      "price": 670.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-ELSA-001",
+        "ticker": "ELSA.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 640.0,
+        "reason": "process",
+        "px_now": 670.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.7
+      }
+    },
+    {
+      "ticker": "ERAA.JK",
+      "book": "INDO",
+      "name": "Erajaya Swasembada",
+      "sector": "CONSUMER",
+      "theses": [
+        {
+          "id": "T-INDO-ERAA-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-09-26T11:15:00+07:00",
+          "drafted": "2026-09-26T10:31:00+07:00",
+          "doc": "research_doc_thesis_t-indo-eraa-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "PROMOTED",
+          "asof": "2026-10-08",
+          "doc": "research_doc_idea_indo-eraa"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-10",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 615.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "JSMR.JK",
+      "book": "INDO",
+      "name": "Jasa Marga",
+      "sector": "INFRASTRUCTURE",
+      "theses": [
+        {
+          "id": "T-INDO-JSMR-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-03T14:05:00+07:00",
+          "drafted": "2026-10-03T10:30:00+07:00",
+          "doc": "research_doc_thesis_t-indo-jsmr-002"
+        },
+        {
+          "id": "T-INDO-JSMR-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-22T14:00:00+07:00",
+          "drafted": "2026-07-18T03:21:12Z",
+          "doc": "research_doc_thesis_t-indo-jsmr-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 2480.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-JSMR-001",
+        "ticker": "JSMR.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 2720.0,
+        "reason": "other",
+        "px_now": 2480.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -8.8
+      }
+    },
+    {
+      "ticker": "KLBF.JK",
+      "book": "INDO",
+      "name": "Kalbe Farma",
+      "sector": "HEALTHCARE",
+      "theses": [
+        {
+          "id": "T-INDO-KLBF-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-09-02T14:07:12+07:00",
+          "drafted": "2026-09-02T13:51:38+07:00",
+          "doc": "research_doc_thesis_t-indo-klbf-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 790.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-KLBF-001",
+        "ticker": "KLBF.JK",
+        "book": "INDO",
+        "killed": "2026-09-02",
+        "px_at_kill": 755.0,
+        "reason": "fragile_estimates",
+        "px_now": 790.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 4.6
+      }
+    },
+    {
+      "ticker": "LSIP.JK",
+      "book": "INDO",
+      "name": "PP London Sumatra Indonesia",
+      "sector": "PLANTATION",
+      "theses": [
+        {
+          "id": "T-INDO-LSIP-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-22T20:30:00+07:00",
+          "drafted": "2026-07-18T03:26:56Z",
+          "doc": "research_doc_thesis_t-indo-lsip-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 1480.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-LSIP-001",
+        "ticker": "LSIP.JK",
+        "book": "INDO",
+        "killed": "2026-07-22",
+        "px_at_kill": 1340.0,
+        "reason": "process",
+        "px_now": 1480.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 10.4
+      }
+    },
+    {
+      "ticker": "MEDC.JK",
+      "book": "INDO",
+      "name": "Medco Energi Internasional",
+      "sector": "ENERGY",
+      "theses": [
+        {
+          "id": "T-INDO-MEDC-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-09-16T13:00:00+07:00",
+          "drafted": "2026-09-12T10:37:24+07:00",
+          "doc": "research_doc_thesis_t-indo-medc-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "PROMOTED",
+          "asof": "2026-09-12",
+          "doc": "research_doc_idea_indo-medc"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-09-26",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 1515.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "PNBN.JK",
+      "book": "INDO",
+      "name": "Bank Pan Indonesia",
+      "sector": "FINANCIALS",
+      "theses": [
+        {
+          "id": "T-INDO-PNBN-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-07-12T16:42:18Z",
+          "drafted": "2026-07-11T14:37:59Z",
+          "doc": "research_doc_thesis_t-indo-pnbn-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 820.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-PNBN-001",
+        "ticker": "PNBN.JK",
+        "book": "INDO",
+        "killed": "2026-07-13",
+        "px_at_kill": 875.0,
+        "reason": "other",
+        "px_now": 820.0,
+        "px_asof": "2026-10-15",
+        "move_pct": -6.3
+      }
+    },
+    {
+      "ticker": "PTBA.JK",
+      "book": "INDO",
+      "name": "Bukit Asam",
+      "sector": "COAL",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-06",
+          "doc": "research_doc_idea_indo-ptba"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
+      "ticker": "TAPG.JK",
+      "book": "INDO",
+      "name": "Triputra Agro Persada",
+      "sector": "PLANTATION",
+      "theses": [
+        {
+          "id": "T-INDO-TAPG-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-10T12:26:00+07:00",
+          "drafted": "2026-10-10T10:15:51+07:00",
+          "doc": "research_doc_thesis_t-indo-tapg-002"
+        },
+        {
+          "id": "T-INDO-TAPG-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-19T06:35:42Z",
+          "drafted": "2026-08-19T06:18:00Z",
+          "doc": "research_doc_thesis_t-indo-tapg-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-05",
+          "doc": "research_doc_idea_indo-tapg"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-10",
+        "kind": "full",
+        "doc": null
+      },
+      "price": 2020.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-TAPG-001",
+        "ticker": "TAPG.JK",
+        "book": "INDO",
+        "killed": "2026-08-19",
+        "px_at_kill": 1830.0,
+        "reason": "valuation",
+        "px_now": 2020.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 10.4
+      }
+    },
+    {
+      "ticker": "TINS.JK",
+      "book": "INDO",
+      "name": "Timah",
+      "sector": "METALS",
+      "theses": [
+        {
+          "id": "T-INDO-TINS-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-09-16T13:00:00+07:00",
+          "drafted": "2026-09-12T10:41:20+07:00",
+          "doc": "research_doc_thesis_t-indo-tins-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "WATCH",
+          "asof": "2026-10-06",
+          "doc": "research_doc_idea_indo-tins"
+        }
+      ],
+      "dossier": null,
+      "price": 4170.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "TOWR.JK",
+      "book": "INDO",
+      "name": "Sarana Menara Nusantara",
+      "sector": "INFRASTRUCTURE",
+      "theses": [
+        {
+          "id": "T-INDO-TOWR-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-08-22T10:52:00+07:00",
+          "drafted": "2026-08-22T10:14:21+07:00",
+          "doc": "research_doc_thesis_t-indo-towr-001"
+        }
+      ],
+      "ideas": [],
+      "dossier": null,
+      "price": 448.0,
+      "price_asof": "2026-10-15",
+      "latest_verdict": "KILL",
+      "kill": {
+        "thesis_id": "T-INDO-TOWR-001",
+        "ticker": "TOWR.JK",
+        "book": "INDO",
+        "killed": "2026-08-24",
+        "px_at_kill": 448.0,
+        "reason": "valuation",
+        "px_now": 448.0,
+        "px_asof": "2026-10-15",
+        "move_pct": 0.0
+      }
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "asof": "2026-10-10",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "DMAS.JK",
+      "name": "Puradelta Lestari",
+      "asof": "2026-10-10",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "DSNG",
+      "name": "DSNG",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    },
+    {
+      "ticker": "ELSA",
+      "name": "ELSA",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    },
+    {
+      "ticker": "ERAA.JK",
+      "name": "Erajaya Swasembada",
+      "asof": "2026-10-10",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "MEDC.JK",
+      "name": "Medco Energi Internasional",
+      "asof": "2026-09-26",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "NVO",
+      "name": "Novo Nordisk (ADR)",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    },
+    {
+      "ticker": "PNBN",
+      "name": "PNBN",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    },
+    {
+      "ticker": "SAP",
+      "name": "SAP SE (ADR)",
+      "asof": "2026-10-10",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    },
+    {
+      "ticker": "TAPG.JK",
+      "name": "Triputra Agro Persada",
+      "asof": "2026-10-10",
+      "kind": "full",
+      "source": null
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "asof": null,
+      "kind": "analyst",
+      "source": null
+    }
+  ],
+  "ic": [
+    {
+      "month": "2026-10",
+      "title": "Investment committee memo \u2014 2026-10",
+      "doc": "research_doc_ic_2026-10"
+    },
+    {
+      "month": "2026-09",
+      "title": "Investment committee memo \u2014 2026-09",
+      "doc": "research_doc_ic_2026-09"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "LESSON-0003",
+      "title": "LESSON 0003",
+      "doc": "research_doc_lesson_lesson-0003"
+    },
+    {
+      "id": "LESSON-0002",
+      "title": "LESSON 0002",
+      "doc": "research_doc_lesson_lesson-0002"
+    },
+    {
+      "id": "LESSON-0001",
+      "title": "LESSON 0001",
+      "doc": "research_doc_lesson_lesson-0001"
+    }
+  ],
+  "postmortems": [],
+  "digests": [],
+  "daily": [
+    {
+      "date": "2026-10-15",
+      "text": "**2026-10-15 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -1.50%) | No trades. Both books (GLOBAL, INDO) remain fully in cash with no open positions, so returns were flat while the IDX benchmark fell 1.50%. The three judged theses (ERAA, NVO, 0700HK) stay undeployed; ERAA remains gated on a PM re-size within the 5% NAV cap. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-14",
+      "text": "**2026-10-14 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk +0.39%) | No trades. GLOBAL and INDO both held fully in cash with no open positions, leaving returns flat while the IDX benchmark added 0.39%. The ERAA entry remains unticketed pending a position re-size within the 5% NAV limit, so the three judged theses (ERAA, NVO, 0700HK) stay undeployed. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "**2026-10-13 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.18%) | No trades. GLOBAL and INDO both held fully in cash with no open positions, leaving returns flat while the IDX benchmark eased 0.18%. The research desk's full candidate sweep again surfaced no name clearing the fund's entry bar, and its three live theses (ERAA, NVO, 0700HK) remain short of their entry conditions, holding deployment at zero. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "**2026-10-12 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -2.71%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark fell 2.71% on the day. The fund's only staged ticket, the ERAA buy, failed the position-sizing limit, returning the three judged theses (ERAA, NVO, 0700HK) to unticketed and holding deployment at zero. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "**2026-10-09 16:00 WIB** | North +0.00% (bmk +0.00%) | South +0.00% (bmk +1.05%) | No trades. Both GLOBAL and INDO remained fully in cash with no open positions, so returns were flat while the IDX benchmark gained 1.05%. No thesis-relevant development today; the three judged-PASS theses (ERAA, NVO, 0700HK) stay unticketed, holding deployment at zero. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-08",
+      "text": "**2026-10-08 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -1.74%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark fell 1.74% on the day. The fund's only judged-PASS thesis (ERAA) stays blocked behind an uncured research-dossier gate, holding deployment at zero. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-07",
+      "text": "**2026-10-07 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.73%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat. The fund's only approved thesis (ERAA) stayed blocked behind a pending research-dossier gate, keeping deployment at zero. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "**2026-10-06 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk 1.45%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark gained 1.45% on the day. No live theses and no new thesis-relevant developments; the club holds its defensive all-cash posture across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "**2026-10-05 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk 1.16%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark gained 1.16% on the day. No live theses and no new thesis-relevant developments; the club holds its defensive all-cash posture across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-02",
+      "text": "**2026-10-02 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk 0.58%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark gained 0.58% on the day. No new thesis developments; the club stays in a defensive all-cash posture across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-10-01",
+      "text": "**2026-10-01 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.79%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark slipped 0.79% on the day. No thesis developments altered the defensive posture; the club stays cash-heavy across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-30",
+      "text": "**2026-09-30 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.51%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark slipped 0.51% on the day. No thesis developments altered the defensive posture; the club stays cash-heavy across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-29",
+      "text": "**2026-09-29 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.25%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark slipped 0.25% on the day. No thesis developments altered the defensive posture; the club stays cash-heavy across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "**2026-09-28 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -1.39%) | No trades. GLOBAL and INDO both remained fully in cash with no open positions, leaving returns flat while the IDX benchmark fell roughly 1.4% on the day. No thesis developments altered the defensive posture; the club stays cash-heavy across both books. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-25",
+      "text": "**2026-09-25 16:00 WIB** | North +0.00% (bmk 0.19%) | South +0.00% (bmk -2.97%) | No trades. GLOBAL and INDO both held fully in cash with no open positions, holding returns flat while the IDX benchmark sold off roughly 3% on the day. No thesis developments altered the defensive posture; watch remains domestic and cash-heavy. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-17",
+      "text": "**2026-09-17 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk 0.42%) | No trades. GLOBAL and INDO both closed fully in cash with no open positions, so returns held flat against an up session for the IDX benchmark. Watch remains fully domestic and defensive; no thesis developments altered the stance today. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "# Daily Report \u2014 2026-09-16 16:00 WIB\n\n**2026-09-16 16:00 WIB** | GLOBAL (North) +0.0% (bmk 0.0%, NAV $1,007,187) | INDO (South) +0.0% (bmk -0.26%, NAV Rp 15,163,548,001) | No trades. Both books remain in cash as market timing conditions and flow regime uncertainty (INDO foreign-flow data stale) did not clear entry thresholds. No thesis-relevant IDX/SEC disclosures were flagged today. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "**2026-09-15 16:00 WIB** | North (GLOBAL) 0.00% (bmk 0.00%) | South (INDO) 0.00% (bmk -0.73%) | No trades. Both books sit fully in cash with no open positions, so South's return held flat while its benchmark shed 0.73%. The stale JKSE dividend-yield proxy remains the only open QC flag before any new IDX positioning. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "**2026-09-14 16:00 WIB** | North (GLOBAL) 0.00% (bmk 0.00%) | South (INDO) 0.00% (bmk 0.10%) | No trades. Both books sit fully in cash with no open positions, so returns hold flat against benchmarks. The stale JKSE dividend-yield proxy (asof 2026-06-30) is the only open QC flag and warrants review before any new IDX positioning. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-04",
+      "text": "**2026-09-04 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk -0.41%) | No trades. Both books held full cash with no open positions; no qualifying signals crossed the desk today. IDX benchmark slipped -0.41% on the day; no other thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-03",
+      "text": "**2026-09-03 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk +1.18%) | No trades. Both books hold full cash with no open positions; a quiet session with no qualifying trade signals. IDX benchmark gained +1.18% on the day while the South book remains in cash awaiting entries; no other thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-02",
+      "text": "**2026-09-02 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk -0.14%) | No trades. Both books hold full cash with no open positions; a quiet session with no qualifying trade signals. IDX benchmark slipped -0.14% on the day; no other thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-09-01",
+      "text": "**2026-09-01 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk +1.20%) | No trades. Both books hold full cash with no open positions; a quiet session with no qualifying trade signals. IDX benchmark rose +1.20% on the day while the South book awaits entries; no other thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-31",
+      "text": "**2026-08-31 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk -0.11%) | No trades. Both books hold full cash with no open positions; a flat session with no qualifying trade signals. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-28",
+      "text": "**2026-08-28 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk +0.10%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-27",
+      "text": "**2026-08-27 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk +1.72%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-26",
+      "text": "**2026-08-26 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk -1.35%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-24",
+      "text": "**2026-08-24 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk -0.48%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-21",
+      "text": "**2026-08-21 16:00 WIB** | North GLOBAL +0.00% (bmk +0.00%) | South INDO +0.00% (bmk +0.36%) | No trades. Both books remain 100% cash with no open positions; no trading decisions were warranted today. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-20",
+      "text": "**2026-08-20 16:00 WIB** | North GLOBAL +0.00% (bmk +0.00%) | South INDO +0.00% (bmk +1.63%) | No trades. Both books remain 100% cash with no open positions; no trading decisions were warranted today. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-19",
+      "text": "**2026-08-19 16:00 WIB** | North GLOBAL +0.00% (bmk +0.00%) | South INDO +0.00% (bmk -0.63%) | No trades. Both books remain 100% cash with no open positions; no trading decisions were warranted today. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-18",
+      "text": "**2026-08-18 16:00 WIB** | North GLOBAL +0.00% (bmk +0.00%) | South INDO +0.00% (bmk +0.96%) | No trades. Both books remain 100% cash with no open positions; no trading decisions were warranted today. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-17",
+      "text": "**2026-08-17 16:00 WIB** | North GLOBAL +0.00% (bmk +0.85%) | South INDO +0.00% (bmk +0.89%) | No trades. Both books remain 100% cash with no open positions; no trading decisions were warranted today. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-08-05",
+      "text": "**2026-08-05 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO +0.00% (bmk +0.58%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-23",
+      "text": "**2026-07-23 16:00 WIB** | North GLOBAL +0.00% (bmk 0.00%) | South INDO +0.00% (bmk -0.30%) | No trades. Both books remain fully in cash with no active positions. A pending kill-ledger entry for NOC awaits OPS resolution. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-22",
+      "text": "**2026-07-22 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk -0.16%) | No trades. GLOBAL and INDO hold cash only. IDEATION added six ADVANCE cards across consumer, energy, Japan financials, towers, pharma, and plantations for WEEKLY_DEEP triage. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-21",
+      "text": "**2026-07-21 16:00 WIB** | North +0.00% (bmk 0.00%) | South +0.00% (bmk 1.46%) | No trades. GLOBAL and INDO hold cash only; IHSG +1.46% unmatched. IDEATION produced six new ADVANCE cards across nickel, oil-gas, copper-gold, banks, defense, and pharma for WEEKLY_DEEP triage. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-17",
+      "text": "**2026-07-17 16:00 WIB** | GLOBAL 0.00% (bmk 0.00%) | INDO 0.00% (bmk 2.28%) | No trades. GLOBAL and INDO books flat; both remain at cash pending thesis development. IDX moved higher on day with no active positions. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-16",
+      "text": "**2026-07-16 16:00 WIB** | North 0.00% (bmk 0.00%) | South 0.00% (bmk 0.95%) | No trades. GLOBAL and INDO held full cash; no signals met entry threshold. IHSG +0.95% unmatched by positioning. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-15",
+      "text": "**2026-07-15 16:00 WIB** | North +0.00% (bmk -0.57%) | South +0.00% (bmk +0.19%) | No trades. GLOBAL held cash, INDO held cash; no tactical opportunity. No thesis-relevant developments. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-14",
+      "text": "**2026-07-14 16:00 WIB** | North 0.00% (bmk 0.00%) | South 0.00% (bmk 1.94%) | No trades. GLOBAL and INDO both flat. IHSG +1.94%; no catalysts. \u2014 Ledger, 6S"
+    },
+    {
+      "date": "2026-07-13",
+      "text": "**2026-07-13 16:00 WIB** | North +0.00% (bmk +0.00%) | South +0.00% (bmk +1.70%) | No trades. GLOBAL and INDO remain fully invested in cash pending judge verdicts on six deep-dive theses. INDO underperformed benchmark by 170bp as market rallied on positive risk sentiment. \u2014 Ledger, 6S"
+    }
+  ]
+}

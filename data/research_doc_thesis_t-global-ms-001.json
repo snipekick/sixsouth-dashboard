@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-MS-001",
+  "title": "Morgan Stanley (MS)",
+  "meta": {
+    "id": "T-GLOBAL-MS-001",
+    "book": "GLOBAL",
+    "ticker": "MS",
+    "name": "Morgan Stanley",
+    "sector": "FINANCIALS",
+    "factors": [
+      "us_rates",
+      "em_flows"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "short",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-10-15",
+    "estimates_committed_at": "2026-10-03T10:29:00+07:00",
+    "drafted": "2026-10-03T10:30:00+07:00",
+    "judged": "2026-10-03T14:10:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 190.31,
+    "target": 212.0,
+    "kill": 152.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "9mo run-rate target: TBVPS ~$57 (observed +$1.60/qtr retained accretion, Q2-26 8-K; common equity +8.3% y/y) x ~3.7x = $212 on sustained ROTCE ~24%. Mid-cycle warranted P/TBV 3.15x -> ~$180, so the win is small by construction. Kill $152 (~2.6x TBV): premium rejected + ROTCE broken.",
+    "price": 181.5050048828125,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 11.4,
+    "p_down": 0.5,
+    "down_pct": -20.1,
+    "net_div_yield_pct_pa": 2.1,
+    "fee_tax_drag_pct": 0.15,
+    "expected_pct": -2.9,
+    "horizon_years": 0.75,
+    "carry_pct": 1.43,
+    "kelly_full_pct": -122.1
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library archetypes.momentum_continuation (rate 0.50, up +30%, down -22%, 0.75y, n=200). p_up kept AT 0.50 per SIZING card (move payoff, not probability); deviations: up_pct 11.4 vs 30 (valuation at COE 10.24% delivers no +30% leg \u2014 premium already paid), down -20.1 vs -22 (kill at falsification).",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 152.0,
+      "action": "exit_full",
+      "note": "~2.6x TBVPS ~$58 \u2014 market rejecting the quality premium at high-ERP COE while ROTCE rolls over. Thesis-invalidating, NOT a stop."
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 20.0,
+      "action": "review",
+      "name": "quarterly_ROTCE",
+      "source": "MS quarterly earnings release (8-K, non-GAAP ROTCE as reported)",
+      "note": "two consecutive quarters <20% falsifies the re-acceleration (FY25 delivered 21.6% on the same franchise)"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 5.5,
+      "action": "review",
+      "name": "ust10y",
+      "source": "FRED DGS10",
+      "note": "sustained >5.5% => COE 10.75%, warranted P/TBV ~2.9x vs 3.58x traded \u2014 valuations-down leg live"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-11-15",
+      "action": "review",
+      "condition": "Q3-26 earnings (cat. 10-15) reconcile to ROTCE kill and catalyst path; FOMC 10-28/29 outcome"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-03T10:30:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-03T12:10:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-03T14:00:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-03T14:10:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-MS-001",
+    "ticker": "MS",
+    "book": "GLOBAL",
+    "killed": "2026-10-03",
+    "px_at_kill": 190.30999755859375,
+    "reason": "other",
+    "px_now": 181.5050048828125,
+    "px_asof": "2026-10-15",
+    "move_pct": -4.6
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-10-03T10:29+07, price-free",
+      "markdown": "**Sources (primary):** Q2-26 8-K/press release + financial supplement (SEC 2026-07-15); Q4-25 8-K (SEC 2026-01-15); SEC XBRL company facts (NetIncomeLoss, StockholdersEquity, EPS, shares); the macro regime memo 2026-10-03.\n\n**FY25 actual (Q4-25 8-K):** NI $16,861M, EPS $10.21, net rev $70,645M, ROTCE 21.6%, ROE 16.6%; IS $33,080M / WM $31,754M / IM $6,525M; provision $349M; NII $10,046M; TBVPS $50.00; buybacks $4.6B.\n\n**H1-26 actual (Q2-26 8-K):** NI $11,148M, EPS $6.90, ROTCE 26.8% YTD; Q2 net rev $21,348M: IS $11,040M (+44% y/y; Equity +69%, IB +58%, FICC +13%), WM $8,856M (+14%, NII $2,254M +18%), IM $1,646M; provision $98M; firm NII $2,780M; comp 38%; CET1 std 14.8%; TBVPS $53.18; common equity $106,579M; 1,571.9M shares; div $1.15/qtr.\n\n**FY26E:** H2 tracks H1 with seasonal Q4 fade (Q4-25 $4,397M) \u2192 NI ~$21.5B, EPS ~$13.7. LOAD-BEARING #1: H1-26 actual + Q4 seasonality (Q2-26 8-K).\n**FY27E (normalized):** IS \u221215% (~$37B), WM +8% (~$34.5B), IM +7% \u2192 net rev ~$78B; comp 41.5%, non-comp 26%, provision $1,300M (LOAD-BEARING #2: Q2-26 $98M vs FY25 $349M is below-cycle \u2014 normalize to FY25 run-rate, costs ~0.3-0.5pp ROE), tax 24% \u2192 NI ~$18.3B, EPS ~$11.9. **Sustainable ROE 17.5%, ROTCE 21.5%** (FY25's own delivered level; Q4-25 8-K).\n\n**Mix-implied ROE through a flat curve (card Q1):** WM = 41% of H1-26 revenue at 29% segment ROE (Q2-26 supplement) \u2014 the stable leg; flat curve keeps WM NII supported (deposit beta <1, WM NII +18% y/y as policy rates rose). IS = 51% at a 26% boom ROE normalizes to ~14-16%. Weighted \u2248 19% pre-haircut \u2192 **~17.5% sustainable**.\n\n**Earnings-quality gate:** provision/Q2 $98M below-cycle (optics-class \u2014 haircut applied, LOAD-BEARING #2). No manipulation-class flag; no related-party/VIE/structure flags (US domestic filer); accruals N/A (bank \u2014 provisioning trend used)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "Market narrative: MS's +43% run is a peak-cycle capital-markets boom \u2014 H1-26 trading records at ~3.6x tangible book into a hiking Fed \u2014 and the September de-rating as UST10y spiked to 5.24% is the start of the give-back."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the mix is boom-cyclical (IS 51% of revenue), the 3.58x-TBV multiple has no cushion, and every GLOBAL bank this desk touched (SMFG-001/002, MUFG-001, JPM-001) died exactly this way \u2014 4-for-4 KILL.\n**Why wrong:** the pullback is RATES-driven, not fundamental \u2014 H1-26 ROTCE 26.8% (+5pp over FY25) came with WM ROE 29% and WM NII +18%; the $8.08T client-asset wealth franchise is compounding and now 41% of revenue, growing the stable share. But it is not mis-modeling the mechanism: at COE 10.24% (UST10y 5.24%, FRED 10-01, + USD ERP 5.0% mid-band), warranted P/BV (17.5\u22125)/(10.24\u22125) = 2.39x vs 2.81x traded; warranted P/TBV 3.15x vs 3.58x (run-rate ROTCE 24% \u2192 3.6x \u2248 fair). No re-rating gap \u2014 ~14-18% premium already paid (card Q2). A three-headline reader reaches this same view: no variant edge.\n**What proves us wrong:** ROTCE \u226524% two more quarters with UST10y \u22645.0% \u2014 then the target is under-set and the run continues (rates, not earnings, are the whole question)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "each cites a source line",
+      "markdown": "1. H1-26 ROTCE 26.8% is trading-leg-flattered: IS +44% y/y vs WM +14% (Q2-26 8-K); FY25 delivered 21.6% on the same franchise (Q4-25 8-K) \u2014 ~5pp is cycle.\n2. UST10y 5.24% (FRED DGS10 10-01), +47bp in one month; FOMC hiked 09-15/16, next 10-28/29 live (macro_regime fed_path marker): at COE 10.75% warranted P/TBV \u2192 ~2.9x vs 3.58x traded. MS is net-long rates/equity risk (trading inventory + fees marked to $8.08T assets); September's \u22128% already demonstrated the transmission (card Q3).\n3. Provision $98M/Q2 vs $349M FY25 (Q2-26/Q4-25 8-Ks) \u2014 levels this thin are below-cycle; normalization costs ~0.3-0.5pp ROE the valuation has not paid for.\n4. WM fees are marked to client assets (Q2-26 8-K): a 10% drawdown (CAUTIOUS regime live, DXY at 52w high) cuts the stable leg ~$0.8-1.0B/yr precisely as IS normalizes.\n5. Q2-26 buybacks $1.5B at ~3.6x TBV per-share-BV dilutive (JPM-001 Revision #1): the ~2%/yr shrink is value-negative at this premium."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is July-2027, the position is down ~20%: the Oct-28/29 FOMC hiked or guided hawkish, UST10y cleared 5.5%, COE 10.75% drove warranted P/TBV to ~2.9x, and the 3.58x entry de-rated toward 3.0x as equity trading reverted toward FY25 run-rate \u2014 the mix-reversion my own numbers conceded (26.8%\u219221.6%). The momentum-crash failure (sharp reversal, no valuation cushion) materialized; the 2.1% net dividend cushioned nothing."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "13F crowding: UNAVAILABLE (no dossier/feed) \u2014 mega-cap institutional favorite, crowded-quality unwind is exit-door risk. Insider: UNAVAILABLE. Index/passive: core S&P/Dow constituent, no add/delete \u2014 NEUTRAL. Short interest: UNAVAILABLE."
+    },
+    {
+      "heading": "Edge taxonomy, symmetry & the base-rate prior",
+      "detail": null,
+      "markdown": "No (a)-(d) edge survives: mechanisms are correctly priced, all dots public, 9mo kills time-arbitrage, no structural flow. Symmetry: up/|down| = 11.4/20.1 = 0.57 vs momentum library 30/22 = 1.36 \u2014 named **(c) genuinely bad trade at 9mo**: the momentum up-leg is undeliverable at COE 10.24% (premium already paid; even the run-rate case is only +11%). Own-Kelly = 0.5/20.1 \u2212 0.5/11.4 = **\u22120.019**; library-Kelly +0.006 (30/22 @ 0.50). The entire gap: up_pct 11.4 vs 30 (no re-rating gap) and down \u221220.1 vs \u221222 (kill at falsification). expected = 0.5\u00d711.4 + 0.5\u00d7(\u221220.1) + 2.1\u00d70.75 \u2212 0.15 = **\u22122.9%/9mo** (fee_tax 0.5\u21920.15, Revision Pt 5) vs ~3.9%/yr cash and the ~4pp/yr barrier \u2014 negative excess.\n**Base-rate confrontation (card-mandated):** GLOBAL financials 4-for-4 KILL. What changes for MS: nothing favorable \u2014 vs JPM-001 it runs higher ROTCE (26.6% vs 21%) but trades richer TBV (3.58x vs 3.16x), faces higher COE (10.24% vs 9.3%; UST10y 5.24% vs 4.77%), a more cyclical mix, thinner NII ballast ($2.8B vs ~$25B/qtr), and a 9mo horizon that cannot smooth cycle. **Prior ACCEPTED. Verdict recommendation: KILL \u2014 negative-EV, sub-hurdle, no edge; recycle and journal.**"
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict)\n\n0. **Fact-check.** (1) 13.7 EPS \u00d7 1,571.9M sh \u2248 $21.5B NI, matches H1-26 $11,148M + Q4-25 $4,397M fade; (2) ROTCE 21.6%/26.8% are 8-K cites, no dossier \u2014 UNVERIFIED externally; (3) COE 10.24 = DGS10 5.24% (10-01) + ERP 5.0 mid-band (VAL_BANKS \u00a72); warranted (21.5\u22125)/(10.24\u22125) = 3.15x; traded 190.31/53.18 = 3.58x. EV and both Kellys re-derive exactly. No fabrication; #2 unverified.\n1. **Widest bar: FY27 IS normalization.** One assumption: IS \u221225% not \u221215% \u2192 ROTCE ~19.5%, warranted (19.5\u22125)/5.24 = 2.77x; entry 3.58x ~29% above warranted, down-leg extends through kill. The KILL survives its own stress test.\n2. **No-edge concession correct, decisive:** registry notes verbatim \u2014 \"a momentum-only thesis with no variant perception is an auto-kill.\" Rates-vs-fundamentals already priced (Sept \u22128% on the 5.24% print); fair-value identity (3.58x vs 3.15\u20133.6x warranted) leaves no gap.\n3. **Catalyst two weeks out.** Other side: wealth-compounder holders, right if FOMC 10-28/29 pauses and UST10y \u22645.0%. H2-tracks-H1 assumes no Q3 fade; a Q4-25-style print ($4,397M vs H1 avg $5,574M) \u2192 FY26 EPS ~13.0, tripping the ROTCE KPI at the catalyst itself.\n4. **Base rate:** key correct; p_up AT 0.50 per SIZING card \u2014 payoff-only deviation, no probability double-count. 4-for-4 confirmed (kill_ledger: SMFG-001, SMFG-002, MUFG-001, JPM-001). JPM post-kill path UNVERIFIED in-repo; killed 353.56 \u2248 entry, no rally evidenced.\n5. **Both directions.** Negative EV hangs entirely on truncating up_pct 30\u219211.4 at p 0.50 \u2014 at registry payoff EV = +6.0%/9mo. Defensible (+30% needs re-rating above warranted) but the single load-bearing construction choice; shading p_up too would be the double-count \u2014 not done. Kill 152 = 2.86x current TBV, falsification not stop; down \u221220.1/up 11.4 exact; ADV exit trivial. fee_tax 0.5/9mo is 4x JPM's 3y rate \u2014 anti-trade bias ~+0.35pp, EV ~\u22122.9, still dead. Kill I believe in: at zero cost, before entry.\n6. **Disconfirming fact** (in data, inference un-drawn): FICC +13% y/y vs Equity +69% (Q2-26 8-K) \u2014 the rates-sensitive half of IS already at run-rate; IS \u221215% is generous, not harsh.\n7. **Steelman pre-mortem:** the avoided failure: right on valuation, wrong on regime \u2014 melt-ups carry quality megabanks to 4x+ TBV (1999 pattern), and the zero-cost kill forgoes the +30% leg. Registry notes mandate it.\n8. **Anti-gaming:** estimates_committed 10:29 precedes draft 10:30; stage_log monotonic; base_rate quotes registry verbatim; deviations disclosed in-direction. Placeholder absent at attack \u2014 cosmetic. No anomaly.\n9. **VERDICT: KILL_RECOMMENDED.** A 0.50-prior momentum name whose own valuation caps the win at +11.4% against a \u221220.1% falsification leg is negative-EV on cent-accurate arithmetic, and the registry's notes make a no-variant momentum thesis an auto-kill \u2014 no case to fund.\n\nstage_log: {stage: attacked, at: 2026-10-03T12:10:00+07:00, actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Re-spawned ANALYST_GLOBAL 2026-10-03T14:00+07. Standing: KILL \u2014 Drew's attack is full confirmation; every check tightens the kill.\n\n**0. CONCEDE (verification).** EPS/ROTCE are 8-K press-release cites, no external dossier \u2014 unverified as sourced. Fix: flagged for external audit; committed numbers stand; re-source to SEC XBRL on any re-launch. No ev_math change.\n\n**1. CONCEDE (stress validates the kill).** IS \u221225% \u2192 ROTCE ~19.5%, warranted P/TBV 2.77x vs 3.58x traded re-derives; kill survives its own stress. No ev_math change \u2014 down_pct \u221220.1 already at falsification.\n\n**2. CONCEDE.** No variant perception; registry verbatim: momentum-only is an auto-kill. Adopted.\n\n**3. CONCEDE.** Q4-fade tail: FY26 EPS ~13.0 trips the ROTCE KPI at the 10-15 catalyst \u2014 strengthens the 2026-11-15 date-review kill. No number binds.\n\n**4. CONCEDE.** p_up-at-0.50 = payoff-only deviation confirmed; 4-for-4 ledger verified. JPM post-kill path unverified in-repo \u2014 recorded caveat; the kills stand.\n\n**5. CONCEDE (Pt 5 buys fee_tax).** The up_pct 30\u219211.4 truncation is the single load-bearing choice \u2014 owned; defensible at COE 10.24% (premium already paid). fee_tax 0.5%/9mo was ~3-4x JPM-001's 2.5y drag \u2014 normalised: fee_tax 0.5\u21920.15, expected \u22123.3\u2192\u22122.9. Still negative-EV.\n\n**6. CONCEDE.** FICC +13% vs Equity +69%: rates-half at run-rate; IS \u221215% is generous, not harsh. Committed estimate stands; kill reinforced.\n\n**7. REFUTE.** The +30% leg is not capturable: at COE 10.24% warranted P/TBV 3.15x vs 3.58x traded \u2014 premium already paid; 4x+ TBV needs UST10y well under 5.24% or ROTCE >>26.8% sustained, both contradicted by the live regime (CAUTIOUS, DXY 52w high, FOMC 10-28/29 live).\n\n**8. CONCEDE (as found).** Clean audit accepted: timestamps monotonic, estimates precede draft, deviations disclosed. No change.\n\n**9. CONCEDE.** Verdict adopted: KILL \u2014 negative-EV, sub-hurdle, no edge, GLOBAL financials 4-for-4."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL. Reason tag: valuation.** Single dispositive reason: at COE 10.24% (UST10y 5.24%, FRED 10-01, + ERP 5.0 mid-band) MS already trades above warranted value (3.58x vs 3.15x P/TBV) \u2014 the momentum up-leg is undeliverable while the falsification leg is real, so the trade is negative-EV at every fair input.\n\n**Standing correction applied** (my ledger: 24 kills / 0 passes / 1 zero-sized PASS_REDUCED, killed names averaging +7.0% above kill price \u2014 the over-kill record). I stressed this kill for gains-left-on-the-table before anything else. The +7% drift is real but does not fund a pass: the run-rate bull case is the thesis's own up_pct 11.4, already priced at p 0.50. A pass requires the +30% melt-up leg to ~$247 \u2248 4.65x TBV, which at run-rate ROTCE 24% implies COE ~9.1% (UST10y ~4.1% vs 5.24% actual, hiking Fed, FOMC 10-28/29 live) or ~29% sustained ROTCE \u2014 above the trading-flattered 26.8% H1 print. The analyst's Pt-7 refutation stands, and the registry mandates forgoing the 1999 pattern (momentum-crash risk; CAUTIOUS regime, DXY at 52w high).\n\n**Protocol:** complete \u2014 lint PASS (one tolerated WARN: 1952 words, all verbatim Bear log + revision), stage_log monotonic (draft 10:30 \u2192 attacked 12:10 \u2192 revision 14:00; estimates committed 10:29 precede draft), all nine Bear points answered, revision 272 \u2264 300 words. No raised p_up/up_pct/target anywhere; the only number that moved (fee_tax 0.5\u21920.15) moved *toward* the thesis. LESSON-0002: no prior MS kill \u2014 first-kill logic N/A.\n\n**Independent stress, both directions.** Fairer inputs cut against the kill and it survives: IS \u221210% (FICC already at run-rate) \u2192 warranted ~3.3x, still below the 3.58x entry \u2014 up_pct falls, not rises; provision already normalized to the FY25 run-rate; fee_tax 0.15 conceded. My EV spans \u22122.9% to ~\u22120.4% across the generous band; it reaches positive only by back-solving the kill to ~3.1x TBV, the price-anchored construction the idea card forbids. This is not a 6a construction defect: both levels are valuation/falsification-derived per the card mandate, and the compressed payoff is the finding, not the specification. The registry independently disposes of it: \"a momentum-only thesis with no variant perception is an auto-kill.\" Analyst and Bear both stand on KILL; so do I.\n(Aldrich; stamps frontmatter status: judged, verdict: KILL.)"
+    }
+  ]
+}

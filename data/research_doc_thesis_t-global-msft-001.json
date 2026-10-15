@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-MSFT-001",
+  "title": "Microsoft (MSFT)",
+  "meta": {
+    "id": "T-GLOBAL-MSFT-001",
+    "book": "GLOBAL",
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "sector": "TECH",
+    "factors": [
+      "us_tech",
+      "semis_ai"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-26T10:30:00+07:00",
+    "drafted": "2026-09-26T10:32:00+07:00",
+    "judged": "2026-09-26T11:00:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 505.0,
+    "target": 700.0,
+    "kill": 354.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "FY29E EPS ~$28.5 (consensus-corroborated ~18.5%/yr compounding off $17.95) at ~24.5x \u2014 a de-rating from today's ~26x forward, so the target is carried by earnings growth with NO multiple expansion (multiple-survival test passed: target implies 21.7x exit EV/EBIT on FY29E EBIT vs 25x on FY26 today). Top of our 9% COE DCF bracket; see bottom-up.",
+    "price": 540.4119873046875,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 38.6,
+    "p_down": 0.6,
+    "down_pct": -29.9,
+    "net_div_yield_pct_pa": 0.76,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -0.5,
+    "horizon_years": 3.0,
+    "carry_pct": 1.98,
+    "kelly_full_pct": -4.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (rate 0.40, +50%/-30%, 3y, n=15); draft UP-shade 0.44 CONCEDED back to registry in revision (Bear point 2 \u2014 RPO +84%/Azure +43% is public info already priced by the mom6 +41.6% run, and at n=15 SE ~12.6pp makes the +4pp shade noise)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 354.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop \u2014 the fade-to-COE DCF fair value (~$363 at 15x exit EV/EBIT, 9% COE); a print below this means the market has concluded the AI-franchise ROIIC story failed, i.e. a STRUCTURAL de-rating masquerading as cyclical, the archetype's dominant failure"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-01-29",
+      "action": "review",
+      "condition": "Q2 FY27 earnings (late-Jan-2027): review if Azure cc growth prints  ~$130B (capex spiral, FCF never inflecting)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 25.0,
+      "action": "review",
+      "name": "azure_cc_growth",
+      "source": "MSFT quarterly earnings release \u2014 Azure and other cloud services cc growth %, segment note"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-26T10:32:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-26T10:52:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-26T11:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-MSFT-001",
+    "ticker": "MSFT",
+    "book": "GLOBAL",
+    "killed": "2026-09-28",
+    "px_at_kill": 516.1699829101562,
+    "reason": "valuation",
+    "px_now": 540.4119873046875,
+    "px_asof": "2026-10-15",
+    "move_pct": 4.7
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sources (no sell-side data):** FY26 Q4 earnings press release, microsoft.com/Investor (Azure +43% cc, Microsoft Cloud $59.3B +27%, RPO +84% to $678B, capex $115.9B FY26); FY2026 annual statements (ended 2026-06-30), $B.\n\n**EARNINGS_QUALITY_FLAGS gate:** Accruals (NI\u2212CFO)/avg assets FY26 = (133.7\u2212182.9)/688.7 = \u22127.1% \u2014 CFO runs ahead of NI, no flag. No AR/rev divergence; inventory immaterial. SBC $12.4B = 3.7% of revenue, real cost, subtracted below. Watch (not manipulation): reported FCF fell to $67.0B from $71.6B as capex doubled \u2014 the EPS(+32%)/FCF divergence is the thesis's central question (kill criteria). Gate clears.\n\n**Revenue build (segment, $B):** FY26 $331.8 total (+18%): PBP ~$135, Intelligent Cloud ~$145 (Azure +43% cc in Q4), MPC ~$52 (Q4 \u22124%). Deliberate forward decel: FY27E $388 (+17%), FY28E $444 (+14.5%), FY29E $502 (+13%); Azure modeled 43%\u2192~33%\u2192~28%\u2192~25% cc. Margin ~47% held through FY29E (op income $155.2B FY26; the Q4 dip to 45.1% is depreciation timing, not opex). **EBIT $182B/$209B/$236B FY27-29E; NOPAT (19% tax) $147B/$169B/$191B.**\n\n**Reinvestment math (method step 1):** net capex ($115.9 \u2212 D&A $38.5) \u2248 $77B on NOPAT $125.7B \u2192 reinvestment ~61%; ROIC \u2248 125.7/(equity $442.4 + net debt $19.4) \u2248 27%. g = 0.61\u00d70.27 \u2248 16.5%, matching the +17.8% print \u2014 growth is manufactured at a franchise ROIC, not declared.\n\n**Owner earnings (step 5):** OCF $182.9B \u2212 maintenance capex (~$22B; the excess ~$94B is the AI growth buildout) \u2212 SBC $12.4B \u2248 **$148B (~$20/sh)**. The punitive $67B reported-FCF view treats all capex as current cost; honest owner earnings sit between \u2014 the gap is the bet.\n\n**Fair value / 3-assumption sensitivity:** 9% COE (house USD band), fade by ~year 10, terminal g 3.5%. Value-critical assumptions: (1) Azure path \u2014 bull +30%+ cc through FY28 (RPO visibility), base ~25% by FY29, bear high-teens: \u00b1$120; (2) capex plateau \u2014 buildout done by FY28 lifts FCF conversion ~39%\u2192~60%; a spiral >$130B slips it forever (kpi kill); (3) exit multiple \u2014 fade-to-COE 15x\u2192$363; 20x with lift\u2192~$576; 22x\u2192~$710. Target $700 sits just under the top bracket and implies 21.7x exit EV/EBIT \u2014 a **de-rating** from today's 25x on FY26: no multiple expansion (survival test passed)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: MSFT is the consensus \"safe mega-cap AI compounder\" \u2014 Azure re-accelerating (43%), RPO +84%, and under CAUTIOUS the Street is crowding into it as the default quality long, which is why it ran +41% in six months; whether that run is spent sentiment or the market paying near what booked growth is worth."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** (a) the +41% six-month run already repriced the re-acceleration \u2014 buy-the-dip is consensus (55 analysts, Strong Buy, average target ~+11% over spot), \"everyone already owns it\"; (b) MSFT is expensive at 28.8x trailing / ~26x forward with FCF actually DOWN year-over-year, so the multiple must compress.\n\n**Why wrong:** The run is only six months old and the de-rating frame is stale: on trailing earnings the multiple FELL from ~38x a year ago to ~29x today because EPS grew 32% while price was flat (mom12 \u22121.9%) \u2014 the 12m window IS the compression; the re-rating leg (mom6 +41.6%) has only reclaimed part of it, and forward PE ~26x sits at the low end of MSFT's decade (28-40x). Meanwhile the re-acceleration is contract-booked, not hoped-for: RPO +84% to $678B and Azure +43% cc are in the quarterly binders \u2014 the strongest order book in company history \u2014 and the compounding math is real (g \u2248 0.61\u00d70.27 \u2248 17%, matching the print). Variant: the market prices the FCF-conversion TIMING (capex doubled, FCF flat) at a below-history multiple while the contract book grew 84%. Our target needs the multiple to FALL, not expand.\n\n**What proves us wrong:** Observable, each this half: Azure cc  ~$130B with FCF still flat (spiral, no conversion lift); or EPS missing ~$24 FY27E while ~26x forward holds (the \"low multiple\" was fair because growth was lower quality than the RPO suggests). Any one falsifies.\n\n**Edge taxonomy:** (a) analytical \u2014 multiple-survival discipline on a consensus-strong-buy name (target implies exit EV/EBIT 21.7x, BELOW today's 25x-on-FY26) with paid-for growth verified via reinvestment \u00d7 ROIIC; (c) time-arbitrage \u2014 the market trades quarter-to-quarter FCF prints while the 2-4y contract book (RPO $678B) makes 2026-2028 revenue the most visible in MSFT's history. Not (b)/(d). Deliberate gap-fill: the GLOBAL sleeve was all-extended semis/rates; MSFT is the quality-compounder balance under CAUTIOUS. Honest EV is thin (+2.2% over 3y) \u2014 a quality/diversification fill, sized small, not a fat edge; we say so plainly."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. Azure +43% cc in Q4 FY26 (press release segment note); if either of the next two prints (Oct-29-2026, late-Jan-2027) shows cc  ~$130B with FCF not inflecting, the conversion-lift carrying ~30% of fair value never arrives.\n3. Our target ($700) is ABOVE the sell-side mean (~$576, +11.7% over spot; stockanalysis.com, 2026-09-25, 55 analysts Strong Buy): we are buying consensus's high-conviction holding at a higher-than-consensus target \u2014 if the crowd's average target caps price, up_pct under-delivers regardless of fundamentals.\n4. At $516.17 (2026-09-25 close) MSFT is +3.7% on the day, \u22126.8% off the $553.72 high and 28.8x trailing / 26.1x forward: a hiking regime (Fed 3.75-4.00%, DXY ~100.8) compresses long-duration multiples broadly; to ~22x forward \u2192 ~$440 with no fundamental miss, trimming the trade to near-breakeven."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is September-2029 and this position lost ~30%. The most likely reason is the archetype's named dominant failure: a **structural de-rating masquerading as a cyclical one**. Azure growth didn't fade to ~25% \u2014 it fell to high-teens as hyperscaler/BYOAI capacity commoditized AI-cloud economics and export-control churn hit the AI GPU book; capex never plateaued, FCF stayed flat while EPS compounded, and the market concluded the ~$116B annual buildout was margin-dilutive \u2014 the forward multiple walked from 26x toward the fade-to-COE ~$363 and the kill fired near $354. Secondary: pure macro \u2014 a hiking Fed / DXY ~100.8 compressing long-duration multiples broadly, de-rating MSFT with the market despite intact fundamentals. Either way the honest lesson: we bought at consensus's price (entry within 3% of the printed high) a thin-edge diversifier, and when the multiple broke, growth carried the P&L but not the price."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. **Fact-check:** no MSFT dossier exists in data/dossiers/ \u2014 the load-bearing prints (Azure +43% cc, RPO $678B, capex $115.9B, FCF $67.0B) are press-release-cited but unverifiable in-repo. The checkables pass: $516.17 spot, +3.66% day (the price snapshot), registry 0.40/+50/\u221230/3y/n=15 (the base-rate library L60-65), payoff math (38.6/\u221229.9 vs entry 505) exact. No fabrication \u2014 the dossier-less verification goes on the record.\n2. **The p_up deviation fails its own evidence bar.** RPO +84% is public quarterly-binder information already sitting in all 55 analysts' models \u2014 the mom6 +41.6% run IS the market pricing that same book. Raising 0.40\u21920.44 on information the crowd already owns counts the sentiment twice. And at n=15 the shade is statistically meaningless: SE = \u221a(0.4\u00d70.6/15) \u2248 12.6pp (the base-rate library) \u2014 the +4pp \"edge\" is an order of magnitude inside noise. At the registry 0.40 with the analyst's own payoff, EV \u2248 0.4\u00d738.6 \u2212 0.6\u00d729.9 + carry \u2248 \u22121% over 3y.\n3. **The thinness is fatal, not refreshing.** Even taking +2.2% at face value, that is a 3y TOTAL vs post-hike USD cash ~3.88%/yr (\u2248+12% over 3y; the macro regime memo): the fund pays ~30% drawdown variance to underperform T-bills. Payoff ratio 38.6/29.9 = 1.29 \u2014 near-symmetric on a sub-0.50 prior, dead before judged. The kill is a true falsification level (not a stop), so the defect is an under-set target \u2014 but point 4 caps every defensible target. Own q-Kelly 0.15%: this is a track-record fill wearing a research slot.\n4. **Target $700 sits ABOVE the sell-side mean ~$576** \u2014 buying the crowd's own holding at a higher target than the crowd itself. It requires 55 Strong-Buy analysts to be right on direction and wrong on magnitude simultaneously. When a 55-analyst consensus name reverses, the exit is the door: crowding makes the down-leg positional and faster than fundamentals.\n5. **Pre-mortem extension \u2014 the unmentioned failure mode:** every kill trigger waits on an earnings print (kpi) or 2027-01-29. That is four months of pure multiple-compression risk with NO interim falsification, in a delivered-hike, DXY ~100.8, CAUTIOUS regime \u2014 the analyst's own fact #4 concedes ~22x forward \u2192 ~$440 near-breakeven with no fundamental miss. That is the base path, not the tail.\n6. **Owner earnings is a selection.** Maintenance capex ~$22B of a $116B buildout is the bull split: 3-4y GPU refresh cycles turn much of \"growth\" capex into recurring maintenance, and if the >$130B spiral never inflects, the $148B figure is accounting choice, not accounting.\n7. **Anti-gaming:** timestamps coherent (estimates 10:00 before draft stamp 12:00), stage_log in order, no prior log. Clean.\n\nDrew: KILL_RECOMMENDED \u2014 a 0.44 coin-flip with a near-symmetric 1.29 payoff whose 3y expected return (+2.2%) sits below the post-hike USD cash carry (~3.9%/yr): the fund pays mega-cap variance to underperform T-bills, and the only admissible revision (p_up back to registry) drives EV negative."
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "Drew is right; I concede the attack. No new evidence exists \u2014 RPO +84% and Azure +43% were already mine, and the law forbids re-flagging them.\n\n1. Dossier-less verification stands on the record \u2014 the load-bearing prints are press-release-cited, not in-repo. Accepted. (point 1)\n2. The 0.44 shade double-counts public RPO/Azure that the mom6 +41.6% run already priced; at n=15, SE\u224812.6pp, the shade was noise. Conceded: p_up \u2192 registry 0.40, p_down \u2192 0.60. (point 2)\n3. Thinness is fatal, not refreshing: at registry prior, 3y expected \u22120.5% vs ~+12% on post-hike T-bill carry (~3.88%/yr); payoff 1.29 near-symmetric on a sub-0.50 prior; q-Kelly 0.15% \u2014 a track-record fill wearing a research slot. (point 3)\n4. $700 > ~$576 buys the crowd's holding above the crowd. Recalc at the crowd-capped $576 (up_pct 14.1) gives EV \u2248 \u221210% \u2014 no positive-EV configuration exists; the target was not the survivable fix. (point 4)\n5. Four months of compression-only risk to first falsification (2027-01-29) in the delivered-hike CAUTIOUS regime is a structural defect; my own fact #4's ~$440 base path concedes it. (point 5)\n6. Owner earnings was a selection \u2014 ~$22B maintenance of a $116B buildout is the bull split; a >$130B spiral makes $148B an accountant's choice. The capex kpi kill stays as the honest guard but does not rescue EV. (point 6)\n7. Anti-gaming clean; no dispute. (point 7)\n\n**Verdict: CONCEDE KILL_RECOMMENDED.** At the registry prior the thesis has negative expected value (\u22120.5%) against ~3.9%/yr cash in a CAUTIOUS, delivered-hike regime, with no new evidence to justify any raise. The thesis dies on Drew's numbers \u2014 that is the fund's saved money; what dies is a track-record fill.\n\n**8. Re-attack (Drew, bounded, post-revision):** Recomputed: 0.40\u00d738.6 \u2212 0.60\u00d729.9 + 0.76\u00d73 \u2212 0.3 = \u22120.52 \u2248 \u22120.5% \u2713. Construction coherent: kill 354 < entry 505 < target 700, up 38.6 / down 29.9 exact vs levels. Crowd-capped $576 \u2192 EV \u2248 \u221210%; every registry-or-below prior and every defensible target computes negative \u2014 no positive-EV configuration exists vs the ~+12%/3y cash hurdle.\n\nDrew: KILL_RECOMMENDED (re-attack confirmed)"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)\n\n**Verdict: KILL \u2014 reason_tag: valuation (EV floor).** Standing correction applied: this desk's ledger shows 24 kills averaging +7.0% above kill price; I have re-checked for a passable construction and none exists \u2014 that check is on the record below, not skipped.\n\n1. **Arithmetic is dispositive.** At the registry prior the analyst now concedes: 0.40\u00d738.6 \u2212 0.60\u00d729.9 + 0.76\u00d73 \u2212 0.3 \u2248 \u22120.5% over 3 years, versus ~3.88%/yr post-hike USD cash (~+12%/3y, the macro regime memo, Fed 25bp delivered 09-15/16, CAUTIOUS, DXY ~100.8). The fund would pay mega-cap drawdown variance to underperform T-bills. No positive-EV configuration exists at any registry-or-below prior; crowd-capped $576 target \u2192 \u2248 \u221210%.\n2. **Rule 6a considered and rejected.** The 1.29 payoff on a sub-0.50 prior would ordinarily be a construction defect (REVISE_CONSTRUCTION). But the revision already ran: the analyst conceded all seven points, and the re-attack shows every defensible target and every admissible prior computes negative. A RETURN would resubmit identical arithmetic; the defect is not in the build, the EV floor is in the idea. This is a thesis that is wrong, not mis-specified.\n3. **No unflagged raises.** The revision lowered p_up 0.44\u2192registry 0.40 with no new-evidence citation required or offered; rule 6 is satisfied.\n4. **Survival test on Drew's strongest sentence:** \"No positive-EV configuration exists at any registry-or-below prior against the cash hurdle.\" The analyst's own revision concedes it verbatim. TRUE.\n\nCooldown check: no prior Judge KILL on MSFT in the kill ledger \u2014 no 60-day window spent by this kill. Kill-ledger capture is left to the prelude the trigger scanner track_kill."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

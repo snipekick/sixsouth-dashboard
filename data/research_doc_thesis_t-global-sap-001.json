@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-SAP-001",
+  "title": "SAP SE (ADR) (SAP)",
+  "meta": {
+    "id": "T-GLOBAL-SAP-001",
+    "book": "GLOBAL",
+    "ticker": "SAP",
+    "name": "SAP SE (ADR)",
+    "sector": "TECH",
+    "factors": [
+      "us_tech",
+      "eu_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-10-21",
+    "estimates_committed_at": "2026-10-10T10:16:22+07:00",
+    "drafted": "2026-10-10T10:16:22+07:00",
+    "judged": "2026-10-10T12:20:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 195.0,
+    "target": 260.0,
+    "kill": 147.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "partial multiple reversion (forward multiple back toward ~29x FY2026E EPS) plus ~10%/yr EPS compounding over 3y = 195 x 1.10^3 ~ 260 \u2014 NOT a return to the 52-week high",
+    "price": 225.66000366210938,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 33.0,
+    "p_down": 0.6,
+    "down_pct": -25.0,
+    "net_div_yield_pct_pa": 1.0,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": -0.3,
+    "horizon_years": 3.0,
+    "carry_pct": 1.5,
+    "kelly_full_pct": -3.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (rate 0.40, base_up 50, base_down -30, horizon_y 3, n=15)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 147.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop \u2014 a decisive break of the 52-week-low (144.97) zone on deteriorating fundamentals"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "current-cloud-backlog growth < mid-teens or operating margin rolling over"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 10.0,
+      "action": "exit_full",
+      "name": "current cloud backlog growth y/y",
+      "source": "SAP quarterly results release"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-10T10:16:22+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-10T10:50:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-10T12:20:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-SAP-001",
+    "ticker": "SAP",
+    "book": "GLOBAL",
+    "killed": "2026-10-12",
+    "px_at_kill": 214.77999877929688,
+    "reason": "other",
+    "px_now": 225.66000366210938,
+    "px_asof": "2026-10-15",
+    "move_pct": 5.1
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Dossier income-statement and cash-flow lines only; EUR.\n\n- FY2026E revenue ~39,700M: H1-2026 19,433M vs H1-2025 18,040M = +7.7% y/y; Q2-2026 +9.4% y/y (9,878M vs 9,027M).\n- FY2026E operating margin ~27% (FY2023 19.3% \u2192 FY2024 22.8% \u2192 FY2025 26.1%) \u2192 EBIT ~10,700M; net income ~7,750M at the FY2025 19.5% net margin \u2192 EPS ~6.7 on 1,154.2M shares.\n- Normalized FCF ~9.0B (current 9,091M; FY2025 8,417M) \u2192 ~7.8/share. Net cash ~1,686M (debt 9,939M vs cash 11,625M). Dividend 3,382M = 2.7x FCF-covered (Revision #7).\n- Bottom-up fair value ~195/share (~25x normalized FCF/share; ~29x FY2026E EPS); 3-year target 260 (entry 195 \u00d7 ~10%/yr EPS, multiple stabilized); kill level 147."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, before document work",
+      "markdown": "Before the dossier I read SAP's ~25% drawdown as a sentiment / AI-fear de-rating of an intact franchise, not structural decay."
+    },
+    {
+      "heading": "Market data \u2014 Phase 2",
+      "detail": null,
+      "markdown": "Screen (market-data snapshot): SAP, TECH, us_tech/eu_cycle, large, coverage heavy, last 214.78, ADV USD 416.3M/day, flow_stale True.\n- Tape: 52w high 281.37 / low 144.97 \u2192 \u221222.1% off the high; mom12 \u221224.4% but mom6 +34.0%, mom1 +4.3% \u2014 a *recovering* de-rated name, not a falling knife.\n- Vol/beta: 39.3% annualized; beta 0.758 \u2014 the entry-to-kill leg \u22480.6\u03c3, inside one sigma. corr_bench 0.12 \u2014 additive.\n- FX: the EUR-earner meets DXY at a 52w high \u2014 a live drag on USD-reported returns.\n- Hygiene: flow_stale True; the dossier's trailing P/E 27.26x does not reconcile with its net-income line, so I anchor on bottom-up EPS.\n- Levels set bottom-up: entry 195 (\u22129.2% vs spot), kill 147, target 260 (+33%)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": "Phase 2 \u2014 market-data-aware",
+      "markdown": "**Market believes:** the ~25% de-rating is deserved \u2014 agentic/LLM platforms erode the ERP moat, repricing SAP toward a mid-teens ex-growth multiple, with an EUR/FX headwind. (My inference, not evidence \u2014 Revision #1.)\n**Why wrong:** every operating line contradicts decay \u2014 revenue +9.4% y/y in Q2-2026, margin 19.3%\u219222.8%\u219226.1% across FY2023-25, FCF to ~9.1B, net cash. EPS grew ~+20% while the multiple compressed ~25%: compression, not decay. The moat is switching costs and data gravity in the system of record; Business AI is an attach layer, not a substitute.\n**What proves us wrong:** backlog growth below mid-teens, AI attach absent from backlog, margin roll-over, or credible share loss to AI-native ERP challengers."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, each citing a dossier line",
+      "markdown": "1. Q2-2026 revenue 9,878M vs Q2-2025 9,027M = +9.4% y/y \u2014 growing, not decaying (dossier line 18).\n2. Operating margin 19.3% \u2192 22.8% \u2192 26.1% across FY2023-25 \u2014 leverage intact (dossier lines 14-16).\n3. FCF FY2025 8,417M and current 9,091M on operating cash flow 9,465M (dossier lines 28, 31).\n4. Net cash: total debt 9,939M vs total cash 11,625M \u2014 no leverage stress (dossier line 31).\n5. Beta 0.758 (dossier line 38) \u2014 the drawdown is multiple-driven, not earnings-driven."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Late 2029, position \u221225%: the de-rating was structural, not cyclical \u2014 AI-native agents disintermediated the ERP workflow layer, backlog growth decelerated into single digits, margin expansion stalled, and the premium compressed toward a 15-18x ex-growth level while EPS stalled. The tell ignored: a de-rating that persisted through prints that \"should\" have re-rated it \u2014 the derated_compounder trap."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Variant perception fabricated.** Dossier is consensus-quarantined, yet the thesis asserts what \"the market believes\"; the card's one street number (consensus $257.3, +21%) contradicts ex-growth pricing \u2014 consensus restated.\n2. **No equity premium.** At FY2026E EPS 6.7, entry 210 = ~31x, above the cited \"peak ~30x\"; 210 = 27x FCF = 3.7% yield vs cash ~3.88%. Target 315 = 2.5%.\n3. **Target doesn't reconcile.** 210 is already 27x FCF; +10%/yr EPS \u00d73y \u2248 280, not 315. 315 needs ~14.5%/yr EPS or ~35x forward \u2014 the disclaimed explosion.\n4. **EV inflated.** The card's gate = base-rate EV +2.0%, \"thin,\" \"not ADVANCE \u2014 a WATCH scout.\" The thesis reaches 7.5% only by lifting p_up 0.40\u21920.45, above the prior.\n5. **Kill is a stop, not falsification.** 147 is 2% under the 52w low, \u22480.76\u03c3 \u2014 noise trips it. The real falsifier (backlog <10%) only \"reviews\"; no fundamental exit.\n6. **Hygiene breach.** The \"before any market number\" block anchors the kill to 144.97 (a price-file number); its FV lands 2.2% from spot at a market-consistent ~31x \u2014 reverse-engineered.\n7. **Factual error.** \"Dividend ~5x covered by FCF\" \u2014 9,091M/3,382M = 2.7x.\n8. **Unattested.** \"~85% recurring,\" \"EPS +20% y/y,\" the backlog mid-teens/<10% KPI \u2014 none in the dossier; the central discriminator is unobservable. \"Accelerating\" rests on one comp (Q1-2026 +6.0%; Q4\u2192Q1 \u22121.3%).\n9. **Structural branch underweighted.** Library prior 0.40 (60% fail) and the thesis concedes the de-rating persisted through the prints \u2014 the derated_compounder trap. Agentic AI attacks the workflow/UI layer where ERP value sits; only narrative.\n10. **FX double-count.** The de-rating is blamed on FX, yet re-rating needs EUR strength; macro has DXY at a 52w high, CAUTIOUS. FX drag unquantified in ev_math.\n11. **Entry is at-market** (\u22122.2%, max_chase 3%) on a 39%-vol name: no cushion.\n\nDrew: MAJOR_REVISION \u2014 no variant perception (consensus 21% above spot), entry FCF yield below cash, 315 doesn't reconcile with 10%/yr EPS, and the kill is a stop at the 52w low, not the falsification level."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Drew's 11 points, in order; lowerings only, no new evidence.\n\n1. **Variant perception \u2014 lands.** The dossier is consensus-quarantined, so \"the market believes\" was asserted, not evidenced; withdrawn. The variant is the *durability* of the de-rating, not a claim on consensus pricing.\n2. **No premium \u2014 lands.** Entry 210 = 31x FY2026E EPS (6.7), above the cited ~30x peak, at a 3.7% FCF yield below cash (~3.9%). Entry cut to 195 (~29x EPS, ~25x normalized FCF/share). Check (b): the card's ~24x forward implies EPS ~8.95, ~34% above my 6.7 \u2014 spot is ~32x on my own EPS, so I stop citing ~24x.\n3. **Target \u2014 lands.** 195 \u00d7 1.10\u00b3 = 260; 315 needed ~14.5%/yr EPS or ~35x forward, the disclaimed explosion. Target \u2192 260.\n4. **EV \u2014 lands.** p_up 0.45 exceeded the 0.40 prior; reset to 0.40. Honest EV \u2248 \u22120.3% over 3y vs cash ~3.9%: a WATCH, not a chase.\n5. **Kill \u2014 lands.** Backlog <10% promoted from *review* to *exit_full*; 147 kept only as the price backstop.\n6. **Hygiene \u2014 lands.** The block cited 144.97 (a price-file number); the kill is restated as a valuation level. The FV itself was bottom-up (27x FCF).\n7. **Dividend \u2014 lands.** Check (a): 9,091M \u00f7 (2.93 \u00d7 1,154.2M = 3,382M) = 2.7x, not ~5x. Corrected.\n8. **Unattested \u2014 lands.** ~85% recurring, EPS +20%, backlog mid-teens are assumptions, not dossier lines; \"accelerating\" rests on one comp. Flagged.\n9. **Structural branch \u2014 conceded** via p_up 0.40 and the exit-on-backlog kill.\n10. **FX \u2014 lands.** Blaming FX for the de-rating while needing EUR strength to re-rate is inconsistent; the drag now sits in the wider down_pct.\n11. **Entry \u2014 lands.** 195 = \u22129.2% vs spot; max_chase 3%.\n\nCheck (c): 260 reconciles with ~10%/yr EPS (195 \u00d7 1.331); 315 did not."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (reason_tag: `no_variant_perception`).\n\n1. The Revision cured the arithmetic \u2014 entry 195, target 260, p_up reset to the 0.40 prior \u2014 by conceding the thesis's core. Drew's point 1 landed: the \"market believes\" leg is withdrawn as unevidenced. A three-part variant perception is constitutional, and the survivor (the franchise is intact, the de-rating won't persist) is visible in the same revenue and margin lines the market already reads. A de-rating that persists through good prints is the derated_compounder trap's exact signature. No edge remains.\n\n2. EV is dispositive. On the post-Revision inputs the honest expected value is \u22120.3% over three years against a ~3.9%/yr cash proxy \u2014 negative, and below the card's own base-rate +2.0%, which itself fails cash. Even the archetype does not clear the proxy. That is the fail-closed trigger.\n\n3. The falsifier is unobservable. The promoted exit_full rests on current-cloud-backlog growth, which Revision #8 concedes is an assumption with no dossier line; the price kill 147 (~0.6\u03c3) is a noise backstop. An unverifiable kill is not a falsification.\n\n4. Regime cuts against: DXY at a 52w high against a EUR-earner, CAUTIOUS, entry 9% below spot on a 39%-vol name with no catalyst edge.\n\nI weighed the desk's over-kill record. This is not marginal: negative EV against cash with the required variant perception withdrawn."
+    }
+  ]
+}

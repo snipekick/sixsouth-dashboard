@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-TAPG-001",
+  "title": "Triputra Agro Persada (TAPG.JK)",
+  "meta": {
+    "id": "T-INDO-TAPG-001",
+    "book": "INDO",
+    "ticker": "TAPG.JK",
+    "name": "Triputra Agro Persada",
+    "sector": "PLANTATION",
+    "factors": [
+      "cpo",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "neglected_midcap_discovery",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2027-03-31",
+    "estimates_committed_at": "2026-08-19T06:12:27Z",
+    "drafted": "2026-08-19T06:18:00Z",
+    "judged": "2026-08-19T06:35:42Z",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1840.0,
+    "target": 2500.0,
+    "kill": 1060.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Discovery re-rating of SUSTAINED elevated earnings, not a through-cycle NAV play: ~12x H1-2026-annualized spot EPS (~206) as thin coverage catches up to TAPG's top-quartile cash cost (US$~550/t), net cash (~IDR 0.6tn at 30-Jun-26) and ~90% payout on the largest planter mcap (~IDR 36.5tn) \u2014 a ~9x->12x expansion IF CPO holds ~US$1,000 on the B40/B50 floor. The carded +55% (2,850 = ~14x spot) needs B50 + index inclusion + sustained US$1,000 CPO; shaded to 2,500 because through-cycle EPS ~100 makes any target above ~1,400 a sustained-CPO bet, so the up-leg is carried by the dividend stream, not a ",
+    "price": 2020.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.3,
+    "up_pct": 36.0,
+    "p_down": 0.7,
+    "down_pct": -44.0,
+    "net_div_yield_pct_pa": 4.9,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -8.3,
+    "horizon_years": 2.5,
+    "carry_pct": 11.75,
+    "kelly_full_pct": -53.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library neglected_midcap_discovery (0.44, +55%, -30%, 2.5y, n=30) shaded -0.04: dated catalyst (HY2026 print) already out and partially absorbed (mom1 +19.4%, screen 2026-08-19); ~12-17% free float = partly-deserved neglect caps institutional discovery. Cross-check per VAL_COMMODITY_CYCLICAL pt 6 to commodity_capex_turnaround (0.42, n=40): incentive-price-trap failure is live (stock ",
+    "library": {
+      "rate": 0.44,
+      "base_up_pct": 55.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1060.0,
+      "action": "exit_full",
+      "note": "Thesis-invalidating (NOT a stop): through-cycle support ~1,050-1,200 (10-12x through-cycle EPS ~100) breaks on CPO reverting to the US$865 10y avg and/or a dividend cut. 1060 is the realistic ARB-gap fill (25% bands, Rp200-5,000 tier) \u2014 PM sizes on this adjusted downside per SIZING card pt 5."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "FY2026 audited LK shows OER decline, cash-margin compression beyond the CPO move, or FY2026 dividend < Rp150/sh (payout discipline broken)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 800.0,
+      "action": "review",
+      "name": "cpo_reference_usd_per_ton",
+      "source": "Kemendag monthly CPO reference (ICX-based HR CPO)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-19T06:18:00Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-19T06:18:08Z",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-19T06:35:42Z",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-TAPG-001",
+    "ticker": "TAPG.JK",
+    "book": "INDO",
+    "killed": "2026-08-19",
+    "px_at_kill": 1830.0,
+    "reason": "valuation",
+    "px_now": 2020.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 10.4
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Source:** TAPG audited FY2025 consolidated statements (AR2025, published ~2026-03), 2Q/1H 2026 financial statements (published ~2026-07-30), 1Q 2026 LK. No dossier exists; sourced from primary/secondary public filings. IDR mn unless noted.\n\n**EARNINGS_QUALITY_FLAGS gate (run first, per card):**\n- *IDX board/notation:* main board (the INDO universe); no special-monitoring/notation letters found (secondary check; idx.co.id feed unreachable \u2014 diligence gap, treated as no confirmed flag).\n- *Accruals FY2025:* (NI 3,702,266 \u2212 CFO ~3,400,000)/avg assets ~14,500 \u2248 +2.1% \u2014 clean; CFO tracks NI.\n- *Biological-asset FV:* FY2025 pretax (4,660bn) exceeded EBIT (3,650bn) by ~1,010bn \u2192 likely PSAK 69 biological-asset/inventory fair-value gains inflate reported NI vs operating cash earnings. OPTICS-class (disclosed) \u2014 operating value anchored to EBIT, not pretax.\n- *Customer/related-party:* top-3 customers \u2248 52% of FY2025 sales \u2014 Kutai Refinery Nusantara 21.93%, Sinar Alam Permai 21.09%, SMAR 9.30% (FY2025 release). Kutai Refinery is a likely Triputra-affiliated downstream buyer \u2192 related-party gravity on ~22% of revenue (optics-class; to verify).\n- *Structure:* no confirmed PSAK 16 land-revaluation surplus (gap) \u2192 P/B avoided; no serial rights issues since 2023 IPO; no pledge data (gap).\n\n**Operating model (FY2025 audited / 1H 2026):**\n- FY2025: revenue 11,402,198 (+18%), NI 3,702,266 (+19%), EPS 186, EBITDA ~4,400. CPO 83% of revenue, PK 12%, PKO 5%.\n- 1H 2026: revenue 5,857,150 (+6.3%), NI 2,040,370 (+20.4% vs 1,694,119), EPS 103; gross 2,413.1; op profit 1,933.7. Palm sales 399kt (\u22121%), blended ASP 14.6mn/t (+8%), cash cost 8.8mn/t (+1%), cash margin 5.9mn/t (+20%). Q1 2026 OER 24.1% (+1.0ppt YoY).\n- Planted ~160,000ha oil palm (+1,400ha rubber); 93.4% mature, blended age ~14.2y; 18 mills, 995 t/h; new 30\u201345 t/h mill in 2026; Kalimantan ~92% of area. Sustainable volume ~800kt/yr (1H 399kt \u00d7 2).\n- Balance sheet 30-Jun-2026: assets 14,823,740; cash 1,706,296; total debt 1,078,230 (ST 353,900 + LT 724,330) \u2192 net cash ~628bn. FY2025 OCF ~3,400 vs FY2025 dividend 1,806.6 \u2192 1.9x cover.\n- Dividend: FY2025 total ~180/sh (39 interim Aug-25 + 50 interim Nov-25 + 91 final, approved 22-May-26, paid 19-Jun-26) on EPS 186 \u2192 ~97% payout, net-cash-funded.\n\n**Through-cycle build (Phase 1 \u2014 sourced price, no market data):**\n- Through-cycle CPO reference \u2248 US$865/t (10y avg, World Bank Pink Sheet palm-oil series; ICX basis runs below CIF Rotterdam). At ~15,500 IDR/USD \u2192 through-cycle realized ASP \u2248 12.5\u201313.0mn/t vs cash cost 8.8 \u2192 cash margin ~3.9mn/t (vs 5.9 spot).\n- Through-cycle EPS \u2248 90\u2013110 (base ~100): 800kt \u00d7 (12.75 \u2212 9.0) = cash EBITDA ~3,000; less D&A ~800 \u2192 EBIT ~2,200; +net finance ~150; tax ~21% \u2192 NI ~1,860 \u2192 EPS ~93.\n- \u2192 The position must be argued on carry + discovery of sustained elevated earnings, NOT a through-cycle NAV discount (through-cycle value ~1,050\u20131,400 at 10\u201312x). The cost position (US$~550/t cash) is a trough-survivor."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, before document work",
+      "markdown": "The market narrative I believe is: TAPG's ~35% 6-mo run is CPO beta on elevated palm prices, and the ~9\u201310x trailing P/E is fair for a family-controlled (Triputra ~82%), thin-float planter whose ~90% payout is peak-cycle cash distribution, not a durable franchise."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** The +34.9% mom6 is commodity beta \u2014 a leveraged play on an elevated CPO reference (US$996 Aug-26) that reverts once Malaysia/Indonesia supply catches up; HY2026's +20% profit is peak-cycle and not extrapolable; the thin 12\u201317% float and ~82% family control make the neglect deserved.\n\n**Why wrong:** The market misreads a trough-surviving dividend machine as peak-beta. Cash cost ~US$550/t (1st\u20132nd quartile) vs through-cycle US$865 \u2192 ~36% cash margin even at the 10y-avg price; net cash ~IDR 0.6tn \u2192 no balance-sheet risk through a trough; ~90% payout is cash-covered 1.9x (OCF 3,400 vs dividend 1,807). It is the largest planter by mcap (~IDR 36.5tn) yet screens thin-coverage \u2014 the neglected_midcap_discovery pattern. The HY2026 print (Q2 NI +46% YoY on ASP +8%/cost +1%) beat and was only partially absorbed (mom1 +19.4% through the print window); the ~9x \u2192 ~12x re-rating needs the market to credit cost/dividend durability, which coverage/liquidity has not yet done.\n\n**What proves us wrong:** (1) FY2026 print shows OER decline or cash-margin compression beyond the CPO move; (2) FY2026 dividend < Rp150/sh \u2014 payout discipline broken; (3) CPO reference sustains < US$800, collapsing the elevated-EPS anchor."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each cited",
+      "markdown": "1. **No through-cycle margin of safety:** through-cycle EPS ~100 \u2192 at 1,840 the stock is ~17\u201320x through-cycle, ~30\u201350% above through-cycle value (~1,050\u20131,400 at 10\u201312x) \u2014 the DSNG no-margin-of-safety pattern (build: 1H-26 unit economics + WB Pink Sheet 10y avg US$865).\n2. **Neglect partly deserved \u2014 float:** free float ~12\u201317% (IDX-approved 12.22%, 2,425,414,400 shares); Triputra/TP-Rachmat ~82% (Persada Capital 33.07%, Triputra Investindo Arya 24.12%, Daya Adicipta 19.94%, TP Rachmat 5.09%) \u2014 institutional discovery structurally capped; idea-card \"Salim\" not found in registry.\n3. **Customer/related-party concentration:** top-3 \u2248 52% of FY2025 sales; Kutai Refinery Nusantara ~22% is a likely Triputra-affiliated downstream buyer (FY2025 release) \u2014 optics-class, to verify.\n4. **Earnings quality:** FY2025 pretax (4,660bn) > EBIT (3,650bn) by ~1,010bn \u2192 biological-asset/inventory FV gains inflate reported NI vs operating cash earnings.\n5. **Catalyst spent:** the dated HY2026 discovery catalyst PRINTED 2026-07-30 and the market has partially absorbed it (mom1 +19.4%, mom6 +34.9%, screen 2026-08-19) \u2014 the cleanest \"undiscovered\" leg is gone."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is early 2029 and this position lost 30%. The most likely reason is CPO reverting toward the US$865 10y average faster than B40/B50 absorbs supply (Indonesia+Malaysia output recovery), EPS falling toward ~100, the market de-rating to ~10x through-cycle (~1,050\u20131,200), and the ~90% payout being cut to defend the balance sheet \u2014 breaking the carry anchor. Gap risk: 25% ARB bands (Rp200\u20135,000 tier) mean a CPO-crash kill fills 1\u20132 bands below the nominal trigger; 1,060 is the honest fill, and the ~18% net dividend cushion (~7.5%/yr \u00d7 2.5y) limits but does not eliminate the total loss. Secondary: a Kutai Refinery related-party/governance discount surfaces, or a family sell-down on the thin float caps the re-rating."
+    },
+    {
+      "heading": "IDX microstructure & edge",
+      "detail": null,
+      "markdown": "Liquidity: 30d ADV IDR 24.6bn (screen 2026-08-19); a max 10% INDO-book position (~IDR 1.5bn) exits in <1 session at 20% participation \u2014 tradeable for this book. Flows: fund record empty/stale \u2192 **flows stale**; no foreign-flow number estimated; institutions ~1.2% (Norges 0.75%, DFA 0.40%). Currency: CPO is USD-linked (ICX/reference), costs and dividend IDR \u2014 model IDR, target IDR, weak-IDR regime (~15,500\u201316,000). Edge (one): coverage-lag discovery on the largest planter by mcap \u2014 thin coverage under-credits top-quartile cost + ~90% payout as a through-cycle dividend machine, not peak-CPO beta. Hurdle note: EV +7.5% over 2.5y \u2248 3%/yr, below the INDO FR carry ~6.5%/yr \u2014 the position clears only via the carry + discovery optionality; size small, PM judgment."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n0. **Fact-check \u2014 CONFIRMED, no fabrication.** H1-26 rev 5,857.2B / NI 2,040.4B / gross 2,413.1 / op 1,933.7 / EPS 103 match S&P CapIQ via MarketScreener. FY2025 rev 11,402.2B / NI 3,702.3B / EPS 186 match (IDNFinancials' 3.84tn is NCI-inclusive; the analyst correctly used owners' 3,702.3B). WB 10y-avg US$865 is plausible (~$850\u2013870 on 2016\u201326 monthly) but the Pink Sheet full-sample mean (1960\u20132026) is **US$546/t** \u2014 the \"through-cycle\" anchor is itself elevated by the 2021\u201322 export-ban spike.\n1. **Estimates \u2014 fragile, single-assumption.** Widest bar = CPO reference. At the analyst's own US$865, EPS ~100 \u2192 1,840 is ~17\u201320x through-cycle with zero NAV safety. Bear through-cycle US$700 (ex-spike) \u2192 EPS ~60\u201370 \u2192 26\u201330x. The target (2,500) lives or dies on CPO holding ~US$1,000 for 2.5y; at US$865 the stock is worth ~1,050\u20131,200 \u2014 the kill. One assumption, no floor.\n2. **Variant \u2014 none.** \"17\u201320x through-cycle\" is the market correctly pricing a peak-margin cyclical (commodity_capex_turnaround note verbatim: \"buying a low P/E at peak-margin\"). The analyst's own priors line (\"~9\u201310x trailing fair for a thin-float family planter\") equals the market. There is no variant perception, only a carry rerun relabeled as discovery.\n3. **Catalyst \u2014 spent, none dated forward.** HY2026 printed and was absorbed (mom1 +19.4%). FY2026 LK (2027-03) is a *review* trigger (possibly negative); index inclusion/coverage initiation is undated speculation. neglected_midcap_discovery demands \"a concrete discovery catalyst, not just cheapness\" \u2014 absent. The \u22120.04 shade is grossly insufficient.\n4. **Base rate + sleeve \u2014 mislabeled.** This fired on MOMENTUM #3 (momentum_continuation 0.50, base_up 30%, horizon 0.75y \u2014 \"weakest edge, procyclical, momentum-crash risk\") but is argued with 2.5y +55% discovery economics. Both neglected failure modes are live: liquidity trap (24.6bn ADV, 12\u201317% float) and deserved neglect (~82% family). Incentive-price-trap is not \"live\" \u2014 it is the base case.\n5. **Sizing \u2014 dead on arrival.** kill/entry/target coherent (36/\u221242 in band). But capital-gain EV = 0.40\u00d736 \u2212 0.60\u00d742 = **\u221210.8%**. The entire +7.5% is the dividend, modeled at 7.5%/yr peak-cycle; on the analyst's OWN through-cycle EPS ~100 (90% payout \u2192 ~90/sh) the sustainable yield is ~4.9%, and it is cut on the p_down path (kill #2). Strip the overstated yield \u2192 EV ~+1% over 2.5y \u2248 0.4%/yr, below the 6.5% FR hurdle. Kelly f = (0.857\u00d70.40\u22120.60)/0.857 = **\u22120.30** \u2192 quarter-Kelly rounds to zero.\n6. **Disconfirming (new):** (a) WB Pink Sheet full-sample palm mean US$546/t (FetchSeries, 1960\u20132026) \u2014 US$865 is a spike-inflated decade, not a structural floor. (b) 1Q26 revenue was a MISS and the beat came \"amid lower inventory costs\" (ipotnews 1Q26 note) \u2014 the +20% \"cash margin\" is partly an inventory/FV accounting artifact, not clean operating leverage.\n7. **Pre-mortem steelman** \u2014 the analyst's \u221230% is the mild case. The avoided failure: CPO reverts AND the FY2025 biological/FV gain (+1,010bn pretax) unwinds the same year, so EPS falls faster than price alone; payout is cut; the thin float turns the de-rating into a one-way 25%-band auction the family won't bid \u2014 total loss approaches \u221250%, not \u221230%.\n8. **Anti-gaming \u2014 clean.** estimates_committed_at (06:12:27Z) precedes draft (06:18:00Z); no prior attack; estimates consistent with the screen row. No anomaly, no QC flag.\n9. **VERDICT: KILL_RECOMMENDED.** Strip the peak-cycle 7.5%/yr dividend (sustainable ~4.9% on the analyst's own through-cycle EPS ~100, and cut on the p_down path) and capital-gain EV is already \u221210.8% with negative Kelly \u2014 the trade is dead on arrival."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**0. Fact-check.** Accepted. WB Pink Sheet full-sample mean US$546/t (1960\u20132026) is new evidence \u2014 it lowers the true long-run anchor and loads the p_down path. Through-cycle EPS ~100 stays (committed); 1,840 remains ~17\u201320x even that build.\n\n**1. Fragility.** Conceded. The 2,500 target needs sustained ~US$1,000 CPO; at US$865 the through-cycle value ~1,050\u20131,400 is the kill. No floor; cut p_up.\n\n**2. Variant.** Conceded as thin. My priors line equals the market; the sole delta \u2014 payout durability vs peak-cycle distribution \u2014 is precisely what the market discounts.\n\n**3. Catalyst.** Conceded. HY2026 printed and absorbed; 2027-03-31 is a review trigger, not a discovery catalyst. neglected_midcap_discovery's dated-catalyst demand is unmet.\n\n**4. Sleeve.** Conceded. Fired on MOMENTUM (mom1 +19.4%) but argued with 2.5y discovery economics \u2014 the weakest-edge sleeve mislabeled as discovery.\n\n**5. Dividend credit.** Conceded \u2014 decisive. Sustainable through-cycle yield = 90/sh (EPS ~100 \u00d7 90% payout) / 1,840 = **4.9%**, not 7.5%. Lower net_div_yield_pct_pa 7.5 \u2192 4.9. Even at draft p_up 0.40, capital-gain EV = 0.40\u00d736 \u2212 0.60\u00d742 = **\u221210.8%**; Kelly (0.857\u00d70.40\u22120.60)/0.857 = \u22120.30; quarter-Kelly rounds to zero.\n\n**6. New disconfirming.** Accepted. (a) US$546 full-sample mean lowers the anchor. (b) 1Q26 was a revenue MISS with the beat on lower inventory costs \u2014 the \"+20% cash margin\" is partly inventory/FV artifact, weakening cost-durability.\n\n**7. Steelman.** Accepted. Thin-float ARB auction can fill below 1,060; total loss toward \u221250%. Widen down_pct \u221242 \u2192 \u221244 (lint-consistent with the 1,060 kill; execution tail noted in pre-mortem).\n\n**8. Anti-gaming.** Noted clean.\n\n**9. Verdict.** KILL_RECOMMENDED stands. Revised ev_math: p_up 0.30, up_pct 36, down_pct \u221244, net_div_yield_pct_pa 4.9 \u2192 expected **\u22128.3%** over 2.5y (capital-gain EV \u221220.0; dividend 12.25; drag 0.5), vs FR carry ~6.5%/yr. p_up (\u221225%) and expected_pct (>100% relative) move >20% \u2014 **routed to Drew pre-Judge**. Committed bottom-up estimates untouched."
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "**A. Honesty \u2014 PASS.** Every numbered point answered on the merits; no dodge, no performative concession \u2014 each carries a real number (p_up cut, yield 7.5\u21924.9, down_pct \u221242\u2192\u221244). No unlisted frontmatter change; committed estimates untouched.\n\n**B. Arithmetic \u2014 RECONCILES.** 0.30\u00d736 \u2212 0.70\u00d744 = \u221220.0; 4.9\u00d72.5 = 12.25; \u221220.0+12.25\u22120.5 = \u22128.25 \u2248 \u22128.3. Kill 1060/1840 = \u221242.4 (down_pct \u221244, 1.6pp conservative, in band); target 2500/1840 = +35.9 vs 36. \u2713\n\n**C. Understates damage.** The 12.25pp dividend credit is still paid in full on the 70% loss path where kill #2 cuts the payout \u2014 honest EV \u2248 \u221217%, not \u22128.3.\n\n**D. VERDICT: KILL_RECOMMENDED.** Negative Kelly even at \u22128.3%, and that is flattered \u2014 the 70% path never earns its dividend."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "KILL \u2014 reason_tag: valuation. The position has negative expected value on the analyst's own revised numbers (capital-gain EV = 0.30\u00d736 \u2212 0.70\u00d744 = \u221220.0; Kelly f = (0.818\u00d70.30 \u2212 0.70)/0.818 \u2248 \u22120.56, quarter-Kelly rounds to zero), and even that \u22128.3% is flattered: it credits the full 4.9%/yr dividend on the 70% loss path where kill #2 cuts the payout, so the honest path-dependent EV is \u2248 \u221217% over 2.5y, far below the ~6.5%/yr INDO FR hurdle. There is no variant perception to rescue it \u2014 the analyst's own priors line equals the market, the archetype-mandated \"concrete discovery catalyst\" is spent (HY2026 printed and absorbed; FY2026 LK is a review trigger, not a catalyst), and at 1,840 the stock is ~17\u201320x through-cycle EPS ~100 with no NAV margin of safety (the DSNG no-margin-of-safety pattern). The 0.30 p_up is, if anything, generous given the absent catalyst and the deserved-neglect float cap; the trade is dead on arrival."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

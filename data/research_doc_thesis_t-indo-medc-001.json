@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-MEDC-001",
+  "title": "Medco Energi Internasional (MEDC.JK)",
+  "meta": {
+    "id": "T-INDO-MEDC-001",
+    "book": "INDO",
+    "ticker": "MEDC.JK",
+    "name": "Medco Energi Internasional",
+    "sector": "ENERGY",
+    "factors": [
+      "oil_gas",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.6,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-12T12:38:42+07:00",
+    "drafted": "2026-09-12T10:37:24+07:00",
+    "judged": "2026-09-16T13:00:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": null,
+    "target": null,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Phase 2: placed from bottom-up NAV/share outcome, not before",
+    "price": 1515.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 75.0,
+    "p_down": 0.58,
+    "down_pct": -35.0,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": 10.7,
+    "horizon_years": 3.0,
+    "carry_pct": -0.5,
+    "kelly_full_pct": 40.5
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (primary anchor); cross-anchor dividend_income_anchor 0.60 via Medco Power contracted flows",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "action": "exit_full",
+      "note": "thesis-invalidating level = a settled through-cycle <$45 Brent environment with upstream FCF negative AND reserve-replacement <1.0; NOT a stop; Phase 2 fills from NAV math"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-09-30",
+      "action": "review",
+      "condition": "reserve-replacement Q1 (Block A decline) unresolved; no 2P statement filed"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1.0,
+      "action": "review",
+      "name": "reserve_replacement_ratio",
+      "source": "AR2025 2P table (page 75): 2P 564 mmboe 2025 vs 493 mmboe 2024 (rr>1.0 confirmed FY25); monitor Block A runoff"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-12T10:37:24+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "draft-rescue",
+      "at": "2026-09-12T12:38:42+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-09-16T13:15:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "verdict_stamped",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "vetoed",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    }
+  ],
+  "kill_outcome": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**RESCUE (2026-09-12):** the prior framework-only draft was an artifact of a network-availability error\n(Medco IR site reported unreachable). Primary sources ARE reachable this session; all load-bearing\nparameters below are now filled and cited to filed figures. No price, flow, or market-implied number has\nbeen viewed. Phase 2 fills entry/exit/valuation-on-share levels from this committed base.\n\n**Model** \u2014 upstream E&P producer valued at through-cycle NAV (VAL_COMMODITY_CYCLICAL), not spot\nearnings, plus a DCF-on-contracted-cashflows component for Medco Power (dividend_income_anchor\ncross-anchor, rate 0.60).\n\n### 1. Production \u00d7 realized price = revenue (all AR2025)\n- **Total annual production 2025: 156.1 mboepd** [AR2025 p.38 production-by-asset table: total Oil & Gas\n  Production 156.1; = 147.1 mboepd conventional + 9.0 engineering/service Oman]; Oil/Gas split **28% oil /\n  72% gas** [AR2025 p.58 \"average production was 156 mboepd, comprising 72% gas and 28% oil\"]. 2026 guidance\n  **165\u2013170 mboepd** [AR2025 p.19].\n- **Realized oil price: US$66.6/bbl (2025)** (2024: $78.0) [AR2025 p.75 Operational Highlights: Average Oil\n  Price]. **Realized gas price: US$6.8/mmbtu (2025)** (2024: $7.0) [AR2025 p.75 Average Gas Price].\n- Revenue: **Total revenues FY2025 US$2,395.0M** (2024: $2,399.2M) [AR2025 p.172 income statement / p.74\n  highlights]; Oil&gas-sales contracts $2,189.5M, electricity-power contracts $73.8M [AR2025 p.368 Note 34].\n  Structural thesis holds: gas-weighted (72%) mix sells into a structurally short domestic gas market; half\n  of gas production is under long-term fixed-price contracts (de-risks oil-price volatility) [AR2025 p.113].\n\n### 2. Cash margin / cost-curve quartile\n- **Consolidated lifting cost \u2248 US$8.3/boe** \u2014 derived: Production & lifting costs $470.5M [AR2025 p.172]\n  / 57.0 mmboe/yr production (156.1 mboepd \u00d7 365). Sub-US$10 lifting cost places MEDC in the **bottom cost\n  curve quartile** among Indonesian E&P (favorable, PSC cost-recovery economics; E&P gross margin 55%:\n  E&P gross profit $837.0M / E&P external sales $1,525.5M [AR2025 p.409 Note 44]).\n\n### 3. FCF = OCF \u2212 (upstream capex + Medco Power capex)\n- **Operating cash flow FY2025: US$906.3M** (2024: $1,219.5M) [MEDC_FY25.pdf p.26 cash flow: net cash\n  provided by operating activities]. Revenue \u2192 OCF conversion = 906.3/2,395.0 \u2248 **38%**.\n- **Capex split FY2025 (balance-sheet): Oil & Gas US$402.1M; Power US$60.5M; Total US$462.6M** [AR2025\n  p.28 Capital Expenditure table]. (Segment basis: E&P $411.5M, Services $83.2M, Power $23.8M, total\n  $518.8M [AR2025 p.410 Note 44].) Note FY25 also carried one-off $355.0M business acquisition + $91.3M\n  financial-asset placement in investing [MEDC_FY25 p.26] \u2014 non-recurring.\n- **EBITDA FY2025: US$1,264.0M** (2024: $1,271.8M) [AR2025 p.74]. Operator capex coverage is strong:\n  906.3 OCF vs 462.6 balance-sheet capex (\u22482.0x cover).\n\n### 4. Leverage / FCF-at-trough-Brent (kill-critical sensitivity)\n- **Gross debt FY2025: US$3,646M** (2024: $3,300M) [AR2025 p.26/p.28]; cash $569.1M + restricted $59.8M\n  [AR2025 p.74]. **Net debt \u2248 US$3.0B**; **net debt-to-EBITDA \u2248 2.0x (management views)** (2024: 1.8x),\n  \"within our targeted\" range [AR2025 p.26]. Net Debt/Equity 1.28x [AR2025 p.74].\n- **Through-cycle Brent where upstream FCF turns negative: \u2248 US$45/bbl (analyst estimate, derived \u2014 not a\n  filed line).** Constructed from filed figures: at realized $66.6 oil / $6.8 gas the E&P segment gross\n  margin is 55% and lifting cost $8.3/boe; OCF \u2265 2x organic capex. Sustained Brent far below the ~$66.6\n  realized level \u2014 roughly halving O&G realisations \u2014 would be required to push upstream FCF negative,\n  implying a ~$45 Brent through-cycle breakeven, comfortably below the ~104 Brent war-premium macro frame\n  and the $74\u201385 range the prior idea card tested. Method stated; treat as the falsification input, not a\n  guarantee. Management confirms low-price resilience: \"sustained low oil prices \u2192 cost optimisation,\n  reductions in production costs and adjustments to capex/exploration\" [AR2025 p.113].\n\n### 5. Reserve base\n- **2P reserves 2025: 563.8 mmboe** (2P oil 123.5 + 2P gas 2,387.5 bcf); 2024: 493.4 mmboe \u2192 **reserve\n  replacement > 1.0 confirmed FY25** (+14% y/y); 1P total 385.7 mmboe; contingent resources 1,153.9 mmboe\n  [AR2025 p.75 / p.25]. \n- **Reserve life = 2P/production \u2248 9.9 years** (derived 563.8/57.0); AR states **2P Reserve Life Index 11.4\n  years** (composite incl. service/Oman) [AR2025 p.25/p.35].\n- **Block A (Aceh), 85% interest \u2014 net production 5.2 mboepd (2025)** [AR2025 p.38/p.41]; **decline**:\n  6.8 (2024) \u2192 5.2 (2025) = **\u221224% y/y**; from 8.4 peak (2022) -38% over 3y; gas 32.8\u219225.1 mmscfd (\u221223% y/y)\n  [AR2025 p.38/39]. Block A is being actively sustained \u2014 20-year PSC extension proposed Dec 2025, Phase 2\n  development to hold gas commitments [AR2025 p.41]. Offset by South Natuna Block B growth: 13.2\u219219.6 mboepd\n  (+49%, Terubuk/Forel start-up) and Block 60 Oman 12.6\u219213.6 mboepd [AR2025 p.38]. Reserve growth (564 vs\n  493) confirms replacement > 1.0 this year; the make-or-break is whether 2026-27 (full Corridor 24%+\n  Terubuk+Forel, guidance 165-170) offsets Block A runoff \u2014 2026 guidance is 5.6-8.9% above 2025 actuals.\n\n### Cross-anchor (Medco Power, contracted floor)\n- **Installed operating IPP capacity: 1,011 MW** (15 IPPs operating + 100 MW development; gas-fired ELB\n  109MW, Medco Ratch Riau 275MW, geothermal Sarulla 330MW/Ijen 35MW, solar PV, mini-hydro) [AR2025 p.49].\n- **Power segment external revenue FY2025: US$177.6M** [AR2025 p.409 Note 44]; electricity-power contract\n  revenue $73.8M + power lease/finance income on concession assets $10.9M [AR2025 p.368 Note 34]; power\n  sales 4,371 GWh (+6% y/y, 25% renewables), 2026 guide ~4,550 GWh [AR2025 p.47/17]. Power capex $60.5M\n  (2025) vs $141.5M (2024) \u2014 the power buildout is past peak capex, releasing cash [AR2025 p.28]. This\n  contracted, de-risked flow is the dividend_income_anchor analog (rate 0.60)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "I recall the market narrative being that MEDC is an integrated IDX energy name whose Brent-linked\nrealized-price upside is offset by a declining Block A reserve base and a heavy consolidated capex pipeline\n(upstream + Medco Power), with the gas-weighted domestic mix and the Medco Power contracted cashflows framed\nas the stability floor rather than the growth case."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate result \u2014 **CLEAR**",
+      "detail": null,
+      "markdown": "Completed from real filings; no manipulation-class signal raised:\n- **Auditor tier: Big-4.** KAP Purwanto, Susanti & Surja, member firm of Ernst & Young Global; **unqualified\n  opinion** \"present fairly, in all material respects... in accordance with Indonesian Financial Accounting\n  Standards\" [AR2025 p.156 auditor report + p.30]. Not on a special-monitoring (papan pemantauan khusus) list.\n- **PSAK 16 revaluation: NONE.** PP&E held at cost (straight-line depreciation; \"Land is stated at cost and\n  is not depreciated\") [AR2025 p.202 policy note i] \u2014 no revaluation-model earnings distortion.\n- **Cash-conversion / accruals: STRONG.** OCF $906.3M vs net-profit-attributable $100.9M (~9x; accreted by\n  non-cash DDA $547.5M + impairment $128.8M) [MEDC_FY25 p.26; AR2025 p.74] \u2014 cash conversion is clean, not\n  accrual-inflated. Net profit depressed by one-offs, not by operating weakness.\n- **Related-party concentration: LOW.** Trade receivables from related parties only $27,180 vs third-party\n  $454.7M (1Q26); the notable related-party arrangement (business-support services to Medco Power) is with a\n  consolidated subsidiary [1Q26 p.5; AR2025 p.30]. No affiliate-placement or special-notation (B/E/L/M/S)\n  signal found in the filings reviewed.\n- **Unaudited quarterly (1Q26):** standard for IDX quarterlies; annual figures are audited (Big-4). Not a\n  red flag."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** MEDC's upside is capped \u2014 a mature/declining upstream, a capital-hungry power buildout,\nand high-cost consolidated production mean it mostly pays a covered dividend rather than re-rate on the\ncommodity cycle.\n**Why wrong:** As an upstream producer it is a *long* Brent war-premium (realized prices rise with ~104),\nnot an oil-import loser; gas-weighted (72%) production sells into a structurally short domestic market at\noil-indexed prices, half under fixed-price contracts; E&P gross margin is 55% and lifting cost $8.3/boe \u2014\nbottom-quartile cost curve, not high-cost; reserve replacement is >1.0 (2P 564 vs 493 mmboe); and Medco\nPower's contracted revenue (a 1,011 MW IPP base, past peak capex) is a volatility-reducing floor that\nunderwrites the through-cycle NAV \u2014 the market anchors it to dividend capacity (base-up) and misprices the\ncapex-cycle turnaround (base-up to through-cycle NAV). FY25 net profit of only $100.9M (dragged by $128.8M\nimpairments + $355M one-off acquisition) reads as weakness but cash generation (OCF $906M) is intact.\n**What proves us wrong:** a 2P statement showing reserve replacement < 1.0 (Block A runoff), consolidated\ncost curve above the 2nd quartile with upstream FCF negative inside a ~$45-104 Brent range, or Medco Power\ncontracted EBITDA not servicing net debt \u2014 each is now quantified above and the fy25 evidence argues the\nopposite (replacement 1.14x, lifting $8.3/boe, net debt/EBITDA 2.0x)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a filing line",
+      "markdown": "1. Reserve replacement ratio 1.0)** [AR2025 p.75]; watch Block A\n   (5.2 mboepd, -24% y/y) vs Block B (+49%) and Corridor 24% add.\n2. Through-cycle Brent breakeven where upstream FCF turns negative lands at/below the present war-premium\n   band \u2192 high-cost producer, no margin of safety. **Derived breakeven \u2248 $45 Brent** from the filed 55% E&P\n   gross margin + $8.3/boe lifting cost; present ~104 Brent is far above it [AR2025 p.409/p.172].\n3. Consolidated net debt / trough-EBITDA above ~2.5x AND Medco Power contracted EBITDA insufficient to cover\n   it \u2192 the \"contracted floor\" is a segment-reporting illusion. **FY25: net debt/EBITDA \u2248 2.0x (within\n   target), Power revenue $177.6M, Power capex now only $60.5M (from $141.5M)** [AR2025 p.26/p.28/p.409].\n4. (Structural, macro-backed) Brent war-premium is a geopolitics overlay, not a durable supply incentive \u2014\n   if it reprices down as the regime marker trips (< ~81.5 Brent), the realized-price tailwind fades; macro\n   regime NEUTRAL, underwrite name-by-name not the complex. [AR2025 p.113 fixed-price-gas hedge halves this\n   exposure; the macro regime memo markers]"
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is three years forward and this position lost 30%. The most likely reason is that MEDC was a high-cost,\ndeclining-reserve producer all along: the 2P statement showed reserve replacement < 1.0 at Block A, the\nthrough-cycle Brent breakeven sat above the war-premium band once the geopolitics overlay repriced, and\nMedco Power's contracted EBITDA did not actually delever the consolidated balance sheet \u2014 so the \"contracted\nfloor\" and \"capex turnaround\" both failed and the name re-rated down with the complex, not up with it. I\nsized a commodity producer on a war premium instead of a sourced through-cycle price. The rescue data\nsoftens but does not retire this risk: Block A IS declining (-24% y/y) and its attrition must be beaten by\nSouth Natuna Block B, Corridor full-year and Block 60 growth to keep replacement above 1.0; if the 2026\n165-170 mboepd guide (and the ~45 Brent FCF breakeven) both hold, the downside case needs a real reserve/price\ndouble miss."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**Drew (BEAR) \u2014 VAL_COMMODITY_CYCLICAL attack on T-INDO-MEDC-001**\n\n1. **The \"$45 Brent through-cycle FCF breakeven\" is a derived guess, not a filed line** \u2014 extrapolated from one year's 55% margin and $8.3/boe lifting cost. Every historical downcycle hits realized prices faster than cost cuts, and your gas is 72% of boe. Halving realisations needs only ~35% below the ~104 war-premium; your own regime trips below ~81.5. Stress the breakeven against the 2020 trough before trusting it.\n\n2. **Reserve replacement >1.0 is the wrong test; the 2026-27 2P statement is, and evidence already argues runoff.** Block A fell -24% y/y (-38% over 3y) to ~3% of production; Block B's +49% was start-up flush. Replacement was carried by undeveloped and contingent additions. If 2027 shows replacement <1.0 ex-Block-A, the thesis dies \u2014 your 2027-09-30 date-kill is 12 months out, too slow to protect capital.\n\n3. **The \"contracted floor\" is mislabeled: half your gas is under fixed price, which caps BOTH directions.** You claim the ~104 Brent war-premium re-rate AND the fixed-price hedge. They contradict: fixed-price slugs simply won't re-rate with Brent, and if you're hedged to the jaw you're a slow lagging half-position, not the war-premium winner. Declare which leg carries the return \u2014 the floor or the re-rate \u2014 you cannot book both.\n\n4. **Leverage is rising into the turn, not deleveraging:** net debt $3.0-3.6B while OCF fell 26% ($1,219M\u2192$906M), and $355M acquisition + $128.8M impairment one-offs flattered the year. Power revenue ($177.6M) is ~6% of consolidated \u2014 that \"floor\" alone cannot service $3.6B gross debt. The $45-Brent downside you hand-wave away is exactly what trips the 2.5x net-debt/EBITDA gauge you set yourself.\n\n5. **The up/down ratio is an archetype artifact, not MEDC-specific:** +75/-35 and 0.42 loaded from the registry, zero bottom-up NAV math \u2014 no PDP NAV/share, no Power multiple, no target. A 2.14 ratio and +43 Kelly from a registry prior applied to a -24% declining core asset is false precision that would let you size on nulls. Rebuild the valuation before any sizing; up-down ratios on the back of thin air aren't sizing inputs.\n\n**Verdict: MAJOR_REVISION**\nThe $45 breakeven and reserve-replacement verdicts are both unfalsified this session, but the fixed-price-gas-vs-war-premium contradiction and the rising lever into declining Block A demand that the valuation be rebuilt before any sizing \u2014 the thesis cannot justify Kelly +43 on a null valuation."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **$45 breakeven acknowledged as derived, not filed.** Drew is correct: extrapolated from one year's 55% margin and $8.3/boe. The 2020 trough (realized ~$35-40) would have compressed margins further. Treat this as a working estimate with real uncertainty \u2014 the $45 figure is more a floor-of-confidence than a hard floor. Conservative posture: widen down_pct to reflect the unfalsified tail, not defend the number.\n\n2. **2027 2P statement is the real test.** Reserve replacement >1.0 confirmed FY25 (493\u2192564 mmboe), but Drew is right that Block B's +49% was startup flush and Block A IS in structural decline (-24% y/y, -38% from peak). The 9.9y RLI is a trailing metric. Kill date 2027-09-30 is indeed 12 months late for a capital-protecting signal. Add a Q1 2026 interim checkpoint: if 1Q26 production misses the 165-170 mboepd guide, update the replacement trajectory before FY annual filings land.\n\n3. **Fixed-price contracts cap the war-premium re-rate.** Drew's contradiction stands: half the gas is fixed-price \u2014 it does NOT re-rate with Brent. The thesis must declare one leg: the fixed-price half is the floor (downside protection), not the upside. The Brent-re-rate play applies only to the spot-indexed 50% and the oil 28%. Overweighting the war-premium narrative overstates the re-rating leverage; correct the variant perception to reflect only half the portfolio participates.\n\n4. **Leverage concern valid; Power floor is thin.** OCF fell 26% ($1,219M\u2192$906M) \u2014 a real trend, not a one-off. Power revenue $177.6M against gross debt $3,646M confirms Drew: ~6% of revenue cannot service debt. The \"contracted floor\" is a cash-flow stability story, not a deleveraging engine. Net debt/EBITDA 2.0x is within target today, but the trajectory matters more than the snapshot \u2014 monitor quarterly OCF/capex coverage ratio.\n\n5. **Kelly +43 is archetype-derived, not MEDC-specific NAV.** Drew is correct: no PDP NAV/share, no power DCF multiple, no through-cycle target. The +75/-35 and Kelly are loaded from the commodity_capex_turnaround registry prior applied to a specific name without bottom-up validation. Phase 2 must build the NAV before sizing. Do not treat the archetype ratio as a sizing input until the valuation is rebuilt from first principles."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED 0.60**\n\n**Grounds:**\n1. **No null valuation \u2014 rate reduced.** The thesis carries no NAV/share, no power DCF multiple, no through-cycle price target. The +75/-35 up/down, Kelly +43, and expected +10.7% are archetype artifacts applied to a specific name without bottom-up anchor. Phase 2 must rebuild from PDP NAV and a power-segment DCF before sizing. Rate 0.60 (vs registry 0.42) reflects this gap \u2014 the archetype prior is too generous without named-specific valuation discipline.\n\n2. **Reserve replacement is live, not settled.** FY25 2P rose 493\u2192564 mmboe (+14%, rr>1.0). But Block A is in structural decline (-24% y/y, -38% from peak), Block B's +49% was start-up flush, and the 2026-27 2P statement is the real test. The Q1 2026 production checkpoint Drew forced is correct. The 2027-09-30 kill date is 12 months too slow; the interim gate partially closes that gap.\n\n3. **Fixed-price floor is real but one-directional.** Half the gas is fixed-price \u2014 a downside buffer, not a war-premium re-rate lever. The revision correctly narrows the upside claim to the spot-indexed 50% gas and 28% oil only. The contracted-floor argument survives; the re-rating-leverage argument does not. This is an honest, narrower thesis \u2014 a net positive.\n\n4. **Leverage trajectory is the single most live monitor.** OCF fell 26% ($1,219M\u2192$906M) \u2014 a real trend. Net debt/EBITDA 2.0x is within target today, but direction matters. Power revenue ($177.6M against $3.6B gross debt) is a stability floor, not a deleveraging engine. OCF/capex coverage ratio is the right quarterly signal.\n\n5. **Source integrity is solid.** Big-4 auditor, unqualified opinion, PP&E at cost (no revaluation distortion), OCF 9x net profit (clean conversion), reserve replacement confirmed FY25. The rescue fixed the network-availability artifact. Sources are auditable and internally consistent."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "```yaml\nrisk_check:\n  checked_at: \"2026-09-16T13:00:00+07:00\"\n  actor: \"Voss (RISK_OFFICER)\"\n  script: the risk checker (deterministic constitution compliance)\n  book: INDO\n  ticker: MEDC.JK\n  instrument: equity\n  verdict: VETO\n  veto_reason: \"2 hard gates failed \u2014 no orders will be generated for this thesis\"\n\nphase_1_qc_gate:\n  level: WARN\n  hard_blocked: false\n  note: \"QC WARN (MARKET_PARAM_STALE jkse_dividend_yield_proxy_annual_pct stale >60d); non-integrity, does not block\"\n\nphase_2_book_compliance:\n  nav_idr: 15,163,548,000.54\n  governor: NONE\n  ramped: true\n  week_trades: 0\n  flags:\n    - \"cash 100.0% above ceiling 40% (deploy or journal)\"\n    - \"only 0 names post-ramp (NORM)\"\n    - \"short-horizon theses below minimum (NORM \u2014 journal, never force)\"\n    - \"long-horizon theses below minimum (NORM \u2014 journal, never force)\"\n  note: \"Book is empty and compliant. Cash ceiling flag is NORM for a fully-cash post-ramp book.\"\n\nphase_3_thesis_pipeline_gates:\n  thesis_id: T-INDO-MEDC-001\n  status: judged\n  verdict: PASS_REDUCED 0.60\n  thesis_book: INDO\n  thesis_ticker: MEDC.JK\n  thesis_direction: long\n  thesis_instrument: equity\n  verdict_ok: true\n  bindings_match: true\n  pipeline: PASS\n\nphase_4_dossier_gate:\n  path: data/dossiers/MEDC.fund record\n  result: MISSING\n  freeze_days_max: 60\n  verdict: VETO\n  why: \"dossier missing, malformed, incomplete, or > 60d stale \u2014 frozen for new risk\"\n  constitution_ref: \"the risk checker _dossier_frozen() \u2192 dp.is_file() = False\"\n\nphase_5_market_cap_gate:\n  source: the market-cap feed\n  schema_version: 1\n  generated_at: \"2026-09-05T11:09:27+07:00\"\n  age_days: 11\n  max_age_days: 45\n  records_count: 0\n  MEDC.JK_in_records: false\n  market_cap_result: null\n  verdict: VETO\n  why: \"market cap missing, stale, or malformed \u2014 run fund record refresh, then retry (fail-closed)\"\n  constitution_ref: \"the risk checker market_cap() \u2192 rec is None; the fund rules min_market_cap_idr: 1,000,000,000,000 IDR\"\n  fix: \"venv/bin/python3 calculation engine --refresh --book INDO --ticker MEDC.JK\"\n\njudgment:\n  veto_absolute: true\n  veto_code: \"HARD_GATE_FAIL\"\n  veto_gates:\n    - {gate: \"dossier\", why: \"data/dossiers/MEDC.fund record does not exist\"}\n    - {gate: \"market_cap\", why: \"the market-cap feed records empty \u2014 MEDC.JK has no market cap record\"}\n  phase_2_not_reached: true\n  next_action: \"Analyst creates dossier and refreshes market cap; re-submits for CONSTRUCT\"\n```\n\n**Deterministic VETO \u2014 2 hard gates failed. NO VETO would have been possible if the market-cap feed\ncontained a fresh MEDC.JK record AND data/dossiers/MEDC.fund record existed.**\n\nGate 1 \u2014 Dossier: `data/dossiers/MEDC.fund record` does not exist. Constitution requires a complete,\nvalid, fresh (\u226460d) dossier for any equity new-risk order. MEDC.JK is untitled; every equity\nbuy requires a filled, frozen dossier. This is a hard fail-closed gate \u2014 there is no work-around\nwithin the constitution.\n\nGate 2 \u2014 Market cap: `the market-cap feed` is schema_version 1, generated 2026-09-05 (11 days\nago, within the 45d window), but `records` is an empty dict `{}`. The `market_cap()` function\nreturns `None` for MEDC.JK. The script checks: rec exists, rec[\"book\"] == \"INDO\", rec[\"ccy\"] ==\n\"IDR\", rec[\"source\"] is a non-empty string. All fail because there is no record. The constitution\nsays: \"market cap missing, stale, or malformed \u2014 run fund record refresh, then retry\n(fail-closed).\" Minimum floor is 1,000,000,000,000 IDR (~US$63M). Fix: `venv/bin/python3\ncalculation engine --refresh --book INDO --ticker MEDC.JK`.\n\nThe pipeline gates (thesis status=judged, verdict=PASS_REDUCED, bindings match INDO/equity/long)\nall pass. The book is empty and fully compliant. QC is WARN (non-integrity market param stale),\nnot a hard block. Neither hard-gate failure is a commentary on the thesis quality \u2014 both are\nconstitution-mandated pre-conditions that must be satisfied before any sizing can occur.\n\nNo orders will be generated for this thesis in this session. Marked as killed for CONSTRUCT\npurposes."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(Phase 2 \u2014 blocked by VETO. Will follow if analyst creates dossier + refreshes mcap and\nre-submits.)"
+    }
+  ]
+}

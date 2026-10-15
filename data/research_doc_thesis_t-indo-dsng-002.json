@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-DSNG-002",
+  "title": "Dharma Satya Nusantara (DSNG.JK)",
+  "meta": {
+    "id": "T-INDO-DSNG-002",
+    "book": "INDO",
+    "ticker": "DSNG.JK",
+    "name": "Dharma Satya Nusantara",
+    "sector": "PLANTATION",
+    "factors": [
+      "cpo",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-DSNG-001",
+    "catalyst_date": "2026-08-30",
+    "estimates_committed_at": "2026-08-19T06:10:00Z",
+    "drafted": "2026-08-19T06:16:00Z",
+    "judged": "2026-08-19T06:33:02Z",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1355.0,
+    "target": 1500.0,
+    "kill": 750.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "NAV-constrained bull tail: ~8.6x FY25 EPS 173.63, only if CPO holds >=US$1,100; through-cycle NAV top ~1,302 / spot-NAV ~1,170-1,575. Not base case.",
+    "price": 1465.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.28,
+    "up_pct": 11.0,
+    "p_down": 0.72,
+    "down_pct": -45.0,
+    "net_div_yield_pct_pa": 3.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -20.8,
+    "horizon_years": 3.0,
+    "carry_pct": 8.5,
+    "kelly_full_pct": -292.5
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (0.42, base_down -35, n=40); VAL_COMMODITY_CYCLICAL pt6. p_up shaded 0.42->0.28: incentive-price trap (entry 1,355 > through-cycle NAV). dividend_income_anchor cross-check FAILS (~Rp1,044 at 4.5% yield < entry).",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 750.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating: CPO reverting toward through-cycle ~US$900-950 and de-rating toward NAV; thin tape fills 1-2 ARB bands below nominal ~1,000 -> realistic 720-850."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-08-30",
+      "action": "review",
+      "condition": "H1 FY2026 (due ~30-Aug) shows NI YoY <+5%, FFB/CPO volume decline, or OER <23.0%"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 0.55,
+      "action": "review",
+      "name": "net_debt_to_equity",
+      "source": "FY2025 AR / quarterly LK"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-19T06:16:00Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-19T06:18:10Z",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-08-19T06:24:00Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-19T06:33:02Z",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-DSNG-002",
+    "ticker": "DSNG.JK",
+    "book": "INDO",
+    "killed": "2026-08-19",
+    "px_at_kill": 1360.0,
+    "reason": "liquidity",
+    "px_now": 1465.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 7.7
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Source:** AR2025 audited FY2025 (via T-INDO-DSNG-001, page-cited); Q1 FY2026 LK unaudited (dossier, asof 2026-07-22); idea card 2026-08-17. EQF: weight audited over unaudited.\n\n**EARNINGS_QUALITY_FLAGS gate:** PASS. No notation/suspension (T-001 diligence). Related-party small: Daiken Rp34,064mn = 0.70% of raw materials; APR\u2192REA Kaltim loan repaid Apr-2025 (AR2025 Note 40). PSAK 16 revaluation surplus ~Rp2,585bn \u2248 22% of equity \u2014 optics-class; carry pre-reval BV (~Rp888/sh). Accruals (NI\u2212CFO)/assets FY25 \u22125.3%, FY24 \u22126.0% \u2014 clean.\n\n**Committed estimates:**\n- FFB 2,189,347t (+3.8%), CPO 631,046t (+4.9%), OER 23.32% (down from 23.92%); planted 111.9k ha, 102.1k ha (91%) mature, ~15y avg age (AR2025 p.45-46, p.117-118).\n- FY2025 revenue Rp12,314,712mn (+21.7%); NI attributable Rp1,840,490mn (+61.1%), EPS 173.63; DPS Rp47 (DPR ~27%) paid 8-Jul-2026. Card headline \"EBITDA 4.08T/33.1%\" NOT relied on \u2014 T-001 Bear showed it irreconcilable with gross profit; true level ~23.5-30.9%.\n- Q1 FY2026: revenue +7.75%, NI +16.92%, EBITDA +10.11% YoY (dossier) \u2014 growth continues, decelerated vs FY25, lapping high comp.\n- Net debt ~Rp4.9-5.1T / ~0.42x gearing (dossier, FLAGGED verify vs FY2025 AR) \u2014 Bear's 4.85T figure, not T-001's 3.49T.\n- Through-cycle CPO anchor US$865/ton 10y avg (FRED PPOILUSDM / WB Pink Sheet, T-001 Appendix); B40 (Jan-2026) diverts 2-3M tons/yr (dossier) \u2192 argue through-cycle ~US$950-1,100.\n- NAV inputs: base EBITDA ~Rp2,663bn (FY2023 actual +10% volume, T-001 Appendix), D&A 724, maint-capex 700, tax 26.8%, WACC 13%, terminal g 0-2.5%."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "addressing T-INDO-DSNG-001 kill, reason_tag valuation",
+      "markdown": "T-001 killed at 1,180 (price above through-cycle NAV ~Rp590-965, negative EV). Since 2026-07-13: (1) Q1 FY2026 revenue/NI/EBITDA all up YoY \u2014 the \"30-Aug deceleration\" trigger resolves toward continued (decelerated) growth; (2) net debt confirmed toward Bear's 0.42x (dossier), not 0.3x \u2014 lowers NAV; (3) price re-rated 1,180\u21921,355 (+15%) \u2014 deeper into the incentive-price trap. Gap NOT resolved: through-cycle NAV still below entry (Appendix)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, before document work",
+      "markdown": "Market narrative: DSNG at ~Rp1,350 is a cheap, deleveraging CPO planter re-rating on the B40 tailwind and a positive Q1 \u2014 discovery in progress."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At 1,355 (~7.8x trailing, ~3.5% yield) DSNG is still cheap; Q1 growth plus B40 justify the recovery off the June low.\n**Why wrong:** 7.8x is peak-earnings optics \u2014 at through-cycle CPO (~US$950-1,000) NAV is ~Rp566-1,320, below the 1,355 price (Appendix). Market pays for spot (~US$1,048) to persist; VAL_COMMODITY_CYCLICAL pt6: supply arrives 2-4y after price peaks. Q1 is the decelerated base case (+17% NI vs +61% FY25), not a fresh trigger.\n**What proves us wrong:** CPO holds \u2265US$1,100 through FY2027 AND H1 FY2026 NI >+20% AND FY2025 AR gearing \u22640.35x \u2014 evidence the through-cycle price reset, not just elevated spot."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, cited",
+      "markdown": "1. Two-buyer domestic concentration: 100% of CPO to Sinar Mas + Wilmar (AR2025 p.46) \u2014 bargaining-power risk.\n2. OER give-back 23.92%\u219223.32% (AR2025 p.117) \u2014 unexplained efficiency slip.\n3. Through-cycle NAV ~Rp566-1,320 < entry 1,355 even at B40-adjusted US$1,100 \u2014 the valuation kill is NOT resolved.\n4. Land-revaluation BV inflation: pre-reval BV ~Rp888 vs reported ~Rp1,138 \u2014 P/B 1.19x reported \u2248 1.52x pre-reval.\n5. Net-debt uncertainty: dossier ~42% gearing (\u2248Rp5T) vs T-001's 3.49T, flagged \u2014 higher figure bottoms the NAV band.\n6. Board/commissioner overhaul at 9-Jun-2026 RUPST (T-001 Bear pt6) \u2014 unmodeled strategy/dividend risk.\n7. EUDR (dossier \"Key Risks\"): certification cost + \"potential exclusion from premium markets\" overhang on the wood segment (~10% revenue, EU/US export) \u2014 uncaptured compliance/access risk."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. Most likely: El Nino fades, new supply arrives into B40 demand, CPO reverts toward ~US$900; DSNG de-rates toward through-cycle NAV (~Rp900-1,000 at US$900-950). Thin tape (30d value traded ~Rp6.7B) gaps a kill exit 1-2 ARB bands below nominal \u2014 realistic fill ~Rp720-850 (\u221244/\u221247%). Secondary: FY2025 AR confirms ~Rp5T net debt and/or the new board resets dividend/strategy."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n### BEAR / Drew \u2014 attack, 2026-08-19T06:18:10Z (frontier). Verdict: KILL_RECOMMENDED.\n\n**0. Fact-check.** Q1 FY2026 rev +7.75% / NI +16.92% / EBITDA +10.11% CONFIRMED (dossier). Net gearing ~42% (~Rp4.9-5.1T) CONFIRMED conservative (dossier \"verify vs AR\"; = T-001 Bear Rp4.85tn/0.42x), flagged. FFB 2,189,347t / CPO 631,046t / OER 23.32% (AR2025 p.117-118), two-buyer Sinar Mas+Wilmar (p.46) page-cited, survived T-001's verified attack. No fabrication.\n\n**1. Estimates.** Widest bar = through-cycle CPO anchor (US$865\u2192B40 US$950-1,100). Bull-end test for a pass: un-shade p_up to full 0.42 and grant +25% up_pct (above spot-NAV top): EV = 0.42\u00d725 + 0.58\u00d7(\u221245) + 9 \u2212 0.5 \u2248 \u22127%. Robust negative, not fragile.\n\n**2. Variant perception.** Entry 1,355 sits inside spot-NAV (1,170-1,575): market prices sustained spot, zero through-cycle margin. \"7.8x\" is peak-earnings optics; the dossier's \"P/E 5.0x\" is internally wrong \u2014 thesis's 7.8x correct. No edge claimed, correctly.\n\n**3. Catalyst.** H1 FY2026 (30-Aug) laps H1-2025 +80%; deceleration is base case and the thesis's own review trigger \u2014 skews against entry.\n\n**4. Base rate + sleeve.** commodity_capex_turnaround (0.42/\u221235/3y/n40) is the correct, harsher anchor \u2014 opposite of T-001's flattery. Sleeve NEGLECTED/UNSCREENED mismatch noted, but the harsher prior deflates. dividend_income_anchor correctly FAILS (~1,044 < 1,355).\n\n**5. Sizing.** 750<1,355<1,500 \u2713; down_pct \u221245=\u221244.65% \u2713 (mid 720-850); up_pct +11=+10.7% \u2713. But 30d value ~Rp6.7B \u2248 Rp223mn/day is ~9x under the Rp2B ADV floor \u2192 risk_check VETO; 20% ADV \u2248 Rp45mn/day \u2192 position ~nil. Dead on arrival.\n\n**6. New disconfirming fact.** EUDR (dossier \"Key Risks\"): certification + \"potential exclusion from premium markets remain an overhang.\" Thesis flags B40 but omits EUDR on the wood segment (~10% rev, EU/US export) \u2014 uncaptured compliance/access risk atop the policy tailwind.\n\n**7. Steelman pre-mortem.** Models the long losing from 1,355; omits that the analyst's own \"disciplined entry near ~900-1,000\" fallback is a phantom \u2014 no executable fill at Rp223mn/day, and 950 still carries two-buyer/OER/board risks to a 750 kill (\u221221%).\n\n**8. Anti-gaming.** estimates_committed_at 06:10 < draft 06:16, monotonic; committed estimates carry no market/entry price (1,355 frontmatter-only); p_up 0.28 below 0.42 undecomposed (T-001 re-attack pt4) but downward \u2014 no flattery; no prior log, no retro-edits. Clean.\n\n**9. Verdict: KILL_RECOMMENDED.** The name is untradeable before any valuation argument \u2014 ~Rp223mn/day is ~9x below the Rp2B universe floor, a deterministic risk_check VETO \u2014 and even granting the full 0.42 base rate with a +25% bull tail, expected return is still roughly \u22127%."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "(analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence)\n\n### ANALYST_INDO / Dani \u2014 revision, 2026-08-19T06:24:00Z\n\n**0. Accepted** \u2014 no fabrication; figures page-cited; net-debt ~Rp4.9-5.1T flag honored.\n\n**1. Conceded.** Even granting the full 0.42 base rate with a +25% bull tail, EV \u2248 \u22127%; my shaded p_up 0.28 gives \u221220.8%. Negative EV robust, not fragile \u2014 ev_math unchanged.\n\n**2. Conceded** \u2014 7.8x is peak-earnings optics; entry 1,355 inside spot-NAV prices sustained spot, zero through-cycle margin.\n\n**3. Conceded** \u2014 H1 FY2026 laps +80%; deceleration is base case and my own review trigger; skews against entry.\n\n**4. Conceded** \u2014 commodity_capex_turnaround is the correct harsher anchor; dividend_income_anchor fails (~Rp1,044 20% \u2192 re-attack routing NOT triggered."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Aldrich \u2014 2026-08-19T06:33:02Z. Verdict: KILL (reason_tag: liquidity).** Calibration: the kill ledger records reason_tags but no 180d counterfactual prices, so no drift correction is computable this session \u2014 judged fresh on the merits. Lint passed (pass: true; only the expected >1,600-word WARN from the append-only Bear log, which is house practice, not a FAIL). Stage_log chain verified monotonic and correctly cast: draft (06:16:00Z, ANALYST_INDO) 20%-move re-attack routing was correctly not triggered). Base rate: p_up 0.28 is a downward, honestly-argued deviation from commodity_capex_turnaround 0.42 \u2014 the argument (entry 1,355 sits above even the B40-adjusted through-cycle NAV top ~Rp1,302; the dividend_income_anchor cross-check fails at ~Rp1,044 on 4.5% yield) is sound, and both the analyst's own ev_math (\u221220.8%, confirmed at 3y horizon) and the Bear's bull-case stress (\u2248\u22127% even granting the full 0.42 with a +25% bull tail) land negative \u2014 the deviation passes the \"argued distance\" test on the conservative side. Load-bearing assumptions are document-cited (AR2025 page-cited, dossier, FRED PPOILUSDM / WB Pink Sheet, T-001 Appendix), and there is no price-history anchor or consensus-quarantine violation. The thesis does not survive Drew's strongest sentence: ~Rp223mn/day 30d ADV is ~9x below the Rp2B universe floor (the fund rules `universe.INDO.equities.min_avg_daily_value_idr: 2,000,000,000`), a deterministic risk_check VETO that renders the name untradeable at any position size before the valuation argument is even reached \u2014 and that is the single dispositive reason. KILL."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)\n\n---\n### Appendix \u2014 VAL_COMMODITY_CYCLICAL output contract (Phase 2, market-informed)\n- **Through-cycle NAV/sh** (10.6B sh; WACC 13%, g 0-2.5%; ND 4.9-5.1T): US$865 \u2192 **Rp566-830**; US$950 \u2192 **Rp714-1,015**; US$1,100 \u2192 **Rp962-1,302**. Band **~Rp566-1,320**; entry 1,355 ABOVE the top.\n- **NAV at spot** (US$1,048; dossier trailing EBITDA 3.78T): FCF 2,260 \u2192 EV 17.4-21.5T \u2192 **Rp1,170-1,575** \u2014 entry inside the spot band = market prices sustained spot, zero through-cycle margin.\n- **Cost-curve:** 2nd quartile (T-001, soft); OER 23.32% above national ~20-22% range; 91% mature, ~15y age \u2014 mid-cycle, not depleting.\n- **Realization haircuts:** export wedge (BK US$148 + PE 12.5% of HR \u2248 US$270-275) caps the domestic netback (T-001); B40 funds demand.\n- **Dividend-capacity vs NAV:** through-cycle FCF/sh ~Rp136-190 at 25% payout \u2192 Rp34-48 \u2192 yield-on-NAV 3-4.5%; the 3.5% trailing yield is spot-linked \u2014 dividend_income_anchor FAILS (~Rp1,044 at 4.5% yield).\n- **Net-debt/trough-EBITDA:** ~Rp5.0T / ~Rp2,925bn (US$950) \u2248 1.7x \u2014 survivable, but partly a spot-price artifact.\n\n### IDX microstructure\nFree float ~38-40% (Oetomo 29.2% + Triputra/Rachmat 30.7% + Boentoro 1.79%); no pledges; no rights issue since 2013 IPO. 30d value traded ~Rp6.7B (screen 2026-08-19) \u2014 ~Rp223mn/day, BELOW the Rp2B ADV universe floor (min_avg_daily_value_idr \u2192 risk_check VETO). Rp200-5,000 tier ARA 25%/ARB 15%; a capitulation gaps several down-limit sessions. Board lot 100.\n\n### Currency & edge\nIDR-modeled (100% domestic CPO sales, IDR dividends; USD only via HR/reference-price). **Edge: none claimed** \u2014 kill-revisit documenting the valuation kill stands; the ~900-1,000 entry is a phantom at Rp223mn/day (no fill). Watchlist trigger {price,<,1000} retained as documentation only. Flows stale (fund record empty) \u2014 no flow signal used."
+    }
+  ]
+}

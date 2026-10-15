@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-TAPG-002",
+  "title": "Triputra Agro Persada (TAPG.JK)",
+  "meta": {
+    "id": "T-INDO-TAPG-002",
+    "book": "INDO",
+    "ticker": "TAPG.JK",
+    "name": "Triputra Agro Persada",
+    "sector": "PLANTATION",
+    "factors": [
+      "cpo",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-TAPG-001",
+    "catalyst_date": "2026-10-31",
+    "estimates_committed_at": "2026-10-10T10:15:51+07:00",
+    "drafted": "2026-10-10T10:15:51+07:00",
+    "judged": "2026-10-10T12:26:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1840.0,
+    "target": 2196.0,
+    "kill": 1240.0,
+    "max_chase_pct": 2.0,
+    "entry_mode": "limit",
+    "target_rationale": "revised through-cycle frame: mid-cycle EPS ~186 (net income ~3.70tn, the 2025 peak, no own-volume lift) x 11.5x + IDR 57/sh net cash, held only while own-volume growth shows up in the quarterly prints",
+    "price": 2020.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 19.4,
+    "p_down": 0.58,
+    "down_pct": -32.6,
+    "net_div_yield_pct_pa": 5.5,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 4.7,
+    "horizon_years": 3.0,
+    "carry_pct": 15.5,
+    "kelly_full_pct": 79.4
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (rate 0.42, +75/-35, 3y, n=40; Capital Returns capital-cycle framework + own IDX coal/nickel cycle)",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1240.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop \u2014 a full CPO down-cycle repricing below the 52-week low (1,255); the deeper trough-EPS repricing (~990) is the pre-mortem tail"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-10-31",
+      "action": "review",
+      "condition": "Q3-2026 results printed with no like-for-like own-volume growth"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 22.0,
+      "action": "review",
+      "name": "net margin",
+      "source": "TAPG.JK quarterly income statement, Q3-2026"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-10T10:15:51+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-10T11:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-10T12:26:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-TAPG-002",
+    "ticker": "TAPG.JK",
+    "book": "INDO",
+    "killed": "2026-10-12",
+    "px_at_kill": 2010.0,
+    "reason": "other",
+    "px_now": 2020.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 0.5
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 before any market number",
+      "markdown": "Committed before any market-implied number; every input is from the TAPG.JK dossier alone.\n\nMid-cycle earnings power. Dossier net income: 2022 2.98tn, 2023 1.61tn (trough), 2024 3.12tn, 2025 3.70tn; H1-2026 2.04tn (0.74 + 1.30, line 26). I normalise to mid-cycle net income IDR 3.45tn, EPS IDR 174 on 19.853bn shares (line 45).\n\nCapitalisation. ~36% ROE (line 49) on a net-cash balance sheet (cash 1.651tn vs debt 1.099tn, lines 31/33): 174 x 11.5 + IDR 57/sh net cash (cash 2.204tn less debt 1.078tn, line 52) \u2248 **IDR 2,050 = bottom-up fair value**.\n\nTarget. The same multiple three years out \u2014 EPS IDR 227 (net ~4.5tn, ~10%/yr off own-fruit volume as the planted area matures): 227 x 11.5 + 57 \u2248 **IDR 2,665 (+33%)**.\n\nKill. **IDR 1,390 (\u221231%)** \u2014 a full CPO down-cycle repriced to trough earnings (2023: 19.3% net, 16.7% operating margin, lines 22-23). Falsification level, not a stop.\n\n*(Revised \u2014 see ## Revision; the figures above stand as the Phase-1 record.)*\n\nRegime: `commodity bloc as one beta` NEUTRAL \u2014 \"underwrite name-by-name, do not chase\"; INDO rate-sensitive AVOID."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "from memory, written before document work",
+      "markdown": "An Indonesian palm-oil name with a young-tree/capex profile is systematically underrated by a market that anchors on spot CPO, so the archetype's own-fruit-maturity inflection should deliver a mid-teens IRR."
+    },
+    {
+      "heading": "Market data \u2014 Phase 2",
+      "detail": null,
+      "markdown": "Screen 2026-10-10 (#11 INDO NEGLECTED, PLANTATION/CPO, mid band, thin coverage): price IDR 2,010; ADV IDR 48.77bn/day; mom12 +64.39%, mom6 +19.91%, mom1 \u221210.67%; off-52w-high \u221217.96%; vol 46.88%; corr_bench 0.40; 52w range IDR 1,255\u20132,480 (line 46); mcap IDR 39.90tn (line 44). Flow feed STALE.\n\nEligibility (floors mcap \u2265 IDR 1tn, ADV \u2265 IDR 2bn): mcap 39.90tn PASS (~40x); ADV 48.77bn PASS (~24x). Binding constraints: 46.88% vol and thin coverage; entry is a limit, not a chase of spot 2,010."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** TAPG is a peak-cycle producer whose ~10% yield is a melting ice cube \u2014 capitalised at a low-teens multiple (trailing P/E 9.86, line 47), the pullback off 2,480 read as the cycle turn, through-cycle earnings power not paid for.\n\n**Why wrong:** The through-cycle frame is not the spot frame: the 2023 trough (16.7% operating margin, line 22) proves the cost base survives a down-cycle, and the balance sheet is net cash (cash 1.651tn > debt 1.099tn, lines 31/33), so the payout is a cash-return policy, not distress. But capitalising the honest mid-cycle (EPS 155, Revision point 2) gives IDR 1,840 \u2014 *below* spot 2,010: spot already pays for the cycle, so entry must be a limit.\n\n**Deep-dive answers:**\n1. *Palm-price re-rate or own-volume/cost gains?* A re-rate, not own-volume. mom12 +64% is price/margin-led; the only volume proxy points the other way \u2014 Q1-2026 revenue 2.49tn vs Q1-2025 2.62tn (line 26). No estate-age, FFB-tonnage or CPO-ASP data exists (line 11), so the volume leg is unverifiable \u2014 a hope, and the mid-cycle EPS lift rests on it.\n2. *At what CPO price does FCF cover the payout?* Not at 2025's. Dividend IDR 201 (line 50) \u00d7 19,852.5m shares (line 45) \u2248 IDR 3.99tn vs FY2025 FCF 2.81tn (line 37), TTM FCF 2.42tn (line 39) \u2014 a ~IDR 1.2tn shortfall; revenue must rise ~34% to cover it.\n3. *Cycle turn or a re-set inside an intact up-leg?* A re-set. mom6 +19.91% and mom12 +64.39% are intact; mom1 \u221210.67% is a one-month de-rate inside 46.88% vol \u2014 noise against the trend.\n\n**What proves us wrong:** the payout breaks FCF coverage harder than 2025 does, or own-volume growth fails to appear in the Q3-2026 print (due ~end-Oct) \u2014 then the mid-cycle EPS lift is fiction and the multiple compresses on trough earnings.\n\n**vs the 08-19 kill (T-INDO-TAPG-001, valuation @1,830):** price is higher (2,010) \u2014 not a cheaper re-run; but revised entry 1,840 \u2248 the 08-19 level, and the frame is through-cycle, not the spent catalyst."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a line",
+      "markdown": "1. The payout is not FCF-covered: dividend IDR 201 (line 50) \u00d7 19,852.5m shares (line 45) \u2248 IDR 3.99tn vs FY2025 FCF 2.81tn (line 37), TTM FCF 2.42tn (line 39).\n2. Earnings are peak-margin: 32.5% net in 2025 (line 23) vs 19.3% in the 2023 trough (line 23) \u2014 2023 net income 1.61tn (line 18) shows mid-cycle can be under half of 2025.\n3. Earnings quality: 2025 net income 3.70tn exceeds operating income 3.66tn (lines 17-18) \u2014 profit flattered by non-operating items; the headline multiple understates the operating multiple.\n4. Negative like-for-like momentum: Q1-2026 revenue 2.49tn vs Q1-2025 2.62tn (line 26) \u2014 the latest YoY print does not support a rising-volume narrative.\n5. The company-specific leg is unverifiable: no estate-age, FFB-tonnage or CPO-ASP data (line 11)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Q4-2029 and the position is down 30%. Most likely: the war-premium bid faded, CPO normalised toward the 2023 trough, and the ~100% payout \u2014 never FCF-covered \u2014 was cut; with no dividend the market re-based TAPG on trough earnings (2023 net 1.61tn, EPS 81). Second: the own-fruit-volume lift never appeared, so mid-cycle EPS stayed near 140 while the stock de-rated. Third: a balance_of_payments_pressure regime capped the multiple."
+    },
+    {
+      "heading": "New evidence",
+      "detail": null,
+      "markdown": "Resubmission after the 2026-08-19 kill (T-INDO-TAPG-001, valuation @1,830), which rested on a spent dated catalyst. Since: the Q2-2026 quarter (revenue 3.36tn, net 1.30tn, line 26) lifted the earnings anchor; this revision cuts the carry to 5.5%, re-places entry 1,840 and kill 1,240, and drops the dated-catalyst frame."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **EV math is false.** 0.45\u00d730+0.55\u00d7(\u221232.2)=\u22124.2% gross; +7.0 carry\u22121.0 drag=+1.8%, not +15.8%. Own numbers are negative-EV; the trade clears only on a 7% carry this file says is unfunded. Up/down (30/\u221232.2) also \u2260 entry/target/kill (+32.6/\u221230.8). Unreproducible, mis-signed.\n2. **\"Mid-cycle\" EPS 174 is peak-tilted.** 2022-25 EPS 150/81/157/186; mean 144. 174 is 21% above mean, 93% of the 2025 peak \u2014 while the thesis insists peak earnings must not be capitalised. Honest 144 \u2192 FV 1713, BELOW spot 2010. FV \"above spot\" is an anchor artifact: 174 chosen so 174\u00d711.5+57\u2248spot.\n3. **Archetype mismatch.** commodity_capex_turnaround needs contracting capex/supply discipline. TAPG capex is flat (0.74/0.80/0.59/0.62tn) and payout exceeds net income (3.99 vs 3.70tn) \u2014 a harvest-mode dividend name, not a capex turnaround. Base rate +75/\u221235 3y; the thesis's own 3y target is +33% \u2014 sub-base-rate.\n4. **It is palm-price beta; desk says don't chase.** Deep-dive #1 concedes +64%/12m is \"a re-rate, not own-volume\"; Q1-26 revenue fell YoY (2.49 vs 2.62). \"corr_bench 0.40 \u21d2 84% idiosyncratic\" is a non-sequitur \u2014 IDX correlation says nothing about CPO beta. Commodity bloc NEUTRAL: \"underwrite name-by-name, do not chase.\"\n5. **Load-bearing assumption self-refuted.** Target net income 4.5tn is 22% ABOVE the 2025 peak and rests on own-fruit volume the thesis calls \"unverifiable \u2014 a hope.\" Upside admitted unverifiable = no support.\n6. **Coverage claim contradicts its own support.** Payout 108% of net income while cash rose 1.309\u21921.651tn: the IDR 201 dividend is not repeatable as stated; a ~1.2tn/yr FCF shortfall \u2248 one year of cash. The 7% carry is the weakest leg.\n7. **Kill mis-built.** 1390 = 17.1x trough EPS, not a trough repricing; the 52w low 1255 is already below it. Recent realized range, not a tail.\n8. **vs the 08-19 kill:** 2010 > 1830 \u2014 genuinely worse, not cheaper. Sole delta is one price-led Q2-26 quarter.\n9. **Anti-gaming fails.** The card (asof 10-05) already carried P/E 9.5, ~9.4% yield, ADV, price; estimates \"committed first\" on 10-10 held that data. Entry pegged ~2% under a FV set to spot; catalyst_date 2026-10-31 invented (dossier: \"not dated\").\n\nDrew: KILL_RECOMMENDED \u2014 false negative-EV payoff, peak-tilted \"mid-cycle\" (FV 1713 < spot 2010), self-refuted volume leg, archetype mismatch."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. EV math \u2014 rebutted.** Drew dropped the horizon multiplier on the carry. Template: p_up\u00b7up + p_down\u00b7down + net_div_yield_pct_pa\u00b7horizon_yr \u2212 drag; horizon_y=3, so 0.45\u00d730 + 0.55\u00d7(\u221232.2) + 7.0\u00d73 \u2212 1.0 = 13.5 \u2212 17.71 + 21 \u2212 1 = **+15.8%** = frontmatter (lint \u00b13pp). 30/\u221232.2 sit within 3pp of the 32.6/\u221230.8 levels.\n\n**2. Peak-tilted EPS \u2014 conceded.** 2022-25 EPS 150/81/157/186, mean 143.5; 174 was peak-tilted. Cut to 155: FV 155\u00d711.5+57 = **1,840  net income: harvest-mode, not capex contraction. p_up 0.45\u21920.42 (registry rate). Still clears trough survival (2023 op margin 16.7%, net cash); label stands, fit flagged.\n\n**4. CPO beta \u2014 partly conceded.** corr_bench 0.40 \"84% idiosyncratic\" is a non-sequitur (IDX, not CPO, beta) \u2014 struck. Conceded price-led. The new 1,840 entry is a limit below spot: no chase.\n\n**5. Target \u2014 conceded.** 4.5tn was 22% above the 2025 peak on unverifiable volume. Cut to ~3.70tn (EPS 186, no lift): target 2,665\u2192**2,196**.\n\n**6. Carry \u2014 conceded.** net_div 7.0\u21925.5 (through-cycle FCF yield, not the uncovered payout).\n\n**7. Kill \u2014 conceded.** 1,390 = 17.1\u00d7 trough EPS, a stop. Cut to **1,240** (below the 1,255 52w low).\n\n**8. vs 08-19 \u2014 partly conceded.** Price is higher, true; but revised entry 1,840 \u2248 the 08-19 level, and the frame is capital-cycle, not the spent catalyst.\n\n**9. Anti-gaming \u2014 rebutted.** estimates_committed_at 10-10T10:15 precedes the Phase-2 market section; the 10-05 card numbers were unused. catalyst_date is the dossier's inferred Q3 print \u2014 a review trigger, not a catalyst.\n\n**Revised ev_math:** p_up 0.42, up 19.4, down \u221232.6, carry 5.5, drag 1.0 \u2192 **+4.7%** (\u22481.5%/yr, below the ~6.5% FR hurdle). net_div/expected_pct moved >20% \u2192 routed to Drew pre-Judge. Committed bottom-up estimates untouched."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL**\n\n1. EV fails on the Revision's own numbers: +4.7% over 3y \u2248 1.5%/yr, below the ~6.5% FR hurdle, and the Revision concedes it. A self-admitted sub-hurdle EV is a fail-closed KILL.\n2. Variant perception is gone. The honest mid-cycle FV (1,840) sits below spot (2,010): the market already capitalises through-cycle earnings. Nothing is mispriced to harvest \u2014 only CPO beta the desk says not to chase.\n3. The upside leg is admitted fiction. Target net income was cut to the 2025 peak (EPS 186, no lift) because own-volume growth is \"unverifiable \u2014 a hope.\" A target resting on the very peak the thesis refuses to capitalise, with its volume leg struck, is no support.\n4. Drew's core objections survive: peak-tilted EPS, archetype mismatch (harvest-mode, flat capex), price-led not volume-led, uncovered payout \u2014 conceded, none cured. The Revision narrowed the claims; it did not restore an edge.\n5. One clean repair: the kill (1,240, below the 1,255 52w low) is now a genuine trough-repricing falsification, not a stop. But a valid falsification without a valid edge is still no trade.\n6. This supersedes the 2026-08-19 kill of T-INDO-TAPG-001; that 30-day cooldown has elapsed, but this KILL starts a fresh 60-day judge_kill_cooldown.\n\nThe desk's marginal-over-killing record does not apply where the thesis's own EV is sub-hurdle and FV is below spot; no PASS is manufactured."
+    }
+  ]
+}

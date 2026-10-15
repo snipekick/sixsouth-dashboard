@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-JSMR-001",
+  "title": "Jasa Marga (JSMR.JK)",
+  "meta": {
+    "id": "T-INDO-JSMR-001",
+    "book": "INDO",
+    "ticker": "JSMR.JK",
+    "name": "Jasa Marga",
+    "sector": "INFRASTRUCTURE",
+    "factors": [
+      "infra_towers",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "infra_tower_compounder",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-07-18T03:21:12Z",
+    "drafted": "2026-07-18T03:21:12Z",
+    "judged": "2026-07-22T14:00:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": null,
+    "target": null,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": null,
+    "price": 2480.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.25,
+    "up_pct": 0.3,
+    "p_down": 0.5,
+    "down_pct": -0.25,
+    "net_div_yield_pct_pa": 0.03,
+    "fee_tax_drag_pct": 0.01,
+    "expected_pct": -0.03,
+    "horizon_years": 3.0,
+    "carry_pct": 0.08,
+    "kelly_full_pct": 1548.0
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.3,
+    "source": "the base-rate library infra_tower_compounder (n=15, horizon_y=3). DEVIATED DOWN from 0.55: the archetype's dominant failure mode (leverage + rising rates) IS the current macro regime per the macro regime memo's explicit AVOID tilt on INDO rate-sensitive names. BI is 100bp into a defensive hiking cycle at 5.75% with chatter toward 6%. The n=15 sample almost certainly contains zero observations matc",
+    "library": {
+      "rate": 0.55,
+      "base_up_pct": 35.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "action": "review",
+      "condition": ""
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "action": "review",
+      "name": "",
+      "source": ""
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-07-18T03:21:12Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-07-22T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-07-22T13:30:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-07-22T14:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-JSMR-001",
+    "ticker": "JSMR.JK",
+    "book": "INDO",
+    "killed": "2026-07-22",
+    "px_at_kill": 2720.0,
+    "reason": "other",
+    "px_now": 2480.0,
+    "px_asof": "2026-10-15",
+    "move_pct": -8.8
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sources:** JSMR investor-relations releases and RUPST/FY2025 results materials as reported across corroborating financial press (CNBC Indonesia, Tempo, Detik, Kompas, Bisnis.com, Investortrust, Infobanknews, Jakarta Daily; Mar-2026 for FY2025, Mar-2025 for FY2024), Indonesian statute text (UU 38/2004 as amended by UU 2/2022; PP 23/2024), White & Case regulatory summary. **Data-access limitation, disclosed up front:** direct WebFetch of Jasa Marga's own IR-hosted PDFs (investor.jasamarga.com/newsroom/*.pdf, incl. AR2025 and the 31-Dec-2025 LK) and of IDX-hosted filing PDFs returned HTTP 403 on every attempt -- the documents exist and are named but could not be read directly. Figures below are therefore financial-press reporting of the company's own releases, cross-checked across >=3 outlets where possible (single-source figures flagged). This is a real gap versus \"LK footnotes before headlines\" and should be closed with working PDF access in Phase 2; the statute/regulation citations below fetched cleanly and are true primary-source pincites, the financial figures are not.\n\n### Earnings Quality Gate\n- **IDX board/notation:** Main board. idx.co.id's live papan-pemantauan-khusus / notasi-khusus lists were 403-blocked; targeted search found no hit placing JSMR on either, and normal cum-dividend/RUPST processing through Jun-2026 is inconsistent with an active special-notation state. **Clean, checked-with-a-gap.**\n- **Related-party gravity:** 70% state-owned (Kementerian BUMN) / 30% public float -- transparent, not opaque. BUMN-to-BUMN construction JVs exist for new Trans-Sumatra segments: PT Hutama Marga Waskita (with Hutama Karya, Waskita Toll Road; Kutepat section) and PT Jasamarga Gedebage Cilacap (Waskita 20%; Getaci section). **Historical, not live:** KPK summoned a former JSMR CEO (Desi Arryani, tenure ended ~2020) re: Waskita Karya's fictitious subcontractors across 14 projects, ~Rp186bn state loss -- a Waskita-side fraud with JSMR as counterparty exposure, not a confirmed JSMR-side finding, predating current management. **Optics-class (BUMN-JV proximity risk, historical)** -- flagged because the card names this exact sector pattern, not on current-period evidence.\n- **Structure flags:** One historical rights issue (2016, ~Rp1.8tn, ~6.74% dilution, PMN-backed), none since. FY2024-25 deleveraging came from a **subsidiary-level** stake sale (35% of PT Jasamarga Transjawa Tol to a Metro Pacific Tollways/GIC-led consortium, Rp15.75tn total consideration, Rp6.1tn 2nd tranche Dec-2024) rather than a dilutive rights issue -- non-dilutive to parent EPS, but permanently cedes 35% of JTT's future toll cash flow to minority co-owners. No pledged-controlling-stake risk (majority holder is the state). Concession rights are booked as **intangible assets under ISAK 16** (service concession arrangements), amortized over the concession term -- **not** PSAK 73 (leases explicitly excludes concessions); the card's PSAK73/ISAK29 framing doesn't apply here, ISAK 16 does. Whether non-concession fixed assets (land/buildings) carry a separate PSAK 16 revaluation is unconfirmed (PDF-blocked) -- **optics-class if later confirmed**, not assumed.\n- **Accruals (NI-CFO)/avg total assets, 3y trend: could not compute.** Operating cash flow wasn't recoverable from press summaries at precision (only qualitative \"arus kas operasional kuat\" language found); statement PDFs 403-blocked. Genuine gate gap; the only proxy available (EBITDA margin flat ~67.0% through FY2025, core profit flat ~Rp3.7tn FY24->FY25) is weak and not treated as equivalent.\n- **Gate verdict: PASS WITH DISCLOSED GAPS, no manipulation-class flag confirmed.** Optics-class only: historical BUMN-JV/KPK proximity, unresolved PSAK16 non-concession-asset question, unaudited-preliminary FY2025 press figures pending the audited AR2025 (treat estimates below as **soft** until read directly), and the accruals gap. No confirmed manipulation-class flag, so estimates proceed with a haircut for the disclosed gaps rather than an auto-kill.\n\n### Regulatory reality: tariff formula, concessions, political-deferral risk\n**Tariff formula (cited to statute):** Adjusted **every two years**, on (i) regional BPS inflation over the prior 2-year window and (ii) the operator's Minimum Service Standard (SPM) fulfillment. Legal basis: UU 38/2004 Art. 48(3) as amended by UU 2/2022; PP 23/2024 Art. 83(1) (White & Case; Kompas.id). A recent cycle used realized inflation of 5.05% (Jan-2023 to Dec-2024). Management guides **20 toll segments** for adjustment in 2026. This is a mechanical, capped, lagging escalator set by the Minister, not discretionary JSMR pricing power.\n**Political-deferral risk:** Next general election 2029; last presidential election Feb-2024, last Pilkada Nov-2024 -- current 2025-2027 cycles sit in a **non-election window**, lower deferral risk than 2028-2029 cycles will carry. Politically visible Java hikes draw pushback even outside election years (2024 Jakarta-Cikampek 35% Class-I hike drew public criticism, Tempo/VOI). Model 2028-2029 adjustments as higher-deferral-risk, not stable.\n**Concessions:** **16 concessions, ~1,736 km**, **~1,264-1,294 km operational**, 5 sections in construction (Probolinggo-Banyuwangi, Yogyakarta-Bawen, Solo-Yogyakarta-NYIA Kulonprogo, Jakarta-Cikampek II Selatan, Akses Patimban -- the Rp10-12tn 2026 capex target). Tenors run **35-45 years**; 13 sections commonly cited at **40 years from 2005** (~2045 expiry, ~19y remaining), ex-Jakarta ORR Section S. **Data gap:** a full segment-by-segment tenor table couldn't be assembled this session -- these are portfolio-level secondary-source characterizations, not a verified schedule; close before Phase 2 sizing leans on any one segment's tenor.\n\n### Financial build (FY2024-FY2025, toll-segment basis)\nRevenue (toll+other, excluding pass-through construction/EPC): **Rp19.8tn FY2025 (+5.8% YoY)** -- toll Rp18.2tn + other Rp1.6tn (6+ outlets, Mar-2026). **EBITDA Rp13.3tn, margin 67.0%**, stable through FY2025. **Core profit ~Rp3.7tn**, essentially flat FY2024->FY2025 despite the revenue increase -- margin/financing-cost pressure absorbing toll-revenue growth. Dividend Rp1.1-1.13tn = **31% payout of core profit** (RUPST May-2026, DPS Rp156.2, unchanged YoY). **Reconciliation flag:** consolidated total-revenue figures including low-margin construction revenue show wider dispersion (Rp28.70tn FY2024 vs a differently-scoped ~Rp29.9-31.8tn FY2025 figure, inconsistent YoY direction reported) -- likely a toll-only vs toll+construction+subsidiaries scope difference, unresolved this session; toll-segment figures above are used as the load-bearing base since they isolate the regulated-infrastructure economics this card prices, not the pass-through EPC business.\n**Leverage (load-bearing):** Debt/EBITDA improved **6.9x (FY2023) -> 4.7x (FY2024)**, driven by the 35% JTT stake sale, not organic deleveraging -- capex stays ~Rp10-12tn/yr against Rp13.3tn EBITDA, so underlying FCF does little further deleveraging alone. ICR improved **3.13x (FY2024) -> 3.7x (FY2025)**; interest-bearing D/E ~1.2x. Short-term bank debt spiked to Rp10.6tn (Sep-2024, bridge financing ahead of JTT proceeds) vs Rp4.49tn a year earlier -- real refinancing-wall risk between asset-recycling events. Marginal cost of debt ~7.5% (2025 guidance) vs BI-Rate 5.75% heading toward a chattered 6% (the macro regime memo) -- a ~150-175bp spread that **reprices on bank-debt/floating tenors faster than the 2-year tariff escalator resets**, the funding-cost/escalator mismatch this card requires. First-order headwind given BI's defensive (not discretionary) hiking cycle per Ferrand's regime note.\n**AFFO, rupiah terms (approximate, wide error bars):** EBITDA Rp13.3tn - cash interest (proxy via ICR: ~Rp13.3tn/3.7x = ~Rp3.6tn) - cash tax (~22% statutory, rough pre-tax base) - maintenance capex. **Could not isolate maintenance from expansion capex this session** (one blended Rp10-12tn 2026 figure dominated by 5 active new-builds) -- the single largest unresolved input here. AFFO is directionally well below EBITDA once real cash interest and true maintenance capex are removed. Converting to a **yield** needs price/EV, banned in Phase 1 -- the AFFO-yield-vs-10y-FR check (10y FR (IDR) 7.26%, TradingEconomics, asof 2026-07-08, house convention per T-INDO-PNBN-001) and EV/EBITDA vs peers are deliberately left to Phase 2's price-dependent Valuation section, not computed here."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: Jasa Marga is seen as Indonesia's dominant, state-controlled toll-road bellwether -- a bond-like, low-growth \"toll collector\" whose reported earnings are perpetually squeezed by heavy construction-phase debt and government-deferred tariff hikes, with any narrative optimism resting on the eventual free-cash-flow payoff once the current wave of new concessions (Trans-Sumatra and the five Java/other sections under construction) finishes building and starts collecting."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** JSMR is a stable, state-backed toll-road compounder with an expanding 1,736km network, mechanical inflation-linked biennial tariff resets, and improving leverage post-JTT stake sale \u2014 a bond-proxy with growth optionality in Indonesia's infrastructure buildout.\n\n**Why wrong:** The funding-cost/escalator mismatch is acute and active. JSMR's Rp10.6tn floating-rate bank debt reprices quarterly while biennial tariffs reset on 2-year lagged CPI \u2014 BI's defensive hiking cycle (5.75%, chatter to 6%) compresses real AFFO faster than tariff resets can recover it. This is exactly the archetype's dominant failure mode, not a future tail risk. The JTT stake sale ceded 35% of permanent toll cash flows without fixing the structural mismatch \u2014 deleveraging was cosmetic, not organic. Best-effort AFFO cannot clear the 10y FR 7.26% hurdle.\n\n**What proves us wrong:** BI reverts to neutral/accommodative by H2 2027; tariff reform accelerates reset cadence; asset recycling at premium valuations eliminates floating-rate exposure; or traffic growth surprises materially above GDP."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. The macro regime note (the macro regime memo, 2026-07-11) tilts AVOID on \"INDO rate-sensitive (banks NIM, property, consumer discretionary)\" and records BI's defensive 100bp hiking cycle to 5.75% with desk chatter toward 6%. JSMR's Rp10.6tn short-term floating-rate bank debt reprices within quarters while the biennial tariff escalator (UU 38/2004 Art. 48) resets on a 2-year lagged-inflation basis \u2014 the infra_tower_compounder archetype's stated dominant failure mode (\"leverage + rising rates\") is the current regime, not a future tail risk.\n2. The 10-year FR (IDR) yield is 7.26% (TradingEconomics, 2026-07-08, per T-INDO-PNBN-001 house convention). Best-effort AFFO computation yields ~Rp6.78tn against Rp62.5tn gross debt (AFFO/debt ~10.8%). At any realistic enterprise value (1.5-2.0x debt), AFFO yield falls to 5.4-7.2% \u2014 below or barely at the 10y FR 7.26% hurdle. The method card's core gate is not merely untested; best-effort computation suggests it fails.\n3. BI's 100bp defensive hike to 5.75% with 6% chatter directly triggers the funding-cost/escalator mismatch (floating-rate debt reprices quarterly, tariffs reset biennially on lagged CPI) that the infra_tower_compounder archetype names as its dominant failure mode \u2014 the mismatch is not hypothetical, it is the current regime."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2029 and this position lost 30%. The most likely reason is BI's defensive hiking cycle extended to 6.25% by Q1 2027 and held through 2028, repricing JSMR's Rp10.6tn floating-rate bank debt stack (+~Rp159bn annual interest vs baseline) while the 2026 and 2028 biennial tariff resets delivered only lagged-CPI passthrough \u2014 funding costs ran 6-8 quarters ahead of revenue recovery. The 35% JTT cession compounded per-share AFFO erosion, permanently reducing corporate capacity to service remaining debt. The market repriced JSMR from compounder to bond-proxy as the AFFO yield gap versus 10y FR 7.26% became undeniable. AFFO was never computed before entry \u2014 a Phase 1 gap was the original sin."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**BEAR ATTACK \u2014 Drew (BEAR), 2026-07-22T13:00:00+07:00**\n\n1. FACT-CHECK: This thesis is built on an AFFO-yield story \u2014 yet AFFO cannot be computed. The analyst admits the blended Rp10-12tn capex figure cannot be split between maintenance and expansion capex. Without that split, the method card's core gate (AFFO yield must clear the 10y FR 7.26% with spread) is not deferred \u2014 it is impossible. The ICR-derived cash-interest proxy (Rp13.3tn / 3.7x = Rp3.6tn) further understates true cash interest: ICR is EBIT/interest, not EBITDA/interest. Using EBITDA as the numerator inflates coverage. Real cash interest is higher, real AFFO is lower.\n\n2. ESTIMATES: Rp10.6tn in short-term bank debt at ~7.5% marginal cost against BI heading to 6% means each 25bp hike adds ~Rp26bn in annualized interest on that tranche alone \u2014 before any fixed-rate refinancing rollovers. The Rp10-12tn annual capex pipeline (5 active new-builds) against Rp13.3tn EBITDA leaves zero organic FCF for further deleveraging. The 35% JTT stake sale bought time, not a solved balance sheet \u2014 and permanently ceded 35% of JTT's toll cash flows, reducing AFFO-per-share and corporate debt-service capacity simultaneously.\n\n3. VARIANT PERCEPTION: The \"Market believes / Why wrong / What proves us wrong\" block is blank. Owning 1,736km of toll roads is publicly disclosed \u2014 the market already prices this. A thesis without an articulated variant perception has no tradeable edge, only sector exposure.\n\n4. CATALYST: No catalyst_date, no entry level, no exit target. The 2026 tariff adjustment for 20 segments is a mechanical biennial reset pegged to lagged 2-year CPI (5.05% for the recent cycle) \u2014 the baseline, not a catalyst. If management's guide IS the catalyst, the thesis must argue by how much the adjustment surprises versus market expectations. It does not.\n\n5. BASE RATE: The analyst keeps 0.55 as-is, arguing toll roads are the archetype's named use-case. But the macro regime (Ferrand, 2026-07-11) explicitly tilts AVOID on INDO rate-sensitive names. BI is 100bp into a defensive hiking cycle at 5.75%, heading to a chattered 6%. The archetype's stated dominant failure mode \u2014 \"leverage + rising rates\" \u2014 is not a tail risk. It is the current macro regime. 0.55 should be deviated DOWN, not kept as-is.\n\n6. SIZING: EV math, entry plan, exit plan, and kill criteria are all blank. A position that cannot be sized cannot be taken.\n\n7. DISCONFIRMING FACT (new): The macro regime's AVOID tilt on rate-sensitive sectors directly implicates JSMR. BI's defensive hiking activates the exact funding-cost/escalator mismatch the archetype lists as its dominant failure mode \u2014 floating-rate bank debt reprices within quarters while the tariff escalator resets on a 2-year inflation lag.\n\n8. PRE-MORTEM: It is mid-2029. BI reached 6.25% by Q1 2027 and held. Floating-rate debt repriced while the 2026 tariff delivered only inflation passthrough. JTT's ceded 35% compounded the per-share AFFO decline. The infra premium compressed to bond-proxy reality as AFFO yield fell further below the 10y FR. JSMR lost 30%. The thesis never computed AFFO yield before entering \u2014 payment for a Phase 1 gap.\n\n9. ANTI-GAMING: Stage log clean, gaps disclosed honestly. No gaming \u2014 the thesis is incomplete, not deceptive.\n\n10. VERDICT: **MAJOR_REVISION.** The toll-road compounder concept is not broken on its own terms, but launching this thesis while BI is defensively hiking with a blank AFFO computation, zero variant perception, no catalyst, no sizing, and a base rate ignoring the current macro regime renders the position untradeable. Minimum bar before Judge review: (a) isolate maintenance capex and compute AFFO; (b) compute AFFO yield vs 10y FR 7.26% at current market price; (c) model interest-expense impact at BI 6.0% and 6.25%; (d) articulate a concrete variant perception; (e) downward-deviate the base rate with written justification citing the macro regime AVOID tilt; (f) fill entry, exit, and kill criteria."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. AFFO (Bear points 1-2): Conceded.** ICR = EBIT/interest, not EBITDA/interest \u2014 the Rp3.6tn proxy overstates cash interest. Correcting: EBIT \u2248 Rp13.3tn - D&A(~Rp4tn est. for ISAK 16 concession amortization + fixed-asset depreciation) \u2248 Rp9.3tn; P&L interest \u2248 Rp9.3tn/3.7 \u2248 Rp2.5tn, but cash interest is higher given the Rp10.6tn floating-rate bank tranche at ~7.5% (Rp0.8tn) plus ~Rp52tn longer-tenor debt. Maintenance capex cannot be isolated from the blended Rp10-12tn. Best-effort AFFO: EBITDA Rp13.3tn - cash interest Rp3.9tn (blended 6.2% on Rp62.5tn gross debt) - cash tax Rp1.2tn (22% on pre-tax Rp5.4tn) - maintenance capex Rp1.5tn (~8% of Rp18.2tn toll revenue) = **Rp6.7tn**. Against Rp62.5tn gross debt, AFFO/debt = 10.7%. At any realistic EV (1.5-2.0x debt, Rp94-125tn), AFFO yield = 5.4-7.2%, at or below 10y FR 7.26%. **The thesis fails its method card's core gate.** This is a terminal Phase 1 finding \u2014 not deferrable to Phase 2.\n\n**2. Rate sensitivity (Bear point 2, 7): Confirmed.** At BI 6.0% (marginal ~7.75%) and 6.25% (~8.0%), incremental annual interest on the Rp10.6tn floating-rate tranche alone is ~Rp106bn and ~Rp159bn respectively. Funding costs run 6-8 quarters ahead of the biennial tariff reset cycle.\n\n**3-4. Variant perception & catalyst (Bear points 3-4): Conceded.** Variant perception filled below; the 2026 20-segment tariff adjustment is a mechanical biennial CPI-passthrough reset, not a market-surprise catalyst. No thesis-specific catalyst exists.\n\n**5. Base rate (Bear point 5): 0.55 -> 0.30.** The dominant failure mode IS the current regime. the macro regime memo tilts AVOID on INDO rate-sensitive; BI is 100bp into a defensive hike. 0.55 would require arguing this regime is NOT the failure mode \u2014 contradicting both card and macro note. The Governor should reject any higher deviation.\n\n**6. EV math & kill (Bear point 6):** Filled. p_up 0.25, up_pct 0.30, p_down 0.50, down_pct -0.25, net_div 0.03, fee 0.01, expected -0.03. Kill: JSMR  6.5% (terminal rate beyond which debt service overwhelms tariff recovery) OR 2028-12-31 (2.5y).\n\n**7. Pre-mortem (Bear point 8): Conceded.** Filled below \u2014 BI at 6.25%, floating-rate repricing, JTT cession compounding, infra-premium compression. AFFO was never computed before entry."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL. Reason tag: valuation.**\n\nThe thesis fails its own method card's core gate -- terminal, not deferrable. VAL_INFRA_TOWERS_TELCO requires AFFO yield to clear the 10y FR (7.26%) with spread. The analyst's best-effort AFFO computation (Rp6.7tn, transparent assumptions: blended 6.2% cost of debt, maintenance capex at 8% of toll revenue, 22% statutory tax) yields 5.4-7.2% against enterprise values of 1.5-2.0x gross debt. Even the upper bound falls below the hurdle before any spread. Three independent auto-kills converge: (1) the AFFO gate is failed on the analyst's own numbers, (2) EV math shows expected_pct = -0.03, and (3) the archetype's dominant failure mode -- leverage plus rising rates compressing real AFFO faster than tariff resets can recover -- is the current macro regime, not a future tail risk. BI's 100bp defensive hike to 5.75% (with 6% chatter) reprices the Rp10.6tn floating-rate bank tranche quarterly while the biennial tariff escalator resets on 2-year lagged CPI. The funding-cost/escalator mismatch is acute and active.\n\nThis is a **valuation** kill, not process. The analyst did honest work: corrected the Bear's ICR math (EBIT/interest, not EBITDA/interest), rebuilt interest from EBIT, isolated the floating-rate tranche for rate-sensitivity modeling, and produced a concrete AFFO with disclosed assumptions. The data gap (maintenance vs expansion capex unisolatable) was worked around rather than used as an excuse. The conclusion simply does not support the investment. A process kill would mean the work was not done; here it was done, and it killed the thesis. That is how Phase 1 should function.\n\nThe analyst's concession -- \"the AFFO gap is genuine and likely fatal; the thesis should probably be killed\" -- is correct and honest. No PASS_REDUCED is available when the core gate fails on the analyst's own best-case numbers. The pre-mortem describes the 30% drawdown path with clarity and no defense exists against it. This thesis should not proceed to Phase 2.\n(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)"
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

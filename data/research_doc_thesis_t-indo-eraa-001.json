@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ERAA-001",
+  "title": "Erajaya Swasembada (ERAA.JK)",
+  "meta": {
+    "id": "T-INDO-ERAA-001",
+    "book": "INDO",
+    "ticker": "ERAA.JK",
+    "name": "Erajaya Swasembada",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "digital_id"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "neglected_midcap_discovery",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-10-31",
+    "estimates_committed_at": "2026-09-26T10:30:00+07:00",
+    "drafted": "2026-09-26T10:31:00+07:00",
+    "judged": "2026-09-26T11:15:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 560.0,
+    "target": 960.0,
+    "kill": 420.0,
+    "max_chase_pct": 0.0,
+    "entry_mode": "limit",
+    "target_rationale": "FY2026E EPS ~103 x 9.3x (15.5% ROE, ~4% yield, dominant distribution share; EV/EBIT ~10x passes rational-buyer test at >10% growth); kept, not raised",
+    "price": 615.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.44,
+    "up_pct": 71.0,
+    "p_down": 0.56,
+    "down_pct": -25.0,
+    "net_div_yield_pct_pa": 4.17,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 26.7,
+    "horizon_years": 2.5,
+    "carry_pct": 9.43,
+    "kelly_full_pct": 212.9
+  },
+  "sizing": {
+    "script_pct": 10.0,
+    "pm_pct": 5.0,
+    "deviation_reason": "Judge PASS_REDUCED 0.5x applied to script recommended_pct 10.0 (=5.0) and capped by Voss independent hard_max 5.0% at-cost NAV: min()=5.0; feed gap resolved 2026-10-05 (the liquidity feed + the market-cap feed now carry ERAA.JK, ADV IDR 76.9B/day), so the prior fail-closed 0.0 anchor no longer binds."
+  },
+  "base_rate": {
+    "rate": 0.44,
+    "source": "neglected_midcap_discovery (the base-rate library): +55%/-30%, 2.5y",
+    "library": {
+      "rate": 0.44,
+      "base_up_pct": 55.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 420.0,
+      "action": "exit_full",
+      "note": "Falsification (from entry 560 = -25%; a gap-through may fill ~390-364 = -31/-35% realized, ARB-lock): full return of the discovery move, P/B ~0.69 - market re-judged a permanently lower-margin cash-burning franchise; NOT a stop; point 7"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "if Q3-2026 LK (2026-10-31) fails the CFO-conversion or GM test, review before this date; a sub-560 fill before the print is the only pre-print exposure (entry gate, point 5)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.4,
+      "action": "review",
+      "name": "cash_conversion CFO/NI LTM",
+      "source": "LK quarterly cash-flow statements"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-26T10:31:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-26T10:49:38+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-26T11:15:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Fundamentals only, from LK/statements: FY2025 NI IDR 1.196T (EPS 75.7) on revenue 76.6T, up from NI 1.033T (FY24) and 0.826T (FY23). H1-2026 NI 784B (+38% yoy, revenue +22%) \u2014 the delivery is live \u2192 FY2026E NI ~1.60T, EPS ~103. ROE 15.5%, gross margin 10.9%, net margin ~1.6%, book ~606/share, dividend 25/share maintained (~30% payout). Moat: largest device importer-distributor-retailer in Indonesia (distribution density = the method card's Indonesia-consumer variable); sustainable while distribution share and working-capital discipline hold.\n\n- **Target 960** = 9.3x FY2026E EPS 103. Justified: 15.5% ROE, ~4% yield, dominant distribution share; implies ~1.6x book and ~10x EV/EBIT \u2014 a rational buyer pays that for >10% growth; still mid-cycle for a quality IDX retail-distribution franchise, not a no-fade DCF.\n- **Kill 420** (\u221230%): falsification = the discovery move fully given back AND P/B ~0.69 \u2014 the market re-judged margins/working-capital as permanently impaired. Not a stop.\n- **p_up 0.44** = registry rate for neglected_midcap_discovery (already prices most failures falling short); no upward deviation despite H1-2026 delivery because ERAA sits inside the macro AVOID (consumer-discretionary). p_down 0.56.\n- **Carry**: net div yield 4.17% \u00d7 2.5y \u2212 1.0% fee/tax drag. **Expected 19.0%** = 0.44\u00d760 \u2212 0.56\u00d730 + 4.17\u00d72.5 \u2212 1.0.\n- **Priors**: rate 0.44 held (no raise, no haircut). Up/|down| 2.0 vs library 1.83 \u2014 the kill is a falsification level, not a stop."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "My prior on the market narrative: ERAA is a low-margin handset distributor whose FY2025 cash-flow miss (CFO ~0.2x NI) marks the earnings as low-quality, and the +71% six-month run is a retail/short-covering pop in a consumer-discretionary name that the strengthened macro AVOID tilt will roll over as the delivered Fed hike and IDR ~17,912 squeeze Indonesian consumers."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the run is a stocking/rotation artefact; thin ~1.6% net margin and collapsing cash conversion make this a value trap; when the AVOID binds, fair value is back near ~450-500.\n**Why wrong:** (1) H1-2026 NI +38% yoy on revenue +22% is earnings, not inventory \u2014 the FY2025 cash drain was a Q4 stocking event (inventory +63%, OEM pipeline) that 2026 sell-through is validating. (2) The moat is distribution density \u2014 deepest GT/MT logistics reach of any Indonesian device distributor, a working-capital/volume franchise earning 15.5% ROE, not a duration-short discretionary story. (3) Neglect is live: ~9 sell-side names, mean target below spot, forward P/E 9.7 \u2014 the street does not yet believe durable growth is here. (4) The telecom/digital-id adjunct (SIM, top-up, VAS insurance/leasing attach) cushions retail flag weeks, but I do not claim it makes ERAA non-discretionary \u2014 hardware sell-through dominates the mix.\n**What proves us wrong:** Q3-2026 LK (by 2026-10-31) shows CFO still 1.5\u00d7 revenue; gross margin <10.3% under the IDR squeeze (pass-through failing); or price retraces below 500 \u2014 the AVOID won and the neglect was deserved."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a filing line",
+      "markdown": "1. FY2025 LK cash-flow: CFO +225B vs reported NI 1,196B (0.19x) with inventory +63% yoy (11.64T vs 7.13T) and receivables +31% vs revenue +17% (1.8x divergence flag tripped, though AR is ~2% of revenue). If FY2026 LTM conversion stays <0.4x at the Q3-2026 print, the seasonal-stocking story is false.\n2. FY2025 gross margin 10.9%, H1-2026 10.7%. With IDR ~17,912 and USD-invoiced handset COGS, a print below ~10.3% means ERAA absorbs the FX squeeze instead of passing through \u2014 distributor economics break at scale.\n3. Macro binding (the macro regime memo 2026-09-26): Fed hike delivered, carry narrowed to +162bp, IDR \u22121.7%. If BI hikes \u226550bp cumulatively by Q4-2026 and handset unit sell-through (not IDR revenue) declines, the credit-financed upgrade leg cracks \u2014 the screen fingerprints ERAA CONSUMER/domestic_cycle, so this is live, not tail.\n4. 52w range 314-645: a close <420 (kill) means the re-rating is fully given back with washout-low retest risk; entry at spot ~600 with mom6 +71% has already used the chase allowance (max_chase_pct 3)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is early-2029 and this position lost ~30%. The most likely reason: the FY2025 cash-flow miss was NOT seasonal \u2014 inventory stayed high, FY2026-27 CFO stayed near zero, the earnings-quality flag was real; BI hiked to defend IDR into the delivered-hike carry sting, consumer installments cracked, unit sell-through fell, and the stock de-rated back below book \u2014 the macro AVOID worked and the momentum was a liquidity event that reversed. Competing failure: index candidacy never materialised and coverage never re-anchored \u2014 no discovery catalyst, neglect was deserved."
+    },
+    {
+      "heading": "Market data \u2014 Phase 2",
+      "detail": null,
+      "markdown": "- **Price 600** (2026-09-25 close, live yfinance; screen last_price 600), 52w 314-645, off-high \u22124.0%, beta 0.36.\n- **ADV IDR 76.4B/day** (universe_audit_INDO adv_book + screen adv_value) vs the card's IDR \u226550B floor \u2192 **PASSED**. Days-to-exit at 20% participation for any reasonable position <1 day; board lots fine. Note: the liquidity feed lacks the ERAA key, so size_position fails closed until refresh-adv \u2014 a feed gap, not a liquidity judgment.\n- Cap IDR 9.3T, float ~44% (6.79/15.56B), family-controlled; no pemantauan khusus, no special-notation letters, no rights-issue/affiliate disclosure stubs this session. **Foreign-flow feed STALE** (fund record empty) \u2014 no flow fact underwritten (method rule 5).\n- Trailing P/E 6.7, P/B 0.99, forward P/E 9.7, 9 sell-side, mean target below spot \u2014 neglect is live, not priced.\n- **Card Q1 (momentum vs artefact):** partly earnings-driven \u2014 H1-2026 +38% certifies it, but the move from the 314 washout is a large re-rating; entry at book value (0.99x), not a stretched multiple; chase cap at +3% is the guard.\n- **Card Q2 (moat vs XL/TLKM):** ERAA is not a carrier; it is the distribution tier beneath the telcos (their handset-subsidy channel) plus its own retail flags. Franchise sustainable while distribution density and working-capital discipline hold \u2014 underwrite the density, not the ARPU.\n- **Card Q3 (ADV/index eligibility):** 76B/day clears IDX80/Kompas100-class liquidity bars; index candidacy is a watch item (next constituent reviews), not an asserted admission.\n- **Discovery catalyst (concrete):** the neuralgic print is Q3-2026 unaudited LK published by 2026-10-31 \u2014 it must show CFO conversion improving and GM \u226510.3%. Q2-2026 already delivered the earnings proof; the Q3 print converts momentum into visibility. catalyst_date 2026-10-31."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": "analyst",
+      "markdown": "Conviction 3/5 \u2014 valuation and delivery are real; macro AVOID headwind is acknowledged, not waived. Own-Kelly 127% vs library-Kelly 121% (near-parity; the residual gap is the dividend carry, not a deviation in levels). Quarter-Kelly ~32% pre-haircut; constitution cap (max 10% NAV at cost) binds long before liquidity; INDO book is all-cash, so no sector/factor overlap haircut. Governance stated plainly: family-controlled, 44% float, no IDX notation \u2014 acceptable, monitored."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. **Fact-check**: no ERAA dossier exists (data/dossiers holds DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN) \u2014 the FY2025 CFO 225B / inventory 11.64T / receivables lines are attested, not independently verifiable in-repo. Screen 2026-09-26 confirms price 600, mom6 +71.27, mom12 +19.90, off-high \u22124.0, ADV 76.36B, both sleeves. Market data checks; LK lines ride on the analyst's citation alone.\n2. **Fragile \u2014 single-assumption dependency.** At your own falsification GM (10.3%): \u221260bps on FY26E revenue ~93T \u2248 561B pre-tax \u2248 EPS ~76 \u2192 9.3x = ~707 (+18%). The +60% up-leg collapses to +18% at the GM level you yourself call the kill-test \u2014 the trade is an FX pass-through bet wearing a discovery costume. Each further 1% IDR slide unpassed \u2248 ~40% of FY26E NI at 1.6% net margin.\n3. **Neglect, or deserved?** Sell-side mean target BELOW spot at #1 MOMENTUM: nine analysts have looked and disagree. EARNINGS_QUALITY divergence tripped (inventory +63%, AR +31% vs rev +17%, CFO 0.19x NI) \u2014 \"neglect is deserved\" is the archetype's dominant failure and it is live, not tail.\n4. **Wrong key, inflated prior.** Screen 2026-07-17: ERAA was a WASHOUT-sleeve name at 368 (mom12 \u221228.76, off-high \u221228.8). Mom12 19.9 vs mom6 71.3 \u2014 a six-month event, and you enter AFTER the +91% re-rating claiming the full base_up +55% discovery leg at a post-discovery price.\n5. **Catalyst = falsification event.** Q3-2026 LK (10-31) both proves and kills. Entering at 600 five weeks early, off-high \u22124%, mom6 +71%, under CAUTIOUS risk appetite with the chase allowance burned is mom-crash config. Waiting costs ~1.7% of dividend carry; being wrong pre-print costs 30%.\n6. **Variant perception**: 6.7x trailing for a family-controlled (44% float), cash-burning, 1.6%-margin USD-COGS distributor in a delivered-hike IDR squeeze is plausibly fair risk compensation, not mispricing.\n7. **Pre-mortem extension**: the OEM reallocates the \"stocked pipeline\" to a rival importer \u2014 the working-capital asset becomes the FY-audit writedown and a channel-stuffing question; ARB-lock gap on thin .JK fills 1\u20132 bands below 420, so \u221230% down_pct understates realized loss.\n8. **Anti-gaming**: clean \u2014 commits (08:00) precede market data; honest AVOID disclosure and the idea-card telecom correction are credited.\n9. Construction is coherent (kill < entry < target, payoff 2.0, no double-count) \u2014 the defects are sequencing and FX dependency, not arithmetic.\n\nDrew: MAJOR_REVISION \u2014 the delivery is real but as constructed you are buying the falsification print at full momentum price inside a delivered-hike AVOID; re-enter after Q3-2026 CFO/GM proof or at a level that prices FX-stressed margins."
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "Verdict: restructure the ENTRY, not the thesis. Spot-600 buy withdrawn; entry \u2192 560 limit, max_chase 0, fill only on an AVOID pullback into the FX-stressed-discount; the 10-31 print is the gate, never bought. kill 420 20% rel): expected_pct 19.0\u219226.7 (+41%), up_down_ratio 2.0\u21922.8, own_kelly 127\u2192276; up_pct 60\u219271 (+18%) flagged raise \u2014 all mechanical from the lower entry, none from p_up/target.\n\n[\"point 10: re-attack \u2014 560 limit. Arithmetic verified (26.665; 420<560<960; legs \u00b13pp). The fill is real \u2014 a CAUTIOUS AVOID on this sleeve manufactures pullbacks \u2014 but adversely selected: fills arrive WITH deepening IDR stress, and 26.7 is conditional-on-fill EV \u2014 p_fill unmodeled, unconditional EV materially lower. The '+26% even if GM breaks' floor needs the market to pay 9.3x on stressed EPS 76; the 314-645 range says it has paid less \u2014 honest stressed case is flat-to-kill. Point-2 fragility is fixed AT the fill, not eliminated. Cash clears conditionally only.\"]\nDrew: SURVIVES_WITH_SCARS (re-attack)"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED \u2014 0.5\u00d7 of the sizing engine recommended_pct.** The PM's `sizing.pm_pct` must respect 0.5\u00d7; deviations only downward.\n\nStanding correction: this desk's record is 24 kills, 0 tickets, 0 deployment while benchmarks ran ~11%, and killed names averaged +7.0% above the kill price. I correct against the marginal-kill bias \u2014 a kill here spends a 60-day cooldown on a correctly-built thesis and buys cash at 5.50%.\n\n1. **Process clean.** Lint passes; estimates committed before market data; draft\u2192attack\u2192revision\u2192re-attack chain monotonic and verbatim; honest AVOID disclosure. The flagged up_pct raise 60\u219271 is ACCEPTED \u2014 mechanical arithmetic of the lower entry at a HELD target (960 = 9.3x FY26E EPS 103), flagged new evidence (560 = 7.4x stressed EPS 76). p_up held exactly at registry 0.44 \u2014 no deviation to rule against.\n2. **Drew's re-attack survives on the merits.** The FX fragility is genuinely fixed AT the fill: 560 pre-pays the GM break (+26% at stressed EPS 76 vs 9.3x fair). The original construction defect \u2014 buying the falsification print at full momentum price \u2014 is cured: max_chase 0, spot never bought, 10-31 print gated.\n3. **The scar is the sizing basis, not a kill.** The 26.7% is conditional-on-fill. p_fill is unmodeled and adversely selected (fills arrive with deepening IDR stress), and the 314-645 range shows the market has paid below 9.3x on stressed earnings \u2014 the honest stressed case is flat-to-kill, so unconditional EV is plausibly ~2\u00d7 cash, attractive but not compelling. Hence 0.5\u00d7, not full size.\n4. **No-fill costs nothing.** The limit order is a free option; the alternative is cash at 5.50%. The 10-31 gate makes this a discovery trade with a dated catalyst, not a pre-print gamble.\n5. **Live flags bound the fraction**: CFO 0.19x NI (LK-attested, no dossier \u2014 print fronts it), 1.6% net margin, family control at 44% float, and the macro AVOID on consumer-discretionary under CAUTIOUS \u2014 the sleeve call is Voss/PM domain downstream and does not add to the haircut here."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**CLEAR_WITH_NOTES** (Voss judgment above the deterministic gate; VETO absolute).\n\n1. Factor tag: the INDO universe ERAA.JK = CONSUMER/domestic_cycle+digital_id \u2014 closed-taxonomy, matches the distribution/retail reality; sits inside the macro AVOID tilt, sized accordingly (below).\n2. Stress: the sizing engine fail-closed (ADV unknown \u2192 recommended_pct 0.0) \u2014 that block IS the the liquidity feed feed gap. Independent calc on 5% at-cost position (IDR 759M): stress-day loss 0.25\u20130.35% NAV (domestic_cycle \u22125% / digital_id \u22127%); remaining headroom to \u22128% REVIEW 7.65\u20137.75pp, to \u221215% DEGROSS 14.65\u201314.75pp (dd 0, state NONE).\n3. Concentration: INDO book all-cash, orders_pending empty, no deployed/planned sleeve shares a lever \u2014 only shared macro lever is the BI-rate/IDR path the AVOID already prices.\n4. Liquidity: ADV 76.4B/day verified; full 0.5x exits <1 day at 20% participation \u2713. Missing adv key = feed gap (fail-closed correct), not a liquidity judgment.\n5. Kill hygiene: price<420 exit_full, date gate 2027-03-31, CFO/NI<0.4 \u2014 all machine-monitorable, sources named \u2713.\n6. Sizing: script_pct 0.0 (fail-closed); my independent hard_max = 5.0% at-cost NAV (10% cap \u00d7 0.5), 7.5% at-market. pm_pct must stay \u22645.0% at fill.\n7. Horizon: not this session \u2014 no manufactured catalysts.\nRECOMMEND_REDUCE on the 0.5x: NO \u2014 all-cash book, limit-fill, survivable stress-day loss."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)\n\n**Ruling: STAGE the ticket \u2014 re-sized at the resolved feed; pm_pct 5.0% at-cost, LIMIT 560, max_chase 0.**\n\nFeed gap resolved (OPS 2026-10-05): the liquidity feed now carries ERAA.JK (ADV IDR 76.9B/day) and the market-cap feed records are non-empty incl. ERAA.JK (~IDR 9.34T), so the sizing engine no longer fails closed. Script output: recommended_pct 10.0, liquidity_cap_pct 707.71, constitution_cap_pct 10.0, hard_max_pct 10.0 \u2014 binding constraint constitution_cap (10.0% NAV); ADV is not the bind (76.9B/day \u21d2  60d stale \u2014 frozen for new risk.\"* ERAA has NO dossier (`data/dossiers/` holds only DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN); the gate is `_dossier_frozen` (the fund rules `learning_triggers.dossier_freeze_days` 60, enforcement the risk checker), a standing fail-closed rule, and a risk_check VETO is ABSOLUTE. **No ticket results.** The re-stage blocker has moved from the adv/mcap feed (resolved 2026-10-05) to the ABSENT DOSSIER. pm_pct 5.0 remains the sizing anchor for when a valid dossier (`data/dossiers/ERAA.md`, complete/fresh, \u226460d) lands \u2014 built by the IDEATION ingestion path or an ops/analyst dossier build, never by CONSTRUCT (which sources nothing). VETO journal: `fund record`. Escalated to the owner's attention queue.\n\n**Postscript (orchestrator, WEEKLY_DEEP 2026-10-10 \u2014 re-stage, dossier blocker cleared).** The step-3 ingestion path built the missing dossier (`data/dossiers/ERAA.fund record`, kind `full`, `fundamentals_complete: true`, asof 2026-10-10, 437 words) from a fresh ERAA.JK financials export; the `_dossier_frozen` VETO is CLEARED. Re-staged `ORD-20261010101159-ERAA.JK-2bf6`: book INDO, equity, ERAA.JK, buy, **qty 1,237,200** (board-lot), **LIMIT 560**, max_chase 0. qty is now set by `max_single_trade_pct_nav` 5.0 (the fund rules) evaluated at the MARKET price 615, not the 560 limit: 1,237,200 \u00d7 615 = IDR 760.878M = 5.00% NAV (at-cost 4.55% \u2264 Voss hard_max 5.0). The earlier 1,358,100 (5.0% at-cost) would itself have breached the single-trade cap at market (5.49%) \u2014 a construction defect the deterministic gate caught. `the risk checker --orders`: **PASS \u2014 within constitution** (ledger_rows 89). Staged for the next IDX pre-open; place nothing today. catalyst_date 2026-10-31 (Q3-2026 LK) remains the gate."
+    }
+  ]
+}

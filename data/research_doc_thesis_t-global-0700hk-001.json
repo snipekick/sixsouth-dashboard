@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-0700HK-001",
+  "title": "Tencent Holdings (0700.HK)",
+  "meta": {
+    "id": "T-GLOBAL-0700HK-001",
+    "book": "GLOBAL",
+    "ticker": "0700.HK",
+    "name": "Tencent Holdings",
+    "sector": "TECH_CHINA",
+    "factors": [
+      "china_growth",
+      "em_flows"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-07-18T03:19:44Z",
+    "drafted": "2026-07-18T03:19:44Z",
+    "judged": "2026-07-22T14:00:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 468.0,
+    "target": 632.0,
+    "kill": 304.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "entry * (1 + up_pct) = 468 * 1.35 = 632; HKD; Phase 2 market price asof 2026-07-22 open",
+    "price": 417.79998779296875,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.35,
+    "up_pct": 35.0,
+    "p_down": 0.65,
+    "down_pct": -35.0,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -11.5,
+    "horizon_years": 3.0,
+    "carry_pct": -1.0,
+    "kelly_full_pct": -94.0
+  },
+  "sizing": {
+    "script_pct": 0.0,
+    "pm_pct": 0.0,
+    "deviation_reason": "the sizing engine 2026-07-22: Kelly <= 0 (p_up=0.35, gain=+35%, loss=-35% \u2192 Kelly=-0.86); ADV unknown \u2192 liquidity cap 0 fail-closed; recommended_pct=0.0, hard_max=0.0. PM cannot deviate up from 0. PM decision recorded 2026-08-22 WEEKLY_DEEP: pm_pct 0.0 (script_pct 0.0, PASS_REDUCED fraction binds like a kill; no ticket staged)."
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 304.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level (entry * 0.65 per down_pct -35%); NOT a stop; Phase 2 asof 2026-07-22"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-07-22",
+      "action": "review",
+      "condition": "review if Marketing Services revenue growth has decelerated to <10% YoY for two consecutive quarters \u2014 the ad-monetisation headroom thesis is falsified"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 10.0,
+      "action": "review",
+      "name": "marketing_services_revenue_growth_yoy_pct",
+      "source": "Tencent quarterly results announcement (segment revenue table)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-07-18T03:19:44Z",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-07-22T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-07-22T13:30:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-07-22T14:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-07-22T15:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    }
+  ],
+  "kill_outcome": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Sources (primary, all fetched directly, no price/quote/multiple viewed): Tencent \"TENCENT ANNOUNCES 2025 ANNUAL AND FOURTH QUARTER RESULTS\" (18 Mar 2026, \"FY25 Ann.\"); \"TENCENT ANNOUNCES 2024 ANNUAL AND FOURTH QUARTER RESULTS\" (19 Mar 2025, \"FY24 Ann.\"); \"TENCENT ANNOUNCES 2026 FIRST QUARTER RESULTS\" (13 May 2026, \"1Q26 Ann.\"). All figures RMB unless stated.\n\n### Earnings Quality Gate\n- **Accruals ratio**: no cash-flow statement in these condensed announcements; CFO derived = FCF + capex. FY25: CFO\u2248261.8bn (FCF 182.6bn+capex 79.2bn, FY25 Ann. p1,7), NI(IFRS)=229.8bn (p6) \u2192 (NI-CFO)/avg total assets = **-1.7%**. FY24: CFO\u2248232.1bn (FCF 155.3bn+capex 76.8bn, FY24 Ann. p1,7), NI=196.5bn \u2192 **-2.1%**. Both negative (cash > accounting profit) \u2014 opposite of \"earnings outrunning cash.\" A true FY23 point needs FY22 total assets not pulled this pass (scope gap, not a flag).\n- **Divergence checks**: receivables 46,606\u219248,203\u219249,930 (FY23-25, FY24 Ann. p8, FY25 Ann. p8), +3.4%/+3.6% p.a. vs revenue +8.4%/+13.8% \u2014 no divergence. Gross margin rose 48%\u219253%\u219256% while CFO/NI stayed >1.1x both years \u2014 margin expansion not paired with worsening cash conversion. Inventory immaterial (0.44-0.53bn). Capitalised R&D isn't broken out at this disclosure level (full annual-report notes not pulled) \u2014 logged as a limitation.\n- **HK/structure specifics**: 0700.HK is a primary Cayman/HKEX listing, not a US ADR, so HFCAA tail doesn't directly apply. Like nearly all mainland internet operators, Tencent runs ICP/value-added-telecom-licensed operations via contractual VIE structures (general industry-structure fact; Tencent's own results announcements don't restate VIE mechanics \u2014 that's an Annual Report risk-factors item not pulled this pass). Flagged to confirm before Judge sign-off, not assumed resolved.\n- **Related-party gravity**: no related-party disclosure in these condensed announcements (lives in full annual-report notes, not pulled) \u2014 open item, not assumed clean.\n- **Action rule**: no manipulation-class flag. Optics-class: (a) SBC add-back grew 23,424\u219231,859 (FY24/FY25 Ann. reconciliation tables), **+36.0% YoY vs revenue +13.8%** \u2014 non-IFRS profit increasingly flattered, so this thesis anchors IFRS profit, not non-IFRS; (b) share of associates/JV profit was 5.8bn(FY23)\u219225.2bn(FY24)\u219223.7bn(FY25, -5.7%) even as associates carrying value rose 253.7\u2192290.3\u2192342.4bn \u2014 income lagging book value, a Bear question. Haircut applied: owner earnings below use IFRS profit and subtract SBC as a real cost.\n\n### Revenue and segment build (FY23\u2192FY25 actual, all cited)\nTotal revenue: 609.0bn(FY23)\u2192660.3bn(FY24,+8.4%)\u2192751.8bn(FY25,+13.8%) (FY24/FY25 Ann. income statements). FY25 segments: VAS 369.3bn(+16%: Domestic Games 164.2bn+18%, Int'l Games 77.4bn+33%, Social Networks 127.7bn+5%); Marketing Services 145.0bn(+19%, AI ad-targeting, ad load \"much lower...than peers'\"); FinTech & Business Services 229.4bn(+8%, cloud/AI-led) (FY25 Ann. p2). Q1 2026 (1Q26 Ann. p2,p5) continues the trend: revenue 196.5bn+9% (+11% ex Spring-Festival timing), Marketing Services accelerating to +20% (vs +17% in 4Q25).\n\n### Owner-earnings bridge\nIFRS net profit attributable to equity holders FY25 = **224.8bn** (FY25 Ann. p6) \u2014 the anchor, not the non-IFRS 259.6bn figure, per the SBC flag above. D&A (derived: EBITDA 310.8bn\u2212Op.profit 241.6bn+other losses 3.2bn, p7) \u224866.0bn as maintenance-capex proxy vs disclosed capex 79.2bn(+3%, p1,7) \u2192 net growth capex \u2248**13.2bn**. Working capital is a growing net cash SOURCE: core operating NWC went from -153.2bn(FY24) to -166.2bn(FY25) (p8-9) \u2014 negative-working-capital, prepayment-funded model (deferred revenue 112.5bn combined at FY25-end). Conservative owner earnings = reported FCF 182.6bn (+18%) minus SBC 31.9bn (real cost) = **\u2248150.7bn**.\n\n### Reinvestment, ROIIC, implied growth (LOAD-BEARING #1 and #2)\nNOPAT FY25 = IFRS op. profit 241.6bn\u00d7(1-17.1% tax, =47.4bn/277.2bn pre-tax, p6) \u2248**200.3bn**. Growth is materially opex-funded (S&M 41.7bn+14.7%, G&A/R&D 136.1bn+20.7%, both p6, outpacing revenue's 13.8%), so a fully-loaded reinvestment figure (net growth capex + \u0394S&M+G&A) is more meaningful than capex alone: FY25 reinvestment \u224813.2bn+28.7bn=**41.9bn \u21d2 reinvestment rate \u224820.9% of NOPAT**. Same construction for FY24 (reinvestment\u224832.0bn) against the \u0394NOPAT it produced in FY25 (NOPAT FY24\u2248169.4bn [208.1bn\u00d7(1-18.6% tax)] \u2192 \u0394NOPAT\u224830.9bn) gives **ROIIC\u224896.6%** \u2014 elevated because incremental opex reaches an already-scaled 1,418-1,432m combined Weixin/WeChat MAU base (FY25 Ann./1Q26 Ann. operating-metrics tables) at near-zero marginal distribution cost, not literal industrial capital efficiency. g = 20.9%\u00d796.6% \u2248**20.2% implied**, above trailing revenue growth (13.8%) \u2014 plausible not heroic, but ROIIC is the single most Bear-attackable load-bearing number here (cites: FY25/FY24 Ann. income statements + reconciliation tables, pp.6-7,10-11 each).\n\n### Discount rate, fade, terminal value (LOAD-BEARING #3)\nCOE = **9.5%**, upper-middle of house USD band (8-10%) for China regulatory/geopolitical premium, within band. Moat named: network effects + distribution density on Weixin/WeChat (1,418-1,432m MAU), stated below-peer ad load with monetisation headroom (\"ad load remained at a much lower level than peers',\" p2), rising engagement (Video Accounts time +20% YoY, both FY25 Ann. p3 and 1Q26 Ann. p3) \u2014 evidence the moat is widening. Fade: ROIIC (~97% now) fades toward WACC from year 5, reaching cost-of-capital terminal ROIC by year 10 (no-fade rejected). Terminal g=**4.0%** nominal RMB, low end of typical long-run China nominal-GDP forecasts (4-6%). Terminal ROIC fades to ~20-25%. Multiple-survival test (model-only \u2014 comparing to an *entry* multiple is Phase-2's job under consensus quarantine): EV/NOPAT=(1-g/ROIC)/(WACC-g)=(1-0.04/0.225)/(0.095-0.04)\u2248**15x**, \u224812-13x EV/EBIT pre-tax \u2014 moderate, not obvious multiple-expansion-as-DCF, but incomplete until Phase 2 supplies the entry multiple.\n\n### 3-assumption sensitivity (load-bearing trio, >70% of value)\n1. **ROIIC\u224897%** on fully-loaded reinvestment (drives g most) \u2014 FY25/FY24 Ann. income statements + reconciliation tables, pp.6-7,10-11 each.\n2. **Fade profile** (year-5-to-10 fade, moat = network effects/ad-load headroom) \u2014 FY25 Ann. p2-3, 1Q26 Ann. p3.\n3. **Terminal g (4.0%) and COE (9.5%)** \u2014 house-band judgment calls, not single-filing-line cites.\nA 5pp ROIIC haircut (97%\u219292%) or 1pp terminal-g cut each swing implied g ~1-2pp \u2014 Bear should attack #1 hardest, the only mechanically-derived (not policy-stated) figure of the three.\n\n### Archetype note\nKept `derated_compounder_rerating` (rate 0.40, base_up/down +50/-30, the base-rate library) rather than switching to `holdco_discount_narrowing`: despite a large associates/investee book (342.4bn carrying value + 672.7bn listed-stake fair value at FY25-end, FY25 Ann. p1), the operating core (VAS+Marketing+FinTech/Cloud) generates ~99% of consolidated operating profit and is the actual re-rating driver (2021-22 regulatory multiple compression \u2192 resumed double-digit growth + margin expansion, FY23\u219225 gross margin 48%\u219256%), matching this archetype's window far better than a SOTP/holdco story."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: the market sees Tencent as a China internet/gaming and fintech-and-ads conglomerate that endured a multi-year regulatory and macro derating from 2021-2022, has since re-accelerated domestic and international games plus ad revenue (partly AI-driven ad targeting), and is using an enormous buyback programme and its stakes portfolio (Meituan, etc.) to defend and rebuild the multiple, with lingering overhangs being Beijing regulatory risk, gaming-approval risk, and the drag/optionality of its investment portfolio."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** Tencent is a recovering China internet conglomerate \u2014 gaming approvals have normalised, ad revenue is rebounding on AI-driven targeting, and the buyback programme provides a valuation floor. The investment portfolio is a mixed bag of stakes that may or may not unlock value. The stock is fairly valued, pricing in a mature, regulated platform with mid-single-digit growth.\n\n**Why wrong:** The market conflates regulatory-cycle normalisation with secular platform deepening. Weixin's ad load remains \"much lower than peers'\" (management's own words) \u2014 this is not a recovery story, it is structural under-monetisation of a 1.4bn-MAU distribution platform. As Video Accounts, Mini Programs, and AI-targeted ads layer onto this base, revenue per user can compound at low-double-digits for years without aggressive ad-load increases. The market prices 8-10% growth; the platform can deliver 12-15% owner-earnings growth on a normalised basis once SBC moderates.\n\n**What proves us wrong:** (a) SBC growth does not moderate \u2014 if SBC/revenue crosses 6%+ by FY27, the compounder is structurally broken regardless of top-line performance. (b) Ad-load expansion fails to materialise \u2014 if Marketing Services growth reverts to single digits for two consecutive quarters despite the AI targeting rollout, the monetisation headroom thesis is falsified. (c) Regulatory re-freeze \u2014 a new gaming license suspension materially impairs Domestic Games, the largest VAS profit driver."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. SBC grew 36% YoY in FY25 vs revenue growth of 13.8% (FY25 Ann. reconciliation tables) \u2014 when employee compensation grows nearly 3x faster than revenue, per-share value creation is transferred from shareholders to employees, directly undermining the compounder thesis.\n2. Tencent's 1Q26 headline revenue growth decelerated to +9% (1Q26 Ann. p2), down from +13.8% in FY25 \u2014 the growth acceleration narrative already has a counter-datapoint in the most recent quarter.\n3. Associates/JV net profit declined 5.7% YoY in FY25 to 23.7bn while the carrying value of associates rose 18% to 342.4bn (FY25 Ann. p1, p6) \u2014 the investment portfolio earns sub-7% ROE and is declining, representing a value trap rather than a value unlock.\n4. China's gaming regulator has historically imposed license-approval freezes (notably July 2021 to April 2022), and Tencent's +18% domestic games growth in FY25 is directly exposed to a repeat regulatory intervention that would materially impair the largest growth driver in VAS."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2029 and this position lost 30%. The most likely reason is that SBC continued compounding at 25%+ CAGR while revenue growth decelerated to 6-8%, compressing per-share owner earnings growth to near-zero. Simultaneously, the regulatory environment tightened again \u2014 a gaming license freeze and new restrictions on in-game monetisation (play-time limits, spending caps) hit Domestic Games, the highest-margin segment. The combination of structural dilution and regulatory compression re-rated the multiple back toward 2021-22 trough levels (12-15x), and the buyback programme proved insufficient to offset both headwinds. The \"derated compounder\" thesis was directionally correct on the platform moat but wrong on the pace of value leakage to employees and the persistence of regulatory risk."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew (BEAR) \u2014 VAL_COMPOUNDER_QUALITY attack on T-GLOBAL-0700HK-001**\n\n**1. ROIIC \u224896.6% is a margin-expansion artifact, not a structural return.** The analyst computes ROIIC by treating \u0394S&M+G&A as \"reinvestment.\" When opex grows slower than revenue during margin expansion (gross margin 48%\u219253%\u219256% FY23-25), this formula mechanically inflates ROIIC. The analyst admits it is \"not literal industrial capital efficiency\" but builds the entire DCF on it anyway. Rule 1: growth = reinvestment rate \u00d7 ROIIC. If ROIIC mean-reverts to even 30% (still generous for a media platform), implied growth drops from 20% to 6% and the compounder thesis dies. A single-year figure during peak margin expansion is worthless \u2014 a 3-year average is mandatory.\n\n**2. SBC is outrunning the compounder.** SBC grew 36% YoY vs revenue 13.8% (analyst's own data, Earnings Quality Gate). At this trajectory SBC doubles in two years. The analyst subtracts SBC from FCF for \"owner earnings\" of ~150.7bn but never projects SBC forward in the DCF. SBC/revenue rises from 4.2% toward 8%+ in 3 years \u2014 shareholders diluted faster than the business compounds. Rule 5: SBC is compensation. At 36% CAGR it is accelerating compensation, not moderating.\n\n**3. Variant perception is blank.** \"Market believes:\" and \"Why wrong:\" are empty. Without a stated edge claim, the \"derated_compounder_rerating\" premise is unfalsifiable. This is a DCF model, not an investment thesis.\n\n**4. No catalyst, no sizing, no kill levels.** Entry plan, exit plan, sizing block, kill criteria \u2014 all null. Without sizing math this is research, not a tradeable thesis.\n\n**5. Q1 2026 revenue decelerated to +9% headline (analyst's own \u00b646).** The +11% \"ex-timing\" adjustment still trails FY25's 13.8% by nearly 3 percentage points. The most recent data point contradicts the growth acceleration narrative.\n\n**6. Associates/JV profit declined 5.7% YoY in FY25 while carrying value grew 18%.** The 342.4bn associates book earns sub-7% ROE and declining \u2014 a value trap embedded within the thesis.\n\n**7. Rule 6 multiple-survival test not performed.** The VAL_COMPOUNDER_QUALITY method card mandates an Indonesia consumer de-rating base rate check. It was not done.\n\n**Verdict: MAJOR_REVISION.** The earnings quality gate is solid and Weixin's network-effects moat is genuine. But the thesis has no variant perception, no sizing framework, and its central ROIIC number is a single-year artifact of margin expansion. Resubmit with: (a) 3-year average ROIIC, (b) SBC trajectory modeled forward in the DCF, (c) stated variant perception, and (d) sizing and catalyst parameters."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. ROIIC \u2014 Conceded.** 96.6% is a single-year margin-expansion artifact. Treating \u0394opex as \"reinvestment\" mechanically inflates the return when gross margins are widening 48% to 56% (FY23-25). A 3-year average requires FY22 data not yet pulled. Until computed, I haircut ROIIC to ~40%, reducing implied growth from ~20% to ~10-12%. This is the thesis' most load-bearing weakness.\n\n**2. SBC \u2014 Conceded.** 36% SBC growth vs 13.8% revenue is the biggest compounding leak. If SBC/revenue rises from 4.2% toward 6%+, per-share owner earnings materially lag headline revenue. Owner earnings revised to ~130bn (from 150.7bn), incorporating forward SBC drift.\n\n**3. Variant perception \u2014 Filled below.** Edge is duration: Weixin's below-peer ad load is structural under-monetisation of a 1.4bn-MAU platform, not merely a recovery trade. Monetisation runway longer than market credits.\n\n**4. Catalyst/sizing/kill levels \u2014 Acknowledged.** Phase-2 deliverables. Valid process flag, not thesis-falsifying.\n\n**5. Q1 2026 deceleration \u2014 Partially conceded.** +9% headline trails FY25's +13.8%. However, Marketing Services accelerated to +20% in 1Q26 (from +17% in 4Q25). Signal is mixed. Two quarters of sub-10% revenue growth would falsify the acceleration narrative.\n\n**6. Associates drag \u2014 Conceded.** Sub-7% ROE on 342.4bn book. But operating core is ~99% of consolidated profit \u2014 haircut to SOTP, not thesis kill.\n\n**7. Rule 6 \u2014 Noted.** Logged for Phase 2.\n\n**Net:** Drew is substantially correct. The thesis survives on the Weixin moat and ad-load headroom \u2014 genuine structural edges. ROIIC math and SBC trajectory were overstated. Ev_math revised down: p_up 0.35 (from 0.40 base), up_pct 35% (from 50%), down_pct -35% (from -30%). Expected return -8.75%. Judge should decide: survive to Phase 2 with reduced sizing, or killed."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED 0.5x**\n\nSloane conceded the two load-bearing weaknesses: ROIIC at 96.6% is a single-year margin-expansion artifact (haircut to ~40%), and SBC compounding at 36% against 13.8% revenue transfers value from shareholders to employees. The revision is honest. Expected return is negative -- -8.75% stated, approximately -11.5% computed from component probabilities (an arithmetic discrepancy; direction unchanged, as the thesis already concedes negative EV). By the numbers alone, this is a KILL.\n\nWhat saves it: the Weixin moat is structural, not cyclical. 1.4B MAU with ad load \"much lower than peers'\" (management's own words) is a genuine duration edge. Marketing Services accelerating to +20% in 1Q26 (from +17% in 4Q25) confirms the monetisation flywheel is turning even as headline revenue decelerates. This separates the thesis from a pure valuation call.\n\nBase rate is 0.40 for derated_compounder_rerating. p_up at 0.35 is a modest downward deviation, justified by conceded ROIIC and SBC weaknesses. The asymmetry (0.35 x +35% vs 0.65 x -35%) is unfavorable but survivable if Phase 2 supplies an attractive entry multiple.\n\nThree non-negotiable Phase-2 deliverables before sizing: (1) 3-year average ROIIC with FY22 data, (2) SBC trajectory modeled forward through the DCF, and (3) entry multiple post-consensus-quarantine with kill levels tied to observable KPIs. Without these, the PM cannot assess whether negative expected return reverses at a better entry price.\n\nReduced to 0.5x: the moat is genuine and the monetisation runway is long, but the math is not yet investable at full conviction."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)\n\n### Deterministic VETOs\n\n| Limit | Source (\u00a7) | Value/Threshold | Status | Detail |\n|---|---|---|---|---|\n| Universe membership | universe.membership | must be in the GLOBAL universe | **PASS** | 0700.HK at line 57, TECH_CHINA sector, mega, heavy coverage |\n| Factor taxonomy \u2014 primary | factor_taxonomy | china_growth | **PASS** | On closed list |\n| Factor taxonomy \u2014 secondary | factor_taxonomy | em_flows | **PASS** | On closed list |\n| Judge kill cooldown | exits.judge_kill_cooldown_days: 60d | no KILL verdict; not in kill_ledger | **PASS** | N/A |\n| Kill re-entry cooldown | exits.kill_reentry_cooldown_days: 30d | not in kill_ledger | **PASS** | N/A |\n| Max position %NAV at cost | position_limits.max_position_pct_nav_at_cost: 10.0% | 0% | **PASS** | Portfolio all-cash, zero holdings |\n| Max position %NAV market | position_limits.max_position_pct_nav_market: 15.0% | 0% | **PASS** | No position |\n| Max position %NAV hard | position_limits.max_position_pct_nav_market_hard: 18.0% | 0% | **PASS** | No position |\n| Max gross exposure | position_limits.max_gross_exposure_pct: 100.0% | 0% | **PASS** | All-cash book |\n| Max sector %NAV | position_limits.max_sector_pct_nav: 30.0% | 0% TECH_CHINA | **PASS** | No sector exposure |\n| Min names when ramped | position_limits.min_names_when_ramped: 8 | 0 names | **N/A** | Book not yet ramped |\n| Max names | position_limits.max_names: 15 | 0 names | **PASS** | Well under cap |\n| Factor soft cap | position_limits.factor_soft_cap_pct: 40.0% | 0% china_growth | **PASS** | No factor exposure |\n| Factor hard cap | position_limits.factor_hard_cap_pct: 60.0% | 0% china_growth | **PASS** | No factor exposure |\n| Max non-base-CCY exposure | position_limits.max_non_base_ccy_exposure_pct: 40.0% | 0% | **PASS** | No position; HKD-pegged-to-USD mitigates future concern |\n| Dossier staleness freeze | learning_triggers.dossier_freeze_days: 60d | cannot verify (sandbox EPERM) | **DEFERRED** | Thesis drafted 2026-07-18 (4 days ago) \u2014 fresh; dossier existence TBC when sandbox permits |\n| GLOBAL min market cap | universe.GLOBAL.equities.min_market_cap_usd: $2B | cannot verify (sandbox) | **DEFERRED** | Mega-cap, heavy coverage \u2014 highly likely to pass; Phase 2 verify |\n| GLOBAL min ADV | universe.GLOBAL.equities.min_avg_dollar_volume_usd: $5M | cannot verify (sandbox) | **DEFERRED** | Heavy coverage \u2014 highly likely to pass; Phase 2 verify |\n| Exit liquidity max days | liquidity.exit_liquidity_max_days: 7 | no sizing yet | **DEFERRED** | Requires position size and ADV; Phase 2 sizing |\n| Book heat budget | sizing.book_heat_budget_pct: 12.0% | no sizing yet | **DEFERRED** | Requires position and stress move (china_growth: -7.0%); Phase 2 |\n| Max single trade %NAV | position_limits.max_single_trade_pct_nav: 5.0% | no sizing yet | **DEFERRED** | Phase 2 |\n| Consensus quarantine | consensus_quarantine | LLM duty | **NOTE** | Thesis complies \u2014 estimates committed before any market numbers viewed; no sell-side ratings/targets/consensus cited as model inputs |\n\n### Result: NO VETO\n\nAll currently checkable deterministic limits pass. Six items deferred to Phase 2 (pricing/sizing data not yet available \u2014 sandbox EPERM blocks price pulls). None of the deferred items are structural disqualifiers: 0700.HK is a mega-cap, heavy-coverage, HKEX-listed name in the GLOBAL universe within a valid factor taxonomy.\n\n### Judgment note (provisional, above VETO)\n\n1. **Negative expected return**: The thesis states EV = -8.75% and concedes both ROIIC and SBC weaknesses. Judge Aldrich passed it at 0.5x on the structural Weixin moat \u2014 not on the math. If Phase 2 entry pricing does not materially improve the expected return (i.e., if the entry multiple is rich), this thesis should be halted before any capital is deployed. The moat thesis needs a price that compensates for the conceded headwinds.\n\n2. **HK/China structural risk**: 0700.HK is a Cayman-incorporated, HKEX-listed entity operating through VIE structures in mainland China. While not directly exposed to HFCAA (it is not a US ADR), it carries the full suite of PRC regulatory risk: gaming license freezes (historical precedent July 2021-April 2022), data-security/antitrust interventions, and VIE enforceability risk. The thesis acknowledges these in the disconfirming facts and pre-mortem. This is not a VETO-level concern but raises the hurdle rate for conviction \u2014 the COE at 9.5% is within the house band for China but at the upper end, which is appropriate.\n\n3. **SBC trajectory is the make-or-break KPI**: SBC grew 36% YoY vs revenue 13.8%. If SBC/revenue crosses 6% by FY27, the compounder thesis is structurally broken regardless of the Weixin moat. The kill criteria must include a hard SBC/revenue threshold observable from quarterly filings. This is the single most important risk-control parameter for the life of this position.\n\n4. **HKD peg**: The position is HKD-denominated. HKD is pegged to USD at 7.75-7.85 via the Linked Exchange Rate System. While this substantially reduces non-base-currency FX risk vs a floating CNH exposure, a peg break scenario (tail risk) would crystallise a ~7.8% instantaneous FX loss on top of any equity drawdown. The 40% non-base-CCY cap is unlikely to bind but the peg assumption should be logged in the sizing memo.\n\n5. **Concentration note**: TECH_CHINA is a concentrated sector in the GLOBAL universe (only 6 names: 0700.HK, 9988.HK, 3690.HK, 9618.HK, 1810.HK, 1211.HK). A second TECH_CHINA position would trigger a review under the 30% sector cap. Not a current concern with zero holdings.\n\n6. **Advance flag \u2014 Phase 2 deliverables**: The Judge's three non-negotiable items (3-year average ROIIC, SBC forward trajectory, entry multiple with kill levels) are risk-check prerequisites before sizing. If any of these three is incomplete when the sizing engine runs, the risk check must be re-opened with a VETO on sizing until they are satisfied.\n\nThese concerns are judgment-layer, not VETO. The thesis may proceed to Phase 2 provisioning, contingent on the three Judge-ordered deliverables and a re-check when sizing data becomes available."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**pm_pct: 0.0** \u2014 script_pct is 0.0 (Kelly <= 0, ADV-unknown liquidity cap fail-closed); deviation only downward, so pm_pct = 0.0. PASS_REDUCED 0.5x fraction binds like a kill: no ticket staged, no capital deployed. The three Judge-ordered Phase-2 deliverables (3-yr average ROIIC with FY22 data, forward SBC trajectory, entry multiple post-consensus-quarantine with kill levels) were never completed; without them the negative-EV math cannot be re-sized. Recorded 2026-08-22 WEEKLY_DEEP (PM/Gunawan): thesis concluded at 0% sizing \u2014 closed as judged_unticketed, no re-open without material new evidence (sponsoring analyst may resubmit)."
+    }
+  ]
+}

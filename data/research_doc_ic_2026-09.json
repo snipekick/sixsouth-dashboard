@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "ic",
+  "id": "ic-2026-09",
+  "title": "Investment committee memo \u2014 2026-09",
+  "meta": {
+    "month": "2026-09"
+  },
+  "sections": [
+    {
+      "heading": "Overview",
+      "detail": null,
+      "markdown": "# Monthly IC Memo \u2014 2026-09\n\nSession SESSION_MONTHLY_IC \u00b7 2026-09-05 \u00b7 Aldrich (JUDGE), for the IC\nScope: first monthly IC. The packet aggregates inception-to-date (fund start 2026-07-11), so this memo reviews the full record, not a one-month slice."
+    },
+    {
+      "heading": "Posture",
+      "detail": null,
+      "markdown": "Both books remain fully in cash for a second consecutive month. GLOBAL and INDO each report **cash 100.0%, deployment 0.0%**, governor **NONE**, max drawdown **0.0%**, no open theses, no orders, no fills. The fund has run its full gauntlet for roughly two months and has yet to deploy a single dollar or rupiah. That is the central fact of this memo: the pipeline is, today, a zero-throughput filter."
+    },
+    {
+      "heading": "Returns vs benchmark",
+      "detail": null,
+      "markdown": "Not applicable in the ordinary sense \u2014 with no positions there is no portfolio return to attribute and the attribution/factor/sector blocks are empty. Book performance is cash-yield accrual only, and the IC reads \"returns\" this month as the **opportunity cost of the cash posture**, not a realized number. The more decision-useful evidence is in the kill ledger below."
+    },
+    {
+      "heading": "What the ledger shows",
+      "detail": null,
+      "markdown": "**24 ideas killed** since inception; of the 22 scored (price-at-kill vs today), **7 avoided a further loss** and **15 left gains on the table**; the average scored kill is trading **+7.0%** above its kill price. The 09-05 kills (JPM, XOM) are not yet scored.\n\n| Ticker | Killed | Reason | vs kill |\n|---|---|---|---|\n| TXN | 07-13 | valuation | **\u221217.0%** |\n| TXN | 08-19 | valuation | \u22125.1% |\n| NVO | 07-13 | process | \u22125.8% |\n| ASII.JK | 07-22 | valuation | \u22124.9% |\n| COST / AMD / TOWR.JK | 09-02 / 08-19 / 08-24 | other/other/valuation | \u22122.6% / \u22121.4% / \u22120.4% |\n| DSNG.JK | 07-13 | valuation | +39.0% |\n| LSIP.JK | 07-22 | process | +25.7% |\n| TAPG.JK | 08-19 | valuation | +21.9% |\n| DSNG.JK | 08-19 | liquidity | +20.6% |\n| SONY | 07-22 | other | +16.8% |\n| ELSA.JK | 07-13 | process | +14.1% |\n\n*(Full ledger in the packet; the table keeps only the instructive tails.)*\n\n**Reason mix:** valuation 9, other 7, process 6, liquidity 1, fragile_estimates 1.\n\n### What worked\n\n- **No bad capital deployed.** Twenty-four consecutive KILLs through the full gauntlet, zero tickets, zero losses. The fund has never made a losing investment because it has never made one \u2014 and the discipline has been real, not decorative: the same names killed twice on fresh passes (TXN, SMFG, ELSA, DSNG) show re-drafting does not launder a bad idea.\n- **The valuation kills of over-priced US quality were the right tail.** TXN killed at 311 (07-13) and re-killed at 272 (08-19) is the single best-timed decision in the ledger \u2014 two separate rounds, ~22% cumulative avoided loss. The fragile-estimates kill (KLBF) and the liquidity veto (DSNG-002, deterministic ADV veto) show the pre-trade gates catching the correct failure classes.\n\n### What didn't\n\n- **Zero throughput.** 0 PASS, 0 tickets across two months and 24 kills. A filter that never passes nothing filters: the fund is now running a research exercise in which the deployment decision is never reached. This is the IC's #1 issue, ahead of any single kill.\n- **Systematic early/cheap exits on IDX commodity-linked agri.** The four scored misses of 20\u201339% (DSNG \u00d72, LSIP, TAPG) plus ELSA +14.1 all sit in the same place: IDX agri/commodity names killed on valuation, process, or liquidity while the commodity/energy complex re-rated behind them. The framework was directionally right to reject over-priced US quality and mis-priced banks, but it has a blind spot for names whose re-rating is driven by the commodity complex rather than the name's own P&L \u2014 precisely the register the macro desk flags as bid (war premium intact, Brent ~95.9). Three independent cases meet the \u22652-case bar for a method-card review (VAL_COMMODITY_CYCLICAL treatment of agri) \u2014 routed to consolidation.\n- **The PASS lane is untested.** 0700HK remains the sole judged name in fund history, PASS_REDUCED sized to zero and never ticketed. No PM has ever sized a live winner, so the script\u2192PM deviation lane and winner-management machinery have never been exercised."
+    },
+    {
+      "heading": "Sizing & governor review",
+      "detail": null,
+      "markdown": "- **Sizing deviations:** N/A \u2014 no tickets have been written. The one judged name sized to zero (PASS_REDUCED binding like a kill).\n- **Governor episodes:** none. Governor NONE in both books across the record; max drawdown 0.0%. Exit-to-flat machinery has never been exercised \u2014 untested, not proven."
+    },
+    {
+      "heading": "Sleeve / archetype hit rates",
+      "detail": null,
+      "markdown": "Unavailable. Calibration **n=0**: no judged ticket has ever reached a closed P&L, so there is no per-sleeve or per-archetype hit-rate evidence yet. The kill-ledger reason mix above is the only realized signal."
+    },
+    {
+      "heading": "Next-month posture",
+      "detail": null,
+      "markdown": "1. **Deployment is the objective.** Point CONSTRUCT/WEEKLY_DEEP at converting the ADVANCE/WATCH queue into initial positions wherever the gauntlet honestly passes; re-examine whether the standing hurdle sits above the register of real opportunity in this tape. Not-trading remains a legitimate decision \u2014 but it must be a *decision*, not the default output of a filter with no throughput target.\n2. **IDX commodity/agri valuation review.** Commission the method-card patch against the DSNG/LSIP/TAPG counterfactuals so the next commodity-linked IDX name is valued with the commodity/energy complex inside the frame, not outside it.\n3. **Keep the teeth that work:** repeat-kill discipline, fragile-estimates gate, liquidity veto.\n4. **Resolve 0700HK** \u2014 either define a concrete re-entry for the reduced position or close the file.\n5. Fees verification is current (last verified 2026-07-06, 12-month cycle, not due). No action.\n\n---\n*Figures traceable to the 2026-09-05 IC packet and session brief. This memo carries no runtime, attention-queue, or token-telemetry content by design.*"
+    }
+  ]
+}

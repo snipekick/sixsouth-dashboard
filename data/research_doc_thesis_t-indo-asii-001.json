@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ASII-001",
+  "title": "Astra International (ASII.JK)",
+  "meta": {
+    "id": "T-INDO-ASII-001",
+    "book": "INDO",
+    "ticker": "ASII.JK",
+    "name": "Astra International",
+    "sector": "AUTOS_CONGLOMERATE",
+    "factors": [
+      "domestic_cycle",
+      "coal_china"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "holdco_discount_narrowing",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-07-20",
+    "estimates_committed_at": "2026-07-18T03:19:37+00:00",
+    "drafted": "2026-07-18T03:19:37+00:00",
+    "judged": "2026-07-22T14:00:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": null,
+    "target": null,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": null,
+    "price": 4780.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.15,
+    "up_pct": 12.0,
+    "p_down": 0.55,
+    "down_pct": -28.0,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": null,
+    "expected_pct": -13.6,
+    "horizon_years": 3.0,
+    "carry_pct": 0.0,
+    "kelly_full_pct": -404.8
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.33,
+    "source": "the base-rate library holdco_discount_narrowing",
+    "library": {
+      "rate": 0.33,
+      "base_up_pct": 28.0,
+      "base_down_pct": -18.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "action": "review",
+      "condition": ""
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "action": "review",
+      "name": "",
+      "source": ""
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-07-18T03:19:37+00:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-07-22T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-07-22T13:30:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-07-22T14:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-ASII-001",
+    "ticker": "ASII.JK",
+    "book": "INDO",
+    "killed": "2026-07-22",
+    "px_at_kill": 5150.0,
+    "reason": "valuation",
+    "px_now": 4780.0,
+    "px_asof": "2026-10-15",
+    "move_pct": -7.2
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "VAL_HOLDCO_DISCOUNT build: earnings-quality gate, SOTP component list, look-through earnings bridge, dividend-upstream test, dated-catalyst search \u2014 all from primary filings and Astra's press releases, no market-implied numbers.\n\n### Earnings Quality Gate (EARNINGS_QUALITY_FLAGS)\n\n**IDX regime flags.** No special-monitoring-board status or notation letters (B/E/L/M/S) found on ASII, UNTR.JK, or AALI.JK as of 2026-07-18 (web-search check, not a direct IDX notation-page render). FY2025 figures below are from the audited annual statements (auditor's report dated 26 Feb 2026), not interim Q1\u2013Q3 LK. AALI applies PSAK 69/241 fair-value-less-costs-to-sell for plantation biological assets \u2014 sector-standard, not itself a flag, but Phase-2 P/BV work on AALI must use the fair-value carrying base, not historical cost. No discounted private placements to affiliates found.\n\n**Related-party gravity.** Astra's structure is built on related-party JVs by design: Toyota-Astra Motor \u2014 Astra holds 51% of the distribution/importer entity but only 5% of the separate manufacturing entity, Toyota Motor Manufacturing Indonesia, since a 2003 restructuring (company-histories.com / Wikipedia corporate-history summaries). Astra Honda Motor is a 50/50 JV with Honda (equity-accounted). Astra Daihatsu Motor is a three-way JV (Astra / Daihatsu Motor Co. / Toyota Tsusho); exact Astra stake unconfirmed this session, flagged for Phase 2. These are core operating structures, not siphon vehicles, but the 51%/5% distribution-vs-manufacturing split means consolidated \"Automotive & Mobility\" income is mostly distribution/retail-finance margin, not manufacturing margin \u2014 a look-through distinction the SOTP must respect. Could not extract a related-party-transactions-as-%-of-revenue figure this session (LK note text unreadable \u2014 the IDX/Astra PDFs are binary and this session's fetch tool could not render text; raw filing pull is a Phase-2 to-do). Treated as an information gap, not a finding either way.\n\n**Structure flags.** No pledged-stake disclosure found for Jardine Cycle & Carriage's 50.1% holding. No serial rights issues at Astra International level; one historical AALI rights issue surfaced in search results, undated/unquantified, a single past event not a live pattern. Auditor: PwC Indonesia network throughout \u2014 Tanudiredja, Wibisana, Rintis & Rekan, renamed Rintis, Jumadi, Rianto & Rekan effective 16 May 2024 (PwC Indonesia press release); FY2025 opinion dated 26 Feb 2026 issued by the successor firm (indopremier.com/ipotnews). One auditor switch occurred in 2021 (to EY Indonesia/Purwantono, Sungkoro & Surja, reportedly debt-restructuring-related), reverting to the PwC affiliate in 2022 \u2014 lateral Big-4-to-Big-4, not a down-tier change. Optics-class footnote only.\n\n**Accruals (consolidated, 3y).** Secondary-aggregator NI/CFO series (stockanalysis.com; NI cross-checks against Astra's press releases): FY2023 NI Rp33,839bn vs CFO Rp33,746bn (accrual +Rp93bn, ~flat); FY2024 NI Rp33,901bn vs CFO Rp45,029bn (accrual -Rp11,128bn); FY2025 NI Rp32,769bn vs CFO Rp44,694bn (accrual -Rp11,925bn). Against approximate total assets (~Rp413tn FY22, ~Rp445tn FY23, ~Rp473tn FY24 \u2014 secondary-sourced, aggregators disagreed on year-alignment, unconfirmed against the primary balance sheet), the ratio runs flat in 2023 and materially negative (roughly -2% to -3% of average assets) in 2024-2025: cash generation has outrun accounting earnings for two straight years \u2014 a quality green flag, consistent with a financing-heavy conglomerate collecting installment receivables.\n\n**Classification.** No manipulation-class flag at holdco or sub level (UNTR, AALI). Optics-class only: (1) 2021\u21922022 auditor switch-and-return, (2) unresolved related-party-%-of-revenue (haircut-worthy until closed), (3) Toyota distribution(51%)/manufacturing(5%) split requiring care in look-through. Estimates below are haircut for (2) and (3).\n\n### SOTP component list (VAL_HOLDCO_DISCOUNT engine)\n\n| Segment / entity | Listed? | Astra stake | FY2025 segment net income (Rp bn) | Method card if standalone |\n|---|---|---|---|---|\n| Automotive & Mobility (TAM distribution, Astra Daihatsu Motor JV, Astra Honda Motor JV, Isuzu Astra Motor) | No (JV layers; equity-accounted) | 51% TAM distribution, 50% AHM, others unconfirmed | 11,365 | VAL_COMPOUNDER_QUALITY (distribution/retail-finance, not manufacturing) |\n| Financial Services (Astra Financial/Sedaya Multi Investama: ACC, FIFGROUP, Astra Life, Asuransi Astra, Komatsu Astra Finance) | No (Bank Permata's 44.56% stake divested to Bangkok Bank, 2020) | Majority/wholly owned | 8,952 | VAL_BANKS (multifinance variant) |\n| Heavy Equipment, Mining, Construction & Energy (United Tractors) | Yes \u2014 UNTR.JK | 59.5% | 9,095 | VAL_COMMODITY_CYCLICAL |\n| Agribusiness (Astra Agro Lestari) | Yes \u2014 AALI.JK | 79.7% | 1,172 | VAL_COMMODITY_CYCLICAL |\n| Infrastructure & Logistics (toll roads, logistics) | No | Majority-owned; exact % unconfirmed | 1,258 | VAL_INFRA_TOWERS_TELCO |\n| Information Technology | No | n/a | 208 | VAL_COMPOUNDER_QUALITY |\n| Property (Astra Land, 50/50 JV w/ Hongkong Land) | No | 50% | 719 | VAL_PROPERTY_DEVELOPER |\n\n(Segment net income per Astra's FY2025 Business Update, www.astra.co.id, 26 Feb 2026; UNTR/AALI stakes same release.)\n\n### Look-through earnings bridge\n\nSegment net income sums to Rp32,769bn (11,365+8,952+9,095+1,172+1,258+208+719), reconciling to consolidated FY2025 net income of Rp32.8tn \u2014 Astra's segment disclosure is already a full look-through of net income by business line (minority interest stripped), not a holdco-standalone figure. The distortion the SOTP must correct for is structural, not a hidden number: two of seven segments (Heavy Equipment/Mining = UNTR, Agribusiness = AALI) are separately listed, minority-owned-down-to-59.5%/79.7% subsidiaries whose look-through value to Astra shareholders is [stake %] \u00d7 [sub's own SOTP value] \u2014 a Phase-2 step once market marks are permitted. The -24% YoY swing in Heavy Equipment/Mining/Construction/Energy (lower coal prices, FY2025 update) is Astra's single largest earnings-volatility source even at only 59.5% economic weight. Financial Services (+9%) and Automotive (flat) are the stabilizers; Property's +224% is off a small base (Rp719bn), not yet load-bearing.\n\n### Dividend-upstream test\n\nAstra's FY2025 distribution: interim Rp98/share (Oct 2025) + proposed final Rp292/share = Rp390/share, ~48% payout on EPS Rp810 (FY2025 Business Update). Shares outstanding (~40.5bn, back-solved from NI/EPS) imply aggregate dividend outflow ~Rp15.8tn. The same year Astra ran buyback tranches 1\u20132 (~Rp2.0tn + Rp0.685tn \u2248 Rp2.7tn). Holdco-level net cash (ex-Financial Services subsidiaries) moved from Rp8.0tn (FY2024) to Rp7.2tn (FY2025) \u2014 a decline of only Rp0.8tn despite funding ~Rp18.5tn of combined dividends plus buyback, implying operating-subsidiary and JV distributions upstreamed to the holdco covered the large majority of Astra's own shareholder returns, with only a modest net draw on holdco cash. Could not isolate the \"dividends received from subsidiaries\" line from Astra's parent-only supplementary schedule this session (PDF text-extraction failed) \u2014 this net-cash-bridge proxy is directional, not exact; replace with the parent-only schedule figure in Phase 2.\n\n### Catalyst search result \u2014 FOUND\n\nAstra's Extraordinary General Meeting of Shareholders (RUPSLB) approved a share buyback of up to Rp8 trillion on 17 July 2026 (the day before this session), running 20 July 2026 through 16 July 2027; the disclosure/RUPSLB agenda was filed with OJK and IDX on 10 June 2026. The same RUPSLB approved transferring up to 100 million treasury shares into a Management Share Ownership Program (MSOP) executed over three years from 15 June 2026. Sources: market.bisnis.com (\"RUPSLB Astra Setujui Buyback Saham hingga Rp8 Triliun,\" 17 Jul 2026), idxchannel.com (same event/date), idnfinancials.com (citing the 10 Jun 2026 OJK/BEI filing), fortuneidn.com. Could not pull the raw IDX e-REP disclosure PDF text directly this session (binary-extraction failure); the finding rests on multiple independent Indonesian financial-press outlets converging on the same date, amount, and mechanics \u2014 standard secondary corroboration, but the raw filing should be cross-checked in Phase 2. Astra also completed two smaller buyback tranches (Rp2.0tn + Rp0.685tn, ~563m shares) Nov 2025\u2013Feb 2026 \u2014 this Rp8tn program is a distinct, larger continuation, not a restatement.\n\n**Recommendation: PROCEED.** A dated, approved, funded, holdco-level capital-return catalyst exists and is unusually fresh (approved one day before this thesis was drafted). Governance nuance for Bear/Judge: press framed the buyback as following Jardine's own group-wide \"TSR\" capital-allocation push (idnfinancials.com); since Jardine Cycle & Carriage (50.1%) does not sell into the buyback, its proportional stake mechanically rises as free float shrinks \u2014 a normal mechanic, not an abuse, but worth a Bear-stage question on whether minority holders capture the full NAV-per-share benefit."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: the market treats Astra International as a slow-growing, defensively-run but perpetually cheap conglomerate proxy for Indonesian autos/heavy-equipment/agribusiness demand, structurally discounted to its sum-of-parts because Jardine Matheson/Jardine Cycle & Carriage control limits free-float catalysts and because BEV disruption threatens its Toyota/Daihatsu-anchored auto distribution earnings base, so the discount is written off as a permanent value-trap rather than a name with a credible re-rating path."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** Astra International is a permanent value trap \u2014 a slow-growing conglomerate proxy where the 30%+ holdco discount is structural and irreversible because Jardine's 50.1% control blocks any value-unlocking catalyst, and BEV disruption threatens the Toyota/Daihatsu-anchored auto distribution earnings base.\n**Why wrong:** I cannot defend this line. The Bear is correct: the discount IS the equilibrium. Without a governance catalyst that Jardine itself would initiate, there is no mechanism for the discount to narrow. A 4% buyback is immaterial against a 20\u201340pp structural gap. The consensus is not wrong \u2014 it is the base-rate reality.\n**What proves us wrong:** The holdco discount would need to narrow meaningfully without a governance catalyst \u2014 which means the thesis was wrong from inception. The price action that would \"prove us wrong\" is exactly the base-case path: discount persists or widens, UNTR/AALI commodity earnings erode SOTP further, and Jardine maintains the status quo."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. UNTR Heavy Equipment/Mining segment NI fell 24% YoY in FY2025 (Astra FY2025 Business Update, 26 Feb 2026 -- per thesis SOTP table). This is the single largest segment at Rp9,095bn. A buyback retiring ~4.1% of shares at a discounted price generates ~1.3% NAV/share accretion -- immaterial next to a 24% earnings headwind if coal continues declining.\n2. Jardine Cycle & Carriage's 50.1% controlling stake means no value-unlocking catalyst (breakup, special dividend, asset sale, governance change) can execute without Jardine's consent. The buyback mechanically increases Jardine's proportional stake without Jardine deploying capital: a control-consolidation mechanism, not a minority-value-unlocking one.\n3. The thesis lacks committed SOTP valuation marks across all seven segments (all marks deferred to Phase 2). Without a NAV baseline, the holdco discount cannot be measured, the narrowing thesis cannot be tested, and no price target can be set."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2028 and this position lost 30%. The most likely reason is: coal and CPO prices declined through 2027, UNTR and AALI segment earnings contracted another 15-20%, the Rp8tn buyback ran its full 12-month course with zero discount narrowing, Jardine maintained its 50.1% control without initiating any value-unlocking transaction, the holdco discount widened from ~30% to ~40% as institutions rotated into pure-play commodity and auto exposures, and the \"value trap\" consensus that this thesis set out to bet against proved to be the correct description of reality. The structural governance discount was never an opportunity \u2014 it was the equilibrium."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew (BEAR) -- VAL_HOLDCO_DISCOUNT attack on T-INDO-ASII-001**\n\n**1. Fact-check -- buyback scale.** The Rp8tn authorization at ~Rp4,770/share (implied by prior Rp2.685tn for 563m shares) buys ~1.68bn shares, ~4.1% of 40.5bn outstanding. At a 30% holdco discount, NAV/share accretion = 30% x 4.1% / 95.9% = ~1.3%. Against a 20-40pp discount gap, this is rounding error, not a catalyst.\n\n**2. Estimates -- SOTP has zero valuation marks.** Seven segments have NI figures but no method-card multiples are applied. No NAV exists; no discount can be computed; no price target can be set. This is a direction-of-travel argument dressed in SOTP framing without the SOTP.\n\n**3. Variant perception -- blank.** \"Market believes / Why wrong / What proves us wrong\" are all empty. A consensus \"value trap\" label that the thesis itself concedes may be correct -- given Jardine at 50.1%, no breakup path, no special dividend catalyst -- is not a variant perception; it is base-rate reality.\n\n**4. Catalyst -- buyback alone is insufficient.** The method card requires a named catalyst that upstreams value: buyback, dividend hike, asset sale, breakup, or governance change. A 4% buyback upstreams value only to sellers; continuing holders receive 1.3% accretion and the same discount. No buyback-alone case in the 25-name holdco prior (n=25) has ever closed a 20-40% discount where the controlling shareholder held >50%.\n\n**5. Base rate.** Rate is 0.33 with -18% base_down_pct. Lee/Shleifer/Thaler (1991) and the method card (\"discounts are STICKY and can persist or widen for years\") argue the 67% failure probability is understated when governance is a permanent control block -- Rule 5 from the card: governance IS the discount's DNA.\n\n**6. Sizing -- uncomputable.** ev_math null, entry null, exit null, kills null. No risk-reward framework exists.\n\n**7. Disconfirming fact (not in thesis).** Heavy Equipment/Mining NI fell 24% YoY in FY2025 (per the thesis's own SOTP table). This is the single largest segment at Rp9,095bn. A continued coal decline erodes SOTP value faster than 1.3% buyback accretion can repair. The correlation honesty test (Rule 6) demands tagging UNTR as commodity-cyclical, not holdco-structural -- the thesis is fighting two battles, not one.\n\n**8. Pre-mortem steelman.** The position loses 30% because: coal/CPO prices fall further, UNTR and AALI SOTP values shrink, the buyback executes slowly over 12 months with no urgency, the holdco discount widens from ~30% toward 40%+ as institutions rotate to pure-plays, and Jardine's 50.1% ensures zero activist pressure. The discount IS the equilibrium, not the opportunity.\n\n**9. Anti-gaming.** Single stage_log entry. SOTP marks, related-party-transaction extraction, and parent-only dividend schedule all deferred to \"Phase 2.\" Variant perception blank. ev_math null. This is a sourcing note promoted to thesis status before the analytical work was done. The analyst flagging \"information gaps\" as neutral rather than modeling them is a recurring pattern.\n\n**10. Verdict: KILL_RECOMMENDED.** No computed SOTP, no measurable discount, no variant perception, and a catalyst (4% buyback) that cannot close a 20-40% structural discount governed by a 50.1% controller who benefits from the status quo. The buyback is real and dated -- the one item done correctly. Resubmit only after committing SOTP marks across all seven segments with method-card valuations, and proposing a catalyst that addresses governance, not just capital-return volume."
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "**Bear Point 1 \u2014 Buyback scale:** Conceded. Rp8tn at ~Rp4,770/share retires ~4.1% of shares. At a 30% discount, NAV/share accretion is ~1.3%. Against a 20\u201340pp discount gap, this is immaterial. No defense.\n\n**Bear Point 2 \u2014 Zero SOTP marks:** Conceded. The thesis deferred all valuation multiples to Phase 2. Without committed NAV estimates across seven segments, the holdco discount cannot be measured, no price target can be set, and the narrowing thesis is untestable. I drafted a direction-of-travel argument, not a tradable thesis.\n\n**Bear Point 3 \u2014 Variant perception blank:** Conceded. I labeled the consensus \"value trap\" as the market narrative but offered no counter-evidence for why that consensus is wrong. Conceding the consensus without disproving it is not a variant perception.\n\n**Bear Point 4 \u2014 Jardine control as governance DNA:** Conceded. Jardine's 50.1% stake means no value-unlocking catalyst can execute without Jardine's consent. The buyback mechanically increases Jardine's proportional stake at zero cost to Jardine \u2014 a control-consolidation mechanism, not minority-value-unlocking. Rule 5 from the method card governs: governance IS the discount's DNA. Jardine benefits from the status quo.\n\n**Bear Point 5 \u2014 UNTR commodity headwind:** Conceded. Heavy Equipment/Mining segment NI fell 24% YoY in FY2025 \u2014 the largest segment at Rp9,095bn. Continued coal price decline erodes SOTP value faster than 1.3% annual buyback accretion can offset. The thesis fights two battles \u2014 commodity cycle and governance discount \u2014 with one weak catalyst.\n\n**Overall:** KILL_RECOMMENDED is correct. The buyback is real and dated \u2014 the one piece done right \u2014 but it cannot close a structural discount rooted in permanent 50.1% Jardine control. The thesis cannot survive Judge review as written. Resubmission requires committed SOTP marks across all seven segments, a catalyst addressing governance structure rather than capital-return volume alone, and a defendable variant perception. I cannot provide these within this revision window."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)\n\n**Verdict: KILL** \u2014 reason_tag: valuation\n\nThe analyst fully conceded. This thesis is dead on arrival: zero SOTP valuation marks exist across seven segments, so the holdco discount cannot be measured, the narrowing thesis cannot be tested, and no price target can be set. The expected return is -13.6% \u2014 the thesis's own math says do not invest.\n\nThe buyback is real and dated \u2014 the one piece done right. But Rp8tn retiring ~4.1% of shares generates ~1.3% NAV/share accretion against a 20\u201340pp structural discount rooted in Jardine Cycle & Carriage's 50.1% permanent control. Rule 5 governs: governance IS the discount's DNA. Jardine benefits from the status quo; the buyback consolidates its control without Jardine deploying capital. No buyback-alone case in the holdco prior (n=25) has ever closed a 20\u201340% gap where the controller held >50%.\n\nThe base rate (0.33) overstates the probability: a permanent control block converts a sticky discount into a structural one. The pre-mortem \u2014 coal/CPO erosion, UNTR earnings headwind, discount widening to 40%+, no activist pressure \u2014 is the base case, not a tail risk. Three questions answered: no measurable edge (no SOTP marks), negative expected value (-13.6%), and the pre-mortem describes exactly the 30% drawdown survival test \u2014 failed.\n\nDispositive: without committed SOTP marks and with Jardine at 50.1%, there is no mechanism for discount narrowing. The structural governance discount was never an opportunity \u2014 it was the equilibrium. Resubmission requires committed SOTP marks across all seven segments with method-card valuations, and a catalyst that addresses governance structure, not capital-return volume alone."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

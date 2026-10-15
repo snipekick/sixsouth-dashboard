@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-UNH-001",
+  "title": "UnitedHealth Group (UNH)",
+  "meta": {
+    "id": "T-GLOBAL-UNH-001",
+    "book": "GLOBAL",
+    "ticker": "UNH",
+    "name": "UnitedHealth Group",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "us_defensive",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-02T13:43:33+07:00",
+    "drafted": "2026-09-02T13:43:33+07:00",
+    "judged": "2026-09-02T14:00:22+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 396.3,
+    "target": 479.0,
+    "kill": 280.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "DCF mid-case fair value (COE 9.5%, growth fade 10%->4%, terminal g 4%); NOT a re-rating target \u2014 the prior $520 implied 21.9x FY28E vs the model's 20.2x and was expansion, not 'held' multiple",
+    "price": 408.6449890136719,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 20.9,
+    "p_down": 0.6,
+    "down_pct": -29.0,
+    "net_div_yield_pct_pa": 2.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -3.5,
+    "horizon_years": 3.0,
+    "carry_pct": 5.5,
+    "kelly_full_pct": -57.1
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (0.40, +50/-30, 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 280.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level (~14x FY26E adj EPS), NOT a stop; consistent with down_pct -29"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 89.0,
+      "action": "review",
+      "name": "medical_care_ratio",
+      "source": "quarterly 10-Q / earnings-release MCR disclosure"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 4.0,
+      "action": "review",
+      "name": "optum_health_operating_margin",
+      "source": "10-Q segment reporting table"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-02T13:43:33+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-02T13:48:47+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-02T14:00:22+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-UNH-001",
+    "ticker": "UNH",
+    "book": "GLOBAL",
+    "killed": "2026-09-02",
+    "px_at_kill": 396.29998779296875,
+    "reason": "valuation",
+    "px_now": 408.6449890136719,
+    "px_asof": "2026-10-15",
+    "move_pct": 3.1
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-09-02T13:43:33+07:00, before any market number",
+      "markdown": "**Earnings Quality Gate** (from FY2025 10-K, accession 000073176626000062; Q2 2026 10-Q, accession 000073176626000197).\n\n1. **Accruals ratio, (NI \u2212 CFO)/avg total assets, 3y**: FY23 \u22122.2% ($23,144M NI vs $29,068M CFO); FY24 \u22123.1% ($15,242M vs $24,204M); FY25 \u22122.3% ($12,807M vs $19,697M) \u2014 all negative, cash structurally above earnings, the opposite of the manipulation signature. Clean.\n2. **Divergence flags**: accounts receivable $23,018M (FY25) vs $22,365M (FY24), +2.9% against +12% revenue \u2014 no receivables divergence. Medical costs payable grew $39,337M vs $34,224M (+15%) \u2014 reserve build, conservative. No capitalized-cost creep. Clean.\n3. **SBC**: $971M FY25, $624M H1'26 \u2014 modest vs NI; treated as compensation (subtracted in owner earnings).\n4. **Related-party gravity**: none found \u2014 checked; no material affiliate flows disclosed.\n5. **Structure flags**: Change Healthcare cyberattack (2024) and South American businesses held for sale (deconsolidation) are disclosed, one-time, optics-class \u2014 not manipulation. No manipulation-class flags.\n\n**Unit economics \u2192 revenue.** FY25 consolidated revenue $447,567M (10-K): UnitedHealthcare $344,903M (premiums $352,229M consolidated), Optum $270,620M (Optum Health $101,957M, Optum Insight $19,417M, Optum Rx $154,726M). H1'26 revenue $223,753M (10-Q), +1% y/y. UHC serves 48.5M people; Optum Health 93M consumers (8-K 2026-07-16).\n\n**Margins \u2192 earnings.** FY25 consolidated EFO $18,964M, operating margin 4.2%, MCR 89.1%, tax 12.9%, ROE 12.8%, diluted EPS $13.23 (10-K). H1'26 EFO $16,981M, margin 7.6%, MCR 86.7% (Q2), diluted EPS $12.94 (10-Q). Segment H1'26: UHC EFO $9,636M (5.6% margin); Optum EFO $7,345M (5.7%); Optum Health $2,331M (4.9%, vs FY25 \u22120.3%); Optum Insight $2,332M (22.2%); Optum Rx $2,682M (3.6%).\n\n**Cash.** FY25 CFO $19,697M vs capex $3,622M \u2192 FCF ~$16.1B; H1'26 CFO $19,964M vs capex $1,562M. FY26 guide CFO ~$24,000M (8-K 2026-07-16). Buyback \u2265$5,000M FY26 (H1'26 $1,646M); dividends $7,916M FY25.\n\n**Estimate (committed, never edited).** FY26E adjusted EPS $19.75 (guidance midpoint $19.50\u201320.00, 8-K 2026-07-16); reported $18.70. FY27E ~$21.7 (+10%), FY28E ~$23.7 (+9%), FY29E ~$25.8 (+9%). Owner earnings \u2248 adjusted EPS (FCF ~$24B guide vs NI ~$16.75B; SBC $971M subtracted, intangible amortization ~$1,345M added back).\n\n**Load-bearing assumptions (carry >70% of value), each cited:**\n1. **MCR normalization to ~88%** (FY25 89.1% \u2192 FY26 guide 88.1%\u00b125bps; Q2'26 already 86.7%). Source: 10-K FY25 MCR 89.1%; 8-K 2026-07-16 \"Medical Care Ratio 88.1% \u00b1 25 bps\" and Q2 86.7%.\n2. **Optum Health margin recovery** (FY25 \u22120.3% \u2192 H1'26 4.9%) \u2014 the re-rating engine. Source: 10-K FY25 Optum Health EFO \u2212$278M; 10-Q H1'26 Optum Health EFO $2,331M, 4.9% margin.\n3. **EPS growth ~9\u201310%/yr** via margin mix + \u2265$5B buyback. Source: 8-K 2026-07-16 \"Share Repurchase At Least $5,000\"; 10-Q H1'26 buyback $1,646M.\n\nUncited load-bearing assumption: none \u2014 all three are filing-sourced."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "written before document work",
+      "markdown": "From memory, the market narrative is that UNH is a \"broken\" managed-care name \u2014 the 2025 medical-loss-ratio spike, the Change Healthcare cyberattack, and Medicare Advantage political scrutiny mean the earnings recovery is a one-off and the ~20x multiple is fair-to-rich for a sub-5% operating-margin insurer."
+    },
+    {
+      "heading": "Base-rate anchoring",
+      "detail": null,
+      "markdown": "The **derated_compounder_rerating** base rate (0.40, +50/\u221230, 3y) is the honest reference class: UNH's 2025 de-rating (EPS \u221215%, multiple compression) was a cyclical MLR spike plus a discrete cyberattack, not structural share loss \u2014 UHC still serves 48.5M people and Optum Health 93M consumers, competitive position intact. This is exactly the archetype's \"cyclical or sentiment de-rating with intact competitive position\" clearing condition. p_up held at registry **0.40** (no deviation argued): the entry at ~20x FY26E adj EPS is roughly fair, not a deep discount, so I do not argue above the prior. down_pct \u221229 (vs archetype \u221230) reflects the defensive, employment-linked earnings base and negative-accrual cash floor."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** UNH is a sub-5%-margin insurer that \"already recovered\" (mom12 +40%); the 2025 earnings collapse was the first wave of a structural medical-cost problem, so the ~20x multiple is fair and the political overhang caps any re-rating.\n\n**Why wrong:** The market prices UNH as a pure insurer, but ~60% of revenue and the growth engine is Optum (care delivery, pharmacy, data) \u2014 Optum H1'26 EFO $7,345M at 5.7% margin, up from 3.5% FY25. The 2025 collapse was a discrete MLR spike + cyberattack, not share loss. As MCR normalizes to ~88% (Q2'26 already 86.7%) and Optum Health margin recovers (4.9% H1'26 vs \u22120.3% FY25), EPS compounds ~9\u201310%/yr with a \u2265$5B buyback. At 20x FY26E adj EPS the market pays a trough multiple for a recovering compounder \u2014 the derated_compounder_rerating pattern. DCF mid-case ~$479 (COE 9.5%, growth fade 10%\u21924%, terminal g 4%) vs entry $396 = ~17% discount.\n\n**What proves us wrong:** MCR re-accelerates above ~89% (medical-cost inflation returns); Optum Health margin stalls below ~4%; UHC membership attrition accelerates (already \u2212525K sequentially in Q2'26); or a structural MA Star Ratings revenue cut compresses the multiple below ~16x.\n\n**Edge taxonomy:** analytical (primary \u2014 market mis-models the mix, pricing UNH as an insurer rather than a health-services compounder where Optum is the growth engine) + time-arbitrage (market can't hold a 3y MCR-normalization + Optum-margin-recovery view through political/regulatory noise)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "each cited, current",
+      "markdown": "1. **MCR re-acceleration**: Q2'26 MCR 86.7% vs 89.4% y/y (8-K 2026-07-16); FY25 89.1% (10-K). A climb back above ~89% breaks the earnings-recovery thesis.\n2. **Optum Health margin**: H1'26 4.9% (10-Q) vs FY25 \u22120.3% (10-K). A stall below ~4% means the re-rating engine is not real.\n3. **UHC membership**: 48.5M served Q2'26, down 525K sequentially; Medicare Advantage 7,565K vs 8,445K Dec'25 (8-K 2026-07-16). Continued attrition erodes the premium base.\n4. **Cash conversion**: CFO $19,964M H1'26 vs NI $12,151M (10-Q); accruals negative 3y. A reversal (CFO < NI) flags earnings quality.\n5. **Buyback**: \u2265$5,000M FY26 guide (8-K); H1'26 $1,646M (10-Q). A pause signals management sees no value."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Sep 2029 and this position lost ~29%. The most likely reason: medical-cost inflation re-accelerated and MCR climbed back above ~89% \u2014 the 2025 spike was the first wave, not the trough, so the MLR normalization proved cyclical, not structural. Second joint: Optum Health's margin recovery stalled below 4% as value-based-care patient attrition (~700K fewer in Q2'26) and provider cost pressure capped the re-rating, so the multiple stayed ~18x while EPS growth disappointed. Third: a Medicare Advantage Star Ratings / regulatory revenue cut compressed the multiple below 16x even with earnings intact \u2014 the political overhang I underweighted."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. **Sizing kill \u2014 no edge at prior.** Price bet 0.40\u00d731 + 0.60\u00d7(\u221229) = \u22125.0%; the +0.5% expected_pct is entirely 3y dividend carry. kelly_full \u22120.556 \u2192 quarter-Kelly \u22640 \u2192 size ~0. Same math that killed MUFG/TOWR/COST; no p_up deviation argued.\n\n2. **DCF contradicts target.** Mid-case $479 is \u22127.9% below $520 and implies ~20.2x FY28E vs target's 21.9x; upside to its own fair value is ~+21%, not +31%. Exit = expansion above the model; multiple-survival test fails.\n\n3. **\"Compounder\" on +1% revenue.** H1'26 revenue $223,753M, +1% y/y; g = reinvestment \u00d7 ROIIC never shown. FY27-29E ~9-10% EPS extrapolates margin normalization largely done by FY27; no engine on flat revenue.\n\n4. **MCR normalization is mix, not cost control.** MA lives 8,445K (Dec'25) \u2192 7,565K (Q2'26) = \u2212880K (\u221210.4%) in ~6 months; Q2 MCR 86.7% is flattered by shedding costliest lives. Kill trigger >89.0 is ~130bps above the 88.1% midpoint \u2014 no buffer for CMS/Stars/Medicaid pressure.\n\n5. **Optum mix does not buy 20x.** Optum is 60.5% of revenue but earns 5.7% H1'26 \u2248 UHC's 5.6% \u2014 insurance-like margins, no services premium. Optum Health 4.9% \"recovery\" rides on ~700K fewer VBC patients: shrink-to-profit.\n\n6. **Sleeve/archetype mislabel + no catalyst.** MOMENTUM name (mom12 +40.8%, mom1 \u22124.4%, \u22129.2% off high) argued as 3y derated_compounder (0.40); sleeve prior is momentum_continuation (0.50/0.75y), and a +40% runner rolling over is the momentum-crash setup. catalyst_date null.\n\n7. **New disconfirming fact \u2014 buyback revealed preference.** H1'26 buyback $1,646M annualizes ~$3.3B, ~35% below the \u2265$5B FY26 guide (10-Q H1'26; 8-K 2026-07-16). The most informed buyer is not funding the EPS prop at $396 vs its own ~$479 fair value.\n\n8. **Anti-gaming (verbatim).** exit_plan: \"DCF mid-case ~$479 supports it [$520]\" \u2014 false: $479 is 7.9% below $520 (~20.2x vs 21.9x FY28E); the cited DCF contradicts the exit it supports. \"held-to-slightly-expanded multiple, not expansion\" vs a +31% fixed-forward-year move (16.7x\u219221.9x FY28E): the gain IS the re-rating. stage_log otherwise clean \u2014 single draft stamp, estimates_committed_at == draft stamp.\n\n9. **Verification flag.** SEC EDGAR unreachable (403 / exit 56): MCR guide 88.1%\u00b125bps, Optum 5.7% / Optum Health 4.9% H1'26, \u2265$5B buyback, FY26E adj EPS $19.75 internally consistent with cited filings but NOT independently confirmed (accessions \u20260062/\u20260197).\n**Verdict: KILL_RECOMMENDED.** At p_up 0.40 the price bet is \u22125.0% (Kelly \u22120.56), the DCF $479 sits below the $520 target, and the \"MCR normalization\" is a \u221210.4% MA-membership mix effect \u2014 no edge, no catalyst, no DCF-supported target.\n\n**Re-attack (2026-09-02):** The Revision answers every numbered point in substance \u2014 full concession, estimates only lowered. Arithmetic reconciles on the lint formula: 0.40\u00d720.9 + 0.60\u00d7(\u221229) + 2.0\u00d73 \u2212 0.5 = \u22123.54 \u2248 expected_pct \u22123.5 (dividend yield is annual, carried 3y; added once it would give \u22127.5, not \u22123.5). Level check passes: gain-at-target 479/396.30 = +20.9% = up_pct; kill 396.30\u00d7(1\u22120.29) \u2248 $281 < entry $396 < target $479. Dispositive: with p_up frozen at 0.40 the pure price bet is \u22129.0%, full EV stays negative after carry, Kelly \u22640 \u2192 size 0. The concession confirms negative-EV at $396; nothing rehabilitates the trade. **FINAL VERDICT: KILL_RECOMMENDED \u2014 unchanged.**"
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "1. Concede. Pure price bet 0.40\u00d731+0.60\u00d7\u221229 = \u22125.0%; even to the corrected DCF target it is 0.40\u00d720.9+0.60\u00d7\u221229 = \u22129.0%. kelly_full89.0 trigger is ~0.9pp, not protection.\n5. Concede. Optum 5.7% \u2248 UHC 5.6% \u2014 no services premium for 20x; Optum Health 4.9% partly shrink-to-profit (~700K fewer VBC lives).\n6. Concede mislabel. MOMENTUM mom12 +40% \u22129.2% off high argued as 3y derated_compounder; catalyst_date null; entry after pullback is the momentum-crash setup.\n7. Concede. H1 buyback $1,646M \u2248 $3.3B/yr vs \u2265$5B guide; the most informed buyer is not funding $396 against its own $479 fair value.\n8. Concede anti-gaming verbatim: the DCF $479 contradicted the $520 exit it was cited to support; \"held-to-slightly-expanded\" is false.\n9. Accepted. EDGAR unreachable (403): MCR 88.1%, Optum 5.7%/4.9%, \u2265$5B buyback, FY26E $19.75 not independently confirmed \u2014 recorded unavailable, not fabricated.\n\n**Honest conclusion:** sub-hurdle / negative-EV at any reasonable entry near $396 with p_up frozen at registry 0.40; concede KILL on my own numbers. ev_math changed: up_pct 31.0\u219220.9 (\u221232.6% rel), expected_pct 0.5\u2192\u22123.5 (implied \u22123.5); p_up/p_down/down_pct/div/drag unchanged; exit target 520\u2192479. up_pct and expected_pct each moved >20% relative \u2192 returns to Drew before Judge."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL \u2014 reason_tag `valuation`.** Drew's kill survives in full. The Revision is an honest full concession and the arithmetic reconciles (0.40\u00d720.9 + 0.60\u00d7\u221229 + 6.0 \u2212 0.5 = \u22123.54 \u2248 \u22123.5% over 3y \u2248 \u22121.2%/yr) \u2014 below risk-free and the ~7.2% FR/house equity hurdle, and worse than MUFG-001 (+2.9%/3y, killed) and TOWR-001. Sub-hurdle economics alone dispose of the trade; kill verdicts are final, so there is no risk/sizing routing. The economics cannot be rescued by any defensible p_up: EV = 0 needs p_up \u2265 0.47, clearing a ~7%/yr equity hurdle needs p_up \u2273 0.9, the registry prior is 0.40 with no argued deviation, and the defensive-franchise credit is already spent in down_pct \u221229 (vs \u221230). Upside is now pure convergence to DCF fair value \u2014 target 479 = mid-case (20.2x FY28E), zero margin of safety, catalyst_date null; a trade that pays only if price reaches its own fair value fails the margin-of-safety and multiple-survival tests. Assessed on its merits at ~20x forward (not the >30x heuristic): revenue +1%, MCR normalization is a \u221210.4% MA-membership mix effect, Optum Health 4.9% is partly shrink-to-profit, and buyback runs ~35% below guide \u2014 the \u221229% losing mean is not truncated enough to justify p_up above 0.40. The conceded archetype mislabel (a MOMENTUM +40% runner argued as a derated compounder) further undercuts the 0.40 anchor. Process is clean: monotonic stage log, verbatim Bear log with the 2026-09-02 re-attack, all nine numbered points answered in a 295-word Revision, lint pass:true (WARN 2052 words, advisory). **KILL \u2014 final.**"
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

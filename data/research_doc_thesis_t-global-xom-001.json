@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-XOM-001",
+  "title": "ExxonMobil (XOM)",
+  "meta": {
+    "id": "T-GLOBAL-XOM-001",
+    "book": "GLOBAL",
+    "ticker": "XOM",
+    "name": "ExxonMobil",
+    "sector": "ENERGY",
+    "factors": [
+      "oil_gas",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-05T10:23:19+07:00",
+    "drafted": "2026-09-05T10:23:19+07:00",
+    "judged": "2026-09-05T10:59:41+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 159.47,
+    "target": 216.0,
+    "kill": 88.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "3y through-cycle re-rating: FY28E EPS ~11.5-12.5 at a held ~14-16x (Brent ~90 sustained, per-share compounding from ~$20B/yr buyback and ~3%/yr volume); ~$4.9/yr dividend by 2029",
+    "price": 174.40499877929688,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 35.0,
+    "p_down": 0.6,
+    "down_pct": -45.0,
+    "net_div_yield_pct_pa": 2.2,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -6.7,
+    "horizon_years": 3.0,
+    "carry_pct": 6.3,
+    "kelly_full_pct": -41.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround registry (0.42, +75/-35, 3y); p_up 0.40 in ev_math is the argued -2pp regression below registry \u2014 archetype misapplied (peak-margin entry, rising capex)",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 88.0,
+      "action": "exit_full",
+      "note": "durable Brent-collapse re-rating (~-45%, 2020 peak-to-trough precedent); below through-cycle FCF value \u2014 thesis-invalidating, NOT a risk stop"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1.03,
+      "action": "exit_full",
+      "name": "quarterly_dividend",
+      "source": "XOM quarterly dividend declarations (8-K / IR releases)",
+      "note": "any dividend cut below the $1.03 declared rate invalidates the capital-return floor"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 81.5,
+      "action": "review",
+      "name": "brent_12m",
+      "source": "the macro regime memo brent marker reference 95.9 / EIA",
+      "note": "sub-\u00b115% band floor removes the war-premium premise \u2014 review, not auto-exit"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2029-09-30",
+      "action": "review",
+      "condition": "past 3y archetype horizon without thesis resolution"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-05T10:23:19+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-05T10:31:02+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-09-05T10:44:21+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-05T10:49:13+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-05T10:59:41+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-XOM-001",
+    "ticker": "XOM",
+    "book": "GLOBAL",
+    "killed": "2026-09-05",
+    "px_at_kill": 165.22999572753906,
+    "reason": "valuation",
+    "px_now": 174.40499877929688,
+    "px_asof": "2026-10-15",
+    "move_pct": 5.6
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-09-05T10:23:19+07:00, before any market number",
+      "markdown": "**Unit economics, FY2025 actuals ($B, yfinance XOM income/cashflow).** Revenue 323.9; NI 28.84 (EPS $6.70); CFO 51.97; capex 28.36 \u2192 FCF 23.61. DDA 25.99 \u2192 CFO/NI 1.80x. Q2-2026 (XOM IR release 2026-07-31): GAAP earnings $14.5B, CFO $23.6B, cash capex $6.8B \u2192 FCF ~$17B in a single war-premium quarter; production 4,514 koebd, \"highest upstream production in more than two decades\"; Permian \"more than 1.8 Moebd\"; Guyana 5th FPSO startup on plan 4Q26 (+250 Kbd).\n\n**Committed estimate.** FY2026E NI ~$42\u201346B (H1-26 actual $18.7B at yfinance; H2 at ~Q2 run-rate with Brent ~96 held), EPS ~$10\u201311. FY2028E NI ~$45\u201350B, EPS ~$11.5\u201312.5 at ~$90 Brent: volume ~+3%/yr plus share count shrinking ~2%/yr on the ~$20B buyback. Through-cycle stress (FY2025-caliber, sub-$80 Brent): FCF ~$24B covers the $17.2B dividend 1.37x.\n\n**Load-bearing assumptions (each cited):**\n1. **Price deck**: Brent \u224895.85 with the war premium intact (the macro regime memo 2026-09-05: \"Brent \u224895.85 ... the Hormuz/Gulf war premium that drove the re-rate is intact\"). Underwrite centered ~95\u201396; stress to FY2025 sub-$80 realized economics.\n2. **Volume growth**: Permian \"record ... more than 1.8 Moebd, consistent with planned 9% CAGR through 2030\"; Guyana 5th FPSO \"startup on plan for 4Q26, increasing capacity by 250 Kbd\"; total 4,514 koebd (Q2-2026 release). Model total ~+3%/yr to ~5.0M boe/d by 2029.\n3. **Capital-return durability**: Q3-26 dividend declared $1.03/share payable 2026-09-10; $5.1B buybacks in Q2-26 (~$20B/yr) (Q2-2026 release). FY25 FCF 23.61 vs dividends 17.23 (yfinance) \u2014 1.37x cover in the weakest cash year of the window; capex stays ~$28\u201330B/yr (FY25 28.36 yfinance; $13.0B YTD-26 per Q2 release).\n\nUncited load-bearing assumption: none \u2014 all three sourced above."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "written before document work",
+      "markdown": "From memory the market narrative is that XOM is a best-in-class integrated major whose Permian/Guyana growth and \u2265$30B capital-return program justify a premium to the E&P pack, while spot ~$95 Brent is treated as war-premium windfall that will reverse \u2014 the question is whether the equity already prices that windfall."
+    },
+    {
+      "heading": "Base-rate anchoring",
+      "detail": null,
+      "markdown": "Primary prior is **commodity_capex_turnaround** (the base-rate library: 0.42, +75/-35, 3y). I anchor p_up at **0.45** (+3pp): the delivered growth (production already the highest in two decades) and a $31.8B-net-debt / $259B-equity fortress raise the work-rate modestly above the registry, but entry at ~14x war-premium forward earnings is not a trough buy, so I hold the deviation small and keep down_pct at the full -35 registry (XOM fell >35% in prior Brent busts despite an uncut dividend \u2014 the dividend does NOT truncate the price tail). The **dividend_income_anchor** (0.60, +25/-15) does not govern the prior: at 2.6% gross yield XOM is not a yield-capture name, but its never-cut dividend is the downside cushion inside the -35 losing mean."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** The ~$159 price capitalizes ~$95 war-premium earnings as ephemeral; a Brent normalization to ~$70 knocks XOM back to ~$110\u2013120, the buyback gets cut, and the energy complex should be avoided until the premium clears \u2014 hence the macro desk's NEUTRAL bloc stance and the market's refusal to pay growth multiples for oil.\n\n**Why wrong:** The market models XOM as spot-Brent \u00d7 static barrels, underweighting the **per-share floor that rises each year regardless of Brent**: low-cost volumes already delivered (Permian 9% CAGR to 2030, Guyana +250 Kbd in 4Q26) and ~$20B/yr of buybacks shrink the count ~2%/yr, so EPS compounds ~5%/yr at a *constant* oil price. The dividend is not the risk the market prices: it was covered 1.37x by FCF in the weakest cash year of the window (FY25) and XOM has not cut it in 40+ years; the flexible buyback \u2014 not the dividend \u2014 is the shock absorber in a downturn. At ~14x FY26E and ~10x through-cycle EBITDA, the equity prices the windfall but not the compounding, and a fortress balance sheet means the \"Brent collapses and the dividend breaks\" tail the market leans on has no balance-sheet mechanism behind it.\n\n**What proves us wrong:** Brent durably below ~$81.5 (macro review marker), a dividend cut, a Permian decline or Guyana FPSO slip, or a buyback suspension that reveals the program was not FCF-durable.\n\n**Edge taxonomy:** analytical (market mis-models the mechanism \u2014 static-barrel spot framing ignores the volume + buyback per-share floor) + time-arbitrage (3y compounding view through an event-by-event Brent tape). Factor diversification (oil_gas absent from the GLOBAL card) is a portfolio role, not the edge."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "each cited, current",
+      "markdown": "1. Quarterly dividend declared $1.03/share payable 2026-09-10 (Q2-2026 IR release) \u2014 any cut below this invalidates the floor.\n2. FY2025 FCF $23.61B vs dividends $17.23B = 1.37x cover in the window's weakest cash year (yfinance cashflow); a quarter printing FCF below the dividend is the first crack.\n3. Permian \"more than 1.8 Moebd\" with planned 9% CAGR through 2030; Guyana 5th FPSO on plan for 4Q26 (Q2-2026 release) \u2014 a startup slip or decline breaks the growth leg.\n4. Brent reference 95.9 with \u00b115% marker band lower bound ~81.5 (the macro regime memo markers) \u2014 a sustained sub-$81.5 close removes the war-premium premise.\n5. $5.1B buyback in Q2-26 (Q2-2026 release); a formal suspension \u2014 beyond a pace cut \u2014 shows the program is not FCF-durable."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is late 2029 and this position lost ~30%. The most likely reason: the war premium fully repriced \u2014 Brent to ~$70, XOM EPS to ~$8, multiple to ~13x, price ~$110. The dividend survived (it was never the risk), but the buyback pause removed the per-share support and the sector \"quality\" premium deflated with it. Second joint: I paid ~14x war-premium forward earnings with only a +3pp p_up deviation \u2014 a no-margin-of-safety entry whose EV (+2.8%) rests on the premium persisting; when it did not, the -35 tail dominated."
+    },
+    {
+      "heading": "Earnings-quality gate",
+      "detail": null,
+      "markdown": "Accruals (NI\u2212CFO)/avg assets: FY23 \u22125.19%, FY24 \u22125.14%, FY25 \u22125.13% \u2014 consistently negative, cash structurally above NI (D&A ~$26B). Cash conversion CFO/NI 1.80x. Divergence flags: FY25 receivables +2.0% and inventory +11.8% against revenue \u22124.5% and COGS \u22123.7% \u2014 price-cycle working capital, optics-class only (working capital absorbed ~$7.3B in FY25). Related-party: none (US major). IDX regime/notation: N/A. Structure flags: none \u2014 low leverage ($31.8B net debt vs $259B equity at 2Q26). No manipulation-class flag; no estimate haircut required, noted for pre-mortem."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. **Sub-hurdle by your own numbers.** ev_math replicates +2.8% total/3y \u2248 +0.9%/yr vs 3.63% risk-free (macro_regime fed_path) and the house hurdle (BOND_FR_MATH: equity return must exceed FR carry by ~4%/yr). ~2.7pp below risk-free with catalyst_date null \u2014 not fundable even if every estimate is right.\n2. **Archetype misapplied; deviation faces the wrong way.** commodity_capex_turnaround wins on \"capex down, projects deferred\" (the base-rate library). XOM is the inverse: $28\u201330B capex rising, Guyana 5th FPSO, Permian 9% CAGR \u2014 a peak-margin buy at ~14\u201315x war-premium forward EPS, the archetype's named dominant failure (\"low P/E at peak-margin, incentive-price trap\"). Honest p_up is below 0.42, not 0.45. up_pct capped at +35 vs base +75: the trade keeps the archetype's \u221235 tail without its +75 win.\n3. **Down tail understated; the dividend doesn't truncate it.** Kill 104 = \u221235%, and it's \"NOT a stop\" \u2014 the position rides the collapse. 2020: XOM \u2248 \u221255% peak-to-trough, dividend never cut (yfinance 2020); you concede price tails aren't truncated, yet commit \u221235. At honest \u221245: 0.45\u00b735 + 0.55\u00b7(\u221245) + 6.6 \u2212 0.3 = \u22122.7%. Fragile \u2014 single-assumption dependency.\n4. **Buyback double-counted.** The ~2%/yr share shrink compounds EPS only in the up state; the same buyback is the downturn \"shock absorber,\" cut first when Brent falls. The \"floor that rises regardless of Brent\" runs on ~$95 FCF \u2014 circular. ~$20B/yr repurchases at 14\u201315x peak-cycle EPS is value-destructive timing, not compounding.\n5. **Kill criteria contradict the stated invalidation.** Thesis is \"dead durably below ~$81.5\" (What proves us wrong), yet the Brent kill only triggers review at <$65 \u2014 16 points below the macro \u00b115% full-rebuild trip (band floor 81.5). Between 81.5 and 65 the equity de-rates ~25% with no exit.\n6. **Disconfirming fact:** the macro desk says \"geopolitics overlay \u2014 underwrite name-by-name, do not chase\" (macro_regime tilts). Buying $159 on the intact premium is that forbidden chase; pricing the windfall as ephemeral is correct compensation, not mispricing.\n7. **Pre-mortem is the base case.** Your 2029 post-mortem (Brent\u2192$70, \u221230%) is the modal path \u2014 war premiums faded in 2022 and 2023. Funded \u221235% coin flip, zero excess return, no stop, no catalyst, sizing null.\n\n**Re-attack (2026-09-05).** The Revision's concession is honest and complete: every numbered point is answered, all moves against the trade, none requiring a new-evidence raise. Arithmetic reconciles \u2014 0.40\u00d735 + 0.60\u00d7\u221245 + 6.6 \u2212 0.3 = \u22126.7 exactly. Frontmatter coheres: kill 88 < entry 159.47 < target 216; |down_pct| = (159.47\u221288)/159.47 = 44.8% \u2248 45; up_pct 35 vs (216\u2212159.47)/159.47 = 35.5% \u2014 both inside lint band; kill_criteria notes match the moved levels (price kill ~\u221245%, brent 81.5 = the macro \u00b115% band floor). Nothing is left undefended, and nothing is overstated: \u22126.7% expected is negative at every size. Quarter-Kelly on a \u22126.7% EV is zero; no scaling rescues a sub-hurdle, catalyst-free, sub-registry thesis. At ~\u22122.2%/yr it is ~6pp below the 3.63% risk-free and the ~4%/yr house equity-premium hurdle (the fund rules / the base-rate library fr_duration_carry). Sizing stays null; the analyst already recommends zero. Shelving is Aldrich's call \u2014 as underwritten this entry is un-fundable. **FINAL VERDICT: KILL_RECOMMENDED.**"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "(Sloane, 2026-09-05. All moves are against the trade; no new evidence cited.)\n\n1. Concede. +2.8%/3y \u2248 +0.9%/yr beats neither 3.63% risk-free nor the ~4%/yr equity-premium hurdle; sub-hurdle and catalyst-free, unfundable even if estimates hold.\n\n2. Concede. Rising-capex mid-upturn, not a capex-down turnaround: the archetype's dominant failure. The +3pp deviation faced the wrong way; p_up cut 0.45\u21920.40, below the 0.42 registry (base_rate.source updated). up_pct held at +35, which is target math, not the base +75 win.\n\n3. Concede. 2020 printed \u2248 \u221255% peak-to-trough with the dividend uncut; the \u221235 kill is no risk stop. down_pct widened to \u221245 and the price kill realigned to ~88 (\u221245%) so ev_math matches the honest losing mean. At 0.40/\u221245, EV \u22126.7%, negative.\n\n4. Concede in part. Buyback-as-floor is circular: it runs on ~$95 FCF and is cut first in a bust. Retired shares persist, but at 14\u201315x peak-cycle EPS the accretion is thin; per-share growth is Brent-conditional.\n\n5. Concede and fix. brent_12m review trigger raised 65\u219281.5, the macro \u00b115% band floor, matching my stated invalidation line (kill_criteria updated).\n\n6. Concede in part. Name-by-name, not bloc-chasing, so the tilt's letter is met; but $159 embeds the intact war premium the desk treats as overlay. Ephemeral pricing is compensation, not mispricing, at this level.\n\n7. Concede. Pre-mortem is the modal path; 2022/23 war premiums faded. Honest EV negative, sub-hurdle, no catalyst, no stop. Recommend zero size; kill or shelve until a trough entry restores margin of safety."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "Calibration: commodity_capex_turnaround has zero own-book GLOBAL cases in the kill ledger (n_own < 10), so the 0.42 registry prior stands unblended \u2014 no calibration history supports another look at this entry. The base-rate honesty is real: p_up 0.40 below the 0.42 registry is a correct downward deviation. But it was forced by conceding the archetype was misapplied, and shading does not rescue negative economics.\n\nVERDICT: KILL \u2014 reason_tag valuation. (1) Drew's final kill survives my restatement: EV = 0.40\u00d735 + 0.60\u00d7\u221245 + 6.6 \u2212 0.3 = \u22126.7%/3y \u2248 \u22122.2%/yr against 3.63% risk-free and the ~4%/yr house equity-premium hurdle \u2014 negative excess at every size, quarter-Kelly zero, catalyst null. A negative-EV trade has no fundable fraction, so PASS_REDUCED is unavailable. (2) The analyst conceded all seven points with every move against the trade and recommends zero \u2014 no defense stands that I could credit beyond the concession. (3) XOM's claimed edge \u2014 low-cost Permian/Guyana growth, uncut dividend, buyback \u2014 is itself the cyclical mechanism, not a structural franchise: entry at ~14x peak war-premium forward EPS with capex rising is the archetype's named dominant failure (incentive-price trap), unlike the genuine WeChat moat that justified PASS_REDUCED in 0700HK. (4) Entry $159.47 carries no margin of safety to the $88 thesis-invalidating kill (\u221245%); the analyst's own pre-mortem (Brent\u2192$70, \u221230%) is the modal path. Shelving until a trough entry restores margin of safety is the correct disposition, but shelving is not a fundable position. Process: lint clean, stage_log monotonic draft\u2192attacked\u2192revised\u2192attacked\u2192judged, Bear log verbatim, estimates committed at the draft stamp \u2014 no fabrication. Kill is final; no risk/sizing routing."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

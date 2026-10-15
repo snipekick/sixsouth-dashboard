@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-MUFG-001",
+  "title": "Mitsubishi UFJ Financial (ADR) (MUFG)",
+  "meta": {
+    "id": "T-GLOBAL-MUFG-001",
+    "book": "GLOBAL",
+    "ticker": "MUFG",
+    "name": "Mitsubishi UFJ Financial (ADR)",
+    "sector": "FINANCIALS",
+    "factors": [
+      "japan_reflation",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "quality_bank_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-08-22T10:15:00+07:00",
+    "drafted": "2026-08-22T10:20:00+07:00",
+    "judged": "2026-08-22T11:46:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 22.04,
+    "target": 29.9,
+    "kill": 15.43,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "1.15x warranted book on implied BV/ADR ~$26.00 (mid 0.8-0.9x at $22.04): partial convergence from ~0.85x toward conservative-end corrected warranted ~1.3-1.5x; 3y. Carry 2.2%/yr.",
+    "price": 21.885000228881836,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 35.0,
+    "p_down": 0.58,
+    "down_pct": -30.0,
+    "net_div_yield_pct_pa": 2.2,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 2.9,
+    "horizon_years": 3.0,
+    "carry_pct": 5.6,
+    "kelly_full_pct": 29.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.48,
+    "source": "the base-rate library archetypes.quality_bank_rerating (n=20, EM re-rating). Imperfect fit for a DM rate-hiking bank (SMFG-001/002 precedent), but MUFG trades below book (~0.85x) \u2014 gap present, vs SMFG's closed. REVISED 2026-08-22 (#4/#5): p_up 0.48\u21920.42 for the regime mismatch (kept above SMFG's 0.35 \u2014 gap open); down_pct \u221225\u2192\u221230 (52w-low kill-gap).",
+    "library": {
+      "rate": 0.48,
+      "base_up_pct": 42.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 15.43,
+      "action": "exit_full",
+      "note": "P/BV <0.59x at implied BV/ADR ~$26.00; below this a BOJ pivot/credit-crisis kills the mechanism. REVISED 2026-08-22: widened $16.90\u2192$15.43 \u2014 the 52w low $14.62 (~0.56x) shows kills gap through. NOT a stop."
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 1.0,
+      "action": "review",
+      "name": "consolidated_npl_ratio",
+      "source": "MUFG quarterly Asset Quality disclosure (investor materials, asof FY3/2026)",
+      "note": "ASEAN/overseas credit (Krungsri/Danamon/Philippines) through Fed-on-hold: NPL >1.0% (from ~0.6%) without clean overseas attribution = a credit turn NIM cannot offset."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "review if BOJ has not delivered \u22651 further 25bp hike (policy >= 1.25%) by this date \u2014 a stalled BOJ removes the domestic NIM tailwind that is the core mechanism"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-22T10:20:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "draft",
+      "at": "2026-08-22T10:22:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-22T10:26:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-08-22T11:45:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-22T11:46:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-MUFG-001",
+    "ticker": "MUFG",
+    "book": "GLOBAL",
+    "killed": "2026-08-24",
+    "px_at_kill": 22.040000915527344,
+    "reason": "other",
+    "px_now": 21.885000228881836,
+    "px_asof": "2026-10-15",
+    "move_pct": -0.7
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sources.** No MUFG dossier in data/dossiers/. Reconstructed from public filings/knowledge (asof); the two load-bearing inputs are flagged. Macro anchors: BOJ policy 1.00% (2026-06-16, boj.or.jp); Fed on hold 4.25-4.50% with the 2026 path repricing toward easing (the macro regime memo). Section is price-free.\n\n**Sustainable ROE build (NIM \u00d7 leverage \u2212 credit \u2212 opex):**\n- Base: NI ~\u00a51.5T on ~\u00a518.5T equity \u2192 ROE ~9.0% (FY3/2026; **flagged**). NIM blended ~0.85% (domestic ~0.7%, overseas ~1.3%).\n- NIM sensitivity (**load-bearing #1**): \u00a5160T+ domestic book, deposit beta <1 \u2192 +\u00a550bn/yr NII per 25bp BOJ hike (investor-day disclosure; **flagged \u2014 no dossier to verify**). Multi-year tailwind as the fixed-rate back book reprises.\n- BOJ path (**load-bearing #2**): 1.00% \u2192 underwrite +50bp to 1.50% over 3y (vs ~2% neutral). Uplift \u2248 +\u00a5200bn/yr (4\u00d7\u00a550bn) \u2248 +0.75pp ROE after ~30% tax on ~\u00a518.5T.\n- Credit: through-cycle ~25bp on ~\u00a5240T loans \u2248 \u00a5600bn/yr. ASEAN book (Krungsri/Danamon/Philippines) through a Fed-on-hold cycle: normalizes, not a cycle turn; consolidated NPL is the kill to watch.\n- Opex ~67%, flat. Cross-shareholding unwind \u00a5500B+ releases capital; realized gains flatter ROE \u2014 haircut.\n- **Sustainable ROE \u2248 10.0%** (range 9.0-10.5%).\n\n**COE.** JGB 10y ~2.5% (asof Aug-2026; **flagged**) + Japan ERP 5.0% = **7.5%**.\n\n**Warranted P/BV (residual income; g=3.0%, method rule 5):** base (10/7.5/3) **1.56x**; conservative (9/8/2.5) **1.18x**; central **~1.2-1.5x**. Current ~0.85x is below book \u2014 re-rating gap open; up case models partial convergence **~1.15x**, not full.\n\n**Return stream.** Net div ~2.2%/yr (gross ~3.0% less 15.315% WHT; payout ~40% + buybacks). Capital EV = 0.48\u00d7+35 + 0.52\u00d7\u221225 + 3\u00d72.2 \u2212 1.0 \u2248 **+9.4% over 3y**. Phase-2: positive but marginal \u2014 trails risk-free (~13%/3y) and the ~4%/yr house equity hurdle; the dividend carries the trade. Flag for PM sizing.\n\n**Earnings-quality gate.** Banks: provisioning-vs-write-off trend \u2014 recent low/stable, no catch-up deficit; no manipulation-class flag. Cross-shareholding unwind = optics-class (haircut applied). ADR: no VIE/HFCAA; JPY freely convertible; USDJPY translation on dividends/NAV is the ADR risk (Phase-2 sizing). Structure flags: none."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "MUFG's BOJ-normalization re-rating is largely done; the below-book discount is a permanent Japanese-bank feature \u2014 remaining edge is dividend/carry, not P/BV re-rating."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the below-book multiple is a permanent Japanese-bank discount; the BOJ NIM tailwind is consensus and priced; only dividend/carry remains.\n\n**Why wrong:** corrected warranted ~1.3-1.5x vs ~0.85x \u2014 an open re-rating gap (SMFG-002 died because its gap closed). NIM is a multi-year deposit-beta-lag reprice; BOJ the only G7 hiker. Edge: (a) analytical \u2014 deposit-beta mis-modeled as one-time; (c) time-arbitrage. Not claimed: structural-flow.\n\n**What proves us wrong:** BOJ pausing/reversing; NPL >1.0%; or the discount proving permanent."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. BOJ's 2026-06-16 hike was partly cost-push (war-driven inflation, Brent ~94) \u2014 if supply-shock, not durable reflation, the NIM tailwind is reversible.\n2. Reported ROE is flattered by cross-shareholding gains (\u00a5500B+ unwind) that fade \u2014 some 'ROE durability' is one-off.\n3. ASEAN book (Krungsri/Danamon/Philippines) adds credit variance: credit costs can normalize above my 25bp underwrite through Fed-on-hold.\n4. Two load-bearing inputs were unverified \u2014 sourced in Revision #0 (NIM conservative; ROE actual 11.3%, better than committed)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Mid-2029, position lost ~25-30%: BOJ stalled after 1.00% (cost-push hike faded), the NII tailwind never compounded, the below-book discount proved permanent, ASEAN credit costs rose through Fed-on-hold \u2014 NPL past 1.0%, multiple below the $15.43 kill. The dividend cushioned but could not offset the give-back; no dated catalyst forced a re-rating."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "- 13F crowding: UNAVAILABLE (no dossier/feed; mega-cap ADR).\n- Insider activity: UNAVAILABLE (TSE not ingested).\n- Index/passive: core TOPIX/Nikkei/MSCI-Japan constituent; no add/delete known \u2014 NEUTRAL. MOMENTUM sleeve + near 52w high flags flow-chase entry risk.\n- Short interest/borrow: UNAVAILABLE."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**BEAR ATTACK \u2014 Drew \u2014 2026-08-22T10:26:00+07:00 \u2014 VERDICT: KILL_RECOMMENDED**\n\n**0. Fact-check \u2014 AUTO-KILL (uncited inputs).** Three load-bearing inputs uncited (no dossier): NIM sensitivity \u00a550bn/25bp, FY3/26 ROE ~9%, JGB10y 2.5% \u2014 all self-flagged. JGB 2.5% contradicts house SMFG thesis (2026-07-11: 2.8%); at COE 7.8% warranted base falls 1.56x\u21921.46x. An uncited load-bearing input is KILL_RECOMMENDED per protocol; three are dispositive.\n\n**1. Estimates \u2014 fragile.** Sustainable ROE ~10% rides \u00a5200bn/yr = 4\u00d7\u00a550bn full deposit-beta-lag, annually, post-tax. At delivered ROE 9%, warranted P/BV 1.33x \u2014 gap open, single-assumption dependency.\n\n**2. Variant perception.** \"Below-book mispricing\" is the market's permanent-discount premium (governance, sub-peer ROE); the thesis's own pre-mortem concedes permanence. The rate-divergence claim is the japan_reflation consensus that killed SMFG-001/002.\n\n**3. Catalyst.** catalyst_date null; no dated catalyst forces re-rating. Each BOJ hold lets deposit beta catch up, eroding NIM.\n\n**4. Base rate.** quality_bank_rerating is EM cost-of-funds-EASING re-rating from sub-1x; MUFG is DM rate-HIKING at ~0.85x \u2014 the mismatch that killed SMFG twice (Revision #4: transfer \"doubtful\"). p_up kept AT 0.48, unshaded.\n\n**5. Sizing math.** +9.4%/3y = 3.04%/yr vs 13.3%/3y = 4.25%/yr risk-free \u2192 negative excess ~1.2pp/yr; quarter-Kelly = 0. 52w low $14.62 = -33.7% from entry \u2014 the stock already fell 34% this year. Kill-gap to -30/-35%; at -35% EV = +4.2%/3y \u2014 dividend carries all.\n\n**6. NEW disconfirming facts.** (a) BOJ-hike/Fed-cut convergence is the macro baseline (the macro regime memo 2026-08-22); JPY to ~145 cuts the USD ADR ~10%, dwarfing the ~3%/yr edge. (b) Peer NPL turning: SMFG 0.67%\u21920.97% Mar-25\u2192Mar-26 on overseas items (T-GLOBAL-SMFG-001); MUFG's ~0.6% base understates the trend \u2014 its 1.0% kill is nearer.\n\n**7. Steelman.** JGB mark-to-market losses as hikes that help loans also raise JGB yields \u2014 NIM tailwind self-cancels.\n\n**8. Anti-gaming.** Clean: estimates_committed 10:15 < draft 10:20 < 10:22, monotonic; bottom-up price-free; no fabrication. Process failure: three uncited inputs. Book-quota overflow: 5 GLOBAL theses drafted ISO wk34 vs cap 3 (AMD/TXN-002 judged, GE/MRK draft) \u2014 pre-existing; escalate QC.\n\n**9. VERDICT \u2014 KILL_RECOMMENDED.** Strongest sentence: *Even on the analyst's own numbers the trade earns ~3%/yr against ~4.25%/yr risk-free \u2014 negative excess, zero quarter-Kelly, no dated catalyst \u2014 on an EM-calibrated archetype killed twice for this mismatch, built on three uncited load-bearing inputs.*"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**ANALYST_GLOBAL (Sloane) \u2014 Revision \u2014 2026-08-22T11:45:00+07:00**\n\n**0. Auto-kill inputs.** NIM \u00a550bn/25bp conservative vs street \u00a580-180bn (Kabu; SeekingAlpha). FY3/26 ROE actual \u00a52,427bn / 11.3% JPX, 10.4% ex-equity (businesswire) \u2014 my ~9% stale; `new evidence:` favorable, no upward revision claimed. JGB10y 2.84-2.90% (30-yr high 2.945% 08-18) \u2014 my 2.5% stale; COE 7.85% cuts warranted P/BV to ~1.3-1.5x. Two cited; one against the trade.\n\n**1. Estimates fragile.** Conceded fragility; sourced 11.3% ROE and ~12% FY3/27 target reduce the single-assumption dependency.\n\n**2. Variant perception.** Conceded permanent-discount premium; corrected warranted ~1.3-1.5x vs ~0.85x keeps an open gap. Withdraw rate-divergence edge; keep analytical deposit-beta mis-modeling.\n\n**3. Catalyst.** Conceded: no dated catalyst; each BOJ hold erodes deposit beta. Structural.\n\n**4. Base rate.** Conceded EM cost-of-funds-EASING regime mismatch (SMFG precedent); only bank key, gap open \u2192 p_up 0.48\u21920.42 (above SMFG's closed-gap 0.35).\n\n**5. Sizing math.** Conceded: +2.9%/3y \u2248 0.97%/yr vs 4.25% risk-free and ~4%/yr hurdle \u2014 negative excess, quarter-Kelly 0. down_pct \u221225\u2192\u221230 (kill $15.43, just above 52w low $14.62); at \u221235 EV \u2248 0 \u2014 sub-hurdle either way.\n\n**6. New disconfirming facts.** Both conceded: USDJPY\u2192145 cuts ADR ~10% (folded into p_up; unhedged EV\u2248negative); SMFG NPL 0.67\u21920.97 puts MUFG's 1.0% kill nearer.\n\n**7. Steelman (JGB self-cancel).** Real, partially: JGB losses offset loan-NIM; deposit beta still lags \u2014 caps the tailwind.\n\n**8. Anti-gaming.** Chronology clean; uncited inputs cited in #0. Book quota RESOLVED: 4 dead-end week-34 drafts removed; GLOBAL at 3/week cap.\n\n**9. Verdict.** Agree: +2.9%/3y \u2248 1%/yr is positive but fails risk-free and ~4%/yr hurdle; recommend zero/near-zero size absent USDJPY hedge + dated catalyst.\n\n**Frontmatter changes:** ev_math p_up 0.42/p_down 0.58/down \u221230/expected 2.9; kill[0] $15.43; base_rate.source updated. expected_pct >20% rel \u2014 route to Drew (all moves against trade)."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "Calibration: this archetype is 0-for-2 on GLOBAL (SMFG-001 process, SMFG-002 valuation). Correction applied: I do not mechanically re-kill on the closed-gap precedent \u2014 MUFG's gap is genuinely open (0.85x vs ~1.3-1.5x warranted) \u2014 but I hold the same DM-vs-EM standard and grant no leniency for the analyst's own concession.\n\nVERDICT: KILL \u2014 reason_tag `valuation`. (1) Drew's strongest sentence survives: on the analyst's own revised numbers EV = +2.9%/3y \u2248 0.97%/yr vs 4.25%/yr risk-free and the ~4%/yr house hurdle \u2014 negative excess, quarter-Kelly zero; a sub-risk-free carry with no dated catalyst is not investable at any size. (2) No dated catalyst (catalyst_date null); each BOJ hold erodes the deposit-beta lag, and the pre-mortem itself concedes the permanent-discount risk \u2014 the mechanism is structural carry, not a forced re-rating. (3) The load-bearing NIM tailwind (+0.75pp ROE = 4\u00d7\u00a550bn/yr) is a single-assumption dependency; Revision #0 cited ROE (11.3%, businesswire) and JGB (2.945%, 08-18) but the \u00a550bn/25bp sensitivity remains source-named (Kabu/SeekingAlpha), not document-cited \u2014 still thin. (4) p_up 0.42 (from 0.48) is a proper downward, argued deviation within base-rate distance \u2014 creditable, no unflagged raise \u2014 yet even shaded the trade is sub-hurdle; base-rate honesty does not rescue the economics. PASS_REDUCED unavailable: the analyst recommends zero/near-zero size, and a sub-hurdle EV on an unproven mechanism does not survive. Process: lint clean, chain monotonic, actors correct; the 11:45 revision stamp post-dates the session clock \u2014 noted for QC, not dispositive. Tag `valuation`, consistent with SMFG-002 on this same archetype/book."
+    }
+  ]
+}

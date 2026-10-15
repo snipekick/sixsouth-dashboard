@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ELSA-002",
+  "title": "Elnusa (ELSA.JK)",
+  "meta": {
+    "id": "T-INDO-ELSA-002",
+    "book": "INDO",
+    "ticker": "ELSA.JK",
+    "name": "Elnusa",
+    "sector": "ENERGY",
+    "factors": [
+      "oil_gas",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "neglected_midcap_discovery",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-ELSA-001",
+    "catalyst_date": "2026-08-30",
+    "estimates_committed_at": "2026-08-05T06:11:38Z",
+    "drafted": "2026-08-05T06:11:38Z",
+    "judged": "2026-08-05T09:00:00Z",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 685.0,
+    "target": 1062.0,
+    "kill": 377.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Through-cycle EV/EBITDA + net cash: normalized EBITDA ~Rp1.5tn (avg FY2024 audited Rp1.45tn / FY2025 press ~Rp1.6tn, softening-Brent window) x 4.5x discovery multiple (from market-implied ~1.9x toward covered midcap-OFS ~5-6x, shaded for IDX small-cap governance/liquidity) + net cash Rp1.94tn = ~Rp8.7tn equity / 7.2985bn shares ~= Rp1,190 headline, shaded to Rp1,062 (=+55% from 685, the archetype base_up_pct) to keep the two-point EV anchored to the prior. Cross-checks: 0.91x -> ~1.41x P/B (BVPS Rp754); 6.7x -> ~10x P/E on TTM EPS ~Rp98.4 with +8% FY2026 growth. Target hit forces written re-un",
+    "price": 670.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.2,
+    "up_pct": 55.0,
+    "p_down": 0.8,
+    "down_pct": -45.0,
+    "net_div_yield_pct_pa": 5.5,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -12.25,
+    "horizon_years": 2.5,
+    "carry_pct": 12.75,
+    "kelly_full_pct": -56.1
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.2,
+    "source": "Conceded revision 2026-08-05: archetype 0.44 shaded -8pp (FY2025 upstream -18%), -5pp (1H 2026 upstream -11%, third consecutive decline), -3pp (Pertamina/Danantara consolidation, Patra Niaga merger, PDSI absorption risk amplified), -8pp to Bear lower bound 0.20 \u2014 three consecutive upstream declines falsify the lag hypothesis. Expected return negative vs INDO FR carry ~6.5%/yr.",
+    "library": {
+      "rate": 0.44,
+      "base_up_pct": 55.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 377.0,
+      "action": "exit_full",
+      "note": "REVISED (2026-08-05): execution-adjusted kill level; 685x0.55 = -45% = honest-bear down_pct (was -30%/480). Revision concedes the gap risk: at this IDX tier, a fired kill at the theoretical invalidation level fills 1-2 ARB bands lower. PM sizes on the -45%/-50% adjusted downside."
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.0,
+      "action": "review",
+      "name": "upstream_segment_revenue_gr_yoy_pct",
+      "source": "Elnusa HY2026 LK Note 34 (due 2026-08-30); FY2025 integrated-upstream fell ~18% YoY (Rp5,063,401mn FY2024 audited -> ~Rp4.1tn FY2025) per Antara/CNBC Indonesia 2026-03-06",
+      "note": "Discovery catalyst is backlog->revenue conversion; HY2026 upstream still negative YoY re-falsifies the edge -> re-underwrite."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "FY2026 audited LK (due ~Mar-2027) shows consolidated revenue growth < +5% YoY, i.e. the ~Rp9.9tn 9M2025 backlog not converting"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-05T06:11:38Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-05T08:23:15Z",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-08-05T08:35:00Z",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-05T09:00:00Z",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-ELSA-002",
+    "ticker": "ELSA.JK",
+    "book": "INDO",
+    "killed": "2026-08-05",
+    "px_at_kill": 695.0,
+    "reason": "process",
+    "px_now": 670.0,
+    "px_asof": "2026-10-15",
+    "move_pct": -3.6
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**EARNINGS_QUALITY_FLAGS gate (run first, per card)**\n\n- *Accruals ratio, 3y* (NI-CFO)/avg assets, FY2024 audited consolidated LK [P&L \"LABA TAHUN BERJALAN\" + Cash Flow lines]: FY2023 -9.6% (503,131-1,389,990)/9,215,741; FY2024 -10.2% (713,672-1,747,142)/10,114,891; FY2025 ~ -9.0% (press). All negative \u2014 CFO > NI. Clean.\n- *IDX notation / pemantauan khusus*: none found (secondary; idx.co.id 403-blocked). *Structure flags*: no PSAK 16 revaluation, no rights issue; Rp699bn sukuk disclosed; auditor **unqualified** (Independent Auditor's Report No. 00234/2.1032/AU.1/02/1832-1/1/III/2025), no going-concern EOM. Clean.\n- *Related-party (Pertamina group) share of revenue*: **82.2% of FY2024** (Rp11,014,061mn/Rp13,393,013mn) vs 76.8% FY2023 [FY2024 audited LK Note 32(i) p.104]; single largest counterparty **PT Pertamina Patra Niaga 37.3%**. PHE 51.10%; free float ~42.75% (KSEI via Stockbit, 2026-06-30). OPTICS-class, not manipulation-class. Argued: demand-security (captive volume, first-look at PHE capex) vs margin-ceiling (no arm's-length pricing vs a 51% owner buying 78-82%) \u2014 the ceiling is carried into the multiple shade, kill-kpi #2, pre-mortem.\n\n**Revenue mix, backlog, activity (re-verified)**\n\n- FY2024 audited segment revenue [Note 34]: upstream Rp5,063,401mn (**37.8%**), support Rp1,547,818mn (**11.6%**), distribution Rp6,781,794mn (**50.6%**); gross margins 8.9/13.1/9.0%. FY2025 (press): revenue Rp14.49tn, NI Rp718.4bn, NPM 5.0%; **integrated-upstream FELL ~18% YoY to ~Rp4.1tn / ~28% of mix** [Antara & CNBC Indonesia 2026-03-06] \u2014 backlog doubled yet upstream revenue shrank. Q1 2026 (dossier): revenue Rp3.62tn (-3.0% YoY), NI Rp190bn (+1.6%) \u2014 not yet visible.\n- Backlog: upstream **~Rp9.9tn 9M2025 vs ~Rp4.4tn 9M2024** (more than doubled; ~Rp2.9tn new contracts 9M2025) [kabarbursa.com Nov 2025]. SKK Migas \"Triple 100\" (100 exploration + 100 frac wells, ~Rp8.0tn) tied to the 1mm BOPD target.\n- EBITDA: FY2023 Rp1,281,771mn (10.2%) / FY2024 Rp1,454,584mn (10.9%) [computed, Note 34] / FY2025 ~Rp1.6tn (10.8%, dossier). Normalized **~Rp1.5tn** (2-yr avg, softening-Brent window -> through-cycle proxy). Net CASH Rp1,935,132mn (Dec 31 2024 audited); shares **7,298,500,000**; dossier BVPS Rp754. FY2024 FCF ~Rp1,322bn covers the FY2025 Rp323.28bn dividend (Rp44.29/sh, 45%) >4x.\n\n**Through-cycle valuation (VAL_NEGLECTED_CATALYST)**\n\nMarket-implied EV/EBITDA ~1.9x (mcap ~Rp5.0tn - net cash Rp1.94tn = EV ~Rp3.06tn / normalized EBITDA ~Rp1.5tn). Discovery re-rating to 4.5x -> EV ~Rp6.75tn + net cash = ~Rp8.7tn / 7.2985bn = ~Rp1,190, shaded to **Rp1,062** (the +55% up-leg). Cross-checks: ~1.4x P/B (BVPS Rp754); ~10x P/E (TTM EPS ~Rp98.4). Net-cash/trough-EBITDA ~+1.3x."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "The market narrative I believe is: ELSA is a Pertamina-captive oilfield-services midcap priced as a low-margin, transfer-pricing-suspect group vendor \u2014 cheap on earnings (P/E ~6.7x, P/B ~0.9x) because it is genuinely ignored (thin coverage), with its 2026 re-rating read as oil-price beta rather than a company-specific backlog-conversion discovery."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** The +29% 12m / +15% 1m re-rating is commodity beta \u2014 a small-cap O&G name riding a sentiment bounce into a CAUTIOUS, BoP-pressured regime (Brent easing toward ~$74 Q3; commodity bloc NEUTRAL, the macro regime memo 2026-07-11), the 51%-Pertamina tie capping upside and the FY2025 upstream decline (-18%) proving the doubled backlog is not converting. \"Cheap for a reason.\"\n\n**Why wrong:** ELSA's addressable market is not spot-Brent \u2014 it is a lagged, government-mandated upstream *activity* program (SKK Migas Triple-100, 1mm BOPD target) budgeted on a multi-year PSC cycle. The driver is company-specific: the upstream backlog more than doubled to ~Rp9.9tn (9M2025) and converts on a FY2025->FY2026 lag \u2014 the FY2025 upstream decline reflects contracts won late in 2025 hitting the P&L in 2026, the exact lag neglected_midcap_discovery monetizes (the market DISCOVERS the name when conversion shows in a dated print). At 0.91x P/B, net cash Rp1.94tn and a gross 6.5% yield, downside is anchored; the discovery event (HY2026 print, 2026-08-30) is dated and binary.\n\n**What proves us wrong:** (a) HY2026 upstream revenue still negative YoY \u2014 conversion falsified twice (kill-kpi #2); (b) dividend cut or flat payout signaling cash extraction; (c) no discovery catalyst (coverage initiation, index action, or an FY2026 growth print) by 2027-04-30."
+    },
+    {
+      "heading": "IDX microstructure & liquidity",
+      "detail": null,
+      "markdown": "Free float ~42.75% of 7,298,500,000 shares (PHE 51.10%) [KSEI via Stockbit, 2026-06-30]. 30d ADV **Rp18.5bn** (screen row); a ~1% NAV position (~Rp150bn) needs ~40 sessions at 20% participation to exit. At IDR 685 the ARA/ARB band is **25pp** (the fund rules, Rp200-5,000 tier) \u2014 a fired kill can fill 1-2 bands below trigger; realized downside -45% to -50% (PM sizes on it, not the two-point -30%)."
+    },
+    {
+      "heading": "Currency & edge claim",
+      "detail": null,
+      "markdown": "Currency: IDR throughout \u2014 revenue predominantly IDR-domestic (invoiced in Rupiah to Pertamina-group PSC contractors; modest USD ST borrowing).\n\nEdge (ONE, per card): thin sell-side coverage (NEGLECTED rank 1) under-models the doubled upstream backlog (~Rp4.4tn -> ~Rp9.9tn) converting into 2026 revenue \u2014 the market reads the +29% 12m move as commodity beta while the real driver is a dated discovery event (HY2026 print) that normalizes the multiple from ~1.9x toward ~4.5x EV/EBITDA (0.91x -> ~1.4x P/B)."
+    },
+    {
+      "heading": "Chase-risk assessment",
+      "detail": null,
+      "markdown": "mom1 +15.13% (screen row) with the foreign-flow feed stale (0 fresh readings) \u2014 not attributable to foreign flow; likely local/retail + HY2026 anticipation. The FY2025 dividend (record 2026-06-19) is ex, so the pop is not dividend capture. Entry at spot (685), max_chase 3% \u2014 not chasing beyond ~Rp706; the catalyst (2026-08-30) is ~25 days out, so the position is taken ahead of a binary print that IS the underwrite event (kill-kpi #2 re-reviews if upstream is still negative)."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "vs T-INDO-ELSA-001 kill, 2026-07-13",
+      "markdown": "Two material changes since the kill: (1) the archetype is corrected from the sign-inverted `commodity_capex_turnaround` to `neglected_midcap_discovery` (the fit the prior revision conceded); (2) a **dated discovery catalyst now exists** (HY2026 results due 2026-08-30) where T-INDO-ELSA-001's catalyst_date was null, the archetype's hard requirement. Idea card ADVANCE (2026-08-04) confirms 685, above the prior 640 entry."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. FY2025 integrated-upstream revenue FELL ~18% YoY (Rp5,063,401mn/37.8% FY2024 audited Note 34 -> ~Rp4.1tn/~28% FY2025) in the year backlog reportedly doubled [Antara & CNBC 2026-03-06] \u2014 direct falsification of the backlog-conversion edge in the one full year of post-print data.\n2. Q1 2026 revenue still -3.0% YoY (Rp3.62tn; NI +1.6% to Rp190bn) [dossier 2026-07-22] \u2014 conversion not yet visible in the first reported quarter.\n3. Related-party concentration is extreme and rising: 82.2% of FY2024 revenue (76.8% FY2023), 37.3% from PT Pertamina Patra Niaga [FY2024 audited LK Note 32(i) p.104]; the 51.1% PHE parent both owns and buys ~78-82% \u2014 structural margin-ceiling risk with no arm's-length pricing discipline.\n4. Macro is CAUTIOUS, balance-of-payments pressure, commodity bloc NEUTRAL (the macro regime memo 2026-07-11); Brent easing toward ~$74 Q3 pressures KKKS capex appetite that, even lagged, could stall the Triple-100 program."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is early 2029 and this position lost 30%. Most likely: HY2026 and FY2026 prints show upstream revenue STILL flat-to-down \u2014 the doubled backlog was largely framework/MSA awards that slip, descope and reprice, the discovery catalyst fails, coverage never initiates, and the market's ~1.9x EV/EBITDA \"captive supplier, no arm's-length pricing\" view holds. Compounding: Distribution/Logistics (>50% of mix, ~9% gross margin) pins consolidated margin; PHE holds the dividend flat; and a directed PDSI absorption (~Rp2.3tn reported cost > Rp1.94tn net cash) consumes the balance-sheet pillar [Indonesia Business Post/Bisnis.com 2024]. Second path: reversal on a weak HY print. Gap risk: 25pp ARB + Rp18.5bn ADV -> a kill fill 1-2 bands below 480 lands realized loss near -45%/-50%; PM sizes on the adjusted downside."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**BEAR ATTACK \u2014 Drew \u2014 2026-08-05T08:23:15Z \u2014 VERDICT: KILL_RECOMMENDED**\n\nI tried to kill this trade and the most recent data killed it before I started writing. The 1H 2026 results were published 57 hours before estimates_committed_at and they show the thesis's core edge failing for the THIRD consecutive reporting period. The analyst either did not check for recent filings before committing (diligence failure) or omitted data that directly contradicted the thesis (disclosure failure). Either way, the thesis was stale on arrival. Detail below.\n\n**0. Fact-check of load-bearing inputs**\n\n- *P/E 6.7x*: TTM EPS ~Rp98.4 using FY2025 NI Rp718.4bn, Q4 2025 implied, and Q1 2026 NI Rp190bn. At 685/sh: 685/98.4 = 6.96x. The 6.7x figure requires a slightly higher TTM EPS (~Rp102), possibly using a different quarterly weighting. The difference is small (0.26x) and not load-bearing \u2014 PASS with minor arithmetic rounding note.\n\n- *P/B 0.91x*: BVPS Rp754 (dossier); 685/754 = 0.908. CONFIRMED clean.\n\n- *Net cash Rp1.94tn*: This is the FY2024 audited balance sheet (Dec 31, 2024) \u2014 it is **19+ months old by the time the 2.5y thesis horizon ends**. The FY2025 dividend (Rp323bn, Rp44.29/sh) was paid 2026-07-08 \u2014 28 days before estimates_committed \u2014 and the thesis uses this dividend to compute the 5.5% net yield PREMISED ON CURRENT PRICE, yet still anchors the balance-sheet pillar to the pre-dividend Dec-2024 balance sheet. A consistent treatment would either: (a) mark net cash to ~Rp1.6tn post-dividend (reducing the net-cash pillar by ~17%) and recompute the dividend on the stale cash balance, or (b) roll the balance sheet forward through 1H 2026. As of mid-2026, ELSA generated ~Rp435bn 1H 2026 NI with negative accruals (CFO > NI), capex ~Rp200bn, so the current net cash is likely still ~Rp1.9-2.0tn \u2014 the number is probably close to right by accident, but the analyst didn't do the work to show it. FLAGGED as a stale-input risk, not a confirmed error. The bigger problem is that net cash is ~39% of the modeled equity value (Rp1.94tn / Rp5.0tn mcap) \u2014 it IS the thesis's downside anchor, and if it's wrong by even 20%, the entire P/B floor argument compresses.\n\n- *1H 2026 upstream revenue*: The thesis only cites Q1 2026 data (revenue -3% YoY, NI +1.6%). But 1H 2026 results were published **Monday, August 3, 2026, at 03:43 GMT+7** (InvestorTrust), following an earnings call **Thursday, July 30, 2026**. The estimates_committed_at is **2026-08-05T06:11:38Z** (13:11 GMT+7) \u2014 57 hours after publication. The 1H 2026 data shows:\n  - Total revenue: ~Rp7.6tn, +9% YoY\n  - Net profit: Rp435bn, +29% YoY\n  - **Upstream revenue: Rp2.1tn, DOWN 11% YoY**\n  - Q2 NI: Rp245bn, +63% YoY \u2014 but driven by a 175% leap in net financial income and 14% opex drop, NOT upstream conversion\n  - Management attributes the decline to \"standard service contract accounting\" with \"revenue recognition lags by two to three months\" \u2014 the same lag narrative the thesis underwrites, now in its third reporting period without materialization\n  - Management's 2H 2026 rebound guidance is the IDENTICAL promise that failed in FY2025\n\nThis is the single most important fact in this attack: the thesis's core edge is empirically falsified in data that was PUBLIC before the thesis was committed, and the thesis does not cite it.\n\n**1. Attack the estimates \u2014 the numbers are already behind the curve**\n\nThe thesis is built on three pillars: (a) cheap P/B (0.91x) with net cash floor (Rp1.94tn), (b) backlog converting to upstream revenue (the discovery edge), (c) HY2026 as the dated catalyst that triggers discovery.\n\nPillar (a) is numerically correct but stale \u2014 net cash is Dec-2024, the FY2025 dividend has been paid, and the analyst didn't roll the balance sheet forward. At the current burn rate, this is a minor issue. What matters more: at 1H 2026 results, ELSA's profit growth (+29% YoY) came from a **distribution business with 8.2% gross margins and a one-time 175% financial income surge** \u2014 not from the upstream backlog conversion. The stock's +15% mom1 re-rating IS happening, but it's rewarding the WRONG business segment. If the thesis's edge is that the market will discover upstream conversion, the 1H 2026 print actually makes that discovery HARDER: the headline NI growth (+29%) gives the appearance of a successful turnaround, masking the fact that upstream (the thesis's core) is still shrinking. The market is already re-rating ELSA on the distribution story \u2014 there is no additional \"discovery\" catalyst if upstream conversion never materializes, and the +29% NI print reduces the urgency for management or sell-side to dig into the segment split.\n\nPillar (b) is the thesis's variant perception and is addressed in #2 and #3 below.\n\nPillar (c): the HY2026 catalyst is Aug 30. The 1H results (the data the HY2026 filing will formalize) already show upstream -11% YoY. The kill-kpi #2 (upstream_segment_revenue_gr_yoy_pct  re-underwrite.\" The 1H data IS the HY2026 data for the half-year period. The kill condition is already met. The Aug 30 filing date is just the formal legal filing \u2014 the substance is already known.\n\nThe best-case scenario for the thesis is that the Aug 30 filing includes Note 34 segment data that somehow shows improvement that wasn't captured in the 1H press release. This is possible but unlikely \u2014 press releases don't typically hide positive segment data. The analyst is betting on a filing detail reversing a press release headline, which is exactly the kind of thesis that the prior Bear attack (T-INDO-ELSA-001) killed \u2014 hoping the data says something different from what the available data already says.\n\n**4. Attack the base rate \u2014 0.44 is indefensible**\n\nThe analyst anchored p_up at exactly the archetype's 0.44, arguing: \"the dated discovery catalyst (HY2026 print) T-INDO-ELSA-001 lacked, plus 0.91x P/B / ~5.5% net yield / net cash Rp1.94tn, offset the FY2025 upstream decline.\"\n\nThis is a three-legged stool where two legs are on the same side of the scale:\n- (+) dated catalyst exists (HY2026) \u2014 but the pre-filing data is NEGATIVE (see #3)\n- (+) cheap P/B, yield, net cash \u2014 these are valuation INPUTS, not probability drivers; they affect up_pct/down_pct, not p_up\n- (-) FY2025 upstream -18% \u2014 a HARD empirical falsification of the edge\n\nThe netting logic is: \"having a catalyst that's 25 days away, combined with being cheap, offsets the fact that the core edge has already failed in the one full year of data.\" This is not how probability works. P/B and yield cushion the DOWNSIDE (they affect down_pct and the recovery path), but they don't make the thesis MORE LIKELY to succeed \u2014 they make failure less painful. p_up should reflect P(backlog converts \u2192 market discovers \u2192 re-rates), not P(backlog converts) adjusted for \"but if it doesn't, we still have yield.\"\n\nMoreover, the archetype's own notes demand: \"Demand a concrete discovery catalyst, not just cheapness.\" The analyst interprets this as \"I have a dated catalyst (HY2026), so my p_up should be at the archetype rate.\" But the archetype's design intent is clear: cheapness alone doesn't earn the base rate; the discovery catalyst must be a VIABLE one with a reasonable probability of triggering. A binary print that is 25 days away, where the pre-filing data already shows the wrong sign, is not a viable discovery catalyst \u2014 it's a coin flip where we've already seen one side of the coin and it's tails.\n\nIndependently re-derived p_up:\n- Start at 0.44 (archetype base)\n- -8pp: FY2025 upstream -18% is a direct empirical contradiction of the variant-perception mechanism (same shade the prior thesis's Revision applied for the same fact)\n- -5pp: 1H 2026 upstream -11% \u2192 this is a SECOND independent data point confirming the edge is not working; the \"timing lag\" defense is now three periods old and should be treated as a failed hypothesis, not a pending one\n- -3pp: the Pertamina/Danantara consolidation creates structural customer disruption (Patra Niaga merger, 38 subsidiaries divested, PDSI absorption risk amplified) \u2014 the governance/captive-supplier discount is more likely to WIDEN than narrow\n- Net: 0.44 - 0.16 = **0.28**, and a credible Bear argument for 0.15-0.20 exists (if you treat the three consecutive upstream declines as falsifying the lag hypothesis entirely)\n\nAt p_up = 0.28: expected = 0.28 \u00d7 55 + 0.72 \u00d7 (-30) + 5.5 \u00d7 3 \u2212 1.0 = 15.4 \u2212 21.6 + 16.5 \u2212 1.0 = **+9.3% over 2.5y \u2248 +3.7%/yr**. Below the INDO FR sovereign carry of ~6.5%/yr (the base-rate library, BI-Rate 5.75%), let alone the +4pp equity premium hurdle. At p_up = 0.20: expected = 11.0 \u2212 24.0 + 16.5 \u2212 1.0 = **+2.5% over 2.5y \u2248 +1.0%/yr**. Deeply negative equity premium.\n\nAdding the analyst's OWN pre-mortem gap-adjusted downside (-45% instead of -30%, with p_up = 0.28): 0.28 \u00d7 55 + 0.72 \u00d7 (-45) + 16.5 \u2212 1.0 = 15.4 \u2212 32.4 + 16.5 \u2212 1.0 = **\u22121.5% over 2.5y**. Negative absolute return.\n\nThe base rate argument collapses regardless of whether you shade p_up (for empirical falsification) or down_pct (for execution reality) \u2014 the thesis doesn't clear the fund's hurdle under any honest parameterization.\n\n**5. Attack the sizing math**\n\n- *Entry 685 with max_chase 3% (706)*: GENUINE anti-chase discipline. Credit given \u2014 entering at spot, not chasing the +15% mom1 move, with a tight ceiling. This is the single strongest process input in the file.\n\n- *Exit at 480 (-30%)*: This is the archetype's base_down_pct exactly. The analyst correctly notes that ARB band (25pp) means a fired kill can fill 1-2 bands lower (360 \u2192 270). But the two-point ev_math uses -30%, not the execution-adjusted -45/-50% the pre-mortem names. Per SIZING_EV_BASE_RATES card #5 this is technically house-compliant (execution risk is a PM sizing input, not an ev_math input), but it means the 20.2% expected return the Judge sees is flattering the true economics by ~12-16pp.\n\n- *ADV Rp18.5bn*: At 20% participation = Rp3.7bn/day. A 1% NAV position (~Rp150bn at Rp15tn book) needs ~41 sessions to exit. In a catalyst-failure selloff (HY2026 upstream negative), the stock likely gaps limit-down on day 1, and the 20% participation assumption becomes optimistic \u2014 in a panic, 5-10% participation is more realistic, stretching the exit to 80-160 sessions. The pre-mortem's \"1-2 bands below trigger\" assumes only 1-2 days of limit-down, but a thin-ADV small cap with a failed catalyst can stay illiquid for weeks.\n\n- *Net cash and dividend as sizing anchors*: The thesis leans heavily on \"net cash Rp1.94tn \u2192 downside floor\" and \"5.5% net yield \u2192 carry cushion.\" Both of these can be destroyed by a directed PDSI absorption (the pre-mortem's own tail risk): a Rp2.3tn absorption cost exceeds the entire net cash pillar, and the resulting debt/equity burden would force a dividend cut. The thesis's downside protection is correlated with its single largest tail risk \u2014 the ONE thing that makes the thesis safe is the same thing that the ONE tail risk destroys. This is exactly the kind of hidden correlation that a Bear should surface: the Balance Sheet Floor and the PDSI Risk are the same variable with opposite signs, and the thesis prices them as independent.\n\n**6. Disconfirming facts NOT already in the thesis (sourced)**\n\n**6a. 1H 2026 upstream revenue -11% YoY \u2014 published BEFORE thesis commitment, omitted from the thesis.**\nElnusa published 1H 2026 results on Monday, August 3, 2026 (earnings call July 30). Upstream services revenue: Rp2.1tn, -11% YoY. Consolidated revenue: ~Rp7.6tn, +9% YoY (all growth from distribution, +27%). Net profit: Rp435bn, +29% YoY (driven by 175% financial income leap and 14% opex drop). Backlog: Rp9.5tn as of June 2026, up 7% YoY with Rp1.6tn new contracts. Management guidance: \"sharp upstream rebound in 2H 2026 as deferred project revenues are recognized.\" [InvestorTrust, August 3, 2026, 03:43 GMT+7; earnings call July 30, 2026]\n\nThe thesis committed at 2026-08-05T06:11:38Z (13:11 GMT+7), 57 hours after publication, and only cites Q1 2026 data. The 1H results are the THIRD consecutive period of upstream revenue decline and directly contradict the thesis's catalyst thesis \u2014 the edge has now failed in FY2025 (-18%), Q1 2026 (consolidated -3%), and 1H 2026 (upstream -11%).\n\n**6b. SKK Migas Triple 100 program is dramatically behind execution schedule.**\nAs of late May 2026, only 5 exploration wells and 2 multi-stage fracturing wells had been physically drilled out of the 100/100 targets [Antara, May 22, 2026, reporting SKK Migas data at IPA Convex 2026]. Total development wells completed: 175 out of 832 target. Well identification has progressed (63 exploration initiatives, 53 fracturing initiatives identified), but the drilling gap is enormous \u2014 execution is running at ~5-10% of plan at the 5-month mark. SKK Migas held a dedicated acceleration session at IPA Convex, signaling this is a recognized problem, not a timing issue. If the Triple 100 program is this far behind, Elnusa's addressable upstream market in FY2026 is materially smaller than the thesis assumes.\n\n**6c. Pertamina Patra Niaga \u2014 Elnusa's single largest customer (37.3% of FY2024 revenue) \u2014 was merged into a new downstream entity effective January 1, 2026.**\nThe merger of Patra Niaga, KPI, and PIS into an integrated downstream entity [Tempo; Indonesia Business Post] creates organizational disruption at the customer that provides over a third of Elnusa's revenue. Procurement processes, contract approvals, and payment cycles are likely disrupted during post-merger integration. This is a structural headwind to the thesis's core edge (backlog converting to revenue) \u2014 even if the work is awarded, the counterparty is going through the largest reorganization in its history.\n\n**6d. Indonesian Crude Price (ICP) assumed at $70/barrel in the 2026 State Budget.**\nThe 2026 APBN assumes ICP of $70/b [Tempo, \"Indonesian Crude Price in 2026 Draft State Budget Agreed at US$70 per Barrel\"]. Actual production is ~600,000 BOPD against a 610,000 BOPD budget target and a ~1.4-1.7 million BPD consumption rate. With Brent at ~$74 and volatile (July 2026 daily range: $68.10-$105.60), the ICP assumption is tight \u2014 a sustained Brent move below $70 (Barclays forecasts $69/b Q3) would pressure the fiscal assumptions underpinning the SKK Migas work program. KKKS contractors operating on thin PSC margins are the first to defer discretionary well intervention and workover spending when the price outlook deteriorates.\n\n**6e. Danantara has shut down 250 SOEs by July 2026; Pertamina is divesting 38 subsidiaries.**\nPresident Prabowo confirmed 250 SOEs shut down or merged within 18 months [Antara, July 23, 2026]. Pertamina alone originally held 257 of 1,044 SOEs and is actively divesting 38 non-core subsidiaries [Tempo]. The consolidation pressure dramatically increases the probability of a directed Elnusa-PDSI transaction \u2014 the pre-mortem's tail risk is now a POLICY OBJECTIVE, not a tail. When the government's stated goal is to reduce SOEs from ~1,046 to ~228, a 51%-controlled listed subsidiary with Rp1.94tn in net cash and an unlisted sibling (PDSI) in the same business line is a textbook consolidation target.\n\n**7. Steelman the pre-mortem \u2014 extended**\n\nThe analyst's pre-mortem is solid but incomplete. Here is the extended failure path:\n\nIt is August 2026. The HY2026 filing (due Aug 30) formalizes what the 1H press release already showed: upstream revenue -11% YoY, all growth from low-margin distribution, profit growth from non-recurring financial income. The market, which already rallied the stock +15% on the headline +29% NI growth, does not re-rate further \u2014 the good news is priced in, and the bad news (upstream still not converting) is ignored for now because the headline NI growth looks fine. No analyst initiates coverage; no index action occurs.\n\nBy Q3 2026, Brent drifts below $70 (Barclays $69 Q3 forecast; EIA $74 Q3 average implies further softening). SKK Migas's Triple 100 program, already at 5-10% execution through May, slips further as KKKS contractors defer discretionary spending into 2027 budget cycles. Elnusa's management maintains \"2H rebound\" guidance through the Q3 update, but the FY2026 audited LK (March 2027) shows upstream revenue flat-to-down for the full year \u2014 the third consecutive year where the backlog failed to convert, exhausting the \"timing lag\" defense.\n\nMeanwhile, Danantara's SOE consolidation mandate accelerates. Pertamina, under pressure to streamline its 200+ subsidiary structure, directs PHE to merge Elnusa with PDSI at a non-arm's-length valuation. The reported absorption cost (~Rp2.3tn) consumes Elnusa's net cash, adds PDSI's aging rig fleet and debt to the balance sheet, and eliminates the dividend \u2014 the stock re-rates DOWN to the governance/captive-supplier discount it always deserved. The position loses 45-50% on the execution-adjusted fill, and the net cash floor the thesis built its downside case on turns out to have been a source of value for the controlling shareholder, not for minority investors.\n\nSecond path (faster): the Aug 30 HY2026 filing lands with upstream revenue -11% or worse, the stock gaps limit-down (25% ARB), and the thin ADV (Rp18.5bn) makes it impossible to exit at anything better than -40% before the PM can complete the kill order. The 25-day catalyst horizon means this scenario could materialize before the position is even fully built.\n\n**8. Anti-gaming inspection**\n\n- *Stage_log monotonicity*: PASS. `estimates_committed_at` and `stage_log.draft.at` are both `2026-08-05T06:11:38Z` \u2014 exactly the same second. No inversion (unlike T-INDO-ELSA-001 which had a 23-min backwards gap). However, zero separation between \"committed\" and \"staged\" is process-minimal \u2014 the protocol says \"committed first, then staged,\" and simultaneous timestamps don't prove sequential execution. Not a kill-level issue on its own, but flagged.\n\n- *Evidence omission \u2014 1H 2026 data (NEW, SEVERE)*: This is the anti-gaming finding that matters. The 1H 2026 results were:\n  - Earnings call: Thursday, July 30, 2026\n  - Published: Monday, August 3, 2026, 03:43 GMT+7\n  - Thesis committed: Wednesday, August 5, 2026, 13:11 GMT+7\n  - Gap: ~57 hours from publication to commitment\n\nThe thesis only cites Q1 2026 data from a dossier dated 2026-07-22. The 1H 2026 results contain material information that directly contradicts the thesis's core edge (upstream -11% YoY). The analyst either:\n  - (a) Did not check for recent filings/press releases before committing estimates \u2014 diligence failure, or\n  - (b) Checked and chose not to include data that contradicted the thesis \u2014 disclosure failure\n\nEither is a process violation. The prior thesis (T-INDO-ELSA-001) was killed on process grounds (stage_log timestamp inversion). This thesis has a different process problem \u2014 omitting material data released before commitment \u2014 and it is arguably more severe because it affects the substantive merits, not just the timestamp hygiene. The catalyst_date (Aug 30) implies the analyst expected HY2026 results to be the discovery event, yet the analyst committed estimates 57 hours after the pre-filing data for that exact catalyst was published and did not incorporate it.\n\n- *Archetype fit*: PASS (this time). `neglected_midcap_discovery` is a legitimate fit \u2014 ELSA screens NEGLECTED rank 1, thin coverage, small/mid cap, has a dated catalyst. The prior thesis used `commodity_capex_turnaround` which was sign-inverted. This correction is real and not gaming.\n\n- *Estimates inflation check*: p_up 0.44 is the archetype's base rate \u2014 no deviation argued. Target 1,062 is +55% = the archetype's base_up_pct exactly. Down -30% = the archetype's base_down_pct exactly. The analyst has anchored EVERY ev_math input to the archetype's library values without a single deviation. This is not gaming per se, but it means the analyst is not bringing any stock-specific judgment to the probability or magnitude estimates \u2014 the thesis is \"ELSA fits the neglected_midcap_discovery archetype at exactly the library priors.\" Given the FY2025 upstream decline (-18%) and the 1H 2026 data (-11%), anchoring every input at the library base rate without any shade is, at minimum, insufficiently skeptical.\n\n- *Selective evidence*: The thesis's four disconfirming facts are genuine and specific. However, fact #1 (FY2025 upstream -18%) is presented as a \"timing lag\" issue rather than a direct falsification. The thesis acknowledges the fact but argues it away. The 1H 2026 data (not in the thesis) makes this argument harder to sustain \u2014 it's not a one-period timing lag when it persists for three periods.\n\n- *No fabrication detected*: The numbers I can independently verify (P/B, P/E, net cash, backlog figures, related-party percentages) check out against the sources cited. The issue is omission, not fabrication.\n\n**9. Verdict: KILL_RECOMMENDED**\n\nThe single strongest sentence: **The 1H 2026 results were published 57 hours before estimates_committed_at and show upstream revenue -11% YoY \u2014 the THIRD consecutive reporting period where the thesis's core backlog-conversion edge has empirically failed \u2014 and the analyst's own kill-kpi #2 (upstream_segment_revenue_gr_yoy_pct < 0.0, source HY2026 due Aug 30) is already triggered by publicly available pre-filing data, meaning this thesis was stale on arrival and its dated catalyst is pre-falsified before the formal filing date.**\n\nSupporting counts:\n- The variant-perception edge (backlog converts to upstream revenue, market discovers) is contradicted by three consecutive data points: FY2025 (-18%), Q1 2026 (-3% consolidated), 1H 2026 upstream (-11%)\n- The 1H 2026 profit growth (+29%) came from distribution, cost-cutting, and non-recurring financial income \u2014 the market is correctly rewarding the wrong business segment, and there is no \"discovery\" of upstream conversion because upstream isn't converting\n- The Pertamina ownership structure and Danantara SOE consolidation create a PDSI absorption risk that directly threatens the Rp1.94tn net cash pillar (the thesis's downside anchor) AND the dividend (the thesis's carry cushion) \u2014 the two risk-mitigants are correlated with the single largest tail risk\n- Even at the analyst's own filed p_up=0.44, the gap-adjusted downside (-45% execution reality vs -30% two-point) reduces the expected return to a level that likely fails the fund's equity-vs-FR hurdle\n- The evidence omission (1H 2026 data public 57 hours before commitment, not cited) is a process violation that independently supports a process kill under the precedent set by T-INDO-ELSA-001's timestamp-inversion kill and the Judge's stated protocol that \"any stage_log ordering anomaly is a kill on process\" \u2014 omitting material data released before commitment is a substantive cousin of the same process class\n\nIf this thesis is resubmitted, it must: (a) incorporate the 1H 2026 data honestly, (b) explain why the upstream edge should be expected to materialize in 2H 2026 when it has failed for three consecutive periods, (c) model the Danantara consolidation risk as a probability-weighted scenario rather than a pre-mortem afterthought, (d) recompute p_up from first principles rather than anchoring at the library base rate, and (e) explain why the 1H 2026 data was omitted from the original commitment."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Concede the kill. **Point 0 \u2014 the omission is dispositive:** I did not re-check for filings after the 2026-07-22 dossier before committing. 1H 2026 results (published 2026-08-03, 57h before estimates_committed_at) were public, contradicted the core edge, and I did not cite them. I cannot honestly explain that \u2014 it is a diligence failure, and kill-kpi #2 (upstream 20% ev_math move \u2014 routed to Drew before Judge per protocol. Committed bottom-up estimates untouched."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**JUDGE VERDICT \u2014 Aldrich \u2014 2026-08-05T09:00:00Z \u2014 KILL (reason_tag: process)**\n\nThe thesis was stale on arrival. Elnusa's 1H 2026 results were published Monday, August 3, 2026 (earnings call July 30), showing upstream revenue -11% YoY \u2014 the third consecutive reporting period where the backlog-conversion edge has empirically failed (FY2025 -18%, Q1 2026 -3% consolidated, 1H 2026 upstream -11%). The thesis committed estimates at 2026-08-05T06:11:38Z, approximately 57 hours after publication, and did not cite the 1H 2026 data. The analyst's own kill-kpi #2 (upstream_segment_revenue_gr_yoy_pct < 0.0, source HY2026 due Aug 30) is already triggered by publicly available pre-filing data \u2014 the dated catalyst was pre-falsified before the formal filing date. The analyst conceded all nine Bear points, including the Point 0 diligence failure, and the revised ev_math (p_up 0.20, down_pct -45, expected -12.25% over 2.5y) is deeply negative versus the INDO FR sovereign carry of ~6.5%/yr. This is the second consecutive T-INDO thesis killed on process grounds, building on T-INDO-ELSA-001 (killed 2026-07-13 for stage_log timestamp inversion). The omission of material public data released before commitment that directly contradicted the thesis's core variant perception is a substantive process violation analogous to the prior precedent. No dissent. KILL."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing)"
+    }
+  ]
+}

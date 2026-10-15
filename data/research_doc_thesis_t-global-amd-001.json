@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-AMD-001",
+  "title": "Advanced Micro Devices (AMD)",
+  "meta": {
+    "id": "T-GLOBAL-AMD-001",
+    "book": "GLOBAL",
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices",
+    "sector": "SEMIS",
+    "factors": [
+      "semis_ai",
+      "us_tech"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-08-19T06:11:48+00:00",
+    "drafted": "2026-08-19T06:12:00+00:00",
+    "judged": "2026-08-19T06:35:54+00:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 484.0,
+    "target": 630.0,
+    "kill": 339.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "base_up_pct +30% (momentum_continuation 9m window): the market rolls forward from FY26E to FY27E/FY28E normalized EPS as the dated 2027 DC-doubling guide is digested \u2014 ~$630 = ~54x FY27E non-GAAP EPS vs ~42x at entry, a roll-forward (price embeds FY27E at entry; target embeds FY28E at ~39x), not pure multiple expansion.",
+    "price": 561.3114013671875,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 30.0,
+    "p_down": 0.58,
+    "down_pct": -30.0,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -5.1,
+    "horizon_years": 0.75,
+    "carry_pct": -0.3,
+    "kelly_full_pct": -56.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.48,
+    "source": "the base-rate library momentum_continuation prior (rate 0.50, Jegadeesh & Titman 1993 / AQR, n=200) shaded to 0.48: extreme extension (mom12 +183.69%, vol 78.97% \u2014 momentum-crash tail, Daniel & Moskowitz 2016) offsets a satisfied 1-month reversal filter (mom1 -3.81%) and a dated fundamental catalyst (2027 DC-doubling guide, AMD Q2'26 call).",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 339.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop \u2014 widened to ~30% below entry for crash-gap risk at 79% vol (Bear #5); the ~$45B fundamental bear case (~$378, -22%) stays a review red flag (see kpi/date kills), not the exit. Price kill confirms before exit (bad-print guard)."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-02-10",
+      "action": "review",
+      "condition": "Q4 2026 earnings (~early Feb 2027): review if Helios/MI450 revenue and DC growth come in below the embedded 2027-doubling ramp, or if any named hyperscaler (MSFT/GOOGL/AMZN/META) cuts 2027 capex guidance"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 60.0,
+      "action": "review",
+      "name": "dc_revenue_yoy_growth_pct",
+      "source": "AMD quarterly 8-K segment revenue (Data Center YoY growth, was +107% Q2'26)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-19T06:12:00+00:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-19T06:18:36+00:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-19T06:35:54+00:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-AMD-001",
+    "ticker": "AMD",
+    "book": "GLOBAL",
+    "killed": "2026-08-19",
+    "px_at_kill": 484.3900146484375,
+    "reason": "other",
+    "px_now": 561.3114013671875,
+    "px_asof": "2026-10-15",
+    "move_pct": 15.9
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sources (primary, this session, no sell-side data):** AMD Q2 2026 8-K (2026-08-04, accession 0000002488-26-000121) \u2014 segments, P&L, Q3 guide, balance sheet; AMD Q4/FY2025 release (2026-02-03) + FY2025 10-K \u2014 FY23-25 comparatives, cash flows, assets; AMD Q2 2026 call (2026-08-04) \u2014 2027 DC-doubling guide, Helios ramp, customers; \"Advancing AI 2026\" (2026-07-23) \u2014 MI450 spec, ROCm.ai claims, TAM; hyperscaler Q2 2026 capex reports.\n\n**EARNINGS_QUALITY_FLAGS gate (run first):**\n- Accruals (NI\u2212CFO)/avg total assets: FY23 \u2248 **\u22121.2%**; FY24 \u2248 **\u22122.0%**; FY25 \u2248 **\u22124.7%** \u2014 persistently negative, CFO exceeds NI every year (~1.8-1.95x), strong cash conversion.\n- Divergence flags: none manipulation-class. MI308 inventory (~$360m prior charges reversed in Q4'25, 8-K) optics-class, disclosed, not a haircut trigger.\n- Structure: US large-cap 10-K filer, no VIE, no going-concern language; AMD's up-to-$5bn Anthropic investment (customer) disclosed, arms-length \u2014 not a governance flag.\n- Action rule: no confirmed manipulation-class flag \u2192 gate clears, proceed.\n\n**Revenue build (segment, USD):** Q2'26 actuals: Data Center $6,718m (+107% YoY, 58% of revenue; op income $2,103m, 31.3% margin), Client $3,062m (+23%), Gaming $779m (\u221231%), Embedded $977m (+19%, op income $386m, 40% margin); total $11,536m (+50%). Q3'26 guided ~$13.0B (\u00b1$300m) at ~56% non-GAAP GM. Forward build uses the call's H2 DC acceleration guide:\n- FY2026E: DC ~$30.3B (+~94%) / Client ~$12.4B / Gaming ~$3.4B / Embedded ~$4.0B \u2192 **~$50.1B (+45%)**\n- FY2027E: DC ~$62B (**\"more than double,\" +~105% \u2014 the load-bearing guide**) / Client ~$13.5B / Gaming ~$2.9B / Embedded ~$4.6B \u2192 **~$83.0B (+66%)**\n- FY2028E: DC ~$85B (+~37%, decelerating) / non-DC ~$22.6B \u2192 **~$107.6B (+30%)**\n\n**Margin path (non-GAAP):** GM held flat at 56% (Q2'26 print; Q3'26 guide) \u2014 no expansion assumed. Segment op margins scale as in Q2'26: DC 31.3% \u2192 ~33%; Embedded 40%; Client+Gaming 15%. Non-GAAP op income: FY26E ~$13.7B \u2192 FY27E ~$24.8B \u2192 FY28E ~$32.8B.\n\n**Owner-earnings bridge (\u00a75; SBC subtracted):** tax ~13% (guided); net interest +~$0.4B (net cash ~$10B); SBC $1.64B (FY25) +15%/yr. Owner earnings (non-GAAP NI \u2212 SBC): FY26E ~$10.4B (**~$6.3/sh**) \u2192 FY27E ~$19.8B (**~$11.9/sh**) \u2192 FY28E ~$26.4B (**~$15.9/sh**) on ~1,660m shares. FCF: Q2'26 capex $808m (vs ~$298m run-rate) for Helios capacity; FY26E capex ~$2.5-3.0B \u2192 FCF ~$9-10B, ~$20B by FY27E. ROIIC not cleanly computable on R&D-heavy semis; the revealed preference is DC op income swinging \u2212$155m \u2192 +$2,103m YoY.\n\n**3-assumption sensitivity (inputs carrying >70% of value):**\n1. **FY2027E DC revenue** (dominant, ~70% of FY27E EPS): base $62B (\"more than double,\" call); bull ~$70B; bear ~$45B (2027 capex trim or MI450 slip).\n2. **DC operating margin**: base 32-33%; bull 35%; bear 27% (rack BOM dilution, pricing).\n3. **MI450 competitive execution**: base = credible #2 on the 432GB HBM4 inference-TCO edge; bear = independent benchmarks show parity-or-worse and the ~80-85% NVIDIA share ceiling holds."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: AMD is NVIDIA's distant #2 \u2014 a share-loser in AI GPUs whose elevated multiple rests on the EPYC hyperscaler buildout, and which \"disappointed\" on Q3 guidance despite a record quarter."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** AMD is a losing NVIDIA-beta. The Q2'26 print (record revenue, DC +107%) still fell ~9% after hours because the Q3 guide \"only\" beat the published midpoint expectation, not the whisper \u2014 proof the multiple is stretched. MI400 is architecturally behind Blackwell/Rubin; ROCm will never match CUDA; ~80-85% NVIDIA accelerator share caps AMD.\n\n**Why wrong:** Three primary-source facts the market mis-prices. (1) **The dated 2027 guide**: Su (Q2'26 call) guided DC revenue to \"more than double\" in 2027, growth \"well above 100%,\" calling a ~$30B 2027 Instinct estimate \"probably too low\" \u2014 the market read the Q3 guide as a miss, ignoring that 2027, not Q3, is the story. (2) **MI450 is competitive on inference TCO**: 432GB HBM4 (vs Rubin R200's 288GB) fits a 405B-parameter FP8 model on one GPU; AMD claims Helios delivers up to +30% tokens/dollar vs Rubin NVL72. (3) **The TAM is expanding, not fixed**: hyperscaler capex ~$725B in 2026 (+77% YoY), ~$1T 2027E; OpenAI 6GW + Meta 6GW + Anthropic 2GW MI450 commitments scale AMD ~2x WITHOUT stealing NVIDIA share. The non-AI base (Client +23%, Embedded +19% at 40% op margin) is self-funding through the ramp.\n\n**What proves us wrong:** MI450 independent benchmarks at TCO parity-or-worse; any named hyperscaler cuts 2027 capex; DC op margin compresses below ~27%; or Helios/MI450 revenue in the Q4'26 print lags the embedded ramp.\n\n**Edge taxonomy:** **(a) analytical** \u2014 the market mis-models AMD as share-loss in a fixed pie; it is a TAM-expansion #2 with a memory-capacity TCO position. Secondary **(b) informational-synthesis** \u2014 connecting the 2027 doubling guide to hyperscaler capex and the MI450 HBM4 spec. Not (c)/(d). Honest caveat: this is a momentum continuation, not a value buy \u2014 at the current print the market already embeds FY2027E execution at ~36-40x owner earnings, and my disciplined DCF (9-10% COE, SBC-subtracted) puts fair EV roughly 0-20% below spot. The edge is the dated 2027 catalyst plus the reversal filter, not cheapness; EV is thin (+2.7%), size small."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a filing/IR line",
+      "markdown": "1. NVIDIA holds ~80-85% of AI accelerators and ~85-90% of training workloads; AMD's +30% tokens/dollar claim is AMD's own, unvalidated by independent benchmarks (Advancing AI 2026) \u2014 a parity print caps #2 intake at the current share ceiling.\n2. The 2027 doubling is guidance, not contracted revenue; the named 14GW buildout depends on hyperscaler capex staying elevated \u2014 GOOGL posted negative FCF in Q2'26 and MSFT is power-constrained (hyperscaler Q2'26 reports); one capex trim cuts the load-bearing assumption.\n3. ROCm remains structurally behind CUDA (no TensorRT-LLM equivalent); AMD's ROCm.ai \"3.3x\" claim is vs its own prior stack, not vs CUDA.\n4. The non-AI base is itself softening: Gaming \u221231% YoY, Client+Gaming op margin down to 15% (from 21%) (Q2'26 PR) \u2014 it can cushion, not rescue, a DC stumble.\n5. The Q2'26 tape is the valuation trap in miniature: record revenue + EPS beat still sold off ~9% \u2014 at an elevated multiple, even good prints disappoint; +183.7%/12m at ~79% vol carries acute \"good news not good enough\" reversal risk.\n6. HBM4 spot prices reportedly surged ~435% (Bear's wccftech cite, not independently validated) \u2014 MI450's 432GB HBM4 \"memory edge\" is ~1.5x exposure to a scarce, price-spiking input that pressures the 31.3%\u219233% DC margin path and the +30% tokens/$ TCO claim (Advancing AI 2026)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2027 and this position lost ~22%+. The most likely reason is a sharp momentum reversal, not a fundamentals blow-up: the run carried +183.7%/12m at ~79% vol, and a \"good news not good enough\" print or a hyperscaler trimming 2027 capex triggered a violent de-rating as the market stopped rolling forward EPS, compressing the ~40x owner-earnings multiple toward the ~25-30x my DCF says is fair. The 2027 doubling was management's word, not contracted revenue, and the first slippage sign \u2014 Helios revenue in the Q4'26 print below the ramp \u2014 cracked the narrative faster than the business deteriorated."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n0. Fact-check: DC $6,718m (+107%, 58%), total $11,536m, Q3 ~$13.0B @56% GM confirmed (8-K EX-99.1; newsroom). 2027 DC \"more than double,\" ~$30B Instinct \"too low\" confirmed (Q2'26 call, C.J. Muse Q&A). MI450 432GB HBM4 vs Rubin R200 288GB confirmed. No fabrication.\n\n1. Estimates: FY27E DC $62B is management's guide restated. Your own bear $45B \u2192 FY27E EPS ~$9.0 \u2192 42x \u2248 $378 = the kill. Fragile \u2014 single-assumption dependency on the input carrying ~70% of value.\n\n2. Variant: your DCF puts fair EV 0-20% BELOW spot \u2014 no valuation variant, you pay up. The market heard \"more than double\" on 8/4 and sold 9%; that's fair compensation for an un-contracted #2 guide, not mispricing.\n\n3. Catalyst: the 2027 guide already fired and failed. No future dated catalyst until Q4'26 (~2/2027) \u2014 your kill-review date, past the 9m window. Catalyst spent; only momentum remains.\n\n4. Base rate: key correct, but 0.48 under-shades the crash tail \u2014 you cite Daniel & Moskowitz yet keep down_pct -22%, when the crash lives in the down leg. #1-ranked +183%/79% continues below-sleeve-average: honest p_up \u2248 0.40.\n\n5. Sizing: p_up 0.40 / down_pct -30% (crash gap-through; kill is \"not a stop\" at 79% vol) \u2192 EV = 0.40\u00b730 + 0.60\u00b7(\u221230) \u2212 0.3 = \u22126.3%. Quarter-Kelly rounds to zero \u2014 dead on arrival.\n\n6. New fact: HBM4 prices surged ~435% (Rubin rack memory ~$2M of $7.8M, wccftech). Your 432GB \"edge\" burns 1.5x the HBM4 of a scarce, price-spiking input \u2014 +30% tokens/$ ignores BOM, and 31.3%\u219233% margin eats it.\n\n7. Pre-mortem extended: fundamentals deliver the doubling but the P/E de-rates 42x\u219230x anyway \u2014 right thesis, no return; \"digestion\" never comes because 2027 is already spoken for.\n\n8. Anti-gaming: stage_log clean, estimates precede market data, no retro-edit. No QC escalation.\n\n9. VERDICT: KILL_RECOMMENDED. \"You are paying above your own fair value for a +183%/12m, 79%-vol momentum name whose entire variant is a public 2027 guide the market already heard and sold 9% on.\""
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "(Sloane answers each numbered Bear point; committed bottom-up estimates untouched.)\n\n0. **Fact-check:** accepted; 8-K/call figures stand, no fabrication.\n\n1. **Single-assumption dependency \u2014 conceded.** FY27E DC $62B is guidance restated; the $45B bear (~$378) was my own kill \u2014 downside was always defined; sizing never assumed the guide was contract.\n\n2. **No valuation variant \u2014 conceded.** My DCF put fair EV 0-20% below spot (disclosed pre-attack). The edge was catalyst + reversal filter, never cheapness; with the catalyst spent (3), it is priced into p_up.\n\n3. **Catalyst spent \u2014 conceded (partial).** The 2027 guide fired 8/4 and the tape sold ~9%; no dated catalyst sits inside the 9m window (Q4'26 print is the ~Feb'27 gate). What remains is delivery, not a fresh event.\n\n4. **p_up ~0.40 \u2014 partial.** I cut 0.48\u21920.42, not 0.40: satisfied mom1 (\u22123.81%) and ~$725B'26 capex keep the 0.50 prior partly alive; the crash tail is under-shaded \u2014 it lives in the down leg.\n\n5. **Crash gap-through \u2014 conceded.** Kill is \"not a stop\" at 79% vol; honest down is \u221230%, not \u221222%. kill\u2192339; EV = 0.42\u00b730 + 0.58\u00b7(\u221230) \u2212 0.3 = **\u22125.1%**; quarter-Kelly \u2192 0.\n\n6. **HBM4 ~435% \u2014 new evidence, accepted.** A scarce price-spiking input cuts the 432GB TCO edge and the margin path; it lowers p_up, not the committed build. Added to disconfirming facts.\n\n7. **Right thesis, no return \u2014 conceded.** A 42x\u219230x de-rate while the doubling lands yields nil EV \u2014 the cost of paying above DCF fair value.\n\n8. **Anti-gaming:** no dispute; log clean, no retro-edits.\n\n9. **Verdict:** KILL is correct \u2014 EV 20% relative (down_pct \u221222\u2192\u221230; expected_pct +2.66\u2192\u22125.1) \u2014 **re-attack to Drew IS triggered** before the Judge."
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "(Drew; bounded re-attack \u2014 down_pct and expected_pct moved >20%.)\n\nA. Honesty: clean. All ten points (0\u20139) answered on merits; the three hard concessions (no valuation variant, spent catalyst, crash gap-through) are real, not performative. The p_up 0.48\u21920.42 and kill 378\u2192339 moves are disclosed in the Revision body, not smuggled; no unlisted frontmatter change; bottom-up build untouched.\n\nB. Arithmetic: reconciles. 0.42\u00b730 + 0.58\u00b7(\u221230) \u2212 0.3 = **\u22125.1%** exactly. Kill 339/484 = \u221229.96% \u2248 \u221230; target 630/484 = +30.17% \u2248 +30 \u2014 both within \u00b13pp.\n\nC. Residual: p_up held 0.42 vs my honest 0.40 \u2192 EV \u22125.1% vs \u22126.3%. Damage slightly understated, immaterial to the outcome.\n\nD. VERDICT: KILL_RECOMMENDED confirmed. \"Even at Sloane's own revised numbers this trade is EV-negative with no dated catalyst and no valuation variant \u2014 it never survives contact.\""
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)\n\nKILL \u2014 reason_tag `valuation`. This is a momentum-only long with no variant perception left: the dated catalyst (the 2027 DC-doubling guide) already fired on the 8/4 print and the tape sold off ~9%, and Sloane's own DCF places fair EV 0-20% below spot, so there is no valuation reason the run continues \u2014 the momentum_continuation registry note makes exactly this an auto-kill. At the analyst's own revised numbers (p_up 0.42, down_pct \u221230) EV is \u22125.1% and quarter-Kelly rounds to zero: the trade is EV-negative while paying above the analyst's own fair value."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

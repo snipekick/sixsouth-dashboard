@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "macro",
+  "id": "macro-regime",
+  "title": "Macro regime memo",
+  "meta": {
+    "regime": "balance_of_payments_pressure",
+    "risk_appetite": "CAUTIOUS",
+    "asof": "2026-10-10",
+    "next_full_rebuild": "2026-11-07",
+    "authors": [
+      "Severin (global macro)",
+      "Ferrand (FX & transmission)"
+    ]
+  },
+  "tilts": [
+    {
+      "scope": "nickel / ID supply-discipline names",
+      "stance": "FAVOR",
+      "why": "ID-controlled supply story, not China-demand or funding dependent; war premium keeps energy input costs elevated"
+    },
+    {
+      "scope": "thermal coal",
+      "stance": "NEUTRAL",
+      "why": "war premium still bids the energy complex, but the structural export-tailwind fade into 2027 is unchanged"
+    },
+    {
+      "scope": "oil-import beneficiaries (ID current account)",
+      "stance": "AVOID",
+      "why": "Brent ~102.7 war premium keeps the ID import bill elevated; no Q3-easing premise to resurrect"
+    },
+    {
+      "scope": "INDO rate-sensitive (banks NIM, property, consumer discretionary)",
+      "stance": "AVOID",
+      "why": "Fed +25bp delivered tightens the carry gap and lifts funding cost; DXY at the 52-week high keeps EM funding tight"
+    },
+    {
+      "scope": "commodity bloc as one beta",
+      "stance": "NEUTRAL",
+      "why": "war premium lifts energy near-term but is a geopolitics overlay \u2014 underwrite name-by-name, do not chase"
+    }
+  ],
+  "markers": [
+    {
+      "metric": "fed_path",
+      "reference": "RAISED 25bp to 3-3/4\u20134.00 on 2026-09-15/16, vote 12-0 (federalreserve.gov monetary20260916a); next FOMC ~Oct 28-29; no post-hike guidance print this session",
+      "trip": "next FOMC delivers another hike, a cut, or guidance deviating from the delivered 3.75-4.00 level"
+    },
+    {
+      "metric": "dxy",
+      "reference": "101.9",
+      "trip": "\u00b13% close inside 10 sessions (below ~98.9 or above ~105.0); quote is Dec-26 futures, not spot index"
+    },
+    {
+      "metric": "brent",
+      "reference": "102.7",
+      "trip": "\u00b115% (below ~87.3 or above ~118.1); quote is futures, not spot"
+    },
+    {
+      "metric": "china_impulse",
+      "reference": "no-reflation, property risk-containment (data not fresh)",
+      "trip": "credit/property print contradicting stated direction"
+    },
+    {
+      "metric": "idx_foreign_flow_feed",
+      "reference": "STALE (0 fresh readings)",
+      "trip": "feed refreshes \u2014 un-quarantines flow narratives"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "detail": null,
+      "markdown": "# Macro Regime Note \u2014 Severin (MACRO_GLOBAL) / Ferrand (MACRO_FX), 2026-10-03 \u2014 Severin global blocks full rebuild (calendar); FX co-sign complete\n\n**Regime call: balance_of_payments_pressure \u2014 HELD.** DXY 101.92 is pressing the 52-week high (102.21) \u2014 the funding-relief reversal is not merely held but at an extreme; IDR 17,893 is nearly flat vs the last memo; Brent faded \u22121.7% inside band to 102.70, war premium intact. Risk appetite: CAUTIOUS held, no upgrade signal; orderly and outside a fresh hike, so not RISK_OFF."
+    },
+    {
+      "heading": "Global blocks \u2014 Severin (MACRO_GLOBAL), 2026-10-03",
+      "detail": null,
+      "markdown": "**Global rates path.** Hiking view HELD: Fed delivered +25bp to 3-3/4\u20134% on 09-15/16 (12-0, federalreserve.gov monetary20260916a); no FOMC since (next ~Oct 28-29), no post-hike guidance reachable this session. Terminal path unconfirmed; a higher terminal than prior stands absent a contradicting print. the market-parameter file GLOBAL cash proxy 3.63% (asof 2026-08-20) still STALE post-hike (effective ~3.88%) \u2014 journaled for next-IC re-stamp, NOT edited here. fed_path marker held, untripped.\n\n**USD trend.** DXY 101.92 close (Yahoo, 2026-10-02), +1.1% vs the 100.8 ref and 52-week high 102.21 just overhead \u2014 the funding-relief reversal is not merely held, it is pressing new highs. Marker re-anchored: ref ~101.9, \u00b13% band ~98.9\u2013105.0; quote is futures, not spot; untripped.\n\n**China impulse.** Unchanged: no-reflation, property risk-containment. No fresh credit/property print reachable. Underwrite nothing on Chinese demand. Marker held, untripped.\n\n**Commodity complex.** Brent 102.70 close (BZ=F, 2026-10-02), +0.38% on day, \u22121.7% vs the 104.5 ref and well inside band \u2014 a fade, not a break; war premium intact (still ~75% above the warless sub-60 floor) and steadying on the day. Current-account leg still binds: elevated ID import bill, no Q3-easing premise to resurrect. Marker re-anchored: ref ~102.7, \u00b115% band ~87.3\u2013118.1; untripped.\n\n**Global risk appetite.** CAUTIOUS HELD. DXY pressing the 52-week high, funding relief fully reversed, carry gap still narrowed post-hike \u2014 deterioration confirmed, no reversal/upgrade signal. Orderly and absent a fresh hike, so not RISK_OFF.\n\n**TILTS \u2014 all five held, no stance change.** Nickel FAVOR (ID supply story intact, not funding/China-demand dependent); thermal coal and commodity bloc NEUTRAL (war premium still bids energy); oil-import AVOID (102.7 fade is inside band only \u2014 import bill still elevated, no easing premise); INDO rate-sensitive AVOID (delivered hike + DXY at 52w-high keep EM funding tight). Marker changes: dxy 100.8\u2192~101.9, brent 104.5\u2192~102.7; fed_path, china_impulse, idx_foreign_flow_feed unchanged."
+    },
+    {
+      "heading": "FX / transmission + synthesis \u2014 Ferrand (MACRO_FX), 2026-10-03",
+      "detail": null,
+      "markdown": "**Rate differentials/policy divergence.** Carry recomputed on 2026-10-02 prints (USD/IDR 17,893, IDR=X/yfinance; Fed +25bp delivered 09-15/16, USD effective ~3.88%; IDR policy proxy 5.50%, BI-Rate 5.75% on hold): gap ~+162bp, unchanged vs 09-26, down from +185bp at 09-05. DXY 101.92 sits at the 52-week high (102.21) \u2014 the funding-relief leg is not merely reversed, it is at an extreme. Carry is still positive, but the direction of travel is IDR-unfriendly.\n\n**Indonesia block.** Foreign-flow feed STALE (fund record {}, 0 fresh readings) \u2014 no flow fact underwritten, per rule 5. INDO rate-sensitives (banks NIM, property, consumer discretionary) remain AVOID on these prints. IDR 17,893 barely moved (\u22120.11% vs 09-26 ref 17,912); without flow data I cannot underwrite \"resilience\" \u2014 at a DXY extreme that flatness reads as pre-print stillness on thin liquidity. No USD/IDR cross approved; both books 100% cash.\n\n**Synthesis.** AGREE with Severin: balance_of_payments_pressure / CAUTIOUS. Dollar funding at its high, a narrowing carry, and no underwriteable inflow buffer put IDR squarely under BoP pressure; CAUTIOUS matches the confirmed deterioration without over-calling to RISK_OFF (gap still +162bp; China no-reflation, no fresh shock). Tilt consistent \u2014 all five global legs held, no change requested.\n\nRegime/risk recommendation: `balance_of_payments_pressure` | `CAUTIOUS` (unanimous \u2014 frontmatter takes the MORE CONSERVATIVE call; both desks agree)."
+    },
+    {
+      "heading": "Changelog",
+      "detail": null,
+      "markdown": "- 2026-10-10 (WEEKLY_DEEP): DELTA \u2014 all five markers intact, untripped: fed_path (last FOMC +25bp 09-15/16, next ~Oct 28-29 not yet occurred, no post-hike guidance print); dxy fresh close 102.23 vs ref ~101.9 (band ~98.9\u2013105.0, IN BAND) \u2014 still pressing the 52-week high 102.21; brent 104.43 vs ref ~102.7 (band ~87.3\u2013118.1, IN BAND) firming; china_impulse no fresh print; idx_foreign_flow_feed still STALE (0 fresh readings). IDR ~flat (USD/IDR 17,875 vs 17,893, \u22120.1%). Regime balance_of_payments_pressure and risk_appetite CAUTIOUS both HELD; all five tilts unchanged. the market-parameter file GLOBAL cash proxy 3.63% remains STALE post-hike (effective ~3.88%) \u2014 journaled to next IC, not edited here.\n- 2026-10-03 (WEEKLY_DEEP): FULL rebuild \u2014 calendar (first Saturday / next_full_rebuild). No marker tripped. Severin global blocks: regime held balance_of_payments_pressure, risk_appetite CAUTIOUS held; DXY re-anchored 100.8\u2192~101.9 (52w-high territory 102.21), Brent re-anchored 104.5\u2192~102.7 (fade inside band); all five tilts unchanged. Ferrand FX/transmission co-sign complete: carry gap recomputed ~+162bp (unchanged), IDR 17,893 flat (\u22120.11%) read as pre-print stillness on thin liquidity, no flow narrative (feed STALE); synthesis AGREES with balance_of_payments_pressure + CAUTIOUS. Frontmatter stands (both desks unanimous). the market-parameter file GLOBAL cash proxy 3.63% remains STALE post-hike (effective ~3.88%) \u2014 re-stamp journaled to next IC, deliberately not edited here.\n- 2026-09-26 (off-cycle): FULL rebuild \u2014 marker trip: 09-15/16 FOMC RAISED 25bp to 3-3/4\u20134% (12-0, federalreserve.gov monetary20260916a) tripped fed_path. Severin global blocks: regime held balance_of_payments_pressure (intensifying), risk_appetite downgraded NEUTRAL\u2192CAUTIOUS; DXY re-anchored to ~100.8, Brent re-anchored to ~104.5; INDO rate-sensitive AVOID why strengthened on delivered hike; oil-import AVOID unchanged. Ferrand FX/transmission + synthesis co-sign complete: carry gap recomputed to ~+162bp (USD ~3.88% effective post-hike vs IDR 5.50%, from +185bp at 09-05; the market-parameter file USD 3.63% flagged STALE); synthesis AGREES with balance_of_payments_pressure + CAUTIOUS (09-05 NEUTRAL pillars \u2014 stalled relief leg, IDR resilience \u2014 both gone). Frontmatter stands.\n- 2026-09-12 (WEEKLY_DEEP): DELTA \u2014 all five markers intact, untripped (fed_path pre-09-15/16; DXY 99.10 within \u00b13% band; Brent 104.47 within \u00b115% band; china_impulse no fresh print; foreign-flow feed still STALE). One live watch item: Brent ~104 (investing.com 2026-09-12) now ~9% above the 95.9 reference \u2014 inside band, no rebuild required, but the re-rated-up war premium reinforces the oil-import AVOID tilt's elevated import-bill rationale; thermal-coal NEUTRAL unchanged. IDR softened to ~17,606 vs 17,631 (yfinance 09-11) \u2014 modest, no acute outflow. regime balance_of_payments_pressure and NEUTRAL both HELD \u2014 no tilt change, no FX co-sign needed (Ferrand read held).\n- 2026-09-05 (WEEKLY_DEEP): FULL rebuild \u2014 calendar (first Saturday + next_full_rebuild reached). Severin global blocks; Ferrand co-sign pending.\n- 2026-09-05 (WEEKLY_DEEP): FULL rebuild \u2014 Ferrand FX/transmission + synthesis, co-sign complete.\n- 2026-08-22 (WEEKLY_DEEP): FULL rebuild \u2014 marker trip (DXY closed below ~99, Fed-path repricing). Severin global blocks; Ferrand co-sign pending.\n- 2026-08-22 (WEEKLY_DEEP): FULL rebuild \u2014 Ferrand FX/transmission + synthesis, co-sign complete.\n- 2026-07-18 (ops, owner-directed): restructured to the two-desk format \u2014 machine frontmatter added, encoding the 2026-07-11 memo's stated calls verbatim (no view change). Severin (MACRO_GLOBAL) seated; first co-authored rebuild due 2026-07-25 WEEKLY_DEEP or on marker trip."
+    }
+  ]
+}

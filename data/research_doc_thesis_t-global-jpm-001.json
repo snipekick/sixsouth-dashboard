@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-JPM-001",
+  "title": "JPMorgan Chase (JPM)",
+  "meta": {
+    "id": "T-GLOBAL-JPM-001",
+    "book": "GLOBAL",
+    "ticker": "JPM",
+    "name": "JPMorgan Chase",
+    "sector": "FINANCIALS",
+    "factors": [
+      "us_rates",
+      "em_flows"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "quality_bank_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-05T10:23:00+07:00",
+    "drafted": "2026-09-05T10:25:00+07:00",
+    "judged": "2026-09-05T11:30:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 358.64,
+    "target": 410.0,
+    "kill": 287.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "3.16x TBV held on honest TBVPS compounding ~113.35 to ~130 by H2-28 (ROTCE ~20%, ~85% payout; book +~2.5%/yr, buyback share-shrink ~3.5%/yr) => ~410; 1.4% net div adds carry. Kill ~287 = ~2.5x current TBV (premium rejected, unwind overshoot).",
+    "price": 334.7550048828125,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.45,
+    "up_pct": 14.0,
+    "p_down": 0.55,
+    "down_pct": -20.0,
+    "net_div_yield_pct_pa": 1.4,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -1.0,
+    "horizon_years": 3.0,
+    "carry_pct": 3.7,
+    "kelly_full_pct": -34.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.48,
+    "source": "the base-rate library archetypes.quality_bank_rerating (n=20). DIA 0.60 REJECTED on Revision \u2014 1.67% yield is <15% of modeled return, cushions nothing, so mechanics-fit not economics. p_up 0.45 BELOW base: no rerating gap (entry ~= warranted 2.9-3.3x), win = compounding + multiple held.",
+    "library": {
+      "rate": 0.48,
+      "base_up_pct": 42.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 287.0,
+      "action": "exit_full",
+      "note": "~2.5x current TBV \u2014 market rejecting the warranted quality premium past the 2.55x line (crowded-unwind overshoot; no income bid at 1.67% yield). Thesis-invalidating, NOT a stop."
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 17.0,
+      "action": "review",
+      "name": "quarterly_ROTCE",
+      "source": "JPM 10-Q quarterly ROTCE (non-GAAP), as reported",
+      "note": "two consecutive quarters <17% = sustainable-ROE premise broken"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2028-09-30",
+      "action": "review",
+      "condition": "review if normalized ROTCE has not held >=20% through a full cycle by this date"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-05T10:25:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-05T10:31:29+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-09-05T11:05:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-05T11:12:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-05T11:30:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-JPM-001",
+    "ticker": "JPM",
+    "book": "GLOBAL",
+    "killed": "2026-09-05",
+    "px_at_kill": 353.55999755859375,
+    "reason": "other",
+    "px_now": 334.7550048828125,
+    "px_asof": "2026-10-15",
+    "move_pct": -5.3
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-09-05T10:23+07, price-free",
+      "markdown": "**Regime (corrected path).** Fed HELD 3.50-3.75%, eff 3.63% (2026-07-28/29 FOMC; federalreserve.gov via the market-parameter file CORRECTION 2026-08-22 \u2014 the 4.25-4.50 citation was wrong at stamp). Next FOMC 09-15/16, Sep-hike odds ~33% un-refreshed (the macro regime memo). Underwrite hold into 2027 with possible 2027 cuts \u2014 NOT higher-for-longer at 4.25-4.50.\n\n**Base.** FY25: NI $57,048M, diluted EPS $20.02, NII $95,443M (yfinance FY25 income stmt). H1-26 (JPM 10-Q 2026-06-30): NII $50,877M +9% y/y; avg earning assets $4.3T +$442B; net yield ex-Markets 3.65%, DOWN only 6bp y/y \u2014 NII durable through cuts already delivered.\n\n**Build (FY26E/FY27E, $B):** NII 102/102 (hold; ~100 if 2027 cuts). Noninterest ex-gains 97/95 (IB fees +30% y/y, #1 global wallet 9.3% YTD; AUM $5.1T +18%; Markets +35% normalizes \u2014 10-Q). Expense 107/110 (H1-26 +14% y/y, 10-Q: tech, Apple Card, revenue comp). Provision 10.5/11.5 (H1-26 $5.0B \u2248 NCO $4.7B; card NCO 3.34%; allowance 1.79% loans; NPA falling \u2014 10-Q). Tax ~21.6%. **FY26E NI ~$64B, EPS ~$23.5-24; FY27E NI ~$61B, EPS ~$23.5. Through-cycle EPS ~$23.5.** Sustainable ROE ~17%, ROTCE ~20-21% (realized 18-23% last five quarters ex 2Q26 gains \u2014 10-Q). Load-bearing: NII durability (10-Q yield line), fee-breadth offset, provision ~through-cycle.\n\n**Earnings-quality gate.** Provision $5.0B \u2248 NCO $4.7B H1-26 \u2014 no reserve deficit, no manipulation-class flag. Optics-class (excluded from underwrite): 2Q26 $4.6B Visa exchange gain + $1.0B equity gains (10-Q fn e); Apple Card forward portfolio purchase, closing ~24m after 12/30/25 (10-Q Note 13). Related-party/structure: none. Buyback-heavy: H1 div $8.7B + buybacks $17.1B (10-Q)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "Market narrative: JPM is the quality mega-bank the crowd already owns \u2014 the Q2-2026 blowout is cycle-peak, its ~3.2x tangible-book premium is a crowded-quality bubble, and 2027 Fed cuts will compress NIM."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** NIM falls as cuts land, credit (card 3.34% NCO) is turning, and the 3.2x TBV premium is a peak-earnings trap \u2014 so JPM is a fade/short or, at best, fair-value with no upside.\n\n**Why wrong:** The market mis-models NII as rate-elastic when the franchise has already repriced: H1-26 NII +9% with net yield ex-Markets down only 6bp through the delivered cuts (10-Q). Strip the one-offs and 1Q-2Q26 ROTCE is still ~23-24% vs 20-21% a year earlier \u2014 the premium is warranted, not euphoric. Residual income at COE 9.3% (UST10 4.77%, FRED 09-03 + USD ERP 4.5%), ROTCE ~20.5%, g 3.5% => warranted ~2.9-3.3x TBV; current ~3.16x is fair, so return is TBV compounding (~6%/yr) + 1.7% dividend + ~2.5%/yr buyback accretion, not de-rating.\n\n**What proves us wrong:** ROTCE 4% without reserve build; UST10 >5.3% pushing COE above 9.8% and warranted below ~2.7x."
+    },
+    {
+      "heading": "Phase-2 valuation & EV",
+      "detail": null,
+      "markdown": "Entry $358.64 (2026-09-04 close). Trailing P/E 17.9x (FY25 $20.02); FY26E ~15x; P/BV 2.70x; P/TBV 3.16x; div yield 1.67%. COE 9.3%; warranted P/TBV ~2.9-3.3x \u2014 no re-rating gap, premium supportable by ROTCE ~21% and CET1 14.2% (10-Q). Cross-check vs S&P bank-median through-cycle ~2x TBV: JPM's premium is a deliberate quality allocation, consistent with dividend_income_anchor framing. EV: kill $304.84 < entry $358.64 < target $448.30; up 25% (3.15x TBV on H2-28 TBV ~$142) at p 0.60, down 15% (premium rejection to ~2.55x) at p 0.40; expected 12.0%/2.5y \u2248 4.8%/yr vs cash 3.63% \u2014 clears. net_div_yield 1.4% = 1.67% gross less ~15% effective US WHT (GLOBAL-sleeve treaty treatment assumed, not verified); fee_tax_drag 0.5 = fund fees. **Edge taxonomy: (a) analytical** \u2014 market mis-models NII durability and treats a warranted premium as a bubble; **(c) time-arbitrage** \u2014 2.5y compounding under-appreciated. Not claimed: washout/structural."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "each cites a source line",
+      "markdown": "1. Card NCO rate already 3.34%, provision \"predominantly driven by Card Services, primarily due to loan growth\" (10-Q Q2-26) \u2014 a consumer normalization is underway; NCOs >4.0% with revolver growth breaks the credit underwrite.\n2. UST10 already 4.77% (FRED DGS10 2026-09-03); a climb above ~5.3% lifts COE to ~9.8% and cuts warranted TBV to ~2.7x \u2014 the multiple-compression down path is live, not hypothetical.\n3. Equity Markets revenue +86% y/y and Markets NII elevated (10-Q CIB) \u2014 the H1-26 fee boom is cyclical; mean-reversion to FY25 levels cuts pre-provision profit ~$4-6B/yr and proves \"boom\" is not the base.\n4. Expenses +14% y/y H1-26, overhead 51% (10-Q) \u2014 if revenue normalizes before expense discipline returns, operating leverage reverses into 2027."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Mid-2029 and down ~25%: a 2027 US credit turn (card NCOs past 4.5%) plus UST10 above 5.3% compressed JPM to ~2.4x TBV while fee revenue mean-reverted faster than expenses \u2014 the quality premium I called warranted proved cyclical, buybacks bought at the top, and the 1.7% dividend did not cushion a 3.2x-TBV entry. Drew found the weak joint: I priced a premium as structural that the market always knew was peak-cycle."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "13F crowding: UNAVAILABLE (no dossier/feed). Insider: UNAVAILABLE (not ingested). Index/passive: core S&P/Dow constituent, no add/delete \u2014 neutral; mega-cap crowded-quality is the exit-door risk. Short interest: UNAVAILABLE."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict)\n\n1. **Target unreachable on the analyst's own commitments.** 448.30 = 3.16x TBVPS ~142 = ~9.4%/yr compound from 113.35. Committed 85-90% total payout (H1-26 div $8.7B + buybacks $17.1B, 10-Q) caps TBVPS growth at VAL_BANKS rule 5: g  residual income E[r] ~= COE 9.3%, not 4.8%; the live trip (UST10 >5.3% -> ~2.7x warranted) is 4.77% today.\n\n**RE-ATTACK \u2014 Drew \u2014 2026-09-05T11:12:00+07:00 \u2014 FINAL VERDICT: KILL_RECOMMENDED**\n\nArithmetic re-derives to the cent at the 3y horizon this thesis actually uses: 0.45x14 + 0.55x(-20) + 1.4x3 - 0.5 = -1.0%/3y (base_rates quality_bank_rerating horizon_y=3; the Revision's own \"-1.0%/3y\"). At the exit_plan's H2-28 (~2.3y) it is about -2.0 \u2014 the 3y framing is the generous one and it is still negative. Frontmatter coherent: kill 287.00 < entry 358.64 < target 410.00; |down_pct| 20.0 vs actual 19.98% at the kill level, up_pct 14.0 vs actual 14.32% at target \u2014 both inside +/-3pp; kill note (~2.53x TBV) matches the 2.55x line. Concessions 1-7 are honest and complete; nothing moved in the flattering direction. Archetype caveat: quality_bank_rerating is still a partial mislabel \u2014 its window is EM/IDX re-rating economics (BBCA/BBRI/BMRI), and the thesis concedes no re-rating gap \u2014 but p_up 0.45 < base 0.48 and up_pct 14 << base_up 42 mark DOWN, so the re-key no longer inflates the prior. Moot for the verdict: a -1.0%/3y, sub-hurdle, catalyst-free long earns negative excess vs cash 3.63% and the ~4pp/yr equity bar; Kelly is zero, so no size is fundable. This archetype is now a 4-for-4 kill in GLOBAL (SMFG-001, SMFG-002, MUFG-001).\n\n**FINAL VERDICT: KILL_RECOMMENDED.**"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "(Sloane answers Drew 1-7, 2026-09-05)\n\n1. **Concede target.** 448.30 needs TBVPS ~142 (~+10%/yr); retention ~12.5% at ~85% payout caps book growth ~2.5%/yr and buybacks at 3.16x TBV are per-share-book dilutive, not accretive. Honest share-shrink ~3.5%/yr nets TBVPS ~130 by H2-28; 3.16x \u2248 $410 (+~14%), not +25%. Target cut to 410.\n2. **Concede EV.** 0.45\u00d714 + 0.55\u00d7(\u221220) + 1.4\u00d73 \u2212 0.5 = **\u22121.0%/3y** vs cash 3.63% and the ~4%/yr equity bar \u2014 sub-hurdle, negative.\n3. **Concede archetype.** DIA 0.60 was mechanics-fit (85% payout), not economics: a 1.67% yield is <15% of modeled return and cushions nothing. Re-keyed to quality_bank_rerating (0.48); p_up marked 0.45 below base \u2014 entry \u2248 warranted 2.9-3.3x, so the win is compounding alone, no rerating gap.\n4. **Concede flat-NII weak joint.** H1-26 +9% NII consumed +$442B asset growth; a 09-15/16 hawkish tail reprices the multiple and my own 2027-cut path bends NII down. Flat NII was load-bearing; I cut the target rather than defend 448.\n5. **Concede.** Provision \u2248 NCO with no reserve build, card NCO 3.34% rising \u2014 \"through-cycle $23.5\" is the FY26 peak relabeled flat into FY27. I underwrite nothing above $23.5.\n6. **Partly concede.** 1.67% yield at 3.16x TBV draws no income bid and the unwind has no fundamental floor; down_pct widened to \u221220 with kill $287 (~2.5x current TBV). The kill is exit discipline, not a floor.\n7. **Concede.** P \u2248 warranted \u21d2 E[r] \u2248 COE 9.3%, not 4.8%/yr. A fair-value entry earns fair-value returns.\n\n**Bottom line: negative EV, sub-hurdle at honest odds. Not fundable at any size \u2014 recommend zero/near-zero; KILL is the honest call.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich)\n\nCalibration: quality_bank_rerating is 0-for-3 on GLOBAL kills (SMFG-001 process, SMFG-002 valuation, MUFG-001 valuation) \u2014 no ledger drift to correct, so no changed standard this session; I hold the same DM-vs-EM rule and grant no leniency for candor. (QC note: the kill ledger tags MUFG-001 `other` while the MUFG verdict states `valuation` \u2014 reconcile.)\n\nVERDICT: KILL \u2014 reason_tag `valuation`.\n\n1. The thesis does not survive Drew's strongest sentence, restated: on the analyst's own reconciled numbers the long earns 0.45\u00d714 + 0.55\u00d7(\u221220) + 1.4\u00d73 \u2212 0.5 = \u22121.0%/3y (\u2248 \u22122.0% at the H2-28 ~2.3y exit), negative excess versus cash 3.63% and the ~4%/yr house equity bar \u2014 Kelly zero, so no size is fundable. The 3y window is the generous framing and it still loses.\n2. The re-key does not rehabilitate. Dropping DIA 0.60 for quality_bank_rerating 0.48 is creditable process honesty \u2014 a 1.67% yield cushions nothing, DIA fit was mechanics not economics \u2014 but p_up 0.45 below a 0.48 base with up_pct 14 vs base 42 concedes the re-rating gap is closed: entry \u2248 warranted 2.9-3.3x, the win is compounding alone. The open multiple question (UST10 4.77% toward the 5.3% trip) is a downside live path, not an upside. MUFG-001 stands: base-rate honesty does not rescue sub-hurdle economics.\n3. catalyst_date null; every claimed edge conceded; kill $287 is exit discipline on a premium unwind the thesis itself concedes is floorless.\n4. Process clean: lint pass true (word WARN tolerated), stage_log monotonic draft\u2192attacked\u2192revised\u2192attacked, estimates_committed 10:23 precedes draft 10:25, Bear log verbatim, arithmetic re-derives to the cent, kill 287 < entry 358.64 < target 410 within \u00b13pp, no unflagged raise. PASS_REDUCED unavailable: a negative-EV position at fair value is not fundable at any positive fraction, and the analyst concurs at zero/near-zero."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss)"
+    }
+  ]
+}

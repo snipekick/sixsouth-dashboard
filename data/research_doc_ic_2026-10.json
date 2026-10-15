@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "ic",
+  "id": "ic-2026-10",
+  "title": "Investment committee memo \u2014 2026-10",
+  "meta": {
+    "month": "2026-10"
+  },
+  "sections": [
+    {
+      "heading": "Overview",
+      "detail": null,
+      "markdown": "# Monthly IC Memo \u2014 2026-10\n\nSession SESSION_MONTHLY_IC \u00b7 2026-10-03 \u00b7 Aldrich (JUDGE), for the IC\nScope: second monthly IC. The packet still aggregates inception-to-date (fund start 2026-07-11), so figures below are inception-to-date unless labelled \"month\" (window since the 2026-09-05 IC, i.e. the four scored kills dated on/after 09-05)."
+    },
+    {
+      "heading": "Posture",
+      "detail": null,
+      "markdown": "Both books remain fully in cash for a **third consecutive month**: GLOBAL **cash 100.0%, deployment 0.0%**, INDO same, governor **NONE** in both, max drawdown **\u22120.01% (GLOBAL) / 0.0% (INDO)**, zero live theses, zero orders. The compliance block is unchanged except that \"cash above the 40% ceiling\" is no longer a fresh flag but a standing state. The September owner-directed engine fixes are reflected where they act: no thesis died in lint this month (judged_unticketed sits at 3 \u2014 ERAA PASS_REDUCED deferred on a feed gap, NVO-002 re-test, and the legacy 0700HK PASS_REDUCED), and the month closed with 7 KILLs rather than two months of a no-pass wall. The pipeline has throughput; it still has zero deployment."
+    },
+    {
+      "heading": "Returns vs benchmark",
+      "detail": null,
+      "markdown": "Still not applicable in the ordinary sense \u2014 no positions, so nothing to attribute; all attribution/factor/sector blocks are empty and book performance remains cash-yield accrual only. The month's realised \"return\" is again the **opportunity cost of the cash posture**, not a number. The decision-useful evidence is the kill ledger."
+    },
+    {
+      "heading": "What the ledger shows",
+      "detail": null,
+      "markdown": "**31 kills inception-to-date** (7 this month: TSM 09-16, AAPL 09-16, MSFT 09-28, QCOM 09-28, and BAC/MS/JSMR.JK decided today, unscored at print). Of the **28 with a post-kill print, 16 avoided further loss and 12 left gains on the table**; avg scored kill trades **+1.1%** above its kill price (compressed from last month's +7.0% as early counterfactuals decayed and new kills arrived at zero). Inception reason mix: **other 12, valuation 10, process 6, liquidity 1, fragile_estimates 1, base_rate 1**.\n\n**Month window (4 scored):**\n\n| Ticker | Killed | Reason | vs kill |\n|---|---|---|---|\n| QCOM | 09-28 | base_rate | **\u22128.5%** |\n| AAPL | 09-16 | other | +0.7% |\n| MSFT | 09-28 | valuation | +0.3% |\n| TSM | 09-16 | other | **+14.3%** |\n\n### What worked\n\n- **Base-rate kills are earning.** QCOM, killed on base_rate at 201.97, trades **\u22128.5%** five sessions later \u2014 the first clean same-month avoid-loss in fund history. The base_rate lane, used for the first time, worked exactly as designed.\n- **The re-test lane is live and disciplined.** NVO-002 is the first true post-LESSON-0002 re-test (TXN-style, run against a fresh thesis after the 07-13 process kill); it sits judged-unticketed rather than auto-killed. No repeat-kill was fired this month without a fresh pass \u2014 the LESSON-0002 discipline held.\n- **No bad capital deployed, still.** 31 consecutive KILL/zero-size outcomes, zero losses ever. The avoid-loss tail (16/28) continues to exceed the miss tail by count, even as average miss has compressed.\n\n### What didn't\n\n- **The complex-blind spot migrated to GLOBAL tractors.** The month's worst miss is TSM **+14.3%** (killed 09-16 \"other\" at 413.75), riding the AI-capEx re-rating while the name's own near-term P&L was the kill basis \u2014 the same shape as the INDO agri lesson one sleeve over (AMD **+30.9%** and TXN-002 +7.9% from August are the sibling cases; 3 scored kills against the AI-infra complex since 08-19). The complex is never inside the frame for GLOBAL semis/AI-compute the way PROPOSAL-2026-09-01 will put it into the frame for IDX commodities. Routed to consolidation (see below).\n- **\"other\" is the plurality kill reason (12/31).** A kill tag that means \"miscellaneous\" this often is a signal that verdicts are not being typed tightly; worth watching alongside calibration once n grows.\n- **Zero deployment for a third month at a full-cash carry.** GLOBAL cash proxies ~3.63% (3.88% post-09-15/16 hike) against a tape the macro desk persists CAUTIOUS on; the cash decision is now incontestably a *choice*, and the choice's cost runs two months deep."
+    },
+    {
+      "heading": "Sizing & governor review",
+      "detail": null,
+      "markdown": "- **Sizing deviations:** N/A in the strict sense \u2014 no tickets written. The three judged-unticketed theses are all zero-size (PASS_REDUCED sized 0.0: ERAA on the ADV/price feed gap, 0700HK from inception) or pending (NVO-002). The PASS lane has still never printed a live size; the script\u2192PM deviation lane remains unexercised.\n- **Governor episodes:** none. Governor NONE both books across the record; exit-to-flat machinery never exercised \u2014 untested, not proven.\n- **Feed-block platform risk:** two of the three needed sizes are blocked by data plumbing (ERAA price feed dead, ADV overlap), not by theses. This is now the binding constraint on deployment."
+    },
+    {
+      "heading": "Sleeve / archetype hit rates",
+      "detail": null,
+      "markdown": "Unavailable. Calibration **n=0** for a second consecutive month \u2014 no judged thesis has reached a closed P&L with a recorded outcome, so per-sleeve and per-archetype rates remain unmeasured. The kill ledger remains the only realised signal."
+    },
+    {
+      "heading": "Next-month posture",
+      "detail": null,
+      "markdown": "1. **Deployment is still the objective, and the blockers are now mechanical, not judgmental.** Resolve the ERAA feed + open-thesis ADV coverage (both already in the owner's attention queue) so the ERAA PASS_REDUCED and any NVO-002 pass can print a size. A third month of zero deployment after the engine fixes would indict the post-decision path, not the analysis.\n2. **Ratify PROPOSAL-2026-09-05 (SIZING_EV_BASE_RATES out-of-cycle edit).** Owner-directed, replicable from repo state, and this month's output is consistent with it \u2014 theses are now failing or passing on judgment rather than dying in lint arithmetic. Ratification recorded in PENDING_METHOD_PATCHES; the card stands.\n3. **Apply PROPOSAL-2026-09-01 (VAL_COMMODITY_CYCLICAL)** \u2014 the DSNG/TAPG/LSIP counterfactuals (\u22652-case bar, three cases) are on the record; the IDX agri lens formally carries the complex inside the frame. Routed to consolidation this IC.\n4. **Commission the GLOBAL AI-infra analogue.** TSM/AAPL/AAPL-adjacent in-sleeve misses (with AMD, TXN-002) meet the \u22652-case bar; consolidation should add the semis/AI-compute complex inside the valuation frame to ANALYST_GLOBAL/BEAR and consider whether a shared complex-carry rule replaces the sleeve-specific pair.\n5. **Keep the teeth that work:** base_rate kill lane, re-test discipline (LESSON-0002), fragile-estimates gate, liquidity veto.\n6. **Calibration stays the gap.** No closed P&L after three months means Judge/Bear calibration, hit rates, and archetype scoring remain unevidenced; expect a calibration rule the moment the first closed outcomes exist.\n7. Fees verification current (last verified 2026-07-06, 12-month cycle, not due). No action.\n\n---\n*Figures traceable to the 2026-10-03 IC packet and session brief. This memo carries no runtime, attention-queue, or token-telemetry content by design.*"
+    }
+  ]
+}

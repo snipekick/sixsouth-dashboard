@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-SONY-001",
+  "title": "Sony Group (ADR) (SONY)",
+  "meta": {
+    "id": "T-GLOBAL-SONY-001",
+    "book": "GLOBAL",
+    "ticker": "SONY",
+    "name": "Sony Group (ADR)",
+    "sector": "TECH",
+    "factors": [
+      "japan_reflation",
+      "us_tech"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "holdco_discount_narrowing",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2027-05-10",
+    "estimates_committed_at": "2026-07-18T03:24:01Z",
+    "drafted": "2026-07-18T03:24:01Z",
+    "judged": "2026-07-22T14:00:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": null,
+    "target": null,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": null,
+    "price": 24.75,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.2,
+    "up_pct": 20.0,
+    "p_down": 0.8,
+    "down_pct": -30.0,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": null,
+    "expected_pct": -20.0,
+    "horizon_years": 3.0,
+    "carry_pct": 0.0,
+    "kelly_full_pct": -333.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.33,
+    "source": "the base-rate library holdco_discount_narrowing",
+    "library": {
+      "rate": 0.33,
+      "base_up_pct": 28.0,
+      "base_down_pct": -18.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "action": "review",
+      "condition": ""
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "action": "review",
+      "name": "",
+      "source": ""
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-07-18T03:24:01Z",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-07-22T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-07-22T13:30:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-07-22T14:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-SONY-001",
+    "ticker": "SONY",
+    "book": "GLOBAL",
+    "killed": "2026-07-22",
+    "px_at_kill": 21.020000457763672,
+    "reason": "other",
+    "px_now": 24.75,
+    "px_asof": "2026-10-15",
+    "move_pct": 17.7
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Archetype changed to `holdco_discount_narrowing`** (from sourcing's suggested `derated_compounder_rerating`): a \"de-rated, re-rating\" premise requires knowing a multiple compressed \u2014 unverifiable under the Phase-1 price ban. Sony instead offers a dated, filing-confirmed SOTP catalyst chain: the Oct 1, 2025 partial spin-off of Sony Financial Group (SFGI) to ~16.4% equity-method (a textbook \"breakup\"), plus an executed \u00a5500.0bn buyback (May 2025\u2013Mar 2026) and a fresh \u00a5500bn/230m-share buyback authorized 2026-05-11\u21922027-05-10 \u2014 exactly the named-catalyst bar this card requires, argued on segment economics, not price.\n\n### Earnings Quality Gate (EARNINGS_QUALITY_FLAGS, run before estimates committed)\n- **Accruals ratio:** FYE-Mar-2026 continuing-ops net income attributable \u00a51,030,893mn vs continuing-ops operating cash flow \u2248\u00a51,945,617mn \u2192 (NI\u2212CFO)/total assets (\u00a515,683.5bn, FYE-Mar-2026) \u2248 **\u22125.8%** [Sony 6-K, FY ended March 31, 2026 results]. Negative \u2014 cash generation exceeds reported earnings, the opposite of the \">10% = earnings outrunning cash\" flag. Could not build a clean 3-year trend: the Oct-2025 SFGI spin-off deconsolidated a large balance-sheet block, so average-total-assets is not cleanly comparable YoY \u2014 flagged rather than smoothed over.\n- **Cash-conversion trend:** consolidated operating income grew +13.4% YoY (record) while operating cash flow was reported \"essentially flat YoY\" (\u2248\u00a51,966.3bn vs \u2248\u00a51,945.6bn across two summaries of the same release). Margin expansion outrunning cash conversion is an explicit gate divergence flag \u2014 **OPTICS-class**, not manipulation-class: plausible benign drivers are working-capital build behind I&SS's +20.2% volume growth and the \u2248\u00a5208bn of restructuring/impairment charges (Bungie \u00a5120.1bn, Sony Honda Mobility EV exit \u00a544.9bn, Pixomondo \u00a527.1bn, display assets \u00a516.5bn, Semiconductor Israel \u00a519.9bn) landing P&L-side in the same period as related cash outflows. **Haircut applied:** I&SS and Music segment OI growth rates used below are shaded ~2pp below the raw reported YoY prints pending Phase 2 review of the actual cash-flow note.\n- **Related-party gravity:** SFGI is now a ~16.4% equity-method associate (from wholly-owned) post the Oct 1, 2025 spin-off \u2014 any continuing commercial ties between Sony's consumer/media businesses and its former financial arm need a related-party check in Phase 2; % of revenue not found in sources reviewed. The Sony\u2013TSMC image-sensor JV is a non-binding MOU only \u2014 no related-party transactions exist yet to assess.\n- **Structure flags:** none confirmed beyond the two above (checked: capitalized content/software-development-cost risk-factor language is qualitative only, no creeping-capitalization figure disclosed in sections reached; segment receivables/inventory detail not located in the excerpts obtained \u2014 flagged as unreviewed, not asserted clean).\n- **Action rule:** no manipulation-class flag confirmed \u2192 proceed. One optics-class flag (margin/cash-conversion divergence) \u2192 haircut applied above and logged for the Phase-2 pre-mortem.\n\n### Segment structure note\nFinancial Services is **excluded from the forward build**: ~80%+ of SFGI was distributed to Sony shareholders in kind on Oct 1, 2025 and Sony retains only ~16.4%, equity-method, immaterial to consolidated economics going forward [Sony 6-K, Sept 2025 spin-off scheme]. The five continuing operating segments are Game & Network Services (G&NS), Music, Pictures, Entertainment Technology & Services (ET&S), and Imaging & Sensing Solutions (I&SS).\n\n### Per-segment SOTP build, FYE March 31, 2026 (all figures cited to Sony's FY-ended-March-2026 results release / 20-F unless marked ANALYST EST.)\n\n**I&SS (image sensors/semiconductors):** Sales \u00a52,059.0bn (+20.2% YoY), OI \u00a5357.3bn (+36.8% YoY, 17.4% margin); segment capex \u00a5265.3bn, of which \u00a5246.7bn for image-sensor capacity. Reinvestment rate (capex/OI, ANALYST-COMPUTED proxy) \u224874%; ROIIC proxy (\u0394OI \u00a596.1bn / prior-period capex, ANALYST EST.) \u224830-36%. g = reinvestment \u00d7 ROIIC \u224822-27%, but I dial the DCF to a steadier 15% (yrs 1-3) fading thereafter rather than extrapolate one blow-out year. **Moat:** image-sensor technology/scale (Sony's own risk factors claim only \"a strong competitive advantage,\" no house share % \u2014 the ~50% global CMOS share figure circulating is trade-press, not filing-cited, so it is NOT a load-bearing citation here). Moat-widening evidence: \u00a5246.7bn capacity capex + non-binding TSMC JV MOU toward a \"fab-lite\" model. **Fade risk named explicitly:** Feb-2026 trade press reports Apple diversifying sensor sourcing toward Samsung \u2014 a real customer-concentration/dual-sourcing risk; fade year set at **7**, not the default 10, given this.\n\n**Music:** Sales \u00a52,090.5bn (+14.8%), OI \u00a5447.0bn (+25.1%, 21.4% margin \u2014 highest of any segment). Reinvestment is catalog/artist-advance-led, not PP&E capex; no segment capex figure was locatable in the sources reached, so reinvestment rate is qualitative-only: **low** (asset-light), ROIIC qualitative: **high** (streaming +9% recorded music / +14% publishing revenue growth converting near 1:1 into OI given fixed catalog cost base). **Moat:** catalog scarcity + label consolidation; fade year **10** (durable, scarcity-based).\n\n**G&NS:** Sales \u00a54,570.1bn (+0.6%), OI \u00a5463.3bn (+10.4%, 10.1% margin); monthly active users hit a record 125 million in the March quarter. Reinvestment: platform/content R&D, no segment capex cited; consolidated R&D was \u00a5762.0bn (6.1% of sales, +\u00a527.4bn YoY) \u2014 largely G&NS+I&SS but not split by segment in sources reached. **Moat:** installed-base network effects; fade year **10**, tempered by console-cycle timing risk (not modeled as a discrete kill event here \u2014 that is Phase 2's job).\n\n**Pictures / ET&S:** Pictures OI \u00a5104.9bn (-10.6%, 7.1% margin) \u2014 no durable moat named, treated as a going-concern annuity at modest growth. ET&S OI \u00a5158.6bn (-16.9%, declining on display-category weakness) \u2014 no moat, fade immediate to WACC, near-zero excess-return contribution to SOTP value.\n\n### Discount rate, terminal value, multiple-survival test\nCOE/WACC used: **8.5%** (within the 8-10% house band; low end argued on globally diversified cash flows + moat quality in the two largest-value segments). Terminal g: **3.2%** (blended long-run nominal GDP across Sony's globally diversified revenue geography \u2014 US/EU/Japan/EM mix). Fade to WACC by the segment-specific years above (I&SS 7, Music/G&NS 10, Pictures/ET&S immediate). **Multiple-survival test (derived, not observed):** at terminal state ROIIC fades to WACC, so g = reinvestment-rate \u00d7 WACC \u21d2 reinvestment rate = g/WACC, and implied terminal EV/EBIT = (1\u2212g/WACC)/(WACC\u2212g) = **1/WACC \u2248 11.8x** \u2014 derived from my own WACC/g assumptions, not observed from Sony's actual traded multiple. Phase 2 must compare 11.8x against the real entry multiple; if entry already sits above ~12x EV/EBIT, this is multiple expansion wearing a DCF costume and must say so.\n\n### Owner-earnings bridge (from reported NI, continuing operations, FYE Mar-2026)\nNI attributable \u00a51,030,893mn \u2192 (+) D&A embedded in segment capex intensity (not separately segment-cited; consolidated capex \u00a5804.9bn vs \u00a5829.8bn prior year) \u2192 (\u2212) growth capex, of which \u00a5265.3bn is I&SS capacity-specific and treated as growth, not maintenance, given the +20% volume growth funding it \u2192 (+) add back \u2248\u00a5208bn of one-off restructuring/impairment charges (Bungie, SHM EV exit, Pixomondo, display, Semiconductor Israel) as non-recurring \u2192 SBC undisclosed in sources reached; left as a data gap, not estimated, to avoid a fabricated figure. Dividends: \u00a525/share paid this year (total \u00a5148.6bn, 47th consecutive year), guided to \u00a535/share next year \u2014 net_div_yield_pct_pa left null per Phase-1 scope (requires a share price/market cap denominator, banned here). Buybacks: \u00a5500.0bn executed this year; \u00a5500bn/230m-share (3.89% of shares out) authorized 2026-05-11\u21922027-05-10 \u2014 a real, dated capital-return catalyst for the holdco-discount thesis.\n\n### Sensitivity \u2014 the 2-3 load-bearing assumptions (>70% of SOTP value)\n1. **I&SS OI durability/growth** (\u00a5357.3bn OI, +36.8% YoY on \u00a5265.3bn cited capacity capex) \u2014 citation: Sony FYE-Mar-2026 results release, segment table. Swing: if the Apple/Samsung dual-sourcing risk crystallizes and growth reverts to high-single-digits, this segment's SOTP contribution roughly halves.\n2. **Music OI durability** (\u00a5447.0bn OI, +25.1% YoY, 21.4% margin) \u2014 same citation. Swing: streaming growth (+9%/+14% cited) decelerating to low-single-digits caps OI growth near-flat; scarcity-moat argument is the load-bearing defense.\n3. **G&NS platform monetization** (\u00a5463.3bn OI on 125m MAU record) \u2014 same citation. Swing: MAU growth stalling or a soft console-cycle transition compresses the largest-revenue segment's OI base the SOTP is built on.\nTogether these three equal \u00a51,267.6bn of \u00a51,447.5bn consolidated OI (\u224887.6%) \u2014 before even weighting I&SS/Music higher in the SOTP than declining Pictures/ET&S \u2014 comfortably clearing the >70% bar."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: before opening a single filing, my prior was that the market sees Sony as a conglomerate that has already completed its transformation into a content-and-recurring-revenue compounder, with PlayStation Network services and its market-leading image-sensor semiconductor business as the crown-jewel growth engines justifying a re-rating away from the old low-multiple electronics-conglomerate discount, and the Music/Pictures IP library plus the Financial Services separation seen as further sum-of-the-parts value unlocks."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** Sony has completed its transformation into a content-and-recurring-revenue compounder, with PlayStation platform economics, music catalog scarcity, and a leading image-sensor position justifying a premium multiple. The SFGI spin-off simplified the structure, and the ongoing buyback signals management confidence in undervaluation.\n**Why wrong:** The spin-off extracted the easy discount. What remains is governance-structural \u2014 cross-subsidization across segments, conglomerate overhead, and no pressure to break up further. Markets price buybacks at announcement, not at completion \u2014 the \u00a5500bn authorization is already in the price. Without a forward catalyst to unlock residual value, the discount can persist indefinitely. G&NS underlying OI is flat (the \u00a557.2bn FX/impairment comparison padding masks this). I&SS faces discrete socket-loss risk, not a smooth fade.\n**What proves us wrong:** (1) No further restructuring, spin-off, or activist pressure announced within 12 months \u2014 discount persists or widens. (2) Apple formally dual-sources image sensors, hitting I&SS revenue >15%. (3) G&NS OI declines as the FX tailwind and Bungie-impairment comparison benefits reverse in FYE-Mar-2027."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. **G&NS OI padded by non-operational items** \u2014 Sony FYE-Mar-2026 results release, segment note: G&NS operating income includes a \u00a532.7bn foreign-exchange benefit (favored USD/JPY rates) and a \u00a524.5bn favorable comparison from the prior-year Bungie impairment charge. Together these represent ~12% of reported G&NS segment OI (\u00a5463.3bn). Excluding both, underlying G&NS OI growth is approximately flat YoY, removing the growth narrative from the thesis's largest revenue segment.\n2. **SFGI spin-off discount already realized** \u2014 The Oct 1, 2025 partial spin-off of Sony Financial Group distributed ~80% of SFGI to shareholders in kind. Any holdco-discount narrowing from financial-services separation has already been recognized by the market in the 9+ months since completion. The residual discount is structural (governance, cross-subsidization, conglomerate overhead), not event-driven \u2014 and the thesis names no catalyst that would close the structural component.\n3. **I&SS customer-concentration is binary, not a fade** \u2014 Sony's own FYE-Mar-2026 risk factors disclose that \"a limited number of customers\" account for a \"significant portion\" of image sensor sales. The Feb-2026 trade press reports of Apple diversifying toward Samsung sensor sourcing compound this: losing one major smartphone socket is a discrete ~20%+ segment-revenue event, not a smooth 7-year fade. The thesis's fade-year adjustment from 10 to 7 understates the downside tail."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is [horizon end] and this position lost 30%. The most likely reason is the residual holdco discount widened rather than narrowed \u2014 the SFGI spin-off was the only structural catalyst the market rewarded, and without a follow-on breakup, buyback acceleration, or activist intervention, the discount reverted to or exceeded pre-spin-off levels. Simultaneously, I&SS lost a major smartphone image-sensor socket (Apple dual-sourcing materialized), cutting segment revenue ~20% and resetting the growth narrative that justified a premium segment multiple. G&NS OI flatlined as console-cycle fatigue set in and the \u00a557.2bn of one-off FX/impairment-comparison benefits reversed, exposing the segment as a flat-revenue margin-harvesting business rather than a compounder. The market re-rated the conglomerate to the old electronics-conglomerate multiple \u2014 exactly the value-trap outcome the holdco_discount_narrowing base-rate notes warn against."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew (BEAR) \u2014 VAL_HOLDCO_DISCOUNT, per 10-step protocol**\n\n**1. Fact-check.** The SOTP computes nothing. Per-segment OI, WACC, and terminal g are cited, but no enterprise values, conglomerate value, or discount are calculated. You cannot narrow a discount you haven't quantified. The variant-perception block is blank. The pre-mortem is a one-line stub. These are not omissions \u2014 they are the thesis.\n\n**2. Assumptions.** G&NS (47% of segment revenue, \u00a54,570.1bn) grew sales +0.6% but OI +10.4% \u2014 margin harvesting on flat revenue, not compounding. Sony's filing discloses \u00a532.7bn FX benefit and \u00a524.5bn Bungie-comparison benefit inside G&NS OI (~12% of segment profit); underlying OI growth is near zero. I&SS +36.8% OI on a single year, with Apple/Samsung dual-sourcing flagged as a fade rather than a binary socket-loss event \u2014 lose Apple, lose 20%+ of segment revenue overnight.\n\n**3. Variant perception.** Absent. A holdco-discount thesis must answer: why does the discount persist, and what closes it? Empty fields signal the analyst couldn't answer either question.\n\n**4. Catalyst (Rule 3 violation).** SFGI spin-off (Oct 2025) and first \u00a5500bn buyback are past. The sole forward catalyst \u2014 \u00a5500bn buyback authorized 2026-05-11 \u2014 is already announced and running. Markets price buybacks on announcement, not completion. The catalyst_date \"2027-05-10\" is the buyback expiry, not an event. No forward catalyst exists.\n\n**5. Base rate.** The 33% rate is generic. Discounts surviving a major partial spin-off are the stubborn ones \u2014 governance-structural (entrenched management, cross-subsidization), not event-driven. Post-spin-off residual-discount narrowing base rate is plausibly half.\n\n**6. Sizing math.** None. No entry, target, or kill. A segment primer, not a position thesis.\n\n**7. Disconfirming fact.** Sony FYE-Mar-2026 filing: G&NS OI contains \u00a532.7bn FX tailwind and \u00a524.5bn prior-year impairment comparison benefit. Excluding these non-operational items, underlying G&NS OI growth is roughly flat YoY, halving the thesis's largest value driver.\n\n**8. Pre-mortem steelman.** SFGI spin-off extracted the available discount. Remaining 25-35% discount is governance-structural, persisting indefinitely. G&NS flatlines as efficiency exhausts; I&SS loses a smartphone socket. A \"compounders-in-a-conglomerate\" story becomes a value trap.\n\n**9. Anti-gaming.** Archetype changed from `derated_compounder_rerating` pre-work \u2014 a card fit, not a finding. Multiple-survival defers entry-multiple check to Phase 2, immunizing the thesis against its own falsification condition during Phase 1.\n\n**10. VERDICT: MAJOR_REVISION.** A segment primer, not a thesis. Required for survival: (a) SOTP with per-segment valuations, (b) quantified residual discount, (c) undisclosed forward catalyst, (d) variant perception. Absent these by next review, upgrade to KILL_RECOMMENDED."
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "**Rough SOTP (first-pass; Phase-1 price ban prevents discount computation):**\n- I&SS: \u00a5357.3bn OI, 0.70 tax-factor, fade yr 7, 15%\u21923.2% growth \u2192 ~11x \u2192 ~\u00a52.8tn\n- Music: \u00a5447.0bn OI, 0.70 tax-factor, fade yr 10, asset-light \u2192 ~15x \u2192 ~\u00a54.7tn\n- G&NS: \u00a5463.3bn less \u00a557.2bn non-op = \u00a5406.1bn, 0.70 tax-factor, fade yr 10 \u2192 ~13x \u2192 ~\u00a53.7tn\n- Pictures: \u00a5104.9bn, 0.70 tax-factor, no moat \u2192 ~9x \u2192 ~\u00a50.7tn\n- ET&S: \u00a5158.6bn, 0.70 tax-factor, no moat \u2192 ~7x \u2192 ~\u00a50.8tn\n- SOTP EV: ~\u00a512.7tn; +net cash ~\u00a51tn \u2192 **equity ~\u00a513.7tn**. Whether a discount exists or narrows is unknowable without market price.\n\n**1. SOTP gap \u2014 CONCEDED.** I recited segment OI without multiplying to EV. The ballpark above remedies the blank. Without market price, I cannot defend the narrowing thesis.\n\n**2. G&NS padding / I&SS binary risk \u2014 CONCEDED.** I flagged the \u00a557.2bn non-op padding myself (disconfirming #1). Underlying G&NS OI ~\u00a5406bn, flat YoY \u2014 a growth pillar removed. I&SS customer concentration is discrete socket-loss, not a smooth 7-year fade. I understated the downside tail.\n\n**3. Variant perception \u2014 now filled above.** Market sees a post-restructuring compounder; I see structural discount with no forward catalyst to close it.\n\n**4. Catalyst \u2014 CONCEDED.** SFGI spin-off closed Oct 2025. First buyback completed. Second buyback announced May 2026 \u2014 already priced at announcement. The 2027-05-10 date is an expiry, not an event. Rule 3 breached. No undisclosed forward catalyst exists.\n\n**5. Base rate \u2014 CONCEDED.** Post-spin-off residual-discount narrowing is harder than generic 33%. p_up lowered to 0.20; down_pct widened to -30%.\n\n**6-10.** Derivative. Archetype change was transparent (price-ban constraint) but deferring multiple-survival to Phase 2 is structurally protective \u2014 fair criticism. Pre-mortem now filled.\n\n**Bottom line:** Without a forward catalyst, this is \"the market will recognize hidden value\" \u2014 explicitly not a thesis per the holdco_discount_narrowing base-rate notes. I cannot defend it. The Bear's MAJOR_REVISION is proportionate; absent new forward-catalyst discovery, this should go to KILL_RECOMMENDED."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL \u2014 reason_tag: catalyst**\n\nThe thesis fails the cardinal requirement of the holdco_discount_narrowing archetype: a named, dated, forward-looking catalyst to close the discount. Both catalysts cited \u2014 SFGI partial spin-off (completed October 2025) and the first buyback \u2014 are rearview-mirror events. The sole remaining catalyst, a second \u00a5500bn buyback authorized May 2026, was priced at announcement. Markets do not reward buyback completion; the authorization date is the event, and it is behind us. The catalyst_date of 2027-05-10 is the buyback expiry, not a value-unlocking event. No forward catalyst exists, and the analyst concedes this without reservation.\n\nThe residual holdco discount \u2014 governance-structural, rooted in cross-subsidization and conglomerate overhead \u2014 has no mechanism to close inside the investment horizon. This is the classic pattern the base-rate notes warn against: \"the market will recognize hidden value\" is not a thesis.\n\nThe thesis was structurally incomplete at multiple levels: no SOTP computed in the original draft, kill criteria entirely blank, and variant perception initially absent. The rough SOTP in revision, while a good-faith repair, cannot be validated against market price under the Phase-1 price ban, leaving the discount itself unquantified and the narrowing premise untestable.\n\nEV math is honest: p_up = 0.20 at +20%, p_down = 0.80 at -30%, expected_pct = -20%. G&NS underlying OI is flat once \u00a557.2bn of non-operational FX and impairment-comparison padding is stripped out. I&SS customer-concentration risk is a discrete socket-loss event, not a smooth fade \u2014 the thesis's 7-year fade understates the downside tail.\n\nBear and analyst are in agreement. No salvage path exists. KILL."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

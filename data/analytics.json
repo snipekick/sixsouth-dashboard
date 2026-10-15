@@ -1,7 +1,7 @@
 {
-  "asof": "2026-10-15T20:02:26+07:00",
+  "asof": "2026-10-16T02:12:55+07:00",
   "method": {
-    "returns": "TWR on official NAV marks, external flows stripped",
+    "returns": "TWR from inception on official and reconstructed NAV marks, external flows stripped; total-return benchmark rebased to 100 at inception",
     "risk_free": "book cash-yield proxy (published cash-rate policy)",
     "annualization": "252 trading days",
     "min_obs_for_stable_stats": 20
@@ -10,23 +10,23 @@
     "GLOBAL": {
       "benchmark": "80% ACWI + 20% AGG (adj close, TR)",
       "metrics": {
-        "n_obs": 45,
+        "n_obs": 73,
         "low_n": false,
         "rf_annual_pct": 3.88,
-        "cum_return_pct": 0.96,
-        "ann_return_pct": 5.49,
-        "ann_vol_pct": 0.47,
-        "sharpe": 3.41,
-        "sortino": 18.16,
-        "max_drawdown_pct": -0.01,
-        "bench_cum_return_pct": -0.12,
-        "bench_ann_return_pct": -0.68,
-        "active_cum_pp": 1.08,
-        "beta": 0.02,
-        "jensen_alpha_ann_pct": 1.71,
-        "tracking_error_ann_pct": 10.18,
-        "info_ratio": 0.61,
-        "correlation": 0.46
+        "cum_return_pct": 1.02,
+        "ann_return_pct": 3.56,
+        "ann_vol_pct": 0.21,
+        "sharpe": -1.55,
+        "sortino": -1.89,
+        "max_drawdown_pct": -0.07,
+        "bench_cum_return_pct": 0.77,
+        "bench_ann_return_pct": 2.67,
+        "active_cum_pp": 0.25,
+        "beta": 0.0,
+        "jensen_alpha_ann_pct": -0.32,
+        "tracking_error_ann_pct": 9.91,
+        "info_ratio": 0.09,
+        "correlation": 0.07
       },
       "attribution": [
         {
@@ -36,25 +36,25 @@
       ]
     },
     "INDO": {
-      "benchmark": "100% ^JKSE (+3.0%/y div proxy, TR)",
+      "benchmark": "100% ^JKSE (+5.15%/y div proxy, TR)",
       "metrics": {
-        "n_obs": 45,
+        "n_obs": 73,
         "low_n": false,
         "rf_annual_pct": 5.5,
-        "cum_return_pct": 1.46,
-        "ann_return_pct": 8.43,
-        "ann_vol_pct": 0.64,
-        "sharpe": 4.61,
-        "sortino": 31.95,
+        "cum_return_pct": 1.53,
+        "ann_return_pct": 5.39,
+        "ann_vol_pct": 0.19,
+        "sharpe": -0.57,
+        "sortino": -1.12,
         "max_drawdown_pct": 0.0,
-        "bench_cum_return_pct": 1.1,
-        "bench_ann_return_pct": 6.31,
-        "active_cum_pp": 0.36,
-        "beta": -0.01,
-        "jensen_alpha_ann_pct": 2.94,
-        "tracking_error_ann_pct": 18.36,
-        "info_ratio": 0.12,
-        "correlation": -0.16
+        "bench_cum_return_pct": 2.56,
+        "bench_ann_return_pct": 9.12,
+        "active_cum_pp": -1.03,
+        "beta": -0.0,
+        "jensen_alpha_ann_pct": -0.11,
+        "tracking_error_ann_pct": 16.96,
+        "info_ratio": -0.22,
+        "correlation": -0.07
       },
       "attribution": [
         {

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-TOWR-001",
+  "title": "Sarana Menara Nusantara (TOWR.JK)",
+  "meta": {
+    "id": "T-INDO-TOWR-001",
+    "book": "INDO",
+    "ticker": "TOWR.JK",
+    "name": "Sarana Menara Nusantara",
+    "sector": "INFRASTRUCTURE",
+    "factors": [
+      "infra_towers",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "infra_tower_compounder",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-08-22T10:14:21+07:00",
+    "drafted": "2026-08-22T10:14:21+07:00",
+    "judged": "2026-08-22T10:52:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 390.0,
+    "target": 527.0,
+    "kill": 312.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "+35% archetype cap: base AFFO yield ~21% + lease-up 1.5->1.65x grows AFFO ~18% by FY2028; exit ~7x base AFFO (discount to peers, partial multiple recovery)",
+    "price": 448.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.48,
+    "up_pct": 35.0,
+    "p_down": 0.52,
+    "down_pct": -20.0,
+    "net_div_yield_pct_pa": 3.15,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": 15.6,
+    "horizon_years": 3.0,
+    "carry_pct": 9.15,
+    "kelly_full_pct": 324.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.55,
+    "source": "the base-rate library infra_tower_compounder (0.55, +35%, -20%, 3y, n=15)",
+    "library": {
+      "rate": 0.55,
+      "base_up_pct": 35.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 312.0,
+      "action": "exit_full",
+      "note": "Fundamental break BELOW entry: below ~312 (~-20%, = down_pct) the market prices refi-distress the thesis cannot survive; down-case AFFO (~63.5/sh) yields ~20% only if the book is impaired or a raise forced; supersedes Phase-1 700."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-12-31",
+      "action": "review",
+      "condition": "next ~US$1.5B tranche all-in >8.0% and/or IDR/USD sustained >17,500, no BI cut (5.75%)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1.55,
+      "action": "review",
+      "name": "tenancy_ratio",
+      "source": "quarterly LK / tenant count"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-22T10:14:21+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-22T10:25:50+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-22T10:52:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-TOWR-001",
+    "ticker": "TOWR.JK",
+    "book": "INDO",
+    "killed": "2026-08-24",
+    "px_at_kill": 448.0,
+    "reason": "valuation",
+    "px_now": 448.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 0.0
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Source & basis.** No dossier; public TOWR LK/disclosures + method card VAL_INFRA_TOWERS_TELCO, asof 2026-08-22. Unsourced-at-commit inputs marked **(unsourced)**. Model in IDR; USD-FX mismatch flagged. No market-implied price viewed.\n\n**EARNINGS_QUALITY_FLAGS gate:** top-30 large-cap, no special-notation letters, Q1\u2013Q3 unaudited \u2192 weight FY audited (FY2024 public). Accruals: D&A-heavy \u2192 CFO > NI, accruals \u2248 0 \u2014 clean. PSAK 73: land leases inflate EBITDA \u2014 I deduct lease interest+principal in AFFO. Related-party: top-3 tenants (IOH, Telkomsel, XL) arm's-length; UBO chain **(unsourced)**. No manipulation flag.\n\n**Unit drivers:** towers ~30,000; tenancy ~1.50x \u2192 ~45,000 leases; avg lease revenue \u2248 IDR 190m/tenant/yr on 10\u201315y CPI-linked contracts; fiber \u2248 IDR 0.9T; FY2024 audited revenue \u2248 IDR 9.4T (public) cross-checks.\n\n**FY2026E base (committed):** towers 30,200 (+~1%); tenancy 1.55x \u2192 ~46,800 tenants; rev/tenant 195m \u2192 lease rev 9.1T + fiber 1.0T = **rev 10.1T**. EBITDA @ ~84% \u2248 **8.5T**. Less: maint capex 0.4T; cash interest ~2.1T (debt ~30T \u2248 3.6x EBITDA, ~7%); PSAK 73 outflow 1.0T **(unsourced)**; cash tax 0.6T (~25%). **AFFO \u2248 4.4T \u2248 82/sh** (share count ~53.5B, **(unsourced)**). Dividend capacity 2.6\u20133.1T at 60\u201370% payout.\n\n**Scenarios.** **Up (p_up 0.48):** tenancy \u2192 1.65x at ~90% incremental margin + CPI \u2192 AFFO ~5.2T (+~18%); capped +35%, not re-rate. **Down (p_down 0.52):** tenancy stalls at 1.50x (IOH\u2013H3i/XL\u2013Smart deletes) + refi shock (~US$1.5B +200bps, IDR weakens) \u2192 interest +0.5T \u2192 AFFO ~3.4T, dividend cut. \u221220% (tail \u221230% hard-USD shock).\n\n**FX / refinancing.** ~US$1.5B \u2248 IDR 25T at ~16,800 (task ref). 10% IDR depreciation raises debt service ~2.5T (~0.9x AFFO). Offsets: CPI-linked leases; hedging **(unsourced)**. BI 5.75% defensive (Brent ~94); DXY break = funding relief, not pivot. Refi channel >8.0% = date-review kill.\n\n**Hurdle / anchor.** 10y FR \u2248 7.2%; base AFFO yield must clear sovereign + spread. At ~390: base AFFO ~82/sh \u2192 ~21% yield, down ~16% \u2014 kill sits BELOW entry. **Fundamental break:** ~312 (\u221220%) \u2014 refi-distress; supersedes Phase-1 ~700."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, before document work",
+      "markdown": "The market narrative I believe is: TOWR is the defensive IDX tower compounder whose CPI-linked leases and ~30K-tower scale make it a bond-proxy that should re-rate as BI's cycle peaks, but ~US$1.5B USD debt against IDR revenue keeps the ~3.5% dividend thin and the AFFO yield below the sovereign until BI cuts."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** TOWR is dead money until BI pivots \u2014 the tightening cycle and USD refi wall cap the multiple; the thin dividend makes it a low-return duration proxy.\n**Why wrong:** CPI-linked 10\u201315y leases are a real rate hedge; the wall is staggered, not one print; lease-up (1.5\u21921.65x) at ~90% incremental margin grows AFFO even with rates flat. At 390 it discounts the down case (down AFFO ~16%). **(Revised: stack ~84\u201388% USD-linked \u2014 mispricing narrower than claimed.)**\n**What proves us wrong:** tenancy stalls ~8%; a dividend cut."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, cited",
+      "markdown": "1. **Tenancy deleting** \u2014 reported tenancy FELL 1.78x (FY23) \u2192 1.64x (FY24 audited; IBST + IOH relocations); continued slide kills the 1.6\u20131.7x path (public LK).\n2. **Leverage creep** \u2014 net debt/EBITDA \u2265 ~4.5x in FY2025/Q2-2026 audited LK thins covenant/refi headroom (public LK).\n3. **Dividend coverage** \u2014 interest + PSAK 73 outflows >~60% of EBITDA in FY2025 audited LK breaks the income case (public LK).\n4. **Refi print / IDR** \u2014 next ~US$1.5B tranche >8.0% or IDR/USD holds >17,500 into 2027 with BI on hold trips the date-review kill (JISDOR/BI).\n5. **Anchor tenant** \u2014 largest tenant \u2248 40%+ of revenue post IOH\u2013H3i (TOWR top-customer LK); a decommissioning wave at renewal is a dated haircut."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. Most likely: leverage + rising rates \u2014 the US$1.5B tranche refied >8.5% through a hawkish BI, IDR weakened, AFFO missed, dividend cut \u2014 plus a forced dilutive raise. Kills are wired to tenancy and the refi print."
+    },
+    {
+      "heading": "Flow & ownership",
+      "detail": null,
+      "markdown": "Foreign flow **STALE** (fund record 0 fresh) \u2014 no washout/chase read. KSEI foreign % and 30d value traded **unavailable**; no rights-issue signal. Top-30 large-cap, ~IDR 22.7T."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check: uncited load-bearing inputs.** No TOWR dossier exists (data/dossiers/ empty). Towers ~30,000, tenancy ~1.50x, lease revenue IDR 190m, AFFO IDR 4.4T, share count 53.5B are all self-marked \"(unsourced \u2014 verify Phase 2)\" in a draft presented Phase-2-complete \u2014 uncited load-bearing input = auto KILL (protocol step 0).\n2. **Dividend 4x contradiction.** 60\u201370% payout of AFFO 4.4T = IDR 2.6\u20133.1T \u2192 ~13\u201315% yield at IDR 20.9T mcap, yet ev_math uses net_div 3.15% (~15% payout) and the priors call the dividend \"thin.\" AFFO 4.4T and the 3.5%-yield characterization cannot both be true.\n3. **Variant contradiction.** FX section's \"$1.5B \u2248 IDR 25T\" vs debt IDR 30T \u2192 ~84% USD, yet the variant claims \"only a portion of the debt stack is USD.\" TOWR runs the leverage+rates failure mode at ~84% USD-liability/IDR-asset mismatch.\n4. **Base-rate deviation mis-sized.** \u22123pp (0.55\u21920.52) is the right direction, too small for ~84% USD debt through a defensive BI (5.75%). Honest p_up \u22640.48; at 0.48 and \u221230% down, EV \u2248 +3%/3y \u2014 below the ~7.2% FR hurdle.\n5. **Kill = full down case, no loss-capping.** Kill 312 (\u221220.0%) == down_pct: the exit fires only after the entire modeled loss is realized. ARB gap on .JK can fill ~7% below 312 (~\u221226%), and the thesis itself admits a \u221230% tail. Honest down_pct breaks the EV band.\n6. **Disconfirming fact (new): anchor-tenant concentration unquantified.** Method card \u00a73 requires top-tenant %; never stated. Post IOH\u2013H3i (2022), the largest tenant is ~40%+ of revenue (TOWR LK top-customer disclosure; IOH-H3i integration). One tenant's decommissioning wave at renewal is a dated haircut \u2014 the base-rate anchor-tenant kill channel.\n7. **Anti-gaming.** estimates_committed 10:14:21 sits AFTER the market-cache write 10:00:08 (IDR=X 17,685), yet USD debt is modeled at \"~16,800\" \u2014 a ~5% stale FX conversion understating the IDR debt load by ~IDR 1.3T in the load-bearing refi channel. Stage_log ordered draft\u2192attacked; no retro-edit.\n8. **Steelman.** The avoided failure: a forced dilutive equity raise through the 2027 USD wall \u2014 delever, dividend cut, re-rate to an FR-substitute; bleed \u221220% for 2y, then exit at the kill with the down case fully banked.\n\n**Verdict: KILL_RECOMMENDED.** Strongest sentence: by the thesis's own numbers the ~US$1.5B tranche is ~84% of the debt stack, so \"only a portion is USD\" is false and the kill at 312 merely confirms the \u221220% down case already priced \u2014 no exit precedes the entire modeled loss."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**Step-0 \u2014 SOURCED; one correction.** Public TOWR filings/results (ptsmn.co.id 3Q24/FY24; GuruFocus/MarketScreener): towers 30,558 (FY23)\u219235,371 (3Q24, +18.2% IBST); tenancy 1.64x FY24 (vs 1.78x); shares ~58\u201359B, not 53.5B; FY25 dividend IDR 800B on NPAT 3,678B \u2248 22% payout (13-yr median ~40%). AFFO 4.4T is model-derived, not a reported line. Concede the process fail (auto-kill fair). Correction: share count \u2192 ~58B cuts base AFFO/sh ~82\u2192~76.\n\n**1. Uncited inputs \u2014 conceded, sourced above.** Tenancy is 1.64x today and FALLING, not 1.50x/rising.\n\n**2. Dividend \u2014 CONCEDED.** TOWR pays on NPAT, not AFFO (~22% FY25, median ~40%); dividend \u2248 IDR 0.8\u20131.4T \u2248 3.5\u20136% yield at 390. net_div 3.15% consistent; \"thin dividend\" correct. 60\u201370%-of-AFFO claim superseded.\n\n**3. USD share \u2014 CONCEDED.** US$1.5B = IDR 25.2T \u2248 84% of modeled debt at 16,800, \u224888% at 17,685. \"Only a portion\" false; concentration material \u2192 p_up falls.\n\n**4. Base rate \u2014 CONCEDED, p_up 0.52\u21920.48.** Tenancy declining + ~84\u201388% USD debt through defensive BI (5.75%). EV \u2248 +15.6%/3y (~4.9%/yr): positive but BELOW ~7.2% FR hurdle \u2014 sub-hurdle long.\n\n**5. Kill==down \u2014 mechanics conceded, geometry kept.** down_pct is lint-pinned to the 312 kill (\u221220%); widening decouples EV from the exit. \u221226 gap/\u221230 tail covered by the refi-print date-review kill (fires first), small sizing, disclosure.\n\n**6. Anchor tenant \u2014 conceded, added.** Largest tenant \u224840%+ of revenue (TOWR top-customer LK); added as fact #5.\n\n**7. Anti-gaming/FX \u2014 slip conceded; holds.** Used 16,800 (task ref) instead of cache 17,685 \u2014 ~5% stale conversion (\u2192QC_FLAGS). At 17,685: US$1.5B = IDR 26.5T (+1.3T \u2248 88% of stack); extra interest \u2248 +93B/yr \u2248 2\u20133% AFFO \u2192 ~4.3T (~74/sh); 17,685 is just above the 17,500 threshold. EV positive but thinner.\n\n**8. Steelman \u2014 conceded.** Forced dilutive raise through the 2027 wall is a real unmodeled tail; strengthens down case + date-review kill + small sizing.\n\n**Summary.** 8/8 answered; 7 conceded/partially, 0 defended; all downward. ev_math: p_up 0.48, down \u221220, expected +15.6%/3y. EV>0 but below the 7.2% hurdle \u2014 sub-hurdle long, not negative-EV; defensible only small, refi-print kill respected."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (reason_tag: valuation)\n\nCalibration: ledger shows 16 kills, 8 INDO, valuation/process dominant (TAPG-001, DSNG-002, ASII-001); I am not drifting lenient on a sub-hurdle long because the analyst conceded cleanly \u2014 the bar for a sub-hurdle pass is material and unmet here.\n\n1. Process clean: lint PASS (no problems/warnings); stage_log monotonic draft\u2192attacked (10:14:21\u219210:25:50), correct actors, Bear log verbatim; Revision in body. No process kill. (QC_FLAGS escalation claimed in Rev #7 is absent from fund record \u2014 noted, not dispositive.)\n2. Base rate handled: p_up 0.48 vs registry 0.55 (\u22127pp) argued downward on tenancy decline, ~84\u201388% USD debt, defensive BI \u2014 safe direction, burden met. (a) satisfied.\n3. Load-bearing assumptions sourced in Revision (towers 35,371/3Q24, tenancy 1.64x, ~58B shares, ~22% payout, anchor ~40%+); residual unsourced (PSAK73 1.0T, hedging) disclosed, conservative. (b) satisfied with disclosed residuals.\n4. FX slip CONTAINED: 16,800\u219217,685 adds ~+93B/yr (2\u20133% AFFO), AFFO ~74/sh; refi channel survives, kill criteria unchanged, though 17,685 sits just above the 17,500 threshold so the date-review kill is near-tripped. It thins, not breaks.\n5. (c) fails \u2014 Drew's strongest sentence survives: the 312 kill banks the full \u221220% down case (date-review kill is `action: review`, not exit), and EV is sub-hurdle at every honest input \u2014 +15.6%/3y (~4.9%/yr) at pinned \u221220%, ~+9.8%/3y (~3.1%/yr) at the \u221230% tail the thesis itself admits \u2014 both below the ~7.2% FR hurdle and the house equity hurdle (FR+~4%). The insulation claim that justified entry was falsified (84\u201388% USD = the method card's leverage+rates failure mode) in a regime that AVOIDs INDO rate-sensitives; dividend thin (~3.5%). No offsetting reason to own.\n\nSingle dispositive reason: sub-hurdle expected return failing the fund's hurdle at every honest input, with the falsified insulation claim and a kill that banks the full modeled loss."
+    }
+  ]
+}

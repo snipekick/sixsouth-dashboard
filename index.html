@@ -113,6 +113,10 @@ tbody tr:hover td{background:var(--panel2)}
 .chart .axl{fill:var(--dim);font-size:9.5px}
 .chart .grid{stroke:#232529;stroke-width:1}
 .chart .pill{font-size:9px;font-weight:700}
+.chart .vgrid{stroke:#1C1E22;stroke-width:1}
+.chart .refline{stroke:#4B5058;stroke-width:1;stroke-dasharray:3 3}
+.chart .tip{font-size:10px;font-family:Arial,Helvetica,sans-serif}
+.chart .hit{cursor:crosshair}
 
 /* 6S Virtual Office — canvas is visual; the status and full roster remain semantic DOM. */
 .office-panel{margin:8px 0 0;overflow:hidden}
@@ -188,6 +192,53 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   .book-kpis,.strip{grid-template-columns:1fr}
   .wstab{padding:6px 9px}
 }
+
+/* ---- Research library (V4) ---- */
+.rnav{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0 2px}
+.rnav a{color:var(--muted);text-decoration:none;font-size:11.5px;padding:5px 10px;border:1px solid var(--hair);background:var(--panel)}
+.rnav a:hover{color:var(--ink)} .rnav a.on{color:#fff;border-color:var(--brand);background:#2A1416;font-weight:700}
+.rintro{padding:10px 2px 2px} .rintro h2{font-size:17px;margin:0 0 4px} .rintro p{color:var(--muted);max-width:980px;margin:0}
+.rstrip{margin-top:8px} .rpad{padding:14px 4px}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0;align-items:start}
+.rgrid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:8px 0;align-items:start}
+.rgrid .col,.rgrid2 .col{display:grid;gap:8px;min-width:0}
+.rpanel{margin-top:8px} .rgrid .rpanel,.rgrid2 .rpanel{margin-top:0}
+.rhead{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.rhead h2{font-size:17px;margin:0 0 5px} .rhead2{margin:0 0 8px}
+.rmeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.rcrumb{font-size:11px;margin:8px 2px 0} .rcrumb a,.rpanel a,.rlist a{color:#8EC1F0;text-decoration:none} .rcrumb a:hover,.rpanel a:hover{text-decoration:underline}
+.rchip{display:inline-block;font-size:10px;padding:1px 6px;border:1px solid var(--hair);white-space:nowrap}
+.rchip.north{color:var(--north);border-color:#21405F} .rchip.south{color:var(--south);border-color:#5A4A22}
+.vbadge{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border:1px solid;white-space:nowrap;letter-spacing:.02em}
+.v-pass{color:var(--up);border-color:#2C4A30} .v-reduced{color:#9BD76C;border-color:#38502A}
+.v-kill{color:var(--down);border-color:#5A2A28} .v-revise{color:var(--south);border-color:#5A4A22} .v-pending{color:var(--muted);border-color:var(--hair)}
+.stance{font-size:10px;font-weight:700} .s-favor{color:var(--up)} .s-avoid{color:var(--down)} .s-neutral{color:var(--muted)}
+.rfilters{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin:0 0 8px}
+.rfilters label{display:flex;flex-direction:column;gap:2px;font-size:10px;color:var(--muted)} .rfilters label.grow{flex:1;min-width:180px}
+.rfilters select,.rfilters input{background:var(--panel2);color:var(--ink);border:1px solid var(--hair);padding:4px 6px;font-size:11.5px}
+.rbtn{background:var(--panel2);color:var(--muted);border:1px solid var(--hair);padding:3px 9px;font-size:11px;cursor:pointer}
+.rbtn.on,.rbtn:hover{color:#fff;border-color:var(--brand)}
+.rtable{width:100%;border-collapse:collapse;font-size:11.5px} .rtable td,.rtable th{padding:4px 7px;border-bottom:1px solid #202126;vertical-align:top}
+tr.clickable{cursor:pointer}
+.kv3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin:8px 0 2px}
+.kv3>div{background:var(--panel);padding:6px 9px} .kv3 .k{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .kv3 .v{font-size:12px;margin-top:2px}
+.rbody{font-size:12px;color:#C9CED4;line-height:1.55;overflow-wrap:anywhere}
+.rbody p{margin:5px 0} .rbody ul,.rbody ol{margin:5px 0 5px 18px} .rbody li{margin:2px 0}
+.rbody h4,.rbody h5,.rbody h6{color:var(--ink);font-size:12px;margin:9px 0 3px}
+.rbody strong{color:var(--ink)} .rbody code{font-size:11px;background:var(--panel2);padding:0 4px;border:1px solid var(--hair)}
+.rbody blockquote{border-left:2px solid var(--hair);margin:6px 0;padding:2px 10px;color:var(--muted)}
+.rbody pre{white-space:pre-wrap;background:var(--panel2);border:1px solid var(--hair);padding:6px;font-size:11px}
+.rbody hr{border:none;border-top:1px solid var(--hair);margin:8px 0}
+.mdt{border-collapse:collapse;font-size:11px;margin:6px 0} .mdt td,.mdt th{border:1px solid #26282D;padding:3px 6px;text-align:left}
+.mdt th{background:var(--bar);color:var(--muted);font-weight:400}
+details.rsec{border-bottom:1px solid #202126;padding:6px 0} details.rsec>summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--ink);padding:3px 0}
+details.rsec>summary:hover{color:#fff}
+.rh3{font-size:13px;margin:12px 0 4px;color:var(--ink)} .rh4{font-size:12px;margin:10px 0 4px}
+.rlist{margin:4px 0 4px 18px;font-size:12px} .rlist li{margin:4px 0}
+.rsteps{margin:4px 0 4px 18px;font-size:12px} .rsteps li{margin:7px 0} .rsteps .small{color:var(--muted)}
+.rtimeline{list-style:none;margin:0;padding:0;font-size:11.5px} .rtimeline li{padding:3px 0 3px 12px;border-left:2px solid var(--hair);margin-left:4px}
+@media (max-width:1100px){.rgrid{grid-template-columns:1fr 1fr}.rgrid .col:last-child{grid-column:1/-1}}
+@media (max-width:760px){.rgrid,.rgrid2{grid-template-columns:1fr}.rgrid .col:last-child{grid-column:auto}.kv3{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -211,6 +262,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
     <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
     <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
+    <button class="wstab" id="ws-research" onclick="go('research')">Research</button>
     <button class="wstab" id="ws-about" onclick="go('about')">About</button>
   </div>
 </div></header>
@@ -296,6 +348,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   </div>
 
   <div id="view-book" style="display:none"></div>
+  <div id="view-research" style="display:none"></div>
   <div id="view-structure" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
@@ -305,6 +358,7 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
 </div>
 
 <script src="office-floor.js?v=20260719-public-truth-v6"></script>
+<script src="research.js?v=20261015-v4"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -358,47 +412,113 @@ function md(t){                         // escape-first mini markdown (no raw HT
 }
 
 // ---- inline SVG line chart (dependency-free, terminal-styled) ----
-// opts: fill=true shades under the FIRST series; pills=true draws last-value
-// badges at the right edge (bg = series color, white text).
+// dates: ISO yyyy-mm-dd per point — the x-axis is time-proportional, so an outage week
+// is drawn as a week, never compressed into one step. datasets: [{name,color,dash,vals}].
+// opts: fill (shade under the FIRST series), pills (collision-free last-value badges),
+// refLine (a y reference such as 0), fmtY, notes (per-point label for the read-out),
+// spread (two-series charts: show first minus second in the read-out), title,
+// description. Every chart carries a hover/touch read-out.
 let chartSequence=0;
-function chart(labels,datasets,o){
-  o=o||{}; const W=o.w||660,Hh=o.h||220,padL=52,padR=o.pills?54:12,padT=8,padB=20;
-  const vals=[]; datasets.forEach(d=>d.vals.forEach(v=>{if(v!=null&&!isNaN(v))vals.push(v)}));
-  if(vals.length<2)return'<div class="muted small">not enough data yet</div>';
-  let lo=Math.min(...vals),hi=Math.max(...vals); if(lo===hi){lo-=1;hi+=1;}
-  const iw=W-padL-padR,ih=Hh-padT-padB,n=labels.length;
-  const X=i=>padL+(n<=1?iw/2:(i/(n-1))*iw);
+const CHARTS=new Map();
+const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dayMs=d=>{const ms=Date.parse(String(d||'').slice(0,10)+'T00:00:00Z');return Number.isFinite(ms)?ms:null;};
+const shortDate=ms=>{const d=new Date(ms);return `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`;};
+const longDate=ms=>{const d=new Date(ms);return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;};
+function niceStep(raw){
+  if(!(raw>0))return 1;
+  const p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p;
+  return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p;
+}
+function chart(dates,datasets,o){
+  o=o||{};
+  const W=o.w||660,Hh=o.h||220,padL=54,padR=o.pills?62:14,padT=10,padB=22;
+  const n=dates.length,xs=dates.map(dayMs),useIndex=xs.some(x=>x==null);
+  const vals=[];datasets.forEach(d=>d.vals.forEach(v=>{if(validNumber(v))vals.push(Number(v));}));
+  if(vals.length<2||n<2)return'<div class="muted small">not enough data yet</div>';
+  let lo=Math.min(...vals),hi=Math.max(...vals);
+  if(validNumber(o.refLine)){lo=Math.min(lo,Number(o.refLine));hi=Math.max(hi,Number(o.refLine));}
+  let span=hi-lo;if(!(span>0))span=Math.max(Math.abs(hi)*0.01,0.5);
+  lo-=span*0.1;hi+=span*0.1;
+  const step=niceStep((hi-lo)/4),ticks=[];
+  for(let v=Math.ceil(lo/step)*step;v<=hi+step*1e-6&&ticks.length<12;v+=step)ticks.push(Math.abs(v)<step*1e-6?0:v);
+  const iw=W-padL-padR,ih=Hh-padT-padB;
+  const xmin=useIndex?0:Math.min(...xs),xmax=useIndex?n-1:Math.max(...xs),xspan=Math.max(xmax-xmin,1);
+  const px=dates.map((_,i)=>padL+(((useIndex?i:xs[i])-xmin)/xspan)*iw);
   const Y=v=>padT+(1-(v-lo)/(hi-lo))*ih;
+  const fy=o.fmtY||(v=>fmt(v));
   let paths='',pills='';
   datasets.forEach((d,di)=>{
-    let seg=[],segs=[];
-    d.vals.forEach((v,i)=>{ if(v==null||isNaN(v)){ if(seg.length)segs.push(seg); seg=[]; } else seg.push([X(i),Y(v),i]); });
+    let seg=[];const segs=[];
+    d.vals.forEach((v,i)=>{if(!validNumber(v)){if(seg.length)segs.push(seg);seg=[];}else seg.push([px[i],Y(Number(v))]);});
     if(seg.length)segs.push(seg);
-    if(o.fill&&di===0&&segs.length){
-      segs.forEach(s=>{
-        const pts=s.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
-        paths+=`<polygon fill="${o.fillColor||'rgba(62,142,221,.16)'}" stroke="none" points="${s[0][0].toFixed(1)},${(padT+ih).toFixed(1)} ${pts} ${s[s.length-1][0].toFixed(1)},${(padT+ih).toFixed(1)}"/>`;
-      });
-    }
-    segs.forEach(s=>paths+=`<polyline fill="none" stroke="${d.color}" stroke-width="1.6" ${d.dash?'stroke-dasharray="4 3"':''} points="${s.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}"/>`);
-    if(o.pills){
-      const lastSeg=segs[segs.length-1]; if(lastSeg){
-        const [lx,ly]=lastSeg[lastSeg.length-1];
-        const lv=d.vals.filter(v=>v!=null&&!isNaN(v)); const val=lv[lv.length-1];
-        const txt=o.fmtY?o.fmtY(val):fmt(val);
-        pills+=`<g><rect x="${(W-padR+3).toFixed(1)}" y="${(ly-8).toFixed(1)}" width="${padR-6}" height="15" fill="${d.color}"/>`+
-               `<text x="${(W-padR/2).toFixed(1)}" y="${(ly+3).toFixed(1)}" text-anchor="middle" fill="#fff" class="pill">${esc(txt)}</text></g>`;
-      }
-    }
+    if(o.fill&&di===0)segs.forEach(s=>{
+      const pts=s.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+      paths+=`<polygon fill="${o.fillColor||'rgba(62,142,221,.16)'}" stroke="none" points="${s[0][0].toFixed(1)},${(padT+ih).toFixed(1)} ${pts} ${s[s.length-1][0].toFixed(1)},${(padT+ih).toFixed(1)}"/>`;});
+    segs.forEach(s=>{paths+=s.length===1
+      ?`<circle cx="${s[0][0].toFixed(1)}" cy="${s[0][1].toFixed(1)}" r="1.8" fill="${d.color}"/>`
+      :`<polyline fill="none" stroke="${d.color}" stroke-width="1.6" stroke-linejoin="round" ${d.dash?'stroke-dasharray="4 3"':''} points="${s.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}"/>`;});
   });
-  const gy=[hi,(hi+lo)/2,lo].map(v=>
-    `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${W-padR}" y2="${Y(v).toFixed(1)}" class="grid"/>`+
-    `<text x="${padL-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" class="axl">${o.fmtY?o.fmtY(v):fmt(v)}</text>`).join('');
-  const gx=`<text x="${padL}" y="${Hh-4}" class="axl">${esc(labels[0])}</text>`+
-           `<text x="${W-padR}" y="${Hh-4}" text-anchor="end" class="axl">${esc(labels[n-1])}</text>`;
+  if(o.pills){
+    const ends=[];
+    datasets.forEach(d=>{let li=-1;d.vals.forEach((v,i)=>{if(validNumber(v))li=i;});
+      if(li>=0)ends.push({y:Y(Number(d.vals[li])),x:px[li],val:Number(d.vals[li]),color:d.color});});
+    ends.sort((a,b)=>a.y-b.y);
+    const gap=17,top=padT+8,bot=padT+ih-8;
+    ends.forEach((e,k)=>{e.py=Math.min(Math.max(e.y,k?ends[k-1].py+gap:top),bot+gap*ends.length);});
+    if(ends.length&&ends[ends.length-1].py>bot){ends[ends.length-1].py=bot;
+      for(let k=ends.length-2;k>=0;k--)ends[k].py=Math.min(ends[k].py,ends[k+1].py-gap);}
+    ends.forEach(e=>{
+      if(Math.abs(e.py-e.y)>1)pills+=`<line x1="${e.x.toFixed(1)}" y1="${e.y.toFixed(1)}" x2="${(W-padR+3).toFixed(1)}" y2="${e.py.toFixed(1)}" stroke="${e.color}" stroke-width="1" stroke-dasharray="2 2"/>`;
+      pills+=`<g><rect x="${(W-padR+3).toFixed(1)}" y="${(e.py-8).toFixed(1)}" width="${padR-6}" height="16" rx="2" fill="${e.color}"/>`+
+             `<text x="${(W-padR/2).toFixed(1)}" y="${(e.py+3.5).toFixed(1)}" text-anchor="middle" fill="#fff" class="pill">${esc(fy(e.val))}</text></g>`;});
+  }
+  const gy=ticks.map(v=>`<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${W-padR}" y2="${Y(v).toFixed(1)}" class="grid"/>`+
+    `<text x="${padL-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" class="axl">${esc(fy(v))}</text>`).join('');
+  const ref=validNumber(o.refLine)?`<line x1="${padL}" y1="${Y(Number(o.refLine)).toFixed(1)}" x2="${W-padR}" y2="${Y(Number(o.refLine)).toFixed(1)}" class="refline"/>`:'';
+  let gx='';
+  if(useIndex){
+    gx=`<text x="${padL}" y="${Hh-6}" class="axl">${esc(dates[0])}</text><text x="${W-padR}" y="${Hh-6}" text-anchor="end" class="axl">${esc(dates[n-1])}</text>`;
+  }else{
+    const labels=[{x:padL,t:shortDate(xmin),a:'start'},{x:padL+iw,t:shortDate(xmax),a:'end'}];
+    const f=new Date(xmin);let m=Date.UTC(f.getUTCFullYear(),f.getUTCMonth()+1,1);
+    while(m<xmax){const x=padL+((m-xmin)/xspan)*iw;
+      gx+=`<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${padT+ih}" class="vgrid"/>`;
+      const md=new Date(m);
+      if(x-padL>36&&padL+iw-x>36)labels.push({x,t:md.getUTCMonth()===0?`Jan ${md.getUTCFullYear()}`:MONTHS[md.getUTCMonth()],a:'middle'});
+      const d=new Date(m);m=Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,1);}
+    gx+=labels.map(l=>`<text x="${l.x.toFixed(1)}" y="${Hh-6}" text-anchor="${l.a}" class="axl">${esc(l.t)}</text>`).join('');
+  }
   const chartId=`chart-${++chartSequence}`,title=String(o.title||'Time-series chart');
-  const description=String(o.description||`${datasets.map(d=>d.name).join(' and ')} from ${labels[0]} to ${labels[n-1]}`);
-  return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" role="img" aria-labelledby="${chartId}-title ${chartId}-desc"><title id="${chartId}-title">${esc(title)}</title><desc id="${chartId}-desc">${esc(description)}</desc>${gy}${gx}${paths}${pills}</svg>`;
+  const description=String(o.description||`${datasets.map(d=>d.name).join(' and ')} from ${dates[0]} to ${dates[n-1]}`);
+  for(const key of CHARTS.keys()){if(Number(key.slice(6))<chartSequence-80)CHARTS.delete(key);}
+  CHARTS.set(chartId,{W,Hh,padL,padT,ih,iw,px,Y,dates,xs,useIndex,fy,datasets,notes:o.notes||[],spread:!!o.spread,spreadLabel:o.spreadLabel||'Difference',spreadFmt:o.spreadFmt||(v=>`${v>0?'+':''}${fmt(v)}pp`)});
+  return `<svg viewBox="0 0 ${W} ${Hh}" class="chart" data-chart="${chartId}" role="img" aria-labelledby="${chartId}-title ${chartId}-desc"><title id="${chartId}-title">${esc(title)}</title><desc id="${chartId}-desc">${esc(description)}</desc>${gy}${gx}${ref}${paths}${pills}<g class="hov" aria-hidden="true" style="display:none"></g><rect class="hit" x="${padL}" y="${padT}" width="${iw}" height="${ih}" fill="transparent"/></svg>`;
+}
+function chartReadout(evt){
+  const svg=evt.target&&evt.target.closest?evt.target.closest('svg.chart[data-chart]'):null;
+  if(!svg){document.querySelectorAll('svg.chart .hov').forEach(g=>{g.style.display='none';});return;}
+  const c=CHARTS.get(svg.dataset.chart),g=svg.querySelector('.hov');if(!c||!g)return;
+  const r=svg.getBoundingClientRect();if(!r.width)return;
+  const vx=(evt.clientX-r.left)*(c.W/r.width);
+  if(vx<c.padL-8||vx>c.padL+c.iw+8){g.style.display='none';return;}
+  let best=0,bd=Infinity;c.px.forEach((x,i)=>{const dx=Math.abs(x-vx);if(dx<bd){bd=dx;best=i;}});
+  const x=c.px[best],lines=[c.useIndex?String(c.dates[best]):longDate(c.xs[best])+(c.notes[best]?` · ${c.notes[best]}`:'')];
+  let dots='';const vs=[];
+  c.datasets.forEach(d=>{const v=d.vals[best];
+    if(validNumber(v)){vs.push(Number(v));dots+=`<circle cx="${x.toFixed(1)}" cy="${c.Y(Number(v)).toFixed(1)}" r="3" fill="${d.color}" stroke="#0B0B0D" stroke-width="1"/>`;
+      lines.push({t:`${d.name}: ${c.fy(Number(v))}`,color:d.color});}
+    else{vs.push(null);lines.push({t:`${d.name}: —`,color:d.color});}});
+  if(c.spread&&vs.length===2&&vs[0]!=null&&vs[1]!=null)lines.push({t:`${c.spreadLabel}: ${c.spreadFmt(vs[0]-vs[1])}`,color:'#E8EAED'});
+  const bw=Math.max(...lines.map(l=>String(l.t||l).length))*5.6+16,bh=lines.length*13+8;
+  const bx=x+10+bw>c.padL+c.iw?x-10-bw:x+10,by=c.padT+4;
+  g.innerHTML=`<line x1="${x.toFixed(1)}" y1="${c.padT}" x2="${x.toFixed(1)}" y2="${c.padT+c.ih}" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 2"/>${dots}`+
+    `<rect x="${bx.toFixed(1)}" y="${by}" width="${bw.toFixed(1)}" height="${bh}" rx="2" fill="#0D0E10" stroke="#2A2C31"/>`+
+    lines.map((l,k)=>`<text x="${(bx+8).toFixed(1)}" y="${by+15+k*13}" class="tip" fill="${k?l.color:'#9AA3AD'}">${esc(k?l.t:l)}</text>`).join('');
+  g.style.display='';
+}
+if(typeof document!=='undefined'&&typeof document.addEventListener==='function'){
+  document.addEventListener('pointermove',chartReadout,{passive:true});
+  document.addEventListener('pointerdown',chartReadout,{passive:true});
 }
 
 let S,N,L,SL,RO,AN,ST,OS,MT,H={},freshnessTimer=null,bootTimer=null,bootGeneration=0;
@@ -433,12 +553,14 @@ async function boot(){
 const BOOK_OF={north:'GLOBAL',south:'INDO'};
 let activeWorkspace=null,bookViewGeneration=0;
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
+let lastResearchPath=null;
 function route(){
   let h=(location.hash||'#monitor').slice(1);
   if(h==='structure')h='about';        // legacy links
-  const cur=(BOOK_OF[h]||h==='about')?h:'monitor';
+  const top=h.split('/')[0];
+  const cur=(BOOK_OF[top]||top==='about'||top==='research')?top:'monitor';
   const previousWorkspace=activeWorkspace;activeWorkspace=cur;const viewGeneration=++bookViewGeneration;
-  ['monitor','north','south','about'].forEach(k=>{
+  ['monitor','north','south','research','about'].forEach(k=>{
     const b=document.getElementById('ws-'+k); if(!b)return;
     b.className='wstab'+(k===cur?' on':'');
     if(k===cur)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
@@ -446,6 +568,12 @@ function route(){
   document.getElementById('view-monitor').style.display=monitorVisible?'':'none';
   document.getElementById('view-book').style.display=BOOK_OF[cur]?'':'none';
   document.getElementById('view-structure').style.display=cur==='about'?'':'none';
+  document.getElementById('view-research').style.display=cur==='research'?'':'none';
+  if(cur==='research'&&window.SixSouthResearch){
+    const sub=h.slice('research'.length).replace(/^\//,'');
+    // the 5-minute data refresh must not reset a reader's place in a long document
+    if(sub!==lastResearchPath||previousWorkspace!=='research'){lastResearchPath=sub;window.SixSouthResearch.render(sub);}
+  }else if(cur!=='research'){lastResearchPath=null;}
   if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur],viewGeneration);
   if(cur==='about')renderStructureView();
   if(cur==='monitor'&&previousWorkspace&&previousWorkspace!=='monitor'&&curTab)tabs(curTab);
@@ -462,19 +590,23 @@ async function renderBookView(b,generation=++bookViewGeneration){
   const cashPct=s.nav?fmt(s.cash/s.nav*100,1):null;
   const si=s.since_inception_pct;
   const perf=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
-    chart(ser.map(r=>String(r.date).slice(5)),
+    chart(ser.map(r=>r.date),
       [{name:'Fund',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
        {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
-      {h:250,fmtY:v=>fmt(v,1),fill:true,pills:true,
-       title:`${bookName(b)} official performance versus benchmark`,
-       description:'Official total-return marks rebased to 100 at inception.'});
+      {h:250,fmtY:v=>fmt(v,2),fill:true,pills:true,spread:true,spreadLabel:'Fund − benchmark',notes:markNotes(ser),
+       title:`${bookName(b)} performance versus its total-return benchmark`,
+       description:'Fund NAV and total-return benchmark, both rebased to 100 at inception.'});
+  const rel=ser.length<2?'':chart(ser.map(r=>r.date),
+      [{name:'Fund − benchmark',color:'#9AA3AD',vals:ser.map(r=>validNumber(r.nav_idx)&&validNumber(r.bench_idx)?Math.round((r.nav_idx-r.bench_idx)*100)/100:null)}],
+      {h:120,fmtY:v=>`${v>0?'+':''}${fmt(v,1)}pp`,pills:true,refLine:0,notes:markNotes(ser),
+       title:`${bookName(b)} relative performance`,description:'Fund cumulative return minus benchmark cumulative return, percentage points.'});
   const compact=v=>Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(v);
   const raw=ser.length<2?'<div class="muted small">not enough NAV history yet</div>':
-    chart(ser.map(r=>String(r.date).slice(5)),
+    chart(ser.map(r=>r.date),
       [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_ccy)}],
-      {h:160,fmtY:compact,fill:true,pills:true,
-       title:`${bookName(b)} official NAV in ${s.ccy||'book currency'}`,
-       description:'Official book-currency NAV marks only.'});
+      {h:160,fmtY:compact,fill:true,pills:true,notes:markNotes(ser),
+       title:`${bookName(b)} NAV in ${s.ccy||'book currency'}`,
+       description:'Book-currency NAV marks.'});
   const hs=records(H[b]);
   const hrows=hs.map(h2=>`<tr class="${h2.stale?'stale':''}">
     <td class="mono">${esc(h2.ticker)}</td><td>${esc(h2.instrument)}</td>
@@ -482,7 +614,7 @@ async function renderBookView(b,generation=++bookViewGeneration){
     <td class="num mono">${fmt(h2.price,h2.ccy==='IDR'?0:2)}</td>
     <td class="num mono">${fmt0(h2.mv)}</td>
     <td class="num mono ${cls(h2.pnl_pct)}">${pct(h2.pnl_pct)}</td></tr>`).join('')
-    ||`<tr><td colspan="6" class="muted">No positions yet — cash is a position.</td></tr>`;
+    ||`<tr><td colspan="6" class="muted">No open positions — the book is fully in cash.</td></tr>`;
   const cell=(k,v,c='')=>`<div class="cell"><div class="k">${esc(k)}</div><div class="v mono ${esc(c)}">${esc(v)}</div></div>`;
   el.innerHTML=`
     <div class="panel" style="margin-top:8px">
@@ -503,10 +635,12 @@ async function renderBookView(b,generation=++bookViewGeneration){
     <div class="grid book-layout">
       <div class="col">
         <div class="panel">
-          <div class="ptitle"><span class="dot"></span>Performance — fund vs benchmark<span class="aux">official total-return marks · both series rebased to 100 at inception</span></div>
+          <div class="ptitle"><span class="dot"></span>Performance — fund vs benchmark<span class="aux">total return · both rebased to 100 at inception (${esc(String((ser[0]||{}).date||''))})</span></div>
           <div class="pbody">
-            <div class="legend"><span style="color:var(--north)">Fund (inception=100)</span><span style="color:var(--bench)">Benchmark (inception=100)</span></div>
+            <div class="legend"><span style="color:var(--north)">Fund NAV</span><span style="color:var(--bench)">Benchmark · ${esc(benchName(b))}</span><span class="muted">hover or tap for values</span></div>
             ${perf}
+            <div class="legend" style="padding-top:2px"><span>Relative performance (fund − benchmark, pp)</span></div>
+            ${rel}
           </div>
         </div>
         <div class="panel">
@@ -796,7 +930,7 @@ function renderBook(b,el){
     <td class="num mono">${fmt(h.price,h.ccy==='IDR'?0:2)}</td>
     <td class="num mono">${fmt0(h.mv)}</td>
     <td class="num mono ${cls(h.pnl_pct)}">${pct(h.pnl_pct)}</td></tr>`).join('')
-    ||`<tr><td colspan="6" class="muted">No positions yet — the fund is in its ramp phase. Cash is a position.</td></tr>`;
+    ||`<tr><td colspan="6" class="muted">No open positions — the book is fully in cash.</td></tr>`;
   const si=s.since_inception_pct;
   document.getElementById(el).innerHTML=`
     <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div><h2>${esc(bookName(b))}</h2>
@@ -812,17 +946,25 @@ function renderBook(b,el){
     <div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th><th class="num">Qty</th>
       <th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="legend"><span style="color:var(--north)">Fund (inception=100)</span><span style="color:var(--bench)">Benchmark (inception=100)</span></div>
+    <div class="legend"><span style="color:var(--north)">Fund (inception = 100)</span><span style="color:var(--bench)">Benchmark · ${esc(benchName(b))}</span></div>
     <div style="padding:2px 10px 10px">${miniChart(b)}</div>`;
+}
+function markNotes(ser){
+  return ser.map(r=>r.mark==='reconstructed'?'missed session, exact ledger replay':r.mark==='inception'?'inception':'');
+}
+function benchName(b){
+  const comp=(L&&L.limits&&L.limits.books&&L.limits.books[b]&&L.limits.books[b].benchmark&&L.limits.books[b].benchmark.composite)||[];
+  const parts=records(comp).map(c=>`${Math.round(Number(c.weight)*100)}% ${c.ticker==='^JKSE'?'IHSG':c.ticker}`);
+  return parts.length?parts.join(' + ')+' (TR)':'total-return benchmark';
 }
 function miniChart(b){
   const ser=records(N&&N[b]); if(ser.length<2)return'<div class="muted small">not enough NAV history yet</div>';
-  return chart(ser.map(r=>String(r.date).slice(5)),
-    [{name:'NAV',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
+  return chart(ser.map(r=>r.date),
+    [{name:'Fund',color:'#3E8EDD',vals:ser.map(r=>r.nav_idx)},
      {name:'Benchmark',color:'#E84A93',dash:true,vals:ser.map(r=>r.bench_idx)}],
-    {h:170,fmtY:v=>fmt(v,1),fill:true,pills:true,
-     title:`${bookName(b)} official performance versus benchmark`,
-     description:'Official total-return marks rebased to 100 at inception.'});
+    {h:170,fmtY:v=>fmt(v,2),fill:true,pills:true,spread:true,spreadLabel:'Fund − benchmark',notes:markNotes(ser),
+     title:`${bookName(b)} performance versus its total-return benchmark`,
+     description:'Fund NAV and total-return benchmark, both rebased to 100 at inception.'});
 }
 function renderTotal(){
   const t=records(N&&N.USD_TOTAL);
@@ -832,7 +974,7 @@ function renderTotal(){
     :'official paired marks only';
   document.getElementById('chTotal').innerHTML=t.length<2
     ?'<div class="muted small">consolidated series appears once both books print an official mark the same day</div>'
-    :chart(t.map(r=>String(r.date).slice(5)),[{name:'Total',color:'#3E8EDD',vals:t.map(r=>r.nav_usd)}],
+    :chart(t.map(r=>r.date),[{name:'Total',color:'#3E8EDD',vals:t.map(r=>r.nav_usd)}],
       {h:230,fmtY:v=>'$'+fmt0(v),fill:true,pills:true,
        title:'Consolidated official NAV in US dollars',
        description:'Paired official North and South book marks; current indicative snapshots are excluded.'});

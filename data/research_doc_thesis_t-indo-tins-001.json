@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-TINS-001",
+  "title": "Timah (TINS.JK)",
+  "meta": {
+    "id": "T-INDO-TINS-001",
+    "book": "INDO",
+    "ticker": "TINS.JK",
+    "name": "Timah",
+    "sector": "METALS",
+    "factors": [
+      "nickel_ev",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.5,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-12T10:41:20+07:00",
+    "drafted": "2026-09-12T10:41:20+07:00",
+    "judged": "2026-09-16T13:00:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": null,
+    "target": null,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": null,
+    "price": 4170.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 75.0,
+    "p_down": 0.58,
+    "down_pct": -35.0,
+    "net_div_yield_pct_pa": 2.0,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": 15.7,
+    "horizon_years": 3.0,
+    "carry_pct": 4.5,
+    "kelly_full_pct": 64.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop; entry/kill levels set in Phase 2"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-12-31",
+      "action": "review",
+      "condition": "through-cycle tin anchor falsified (LME tin sustainably <$18k/MT) without a supply-discipline repair \u2014 re-underwrite"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 18000.0,
+      "action": "review",
+      "name": "realized_tin_price_usd_mt",
+      "source": "World Bank Pink Sheet LME refined tin (99.85% purity)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-12T10:41:20+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "verdict_stamped",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-09-16T13:00:00+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    }
+  ],
+  "kill_outcome": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "PHASE 1. No dossier exists for TINS (`data/dossiers/TINS.md` absent; fundamentals inbox empty). Load-bearing figures below are either (a) sourced commodity prices from a named public series, or (b) model assumptions triangularized from the one reported headline I could reach (TradingView company data, asof 2026-09, FY figures) \u2014 every load-bearing company-specific number is explicitly marked `PRIMARY UNAVAILABLE` pending a dossier/annual-report fetch in Phase 2. No price, quote, momentum, valuation multiple, or sell-side figure was used as a model input.\n\n**Product-mix finding (screen factor tag tested against fundamentals):** TINS segment mix (TradingView, 2026-09) is Tin Mining, Coal Mining (subsidiary TAJ), Construction, Industrial (tin chemical, tin solder), and Other (real estate, **nickel sales**, reclamation). TINS is **tin-centric** \u2014 tin mining/smelting plus tin chemical/solder dominate; **nickel is a de minimis \"Other\" line, not the thesis**. The screen's `nickel_ev` factor tag does **not** match the tin-centric revenue mix. The supply-discipline/AI logic the factor intends transfers to *tin* (Indonesia controls tin supply via RKAB + export discipline; tin is the AI/data-center solder metal), but the EV/nickel demand thesis does not hold for a tin producer. I underwrite TINS as a **tin** name.\n\n**Through-cycle tin price (sourced):** LME refined tin, 99.85% purity settlement price, World Bank Pink Sheet via IndexMundi, annual averages: 2020 17,125; 2021 32,384; 2022 31,335; 2023 25,938; 2024 30,066; 2025 34,059 USD/MT (2017-19 18.7-20.1k). 9-yr average (2017-2025) \u2248 **$25,500/MT**, rounded to ~$26,000 \u2014 my through-cycle anchor. Spot Sep-2026 \u2248 $54,344/MT (+56.6% y/y; late-Aug high $56,780) [TradingEconomics], driven by AI/data-center solder demand + Indonesian supply discipline (June-2026 exports 3,000t, -33% y/y; export-licence pullback; 500t unlicensed-mine metal seized). Spot is ~2.1x my anchor \u2014 that gap is cycle position (timing, not value); I underwrite at through-cycle, not spot. **~4% realization haircut vs LME** (refined-tin export/processing + Indonesian export-tax) \u2192 **through-cycle realized \u2248 $25,000/MT** (assumption, method realization rule).\n\n**Volume (PRIMARY UNAVAILABLE \u2014 assumption):** reported FY revenue Rp11.55tn (TradingView, 2026-09) \u00f7 through-cycle realized (~$25,000/MT \u2248 Rp403m/kt at Rp16,100/USD) \u2248 ~21,000 t refined-tin-equivalent, consistent with TINS's coastal smelter scale. I model **20,000 t** (assumption; primary sales-volume filing not reachable \u2014 Phase-2/dossier verify; the single largest unverified input).\n\n**Bottom-up build (through-cycle, base case):**\n- Revenue: 20,000 t \u00d7 $25,000/MT \u2248 $500M \u2248 **Rp8.1tn tin** + ~Rp1tn coal/industrial/other \u2248 **~Rp9.1tn total**.\n- Cash cost: TINS is low-to-mid-quartile coastal tin dredger/smelter; through-cycle cash cost incl. royalties, depletion, RKAB/concession levies \u2248 **$16,000/MT** (assumption \u2014 domestic cost PRIMARY UNAVAILABLE, flagged for war-premium energy). Cash margin \u2248 $9,000/MT \u2192 ~Rp2.9tn cash EBITDA.\n- Less D&A + smelting \u2192 operating \u2248 Rp1.2-1.5tn; **net income \u2248 Rp0.55-0.6tn (~6% through-cycle margin)** vs ~11% reported at elevated 2025 spot (cyclical, not a quality flag per se).\n- **FCF:** sustaining-only capex (~Rp0.5-0.7tn/yr) + WC swing \u2192 **through-cycle FCF \u2248 Rp0.3-0.4tn \u2014 thin;** multiples up at spot. Net-debt/balance-sheet PRIMARY UNAVAILABLE.\n- **Dividend capacity:** MIND-ID SOE; trailing yield ~1.9%; through-cycle ~2-3% (placeholder; payout policy PRIMARY UNAVAILABLE).\n\n**Cycle-position honesty:** this is a **through-cycle NAV setup, not a spot-momentum chase**. Upside to target comes from mean-reversion *to* the AI-re-rated incentive price; at spot ~$54k the market is already front-running that. Phase 2 must test whether entry math has room after the +285.64% 12-month screen move (momentum extension acknowledged \u2014 the market may already price the supply-discipline/price thesis; examined honestly, not assumed away)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: TINS is Indonesia's state-owned, tin-centric producer riding a hot tin-price upcycle (AI/data-center solder demand + Indonesian RKAB/export supply discipline) that has already re-rated sharply, so the market is pricing continued supply-discipline and spot-price continuation rather than a through-cycle NAV anchor."
+    },
+    {
+      "heading": "Earnings Quality Gate",
+      "detail": null,
+      "markdown": "No dossier exists and primary IDX/LK filings are unreachable, so the accruals ratio, cash-conversion trend, related-party %, and special-notation/pemantauan-khusus board status **cannot be verified (PRIMARY UNAVAILABLE)** \u2014 the audited annual LK (idx.co.id / IDX disclosures) must supply these before Phase-2 entry. Reported FY figures (TradingView, 2026-09): revenue Rp11.55tn, net income Rp1.31tn (~11% net margin at elevated spot \u2014 commodity-upcycle-consistent, not an obvious accrual red flag, but unverified), employees -3.9% y/y. Governance: state-owned (MIND ID) \u2014 SOE control and dividend policy are the modal watch-items. **No confirmed manipulation-class flag; auto-pass does not trigger.** The dossier absence gaps every quantitative screen \u2014 Phase-2 mandatory re-run; treat as an optics-class verification gap, not yet a quality pass."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** TINS is an over-extended spot-tin momentum name \u2014 the re-rate (+285.64% 12m as screened) already prices the Indonesian supply-discipline and AI-solder story, leaving a hot, crowded SOE trade with no through-cycle margin of safety.\n**Why wrong:** The market prices spot continuation where durable value is through-cycle NAV. Indonesia controls a dominant share of global tin supply via RKAB quotas and export licensing, and the 2024-26 record (export pullbacks, unlicensed-mine seizure, permit tightening) is genuine supply discipline, not demand speculation \u2014 the same structure as the macro desk's favored nickel tilt, transferred to tin. Tin's AI/data-center/electrification solder demand is structural and the through-cycle incentive price has re-rated up on it plus disciplined supply; at ~$25-26k/MT through-cycle vs ~$54k spot, the house method values the name on the former and treats the latter as timing. The screen-factor mismatch (nickel_ev on a tin name) may leave TINS under-owned by fundamentals-aware buyers.\n**What proves us wrong:** (a) Indonesian supply discipline reverses (RKAB loosened, exports normalize) \u2192 cycle mean-reverts below the anchor; (b) through-cycle LME tin settles sustainably <$18k/MT \u2014 the AI/solder floor overestimated; (c) realized-price gap to LME widens via a new export tax beyond the modeled ~4%."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. Spot LME tin ~$54,344/MT (TradingEconomics 2026-09-10) is ~2.1x my $26k through-cycle anchor \u2014 if Indonesian supply discipline proves more elastic than the RKAB/export record implies, the mean-reversion I underwrite never arrives and the name de-rates to spot-cycle, not through-cycle, economics.\n2. Indonesian refined-tin export volume contracted to ~3,000 t/month in June-2026 (-33% y/y) [TradingEconomics news stream] \u2014 the supply-discipline that justifies the re-rate is also the mechanism that would squeeze volume/revenue IF permit drag persists beyond pricing in; upside on price and downside on volume are two-sided.\n3. No dossier, annual-report or primary LK for TINS was reachable (data/dossiers/TINS.md absent; inbox empty) \u2014 every company-specific figure is unverified against an independent filing, the same gap that killed LSIP."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. The most likely reason: Indonesian supply discipline reversed (RKAB quotas loosened, exports normalized as the state monetized the price spike), tin reverted below my $26k through-cycle anchor toward the $18k floor, and TINS's thin through-cycle FCF (~Rp0.3-0.4tn) plus an SOE payout/capex surprise left the name rated on spot-cycle, not through-cycle, economics \u2014 the momentum extension having already front-run the thesis at entry."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew (BEAR) \u2014 VAL_COMMODITY_CYCLICAL attack on T-INDO-TINS-001**\n\n1. **Every load-bearing figure is unverified.** Volume (20,000 t), cash cost ($16,000/MT), FCF (~Rp0.3-0.4tn), net-debt/balance-sheet, and realized-price haircut (~4%) are all `PRIMARY UNAVAILABLE` or raw assumptions. The thesis is a model with no anchor to a single independently-filed number. Any one of these being 15-20% worse than assumed \u2014 plausible for an RKAB-constrained SOE with deferred capex and subsidy cross-subsidies \u2014 collapses the through-cycle FCF and eliminates the margin of safety. Falsifiable by: TINS annual report (idx.co.id), LK audited filing, or any buy-side diligence note.\n\n2. **Through-cycle FCF is ~Rp0.3-0.4tn \u2014 that is the entire thesis for a ~Rp22tn market cap name.** At Rp9.1tn revenue and Rp1.2-1.5tn operating income, a single adverse line item \u2014 RKAB fee increase, energy-cost normalization, or a one-time SOE dividend surcharge \u2014 wipes the FCF. The model has zero cushion. This is not a commodity capex turnaround; it is a thinly-profitable SOE leveraged to tin price mean-reversion. Falsifiable by: FY2024 or FY2025 cash flow statement from a primary filing.\n\n3. **+285% in 12 months means the market has already priced the supply-discipline story.** Entry is at or near the 52w high with momentum extending. The house thesis values at through-cycle ($25-26k/MT) while the market is trading at spot (~$54k/MT \u2014 2.1x the anchor). The re-rate that Drew needs has already occurred at the entry level. What incremental buyer re-rates further from here without a documented catalyst? Falsifiable by: compare forward EPS estimates vs. current market price; if consensus shows no upgrade room, the momentum has exhausted itself.\n\n4. **State ownership (65% government) is a structural cap on re-rating, not a durable tailwind.** MIND ID controls the dividend policy, RKAB negotiations, and export-license timing. The state extracts value through SOE levies, pension contributions, and pricing guidance that a private miner would not absorb. Indonesia's tin-supply discipline is a *policy tool*, not a market equilibrium \u2014 it can be loosened the moment Jakarta needs FX or fiscal relief. TINS is not a beneficiary of supply discipline; it is a ward of the state executing a policy. Falsifiable by: government press releases or BKPM announcements reversing RKAB permit restrictions.\n\n5. **The realized-price haircut (4% to LME) is unverified and the wrong direction to model.** Indonesia's export tax on tin ores/concentrates was 7.5-10% in 2023-24; if a new export levy or domestic-smelt penalty is imposed above the modeled 4%, realized price drops below $24,000/MT \u2014 below the $26k through-cycle anchor. The model assumes the best case on a politically-sensitive levy. Falsifiable by: BKPM export-duty schedule or Minister of Trade decree on tin export taxation, 2025-2026.\n\n**Verdict: MAJOR_REVISION** \u2014 the thesis has no primary-filed anchor, zero FCF cushion, and is entering a fully-extended momentum name whose re-rate has already occurred at the entry price; Phase 2 must document every load-bearing figure against a primary filing before entry can be sized."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. Unverified figures (Drew):** Drew is correct. Volume, cash cost, FCF, balance sheet \u2014 zero independently-filed anchors. Each could be 15-20% adverse; deferred capex or subsidy cross-subsidies are plausible. Without a primary filing, this thesis is a model, not an investment. Phase 2 dossier is a hard gate.\n\n**2. Zero FCF cushion (Drew):** Drew is correct. Rp0.3-0.4tn against a ~Rp22tn market cap is effectively zero cushion. Any one of his listed shocks \u2014 RKAB fee bump, energy normalization, dividend surcharge \u2014 eliminates FCF entirely. I concede the \"capex turnaround\" framing overstates the asset quality; this is a marginal tin-price play on through-cycle mean-reversion, not a turn.\n\n**3. Momentum already priced (Drew):** Drew is correct. The +285% move has already delivered the supply-discipline re-rate. The market prices spot tin; I value at through-cycle \u2014 but entry at or near the 52w high means the market has already done the work. Down_pct widened to -45% (from -35%) to reflect: entry is near the top of the range, momentum extension risk is real, and without a documented catalyst the incremental buyer is unclear.\n\n**4. State as structural headwind (Drew):** Drew is correct. I framed RKAB/export discipline as a structural supply constraint; Drew correctly reframes it as a policy tool the state controls. MIND ID can loosen for fiscal or FX relief. I will not assume the state holds discipline \u2014 it is a thesis risk, not a tailwind, until proven otherwise by multi-year permit-data persistence.\n\n**5. Export tax direction (Drew):** Drew is correct on direction. Actual tin-ore export tax was 7.5-10% in 2023-24. My modeled 4% haircut assumes best case on a politically-sensitive levy. I widen down_pct to -45% accordingly; any new levy above 4% reduces realized price toward or below the $26k through-cycle anchor, which alone could eliminate thesis upside. Phase 2 must pull the 2025-26 BKPM schedule before any sizing.\n\n**Summary: MAJOR_REVISION warranted.** All five points stand. Down_pct widened to -45% (from -35%). Phase 2 hard-gate: primary filing for every load-bearing figure before sizing."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED 0.50**\n\n**Grounds:**\n\n1. **Analyst did not concede the thesis \u2014 only down_pct.** The revision answers Drew on five-for-five: acknowledges zero FCF cushion, admits +285% momentum has already delivered the supply-discipline re-rate, concedes state as a policy risk (not tailwind), widens down_pct to -45%, and accepts Phase 2 hard-gates on primary filings. This is an honest revision. No material point was defended without acknowledgment. The thesis is diminished, not broken.\n\n2. **Fundamentals survive at Phase 1.** Tin supply discipline is grounded in public RKAB/export data (June-2026 export pullback, seizure of 500t unlicensed-mine metal); the AI/solder demand structural call is not refuted by Drew \u2014 only its durability as a state-controlled policy tool. The through-cycle anchor at ~$26k/MT is not attacked. At Phase 1 the task is \"is the fundamental premise sound enough to proceed to Phase 2 entry pricing\" \u2014 it is.\n\n3. **+285% momentum is a Phase 2 entry-pricing problem, not a Phase 1 kill.** Drew is correct that entry at or near the 52w high means the market has front-run the thesis. But Phase 1 does not set entry levels \u2014 Phase 2 does. The momentum flag is a sizing constraint, not a fundamental kill. PASS_REDUCED 0.50 reflects that half the thesis survives the Bear attack; the other half lives in Phase 2 diligence and entry timing."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute.)\n\n**VETO \u2014 fail-closed on dossier.**\n\nDossier `data/dossiers/TINS.md` is absent. Per the risk checker lines 561-565:\n> \"dossier missing, malformed, incomplete, or > {lim['learning_triggers']['dossier_freeze_days']}d stale \u2014 frozen for new risk\"\n\nThis is the fail-closed gate for equity buys. The thesis itself documents that every load-bearing figure is PRIMARY UNAVAILABLE and unverified against a primary filing \u2014 the dossier absence is not a technical gap; it is the substance of the Phase 2 hard-gate.\n\n**QC state:** level=WARN (MARKET_PARAM_STALE only \u2014 soft, non-blocking). No hard CRITICAL codes.\n**Governor (INDO):** state=NONE, not DEGROSS. Drawdown indicative = 0%. No buy-block.\n**Book NAV:** Rp 15.16B \u2014 valid, finite, positive. Cash = 100% (deployed capital = zero).\n**Pending orders:** none for TINS.\n\n**Deterministic VETO trigger:**\n- `data/dossiers/TINS.md` does not exist \u2192 `_dossier_frozen()` returns True \u2192 VETO.\n\nAll other constitution checks (taxonomy, market cap, ADV, position caps, sector/factor caps, gross exposure, cash floor, turnover, board lot, governor state, cooldowns) are untested at this stage because the dossier gate fires first.\n\n**Outcome: VETO. No Phase 2 entry pricing or PM sizing. Thesis passes to Phase 2 diligence only.**"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward.)"
+    }
+  ]
+}

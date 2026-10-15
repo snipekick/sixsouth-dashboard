@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-KLBF-001",
+  "title": "Kalbe Farma (KLBF.JK)",
+  "meta": {
+    "id": "T-INDO-KLBF-001",
+    "book": "INDO",
+    "ticker": "KLBF.JK",
+    "name": "Kalbe Farma",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "idr_defensive",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-09-02T13:45:00+07:00",
+    "drafted": "2026-09-02T13:51:38+07:00",
+    "judged": "2026-09-02T14:07:12+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 760.0,
+    "target": 1140.0,
+    "kill": 532.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "DCF central (COE 11.5%, FCF conversion 0.67) ~Rp1,000-1,100 + normalization to ~11.5x FY28E EPS ~99; still <50% of Kalbe's 10-yr avg multiple and below a fair 14-15x for a net-cash defensive compounder",
+    "price": 790.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 50.0,
+    "p_down": 0.6,
+    "down_pct": -30.0,
+    "net_div_yield_pct_pa": 2.0,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": 7.7,
+    "horizon_years": 3.0,
+    "carry_pct": 5.7,
+    "kelly_full_pct": 56.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (0.40, +50/-30, 3y, n=15)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 532.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop: -30% (base-rate losing mean) breaks below the 52w-low zone (~630), i.e. market confirms the de-rating was structural, not cyclical"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 9.0,
+      "action": "review",
+      "name": "net_margin_fy26",
+      "source": "FY2026 audited LK net income/revenue",
+      "note": "net margin troughing below ~9% = margin compression structural, re-underwrite"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "FY2026 full-year DPS not reinstated above Rp20/share"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-02T13:51:38+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-02T13:59:51+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revised",
+      "at": "2026-09-02T14:02:10+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-02T14:06:20+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-02T14:07:12+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-KLBF-001",
+    "ticker": "KLBF.JK",
+    "book": "INDO",
+    "killed": "2026-09-02",
+    "px_at_kill": 755.0,
+    "reason": "fragile_estimates",
+    "px_now": 790.0,
+    "px_asof": "2026-10-15",
+    "move_pct": 4.6
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sourcing note.** KLBF primary PDFs (kalbe.co.id IR, idnfinancials) returned 403 / JS-wall to this session's fetches, so FY2025 figures below are the audited annual and H1-2026 periodic statements as carried by yfinance/stockanalysis data rows (mapping to the filed LK rows named). Division split is scouting-card-sourced; unreached figures are marked **unverified**.\n\n**EARNINGS_QUALITY_FLAGS gate.** IDX regime: main-board large-cap (`the INDO universe`: KLBF.JK, HEALTHCARE, idr_defensive, board=main); no special-notation / papan-pemantauan-khusus status found \u2014 clean. Auditor Big-4-network, no down-tier flag (**unverified: exact audit firm**). Accruals 3y (non-financial): FY25 NI Rp3.665tn vs CFO ~Rp3.27tn (FCF Rp2.46tn + capex Rp0.81tn) \u2192 +Rp0.39tn \u2248 1.3% of avg assets ~Rp30tn \u2014 clean; FY24 negative accrual \u2014 clean. Divergence flag: FY25 receivables Rp5.65tn, +16.2% yoy vs revenue +8.3% (>1.5x; yfinance balance/income) \u2014 optics-class, watch. Inventory +7.4% vs COGS +8.1% \u2014 fine. Related-party: family-anchored (Setiawan founding family via holding vehicles); no siphon identified \u2014 **unverified: RP-% of revenue not extracted from LK note**. Structure flags: none found (no pledged-stake alarm, no serial rights issues). Action: no manipulation-class flag; optics-class items haircut \u2192 carried to pre-mortem.\n\n**FY2025 audited actuals** (yfinance annual rows, 2025-12-31): revenue Rp35.32tn (+8.3% yoy), gross margin 39.8%, operating margin 12.9%, NI attributable Rp3.665tn (+13.1%), basic EPS Rp80.5 (avg shares 45.52bn), ROE \u2248 15.9%, net cash \u2248 Rp4.19tn (cash+STI Rp4.49tn \u2212 total debt Rp0.30tn), reported FCF Rp2.46tn. **Dividend: FY2025 DPS Rp20 paid 2026-06-04 \u2014 a 44% CUT from Rp36 (FY2024); payout falls ~51%\u2192~25%** (yfinance dividend history) \u2014 falsifies the card's \"5%+ yield / 50%+ payout\" premise.\n\n**H1-2026 periodic** (yfinance quarterly rows): H1 revenue Rp19.48tn (+14.4% yoy) but NI Rp1.919tn (\u22122.8% yoy); TTM (Jun-26) revenue Rp37.72tn (+13.0%), NI Rp3.61tn (+5.8%) \u2014 top line strong, margin compressing (net ~9.6% TTM vs 10.4% FY25; Q2-26 gross 36.8% vs ~40%).\n\n**Division build (FY26E),** split card-sourced (prescription ~27 / consumer-health ~17 / nutritionals ~30 / distribution ~26 of revenue, **unverified vs primary segment note**):\n- Prescription (~Rp9.5tn FY25): JKN/BPJS expands volume at controlled price \u2192 rev +10%/yr, margin flat-to-down.\n- Consumer health (~Rp6.0tn): squeeze easing \u2192 rev +6%/yr.\n- Nutritionals (~Rp10.6tn): birth-rate decline caps infant formula \u2192 rev +3-4%/yr (price/mix, aging/adult).\n- Distribution (~Rp9.2tn): tracks the pharma market \u2192 rev +8%/yr at low margin.\nBlended FY26E revenue \u2248 Rp39tn (+10%). **Committed EPS path:** FY26E \u2248 **Rp83** (NI \u2248 Rp3.75tn, net margin ~9.6% \u2014 compression roughly offsets ~10% top-line growth), FY27E \u2248 **Rp90** (+9%), FY28E \u2248 **Rp99** (+10%) \u2014 a single-digit CAGR, NOT the 15% historical; the cut + margin step-down are underwritten as real.\n\n**FCF / DCF (IDR, method VAL_COMPOUNDER_QUALITY).** FCF conversion ~0.67 of NI (FY25). Owner-earnings base FY26E \u2248 Rp2.5tn FCF. Fade FY27\u2192FY35 at 9/10/8/6/5/4/3.5/3/3%; terminal g 3% \u2264 long-run ID nominal GDP. **COE 11.5% (mid of house IDR 11-13% band; net-cash defensive, but BoP-pressure regime holds it above the floor).** Value: COE 11% \u2192 Rp972/sh; 11.5% \u2192 Rp919; 12% \u2192 Rp872; 13% \u2192 Rp792 (equity = DCF EV + Rp4.19tn net cash, / 45.25bn shares). **Entry Rp760 is ~13-28% below 11-11.5% COE fair value** \u2014 a real margin of safety, but upside is carried by the multiple normalizing from a panic ~9.4x FY25 (9.6x TTM) toward ~11.5x FY28E, not by heroic growth."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: KLBF \u2014 Indonesia's largest, historically 20-30x defensive pharma \u2014 has been structurally de-rated to ~9-10x on a feared JKN/BPJS margin squeeze, a 44% dividend cut, and a birth-rate-driven nutritionals slowdown, and the market now treats it as a melting ex-premium consumer name rather than a net-cash compounder whose competitive position is intact."
+    },
+    {
+      "heading": "Base-rate anchoring",
+      "detail": null,
+      "markdown": "Primary archetype **derated_compounder_rerating** (0.40, +50/-30, 3y). It clears the clearance condition \u2014 \"a cyclical or sentiment de-rating with intact competitive position\" \u2014 because the de-rating is multiple-led (price \u221243% from the 1,345 52w-high while FY25 NI +13%, TTM revenue +13%), NOT local-challenger share loss: Kalbe remains #1 with 13% top-line growth and the widest GT/MT distribution reach in Indonesian pharma (method rule 6 moat). **The cross-archetype dividend_income_anchor is REJECTED**: its 0.60 window is a high-payout cash cow anchored by a well-covered dividend, and the FY2025 DPS cut to Rp20 (payout ~25%, yield ~2.6%) breaks that premise \u2014 the card's +9.0% dividend EV is a stale-premise artifact; the honest prior is the compounder class. **p_up 0.45 is +5pp over the 0.40 registry**, argued: the multiple-compression leg is largely spent (9.4x vs a 20-30x history), the balance sheet is net cash (Rp93/sh \u2248 12% of price), the cut is FCF-covered (Rp2.46tn FCF vs Rp1.64tn dividend) so it reads as discretionary capital retention, and no challenger-share evidence exists. Held to +5pp, not higher, because the margin trough has NOT yet printed (TTM NI +5.8% vs rev +13%) and the nutritionals headwind is structural. **Multiple-survival test**: target Rp1,140 implies ~11.5x FY28E EPS 99 (~12.7x FY27E 90) \u2014 below the fair range and <50% of the 10-yr average, so a rational buyer pays it; the exit multiple (11.5x) sits modestly above entry (9.4x), and that expansion is the thesis (normalization from a panic multiple), not a costume hiding no growth."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** KLBF is a structurally de-rated value trap \u2014 the 44% dividend cut proves weak cash generation, JKN/BPJS price control permanently compresses prescription margins, the birth-rate decline caps nutritionals, and the 2026 price halving (1,345\u2192630-760) is the market correctly re-rating an ex-growth pharma to a single-digit multiple.\n**Why wrong:** The market is pricing a *structural* margin collapse the statements do not yet show. FY25 NI +13% on +8.3% revenue; TTM (Jun-26) revenue +13%; ROE ~16%; net cash Rp4.19tn with FCF covering the cut dividend 1.5x \u2014 not a cash-constrained company. A ~25% payout on a net-cash balance sheet reads as retaining capital for the prescription/nutritionals build-out, not distress. The margin compression is real but mix-led (distribution + prescription volume outpacing high-margin consumer health/nutritionals) plus a JKN price-transition a #1 with the widest distribution reach is best placed to absorb. At 9.4x FY25 (ex-cash ~8.4x) the market pays under half the historical multiple for a franchise that has not lost share \u2014 a sentiment de-rating, not a structural one.\n**What proves us wrong:** FY2026 audited net margin 1.5x revenue growth; or demonstrable local-challenger share gain in OTC/prescription (method rule 6)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. **FY2025 dividend cut 44%**: DPS Rp36 (FY2024, paid 2025-06-04) \u2192 Rp20 (FY2025, paid 2026-06-04); payout ~51%\u2192~25% despite NI +13% (yfinance dividend history). Contradicts the card's 5%+ yield / 50%+ payout premise; signals caution.\n2. **Margin compression ongoing, not troughing**: TTM (Jun-26) NI +5.8% vs revenue +13.0% (stockanalysis TTM); Q2-26 NI Rp0.891tn ~flat YoY vs Q2-25 Rp0.898tn (yfinance quarterly); Q2-26 gross 36.8% vs ~40% FY25.\n3. **Receivables divergence**: FY25 AR Rp5.65tn, +16.2% yoy, vs revenue +8.3% yoy \u2014 >1.5x revenue growth (yfinance balance/income) \u2014 working-capital flag.\n4. **Nutritionals structural headwind**: ~30% of revenue is nutrition (card, **unverified vs primary**); Indonesia's secular birth-rate decline caps the infant-formula volume pool the division historically rode."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2029 and this position lost ~30%. The most likely reason: the JKN/BPJS price regime was not a transition but a permanent reset \u2014 FY26 audited net margin printed <9% and never recovered; the FY25 dividend cut proved to be the first of two (FY26 held at Rp20 or cut again), confirming management saw impaired FCF all along; consumer health pricing power never returned, and nutritionals shrank on the birth-rate decline \u2014 so EPS stayed below Rp80 through FY28 while the market held KLBF at ~7-8x, and the \"cyclical de-rating\" I bought was actually the structural de-rating the derated_compounder_rerating base rate warns is the trap. The kill at Rp570 (\u221225%, below the 52w-low zone) is wired to catch exactly this."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. **down_pct \u221225 is the kill floor, not the losing mean.** Archetype base_down_pct is \u221230; you set \u221225 = loss-at-kill (570/760). Truncating the tail to the kill level understates the honest losing mean and inflates EV. Net-cash floor does not justify it \u2014 the 44% dividend cut says management sees impaired FCF.\n\n2. **p_up 0.45 is hope, not evidence.** Registry 0.40. Your own text admits the margin trough has NOT printed (TTM NI +5.8% vs rev +13%). The +5pp rests on \"compression largely spent\" \u2014 but Q2-26 gross 36.8% vs ~40% FY25 shows compression accelerating, not spent. No evidence for the bump.\n\n3. **up_pct 50 = a held-multiple re-rating bet on a name that just de-rated 43%.** Exit 11.5x vs entry 9.4x \u2014 the entire upside is multiple expansion, not growth (EPS CAGR single-digit). Betting +50% re-rating on a name the market just halved is the derated_compounder trap, not the escape.\n\n4. **The DPS cut guts the \"defensive compounder\" framing.** A net-cash defensive compounder does not cut DPS 44% (Rp36\u2192Rp20) while NI is +13%. You spin it as \"discretionary retention\"; the market reads it as caution. The 2.4% yield input is low and itself at risk \u2014 your own kill criterion flags a second cut.\n\n5. **Division split is load-bearing and uncited.** Prescription 27/consumer 17/nutritionals 30/distribution 26 is card-sourced, **unverified vs primary** \u2014 yet it drives the entire FY26E revenue build and the margin-compression story. An uncited load-bearing input is an auto-KILL per rule 0. Same for RP-% and audit firm.\n\n6. **Crowded defensive in a BoP regime.** INDO books all-cash, rate-sensitive AVOID, BI defensive. idr_defensive pharma is the obvious haven \u2014 the idea card itself calls it \"deliberate sector rotation\" and \"completely uncovered.\" Everyone rotates here; the re-rating may already be priced into the 760 entry.\n\n7. **catalyst_date null \u2014 no trigger.** A 3y value bet with no catalyst is a slow grind. What forces the market to re-rate from 9.4x to 11.5x? The only dated kill is a 2027-06-30 DPS check \u2014 a downside trip, not an upside catalyst.\n\n8. **EV arithmetic checks** (0.45\u00d750 + 0.55\u00d7\u221225 + 2.4\u00d73 \u2212 0.3 = 15.65 \u2248 15.7) \u2014 but 7.2 of the 15.7 is the 3y dividend stream. If the cut repeats (your own kill criterion), the 2.4% input is wrong and expected_pct collapses toward ~8.5.\n\n9. **Anti-gaming: clean.** estimates_committed_at 13:45 precedes draft 13:51; no retro-edit; prior attack log absent (first pass). No fabrication \u2014 but the honest unverified flags do not excuse carrying the thesis on them.\n\n**Verdict: MAJOR_REVISION.** Strongest single sentence: the trade's entire expected value rests on a +5pp p_up bump and a truncated \u221225 losing mean, both unsupported by a margin that is still compressing \u2014 while the load-bearing division split is uncited.\n\nstage_log: {stage: attacked, at: \"2026-09-02T13:59:51+07:00\", actor: BEAR}\n\n**Re-attack (2026-09-02).** The Revision concedes all 9 points in substance \u2014 down_pct \u221230, p_up 0.40, yield 2.0, and the division split conceded as auto-KILL per rule 0. Arithmetic reconciles: 0.40\u00d750 + 0.60\u00d7\u221230 + 2.0\u00d73 \u2212 0.3 = 7.7. Levels cohere: 532 < 760 < 1140, target +50% within \u00b13pp of up_pct 50. But the concession is the kill: every load-bearing input is now registry-anchored or conceded, expected_pct 7.7 is sub-hurdle, and the split that drives the FY26E build remains uncited. A trade whose whole EV rests on an uncited segment split and a held-multiple re-rating on a name that just de-rated 43% is not rehabilitated \u2014 it is dead. **FINAL VERDICT: KILL_RECOMMENDED.**\n\nstage_log: {stage: attacked, at: \"2026-09-02T14:06:20+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "1. **Concede.** down_pct \u221225 was the kill floor, not the losing mean. Reset to the archetype \u221230 (kill 760\u2192532, below the 52w-low zone). Net-cash floor does not justify truncation given the 44% DPS cut.\n2. **Concede.** p_up 0.45 was hope. Q2-26 gross 36.8% vs ~40% FY25 shows compression accelerating, not spent; trough unprinted. Revert to registry 0.40.\n3. **Concede.** up_pct 50 is a held-multiple re-rating bet on a name that just de-rated 43%; EPS CAGR is single-digit. Held at 50 (registry base_up_pct) but the multiple-survival test is now the whole thesis, not a tailwind.\n4. **Concede.** The DPS cut guts the \"defensive compounder\" framing. A net-cash compounder does not cut DPS 44% while NI +13%. Yield input cut 2.4\u21922.0 (a repeat cut is a live kill criterion).\n5. **Concede \u2014 auto-KILL per rule 0.** Division split (27/17/30/26), RP-% and audit firm are card-sourced, unverified, and drive the FY26E revenue build and margin story. They must be re-sourced from the primary LK segment note before any pass.\n6. **Concede.** idr_defensive pharma is the obvious BoP haven; the re-rating may be priced into 760. No flow fact (feed stale) justifies paying up.\n7. **Concede.** catalyst_date null \u2014 no trigger. The only dated kill is a downside DPS check. A 3y value bet with no catalyst is a slow grind.\n8. **Concede.** 7.2 of the old 15.7 was the dividend stream. With yield 2.0 and the cut repeatable, expected_pct collapses to 7.7.\n9. **Acknowledged.** Anti-gaming clean; the honest unverified flags do not excuse carrying the thesis on them.\n\n**Net:** every load-bearing input is now either registry-anchored or conceded. ev_math: p_up 0.40, up_pct 50, down_pct \u221230, yield 2.0, expected 7.7. The trade is sub-hurdle and the division split is uncited \u2014 I recommend KILL unless the primary segment note is sourced.\n\nstage_log: {stage: revised, at: \"2026-09-02T14:02:10+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**KILL.** Drew's kill survives; the analyst himself concedes the dispositive point. The division split (prescription 27 / consumer-health 17 / nutritionals 30 / distribution 26) is card-sourced and **unverified** against the primary LK segment note, yet it drives the entire FY26E revenue build, the margin story, and the EPS path (Rp83\u219290\u219299) on which the valuation rests. Rule 0 is automatic: a load-bearing assumption without a document citation is a kill. No franchise quality \u2014 net cash Rp4.19tn, #1 GT/MT reach, FCF covering the cut dividend 1.5x \u2014 repairs that evidentiary gap; the 44% DPS cut at NI +13% cuts the other way on downside truncation, so p_up correctly stays at the 0.40 registry rate, unraised. Economics are independently sub-hurdle: +7.7%/3y \u2248 +2.5%/yr against the ~7.2% FR/house equity hurdle, consistent with MUFG-001 (+2.9%/3y killed) and TOWR-001 (+15.6%/3y killed, downside pinned). Residual upside is a held-multiple re-rating (9.4x\u219211.5x) on a name that just de-rated 43%, with catalyst_date null \u2014 nothing forces the re-rate. Arithmetic is honest (0.40\u00d750 + 0.60\u00d7\u221230 + 6.0 \u2212 0.3 = 7.7); per T-GLOBAL-0700HK-001, correcting more negative is not gaming. Process clean: monotonic stage_log, verbatim Bear log. Kill is final; no risk/sizing routing. Resubmission requires the primary LK segment note (plus audit firm / RP-% sourced) as material new evidence."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

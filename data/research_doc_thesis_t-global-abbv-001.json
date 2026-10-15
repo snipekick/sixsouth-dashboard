@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-ABBV-001",
+  "title": "AbbVie (ABBV)",
+  "meta": {
+    "id": "T-GLOBAL-ABBV-001",
+    "book": "GLOBAL",
+    "ticker": "ABBV",
+    "name": "AbbVie",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "us_defensive",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-10-31",
+    "estimates_committed_at": "2026-10-10T10:16:39+07:00",
+    "drafted": "2026-10-10T10:16:39+07:00",
+    "judged": "2026-10-10T12:22:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 254.0,
+    "target": 315.0,
+    "kill": 200.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "FY29E adjusted EPS ~$17.5 at ~18.0x \u2014 the same full-quality multiple we pay at entry (17.6x FY27E EPS $14.40), applied to two more years of Skyrizi/Rinvoq earnings. No multiple expansion; the up-leg is earnings growth only. Exit on the print that breaks immunology growth, or on the level.",
+    "price": 285.1300048828125,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 24.0,
+    "p_down": 0.5,
+    "down_pct": -21.0,
+    "net_div_yield_pct_pa": 2.2,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 2.15,
+    "horizon_years": 0.75,
+    "carry_pct": 0.65,
+    "kelly_full_pct": 42.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library \u2014 momentum_continuation (n=200, 0.75y, MOMENTUM sleeve). Re-tagged from dividend_income_anchor post-Bear pt.1: that prior's population is high-payout SOE / mature cash cows, not a 2.54%-yield US pharma. Prior lowered 0.60->0.50.",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 200.0,
+      "action": "exit_full",
+      "note": "de-rating STOP at ~13.9x FY27E EPS ($14.40) \u2014 the generic-pharma multiple; NOT the falsification level (Bear pt.7). The falsification is the kpi below. Bad-print guard: confirm on a close, not an intraday print"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-01-31",
+      "action": "review",
+      "condition": "Q3/Q4-2026 prints fail to show Skyrizi+Rinvoq y/y growth above mid-teens OR FCF coverage of the payout below 1.2x"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 10.0,
+      "action": "review",
+      "name": "immunology_growth_yoy_pct",
+      "source": "issuer 10-Q/10-K segment revenue (primary source, reachable; NOT in the dossier export)"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-10T10:16:39+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-10T10:52:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-10T12:22:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-ABBV-001",
+    "ticker": "ABBV",
+    "book": "GLOBAL",
+    "killed": "2026-10-12",
+    "px_at_kill": 276.4700012207031,
+    "reason": "valuation",
+    "px_now": 285.1300048828125,
+    "px_asof": "2026-10-15",
+    "move_pct": 3.1
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Revenue.** FY2026E $66.0B (+7.9% y/y on FY2025 $61.16B), FY2027E $71.0B, FY2028E $76.5B. Immunology (Skyrizi + Rinvoq) is the engine \u2014 ~$30B FY26E to ~$40B FY28E; Humira decay is a rounding item. Aesthetics, neuroscience and oncology/haematology add mid-single-digit growth. Segment and adjusted figures are **analyst estimates \u2014 the export carries neither** (Bear pt.2).\n\n**Margins / earnings.** Adjusted operating margin ~41% FY26E to ~42% FY28E; adjusted EPS FY2026E $13.20, FY2027E $14.40, FY2028E $15.70 (~9%/yr). No buyback accretion beyond ~0.5%/yr \u2014 net debt caps it.\n\n**Cash / dividend.** FCF FY26E ~$17.8B (dossier FY2025 FCF 17,816M; export 16,870M \u2014 **not** operating cash flow $19.5B, Bear pt.3) vs dividend ~$12.2B ($6.92 \u00d7 ~1.767B shares) = **~1.4x coverage**, not 1.60x. On GAAP net income (FY2025 $4.23B) coverage fails \u2014 the ~$7B/yr gap is amortisation plus IPR&D. The cushion is adjusted-earnings, not reported.\n\n**Balance sheet.** Net debt $62.3B, negative book equity (\u2212$3.27B), net debt/EBITDA ~2.0x. Leverage constrains valuation, not solvency.\n\n**Valuation.** FY27E EPS $14.40 at 18.0x = $259; fair value **$262** (\u224818.2x forward). **Target $315** = FY29E EPS ~$17.5 at ~18.0x, earnings-only. **Kill $200** \u2248 13.9x FY27E \u2014 a de-rating stop, not a falsification (Bear pt.7)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "Before opening the dossier I believed ABBV is a Humira-LOE survivor whose Skyrizi/Rinvoq ramp has re-accelerated growth, priced as a premium defensive compounder near its highs, carrying a levered balance sheet with negative book equity and a ~2.5% dividend."
+    },
+    {
+      "heading": "Market data \u2014 Phase 2",
+      "detail": null,
+      "markdown": "Price **276.47 USD**; ADV **~$1,154.5M/day** \u2014 deep liquidity. 52-week range **190.75\u2013277.60**; **off-52w-high 0.0%** \u2014 at its high, no discount. Momentum mom12 +13.7%, mom6 +35.01%, mom1 +8.42%; vol 20.15%; **corr_bench \u22120.06**. rank #7, MOMENTUM sleeve, factors us_defensive/us_rates.\n\n**Eligibility:** clears any GLOBAL-book gate; flow_stale True. Catalyst: Q3-2026 results ~late October 2026.\n\n**Entry reconciliation:** spot 276.47 is **5.2% above** fair value 262 (18.2x FY27E $14.40) \u2014 a premium we decline. Entry **254** (17.6x FY27E, ~3% under fair value, 8.1% below spot), **max_chase_pct 3** (ceiling ~262). No chase."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** ABBV is a de-risked immunology compounder \u2014 Skyrizi and Rinvoq replaced Humira, aesthetics/neuroscience diversifies, the dividend is untouchable, and it deserves a premium multiple (it sits at its 52-week high).\n\n**Why wrong:** not the franchise \u2014 the price. Three undiscounted items: (1) the FY28-29 immunology runway, where Rinvoq and Skyrizi face their own loss-of-exclusivity overhang; (2) payout coverage comfortable only on adjusted numbers \u2014 reported FY2025 net income ($4.23B) does not cover a ~$12.2B dividend; (3) $62B net debt and negative book equity cap buyback-funded accretion. At a full multiple, no discount, no dated catalyst: paid earnings growth at full price.\n\n**Deep-dive answers (idea card):**\n1. *Ramp vs the Humira cliff?* Yes on the ramp (~$30B FY26E \u2192 ~$40B FY28E holds ~9%/yr adjusted EPS); no on the price \u2014 their early-2030s expiry sits inside the hold, undiscounted.\n2. *Non-immunology contribution?* Aesthetics, neuroscience and oncology add mid-single digits \u2014 enough to hold the base, not to replace immunology.\n3. *Is the dividend FCF-covered?* FCF ~$17.8B vs ~$12.2B = **~1.4x** \u2014 covered, but on adjusted earnings (reported NI $4.23B fails). $62B net debt caps buybacks.\n\n**What proves us wrong:** two consecutive quarters of >20% y/y Skyrizi+Rinvoq growth with raised guidance and net debt/EBITDA below 1.8x; or a credible non-immunology readout adding a second growth leg."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier line",
+      "markdown": "1. Net margin compressed every year \u2014 20.4% (2022) \u2192 9.0% (2023) \u2192 7.6% (2024) \u2192 6.9% (2025); revenue grew while net income fell (dossier: \"net margin compressed from 20.4% (2022) to 6.9% (2025)\").\n2. Stockholders' equity turned negative in 2025 (\u2212$3,270M); book value/share \u22123.359, price-to-book \u221282.31 (dossier balance-sheet table / valuation stats).\n3. The dividend is not covered by reported earnings: FY2025 net income $4,226M vs ~$12.2B dividend cost ($6.92 \u00d7 1,767M shares) (dossier net-income line; \"Dividend rate: 6.92\").\n4. Leverage is rising: net debt $54,070M (2022) \u2192 $62,267M (2025); total liabilities $121,518M \u2192 $137,188M (dossier).\n5. Reported earnings are dominated by non-cash charges: FY2025 operating income $20,091M vs net income $4,226M \u2014 a ~$15.9B gap; trailing P/E 78.10 is not a valuation input; every \"cheap on adjusted EPS\" claim is a claim about add-backs (dossier).\n6. Quarterly earnings are volatile on charges: Q1-2026 net income $695M vs Q2-2026 $3,613M \u2014 IPR&D/amortisation timing swings the print (dossier).\n7. Momentum, not value, put this in front of us: mom6 +35.01% at off-52w-high 0.0% with \"no discount\" \u2014 we are not buying a de-rated name, we are underwriting a full one (screen)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. Most likely: we paid a full-quality multiple for the immunology ramp as it matured \u2014 Skyrizi/Rinvoq growth decelerated into the high single digits as their own exclusivity overhang came into view, no non-immunology asset stepped up, and the market re-rated the company from ~18x to ~13x. Second: with $62B net debt and negative book equity there is no buyback lever, so one weak print compounds into a de-rating, not a dip. Third: coverage worked only on adjusted earnings; one large IPR&D charge plus a slower aesthetics year pushed FCF coverage toward 1.1x and the market priced a payout cut. The tell: an entry with no margin of safety \u2014 Phase 2 sets entry below fair value (254 vs 262)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Archetype misfit.** Base rate is an IDX-SOE prior (window: \"High-payout SOE / mature cash cows\"). ABBV is US pharma at a 2.54% yield \u2014 not high-payout, not an SOE: wrong population. A 2.5% coupon on a name with negative book equity (\u2212$3.27B) whose dividend reported net income ($4,226M) covers at ~35% is no income anchor \u2014 a momentum name at off-52w-high 0.0% dressed defensive.\n\n2. **Unattested estimates.** Immunology \"$30B FY26E \u2192 $40B FY28E\", revenue $66/$71/$76.5B, adjusted margin 41-42%, adjusted EPS $13.20/$14.40/$15.70 \u2014 none appear in the dossier, which has no segment or adjusted figures. It claims \"built from the dossier export alone\" yet cites numbers the export lacks.\n\n3. **FCF conflated.** \"FCF FY26E ~$19.5B\" matches the dossier's operating cash flow (19,507M), not FCF (table 17,816M; export 16,870M). Real coverage is 1.38-1.46x, not 1.60x; \"1.75x on adjusted NI\" is unsourced.\n\n4. **Multiple contradicts the dossier.** Dossier Forward P/E 17.01 at spot 276.47 implies forward EPS ~$16.25, ~13% above the thesis's FY27E $14.40 \u2014 never cited. \"No re-rating, earnings-only\" is really add-back-only: op income $20,091M vs NI $4,226M, a ~$15.9B gap (its own fact 5).\n\n5. **No variant perception.** \"Market believes\u2026 premium compounder\" is what the thesis believes too \u2014 it concedes \"wrong on the price,\" not the franchise: a margin-of-safety argument, not an edge. The card itself: \"not ADVANCE \u2014 no discount, no dated catalyst.\"\n\n6. **\"WITH\" is dishonest.** Regime tilts contain zero healthcare/US names; the book is 100% cash. WITH is inferred from a tilt's absence, not a desk call. ABBV's factor is us_rates \u2014 exposed to the Fed hike the desk flags. At best NEUTRAL.\n\n7. **Kill is a stop.** Kill $216 \u2248 15x is a 15% stop, not a falsification level (an immunology break prints in the 10-Q first). Its kpi kill sources \"Q3-2026 10-Q segment revenue\" \u2014 data the dossier cannot supply.\n\n8. **Payoff thin.** EV +12.12% over 2.5y (~4.6%/yr) barely clears the desk's stale cash proxy 3.63% (effective ~3.88%). Equity risk on a levered, negative-equity name for ~+0.7%/yr over cash is no long.\n\n**Hygiene:** card metrics stale vs screen (mom6 27.8 vs 35.01, off-high \u22121.3% vs 0.0%, vol 21.6 vs 20.15, corr \u22120.04 vs \u22120.06); target/kill map onto the lint's 3pp tolerance.\n\nDrew: MAJOR_REVISION \u2014 archetype prior from the wrong population, unattested segment/EPS/FCF numbers, and a thin EV that barely beats cash; the franchise and its disconfirming facts are honest, so not a kill."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Post-attack (Drew, MAJOR_REVISION). All eight points answered; concessions applied to frontmatter and prose.\n\n1. **Archetype \u2014 conceded.** `dividend_income_anchor`'s population is high-payout SOE / mature cash cows (60-85% payout); a 2.54%-yield US pharma with negative book equity and ~35% reported-NI coverage is not. Re-tagged to **`momentum_continuation`** (carried in the base-rate library: rate 0.50, +30/\u221222, 0.75y) \u2014 the MOMENTUM sleeve that surfaced it. Prior 0.60\u21920.50.\n\n2. **Unattested estimates \u2014 conceded.** The export carries no segment or adjusted figures; the \"dossier export alone\" line is corrected \u2014 analyst estimates. They sit *below* the dossier-implied forward EPS (pt.4), so the provenance error does not flatter the trade.\n\n3. **FCF conflation \u2014 conceded, recomputed.** $19.5B is operating cash flow (export 19,507M), not FCF. Dossier FCF FY2025 17,816M (export 16,870M) vs ~$12.2B dividend = **1.38\u20131.46x**, not 1.60x; the unsourced \"1.75x on adjusted NI\" is struck.\n\n4. **Forward P/E \u2014 conceded (omission).** 276.47/17.01 = **$16.25** implied forward EPS, ~13% above our FY27E $14.40; we decline it (add-back-embedded, unverifiable) and keep the conservative estimate.\n\n5. **No variant perception \u2014 conceded.** The card concedes price, not franchise: a margin-of-safety discipline, not an edge \u2014 reflected in p_up = 0.50.\n\n6. **\"WITH\" \u2014 conceded.** Regime tilts hold no healthcare/US name; the book is 100% cash; ABBV's us_rates factor faces the Fed hike. Idea-card regime changed WITH\u2192**NEUTRAL**.\n\n7. **Kill is a stop \u2014 conceded.** Price kill re-labelled a **de-rating stop** (~13.9x FY27E) and widened 216\u2192**200**; the falsification is the kpi (immunology growth), issuer-sourced.\n\n8. **Payoff thin \u2014 conceded.** p_up 0.58\u21920.50 and down_pct \u221215\u2192\u221221 cut expected_pct 12.12\u2192**2.15**, below the ~3.88% cash proxy. At 254 the name does not clear; it is a WATCH, not a buy.\n\n**Hygiene \u2014 conceded.** Phase 2 carries the fresh screen values (mom6 35.01, off-high 0.0%, vol 20.15, corr \u22120.06); the stale card metrics are superseded."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (reason_tag: valuation)\n\n1. The Revision is honest \u2014 all eight points conceded \u2014 but curing by concession stripped the thesis of its reason to exist. Point 5 concedes there is **no variant perception**: \"wrong on the price\" is a margin-of-safety discipline, not an edge. The constitution requires a three-part variant perception; post-Revision this thesis has none, and p_up sits at the registry prior (0.50) undeveloped.\n2. EV fails to clear cash on the analyst's own numbers. p_up 0.50, up 24 / down \u221221, div 2.2, drag 1.0 \u2192 expected_pct **2.15%** over 0.75y (~2.9%/yr) against a ~3.88% cash proxy. The Revision's own sentence: \"At 254 the name does not clear; it is a WATCH, not a buy.\" Cash is a holding that earns; a negative-excess-EV long is a loss, not a hedge.\n3. Payoff is near-symmetric (24/21 = 1.14) on that coin flip, and the registry prior already prices the full +30/\u221222. The Revision's shaved up (24) and deepened down (\u221221) leave nothing to pay for equity risk in a levered, negative-equity name.\n4. The price kill is a de-rating stop (13.9x), not a falsification \u2014 conceded. The real falsifier (immunology-growth kpi) sources issuer segment data absent from every document in the packet, and the load-bearing ramp ($30B\u2192$40B) remains an uncited estimate (pt.2 conceded). Central assumption unverified.\n5. Entry 254 sits 8.1% below spot 276.47 \u2014 un-actionable today, and at spot the EV is worse. No price clears cash without an edge.\n6. Not a 6a construction return: the prior is exactly 0.50 (not sub-0.50) and target/kill are valuation-derived \u2014 this name is wrong, not mis-specified. Chain verified: draft 10:16 \u2192 attacked 10:52 \u2192 judged 12:22, monotonic, Bear log present and verbatim."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-TXN-002",
+  "title": "Texas Instruments (TXN)",
+  "meta": {
+    "id": "T-GLOBAL-TXN-002",
+    "book": "GLOBAL",
+    "ticker": "TXN",
+    "name": "Texas Instruments",
+    "sector": "SEMIS",
+    "factors": [
+      "semis_ai",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-GLOBAL-TXN-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-08-19T06:12:37+00:00",
+    "drafted": "2026-08-19T06:13:10+00:00",
+    "judged": "2026-08-19T06:36:25+00:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 272.0,
+    "target": 353.6,
+    "kill": 212.16,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "momentum_continuation base-rate up-leg (+30%): the FCF re-rate keeps compounding through FY26-27 as actuals beat stale estimates; Q2 Analog OM 45.6% and FY26E FCF $9.6/share confirm the harvest. Target is ~30x FY27E FCF \u2014 take the reference-class win, underwrite no further re-rating.",
+    "price": 278.7699890136719,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.2,
+    "up_pct": 30.0,
+    "p_down": 0.8,
+    "down_pct": -22.0,
+    "net_div_yield_pct_pa": 2.09,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -10.33,
+    "horizon_years": 0.75,
+    "carry_pct": 1.27,
+    "kelly_full_pct": -159.4
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.2,
+    "source": "momentum_continuation prior 0.50 (the base-rate library) de-rated to 0.20 on Bear revision (2026-08-19): 0.44 was prior-rate arbitrage off the 7/13 kill at 0.15 (same name, same MOFCOM overhang); pullback entry (-12.6%) credits +0.05, but Q2'26 FCF is ~31% CHIPS subsidy (Bear pt 6) and no variant perception survives, so the 0.50 anchor is unreachable.",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 212.16,
+      "action": "exit_full",
+      "note": "momentum-structure break (base-rate -22%), NOT a fair-value stop; an adverse MOFCOM preliminary ruling or AI-semis reversal could gap through toward the DCF zone (~$120-150), so size small."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-10-22",
+      "action": "review",
+      "condition": "Q3 2026 earnings: review if the $2-3B capex / $8+ FCF framework is walked back, Analog OM fails to hold >42%, or China commentary turns materially worse"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 250.0,
+      "action": "review",
+      "name": "inventory_days_on_hand",
+      "source": "TI Q2'26 10-Q MD&A (196 days at 6/30/26) vs company 150-250-day band"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-19T06:13:10+00:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-08-19T06:18:56+00:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-08-19T06:36:25+00:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-TXN-002",
+    "ticker": "TXN",
+    "book": "GLOBAL",
+    "killed": "2026-08-19",
+    "px_at_kill": 272.239990234375,
+    "reason": "valuation",
+    "px_now": 278.7699890136719,
+    "px_asof": "2026-10-15",
+    "move_pct": 2.4
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Sources (primary, this session):** TXN Q2'26 8-K (2026-07-22, accession 0000097476-26-000148) \u2014 revenue/EPS/segments/CFFO/capex/dividends; Q2'26 10-Q (filed 2026-07-24, accession 0000097476-26-000152) \u2014 inventory days, China revenue split, capex guide; dossier data/dossiers/TXN.md (asof 2026-07-21).\n\n**EARNINGS_QUALITY gate:** Accruals (NI\u2212CFO)/avg assets: FY25 \u22126.1%, H1'26 CFO $4.22B vs NI $3.53B (CFO/NI 1.2x) \u2014 cash conversion rising, no flag. AR +$557M vs revenue +$1.77B (H1) \u2014 in line. Inventory DOWN $199M to $4.61B; days 196 (vs 222 YE25), inside the 150-250 band \u2014 no divergence. Structure: EY auditor; no going-concern, anti-dumping or export-control language found in the Q2'26 10-Q (searched). Related-party: none found. Gate clears.\n\n**Revenue build (FY26E \u2248 $22.3B, +26% YoY):** H1'26 actual $10,288M + Q3 guide midpoint $5.90B + Q4 ~$6.10B. FY27-29E +9/+7/+6% as the snap-back decelerates. Segment margins (Q2'26 actual): Analog rev $4,365M (+26%) at 45.6% OM; Embedded $788M (+16%) at 21.3% \u2014 vs FY25 38.6%/11.3%. Model consolidated OM 41.0% (FY26E) fading to 44.0% (FY29E), short of the FY21-22 ~49-51% peak.\n\n**FCF (load-bearing mechanism):** FY26E CFO \u2248 $9.9B (TTM CFO/revenue 44.6%, 8-K) \u2212 capex $2.5B (guided $2-3B) + CHIPS $1.4B (H1 actual $1.10B) \u2248 $8.8B = **$9.6/share** ($8.1 ex-CHIPS) \u2014 above mgmt's $8+ guide on a conservative build. FY27E FCF \u2248 $10.1-10.5/share (rev $24.3B \u00d7 44.6% \u2212 12.5% capex + CHIPS + Silicon Labs $450M synergies).\n\n**DCF (house 9% COE, tg 2.5%, terminal ROIC 20-25%):** fair \u2248 $119-150/share pre-SLB ($111-142 post-SLB). EV/EBIT FY26E ~13x. Reinvestment \u2248 20% of NOPAT at ~32% ROIC \u2192 self-sustaining g \u2248 6%: growth is manufactured, not declared."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "vs T-GLOBAL-TXN-001 (kill 2026-07-13, $311.46, reason_tag valuation)",
+      "markdown": "Pullback resets entry $311\u2192$272 (\u221212.6%). Q2'26 (8-K 7/22): rev +23% YoY, EPS $2.14 (+52%), TTM FCF $6.5B, Analog OM 45.6%, capex confirmed $2-3B, inventory days 196. China: Q2 rev +24% to 22% of total (10-Q); zero anti-dumping/export-control disclosure in the Q2 10-Q \u2014 the Sept-2025 MOFCOM probe is an overhang, not a realized loss. FCF harvest: my FY26E $9.6/share exceeds the $8+ guide."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: TXN is a quality analog/embedded compounder whose FCF \"harvest\" (capex down, $8+/share FCF) is real but fully priced after a big 2026 re-rate, with China's anti-dumping probe and AI-trade froth capping further upside."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the FCF recovery is a one-time capex unwind; TXN is an expensive slow compounder with a disqualifying China overhang \u2014 the 7/13 valuation kill at $311 was fair, and the 12.6% pullback merely corrects froth.\n\n**Why wrong:** the FCF inflection is structural, not a one-off. Capex is permanently ~10-15% of revenue (mgmt framework, 10-Q) after the 300mm buildout; CFO margin is a durable ~45% (8-K TTM). Q2'26 confirms with a primary print: TTM FCF $6.5B rising toward my $9.6/share FY26E (above the $8+ guide), Analog OM 45.6% (300mm cost moat widening, not peaking), inventory days 196 (channel clean). The market under-weights the AI analogue: data-center power grew ~90% YoY (dossier) \u2014 an AI-infrastructure franchise still priced like a cyclical. China is not yet the killer the prior kill assumed: Q2 China revenue +24% YoY to 22% of total, with no probe impact disclosed. At $272 the market pays ~28x FY26E EV/EBIT and ~30x FY27E EPS \u2014 a quality-compounder multiple, not a bubble, on a ~10% FCF grower at ~32% ROIC.\n\n**What proves us wrong:** Q3/Q4'26 prints with FCF/share below the ~$9 run-rate; a MOFCOM preliminary dumping ruling with material share loss; inventory days breaking >250; or the FCF multiple compressing toward the DCF zone (~$120-150) \u2014 the $212 momentum-structure kill fires first on that last path."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. China is 22% of Q2'26 revenue by end-customer HQ (Q2'26 10-Q geographic note) under an active Sept-2025 MOFCOM anti-dumping probe naming TI (dossier; Reuters/SCMP coverage); an adverse preliminary ruling could accelerate documented analog localization (16% in 2024, rising).\n2. At $272 the stock trades ~28x FY26E EV/EBIT and ~30x FY27E EPS \u2014 a rich quality multiple; the semis_ai factor (stress \u22129%) means any growth miss hits disproportionately hard (screen row 2026-08-19).\n3. Buybacks have nearly ceased (Q2'26 $27M; TTM $707M vs $5.1B dividends \u2014 8-K), concentrating cash return in a dividend the H1'27 Silicon Labs $7.5B cash close will run alongside; a dividend cut would de-rate the \"safe compounder\" multiple violently."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2027 and this 9-month momentum position lost ~22% to the $212 kill. Most likely cause: the FCF re-rate stalled as Q3/Q4'26 revenue decelerated harder than my +9% FY27 fade, the ~28x EV/EBIT multiple compressed toward the DCF zone (~$120-150) as AI-semis sentiment cooled, and a MOFCOM adverse preliminary ruling gapped the stock through the momentum-structure kill \u2014 a left tail the \u221222% base-rate down_pct does not fully cover. The kill fires on structure, not fair value; the compensation is small size."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**BEAR \u2014 Drew \u2014 2026-08-19T06:18:56Z \u2014 VERDICT: KILL_RECOMMENDED**\n\n**0. Fact-check \u2014 all three load-bearing numbers verified clean (8-K Ex-99 / 10-Q).** TTM CFO margin 44.6%, TTM FCF $6,534M, capex $3,312M; Analog OM 45.6% (1,992/4,365), Embedded 21.3% (168/788); China $1,223M = 22%, +24% YoY, no anti-dumping/export-control text. No fabrication \u2014 the facts still don't make a trade.\n\n**1. Estimates \u2014 single-assumption dependency.** FY26E $9.6/share is $8.1 ex-CHIPS. TTM CHIPS = $1,179M proceeds + $433M ITC \u2248 25% of TTM FCF; the $1.6B direct funding has ~$420M left. FY27E $10.1-10.5 \u2014 the ~30x target denominator \u2014 still adds \"+CHIPS + SLAB $450M\" on a deal closing H1'27. Strip the lapsed subsidy and the target loses its multiple.\n\n**2. Variant perception = null.** Your priors: \"real but fully priced.\" Data-center +90% is ~12% of revenue. 28x EV/EBIT vs your $111-150 DCF is 2x fair value, not variant.\n\n**3. Catalyst \u2014 none dated; the next dated event hurts.** catalyst_date null; Q3 (10-22) is the first print with hard comps and CHIPS running dry. Your kill note admits MOFCOM/AI can gap to $120-150.\n\n**4. Base rate AND sleeve \u2014 prior arbitrage.** This desk killed this name 7/13 at 0.15; same story relabeled momentum_continuation to inherit 0.50\u21920.44 \u2014 3x the prior on no new facts except a 12.6% pullback. The China probe that cost -0.25 last time now costs -0.06. momentum_continuation's note: \"a momentum-only thesis with no variant perception is an auto-kill.\"\n\n**5. Sizing \u2014 dead on arrival.** EV +2.15%/9mo is 1.57pp dividend credit plus a prior choice. p_up 0.40 \u2192 +0.07%; 0.15 \u2192 -12.9%. Quarter-Kelly rounds to zero. Modeled -22% covers less than half your admitted -45% to -56% gap tail.\n\n**6. NEW fact:** Q2 FCF $2,738M is 31% CHIPS ($549M + $301M ITC); H1 $1,405M (10-Q). The \"harvest\" is a nearly-exhausted subsidy \u2014 when it lapses, FCF/share the target prices steps down mechanically.\n\n**7. Steelman pre-mortem:** the omitted mode is FCF declining deterministically (subsidy lapse + comps lapping), not \"sentiment cooling\" \u2014 a momentum name breaks -22% on a gap, not a stop.\n\n**8. Anti-gaming:** clean \u2014 estimates_committed_at 06:12:37Z precedes draft 06:13:10Z; entry/kill/target anchored to today's $272.24. No fabrication; nothing to QC.\n\n**9. VERDICT: KILL_RECOMMENDED.** *Same name, story, China overhang this desk killed at a 0.15 prior \u2014 relabeled momentum_continuation to buy a 0.44 prior on a $272 entry the analyst's DCF prices at $111-150, so the entire +2.15% EV is a dividend credit plus a prior-rate arbitrage, not a trade.*"
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "0. Concede. Numbers verified clean is necessary, not sufficient.\n\n1. Concede. FY26E $9.6/sh is $8.1 ex-CHIPS; CHIPS is ~25% of TTM FCF ($1,179M + $433M ITC); ~$420M of the $1.6B direct funding left. Committed estimates stand, but I stop underwriting FY27E $10.1-10.5 \u2014 the ~30x denominator steps down as the subsidy lapses. Lowering only.\n\n2. Concede. No variant perception: at $272 the market's \"fully priced, China overhang\" view is mine. Data-center +90% on ~12% of revenue is no AI-franchise story; 28x EV/EBIT vs my $111-150 DCF is ~2x fair value.\n\n3. Concede. catalyst_date null; the first dated event (Q3 10-22) is a scheduled negative with CHIPS running dry \u2014 already my review trigger.\n\n4. Concede in full. 0.44 was prior-rate arbitrage: same name, same MOFCOM overhang, killed 7/13 at 0.15; relabeling to momentum_continuation to inherit 0.50\u21920.44 was not new evidence. Corrected base rate and p_up to 0.20 \u2014 a 12.6% pullback credits +0.05, not a 3x prior. The momentum auto-kill note applies: no variant perception.\n\n5. Concede. Revised EV \u221210.33% (0.20\u00d730 + 0.80\u00d7\u221222 + 2.09\u00d70.75 \u2212 0.3); quarter-Kelly \u2248 0. The \u221222% kill is a structure stop, not a floor; the \u221245/\u221256% gap tail is real.\n\n6. Concede. Q2 FCF $2,738M is 31% CHIPS ($549M + $301M ITC); H1 $1,405M. The harvest is a lapsing subsidy; FCF/share declines mechanically as it runs out.\n\n7. Concede. The omitted mode is FCF declining deterministically (subsidy lapse + hard comps) \u2014 a momentum name breaks on a gap, not a stop.\n\n8. Acknowledge. Anti-gaming clean; nothing to fix.\n\n9. Accept KILL_RECOMMENDED. At honest inputs this is a negative-EV resubmission, not a trade; I do not oppose a Judge kill.\n\n**Routing flag: >20% ev_math moves \u2014 p_up 0.44\u21920.20 (\u221255%) and expected_pct +2.15\u2192\u221210.33 \u2014 the thesis RETURNS to Drew for re-attack before the Judge.**"
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "A. **Honest.** All ten points (0-9) answered on the merits \u2014 full, specific concessions, no dodge, no performative concession; base_rate 0.44\u21920.20 and p_down 0.56\u21920.80 are disclosed in the base_rate note and routing flag, no unlisted frontmatter change.\n\nB. **Arithmetic reconciles to the cent:** 0.20\u00d730 + 0.80\u00d7(\u221222) + 2.09\u00d70.75 \u2212 0.3 = \u221210.3325 \u2192 \u221210.33. Target/entry +30.0% and kill/entry \u221222.0% are 0pp off up_pct/down_pct; p_down = 0.80.\n\nC. **Understated, not overstated.** down_pct \u221222 still prices the stop, not the admitted \u221245/\u221256% MOFCOM/AI gap tail; up_pct +30 still underwrites the 30x FY27E target Sloane disowned. Honest EV is worse than \u221210.33.\n\nD. **KILL_RECOMMENDED \u2014 confirmed.** Sloane's own revised numbers make this a \u221210.3% trade, and even that is a ceiling: both legs still flatter it."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**JUDGE \u2014 Aldrich \u2014 2026-08-19T06:36:25Z \u2014 VERDICT: KILL \u2014 reason_tag: valuation.** Lint passes clean (pass=true, no problems; the single 2000>1600 whole-file word-count warning is the expected append-only Bear log + re-attack, not a FAIL). Stage_log chain verified: estimates_committed 06:12:37Z < draft 06:13:10Z (ANALYST_GLOBAL) < attacked 06:18:56Z (BEAR), with the Revision (ANALYST_GLOBAL, answering Bear points 0-9) and the Bear re-attack (A-D) present in-body and verbatim; the absence of a second \"attacked\"/\"revised\" stamp is the house-wide norm already escalated in T-GLOBAL-TXN-001, not a process anomaly, and Bear's re-attack B independently reconciles the arithmetic to the cent (0.20\u00d730 + 0.80\u00d7\u221222 + 2.09\u00d70.75 \u2212 0.3 = \u221210.33; target/entry +30.0%, kill/entry \u221222.0% \u2014 0pp off). On the three questions: (a) p_up=0.20 sits 30pp below the momentum_continuation registry rate of 0.50, and the deviation is honestly and exhaustively argued \u2014 Sloane concedes the 0.44 was prior-rate arbitrage off the 7/13 kill at 0.15 (a 12.6% pullback does not justify a 3x prior), credits only +0.05 for the pullback, and concedes no variant perception, which momentum_continuation's own registry note auto-kills \u2014 so the final 0.20 is argued and honest, not gamed; (b) every load-bearing assumption is document-cited (Q2'26 8-K/10-Q accessions, dossier), and Bear's fact-check pt.0 verified the three load-bearing numbers clean \u2014 no fabrication; (c) the thesis does not survive Drew's strongest sentence, restated in my own words: Sloane's own corrected \u221210.3% expected value is a ceiling, not a floor, because the +30% up-leg still underwrites a ~30x FY27E target denominated in a lapsing CHIPS subsidy the analyst himself disowned, and the \u221222% down-leg still prices the structure stop rather than the admitted \u221245/\u221256% MOFCOM/AI gap tail. Dispositive: at $272 the name still trades ~28x FY26E EV/EBIT against the analyst's own DCF fair of $111-150 (~2x fair value) with a FCF \"harvest\" that is ~31% a lapsing CHIPS subsidy \u2014 the identical valuation defect that killed T-GLOBAL-TXN-001 at $311.46, unchanged by a 12.6% pullback; the resubmission is a negative-EV trade whose own author accepts the kill. Calibration: no drift correction needed this session \u2014 my TXN-001 valuation kill at $311.46 has since been vindicated by the decline to ~$272."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

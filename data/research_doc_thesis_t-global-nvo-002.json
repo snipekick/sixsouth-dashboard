@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-NVO-002",
+  "title": "Novo Nordisk (ADR) (NVO)",
+  "meta": {
+    "id": "T-GLOBAL-NVO-002",
+    "book": "GLOBAL",
+    "ticker": "NVO",
+    "name": "Novo Nordisk (ADR)",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "us_defensive",
+      "eu_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": null,
+    "supersedes": "T-GLOBAL-NVO-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-03T03:29:04+00:00",
+    "drafted": "2026-10-03T03:31:22+00:00",
+    "judged": "2026-10-03T16:20:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 37.0,
+    "target": 57.21,
+    "kill": 16.59,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Bull DCF $57.21 (WACC 9.0%, t-g 3.5%, t-ROIIC 20%) \u2014 the reachable re-rate leg WITHOUT a rate cut; the 8.5% WACC full-re-rate $74.01 is foreclosed by the delivered hike + DXY at 52w-high + CAUTIOUS (BEAR pt 4). +54.6% still exceeds the archetype's +50% base_up and is a return TOWARD, not to, the 2021-24 25-35x range",
+    "price": 39.435001373291016,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.28,
+    "up_pct": 54.6,
+    "p_down": 0.72,
+    "down_pct": -55.2,
+    "net_div_yield_pct_pa": 4.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -13.0,
+    "horizon_years": 3.0,
+    "carry_pct": 11.5,
+    "kelly_full_pct": -44.9
+  },
+  "sizing": {
+    "script_pct": 0.0,
+    "pm_pct": 0.0,
+    "deviation_reason": "Kelly <= 0 at spot: the sizing engine recommended_pct 0.0 (quarter-Kelly after haircut binding); Judge PASS_REDUCED at 0x multiplies any recommended size to zero, binding like a kill. No ticket staged."
+  },
+  "base_rate": {
+    "rate": 0.28,
+    "source": "the base-rate library derated_compounder_rerating registry 0.40 shaded -30% (BEAR pt 3 bought; reinforced pt 5 LOE widening, pt 1 margin fragility): REDEFINE 4 non-inferiority loss + orforglipron pending + LOE set widened Canada/China/India/other + diabetes value share ~30% = competitive position NOT intact; +0.08 over the killed thesis's 0.20 kept ONLY for entry 37 < base 38.25, itself capped by ",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 16.59,
+      "action": "exit_full",
+      "note": "bear DCF (WACC 10.5%, t-g 2.5%, t-ROIIC 12%, flat post-trough) \u2014 thesis-falsification level confirming STRUCTURAL de-rating, not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-02-15",
+      "action": "review",
+      "condition": "FY2026 results print adjusted sales/EBIT at/below -12% CER (guide bottom) OR FY2027 opening guidance shows a 2nd consecutive CER decline"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 10.0,
+      "action": "review",
+      "name": "Adjusted obesity-care sales growth, CER",
+      "source": "Novo quarterly company announcements, 'Adjusted sales' table"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-03T03:31:22+00:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-03T12:20:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-03T14:00:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-03T15:30:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-03T16:20:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "sections": [
+    {
+      "heading": "New evidence",
+      "detail": "kill-ledger revisit; supersedes T-GLOBAL-NVO-001",
+      "markdown": "Four facts post-07-13: (1) spot $37.32 (2026-10-02) sits 24.6% below px_at_kill $49.48 and BELOW the killed thesis's own base DCF ($42.58) \u2014 its \"paying above fair value\" finding has inverted. (2) H1-26 FCF DKK 54.4bn exceeds the full-year guide 36-46bn; OCF 79.3bn alone covers the FY25 payout (51.8bn). (3) Net debt fell to 95.6bn from 103.7bn \u2014 deleveraging through the capex peak. (4) H1-26 ex-340B revenue \u22124.2% reported DKK tracks the TOP of the guided \u22124/\u221212% CER range. CagriSema REDEFINE 4 is NOT new \u2014 retained as the p_up shade. NOTE (10-03, BEAR pt 0): (2)'s H1-FCF-above-guide implies an H2 of \u22128/\u221218bn \u2014 rebate/work-cap TIMING, not durable cash, and the 08-05 interim is not in-repo (dossier asof 07-21); (2) is downgraded to cash-conversion colour only and withdrawn as a bull prop."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "from memory, written before document work",
+      "markdown": "Prior: the market believes Novo's GLP-1 near-monopoly is cracking \u2014 Lilly's tirzepatide/orforglipron plus US pricing resets make the guided FY26 decline structural, so $37 is a value trap whose only return is the ~4.7% yield."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed \u2014 timestamp above, before any market number",
+      "markdown": "Sources: FY2025 20-F (R3/R5/R24); Q1-26 announcement No.30/2026 (guidance); H1-26 interim report (2026-08-05).\n\n**EARNINGS_QUALITY_FLAGS gate:** Accruals negative four consecutive periods \u2014 FY25 \u22123.3%, FY24 \u22125.1%, H1-26 (69,546\u221279,283)/avg \u2248 \u22121.4% \u2014 CFO runs ahead of NI throughout. The USD 4.2bn 340B reversal (Q1-26) is optics-class, modeled out (H1 ex-reversal \u22124.2%); no receivables divergence; inventory matches the disclosed capacity program. Q2-26 op margin 34.5% vs 43.5% yoy WITH FCF ahead of guide \u2014 real pricing/capex drag, strong cash conversion, economic not accounting. Structure clean (Danish A/S, Deloitte unqualified). No manipulation-class flag \u2014 gate clears.\n\n**Revenue build (DKKm):** FY25A 309,064 (+10% CER) [20-F R3]. FY26E base 284,300 (\u22128% CER = guidance midpoint, No.30/2026); bull \u22124%, bear \u221212% (guide band). FY27E +4%, FY28E +7%, FY29E +7% (my call; obesity care +22% CER through the trough, Wegovy oral DKK 2,256m launch quarter). **Load-bearing, cited:** (1) trough \u22128% CER \u2014 No.30/2026 \"OUTLOOK\"; H1 ex-340B \u22124.2% confirms the good end. (2) re-acceleration +4/+7/+7% \u2014 analyst judgment, fragile. (3) op margin ~41% FY26 then 43% terminal.\n\n**Margins/reinvestment:** FY25 NOPAT 100,212, installed ROIC 33.6% [20-F R3/R24]. Reinvestment 64% FY25A \u2192 ~20% terminal (g = reinvest \u00d7 ROIIC; 3.0 = 15\u00d720). Owner earnings: SBC 1.4% of NI immaterial; maintenance-capex owner earnings ~97.1bn vs all-in FCF 28.3bn \u2014 the spread IS the growth buildout, validated by H1-26 FCF 54.4bn. Net debt 95.6bn \u2248 0.6x EBITDA."
+    },
+    {
+      "heading": "Valuation",
+      "detail": null,
+      "markdown": "Market context: last $37.32 (2026-10-02), mcap $164.8bn on 4,415.6m shares, USD/DKK 6.6421, off-52w \u221239%, m1 \u221220.2% (September Fed-hike/DXY leg; $45.12 on the 09-02 screen). Sector HEALTHCARE. Sleeve: NVO is ABSENT from the live 10-03 screen (fund record) \u2014 the MOMENTUM tag carried from the 09-02 row (mom1 \u22122.94% there, contradictory) is WITHDRAWN as stale (BEAR pt 7).\n\n**10y FCFF DCF** (tax 21.5%, net debt 95.6bn, reinvestment 64%\u2192terminal g/ROIIC):\n\n| Scenario | FY26 CER | Recovery | Term margin | WACC | t-g | t-ROIIC | $/ADR |\n|---|---|---|---|---|---|---|---|\n| Bear | \u221212% | 0/0/0 | 35% | 10.5% | 2.5% | 12% | **16.59** |\n| Base | \u22128% | +4/7/7 | 43% | 9.5% | 3.0% | 15% | **38.25** |\n| Bull | \u22124% | +6/9/9 | 45% | 9.0% | 3.5% | 20% | **57.21** |\n| Win/full re-rate | \u22124% | +7/10/10 | 45% | 8.5% | 4.0% | 22% | **74.01** |\n\nWACC top-half of the USD 8-10% band (base 9.5%): Fed +25bp delivered 09-15/16 to 3.75-4.00% (12-0), DXY 101.9 at the 52-week high, register CAUTIOUS [the macro regime memo 10-03]; realized vol 38%. Base FY26 FCFF ~37bn cross-checks the guided 36-46bn. **Multiple-survival:** entry $37 = 10.8x TTM FY25 EPS ($3.47); target $70 = ~20x TTM / ~19x FY28E \u2014 expansion toward, not to, the 2021-24 25-35x range; the re-rating is the mechanism this archetype pays for. Base case VALUES THE STOCK AT SPOT: discount to base only +4%, not a compounding bargain.\n\n**EV math + symmetry (target-first, kill-second):** entry 37.00 / target 57.21 (bull DCF; the 8.5% WACC full-re-rate leg is foreclosed \u2014 BEAR pt 4) / kill 16.59; up 54.6% / down \u221255.2%. Pre-carry payoff 1.05, carry-adjusted ratio 1.51 \u2014 weakened by the honest target cut. p_up 0.28 (registry 0.40 shaded \u221230% for REDEFINE 4/orforglipron/LOE-widening \u2014 BEAR pt 3/pt 5). expected **\u221213.0%/3y = \u22124.5%/yr vs ~3.88% cash \u2192 negative equity-risk premium (\u22128.4pp/yr), fails the fund's hurdle outright**. Own-Kelly \u2264 0 (quarter-Kelly zero); no positive-Kelly construction exists at spot. **Branch: kill is the DCF falsification level, not a stop; target is the reachable bull DCF \u2014 no-trade on EV itself, not merely on the premium rule.**"
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** FY26 guides Novo's first sales decline in decades; CagriSema lost its head-to-head to Zepbound; MFN plus ex-US generics plus Lilly's pending oral pill permanently reset growth and margins \u2014 at 10.8x TTM the fair frame is \"ex-growth pharma\" and only the dividend remains.\n\n**Why wrong (at the margin):** the guided decline is a disclosed price/rebate-mechanics reset, and H1-26 CONFIRMS the components \u2014 ex-340B \u22124.2% vs a \u22124/\u221212% guide, obesity care still growing (+22% CER in Q1), FCF 54.4bn above the guide, net debt falling. That is execution ON the cyclical path, not structural collapse. BUT the structural doubt is not baseless (REDEFINE 4, orforglipron) \u2014 the variant is narrow, and my own base ($38) validating spot means the mispricing is in the re-rating odds, not the base case.\n\n**What proves us wrong:** FY27 opening guidance (Feb-27) showing a second consecutive CER decline; quarterly obesity care <10% CER; a CagriSema complete-response letter; Lilly oral approval crushing Wegovy oral before scale.\n\n**Edge taxonomy:** (c) time-arbitrage \u2014 the market cannot hold a 2-4y view through a guided 12-month decline whose components (price reset vs volume) are already separated in the primary numbers; (a) analytical \u2014 reported-vs-adjusted decomposition from H1-26 data. No (b)/(d). **Honest cap:** the decomposition is diagnostic, not a valuation \u2014 it says the de-rating is cyclically explainable, not that spot is cheap; at \u22121.6pp/yr equity-risk premium the edge is currently unpayable."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, current, each citing a line",
+      "markdown": "1. Q2-26 operating margin 34.5% vs 43.5% yoy (H1-26 interim income statement) \u2014 margin compression sharper than modeled; if it proves non-transitory, the base profit path is too high.\n2. Management itself guides FY26 adjusted sales AND operating profit \u22124% to \u221212% CER (No.30/2026 \"OUTLOOK\") \u2014 the decline is company-underwritten; H1 ex-340B \u22124.2% shows it is real, not headline noise.\n3. CagriSema failed primary non-inferiority to Zepbound in REDEFINE 4 (NCT06131437: 23.0% vs 25.5% weight loss) \u2014 documented head-to-head loss; share is being lost as well as de-rated.\n4. Fed delivered +25bp to 3.75-4.00% with DXY at its 52-week high (the macro regime memo 2026-10-03) \u2014 long-duration/high-P/E multiples under live, hostile pressure; the discount-rate tail is one-directional down for this window."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": "written honestly \u2014 Drew finds the weak joint anyway",
+      "markdown": "It is ~Oct-2029 and this position lost ~55% (hit kill $16.59). Most likely: FY27 guidance confirmed a second CER decline \u2014 semaglutide generics beyond Canada/Brazil/China (India), MFN ratcheting further, orforglipron approved before Wegovy oral reaches scale, CagriSema a CRL \u2014 the \"cyclical\" read was wrong and the bear endpoint was reached. Second: a dividend cut if FY26 FCF lands at guide bottom against the 51.8bn payout plus ~55bn capex. Either way the honest lesson: we bought ON the guided trough at a price that merely EQUALLED base-case fair value; the multiple never re-rated because 10.8x was already fair for the ex-growth read, and 3.9% cash beat the 2.3%-premium equity over 3 years. If pursued, size is zero by own-Kelly.\n\n**What resurrects it (watchlist triggers, all observable):** price \u2264 ~$28 (Kelly-zero $27.96 at p_up 0.28 / target 57.21 / kill 16.59) AND no new negative resolution \u2014 orforglipron NOT out-scaling Wegovy oral (~50K wk-1 Rx), no further LOE widening, no margin-miss confirming high-30s (BEAR pt 4/pt 6); FY27 guide showing re-acceleration (p_up returns toward registry 0.40 without a shade); a Fed pivot to cuts (WACC toward the win leg)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**BEAR \u2014 Drew \u2014 2026-10-03T12:20:00+07:00 \u2014 verdict: MAJOR_REVISION**\n\n0. **Fact-check:** base $38.25: in-band, coherent with T-001's $42.58 after +50bp WACC, \u221250bp t-g, FX 6.55\u21926.64. H1 FCF 54.4bn, ex-340B \u22124.2%, Q2 34.5% margin: no repo source \u2014 dossier (asof 07-21) predates the 08-05 interim; unverifiable. 54.4bn H1 vs a 36-46bn full-year guide implies H2 of \u22128 to \u221218bn \u2014 rebate timing, not durable cash. Cite the interim.\n1. **Widest error bar:** the +4/+7/+7 re-acceleration: flat-0% re-run (\u22128% trough, base WACC) gives ~$27-30, below entry \u2014 fragile, single-assumption dependency. Base margin \"~41% FY26\" is unreconciled to its OWN fact #1 (Q2 34.5% vs 43.5%); at high-30s margins base dies.\n2. **Variant perception:** \"execution ON the cyclical path\" is unfalsifiable mid-trough \u2014 good quarters = execution, misses = \"guided.\" Nothing resolves before the Feb-27 guide (its own kill criterion) while orforglipron/LOE widen.\n3. **Base rate:** 0.35 is a +75% RAISE from the superseded 0.20; flagged \"New evidence\" covers only the base-below-entry half \u2014 nothing on REDEFINE 4/orforglipron, the 0.20's basis. Archetype clearance (\"competitive position INTACT\") still fails (dossier: diabetes value share ~30%); honest p_up 0.25-0.30.\n4. **Construction, both directions:** \u221255.2% at kill 16.59 is the honest bear-DCF loss \u2014 not double-counted, not a stop. Target NOT under-set: $70 exceeds the bull DCF ($57.21) and needs WACC 8.5% \u2014 foreclosed by the delivered hike, 52w-high DXY, CAUTIOUS. NO-TRADE is a real verdict \u2014 but the $31 trigger inherits the generous p_up: at 0.25-0.30 it is ~$28-29, and the fund deploys capital there.\n5. **Disconfirming fact:** dossier: \"semaglutide exclusivity lost in Canada, China, India, and other markets in 2026\" \u2014 LOE set WIDENED beyond T-001's Canada/Brazil/China; structural creep documented. MFN already cut to $349/$245 \u2014 ratchet precedent.\n6. **Pre-mortem steelman:** avoided failure: buying the $31 trigger into an accelerating decline \u2014 \"resurrected at \u221217%\" reading as the thesis working while orforglipron outscales Wegovy oral (~50K weekly Rx, month one).\n7. **Anti-gaming:** stage_log draft-only, ordering clean (estimates 03:29:04Z precede draft 03:31:22Z; market data only in Phase 2). QC: (i) p_up 0.20\u21920.35 half-covered by flagged new evidence; (ii) sleeve MOMENTUM from a stale 09-02 row (mom1 \u221220.2% contradicts); 10-03 screen excludes NVO.\n8. **VERDICT: MAJOR_REVISION.** Spot buys a business whose own base DCF is $38.25 \u2014 2.5% margin of safety \u2014 while $70 needs a rate-cut scenario a hiking Fed forecloses; the no-trade branch is right, but its 0.35 p_up and $31 trigger \u2014 the fund's future entry ticket \u2014 are too generous to bank.\n\nstage_log: {stage: attacked, at: 2026-10-03T12:20:00+07:00, actor: BEAR}\n\n**BEAR \u2014 Drew \u2014 2026-10-03T15:30:00+07:00 \u2014 RE-ATTACK \u2014 verdict: SURVIVES_WITH_SCARS**\n\n0. **Arithmetic re-derived:** expected = 0.28\u00d754.6 + 0.72\u00d7(\u221255.2) + 4.0\u00d73 \u2212 0.5 = **\u221212.96 \u2248 \u221213.0** (matches lint's own formula). Levels: 57.21/37\u22121 = +54.6 \u2713; 16.59/37\u22121 = \u221255.2 \u2713; carry-adjusted payoff (54.6+11.5)/(55.2\u221211.5) = **1.51 > 1.3** \u2014 no construction defect. Registry 0.40/n=15 verified; NVO absent from the 10-03 screen (0 hits), 09-02 mom1 \u22122.94 verified; Revision 294 words \u2264 300; estimates_committed_at untouched; stage_log monotonic. **Cite-gap:** FCF bull-prop withdrawn, but the Revision's margin REFUTE still leans on the unverifiable H1 \"340B denominator bump\" \u2014 its failure direction (real compression) LOWERS the bull DCF and thus the trigger, so the residual uncited dependency now cuts conservative. Scar, not kill.\n1. **Trigger:** Kelly-zero re-derived **$27.96** \u2713 ((57.21+2.571\u00d716.59)/3.571). The no-negative-resolution gate closes my Pt 6 steelman (orforglipron out-scaling blocks re-entry) \u2014 but only as ABSENCE of negatives. Hole: a $28 touch mid-trough, nothing resolved, passes the gate \u2014 and at p_up 0.28 that entry is EV **+11.4%/3y vs +11.6% cash**: the future entry as worded buys cash-parity, edge-free. The entire premium lives in the re-acceleration clause: at restored 0.40, $28 entry = **+28.8%/3y (~8.8%/yr)**.\n2. **p_up 0.28 = registry \u221230%**, inside my own 0.25\u20130.30 band; each cut maps to a named, distinct attack point (rate-path \u2192 target; competitive position \u2192 p_up) \u2014 the three-haircut double-count did not survive. Direction confirmed: \u221213.0%/3y, own-Kelly \u2264 0 at spot; no-trade stands.\n3. **Both directions:** (i) wrongly-killed \u2014 mostly closed: $29\u201330 entries are honestly excluded at 0.28 (Kelly < 0), and a no-news V-shape is caught by the FY27-guide re-acceleration trigger. Residual: capitulation to ~$22\u201324 with p_up still 0.28 pays ~+38%/3y \u2014 the trigger must not read as a $28-only ticket. (ii) wrongly-passed \u2014 no hole below \u221255.2% at spot; scars on the record: a dividend cut (guide-bottom FCF vs 51.8bn payout + ~55bn capex) breaks the 4% carry assumption; unhedged DKK with DXY at its 52w-high; kill is a falsification level, so a fired kill carries 1\u20132 bands of ARB gap.\n4. **VERDICT: SURVIVES_WITH_SCARS.** Strongest sentence: the no-trade at spot is now arithmetically sound, but the fund's future entry ticket is built to fire EDGE-FREE unless re-entry REQUIRES the Feb-27 re-acceleration (positive resolution), not merely price plus silence. Smallest fix, rulable in-pass by the Judge without another revision round: re-word the watchlist trigger to require the positive re-acceleration resolution OR price materially below the 0.28 anchor (\u2264 ~$24); Aldrich can judge NOW \u2014 the no-trade object is judge-ready, the trigger wording is a scar on the record, not a blocker.\n\nstage_log: {stage: re_attacked, at: 2026-10-03T15:30:00+07:00, actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "ANALYST_GLOBAL \u2014 2026-10-03T14:00:00+07:00",
+      "markdown": "**0. CONCEDE \u2014 verifiability.** H1 FCF 54.4bn / ex-340B \u22124.2% / Q2 34.5%: 08-05 interim (No.32/2026), not in-repo; dossier asof 07-21 predates. H2 \u22128/\u221218bn = rebate/work-cap timing; FCF-above-guide withdrawn as a bull prop (\u00a72 downgraded to cash-conversion colour).\n**1. CONCEDE \u2014 single-assumption weight.** Flat-0% re-run \u2192 ~$27-30 below entry buys the $28 trigger and the p_up cut. Margin: REFUTE \u2014 FY26 op-profit guide = same \u22124/\u221212% CER band as sales (No.30/2026): adjusted margin ~flat; Q2 34.5% compressed by the 340B denominator bump. High-30s base-death priced into 0.28/$28.\n**2. CONCEDE \u2014 unfalsifiable mid-trough.** Nothing resolves before the Feb-27 guide; that is why no-trade holds through the trough.\n**3. CONCEDE \u2014 base rate.** p_up 0.35 \u2192 0.28 (buying point pt 3; reinforced pt 1, pt 5). New evidence covered only the contested base-below-entry half \u2192 raise over T-001's 0.20 capped at +0.08; full shade restored (REDEFINE 4, orforglipron, ~30% value share).\n**4. CONCEDE \u2014 construction.** $70 needs the 8.5% WACC leg the Fed-hike/DXY-52w-high foreclose \u2192 target cut to bull DCF $57.21, up_pct 89.2 \u2192 54.6 (buying point pt 4). Kill \u221255.2% kept. Trigger 0.28/57.21/16.59 = Kelly-zero $27.96 \u2192 **\u2264$28** (buying point pt 4).\n**5. CONCEDE \u2014 LOE widened** (Canada/China/India/other; MFN $349/$245) \u2014 folded into 0.28 (buying point pt 5).\n**6. CONCEDE \u2014 steelman.** Failure = buying the trigger into decline \u2192 hardened: \u2264$28 AND no negative resolution \u2014 orforglipron scale-out, LOE-widening, margin-miss (buying point pt 6).\n**7. CONCEDE \u2014 QC.** (i) 0.20\u21920.35 half-covered \u2014 re-shaded to 0.28, buying points named. (ii) Sleeve FIXED: NVO absent 10-03 screen (verified); MOMENTUM tag from stale 09-02 row (mom1 \u22122.94%) withdrawn.\n**8. ACCEPT MAJOR_REVISION.** expected \u221213.0%/3y vs ~+11.6% cash over 3y; own-Kelly \u2264 0 at spot. Future entry properly built at \u2264$28. Recommend Judge confirm NO-TRADE."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: NO_TRADE \u2014 stamped `PASS_REDUCED` at 0\u00d7 of the sizing engine recommended_pct** (lint's enum carries no NO_TRADE; 0\u00d7 is the fund's size-to-zero class). **Not a KILL: no kill-ledger row, no 60-day cooldown.** Lane chosen explicitly: this is a size-to-zero, not a killed-idea. The thesis's own base DCF ($38.25) validates spot (\u00b14%); what fails is the hurdle \u2014 expected \u221213.0%/3y (\u22124.5%/yr) vs ~3.88% cash is a negative equity-risk premium, own-Kelly \u2264 0. The idea is unpayable at this price, not wrong.\n\n**Standing correction applied** (my ledger: 24 kills / 0 passes, killed names +7.0% above kill). Gains-left stress first: even at the FULL unshaded registry prior 0.40, spot $37.32 = \u22120.5%/3y vs +11.6% cash; a spot premium exists only on the 8.5%-WACC $74.01 leg that the delivered hike, DXY 52w-high and CAUTIOUS foreclose. The no-trade leaves nothing the hurdle should own. The wrongly-killed direction then decides the lane: a KILL spends the 60-day cooldown and locks out the \u2264$24 capitulation ticket, which can fire before Feb-27 with no superseding \"new evidence\" \u2014 a pure price drop supplies none. LESSON-0002 honored: T-001's reason (paying above fair value) has inverted; I will not stack a valuation kill on an inverted one.\n\n**Drew's conditioning question \u2014 RULED.** Future entry requires (A) positive Feb-27 resolution \u2014 FY27 opening guidance shows NO second consecutive CER decline, restoring p_up toward 0.40 \u2014 AND price \u2264 $28 (+28.8%/3y at 0.40); OR (B) capitulation \u2264 $24 with no resolution (+28.0%/3y at the fully-shaded 0.28). Both clauses carry the no-negative-resolution gate (orforglipron not out-scaling Wegovy oral; no LOE widening; no margin miss). The edge-free $28-with-silence entry (+11.4 vs +11.6 cash) is NOT armed. Enrolled in watchlist_GLOBAL: machine trigger price \u2264 24; clause A is human-judged at the Feb-27 guide.\n\n**Protocol:** complete \u2014 lint PASS (tolerated WARN: 2781 words, append-only logs); stage_log monotonic (draft 10:31 \u2192 attacked 12:20 \u2192 revision 14:00 \u2192 re_attacked 15:30 +07; estimates 03:29Z precede draft); Bear points 0\u20138 all answered, re-attack confirms none open; revision 290 \u2264 300 words; every post-attack move was a cut (p_up 0.35\u21920.28, target $70\u219257.21, trigger 31\u219228).\n\n(Aldrich; stamps frontmatter status: judged, verdict: PASS_REDUCED [NO_TRADE, 0\u00d7].)"
+    }
+  ]
+}

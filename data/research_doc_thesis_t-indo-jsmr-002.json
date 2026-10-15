@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-JSMR-002",
+  "title": "Jasa Marga (JSMR.JK)",
+  "meta": {
+    "id": "T-INDO-JSMR-002",
+    "book": "INDO",
+    "ticker": "JSMR.JK",
+    "name": "Jasa Marga",
+    "sector": "INFRASTRUCTURE",
+    "factors": [
+      "infra_towers",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "infra_tower_compounder",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-JSMR-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-03T10:30:00+07:00",
+    "drafted": "2026-10-03T10:30:00+07:00",
+    "judged": "2026-10-03T14:05:00+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 2540.0,
+    "target": 3200.0,
+    "kill": 2250.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "FY2027E AFFO revalued ~8.4% yield (10y FR 7.16% + 125bp), no BI pivot assumed",
+    "price": 2480.0,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.3,
+    "up_pct": 26.0,
+    "p_down": 0.7,
+    "down_pct": -13.0,
+    "net_div_yield_pct_pa": 5.5,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": 14.9,
+    "horizon_years": 3.0,
+    "carry_pct": 16.2,
+    "kelly_full_pct": null
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.3,
+    "source": "registry infra_tower_compounder 0.55 deviated -25pp: -20pp as drafted (rate regime; debt-shape gap unadjudicated) plus -5pp bought by Bear Pts 1/3/5 (base AFFO fails at yfinance debt end; JTT NCI drain; Brent/FOMC carry) \u2014 see Revision",
+    "library": {
+      "rate": 0.55,
+      "base_up_pct": 35.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 2250.0,
+      "action": "exit_full",
+      "note": "income-anchor break: below ~6.7% net yield the carry case becomes distress-pricing; ARB-gap fill risk on any BI surprise"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-12-31",
+      "action": "review",
+      "condition": "FY2026 LK gross debt >78tn AND BI-Rate >=6.0%"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 5.0,
+      "action": "review",
+      "name": "cash_interest_FY2026_LK",
+      "source": "FY2026 audited LK"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-03T10:30:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-03T12:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-03T13:30:00+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-03T14:05:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-INDO-JSMR-002",
+    "ticker": "JSMR.JK",
+    "book": "INDO",
+    "killed": "2026-10-03",
+    "px_at_kill": 2540.0,
+    "reason": "other",
+    "px_now": 2480.0,
+    "px_asof": "2026-10-15",
+    "move_pct": -2.4
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "Phase 1 (fundamentals; committed before any market number)",
+      "markdown": "**Priors disclosure:** market narrative = JSMR is the state bellwether whose AFFO never clears the sovereign yield and whose 35% JTT cession plus BI hikes make that permanent \u2014 cheap for a reason.\n\n**EARNINGS_QUALITY_FLAGS gate (re-run):** no special-notation/ppk hit (idx.co.id 403 again; prior Jun-2026 clean stands). Related-party: ~70% Kementerian BUMN vs 23.7% float; BUMN-JV builders (Hutama Marga Waskita, Jasamarga Gedebage Cilacap) optics-only; Waskita-KPK history pre-dates this management. Structure: no rights issue since 2016; JTT 35% sold to Metro Pacific/GIC (Rp15.75tn; tranche-2 Dec-2024) = permanent NCI drain, not dilution; ISAK 16 concession intangibles (PSAK 73 not applicable). Accruals not computable (CFO unreachable \u2014 prior gap); margin proxy flat (EBITDA 67%, core profit flat ~Rp3.7tn FY24\u219225). No manipulation flag; PASS with disclosed gaps.\n\n**Regulatory:** biennial CPI+SPM ministerial tariff (UU 38/2004 Art.48(3); PP 23/2024; recent cycle 5.05% realized CPI; 20 segments guided 2026) \u2014 mechanical lagged passthrough, no pricing power; deferral risk low to 2027, rising 2028-29. 16 concessions ~1,736km, ~1,264km ops; 5 new-builds keep capex Rp10-12tn/yr; maint-vs-expansion split unisolatable (prior gap persists).\n\n**AFFO build (FY2025 toll basis, Rp tn; committed):** rev 19.8 (+5.8%); EBITDA 13.3 (67%); cash interest \u22124.0 (blended ~6.3% on ~Rp64tn avg gross, mid of 62.5-press/78.1-yfinance); cash tax \u22121.2; maint capex \u22121.5 (~8% toll rev, assumption) \u2192 **AFFO 6.7 base / 5.4 stress** (interest 4.9 @ 6.5% on 75tn; maint 2.0). DPS 156.2, 31% payout, ~3.2x covered. **Load-bearing unresolved: gross debt Rp62.5tn (press) vs Rp78.1tn (yfinance) \u2014 Rp15.6tn gap moves AFFO ~Rp1tn and the gate below.**"
+    },
+    {
+      "heading": "Market state & EV \u2014 Phase 2",
+      "detail": null,
+      "markdown": "Price 2,540 = 52-wk LOW (2,530), \u221239% from 4,180 high; mcap Rp18.43tn (7.26B sh); float 23.7%; ADV ~Rp25bn/d; flows STALE (fund record empty). 10y FR 7.16% (2026-10-02, TradingEconomics; \u221210bp vs 7.26% at prior kill). Net debt ~63tn (55.4 press / 71.0 yfinance); EV \u2248 74-89tn.\n\n**Gate re-run \u2014 the dispositive question:** base AFFO 6.7tn / EV 74-89tn = **7.5-9.1%** vs 10y FR 7.16% \u2192 clears by +0.3 to +1.9pp (press-debt end). Stress AFFO 5.4 / same EV = 6.0-7.3% \u2192 **fails \u22121.2pp at yfinance-debt end, +0.2pp marginal at press end**. At BI 6% (marginal debt ~8%) the base spread erodes to ~+0.6pp. Verdict: **gap narrowed from clean-fail (prior 5.4-7.2% vs 7.26% at a 1.5-2.0x-debt EV heuristic) to a thin base-case pass hostage to the debt figure and rate path** \u2014 the floating-debt-vs-2y-lagged-escalator mismatch is unchanged, merely smaller at this price.\n\n**EV math:** 0.55 reg \u2192 0.35: \u221210pp rate regime unchanged (BI 5.75 held, 6% chatter; Fed +25bp 09-15/16 12-0; DXY 101.92 at 52w-high); \u22125pp debt gap (25% of one debt figure unverified \u2014 stress trips gate); \u22125pp JTT NCI (holder AFFO diluted ~35% vs consolidated optics). Symmetry up/|down| = 26/11.4 = 2.28 vs library 1.75 \u2014 richer, no defect. Own-Kelly 6.5% vs library-Kelly 29.3% \u2014 the deviation is the sizing haircut. Expected +17.9%/3y \u2248 **+5.6%/yr < FR 7.16% and far under house ~11% equity hurdle \u2192 sub-hurdle long.**"
+    },
+    {
+      "heading": "New evidence",
+      "detail": "vs T-INDO-JSMR-001",
+      "markdown": "Price \u22126.6% to the 52w low; 10y FR \u221210bp; 2026 tariff cycle proceeding; BI held 5.75% twice (no delivered hike); debt-shape gap (Rp15.6tn) surfaced, cuts both ways. Gate: marginal-pass at base, fail at stress \u2014 narrower than the prior clean fail, not resolved."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** JSMR is a failed bond-proxy \u2014 worth the 6.2% dividend and little more; JTT cession plus BI hikes make the AFFO-fail structurally permanent. **Why wrong:** at the 52w-low the market prices the STRESS case (6.1%, sub-sov); the base case (8.2%, +1pp) with a 5.5% net dividend and the mechanical 2026 tariff reset is not in price \u2014 a state network yielding ~135bp over the sovereign at its low is over-discount, and the gate holds on base inputs. **What proves us wrong:** FY2026 LK cash interest >Rp5tn or gross debt >Rp78tn; 2028 tariff deferral; BI \u22656.5%; further discount minority sell-downs."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. **Rate regime** (the macro regime memo 2026-10-03): BI 5.75% held to 6% chatter; Fed +25bp to 3.75-4.00; DXY at 52w-high; carry +162bp \u2014 archetype's dominant failure (leverage+rising rates) stays ACTIVE; the floating tranche reprices quarterly vs 2y-lagged CPI tariffs.\n2. **Debt-shape gap:** yfinance 78.1tn vs press 62.5tn unadjudicated; at 78.1 & 6.5% interest, stress AFFO 5.4tn = 6.1% at current EV \u2014 1.1pp under 10y FR 7.16% (TradingEconomics 2026-10-02): the killing gate still fails on conservative-plausible inputs.\n3. **Chronic grind, not washout:** 2,540 is the 52-wk LOW after ~12 months of decline (high 4,180), 17.4% institutions held; flows STALE \u2014 cannot separate capitulation from information; \"cheap\" is the base rate of a levered regulated operator, not fresh forced selling.\n4. **NCI drain:** 35% of the flagship JTT network's cash flows permanently accrue to minorities; consolidated-EV AFFO math overstates holder economics."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "2029: position down ~12% to the kill. Path: BI 6.25% in 2027; FY2026 LK prints debt >78tn, cash interest >5tn; base AFFO ~6tn; sub-hurdle EV grinds the multiple; dividend held but the income leg repriced as failure \u2014 my 52w-low entry mistook a chronic grind for a washout."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**BEAR ATTACK \u2014 Drew (BEAR), 2026-10-03T12:00:00+07:00 (kill-ledger revisit; JSMR is NOT on the 2026-10-03 INDO screen \u2014 no dossier exists; primary-source claims checked against T-INDO-JSMR-001 and packet quotes; unverifiable items flagged below)**\n\n0. FACT-CHECK: EV 74-89tn recomputes (18.43 mcap + 55.4-71.0 net debt); 10y FR 7.16% verified (TradingEconomics 2026-10-02). Base AFFO \"6.7\" recomputes to 6.6 from the thesis's own inputs \u2014 minor slip. But the 7.5-9.1% band pairs the yfinance-debt EV (89) with the mid-debt AFFO (6.7): an inconsistent pairing that manufactures the floor. No fabrication-class finding.\n\n1. ESTIMATES: re-run at the yfinance end (gross 78.1, avg ~76): interest 6.3% \u2248 4.8 \u2192 base AFFO 5.8; EV 89.4 \u2192 **6.5% < 7.16% \u2014 the BASE case fails**, not merely stress. Second, independent cut: the gate runs consolidated AFFO, but 35% of JTT (the flagship network, T-001) accrues to Metro Pacific/GIC \u2014 holder AFFO ~1.5-1.8tn lower (my estimate, JTT 60-70% of EBITDA) \u2192 ~5.0-5.3/74-89 = 5.6-7.2%, failing to marginal at BOTH ends. **Fragile \u2014 single-assumption dependency, twice over.**\n\n2. VARIANT PERCEPTION: method card pt 5 \u2014 \"model it as a bond with growth options, not a compounder.\" ~135bp over sovereign for floating debt, 2y-lagged tariffs, a 70% state owner, and 2028-29 deferral risk is compensation, not over-discount. The \"new evidence\" is price \u22126.6% and FR \u221210bp: the gate didn't improve \u2014 the entry price fell to meet a still-failing gate. A falling knife with flows STALE: capitulation is unobservable.\n\n3. BASE RATE: key mislabeled \u2014 post-JTT cession this is dividend_income_anchor economics (a 5.5% net-dividend trade), and infra_tower_compounder's own registry notes name \"leverage + rising rates\" as the dominant failure = the current regime. Moot anyway: the analyst's own EV is sub-hurdle.\n\n4. SIZING: +5.6%/yr vs 7.16% FR and the ~11% hurdle \u2014 dead on arrival at its own arithmetic, and unfixable by construction: target +26% already sits near the archetype's capped +35% 3y upside; hurdle-clearing needs ~+40%+. down_pct \u221211.4% is the exact kill print; ARB-lock fills 1-2 bands below 2,250 (~\u221211.8/\u221212.2%) plus slippage on Rp25bn/d ADV put realized loss ~\u221213% (pre-mortem itself says \u221212%). Understated.\n\n5. DISCONFIRMING (new): Brent 102.7 war premium intact (the macro regime memo, Severin commodity block, 2026-10-03) keeps ID fuel costs elevated \u2014 toll traffic is fuel-price elastic, and fuel-price politics is the historical trigger for tariff-deferral pushback (2024 Jakarta-Cikampek 35% hike criticism, T-001). Next FOMC Oct 28-29 could extend the carry squeeze (fed_path marker armed).\n\n6. PRE-MORTEM steelman: the avoided failure mode is recapitalization. Capex Rp10-12tn/yr \u2248 2x AFFO with no trophy asset left to sell post-JTT; a BI-6.25% refinancing wall (Rp10.6tn short-term, T-001) forces a 2016-style rights issue at 52w-low prices \u2014 diluting the very per-share AFFO this gate was run on.\n\n7. ANTI-GAMING: stage_log clean (draft \u2192 attacked); estimates committed 10:30+07 with no market data in Phase 1. Two arithmetic slips (6.7 vs 6.6; kill-note \"~6.7% net yield\" vs actual ~6.25% at 2,250) \u2014 looseness, not gaming. No QC escalation.\n\n8. VERDICT: **KILL_RECOMMENDED.** On the unadjudicated Rp78.1tn debt figure alone the base AFFO yield is 6.5% against a 7.16% sovereign, and after the JTT minority drain this is a sub-sovereign-yielding equity its own analyst rates below hurdle \u2014 the July kill at 2,720 is being marked right, not wrong.\n\nstage_log: {stage: attacked, at: 2026-10-03T12:00:00+07:00, actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**Answering Drew's KILL_RECOMMENDED \u2014 DANI (ANALYST_INDO), 2026-10-03. Standing on the kill.**\n\n0. Conceded: base AFFO is 6.6 (13.3\u22124.0\u22121.2\u22121.5), not 6.7; the 7.5-9.1% band did pair yfinance EV with mid-debt AFFO.\n1. Conceded \u2014 base fails on consistent inputs. yfinance end: 6.3% x ~76 \u2248 4.8 \u2192 AFFO 5.8 \u2192 5.8/89.4 = 6.5% < 7.16% FR; after 35% JTT drain, holder AFFO 5.0-5.3tn = 5.6-7.2% \u2014 failing-to-marginal at both ends. Gated on consolidated AFFO: the miss.\n2. Conceded. ~135bp over sovereign is compensation (floating debt, 2y-lagged tariffs, 70% state owner, 2028-29 deferral), not over-discount; price fell to a still-failing gate.\n3. Conceded. Post-JTT this is dividend_income_anchor economics; registry names leverage+rising rates as the dominant failure \u2014 the live regime; my own EV is moot.\n4. Conceded. +5.6%/yr vs 7.16% FR and ~11% hurdle is dead on arrival; +26% target cannot clear the ~+40% needed. Realized kill \u2248 \u221213% (ARB fills below 2,250 + slippage) vs \u221211.4% stated [down_pct \u221213.0; expected_pct 14.9].\n5. Absorbed. Brent 102.7 war premium keeps fuel costs elevated \u2014 fuel politics triggers tariff-deferral pushback (2024 Jakarta-Cikampek); FOMC Oct 28-29 extends the carry squeeze [p_up 0.30; Pts 1+3+5].\n6. Absorbed \u2014 recapitalization is the honest avoided failure: capex ~2x AFFO, no trophy asset left, Rp10.6tn short-term at a 6.25% wall \u2192 2016-style rights issue dilutes per-share AFFO.\n7. Conceded \u2014 looseness, not gaming. 6.7\u21926.6; kill-note ~6.25% at 2,250; stress AFFO 5.2. No QC escalation.\n8. Recommendation: KILL. Base 6.5% at yfinance end, holder 5.6-7.2% \u2014 failing-to-marginal at both ends; EV sub-hurdle. The July kill at 2,720 is being marked right; no cooldown on a dead idea.\n\nev_math applied: p_up 0.30 [Pts 1+3+5]; p_down 0.70; down_pct \u221213.0 [Pt 4]; expected_pct 14.9. up_pct 26, dividend 5.5, drag 0.3, base_rate 0.30 held; estimates_committed_at untouched."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL. Reason tag: valuation.**\n\n**Standing correction applied** (my ledger: 24 kills / 0 passes, killed names averaging +7.0% above kill price \u2014 the over-kill record). I tested this kill for gains-left-on-the-table before anything else: none exist. The prior kill at 2,720 is vindicated by a further \u22126.6% to the 52-week low, and this thesis's own arithmetic (+14.9%/3y \u2248 4.7%/yr) sits below INDO cash 5.5%, the 10y FR 7.16%, and the ~11% hurdle \u2014 against every alternative, including doing nothing, the kill costs nothing. No correction is triggered; the record's disease is not present in this case.\n\n**Protocol:** chain complete \u2014 lint PASS (one tolerated WARN: 1878 words, all from the verbatim Bear log), stage_log monotonic draft\u2192attacked\u2192revision\u2192judged, revision 292 words, all nine Bear points (0\u20138) answered, and no raised p_up/up_pct/target anywhere in the revision: every change moved *against* the thesis (p_up 0.35\u21920.30, down_pct \u221211.4\u2192\u221213.0). LESSON-0002 applied: the first kill's reason is not wrong \u2014 it is confirmed at a 6.6% lower price. This is a vindication, not a repeat-on-deterioration kill.\n\n**Independent stress** (the shared-context risk: what could author and Bear BOTH be wrong on?): the gate itself. It is the method card's law \u2014 AFFO must clear the 10y FR *with a spread that compensates the leverage* \u2014 so anchoring on it is discipline, not shared bias. At the press-debt end (62.5tn), consolidated base AFFO 6.6/73.8 = 8.9% passes \u2014 but the 35% JTT cession is document-fact (Rp15.75tn, Metro Pacific/GIC, T-001) and survives the debt question: holder AFFO fails-to-marginal at both EV ends. FR \u221225bp: base 6.5% still fails, holder marginal only at the top; FR +25bp: everything fails. BI \u00b125bp moves ~Rp26bn on the floating tranche \u2248 4bp of EV yield \u2014 immaterial either direction. A pass needs press debt AND a half-strength NCI drain AND \u221225bp on the sovereign simultaneously, and even that corner yields <1pp spread for a 4.7x-levered floating-rate name inside the macro AVOID tilt \u2014 no leverage compensation at all. The kill survives every stress.\n\nThe July kill at 2,720 is being marked right, not wrong. The 60-day cooldown attaches as machinery but is moot on a dead idea: resubmission only by the sponsoring analyst with material new evidence \u2014 an adjudicated gross-debt figure from the FY2026 audited LK, a BI pivot, or a 2026 tariff surprise \u2014 never price.\n(Aldrich; stamps frontmatter status: judged, verdict: KILL.)"
+    }
+  ]
+}

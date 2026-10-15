@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-COST-001",
+  "title": "Costco Wholesale (COST)",
+  "meta": {
+    "id": "T-GLOBAL-COST-001",
+    "book": "GLOBAL",
+    "ticker": "COST",
+    "name": "Costco Wholesale",
+    "sector": "CONSUMER",
+    "factors": [
+      "us_defensive",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-08-26T06:11:55+00:00",
+    "drafted": "2026-08-26T06:16:14+00:00",
+    "judged": "2026-09-02T13:29:11+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 960.0,
+    "target": 1070.0,
+    "kill": 480.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Bear-revised: honest FY29E EPS ~$25.5 (fee growth 5-7% between hikes, not 13%) at ~42x held forward-entry multiple \u2014 no expansion; original 1344 (~48x FY29E) conceded as multiple expansion",
+    "price": 983.8300170898438,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.35,
+    "up_pct": 12.0,
+    "p_down": 0.65,
+    "down_pct": -50.0,
+    "net_div_yield_pct_pa": 1.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -27.8,
+    "horizon_years": 3.0,
+    "carry_pct": 2.5,
+    "kelly_full_pct": -374.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating registry (0.40) is the reference class; Bear 2: COST never compressed, so p_up deviates DOWN to 0.35 (below registry), not +10pp above",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 480.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating premium-multiple break (~19x FY29E on honest ~$25.5 EPS); consistent with down_pct -50"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 90.0,
+      "action": "review",
+      "name": "renewal_rate_us_canada",
+      "source": "quarterly 10-Q membership disclosure"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 5.0,
+      "action": "review",
+      "name": "membership_fee_growth_yoy",
+      "source": "10-Q / monthly sales releases"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-08-26T06:16:14+00:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-02T13:18:11+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-02T13:29:11+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-COST-001",
+    "ticker": "COST",
+    "book": "GLOBAL",
+    "killed": "2026-09-02",
+    "px_at_kill": 939.9600219726562,
+    "reason": "other",
+    "px_now": 983.8300170898438,
+    "px_asof": "2026-10-15",
+    "move_pct": 4.7
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-08-26T06:11:55Z, before any market data",
+      "markdown": "**Unit economics.** 82.9M paid households (Q3 FY26, +4.1% y/y), 148.5M cardholders, 38.7M+ Executive at 2% rebate; renewal 92.2% US/Can, 89.7% worldwide (Q3 FY26 10-Q). Membership fees FY25 $5,323M (10-K), 36wk FY26 $4,057M (+13%). Fee income = 51% of FY25 operating income ($5,323/$10,383M).\n\n**Revenue.** FY25 net sales $269,912M, total revenue $275,235M (10-K). 36wk FY26 net sales $203,374M (+9.6%); Q3 total-company comps +10%, ex-gas/ex-FX +7%; digitally-enabled comps +21%; 23 net new warehouses, 928 total (637 US) (10-Q).\n\n**Margins & leverage.** Merchandise gross margin ~11.1% (FY25); Q3 FY26 gross +1bp and SG&A -2bps ex-gas/ex-FX \u2014 operating leverage ON at current comps. Op margin 3.77% (FY25) to ~3.9-4.0% (FY26E).\n\n**Cash.** CFO 36wk FY26 $11,133M vs capex $4,228M \u2192 FCF ~$6.9B/36wk; cash+STI $20.0B. Accruals ratio negative 3y (FY25 -7.1%) \u2014 cash structurally above NI.\n\n**Estimate (committed, never edited).** FY26E diluted EPS ~$20.5 (+12.6% vs $18.21), FY27E ~$23, FY28E ~$25.5, FY29E ~$28.0. Owner earnings \u2248 EPS (FCF/share ~$21).\n\n**Load-bearing assumptions (carry >70% of value), each cited:**\n1. **Membership-fee growth ~12-13%/yr** (paid-household +4%, Executive upgrade mix, $65\u2192$130 fee ladder) \u2014 drives ~51% of operating income. Source: Q3 FY26 10-Q: \"Membership fee revenue increased 11% and 13%... driven by new member sign-ups, membership fee increases and upgrades to Executive Membership\"; paid members 82,900 vs 79,600.\n2. **Comparable-sales growth ~7% ex-gas/ex-FX** with SG&A/fixed-cost leverage. Source: Q3 FY26 10-Q comp table: Total Company +10%, ex-gas/ex-FX +7%.\n\nUncited load-bearing assumption: none \u2014 both above are filing-sourced."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "written before document work",
+      "markdown": "From memory, the market narrative is that Costco is the \"last great compounder\" whose ~40-50x premium is justified by membership-fee economics \u2014 bulls \"buy the dip,\" bears say \"priced for perfection\"; the premium is treated as fragile but the fee stream is not separately priced."
+    },
+    {
+      "heading": "Base-rate anchoring",
+      "detail": null,
+      "markdown": "The **derated_compounder_rerating** base rate (0.40, +50/-30, 3y) is the honest reference class: this is a premium-multiple quality-compounder story at ~47x FY26E forward, and the archetype's failure mode \u2014 a structural de-rating of a premium name \u2014 is the live risk. The **dividend_income_anchor** (0.60, +25/-15) does NOT govern the prior: its window is high-payout cash cows whose return is yield-anchored, and Costco's 0.6% regular yield fails that test; the card's \"+9% EV\" for the dividend framing is a two-point artifact (0.60\u00d725 + 0.40\u00d7-15 = +9.0) assigning a yield-capture work-rate to a name that barely yields. Its genuine insight \u2014 membership-fee cash flow funds a defensive floor of regular+special dividends and buybacks, truncating the loss tail \u2014 is real and justifies p_up at **0.50** (argued +10pp above the 0.40 registry; held below 0.60 by the 47x valuation). Down leg set at -25% (vs archetype -30) because the 92.2% renewal + $20B cash floor caps the realistic loss short of the archetype's mean."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** \"Great company, dangerous price.\" After three headlines (stock -12% off $1,096 high; Brent $94 war premium; consumer-stagflation chatter) the generalist says Costco is a wonderful franchise but 47x forward is too rich for a retailer, so wait for a deeper pullback.\n\n**Why wrong:** The 47x quote mis-prices the mix. ~51% of operating income is contractual, renewal-gated fee revenue (92.2% US/Can), not retail spread \u2014 capitalize that stream on its own and the \"retail multiple\" overstates the entry risk. The business is *accelerating* (Q3 comp +10%, digitally-enabled +21%, fees +13%) into a NEUTRAL-appetite regime that rewards wage-funded domestic consumption; Costco's needs-based basket is insulated from the China-demand/EM-flow channels the desk avoids, and the Fed is on hold near 3.63% effective (easing impulse, Sept-hike odds collapsed 2026-08-22 memo) \u2014 supportive of premium-multiple survival. The market cannot hold a 3y view: it sells the -12% sentiment de-rating while EPS compounds to ~$28 by FY29; at a held ~48x, that is $1,344 (+40%) plus the special-dividend floor.\n\n**What proves us wrong:** Renewal rate <90% US/Can; membership-fee growth <5% y/y; two consecutive quarters of negative ex-gas/ex-FX comps (fixed-cost absorption flips to headwind); or a structural de-rate below ~30x forward (price kill at $720 \u2248 26x FY29E). The Q3 +10% comp being gasoline/FX-flattered is a real audit risk \u2014 the +7% ex-gas/ex-FX is the metric I'm paid on.\n\n**Edge taxonomy:** time-arbitrage (primary \u2014 market can't hold a 3y compounding view through a macro wobble) + analytical (fee stream priced as retail multiple, not contractual annuity)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "each cited, current",
+      "markdown": "1. US/Canada renewal 92.2%, worldwide 89.7% (Q3 FY26 10-Q) \u2014 moat metric; below ~90% erodes the thesis.\n2. Membership-fee revenue +11% Q3, +13% YTD (Q3 FY26 10-Q) \u2014 the engine; a stall to <5% is dispositive.\n3. Total-company comps +10% Q3 / +7% ex-gas/ex-FX (Q3 FY26 10-Q) \u2014 but ex-gas/ex-FX is the honest line; monitor for negative prints.\n4. Inventory build $1,240M vs revenue +$17,894M (36wk, 10-Q cash flow) \u2014 no overhang; and accruals negative 3y (SEC XBRL: NI<CFO every year) \u2014 cash conversion clean.\n5. Quarterly dividend raised to $1.47 (Apr 2026, 10-Q); special-dividend cadence (last: $15/sh in FY24, 10-K) supports the floor thesis but has paused \u2014 a Dec-2026 special would confirm."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Aug 2029 and this position lost ~25%. The most likely reason: the war-premium stagflation (Brent >$100) finally reached the US wage-earner; two negative ex-gas/ex-FX comp quarters forced the 47x premium toward ~30x even with membership intact \u2014 because at this valuation a de-rating needs no fundamental break, only a growth scare and rotation out of premium US defensives. Second joint: my 0.50 p_up was too high for a 47x entry, and the special-dividend cadence stayed paused, so the \"floor\" was thinner than modeled. Drew will note the entry multiple; the honest answer is the thesis pays only if the premium *survives* \u2014 that is the bet."
+    },
+    {
+      "heading": "Freshness pass",
+      "detail": "2026-09-02",
+      "markdown": "Price asof 2026-09-01 close $939.96 (yfinance) vs entry $960 = -2.1%, inside max_chase 3%. No material change since 2026-08-26. EDGAR: no Costco 8-K since 2026-07-08 (confirmed). August net-sales / FY26-to-date release: unconfirmed \u2014 no release appears in news/IR feeds as of 2026-09-02; latest monthly covered was July (pre-draft). Q4 FY26 earnings 8-K not due until late Sept; no guidance issued. Post-draft headlines (Medicare/SCAN recap, dividend speculation) are non-primary, not filing-confirmed. Re-stamp: **trade levels stand** \u2014 kill 720 < entry 960 < target 1344 coherent; -2.1% drift within chase band; ev_math +40/-25 unchanged. Frontmatter untouched."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n1. Fact-check: no COST dossier/sleeve row; cited FY26 filings not web-retrievable. 51% fee-share is structurally plausible, but every FY26 line item (82.9M households, fee +13%, $5,323M/$10,383M) is analyst-transcribed, unconfirmed.\n\n2. Archetype misapplied: derated_compounder_rerating buys AFTER compression; COST at ~47x FY26E (~42x FY27E; FY26 just closed) has not compressed. Its own note: >30x names through de-rating have a poor base rate. Failure case at peak premium; p_up belongs below 0.40.\n\n3. Multiple-survival test fails: $1,344 \u2248 48x FY29E = entry (42x FY27E \u2192 48x is expansion) \u2014 zero margin of safety. +40% rides on EPS compounding at held ~48x on a ~4%-margin retailer (~2% earnings yield vs 8\u201310% COE). 2022 de-rated ~40x\u2192~28x in months.\n\n4. Fee engine episodic: $65\u2192$130 ladder banked mid-2024; between hikes fees grow ~5\u20137%, not 13%. At 7%, FY29E EPS ~$25.5, target ~$1,225 (+28%). The <5% fee \"kill\" is a review trip, so a ~6% stall never triggers.\n\n5. p_up 0.50 double-counts: renewal + cash already set down_pct -25 (vs -30). At honest 0.40 and +40/-25, EV ~+1% (~0.8%/yr) \u2014 quarter-Kelly \u2248 zero. Clears only on the least-evidenced input.\n\n6. down_pct -25 is the kill floor, not the losing mean: losers breach $720 (still 35x FY26E). A fee-stall cuts EPS and multiple: ~20x on ~$24 \u2248 $480 \u2248 -50%. Entry 2% above a fallen tape adds uncompensated cost.\n\n7. Variant is risk premium: at ~2% earnings yield the market prices stagflation (Brent ~94 on the US wage-earner \u2014 the pre-mortem's top cause). No sum-of-parts proves the blended multiple \"should\" be 48x.\n\n8. Regime conflict: NEUTRAL balance_of_payments (08-22) \u2014 the leg protecting a 47x premium is EM/IDR funding relief, not US-consumer; COST is the wage-funded channel the war premium pressures.\n\n9. No catalyst: catalyst_date null; time-arbitrage with entry above market = full size, no trigger; position sits -2% to -12% for quarters. Watchlist call.\n\n10. Pre-mortem gap + anti-gaming: Executive upgrades self-cannibalize fee MARGIN (2% rebate liability grows with mix) \u2014 unmentioned. Anti-gaming clean: estimates precede draft, no anomalies \u2014 kill stands on merits.\n\n**Verdict: KILL_RECOMMENDED.** A 47x-forward retailer whose entire target is a ~48x premium surviving three years is the exact bet the fund's de-rating base rate says to avoid \u2014 at honest inputs (p_up \u22640.40, down_pct \u2264-30) expected value rounds to zero.\n\n**Re-attack (2026-09-02)** \u2014 Revision answers all 10 points in substance; none dodged. Decisive concession: #3/#4 \u2014 target $1,344 (~48x FY29E) was pure multiple expansion; honest between-hike fee growth puts FY29E EPS ~$25.5, collapsing the long's upside. Arithmetic does NOT reconcile: expected_pct = 0.35\u00d712 + 0.65\u00d7(\u221250) + 1.0 \u2212 0.5 = \u221227.8, not the stated \u221225.8 \u2014 a 2.0pp error in Sloane's favor (direction unchanged). Levels coherent: kill 480 = \u221250% off 960 (down_pct \u221250); target 1070 = +11.5% (up_pct 12); 480<960<1070. Minor residual: fee-growth <5% remains a review trip, but price-kill 480 moots it for sizing. Concession genuine \u2014 EV is negative on her own inputs. Verdict: KILL_RECOMMENDED confirmed."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. Concede verification gap: no dossier/sleeve row; FY26 lines (82.9M HH, fees +13%, $5,323M/$10,383M) are unconfirmed transcription \u2014 the load-bearing fee+comp base is unverified, so p_up and the EPS path come down.\n2. Concede archetype misapplied: COST has not compressed; ~47x peak premium runs the >30x de-rating base rate, not derated-compounder rerating. p_up 0.50\u21920.35 (below the 0.40 registry).\n3. Concede multiple-survival failure: $1,344 \u2248 48x FY29E is expansion over a ~42x forward entry; ~2% earnings yield vs 8-10% COE. Target 1344\u21921070 (\u224842x on FY29E ~$25.5); up_pct 40\u219212.\n4. Concede fee engine episodic: between hikes fees run ~5-7%, not 13%; at 7% FY29E EPS \u2248 $25.5, not $28 \u2014 target re-based on $25.5.\n5. Concede p_up 0.50 double-counted (renewal+cash already set down_pct). At honest 0.35 with +12/-50, EV \u2248 -26% \u2014 no quarter-Kelly trade.\n6. Concede down_pct -25 was the kill floor, not the losing mean: a fee-stall re-rates ~20x on ~$24 \u2248 $480 \u2248 -50%. down_pct -25\u2192-50; kill 720\u2192480.\n7. Concede variant is risk premium, not edge: at ~2% earnings yield the market already prices the stagflation my pre-mortem named.\n8. Concede regime conflict: NEUTRAL BoP relief is EM/IDR funding; it does not protect a 47x US wage-funded premium consumer name, and Brent ~94 pressures it.\n9. Concede no catalyst, entry above market: time-arbitrage with no trigger was idle full-size risk \u2014 demote to watchlist.\n10. Concede Executive upgrades self-cannibalize fee margin (2% rebate liability scales with mix) \u2014 unmodeled. Anti-gaming clean.\n\nev_math changed (>20% rel each \u2192 Drew re-attack): p_up 0.50\u21920.35, p_down 0.50\u21920.65, up_pct 40\u219212, down_pct -25\u2192-50, expected 10.0\u2192-25.8. Levels now 480<960<1070. Honest EV is negative \u2014 long no longer supported; franchise intact, price/structure fail the de-rating base rate."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (reason_tag: `valuation`).\n\nI rule on the arithmetic first, and it is dispositive before the franchise is weighed: on Sloane's own conceded inputs the honest EV is negative \u2014 0.35\u00d712 + 0.65\u00d7(\u221250) + 1.0 \u2212 0.5 = \u221227.8% \u2014 and I correct frontmatter `expected_pct` from the stated \u221225.8 to \u221227.8 (2.0pp in the analyst's favor; per the 2026-08-22 WEEKLY_DEEP precedent on T-GLOBAL-0700HK-001, correcting more negative is not gaming). No p_up within argued distance of the 0.40 registry makes this trade positive: EV breaks even only near p_up \u2248 0.80 on a ~47x-forward retailer. Grounds: (1) This archetype buys AFTER compression (the base-rate library \u2014 \"base rate of holding a >30x name through de-rating is poor\"); COST has not compressed, the analyst conceded the misapplication, and p_up 0.35 sits below registry \u2014 which only deepens the negative EV. (2) Zero margin of safety: conceded target 1070 \u2248 42x FY29E ~$25.5 is a held forward multiple, not a discount; ~2% earnings yield vs 8\u201310% COE means the premium must survive, not recover. (3) The asymmetry is wrong-way: \u221250% down (kill 480 \u2248 20x) against +12% up, and the franchise quality (92.2% renewal, $20B cash) is already inside that \u221250 losing mean \u2014 it truncates nothing. (4) No catalyst, entry above the 939.96 tape, and the BoP-pressure/NEUTRAL regime does not protect a war-premium-pressured US wage-funded premium name. Drew's strongest sentence survives restated in my own words: a thesis whose entire target is a premium multiple merely persisting for three years, with EV negative on the conceding analyst's own numbers, is precisely what the de-rating base rate exists to screen out."
+    }
+  ]
+}

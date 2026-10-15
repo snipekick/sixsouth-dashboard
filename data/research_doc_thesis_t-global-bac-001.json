@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-BAC-001",
+  "title": "Bank of America (BAC)",
+  "meta": {
+    "id": "T-GLOBAL-BAC-001",
+    "book": "GLOBAL",
+    "ticker": "BAC",
+    "name": "Bank of America",
+    "sector": "FINANCIALS",
+    "factors": [
+      "us_rates",
+      "em_flows"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "quality_bank_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-03T10:20:00+07:00",
+    "drafted": "2026-10-03T10:35:00+07:00",
+    "judged": "2026-10-03T16:30:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 53.75,
+    "target": 63.1,
+    "kill": 44.5,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Re-anchored to warrant-completion Bear-4: my own sustainable-multiple 1.90x (18% ROTCE; (0.18-0.015)/(0.102-0.015)) x H2-28 TBVPS ~33.2 = $63.1 (+17.4%) \u2014 not the never-reported ~20%-ROTCE 2.14x.",
+    "price": 51.81999969482422,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.48,
+    "up_pct": 17.4,
+    "p_down": 0.52,
+    "down_pct": -20.0,
+    "net_div_yield_pct_pa": 2.0,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": 3.5,
+    "horizon_years": 3.0,
+    "carry_pct": 5.5,
+    "kelly_full_pct": 104.0
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.48,
+    "source": "the base-rate library archetypes.quality_bank_rerating (n=20). p_up held AT prior through revision (Bear-5 MOMENTUM reject NOT stacked as a second haircut); the kill is carried entirely by payoff/down_pct re-anchors bought by Bear-4, so it is robust at the favorable prior.",
+    "library": {
+      "rate": 0.48,
+      "base_up_pct": 42.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 44.5,
+      "action": "exit_full",
+      "note": "~1.13x current BVPS \u2014 market rejects the re-rating outright (improvement stalls OR credit breaks); thesis invalidated, not a stop. (Bear-4: the prior 1.37x yield/BV 'floor' conceded \u2014 income-bid exit discipline, not a floor; dropped from this note.)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 15.5,
+      "action": "review",
+      "name": "quarterly_ROTCE",
+      "source": "BAC 10-Q/8-K non-GAAP ROTCE, as reported",
+      "note": "two consecutive quarters <15.5% = efficiency/NII engine stalled; sustainable-ROE premise broken"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 4.2,
+      "action": "review",
+      "name": "credit_card_NCO_rate",
+      "source": "BAC 10-Q/8-K card portfolio charge-off rate",
+      "note": "card NCO >4.2% with reserve build reverses the release tailwind and cuts pre-provision margin"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2028-09-30",
+      "action": "review",
+      "condition": "review if normalized ROTCE has not held >=18% through a full cycle by this date"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-03T10:35:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-03T12:30:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-03T15:00:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-03T16:00:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-03T16:30:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-BAC-001",
+    "ticker": "BAC",
+    "book": "GLOBAL",
+    "killed": "2026-10-03",
+    "px_at_kill": 53.75,
+    "reason": "other",
+    "px_now": 51.81999969482422,
+    "px_asof": "2026-10-15",
+    "move_pct": -3.6
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-10-03T10:20+07, price-free",
+      "markdown": "**Rates/COE inputs.** Fed funds 3.75\u20134.00% (hike 09-15/16, the macro regime memo 2026-10-03); UST10 5.24% (FRED DGS10 2026-10-01); COE 10.2% = 5.24 + USD ERP 4.5\u20135.5% mid (VAL_BANKS).\n\n**Reported base (primary sources).** FY25 (Q4-25 8-K 2026-01-14 ex-99.1): NI $30,509M, EPS $3.81, ROE 10.6%, ROTCE 14.2%, eff 62%, NIY 2.01%, NII $60,096M (+7.2%), provision $5,675M vs NCO $5,631M (0.50% of avg loans), CET1 11.4%, BVPS $38.44, TBVPS $28.73; Q4-25 cx-capital return $8.4B. H1-26 (10-Q 2026-06-30): revenue $61,830M (+11.0%), NII $31,742M (+9.0%), noninterest income $30,088M (+13.2%), expense $37,158M (+6.3%), provision $2,703M, NI $17,658M, EPS $2.31, eff 60.1%. Q2-26 (8-K 2026-07-14 ex-99.1/99.2): NI $9,074M, EPS $1.21, ROE 12.71%, ROTCE 17.03%, eff 58.72% FTE, NIY 2.08% (ex-Markets 2.57%), loans $1,217.6B (+6.1% y/y), deposits $2,025.1B, card NCO 3.55% (vs 3.82% yr ago; delinquencies better 5th straight qtr y/y), ACL $14.3B, CET1 11.2% std, consumer rate-paid-on-deposits 0.48% (vs 0.58% yr ago), ~51% of consumer deposits non/low-interest checking.\n\n**Build FY26E\u2192FY28E.** NII $65.5B\u2192$67B\u2192flat (2027 cuts cushioned by deposit-beta lag; ex-Markets yield 2.57% still ~+13bp y/y = securities/swap repricing tailwind). Fees +6%/yr after H1 +13%. Revenue $127B\u2192$133B\u2192$139B; expense $76.5B\u2192$78.5B\u2192$79.5B (eff 60.1%\u219258.5%\u219257%; H1 comp +5.2% vs revenue +11% = operating leverage). Provision \u2248 through-cycle NCO ~0.55% of loans \u2248 $6.5B FY28E; ACL 1.17%\u2192~1.05%. Tax 19.6%. NI ~$36B/$38B/$41B; EPS $4.90/$5.40/$5.85 (diluted shares \u22124%/yr buyback). **Sustainable ROE ~13.2%, ROTCE ~18%.** Total return \u2248100% of income \u2192 common equity ~flat (~$276B); TBVPS growth is share-shrink (\u22125.6% y/y shares). g 1.5% \u2248 ROE\u00d7(1\u2212payout) (VAL_BANKS rule 5); CET1 11.2% is ~40bp above buffers \u2014 buyback leg is the constraint. Load-bearing cited: NIM/funding (10-Q R2, ex-99.2), efficiency (8-K), card credit (8-K)."
+    },
+    {
+      "heading": "Earnings-quality gate",
+      "detail": null,
+      "markdown": "Provision tracks write-offs: H1-26 $2,703M vs NCO ~$2,821M (slight release); FY25 $5,675M vs $5,631M \u2014 no reserve deficit, no manipulation-class flag. Optics-class (excluded from underwrite): ~100% total-return funded by CET1 drawdown 11.5\u219211.2% (8-K) \u2014 buyback engine depends on the buffer. AOCI \u2212$12.0B (10-Q): pre-revaluation BVPS ~$41.1 vs stated $39.34 \u2014 traded P/BV 1.31x vs 1.37x; both used. Structure/related-party: none (US GAAP; no IDX/PSAK items)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "The market narrative: BAC is the slow-growth deposit monster whose bond/swap drag caps ROE near 12% and efficiency at ~60%, so 1.4x book is fair and no re-rating is deserved."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** NII growth is a rate-cycle artifact that reverses when 2027 cuts land; efficiency is stuck near 60% (wages, tech); card NCOs will re-lever-up; and 1.37x P/BV prices all of it \u2014 no re-rating left.\n\n**Why wrong:** (a) NII +9% y/y H1-26 was delivered THROUGH the 2024\u201326 cuts (10-Q) because deposit funding costs keep falling (consumer rate-paid 0.48% vs 0.58%, ex-99.2) while the securities/swap book reprices up (ex-Markets yield 2.57%, +13bp y/y) \u2014 a multi-year tailwind; the 51% non/low-interest checking mix cushions 2027 cuts to low-single-digit NII growth, not a rollover. (b) Efficiency 62%\u219258.7% in four quarters on revenue +15% is a structural cost curve (digital, branch-to-digital), not headcount optics \u2014 H1 comp +5.2% y/y vs revenue +11% is operating leverage; 57% by FY28 is below the 360bp/yr pace. (c) Credit improves, not turns: card NCO 3.55% vs 3.82% y/y, delinquencies 5 qtrs better, consumer NCO 0.86% \u2014 the normalization the market fears is behind us. ROTCE 14.2%\u219217.0% (FY25\u2192Q2-26) is a re-rating being REPORTED in the numbers.\n\n**What proves us wrong:** ROTCE 4.2% with reserve build; UST10 \u22655.7% \u2192 COE \u226510.7% and warranted P/TBV below traded 1.83x."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "observable now; each cites a source",
+      "markdown": "1. UST10 5.24% and pressing up (FRED DGS10 2026-10-01): +~50bp \u2192 COE ~10.7% \u2192 warranted P/TBV at 18% ROTCE ~1.70x < 1.83x traded \u2014 discount-rate path kills the re-rating regardless of BAC execution (the live trip that hit JPM-001).\n2. H1-26 revenue +11% rides a markets/IB boom (IB +50%, S&T $7.1B, 8-K); ~$3\u20134B/yr fee normalisation with comp +5% snaps efficiency above 60% \u2014 falsifies the structural claim.\n3. ~100% payout is funded by CET1 drawdown 11.5\u219211.2% (8-K); any credit/regulatory reset forces a buyback cut and the share-shrink engine (shares \u22125.6% y/y) stalls.\n4. Loans +6.1% y/y on 1.17% ACL at cycle-low card NCOs \u2014 model underwrites normalization at today's level; a 2027 consumer re-leveraging to 4.5% NCO reverses the reserve tailwind."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "2029, down ~25%: the 2027 cuts landed deeper than the deposit-beta cushion \u2014 NII rolled over as the securities-repricing tailwind exhausted before deposit costs bottomed; efficiency stalled at 58% on wage inflation; a card cycle to 4.5% NCO forced reserve builds at CET1 11.2%, so buybacks were cut, book stopped compounding, and the 1.83x TBV premium de-rated toward 1.3x. The re-rating I called structural was half cyclical revenue windfall \u2014 the same weak joint Drew found in JPM-001, and 2027 came earlier than my horizon admitted."
+    },
+    {
+      "heading": "Base-rate confrontation",
+      "detail": null,
+      "markdown": "GLOBAL `quality_bank_rerating` is **4-for-4 KILL**: SMFG-001 (process), SMFG-002, MUFG-001, JPM-001 (valuation), 2026-07\u219209 (the kill ledger). What changes for BAC, or accept that DM bank re-ratings fail this regime. (1) **Entry below the warrant, not at it**: 1.83x P/TBV vs warranted 1.90\u20132.01x on an IMPROVING ROTCE (14.2\u219217.0%); JPM-001 entered at 3.16x \u2248 warranted with zero gap and unwound floorless. (2) **The kill has a floor**: BVPS $39.34 and a 2.4% yield at 1.37x P/BV draw an income bid; $44.50 = 1.13x BVPS is a falsification level, not a stop. (3) **The re-rating is reported, not promised** \u2014 ROTCE, efficiency, card-NCO turns are in the quarterlies, not peak-earnings denial. (4) SMFG/MUFG stalled on FX/ROE durability; BAC is US-domestic, no EM funding, rate-curve-neutral-to-positive. **Owned risk**: if this is JPM-001 again (fair-value entry, EV \u2248 0), the arithmetic below is the failure mode \u2014 sized to, not waved away."
+    },
+    {
+      "heading": "Phase-2 valuation & EV",
+      "detail": null,
+      "markdown": "COE 10.2% = UST10 5.24% + USD ERP 4.5\u20135.5% mid (above JPM-001's 9.3% \u2014 same regime, higher curve). BV0 BVPS $39.34, TBVPS $29.37. Sustainable ROTCE ~18%, g 1.5% (equity ~flat; TBVPS +~4%/yr is share-shrink). **Warranted P/TBV = (0.18\u22120.015)/(0.102\u22120.015) = 1.90x** (19% ROTCE \u2192 2.01x) vs traded 1.83x \u2192 gap +4\u201310%. 3y BVPS path: shares 7.02B\u2192~6.2B, BVPS ~$44.6, TBVPS ~$33.2 by H2-28.\n**Target $71.00** = 2.14x H2-28 TBVPS (~20% ROTCE warrant, efficiency ~56.5%); 2.4% gross yield adds to total return. **Kill $44.50** = 1.13x current BVPS \u2014 re-rating rejected. **EV**: up +32.1, down \u221217.2; p_up 0.48 at prior (re-rating mid-flight but partially spent at mom12 +29.6% \u2014 no markup); net div 2.0 (FWD div $1.28/y, 2.38% gross, Yahoo 2026-10-02, less ~15% WHT mix); fee/tax drag 0.5. expected = 0.48(32.1)+0.52(\u221217.2)+2.0(3)\u22120.5 = **+12.0%/3y \u2248 +4.0%/yr** \u2014 clears cash 3.88% at the house ~4pp/yr equity bar. **Symmetry** up/|down| 1.87 (library 2.10): below library, above the 1.3 auto-zero line; the tighter |down| is the yield/BV floor clipping the EM prior's \u221220% tail. **Kelly**: own +1.17 (0.48/0.172 \u2212 0.52/0.321) \u2248 library +1.16 \u2014 edge carried by payoff + down-side clip, not an inflated prior. **Edge taxonomy**: (a) analytical \u2014 NII durability (deposit-beta lag + swap/securities repricing) and the structural efficiency path mis-priced; (c) time-arbitrage \u2014 3y compounding and multiple-hold as ROTCE converges to 18\u201320%. Not claimed: washout/structural-flow/informational. 13F/insider/SI: UNAVAILABLE (no feed); index: S&P/Dow core, neutral; crowded-quality is exit-door risk but floored at 1.37x."
+    },
+    {
+      "heading": "Ownership & activity checklist",
+      "detail": null,
+      "markdown": "13F crowding: UNAVAILABLE (no dossier/feed). Insider (Form 4): UNAVAILABLE (not ingested). Index/passive: core S&P/Dow, no pending add \u2014 neutral. Short interest: UNAVAILABLE. Liquidity: ADV ~$1.87B (screen_GLOBAL 2026-09-15) \u2014 sub-1-day exit at 20% participation. Book correlation: GLOBAL is 100% cash (fund record 2026-10-03) \u2014 adds bank beta with no crowding; regime CAUTIOUS (DXY at 52w high) is a live risk-appetite headwind, but BAC is USD-domestic and benefits from the higher-for-longer tilt (idea card)."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": "PM",
+      "markdown": "Conviction 3/5 \u2014 real edge and a live reported re-rating, but EV clears the hurdle only at the line, momentum is partially spent, and UST10 5.24% is the standing trip that ended JPM-001. Recommend modest size; do not chase >3% above $53.75."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict)\n\n1. **Fact-check: arithmetic verifies, framing does not.** Warrant, EV, Kelly arithmetic re-derives. Sustained 18% is modeled: Q2-26 17.03% is one boom quarter vs FY25 full-year 14.2. Entry-below-warrant needs sustained >17.5%: above BAC's best quarter. At bear 15.5% (her own trigger) warrant 1.61x 20% relative ev_math moves return to the Bear under desk law). Testing the revised construction in BOTH directions \u2014 a wrongly-killed idea costs the fund as much as a wrongly-bought one.**\n\n0. **Re-derivation confirms.** 0.48(17.4) + 0.52(\u221220.0) + 6.0 \u2212 0.5 = +3.45%/3y \u2248 +1.15%/yr; file's 3.5 is rounding, not error. Gain at target 63.10/53.75 = +17.4% \u2713; loss at kill 44.50/53.75 = \u221217.2% vs down \u221220.0 \u2014 the 2.8pp now runs TOWARD registry (kill-level + slippage buffer), the inverse of the old flattering clip that ran away from it. Internally consistent.\n\n1. **Both directions tested \u2014 the kill is target-independent, not over-harsh.** (i) Re-run up her own target ladder: committed 1.90x/$63.10 \u2192 +1.2%/yr; best honest stretch 19% ROTCE \u2192 2.01x \u00d7 $33.2 = $66.7 (+24.2%) \u2192 +2.2%/yr; even the removed never-reported 20%-ROTCE 2.14x/$71.0 (+32.2%) \u2192 +3.5%/yr \u2248 cash with zero premium \u2014 and that target was precisely my Pt-4 kill. Her Pt-2 fair-value-entry concession (1.34x \u2248 1.37x traded) seals the arithmetic: with no mispricing the up-branch IS the compounding return and the down-branch is the false-thesis price (warrant collapses to 1.61x at her own 15.5% ROTCE trigger). No construction passes without re-clipping down_pct below registry \u2014 the flattering input already removed. (ii) The one favorable setting left \u2014 p_up 0.48 at prior \u2014 cannot save it: breakeven prior to merely MATCH cash is 0.70, twenty-two points above the archetype's 0.48. Robust at every honest p_up; own-Kelly \u22120.59 (0.48/0.20 \u2212 0.52/0.174) sizes to zero.\n\n2. **p_up held \u2014 her reasoning is correct, and I stay consistent with my T-GLOBAL-NVO-002 adjudication.** The MOMENTUM withdrawal is sleeve evidence, not thesis evidence: a \u22129.7% post-promotion drawdown and absence from the 10-03 screen are price-path facts, silent on whether 18% ROTCE sustains. The archetype prior (0.48, n=20) already prices rerating-attempt failure, and momentum-spent was embedded in the original no-markup note \u2014 counted once. One reject, one haircut (Pt 5 carried it). Stacking a second cut would be the named double-count, and it could only deepen a kill already carried by payoff arithmetic.\n\n3. **VERDICT: KILL_RECOMMENDED \u2014 confirmed, judge-ready, no further fix round.** Strongest sentence: at the registry down and her own sustainable-multiple target, BAC needs a 0.70 probability of re-rating success just to match 3.88% cash \u2014 the archetype prior is 0.48, the desk is 4-for-4 killing this archetype, and no honest input moves that arithmetic. Send to Aldrich as the 5th; the conceded QC hygiene item (stale 09-15 screen quote, Revision 5) is flagged and does not block.\n\nstage_log: {stage: re_attacked, at: 2026-10-03T16:00:00+07:00, actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "(Sloane answers each numbered Bear point)\n\n1. **CONCEDE** \u2014 entry-below-warrant is single-assumption: at my own 15.5% trigger, warrant 1.61x < 1.83x traded. **REFUTE** narrowly \"one boom quarter\": 17.03% rides sustained NII mechanics (rate-paid 0.48% vs 0.58% y/y through a hike; ex-Markets 2.57% +13bp; 51% low-cost checking) \u2014 a backstop JPM-001 lacked; it does not re-derive the warrant.\n2. **CONCEDE** \u2014 on ROE 13.2%, warranted P/BV 1.34x vs 1.37x traded; the \"gap\" was the AOCI TBV denominator, not mispricing; fair entry earns \u2248 COE. Mom12 +29.6% spent the edge.\n3. **CONCEDE** \u2014 base rate binds: 4-for-4 GLOBAL; out-of-window cuts my standing; on honest inputs this is JPM-001 in near-book costume.\n4. **CONCEDE** (buys the numbers) \u2014 down_pct \u221217.2\u2192\u221220.0, target 71.00\u219263.10 (1.90x\u00d7$33.2), up_pct 32.1\u219217.4, expected_pct 12.0\u21923.5. Rerun: 0.48(17.4)+0.52(\u221220)+6.0\u22120.5 = **+3.5%/3y \u2248 +1.2%/yr** vs cash 3.88%. Symmetry 0.87 < 1.3; own-Kelly \u22120.59 \u2192 sizes to zero. The yield/BV \"floor\" was exit discipline, not a floor.\n5. **CONCEDE** \u2014 $59.52 (09-16) \u2192 $53.75 = \u22129.7%, absent from the 10-03 live screen: MOMENTUM already rejected the name; only the 0-for-4 archetype remains. QC: quoted the stale 09-15 screen \u2014 hygiene error; live rows only.\n6. **CONCEDE** (entry path) \u2014 CAUTIOUS, DXY at the 52w-high, fed_path live into FOMC 10-28/29: a hike hits the $44.50 kill before any ROTCE print \u2014 a beta-kill of a possibly-right trade; moot under KILL, but should have stood aside.\n7. **CONCEDE** the flattering down-clip; anti-gaming otherwise stands. p_up held at 0.48 prior (point 5 not stacked); the kill rides the payoff re-anchors alone.\n8. **MAJOR_REVISION** agreed \u2192 recommendation **KILL** \u2014 5th of 5 for GLOBAL quality_bank_rerating, matching my JPM/MUFG pattern. EV lands ~2.7pp/yr below cash, Kelly-negative \u2014 killed by fair-value-entry arithmetic, not the mechanism; the structural-NII leg is banked for a future name entered at its warrant."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich)\n\nCalibration (standing correction, stated per role card): this fund's scored kills average +7.0% above the kill price, 15 of 22 left gains on the table, so before paying for this kill I stressed it in both directions \u2014 the wrongly-killed test, not just the wrongly-passed one.\n\nVERDICT: KILL \u2014 reason_tag `valuation`.\n\n1. **Protocol: complete.** Chain monotonic (draft 10:35 \u2192 attacked 12:30 \u2192 revision 15:00 \u2192 re_attacked 16:00), all 8 Bear points answered, revision own-text 291 \u2264 300, re-attack cycle fired correctly on the >20% ev_math move (12.0 \u2192 3.5), lint PASS (word WARN tolerated, append-only logs). estimates_committed 10:20 precedes draft 10:35; post-attack, every input moved down or held \u2014 the two flattering moves (down-clip, never-reported 2.14x target) were removed, not defended. No unflagged raise. LESSON-0002 N/A (first BAC kill in the ledger).\n2. **Gains-left test.** The structural-NII backstop (51% low-cost checking, rate-paid 0.48%, ex-Markets 2.57% +13bp) is real \u2014 but it defends the p_up prior, which was already granted at 0.48; it does not re-derive the entry warrant, exactly as the REFUTE conceded. Granting 19% ROTCE (2.01x \u00d7 $33.2 = $66.70, +24.2%) still yields ~2.2%/yr, sub-cash; clearing 3.88%/yr at honest down_pct needs either +34.5% up (2.18x TBV \u2014 above even the removed target) or p_up 0.70. No fundable bull construction exists.\n3. **Wrongly-passed test.** Sub-cash is structural: the fair-value identity stands (warranted P/BV 1.34x vs traded 1.37x), so a fair-value entry earns \u2248 COE 10.2%. Re-derived: +3.45%/3y \u2248 +1.15%/yr, 2.7pp/yr below cash; symmetry 0.87 < 1.3 auto-zero; own-Kelly \u22120.59 sizes to zero. PASS_REDUCED unavailable \u2014 a Kelly-negative position is not fundable at any positive fraction, and both analyst and Bear concur."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(size block above records the sizing engine output; deviation only downward)"
+    }
+  ]
+}

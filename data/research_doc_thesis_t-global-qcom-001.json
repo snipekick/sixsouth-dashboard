@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-QCOM-001",
+  "title": "Qualcomm (QCOM)",
+  "meta": {
+    "id": "T-GLOBAL-QCOM-001",
+    "book": "GLOBAL",
+    "ticker": "QCOM",
+    "name": "Qualcomm",
+    "sector": "SEMIS",
+    "factors": [
+      "semis_ai",
+      "us_tech"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": "2026-11-04",
+    "estimates_committed_at": "2026-09-26T10:30:00+07:00",
+    "drafted": "2026-09-26T10:31:00+07:00",
+    "judged": "2026-09-26T11:20:00+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 190.0,
+    "target": 240.0,
+    "kill": 140.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "DCF-central ~$215 (COE 10%) plus 9-mo re-rate completion: the 11-04 FY27-guidance confirm and the Apple-license clarity (effective 2027-04-01) carry the multiple ~20x -> ~23x FY27E $10.5, the pre-run re-rate zone (May high ~$250 zone). Top ~$25 of target is multiple expansion, flagged.",
+    "price": 178.0500030517578,
+    "price_asof": "2026-10-15"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 26.0,
+    "p_down": 0.6,
+    "down_pct": -26.0,
+    "net_div_yield_pct_pa": 1.94,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": -4.2,
+    "horizon_years": 0.75,
+    "carry_pct": 0.96,
+    "kelly_full_pct": -62.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "momentum_continuation (the base-rate library): +30%/-22%, 9mo, n=200",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 140.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop: the pre-mortem's own gap-through landing (~$140, -26% from entry) \u2014 below $140 QCOM is back at ~15x normalized EPS and the 6-mo re-rate ($124 Apr low -> $202) is unwound; kill moved 158->140 (Bear pt 2) so down_pct -26 is the honest falsification level, not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2026-11-06",
+      "action": "review",
+      "condition": "post-FY26-Q4 print (11-04): review unless FY27 EPS guide >= ~$10 and op-margin guide >= ~25%; a guide miss unwinds the ~20x forward multiple"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 20.0,
+      "action": "review",
+      "name": "quarterly op margin (%)",
+      "source": "FY27 Q1 10-Q"
+    }
+  ],
+  "model": null,
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-09-26T10:31:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-09-26T10:47:00+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-09-26T11:06:00+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-09-26T11:20:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": {
+    "thesis_id": "T-GLOBAL-QCOM-001",
+    "ticker": "QCOM",
+    "book": "GLOBAL",
+    "killed": "2026-09-28",
+    "px_at_kill": 201.97000122070312,
+    "reason": "base_rate",
+    "px_now": 178.0500030517578,
+    "px_asof": "2026-10-15",
+    "move_pct": -11.8
+  },
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**EARNINGS_QUALITY_FLAGS gate:** accruals (NI\u2212CFO)/avg TA \u2248 \u22122% FY24, \u2248 \u22129% FY25 (charge-heavy year) \u2014 CFO consistently above NI, cash conversion clean. No manipulation-class divergence flags; SBC ~$1.5B/yr disclosed, subtracted in the bridge below. US 10-K filer, no VIE/concentration structure flags. Gate clears.\n\n**Mid-cycle income build (FY27E; primary: FY2025 10-K segment table + FY26 10-Qs):**\n- Revenue: Handsets ~$26.9B (= FY25 $27.79B; share-steady, NO MediaTek recapture assumed), Automotive ~$5.5B (FY25 $3.96B +36%; TTM $5.07B), IoT ~$7.4B (TTM $7.05B; the AI-PC/data-center legs sit inside IoT and are treated as a call option, not a number here), QTL ~$5.8B (TTM $5.66B; Apple global-license renewal 2027-04-01 removes the overhang; no bump assumed). Total ~$45.6B (+3% vs FY25 $44.28B).\n- Margin: op margin 27% (FY25 28.0%, TTM 23.7% \u2014 assumes the opex pivot stops bleeding, nothing more) \u2192 op income ~$12.3B.\n- Owner-earnings bridge: \u2212$1.5B SBC, \u2212$0.2B net interest, tax ~13.5% \u2192 normalized NI ~$10.4B; ~1.05B shares post-buyback (1.071B out, >$2B/qtr) \u2192 **mid-cycle EPS ~$9.5\u201310.5, central $10.0.**\n- DCF (VAL_COMPOUNDER_QUALITY): g = reinvestment \u00d7 ROIIC \u2014 growth self-funded at 25%+ ROIC with high FCF conversion (FY25 FCF $12.8B; TTM $10.4B, FCF margin 23.6%). COE 10% (top of house USD band, beta 1.68). FCF base $11.5B normalized; growth 8\u21925\u21923%, fade to COC by y10; terminal g 3% = US nominal GDP. **Fair value \u2248 $210\u2013235/sh, central ~$215.** Multiple-survival: implied exit at target \u2248 23x FY27E vs ~20x entry \u2014 flagging the expansion.\n- 3-assumption sensitivity: (1) handset share-steady vs MediaTek displacement (base $26.9B; structural share loss \u2192 EPS ~$8.5, the kill zone); (2) op-margin recovery 27% (bear 22% \u2192 EPS ~$8.0); (3) Apple license terms/closure (QTL $5.66B leg at risk)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: QCOM is a MediaTek-share-loss / handset-softness story in decline, and the big 6-month move is an AI-narrative bounce (partly short-cover) that the weakening handset/licensing base cannot sustain."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the handset + licensing franchise is structurally fading (Android share grab, Samsung-modem lead loss), so the recent run is a momentum bounce; the re-test of the prior high fails and the margin trough proves the model broke.\n\n**Why wrong:** three fundamentals the tape under-weights. (1) The FY26 handset fade is a mid-cycle trough, not terminal: TTM handset $25.9B sits under FY25's $27.79B, but Automotive (+36% FY25; TTM $5.07B) and IoT (+22%; TTM $7.05B) carry revenue, and QTL's single largest overhang \u2014 the Apple global patent license \u2014 was renewed effective 2027-04-01, a licensing-clarity event inside this 9-month window. (2) The Q3 FY26 margin trough (16.4% op vs 26.6% a year ago, 10-Q) is the opex pivot (layoffs, restructuring) hitting the P&L, not a proven model break \u2014 a one-off aeroplane; 27% op is recoverable without a new handset share win. (3) The data-center/AI entry (AWS deal) is optionality for the multiple, not yet revenue to the valuation \u2014 but its existence caps the pure handset-only bear case. Edge taxonomy: **(a) analytical** \u2014 the market reads the margin trough as structural; it is a compressed-cycle midpoint with a dated licensing catalyst. Not (c)/(d) on its own.\n**What proves us wrong:** FY27 Q1 op margin < 20%; handset revenue still down YoY at flat units; Apple-closure QTL terms below the ~$5.6B run-rate; or FY27 EPS guide < ~$10 at the 11-04 print."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a filing/IR line",
+      "markdown": "1. MediaTek displacement is LIVE and the run is NOT a handset recovery: TTM handset revenue $25.9B is BELOW FY25's $27.79B (10-K segment table) while Android units are growing \u2014 a share-loss tell. If the next 10-Q shows handset down YoY at flat units, the opex-pivot + share story is structural and the $10 mid-cycle EPS is unreachable.\n2. The freshest financial fact is margin compression, not recovery: Q3 FY26 op margin 16.4% on $9.95B revenue (vs 26.6% / $10.37B a year earlier, FY26 10-Q); revenue fell sequentially Q1\u2192Q3 ($12.25B \u2192 $9.95B). The +56%/6m re-rate is guidance-led \u2014 two quarters of margin swing must arrive to justify it.\n3. The multiple is no longer a discount: at ~$202 the stock trades ~19.8\u201321.9x forward EPS (trailing EPS ~$8.6) \u2014 around my DCF central ~$215, so \u221218.8% off-high is a re-rate ~60% spent, not a value entry. A 11-04 guide miss unwinds it (date kill).\n4. Apple license closure risk: the global license renewal is effective 2027-04-01; if the disclosed QTL terms land below the ~$5.7B run-rate, both the licensing leg and the clarity narrative de-rate (10-K/QTL disclosure, pre-closure).\n5. Momentum-crash structure \u2014 the archetype's dominant failure: the 6 months already executed a +102% melt-up (April low ~$124) into a ~$250 rejection (May), then ~20% give-back; mom1 +24% is a second push into that rejected zone under a CAUTIOUS post-hike regime (the macro regime memo). The base-rate note counsels holding off in exactly this configuration."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is mid-2027 and this position lost 30%+. The most likely reason: the FY27 EPS recovery did not arrive \u2014 op margin stayed below 20% through FY27 Q1 (the kpi kill, not cut), MediaTek kept taking handset share, and the 11-04 guide was soft; with the Fed funded-up and DXY ~101, a ~20x-forward name de-rated as the re-rate reversed. That is the momentum-crash tail, likely gapping through the $158 kill to ~$140 (\u221226% from entry). Second joint: I chased \u2014 bought above $196 into the mom1 spike, so the fill, not the discipline, decided the outcome. **Sizing input to PM:** conviction 3/5 \u2014 the variant is real and the dated licensing catalyst is inside the window, but the run is ~60% spent and the entry is the trade (EV +2.0% at \u2264$190, ~\u22124% at the current $202; do not size at market). Liquidity clean: ADV ~$17.8M, days-to-exit trivial. Correlation ~0 to the current GLOBAL card set (no semis sleeve) \u2014 genuinely diversifying. Kelly: own +0.24 (p_up .42 / up 26 / down \u221217) vs library +0.61 (momentum_continuation .50 / +30 / \u221222) at the given quad \u2014 the whole gap is my two deviations: p_up \u22128pp (CAUTIOUS regime + failed 1-month-reversal filter + earnings-not-yet-delivered) and up_pct \u22124pp (target trimmed to re-rate completion, not the DCF moon)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "(Drew appends verbatim; survives the Judge verdict \u2014 never edited by a later stage)\n\n**Drew \u2014 BEAR \u2014 2026-09-26T10:47+07:00 (frontier).**\n\n0. Fact-check: no QCOM dossier in data/dossiers/ \u2014 load-bearing figures (handset TTM $25.9B, Q3 FY26 op margin 16.4%) unverifiable in-repo; the one checkable number is wrong (\"ADV ~$17.8M\" vs screen adv_value $2.29B, ~128x, favorable direction, but it impeaches the rest). And estimates_committed_at 12:00+07:00 is ~75 min ahead of the 10:45 wall clock: integrity anomaly, escalated to QC.\n1. EV below cash: +2.0% over 0.75y < post-hike USD cash ~3.88% annualized (\u2248+2.9%/window; the macro regime memo); the analyst's own arithmetic pays less than T-bills for a momentum-crash tail.\n2. down_pct \u221217 contradicts the analyst's own pre-mortem (gap through $158 to ~$140, \u221226% from entry): at \u221226, EV \u2248 \u22123%; the sign flips on their own words. And p_up (0.42 vs 0.50) and up_pct (+26 vs +30) were haircut while down_pct was narrowed (\u221217 vs \u221222): lint-legal optimism inside the band.\n3. The entry falsifies the archetype: spot $201.97 is 6.3% above the $190 limit \u2014 either it never fills (a slot, not a position) or it fills on the \u22126% break that already invalidates continuation. Adverse selection by construction.\n4. Fragile \u2014 single-assumption dependency: base case needs op margin 16.4%\u219227% in ~4 quarters; the analyst's own bear (22% \u2192 EPS ~$8.0) is below their own kill-zone EPS ~$8.5. \"One-off aeroplane\" asserted, not evidenced; handset TTM $25.9B < FY25 $27.79B says the base still shrinks.\n5. Fact not in the thesis: mom12 = \u22124.22% (fund record): the +56%/6m run is a post-drawdown rebound that hasn't reclaimed the trailing year, the registry's documented failure, a second push (mom1 +24%) into the May ~$250 rejection under CAUTIOUS. The thesis quotes mom6, omits mom12.\n6. Fair compensation, not mispricing: ~20x forward with live share loss and fresh margin compression is priced risk; $240 needs 23x FY27E \u2014 ~$25 of $50 is flagged multiple expansion, pre-paying FY27 under a hiking Fed, DXY ~100.8.\n7. Catalyst third-party risk: \"Apple-license clarity\" assumes renewal terms \u2265 the ~$5.6B QTL run-rate; terms undisclosed until closure: convenience baked into the variant.\n8. Steelmanned pre-mortem: the limit fills 11-05, the day after a soft FY27 guide gaps QCOM through $190 \u2014 the fund buys the unwind it refused to chase, exactly as the date-kill fires.\n\nDrew: KILL_RECOMMENDED \u2014 the analyst's own numbers don't clear cash, the EV flips negative on the analyst's own pre-mortem downside, and a momentum thesis whose fill requires the momentum to break is dead either way."
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "**Verdict: CONCEDE KILL_RECOMMENDED (option b).** No positive-EV fill exists: even at the registry ceiling (p_up 0.50) the $190 leg pays +0.96% 20% rel:** expected_pct 2.0\u2192\u22124.2 and down_pct \u221217\u2192\u221226 exceed threshold (>100% and 53%); p_up/p_down inside it. Returns to Drew before the Judge.\n\n[\"point 9: re-attack \u2014 bounded re-attack under the >20% rel trigger. Revision arithmetic verified: 0.40\u00d726 \u2212 0.60\u00d726 + 1.94\u00d70.75 \u2212 0.5 = \u22124.2; kill 140 < entry 190 < target 240; \u00b126 vs \u00b126.3 lint-coherent. Concession honest: at the registry ceiling p_up 0.50, entry 190 pays +0.96% < +2.91%/window post-hike cash (the macro regime memo: Fed +25bp delivered, DXY ~100.8, CAUTIOUS); every cash-clearing fill (\u2264$186 at p_up 0.50, \u2264$178 at 0.40) sits below where the momentum structure has already broken. All 8 points answered one-for-one; no positive-EV configuration exists.\"]\n\nDrew: KILL_RECOMMENDED (re-attack confirmed)"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "(Aldrich; also sets verdict: frontmatter. PASS_REDUCED states the size fraction, e.g. 0.5x.)\n\n**Verdict: KILL \u2014 reason_tag: base_rate.** Standing correction applied (+7.0%/15-of-22): a kill spends the 60-day cooldown and buys cash, so I re-checked for a passable construction before killing. The re-check fails, and the correction cannot waive a kill on a thesis whose own revised arithmetic is negative.\n\n1. **No positive-EV configuration exists.** At the registry ceiling p_up 0.50, the conceded falsification level (down \u221226) makes the payoff symmetric: +0.96% < +2.91%/window cash. Clearing cash requires un-conceding down to \u221222 \u2014 precisely the band optimism Drew caught (pt 2) \u2014 plus up 30 (the flagged multiple-expansion moon) at registry-ceiling p_up despite mom12 \u22124.22%, the registry's own documented failure configuration, under a CAUTIOUS post-hike regime. The p_up haircut to 0.40 is argued and earned, not shading.\n2. **PASS_REDUCED unavailable:** expected_pct \u22124.2 is negative; no fraction of a negative-EV position clears the cash hurdle.\n3. **Not REVISE_CONSTRUCTION:** the rebuild already happened (p_up 0.42\u21920.40, down \u221217\u2192\u221226, kill 158\u2192140) and the rebuilt version still fails; the symmetric payoff is the honest falsification level, not a mis-specification. The wrongness is in the trade: every cash-clearing fill (\u2264$186 at 0.50, \u2264$178 at 0.40) is a momentum break that has already invalidated the archetype \u2014 adverse selection by construction (conceded pt 3).\n4. **Chain verified:** draft 10:31 \u2192 attacked 10:47 \u2192 revision 11:06, monotonic, correct roles; Bear log verbatim; analyst conceded KILL_RECOMMENDED and Drew's re-attack confirmed with arithmetic verified (\u22124.245; 140 < 190 < 240 coherent). No prior QCOM kill in the ledger \u2014 this cooldown spend is fresh, not a LESSON-0002 repeat."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}
