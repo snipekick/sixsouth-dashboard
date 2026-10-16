@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "asof": "2026-10-16T16:00:24+07:00",
+  "asof": "2026-10-16T20:00:25+07:00",
   "counts": {
     "theses": 40,
     "ideas": 15,
@@ -27,7 +27,7 @@
     "scored": 35,
     "avoided": 22,
     "missed": 13,
-    "avg_move_pct": -3.9,
+    "avg_move_pct": -4.2,
     "rows": [
       {
         "thesis_id": "T-GLOBAL-NVO-001",
@@ -69,9 +69,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 1180.0,
         "reason": "valuation",
-        "px_now": 1305.0,
+        "px_now": 1300.0,
         "px_asof": "2026-10-16",
-        "move_pct": 10.6
+        "move_pct": 10.2
       },
       {
         "thesis_id": "T-INDO-ELSA-001",
@@ -80,9 +80,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 640.0,
         "reason": "process",
-        "px_now": 580.0,
+        "px_now": 575.0,
         "px_asof": "2026-10-16",
-        "move_pct": -9.4
+        "move_pct": -10.2
       },
       {
         "thesis_id": "T-INDO-PNBN-001",
@@ -146,9 +146,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1305.0,
+        "px_now": 1280.0,
         "px_asof": "2026-10-16",
-        "move_pct": -2.6
+        "move_pct": -4.5
       },
       {
         "thesis_id": "T-GLOBAL-SMFG-002",
@@ -168,9 +168,9 @@
         "killed": "2026-08-05",
         "px_at_kill": 695.0,
         "reason": "process",
-        "px_now": 580.0,
+        "px_now": 575.0,
         "px_asof": "2026-10-16",
-        "move_pct": -16.5
+        "move_pct": -17.3
       },
       {
         "thesis_id": "T-GLOBAL-AMD-001",
@@ -201,9 +201,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1360.0,
         "reason": "liquidity",
-        "px_now": 1305.0,
+        "px_now": 1300.0,
         "px_asof": "2026-10-16",
-        "move_pct": -4.0
+        "move_pct": -4.4
       },
       {
         "thesis_id": "T-INDO-TAPG-001",
@@ -212,9 +212,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1830.0,
         "reason": "valuation",
-        "px_now": 1780.0,
+        "px_now": 1765.0,
         "px_asof": "2026-10-16",
-        "move_pct": -2.7
+        "move_pct": -3.6
       },
       {
         "thesis_id": "T-GLOBAL-MUFG-001",
@@ -234,9 +234,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 400.0,
+        "px_now": 388.0,
         "px_asof": "2026-10-16",
-        "move_pct": -10.7
+        "move_pct": -13.4
       },
       {
         "thesis_id": "T-GLOBAL-COST-001",
@@ -267,9 +267,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 680.0,
+        "px_now": 675.0,
         "px_asof": "2026-10-16",
-        "move_pct": -9.9
+        "move_pct": -10.6
       },
       {
         "thesis_id": "T-GLOBAL-JPM-001",
@@ -410,9 +410,9 @@
         "killed": "2026-10-12",
         "px_at_kill": 2010.0,
         "reason": "other",
-        "px_now": 1780.0,
+        "px_now": 1765.0,
         "px_asof": "2026-10-16",
-        "move_pct": -11.4
+        "move_pct": -12.2
       }
     ]
   },
@@ -549,13 +549,13 @@
       "entry": 1840.0,
       "target": 2196.0,
       "kill": 1240.0,
-      "price": 1780.0,
+      "price": 1765.0,
       "expected_pct": 4.7,
       "p_up": 0.42,
       "kelly_full_pct": 79.4,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -11.4,
+      "kill_move_pct": -12.2,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-tapg-002"
     },
@@ -660,7 +660,7 @@
       "pm_pct": 2.5,
       "has_model": false,
       "kill_move_pct": null,
-      "entry_state": "not staged",
+      "entry_state": "waiting",
       "doc": "research_doc_thesis_t-global-nvo-002"
     },
     {
@@ -913,13 +913,13 @@
       "entry": 760.0,
       "target": 1140.0,
       "kill": 532.0,
-      "price": 680.0,
+      "price": 675.0,
       "expected_pct": 7.7,
       "p_up": 0.4,
       "kelly_full_pct": 56.9,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -9.9,
+      "kill_move_pct": -10.6,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-klbf-001"
     },
@@ -1017,13 +1017,13 @@
       "entry": 390.0,
       "target": 527.0,
       "kill": 312.0,
-      "price": 400.0,
+      "price": 388.0,
       "expected_pct": 15.6,
       "p_up": 0.48,
       "kelly_full_pct": 324.6,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -10.7,
+      "kill_move_pct": -13.4,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-towr-001"
     },
@@ -1043,13 +1043,13 @@
       "entry": 1840.0,
       "target": 2500.0,
       "kill": 1060.0,
-      "price": 1780.0,
+      "price": 1765.0,
       "expected_pct": -8.3,
       "p_up": 0.3,
       "kelly_full_pct": -53.6,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -2.7,
+      "kill_move_pct": -3.6,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-tapg-001"
     },
@@ -1069,13 +1069,13 @@
       "entry": 1355.0,
       "target": 1500.0,
       "kill": 750.0,
-      "price": 1305.0,
+      "price": 1300.0,
       "expected_pct": -20.8,
       "p_up": 0.28,
       "kelly_full_pct": -292.5,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -4.0,
+      "kill_move_pct": -4.4,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-dsng-002"
     },
@@ -1173,13 +1173,13 @@
       "entry": 685.0,
       "target": 1062.0,
       "kill": 377.0,
-      "price": 580.0,
+      "price": 575.0,
       "expected_pct": -12.25,
       "p_up": 0.2,
       "kelly_full_pct": -56.1,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -16.5,
+      "kill_move_pct": -17.3,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-elsa-002"
     },
@@ -1225,13 +1225,13 @@
       "entry": null,
       "target": null,
       "kill": null,
-      "price": 1305.0,
+      "price": 1280.0,
       "expected_pct": -5.5,
       "p_up": 0.33,
       "kelly_full_pct": -35.8,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -2.6,
+      "kill_move_pct": -4.5,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-lsip-001"
     },
@@ -1407,13 +1407,13 @@
       "entry": 620.0,
       "target": 885.0,
       "kill": 403.0,
-      "price": 580.0,
+      "price": 575.0,
       "expected_pct": -3.8,
       "p_up": 0.22,
       "kelly_full_pct": -32.1,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -9.4,
+      "kill_move_pct": -10.2,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-elsa-001"
     },
@@ -1485,13 +1485,13 @@
       "entry": 1170.0,
       "target": 1650.0,
       "kill": 655.0,
-      "price": 1305.0,
+      "price": 1300.0,
       "expected_pct": -8.9,
       "p_up": 0.33,
       "kelly_full_pct": -50.4,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": 10.6,
+      "kill_move_pct": 10.2,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-dsng-001"
     }
@@ -2508,7 +2508,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 1305.0,
+      "price": 1300.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2518,9 +2518,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 1180.0,
         "reason": "valuation",
-        "px_now": 1305.0,
+        "px_now": 1300.0,
         "px_asof": "2026-10-16",
-        "move_pct": 10.6
+        "move_pct": 10.2
       }
     },
     {
@@ -2554,7 +2554,7 @@
         }
       ],
       "dossier": null,
-      "price": 580.0,
+      "price": 575.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2564,9 +2564,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 640.0,
         "reason": "process",
-        "px_now": 580.0,
+        "px_now": 575.0,
         "px_asof": "2026-10-16",
-        "move_pct": -9.4
+        "move_pct": -10.2
       }
     },
     {
@@ -2658,7 +2658,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 680.0,
+      "price": 675.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2668,9 +2668,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 680.0,
+        "px_now": 675.0,
         "px_asof": "2026-10-16",
-        "move_pct": -9.9
+        "move_pct": -10.6
       }
     },
     {
@@ -2690,7 +2690,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 1305.0,
+      "price": 1280.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2700,9 +2700,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1305.0,
+        "px_now": 1280.0,
         "px_asof": "2026-10-16",
-        "move_pct": -2.6
+        "move_pct": -4.5
       }
     },
     {
@@ -2823,7 +2823,7 @@
         "kind": "full",
         "doc": null
       },
-      "price": 1780.0,
+      "price": 1765.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2833,9 +2833,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1830.0,
         "reason": "valuation",
-        "px_now": 1780.0,
+        "px_now": 1765.0,
         "px_asof": "2026-10-16",
-        "move_pct": -2.7
+        "move_pct": -3.6
       }
     },
     {
@@ -2887,7 +2887,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 400.0,
+      "price": 388.0,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
       "kill": {
@@ -2897,9 +2897,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 400.0,
+        "px_now": 388.0,
         "px_asof": "2026-10-16",
-        "move_pct": -10.7
+        "move_pct": -13.4
       }
     }
   ],
