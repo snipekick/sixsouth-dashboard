@@ -17,9 +17,9 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "attacked",
-    "verdict": null,
-    "size_multiplier": null,
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
     "supersedes": "T-GLOBAL-NVO-001",
     "catalyst_date": null,
     "estimates_committed_at": "2026-10-03T03:29:04+00:00",
@@ -50,9 +50,9 @@
     "kelly_full_pct": 96.3
   },
   "sizing": {
-    "script_pct": 0.0,
-    "pm_pct": 0.0,
-    "deviation_reason": "Kelly <= 0 at spot: the sizing engine recommended_pct 0.0 (quarter-Kelly after haircut binding); Judge PASS_REDUCED at 0x multiplies any recommended size to zero, binding like a kill. No ticket staged."
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "Judge PASS_REDUCED 0.25 binds like a KILL on the re-run script anchor 10.0% NAV (binding constitution_cap; kelly_quarter 24.07, book_heat_after 0.5/12.0) = 2.50% exact product, applied unsoftened, no further deviation; Voss CLEAR_WITH_NOTES is non-blocking (eu_cycle tag mis-fit -> MONTHLY_IC retag; -5% stress pin ~2-sigma vs 38% vol)."
   },
   "base_rate": {
     "rate": 0.28,
@@ -131,10 +131,32 @@
       "at": "2026-10-16T03:07:27+07:00",
       "actor": "Drew",
       "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-16T13:14:24+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-10-16T13:25:30+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-10-16T13:30:19+07:00",
+      "actor": "Harrison",
+      "role": "PM_GLOBAL"
     }
   ],
   "kill_outcome": null,
-  "entry_status": null,
+  "entry_status": {
+    "state": "not staged",
+    "asof": "2026-10-16T02:12:52+07:00",
+    "why": "the portfolio manager has not sized it yet"
+  },
   "sections": [
     {
       "heading": "New evidence",
@@ -195,6 +217,16 @@
       "heading": "Bear attack",
       "detail": "(re-attack, 2026-10-16) \u2014 Drew \u2014 verdict: SURVIVES_WITH_SCARS",
       "markdown": "0. **Fact-check:** the three load-bearing numbers hold \u2014 target 57.21, kill 16.59, p_up 0.28 verified in frontmatter, unchanged from my 10-03 re-attack. Entry 24.00 new. Arithmetic re-derived: up 57.21/24\u22121=+138.4 \u2713; down 16.59/24\u22121=\u221230.9 \u2713; expected 0.28\u00d7138.4+0.72\u00d7(\u221230.9)+11.5=+28.0 \u2713; carry-adj payoff (138.4+11.5)/(30.9\u221211.5)=7.73 \u2014 no symmetry defect. **But the Revision's stated rationale is arithmetically FALSE**: \"the highest price at which the fully-shaded prior pays the hurdle.\" Solve 0.28\u00d7(57.21/E\u22121)+0.72\u00d7(16.59/E\u22121)+11.5=11.6 \u2192 **E=$27.94**. $24 sits $3.94 (16%) BELOW hurdle-parity \u2014 it is the Judge's band cap, not the EV-optimal level. [MATERIAL]\n1. Widest error bar \u2014 the +4/+7/+7 re-acceleration \u2014 now largely CURED: the flat-0% re-run (~$27-30) sits ABOVE the $24 entry, so the trade no longer dies on one assumption. Concede. [MINOR]\n2. Variant perception unchanged and still narrow; nothing resolves before the Feb-27 guide. [MINOR]\n3. Base rate 0.28 held, inside my 0.25-0.30 band; each cut maps to a named point. [MINOR]\n4. **Construction, both directions.** Optimistic tail clean (payoff 7.73). The defect is now the OPPOSITE: the entry is set below hurdle-parity, so the ticket fires only on a ~39% drawdown \u2014 the conservatism compounds into unrealizability. [MATERIAL]\n5. **New disconfirming fact (not in thesis):** NVO's 1-year low is **$36.04 (2026-03-23)** \u2014 $24 is **33% below any print in 12 months**; spot $39.42 (10-15, +3.41% day) is moving away. Source: market-data snapshot series NVO. The entry is a wish, not a price the market has offered. [MATERIAL]\n6. Steelman: the failure I add is not a loss but a **dead slot** \u2014 the fund never fills, the research budget is spent, the V-shape from $37 is missed; or the fill arrives WITH a Feb-27 kill trigger, a value trap. [MINOR]\n7. Anti-gaming: stage_log monotonic (\u2026judged 16:20 \u2192 revise 10-16T02:30 \u2192 re_attacked); estimates_committed_at 03:29Z untouched; diff touches only entry/ev_math/status/log \u2014 no retro-edit. **Stale text flagged:** base_rate.source still reads \"entry 37\"; sizing.deviation_reason still reads \"Kelly \u2264 0 at spot\" \u2014 both superseded by entry 24. Escalate to QC_FLAGS. [MINOR]\n8. **Stop-objecting price:** I stop objecting at any entry \u2264 ~$28 GATED on the Feb-27 re-acceleration (clause A) \u2014 where the prior pays the hurdle and the level is fillable. The $24 ticket is not objectionable on EV, only on reachability.\n\nstage_log: {stage: re_attacked, at: 2026-10-16T03:07:27+07:00, actor: \"Drew (BEAR)\"}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED \u2014 size_multiplier 0.25** (entry $24.00; a resting limit \u2014 no trade at spot). Not KILL: no dispositive flaw. Not REVISE: the entry is a legitimate no-trade lane, not a \u00a76a construction defect.\n\n**Standing correction applied.** The record is 35 KILL / 5 PASS_REDUCED / 0 fills; 12 of 28 scored kills left gains on the table. I will not kill a right-shaped thesis over its entry price, and I will not re-stamp the 0\u00d7 NO_TRADE the lint cannot carry \u2014 the no-trade is expressed as a real 0.25 fraction resting at a limit.\n\n1. **Drew pt 0 \u2014 SUSTAINED, cosmetic.** The Revision's rationale is arithmetically false: parity is $27.93 (0.28(57.21/E\u22121)+0.72(16.59/E\u22121)+11.5=11.64), so $24 sits ~14% BELOW it \u2014 not \"the highest price that pays.\" But below-parity is conservative, not defective: at $24 expected is +28.0%/3y vs +11.6% cash. Rationale corrected; level kept.\n2. **Drew pts 4/5 \u2014 SUSTAINED, inherent.** $24 is 33% below the 12-month low ($36.04), ~39% below spot ($39.42). Reachability is the real scar \u2014 but parity ($27.93) is itself below $36.04, so ANY edge-paying entry is a deep limit; re-deriving the entry fixes nothing. A patient limit (\u00a77), not a mis-specified thesis.\n3. **\u00a76a inapplicable.** At $24 Kelly > 0 (not size-to-zero); target $57.21 / kill $16.59 are DCF-derived, not band-back-solved; payoff 4.48x, not near-symmetric. Nothing to RETURN.\n4. **Merits clean.** p_up 0.28 inside Drew's 0.25\u20130.30 band, each cut named; no fabrication, no quarantine breach; Drew's pts 1\u20133, 6, 7 closed or MINOR.\n5. **Size.** Starter: the premium rests wholly on the unverified Feb-27 re-acceleration and the fill is a deep limit \u2014 uncertainty shrinks size, not the verdict.\n\nProtocol: lint PASS (tolerated WARN 3856 words, append-only); stage_log monotonic. (Aldrich; stamps frontmatter status: judged, verdict: PASS_REDUCED, size_multiplier: 0.25.)"
+    },
+    {
+      "heading": "Risk check",
+      "detail": "V4 \u2014 2026-10-16, PASS_REDUCED 0.25, entry $24.00",
+      "markdown": "**Layer 1 \u2014 deterministic** (the risk checker + the sizing engine; GLOBAL: 0 holdings, 100% cash, gross 0%, dd 0.0%, governor NONE). No VETO.\n\n| Check | Ruler | Measured | Verdict |\n|---|---|---|---|\n| Universe (mcap/ADV) | 2bn / 5m, US ADR | NVO present; $164.8bn / $531.6m | PASS |\n| Dossier freshness | freeze 60d | asof 2026-10-16 | PASS |\n| Factor taxonomy | closed list | us_defensive, eu_cycle | PASS |\n| Kill cooldown | 30d | PASS_REDUCED, no KILL | n/a |\n| Position @cost | 10.0% | 2.50% NAV (10.0x0.25) | PASS |\n| Gross / sector | 100% / 30% | 2.50% / 2.50% | PASS |\n| Factor soft/hard | 40% / 60% | 2.50% each | PASS |\n| Single-trade / names | 5.0% / 15 | 2.50% / 1 | PASS |\n| Liquidity @20% ADV |  no VETO; route to MONTHLY_IC retag.\n2. **Stress honesty.** Post-trade stress-day loss **0.13% NAV** ($1,263; 2.50% x eu_cycle -5.0%); headroom **8.0pp to -8% REVIEW / 15.0pp to -15% DEGROSS** (dd 0.0%). NVO realized vol 38% (~2.4%/day): a -5% pin is ~2-sigma \u2014 understates its own worst day => PENDING_PATCHES.\n3. **Concentration in disguise.** One name, one GLP-1 franchise; hidden DKK earnings in a USD ADR (FX sleeve blind). The $24 fill sits 39% below spot \u2014 it fires only on a broad risk-off, so entry and drawdown arrive together.\n4. **Liquidity.** 0.0002d at 20% ADV \u2014 non-binding; no reduce.\n5. **Kill hygiene.** price2027-02-15 (FY26 <=-12% CER OR FY27 2nd decline), KPI obesity-care <10% CER (named source) \u2014 machine-monitorable; falsification level, not a stop.\n6. **Sizing audit.** Frontmatter sizing STALE (script_pct 0.0 / pm_pct 0.0 reflect the retired $37 entry); current script_pct 10.0 = hard_max. pm_pct must re-stamp <=10.0 before fill \u2014 doc defect, not a breach.\n7. **Horizon balance.** Adds 1 long; still <2 long min (NORM). Flagged, not forced.\n\n**CLEAR_WITH_NOTES**"
     }
   ]
 }

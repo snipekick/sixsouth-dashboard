@@ -60,6 +60,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-16T13:31:08.398482+07:00",
+      "book": "GLOBAL",
+      "title": "NVO sized 2.50% NAV (Judge 0.25 x script 10.0), limit 24.00, waiting price trigger",
+      "thesis": "T-GLOBAL-NVO-002",
+      "kind": "sizing"
+    },
+    "body": "NVO (GLOBAL, long, derated_compounder_rerating) sized after Judge Aldrich PASS_REDUCED 0.25 and Voss CLEAR_WITH_NOTES (no VETO). fund record anchor: recommended_pct 10.0% NAV (binding constitution_cap; kelly_quarter 24.07, kelly_full 96.3, liquidity cap 73662%, book_heat_after 0.5 vs 12.0 budget). Judge 0.25 binds like a KILL -> pm_pct 2.50% NAV (exact product 10.0 x 0.25), applied unsoftened; no further deviation. Entry plan: mode limit, level 24.00 (analyst value-anchored, ~39% below spot), max_chase_pct 3 (max fill 24.72, still far below spot), valid_until 2027-02-15 (the thesis's own next-resolution date: FY26 results / FY27 opening guidance, kill-criterion date). Ticket (script, never hand-typed): 1021 sh, limit 24.00, max_fill 24.72, est value $25,239.12 = 2.498% NAV (target 2.5%; 0.002% remainder below min_topup_pct_nav 0.5, not traded). Staging expectation: max fill 24.72 sits ~37% below the last close (39.22), well beyond entries.stage_within_pct 10% -> fund record will NOT write a ticket now; the thesis waits as a price trigger (entry_staging.waiting). The resting limit expresses clause B (capitulation  MONTHLY_IC retag; -5% stress pin ~2-sigma vs 38% realized vol\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-15 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-15T08:53; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
@@ -864,17 +875,6 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-08-19 (Wed 13:00 WIB)\n\n## State at entry\n- Governor: both books NONE, all-cash, zero drawdown. GLOBAL NAV $1,005,134 / INDO NAV IDR 15,099,720,146.\n- QC: WARN (5 flags \u2014 fund record 08-04 stale, published cash-rate policy asofs >60d; data staleness, non-blocking, not mine to fix).\n- No pending orders, no live theses. 1 judged_unticketed (T-GLOBAL-0700HK-001, PASS_REDUCED, 0% sizing \u2014 unchanged).\n- Flow regime: INDO STALE (no fresh foreign-flow data). Macro regime unchanged (2026-07-11, balance_of_payments_pressure / CAUTIOUS).\n\n## Step 1 \u2014 Queue inventory\n- **Parked drafts (status: draft/attacked, verdict: null)**: NONE. All 14 prior theses are status: judged.\n- **ADVANCE idea cards (promoted, never constructed)**: 19 cards (10 GLOBAL + 9 INDO), per the 08-17 IDEATION queue note.\n\n## Step 2 \u2014 Construction chains (\u22642 per book, per WEEKLY_DEEP \u00a77)\n\n### T-GLOBAL-TXN-002 (TXN \u2014 Texas Instruments, GLOBAL, kill-revisit of T-001 killed 07-13 valuation at $311.46)\n- Idea card GLOBAL-TXN (ADVANCE, 08-04, MOMENTUM). Screen today: MOMENTUM #12, $272.24, mom12 +49%, -17.65% off high.\n- Analyst (Sloane): momentum_continuation, p_up 0.44, entry $272 / kill\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-18T08:45:36.824466+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-08-18: no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action because: QC=WARN (5 flags, all stale-data refresh items: fund record, published cash-rate policy asofs \u2014 none CRITICAL, none trade-blocking). Governor NONE both books \u2014 no DEGROSS, no de-gross sells, no buy vetoes. pending_orders empty; live_theses empty; kill_actions_due empty \u2014 no kill tickets to verify. judged_unticketed T-GLOBAL-0700HK-001 (GLOBAL book, Tencent 0700.HK) reviewed: status judged, verdict PASS_REDUCED 0.5x, risk NO VETO with Phase-2 deliverables pending, but sizing.pm_pct=null (fund record 2026-07-22: Kelly liquidity cap 0 fail-closed, recommended_pct=0.0, hard_max=0.0; PM cannot deviate up). No pm_pct quantity exists to ticket and it is a GLOBAL-book thesis, not an INDO entry \u2014 does not satisfy step 3c. No tickets written.",
     "persona": ""
   }
 ]

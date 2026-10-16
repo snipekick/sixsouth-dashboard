@@ -34,7 +34,7 @@
     "max_chase_pct": 3.0,
     "entry_mode": "limit",
     "target_rationale": "target = base-case per-share value (HK$370): DCF of consolidated owner earnings CNY130bn (COE 9.5%, terminal g 4.0%, ROIIC fade) + investment portfolio at 50% of FY25 listed FV; pure operating-core DCF floor HK$330. Re-derived from the model, NOT back-solved from a chosen up_pct.",
-    "price": 421.3999938964844,
+    "price": 420.79998779296875,
     "price_asof": "2026-10-16"
   },
   "ev": {
@@ -201,6 +201,12 @@
       "at": "2026-10-16T02:56:24+07:00",
       "actor": "Drew",
       "role": "BEAR"
+    },
+    {
+      "stage": "revise",
+      "at": "2026-10-16T13:15:24+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
     }
   ],
   "kill_outcome": null,
@@ -265,6 +271,11 @@
       "heading": "Bear attack",
       "detail": "re-attack, 2026-10-16",
       "markdown": "**0. Fact-check.** Core P&L verifies (rev/EBIT/NI/EPS = dossier). FY25 cash-flow lines diverge/self-contradict: bridge op-profit 241.6 vs model EBIT 248.8; FCF 182.6 vs 190.2; capex 79.2 vs 112.9; EBITDA 310.8 vs 356.7. Cited but unreconciled. [MATERIAL]\n\n**1. Owner earnings double-haircut.** The bridge already subtracts SBC (182.6\u221231.9=150.7); the revision cuts to 130bn with no arithmetic shown \u2014 an opaque second ~14% cut. At the bridge's own 150.7bn, core \u2248HK$381 + portfolio \u2248HK$420 \u2248 market. The no-trade verdict rests on this unshown step. Fragile \u2014 single-assumption dependency. [MATERIAL]\n\n**2. Variant perception void by the analyst's own model.** VP claims 12\u201315% OE growth; the model's g = 20.9% \u00d7 40% = 8.4% \u2014 inside the \"market prices 8\u201310%\" the thesis calls mispricing. No edge is modeled; +12% is margin-of-safety, not re-rating. [MATERIAL]\n\n**3. No dated catalyst** (catalyst_date null); re-rating assumed, never triggered. [MINOR]\n\n**4. Archetype** 0.40 is right, but up/down 12.1/\u221245.5 vs base +50/\u221230, and the portfolio credit is a holdco element argued at 0.40 not 0.33. [MINOR]\n\n**5. Construction defect \u2014 under-set target, not a stop.** up/|down| 0.27 vs library 1.67. Kill 180 IS the falsification level (honest); the TARGET is the defect \u2014 base fair value (370), not the re-rated value (bull 540). At target 540/entry 330 EV\u2248\u22121.4%; entry 320\u2248+1.8%. \"entry \u2264265 is inside the falsification zone\" is false \u2014 265 is above the 180 kill. [MATERIAL]\n\n**6. New disconfirming fact.** 0700.HK fell HK$642.5 (2025-09-15) \u2192 HK$417.8 (2026-10-12), \u221235%, ~1% off its 1y low (411.8) \u2014 fund record. A year of de-rating to fresh lows is the structural-de-rating trap the base_rate notes warn against. [MATERIAL]\n\n**7. Pre-mortem gap.** It assumes things break; the unmentioned mode is nothing breaks and you still lose \u2014 the market sits 13% above the analyst's own fair value. [MINOR]\n\n**8. Anti-gaming.** (a) ev_math doesn't reconcile: stated \u221219.0% vs 0.40\u00b712.1+0.60\u00b7\u221245.5+0.5 = \u221222.0% (Judge flagged this before). (b) Revision claims \"FY22 not pullable,\" yet the dossier (asof 2026-10-16) carries FY22; Judge deliverable #1 was not delivered. Both to QC_FLAGS. [MATERIAL]\n\n**10. I stop objecting at entry \u2248HK$265** (EV>0 needs <257) \u2014 but rebuild the target at the re-rated value first. Good business; today's price is not the entry.\n\n**11. Verdict: MAJOR_REVISION** \u2014 the no-trade call is right on price but reached via a mis-built construction and a model that no longer embodies its own variant perception."
+    },
+    {
+      "heading": "Revision",
+      "detail": "re-attack response \u2014 2026-10-16",
+      "markdown": "**0 \u2014 CONCEDE.** Announcement-vs-dossier cash lines diverge (op-profit 241.6/248.8, FCF 182.6/190.2, capex 79.2/112.9): definitional, unreconciled; NI 224.8 agrees. Flagged to QC.\n\n**1 \u2014 PARTIAL.** The 150.7\u2192130 step was unshown; bridge: 150.7 less ~23.7 equity-method associates income (non-cash, \u22125.7% YoY) \u2248 130 (no double-count). At 150.7, core+portfolio \u2248 HK$420 \u2248 market; no margin of safety.\n\n**2 \u2014 PARTIAL.** True: model g (20.9%\u00d740% = 8.4%) sits inside the market's 8\u201310%. The VP's 12\u201315% is per-share, needing unevidenced SBC moderation; modelled only in the bull.\n\n**3 \u2014 PARTIAL.** Long-horizon: no dated catalyst mandatory, but nothing times the re-rating. Conceded.\n\n**4 \u2014 PARTIAL.** Holdco reclassification immaterial: portfolio \u2248 11% of base (blend 0.33 \u2192 0.39 vs 0.40). Up/down asymmetry is the point-5 defect.\n\n**5 \u2014 PARTIAL.** Concede the error: HK$265 sits above the HK$180 kill, not inside the falsification zone. REFUTE that the target should be the bull 540: it needs COE 9.0% and g 11%\u21924.5%, optimistic; raising it needs evidence I lack.\n\n**6 \u2014 CONCEDE.** \u221235% to near 1y lows is a de-rating; the base-rate note warns against holding through a structural one. Supports no-trade.\n\n**7 \u2014 CONCEDE.** Pre-mortem omits \"nothing breaks, you still lose\" (bought above fair value) \u2014 this thesis's actual mode.\n\n**8 \u2014 CONCEDE both.** (a) ev_math mis-reconciles: 0.40\u00b712.1 + 0.60\u00b7\u221245.5 + 0.5 = \u221222.0%, not \u221219.0. (b) The dossier carries FY22; \"not pullable\" was wrong. Both to QC_FLAGS.\n\n**10 \u2014 PARTIAL.** Agreed the HK$417.80 market is not the entry.\n\n**Positive EV:** Yes, but only at a deep-value limit \u2014 not an under-set target, not a stop-placed kill (180 is the falsification level), an entry set too high: \u2264 ~HK$257 at the base target (370) gives EV \u2265 0, up/|down| \u2248 1.5; at the re-rated 540 the threshold is ~HK$326. Nothing positive-EV at/near market."
     }
   ]
 }
