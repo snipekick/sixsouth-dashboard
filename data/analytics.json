@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-16T08:47:15+07:00",
+  "asof": "2026-10-16T11:10:08+07:00",
   "method": {
     "returns": "TWR from inception on official and reconstructed NAV marks, external flows stripped; total-return benchmark rebased to 100 at inception",
     "risk_free": "book cash-yield proxy (published cash-rate policy)",
@@ -60,6 +60,18 @@
         {
           "bucket": "Cash yield",
           "contribution_pp": 1.548
+        },
+        {
+          "bucket": "ERAA.JK",
+          "contribution_pp": 0.133
+        },
+        {
+          "bucket": "MEDC.JK",
+          "contribution_pp": 0.102
+        },
+        {
+          "bucket": "Fees & tax",
+          "contribution_pp": -0.014
         }
       ]
     }
