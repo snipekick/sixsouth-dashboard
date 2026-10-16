@@ -22,6 +22,39 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-16T08:47:01.839006+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-10-16 - triggers reviewed; ERAA + MEDC staged entries confirmed vs thesis; no kills; governor NONE; TINS waiting (no action)",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Triggers reviewed at 08:45-08:46 WIB; no new ticket typed, no cancel. (1) QC OK (qc_flags_total 0) -> no CRITICAL, proceed. (2) Kill exits: kill_revisits [], kill_actions_due [], kill_monitoring_suspended [], live_theses 0 -> no fired kill exists on any position, so no missing-ticket breach to escalate; nothing owed. (3) Governor: INDO NONE (dd 0.0%, gross 0.0%), GLOBAL NONE -> no de-gross tickets emitted, buys not vetoed. (4) Entries staged by the prelude (fund record, dry-run risk check PASS; brief entry_staging.INDO.asof 2026-10-16T08:45:07+07:00), both confirmed to still match their theses: (4a) T-INDO-ERAA-001 -> ORD-20261016084509-ERAA.JK-0571, buy 1,332,800 ERAA.JK limit 560, max_chase 0 (max fill 560) = 4.899% NAV at-cost, target 5.00% (PM sizing.pm_pct 5.0, Judge PASS_REDUCED 0.5x). Thesis entry_plan {level 560, max_chase_pct 0} -> ticket limit 560 / chase 0 MATCHES; spot 615 (asof 2026-10-15) is 9.8% above the limit, so it is a resting limit below market, not a chase; kill 420 not breached (615>420); catalyst_date 2026-10-31 (Q3-2026 LK) remains the gate. Still wanted, no cancel. (4b) T-INDO-MEDC-001 -> ORD-20261016084509-MEDC.JK-264f, buy 507,700 MEDC.JK limit 1400\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-16T08:45:09.622287+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry MEDC.JK",
+      "thesis": "T-INDO-MEDC-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-MEDC-001: buy 507,700 MEDC.JK limit 1400 (max chase 5%, max fill 1470) = 4.90% NAV at most. Target 6.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261016084509-MEDC.JK-264f is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-16T08:45:09.479552+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry ERAA.JK",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-ERAA-001: buy 1,332,800 ERAA.JK limit 560 (max chase 0%, max fill 560) = 4.90% NAV at most. Target 5.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261016084509-ERAA.JK-0571 is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-15 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-15T08:53; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
@@ -842,33 +875,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-18 (Tue)\n\n## State at entry\n- QC: WARN, 5 flags (up from 3 on 08-17) \u2014 fund record (08-04) >10d; published cash-rate policy cash_yield_proxy_annual_pct.INDO (06-18), fx_carry_rates EUR (06-17) / JPY (06-16) / BRL (06-18) all >60d. Data staleness only; not mine to fix. Prices live, both screens ran clean.\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews \u2014 nothing to carry to the next trading session. Pending orders: none.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Cards at entry: GLOBAL 12 files = 11 active (10 ADVANCE + SMFG-W) + NVO-D; INDO 12 files = 10 active (9 ADVANCE + ADRO-W) + ELSA-D + PWON-D. Both books under the 12-card cap.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only the README + two helper scripts \u2014 no raw ticker exports. No new dossiers since 08-17 (still DSNG/ELSA/NVO/PNBN/SMFG/TXN). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names, 12\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-18T20:00:49.425525+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK not ticketable, no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "State at entry: QC WARN (5 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d; published cash-rate policy asofs >60d: cash_yield_proxy_annual_pct.INDO 2026-06-18, fx_carry_rates.EUR 2026-06-17, fx_carry_rates.JPY 2026-06-16, fx_carry_rates.BRL 2026-06-18. Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; kill ledger empty). Nothing to verify.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells emitted, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN); nothing ticketable before tonight's US open.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-17T08:45:54.877243+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN pass \u2014 triggers reviewed, no action",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "State at entry: QC WARN (4 staleness flags, none CRITICAL), governor NONE both books, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. Kill-monitoring suspension empty.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags are all staleness: price cache 262h old, fund record 2026-08-04 >10d, fx_carry_rates.EUR/JPY asof Jun 2026 >60d. No integrity/critical issue; informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; kill_monitoring_suspended empty). Nothing to verify.\nb. Governor de-gross \u2014 governor NONE for INDO (and GLOBAL). No deterministic sells emitted, no de-gross mix to choose.\nc. Entries \u2014 judged_unticketed holds only T-GLOBAL-0700HK-001. Not ticketable this session: book GLOBAL (this is the INDO book), and sizing.pm_pct is null \u2014 fund record returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN per wrapper policy; no trading actions are due before 09:00 WIB.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-17 (Mon)\n\n## State at entry\n- QC: WARN, 3 flags \u2014 fund record (08-04) >10d, fx_carry_rates EUR (06-17) / JPY (06-16) >60d. Data staleness only; not mine to fix. Prices live, both screens ran clean.\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews \u2014 nothing to carry to the next trading session. Pending orders: none.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline, oil-import beneficiaries; AVOID thermal coal, INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- The 08-06 journal flagged the 07-18 cohort (GLOBAL MSFT/NEM, INDO TLKM) to cross 21 days on 08-08 \u2014 \"re-affirm or drop.\" Today they are 30d old; age-based hygiene is due for the first time.\n- Existing cards at entry: GLOBAL 12 active (at cap: 11 ADVANCE + SMFG-W), INDO 11 active (10 ADVANCE + ADRO-W).\n\n## Ingestion sweep\n- data/fundamentals_inbox/ empty (README + two helper scripts only). Skipped with zero narration.\n\n## Screen sweep\n- GLOBAL: 79 names, 12 MOMENTUM (0 WASHOUT, 0 NEGLECTED).\n- INDO: 97 names, 9 NEGLECTED + 12 MOMENTUM\u2026",
     "persona": ""
   }
 ]
