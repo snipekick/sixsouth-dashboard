@@ -94,6 +94,17 @@
   },
   {
     "meta": {
+      "date": "2026-10-19T13:06:59.982520+07:00",
+      "book": "GLOBAL",
+      "title": "CONSTRUCT 2026-10-19 \u2014 1 chain, KILL (negative EV), no ticket staged",
+      "thesis": "T-GLOBAL-0700HK-001",
+      "kind": "kill_confirmation"
+    },
+    "body": "Session launched 2026-10-19T13:00:17+07:00. Queue inventory (step 1): (a) awaiting_pm_sizing empty; (b) judged_missing_levels empty; (c) revise_queue empty, but one attacked thesis with no verdict \u2014 T-GLOBAL-0700HK-001 (status attacked since 2026-10-16, the oldest open chain); (d) buy_verdict_sized_zero empty; (e) no ADVANCE idea cards in fund record (every card is DISCARD, WATCH or PROMOTED). The two judged-unticketed theses (T-GLOBAL-NVO-002, T-INDO-TINS-001) are already sized and risk-checked and rest at value-anchored limits far below spot (NVO 24.00 vs 39.22; TINS 780 vs 3,310) \u2014 no sizing or staging action belongs to CONSTRUCT.\n\nChain processed: T-GLOBAL-0700HK-001 (Tencent, 0700.HK, GLOBAL). Stage reached: Judge re-rule (Aldrich, frontier, isolated spawn; stage_log 2026-10-19T13:03:58+07:00). Verdict: KILL. Grounds: (1) negative EV at the thesis own entry \u2014 corrected 0.40(+12.1%) + 0.60(-45.5%) + 0.5% = -22.0%, and base fair value HK$370 sits 11.4% below the HK$417.80 market; (2) variant perception conceded void \u2014 model g = 20.9% x 40% = 8.4%, inside the 8-10% the thesis says the market prices; (3) target/up-down asymmetry is a construction defect (up leg at base value\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-16T03:24:48.801453+07:00",
       "book": "INDO",
       "title": "SIZED TINS 1.725% NAV - Judge 0.50 x script 3.45 (limit 780, unfillable resting bid)",
@@ -882,17 +893,6 @@
   {
     "meta": {},
     "body": "# 2026-08-22 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (5 stale-feed flags: fund record asof 08-04; published cash-rate policy cash_yield_proxy.INDO + fx_carry EUR/JPY/BRL asof mid-June; INDO foreign-flow layer STALE n=0). Both books 100% cash, 0 holdings, 0 live theses, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing), governor NONE. No orders, no kill actions, no reviews open.\n\n## Step 1 \u2014 Triage\n\n- audit record all 5 files resolved/triaged (07-11 claude_exit, 07-11 risk_check, 07-12 thesis_lint isoformat, 07-18 IDEATION claude_exit false-alarm, 07-18 analyst NOC api_error). No open blocker.\n- HUMAN_ATTENTION backlog: kill-ledger rows for NOC (07-22) and the four 08-19 CONSTRUCT kills (AMD, TXN-002, DSNG-002, TAPG-001) all present in fund record \u2014 ops applied. Office_state `--session` enum gap (CONSTRUCT/IDEATION refused) is journaled (08-19), non-blocking for WEEKLY_DEEP. Stale-feed refresh (08-22 06:30 US_CLOSE entry) is a live OPS feed action \u2014 re-escalated at session end; `fund record refresh-adv` in step 2 refreshed fund record (15 tickers, 0 missing), but published cash-rate policy asofs (cash_yield_proxy.INDO, fx_carry EUR/JPY/BRL) remain\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-21T08:45:43.970215+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-08-21 08:45 WIB \u2014 no tickets, pass",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. QC WARN (5 stale-data flags: fund record >10d, published cash-rate policy INDO/EUR/JPY/BRL asof >60d) \u2014 not CRITICAL, no trading halt; noted for ops, not fixable mid-session. Governor NONE both books \u2014 no DEGROSS de-gross. kill_actions_due empty, live_theses 0 \u2014 no kill tickets to verify beyond wrapper output. pending_orders empty \u2014 nothing to cancel. Entries: only judged_unticketed thesis T-GLOBAL-0700HK-001 (GLOBAL book, verdict PASS_REDUCED) has sizing.pm_pct=null, script_pct=0.0, hard_max=0.0 (Kelly<=0, ADV unknown, liquidity cap fail-closed; PM cannot deviate up from 0) \u2014 no sizing block eligible for entry, and it is GLOBAL not INDO. No ticketable INDO entry this session. No tickets created; risk_check not run (step 4 N/A).",
     "persona": ""
   }
 ]

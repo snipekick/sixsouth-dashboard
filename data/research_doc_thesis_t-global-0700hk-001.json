@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "attacked",
-    "verdict": null,
+    "status": "killed",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
@@ -207,6 +207,12 @@
       "at": "2026-10-16T13:15:24+07:00",
       "actor": "Sloane",
       "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-19T13:03:58+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -276,6 +282,11 @@
       "heading": "Revision",
       "detail": "re-attack response \u2014 2026-10-16",
       "markdown": "**0 \u2014 CONCEDE.** Announcement-vs-dossier cash lines diverge (op-profit 241.6/248.8, FCF 182.6/190.2, capex 79.2/112.9): definitional, unreconciled; NI 224.8 agrees. Flagged to QC.\n\n**1 \u2014 PARTIAL.** The 150.7\u2192130 step was unshown; bridge: 150.7 less ~23.7 equity-method associates income (non-cash, \u22125.7% YoY) \u2248 130 (no double-count). At 150.7, core+portfolio \u2248 HK$420 \u2248 market; no margin of safety.\n\n**2 \u2014 PARTIAL.** True: model g (20.9%\u00d740% = 8.4%) sits inside the market's 8\u201310%. The VP's 12\u201315% is per-share, needing unevidenced SBC moderation; modelled only in the bull.\n\n**3 \u2014 PARTIAL.** Long-horizon: no dated catalyst mandatory, but nothing times the re-rating. Conceded.\n\n**4 \u2014 PARTIAL.** Holdco reclassification immaterial: portfolio \u2248 11% of base (blend 0.33 \u2192 0.39 vs 0.40). Up/down asymmetry is the point-5 defect.\n\n**5 \u2014 PARTIAL.** Concede the error: HK$265 sits above the HK$180 kill, not inside the falsification zone. REFUTE that the target should be the bull 540: it needs COE 9.0% and g 11%\u21924.5%, optimistic; raising it needs evidence I lack.\n\n**6 \u2014 CONCEDE.** \u221235% to near 1y lows is a de-rating; the base-rate note warns against holding through a structural one. Supports no-trade.\n\n**7 \u2014 CONCEDE.** Pre-mortem omits \"nothing breaks, you still lose\" (bought above fair value) \u2014 this thesis's actual mode.\n\n**8 \u2014 CONCEDE both.** (a) ev_math mis-reconciles: 0.40\u00b712.1 + 0.60\u00b7\u221245.5 + 0.5 = \u221222.0%, not \u221219.0. (b) The dossier carries FY22; \"not pullable\" was wrong. Both to QC_FLAGS.\n\n**10 \u2014 PARTIAL.** Agreed the HK$417.80 market is not the entry.\n\n**Positive EV:** Yes, but only at a deep-value limit \u2014 not an under-set target, not a stop-placed kill (180 is the falsification level), an entry set too high: \u2264 ~HK$257 at the base target (370) gives EV \u2265 0, up/|down| \u2248 1.5; at the re-rated 540 the threshold is ~HK$326. Nothing positive-EV at/near market."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "re-rule \u2014 2026-10-19",
+      "markdown": "**Verdict: KILL**\n\n1. Negative EV at the thesis's own entry. At HK$330: 0.40(+12.1%) + 0.60(\u221245.5%) + 0.5% = \u221222.0%, not the stated \u221219.0% (conceded). Base fair value HK$370 sits 11.4% below the HK$417.80 market; the market is not mispriced in the thesis's favour.\n\n2. Variant perception conceded void. Revised model g = 20.9% \u00d7 40% = 8.4%, inside the 8\u201310% the thesis says the market prices. The claimed 12\u201315% per-share growth needs unevidenced SBC moderation and is modeled only in the bull. No modeled edge.\n\n3. Target/up-down asymmetry is a construction defect: up uses base value (370), down uses the falsification level (180), so up/|down| 0.27 is not like-for-like. Correcting it does not rescue HK$330 \u2014 base upside is only 12.1%, and EV stays negative unless the failure-case loss is under ~9%, implausible after a 35% de-rating to near 1-year lows.\n\n4. Positive EV exists only at \u2264~HK$257, which is above the HK$180 kill; the analyst's \"inside the falsification zone\" claim was wrong and is conceded. That entry is 38% below market and is a different, deep-value trade with no edge; it should be re-sourced, not revised in place.\n\n5. ROIIC/SBC are not independently dispositive \u2014 the business still compounds \u2014 but they eliminate the edge, and the 40% ROIIC remains an unsupported judgment haircut (the ordered 3-year average was not delivered; FY22 was available). Good business; this long is not investable."
     }
   ]
 }
