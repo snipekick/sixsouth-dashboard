@@ -1,6 +1,28 @@
 [
   {
     "meta": {
+      "date": "2026-10-19T10:02:28.062735+07:00",
+      "book": "INDO",
+      "title": "Weekly portfolio review 2026-10-19 \u2014 ERAA, MEDC re-affirmed; no action",
+      "thesis": "",
+      "kind": "review"
+    },
+    "body": "ERAA.JK IDR 490 (yfinance 2026-10-19, stale=false): 16.7% above kill 420, 95.9% below target 960 \u2014 outside the 10% review band; H1-26 NI IDR 784bn (+38% yoy) on revenue +22.4% yoy still supports the discovery thesis; position 0.43% NAV. KPI check: cash_conversion CFO/NI LTM  1.0 confirmed FY25 (2P 564 vs 493 mmboe, AR2025 p.75), no breach; position 0.41% NAV. Neither holding is within 10% of kill/target and neither exceeds 15% NAV, so one-line re-affirmations stand; last_reviewed stamped 2026-10-19 on both. Book context: INDO 8.43% deployed, 2 names vs 8-name minimum \u2014 pipeline shortfall, addressed in the zero-deployment/attribution escalation.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-19T09:57:48.512459+07:00",
+      "book": "INDO",
+      "title": "WEEKLY_DEEP 2026-10-19 sourcing triage \u2014 INDO",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "INDO (Dani), triage at 2026-10-19T09:57:48+07:00. (a) ADVANCE cards: none. (b) kill_revisits (brief, all past 30d cooldown and >=10% below kill): ASII 4,000 vs 5,150 at kill (-22.3%, killed 2026-07-22 valuation) \u2014 FY2025 P/E ~4.9x on EPS 810, ROE 14.3%, net debt/EBITDA 1.09x, 50% payout; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints and a 22% lower price => DEEP-DIVE. KLBF 635 vs 755 (-15.9%, killed 2026-09-02 fragile_estimates) \u2014 FY2025 EPS 80.51, P/E ~7.9x, ROE 15.7%, net cash, idr_defensive; refreshed 2026-10-19 dossier; new evidence = FY2025 print + H1-26 => DEEP-DIVE. TOWR 366 vs 448 (-18.3%, killed 2026-08-24 valuation) \u2014 FY2025 EPS 69, P/E ~5.3x, ROE 13.6%, infra_tower_compounder, net debt/EBITDA 6.76x; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints => DEEP-DIVE. ELSA 560 vs 695 (-19.4%, killed 2026-08-05 process) PASS \u2014 no new fundamental evidence; 1H26 upstream -11% YoY third consecutive decline, idea card DISCARD stands. PNBN 710 vs 875 (-18.9%, killed 2026-07-13 other) PASS \u2014 bank under the macro AVOID 'INDO rate-sensitive' tilt; no new evidence. DSNG 1,215 vs 1,360 (-10.7%, killed 2026-08-19 liquidity) PASS \u2014 liquidity kill is\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-19T09:43:24.499018+07:00",
       "book": "INDO",
       "title": "QC CRITICAL \u2014 no trading actions; price-cache flags are prelude-order/weekend artifacts",
@@ -19,6 +41,50 @@
       "kind": "pass"
     },
     "body": "fund record ran 2026-10-19T09:39:10+07:00 and its dry-run risk_check blocked the remaining MEDC tranche with \"QC CRITICAL \u2014 new risk blocked (risk-reducing exits still allowed)\". Binding gate: the QC level, not the thesis.\n\nEconomics: entry limit 1400, max fill 1470 (max_chase 5%); spot 1240 is inside the fill band, so absent the gate the tranche (remaining 1.101% NAV after the 4.899% first tranche filled 2026-10-16 at 1295) would have staged. STAGE_BOOK maps only IDX_PREOPEN/US_PREOPEN to a book, so the tranche cannot stage again until the 2026-10-20 IDX_PREOPEN prelude unless QC is cleared and fund record is rerun.\n\nAction: none \u2014 no manual entry ticket (runbook step 2 + V4 staging rule). Thesis unchanged: target 2250, kill 920, first tranche -4.25%; no PM re-size and no REVISE needed. QC fix escalated to HUMAN_ATTENTION.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-19T10:03:58.494274+07:00",
+      "book": "GLOBAL",
+      "title": "Zero-deployment priced: GLOBAL 0% vs ACWI +0.67pp since inception; binding gate is entry level, not an empty pipeline",
+      "thesis": "",
+      "kind": "review"
+    },
+    "body": "GLOBAL closes WEEKLY_DEEP 2026-10-19 at 0.00% deployed, 0 names, cash USD 1,010,393.56, no ticket staged \u2014 the zero-deployment test fires and cash is priced against its benchmark rather than assumed neutral. Realised opportunity cost since inception (fund record, bench_level normalised to 100 at 2026-07-11): book 1,000,116.44 -> 1,010,393.56 = +1.03%; benchmark 100.00 -> 100.3633 = +0.36%; cash is +0.67pp AHEAD of the benchmark, so the realised cost of holding cash to date is negative \u2014 this is a statement about the tape, not a licence to keep it. Attribution of the binding gate (three-consecutive-week condition met: GLOBAL has never ramped since 2026-07-07): it is NOT 'no qualifying opportunity' and NOT construction defects or liquidity. There is one Judge-PASSED, PM-sized name \u2014 T-GLOBAL-NVO-002, PASS_REDUCED 0.25 -> pm_pct 2.50% NAV, entry_plan limit 24.00 (max fill 24.72) valid to 2027-02-15 \u2014 resting as a price trigger because the maximum fill sits 36% below the 2026-10-16 close of 38.83, far outside entries.stage_within_pct 10%, so fund record correctly writes no ticket. The gate that binds GLOBAL is therefore valuation/entry level: 22 GLOBAL theses to date, 21 KILL and 1\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-19T09:55:23.222777+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP 2026-10-19 triage \u2014 blockers + HUMAN_ATTENTION backlog",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Triage at 2026-10-19T09:55:23+07:00. Blocker files: 30 historical files, newest 2026-10-16 IDX_CLOSE/daily_quiet rc=3 ('trades today \u2014 not a quiet day') \u2014 a correct non-quiet signal, not a fault; resolved/no action. All other blocker files predate the V4 cutover (2026-10-16) and are superseded by V4 prelude/budget fixes; no open blocker affects this session. HUMAN_ATTENTION backlog dispositions: (1) heartbeat_gap 51h \u2014 ops/launchd, no session-side action; remains escalated. (2) market_param_stale INDO cash yield 5.50 asof 2026-08-19 \u2014 value corroborated by macro memo (BI 5.75% hold), re-stamp scheduled next MONTHLY_IC 2026-11-07; remains escalated. (3) qc_price_cache_false_positive \u2014 prelude-order/weekend artifact, prices refreshed 09:39; structural fix request stands; remains escalated. (4) qc_critical IDX_PREOPEN 09:38 \u2014 superseded: today's WEEKLY_DEEP brief is qc=WARN, prices fresh, stale=false; resolved. (5) thesis_antigaming 0700HK \u2014 chain remains status=attacked; disposition this session: see construction-chain journal (not advanced past Judge gate; thesis 5,025 words vs 1,200-word gate). (6) idx_selloff 2026-10-16 \u2014 awareness only; no mechanical action (GLOBAL 100% cash\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-19T09:57:38.217513+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP 2026-10-19 sourcing triage \u2014 GLOBAL",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "GLOBAL (Sloane), triage at 2026-10-19T09:57:38+07:00. (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: none \u2014 NVO watch trigger is  9% on the refreshed 2026-10-16 dossier (prior gate required Q1-FY26 ROE evidence; FY2026 net income 1,583bn, equity 15,786bn), quality_bank_rerating, BOJ normalization (JPY policy 1.25%) is a direct NIM tailwind, ~3.5% total shareholder yield => DEEP-DIVE. LLY \u2014 recycle gate UNMET: price 1,257.03 vs  stays WATCH. (d) cold rows assessed because quota not met: AMD 117x forward on FY26 run-rate and heavy coverage (no variant perception); COP 23x FY25 at 52w high under a NEUTRAL commodity-bloc 'do not chase' tilt; V 39x at 52w high; CRM 31x, mom12 +3.5% (no de-rating); KO at 52w high, heavy coverage; PLTR 78% vol, no variant. All PASS \u2014 no cold-row deep-dive this week. Picks: SMFG (1). GLOBAL remains 0% deployed; the binding gate is genuinely no qualifying opportunity at an honest price, not a liquidity/ADV cap \u2014 escalated to HUMAN_ATTENTION per PM_GLOBAL zero-deployment rule. 0700HK legacy chain disposition journaled separately.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-19T10:37:29.831858+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP 2026-10-19 session close \u2014 4 chains, 4 KILL (valuation), no ticket staged",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Session 2026-10-19T09:46:46+07:00 -> 10:37+07:00. Four construction chains run, three INDO and one GLOBAL, all with full stage chains (draft -> Bear attack -> Revision -> re-attack where ev_math moved >20% -> Judge). Verdict mix: 4 KILL, 0 PASS, 0 PASS_REDUCED, 0 REVISE. No thesis reached step 8, so no Voss review, no size_position run, and no ticket staged; nothing was placed.\n\nT-INDO-ASII-002 (KILL, valuation): at 4,000 the win state is 8.9%/yr against an 11.2% hurdle \u2014 even p_up = 1.0 fails. The hurdle-clearing entry (~2,910) needs the 4,400 re-rating the thesis disclaims and sits below its own review trigger.\nT-INDO-KLBF-002 (KILL, valuation): at 520 expected 3.0%/yr, sub-cash before sub-hurdle; the only clearing entry (~404) is below the 410 impairment kill. The win state does clear (11.7%/yr), so this one dies on the 60% failure weight, not on certainty.\nT-GLOBAL-SMFG-003 (KILL, valuation): at 17.75 the win state is +11.10%/3y against a 12.10% hurdle; the clearing entry (~12.97-13.93) sits below the 14.20 kill. The FY2026 ROE print that justified re-advancing the idea card does not survive the recurring-ROE correction (8.6% ex one-offs); LESSON-0002 re-test confirms the\u2026",
     "persona": ""
   },
   {
@@ -827,60 +893,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-21 (Fri)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 same data-staleness class as 08-20 (fund record 08-04 >10d; published cash-rate policy cash_yield_proxy_annual_pct.INDO 06-18, fx_carry_rates EUR 06-17 / JPY 06-16 / BRL 06-18 all >60d). Data staleness only, ops's lane, not trading-urgent. Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 remains (WEEKLY_DEEP queue, not mine).\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline + oil-import beneficiaries; AVOID thermal coal + INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Cards at entry: GLOBAL 13 files = 10 active (9 ADVANCE + SMFG-W) + AMD-D/NVO-D/TXN-D; INDO 12 files = 8 active (7 ADVANCE + ADRO-W) + DSNG-D/ELSA-D/PWON-D/TAPG-D. Both under the 12-card cap. Nothing older than 21 days (oldest active SMFG-W 08-06 = 15d).\n\n## Ingestion sweep\n\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-21T20:00:42.639633+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK still 0% sizing, no tickets",
-      "thesis": "T-GLOBAL-0700HK-001",
-      "kind": "other"
-    },
-    "body": "State at entry: QC WARN (5 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d; published cash-rate policy asofs >60d (cash_yield_proxy_annual_pct.INDO 2026-06-18, fx_carry_rates.EUR 2026-06-17, fx_carry_rates.JPY 2026-06-16, fx_carry_rates.BRL 2026-06-18). Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; no live GLOBAL positions). Nothing to verify; no fail-closed breach.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN); nothing ticketable before tonight US open.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-20T08:45:44.443068+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-08-20 08:45 WIB \u2014 no tickets, pass",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. QC WARN (5 stale-data flags: fund record >10d, published cash-rate policy INDO/EUR/JPY/BRL asof >60d) \u2014 not CRITICAL, no trading halt; noted for ops, not fixable mid-session. Governor NONE \u2014 no DEGROSS de-gross. kill_actions_due empty, live_theses 0 \u2014 no kill tickets to verify beyond wrapper output. pending_orders empty \u2014 nothing to cancel. Entries: only judged_unticketed thesis T-GLOBAL-0700HK-001 (GLOBAL book, verdict PASS_REDUCED) has sizing.pm_pct=null, script_pct=0.0, hard_max=0.0 (Kelly<=0, ADV unknown, liquidity cap fail-closed; PM cannot deviate up from 0) \u2014 no sizing block eligible for entry, and it is GLOBAL not INDO. No ticketable INDO entry this session. No tickets created; risk_check not run (step 4 N/A).",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-20 (Thu)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 fund record (08-04) >10d; published cash-rate policy cash_yield_proxy_annual_pct.INDO (06-18), fx_carry_rates EUR (06-17) / JPY (06-16) / BRL (06-18) all >60d. Data staleness only; not mine to fix. Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline + oil-import beneficiaries; AVOID thermal coal + INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Cards at entry: GLOBAL 12 files = 9 active (8 ADVANCE + SMFG-W) + AMD-D/NVO-D/TXN-D; INDO 12 files = 8 active (7 ADVANCE + ADRO-W) + DSNG-D/ELSA-D/PWON-D/TAPG-D. Both under the 12-card cap. Nothing older than 21 days (08-17 batch re-affirmed the >21d cohort then).\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only the README + two helper scripts \u2014 no raw ticker exports. No new dossiers since 08-17 (still\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-20T20:01:02.612892+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass \u2014 GLOBAL all-cash, 0700HK still 0% sizing, no tickets",
-      "thesis": "T-GLOBAL-0700HK-001",
-      "kind": "other"
-    },
-    "body": "State at entry: QC WARN (5 staleness flags, none CRITICAL), GLOBAL governor NONE, 100% cash, gross 0%, 0 pending orders, 0 live theses, 0 kill actions due, 0 reviews open. judged_unticketed holds only T-GLOBAL-0700HK-001.\n\nStep 2 (QC gate): WARN, not CRITICAL \u2014 no fail-closed. Flags all staleness: fund record 2026-08-04 >10d; published cash-rate policy asofs >60d (cash_yield_proxy_annual_pct.INDO 2026-06-18, fx_carry_rates.EUR 2026-06-17, fx_carry_rates.JPY 2026-06-16, fx_carry_rates.BRL 2026-06-18). Informational for ops.\n\nStep 3 (ticketing categories):\na. Kill exits \u2014 none fired (kill_actions_due empty; no live GLOBAL positions). Nothing to verify; no fail-closed breach.\nb. Governor de-gross \u2014 governor NONE, gross 0%. No deterministic sells, no de-gross mix to choose.\nc. Entries \u2014 T-GLOBAL-0700HK-001 NOT ticketable: sizing.pm_pct null; fund record (07-22) returned recommended_pct 0.0 / hard_max 0.0 (Kelly = WARN); nothing ticketable before tonight US open.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-19T08:45:40.210775+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-08-19: no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action because: QC=WARN (5 flags, all stale-data refresh items: fund record 2026-08-04, published cash-rate policy asofs 2026-06-16..06-18 \u2014 none CRITICAL, none trade-blocking). Governor NONE both books \u2014 no DEGROSS, no de-gross sells, no buy vetoes. pending_orders empty; live_theses empty; kill_actions_due empty \u2014 no kill tickets to verify (step 3a N/A). judged_unticketed T-GLOBAL-0700HK-001 (GLOBAL book, Tencent 0700.HK) reviewed: status judged, verdict PASS_REDUCED 0.5x, risk NO VETO with Phase-2 deliverables pending, but sizing.pm_pct=null (fund record 2026-07-22: Kelly liquidity cap 0 fail-closed, recommended_pct=0.0, hard_max=0.0; PM cannot deviate up). No pm_pct quantity exists to ticket and it is a GLOBAL-book thesis, not an INDO entry \u2014 does not satisfy step 3c. No tickets written.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-19 (Wed)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 fund record (08-04) >10d; published cash-rate policy cash_yield_proxy_annual_pct.INDO (06-18), fx_carry_rates EUR (06-17) / JPY (06-16) / BRL (06-18) all >60d. Data staleness only; not mine to fix. Prices live, both screens ran clean (one AVGO fetch hiccup \u2014 sqlite db locked \u2014 non-blocking; screen completed with live prices).\n- Governor: both books NONE, all-cash, zero drawdown. No kill actions due, no open reviews \u2014 nothing to carry to the next trading session. Pending orders: none.\n- Macro regime unchanged (asof 2026-07-11): balance_of_payments_pressure, CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline + oil-import beneficiaries; AVOID thermal coal + INDO rate-sensitives (banks/property/discretionary); NEUTRAL commodity bloc name-by-name.\n- Cards at entry: GLOBAL 12 files = 11 active (10 ADVANCE + SMFG-W) + NVO-D; INDO 12 files = 10 active (9 ADVANCE + ADRO-W) + ELSA-D + PWON-D. Both books under the 12-card cap. 08-17 re-affirmed the entire >21d cohort \u2014 nothing is older than 21 days today.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only the README + two helper scripts \u2014 no raw\u2026",
     "persona": ""
   }
 ]

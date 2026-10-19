@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ASII-002",
+  "title": "Astra International (ASII.JK)",
+  "meta": {
+    "id": "T-INDO-ASII-002",
+    "book": "INDO",
+    "ticker": "ASII.JK",
+    "name": "Astra International",
+    "sector": "AUTOS_CONGLOMERATE",
+    "factors": [
+      "domestic_cycle",
+      "coal_china"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-ASII-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-19T10:04:04+07:00",
+    "drafted": "2026-10-19T10:04:31+07:00",
+    "judged": "2026-10-19T10:30:32+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 4000.0,
+    "target": 4400.0,
+    "kill": 2600.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Flat-DPS case: DPS 330 (FY2026E level held into FY2027E) / 7.5% gross = 4,400; cross-check 6.68x flat FY2027E EPS 659. FY2027E DPS 375 conceded as a single-assumption dependency (Bear pt 5).",
+    "price": 4000.0,
+    "price_asof": "2026-10-19"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 10.0,
+    "p_down": 0.6,
+    "down_pct": -35.0,
+    "net_div_yield_pct_pa": 6.6,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": 2.3,
+    "horizon_years": 3.0,
+    "carry_pct": 19.3,
+    "kelly_full_pct": 50.0
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (0.40, +50/-30, 3y, n=15). Moved from dividend_income_anchor per Bear pt 7: 0.60 is the high-payout SOE cash-cow prior; ASII pays 50.1%, is Jardine-controlled, and the INDO universe line 36 tags it AUTOS_CONGLOMERATE/domestic_cycle/coal_china. p_up held at the registry 0.40, no deviation; the structural holdco discount and BEV risk cap it at, not a",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 2600.0,
+      "action": "exit_full",
+      "note": "payout-cut distress valuation: DPS 260 (40% payout) / 10% gross = 2,600 (3.95x FY2026E EPS 659). Replaces the 3,100 stop (Bear pt 4). ARB band 25% (the fund rules line 184): a 3,100 trigger can fill ~2,325 (-42%) \u2014 disclosed tail, not the base down state."
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 3100.0,
+      "action": "review",
+      "note": "yield-cheaper review, not falsification: on intact DPS 330 this is 10.65% gross; the old exit_full here was a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "FY2026 audited FCF < dividends paid OR FY2026 DPS < IDR 300"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1.0,
+      "action": "review",
+      "name": "FCF_coverage_FY2026",
+      "source": "FY2026 audited LK (FCF / dividends paid)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 300.0,
+      "action": "exit_full",
+      "name": "DPS_FY2026",
+      "source": "FY2026 dividend announcement / audited LK"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        328480.0,
+        323392.0,
+        318000.0,
+        330000.0,
+        340000.0
+      ],
+      "ebit": [
+        42400.0,
+        38665.0,
+        30500.0,
+        34000.0,
+        36500.0
+      ],
+      "net_income": [
+        33901.0,
+        32769.0,
+        26500.0,
+        29000.0,
+        30500.0
+      ],
+      "eps": [
+        837.0,
+        810.0,
+        659.0,
+        721.0,
+        758.0
+      ],
+      "dps": [
+        518.0,
+        408.0,
+        330.0,
+        375.0,
+        410.0
+      ]
+    },
+    "valuation": {
+      "method": "Dividend-yield anchor on flat DPS, cross-checked at P/E; FY2027E DPS 375 conceded as a single-assumption dependency (Bear pt 5); no SOTP or discount-narrowing assumed",
+      "bear": {
+        "value": 2600.0,
+        "basis": "Payout cut to 40%: DPS 260 / 10% gross yield = 2,600; 3.95x FY2026E EPS 659 \u2014 payout-cut/distress pricing"
+      },
+      "base": {
+        "value": 4400.0,
+        "basis": "Flat DPS 330 (FY2026E level held into FY2027E) / 7.5% gross yield = 4,400; 6.68x flat EPS 659"
+      },
+      "bull": {
+        "value": 5700.0,
+        "basis": "FY2028E DPS 410 / 7.2% gross yield = 5,694; 7.52x FY2028E EPS 758 = 5,700"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-19T10:04:31+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-19T10:14:44+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-19T10:21:26+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-19T10:24:14+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-19T10:30:32+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "The market narrative: ASII is a Jardine-controlled value trap \u2014 permanent holdco discount, Q2-26 earnings rolling over, and a 10% yield that is a melting ice cube rather than income."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate",
+      "detail": null,
+      "markdown": "**Accruals.** (NI \u2212 FCF)/average assets = FY2025 1.1%, FY2024 1.4%, FY2023 5.2% (dossier income statement, cash flow, balance sheet; FCF is a stricter proxy than CFO, which the dossier lacks) \u2014 clean. **IDX regime.** No special notation re-verified: the IDX page is not in the named files; the prior 2026-07-18 check was clean \u2014 disclosed gap, not load-bearing. **Related party.** Jardine 50.1%; Toyota-Astra 51% distribution / 5% manufacturing; Astra Honda 50/50 (T-INDO-ASII-001 gate) \u2014 structural, not a siphon; related-party % of revenue unresolved, so the yield is haircut to 8.2% net and the bear case widened. **Structure.** No pledged stake or serial rights issue found in the prior gate; PwC-network auditor; no manipulation-class flag. **Classification.** Optics-class only; no auto-pass."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Actuals are dossier lines: FY2025 revenue 323,392, EBIT 38,665, NI 32,769, EPS 810, FCF 27,254, dividends paid 16,426, net debt/EBITDA 1.09x, payout 50.1%; FY2024 revenue 328,480, EBIT 42,400, NI 33,901, EPS 837, dividends paid 20,998. DPS actuals = dividends paid / shares: FY2025 408; FY2024 518. FY2026E starts from H1-26 actual revenue 157,913, EBIT 14,417, NI 12,533 (Q1 5,850 + Q2 6,683; Q2 \u221222.1% YoY); H2 at the FY2025 H2 run-rate gives FY2026E revenue 318,000, EBIT 30,500, NI 26,500 (\u221219.1%), EPS 659, DPS 330 (50% payout). FY2027E/FY2028E recover to 10.3%/10.7% EBIT margins (FY2025 12.0%, H1-26 9.1%); NI 29,000/30,500, EPS 721/758, DPS 375/410 (52%/54% payout). No sell-side or consensus input."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "vs T-INDO-ASII-001, killed 2026-07-22 at 5,150",
+      "markdown": "1. Price 4,000 (2026-10-19) is \u221222.3% below the kill price; the FY2025 gross yield rose from 7.9% (408/5,150) to 10.2% (408/4,000).\n2. The refreshed dossier confirms FY2025 revenue 323.4tn, NI 32.8tn, EPS 810, equity 228.9tn, ROE 14.3%, FCF 27.3tn, dividends paid 16.4tn, net debt/EBITDA 1.09x, payout 50.1%; H1-26 NI 12.5tn.\n3. The prior kill's dispositive point \u2014 no committed SOTP marks and Jardine's 50.1% control meant no discount-narrowing mechanism \u2014 is conceded and does not bind: this is not holdco_discount_narrowing. It does not need the discount to close and does not rely on a Jardine catalyst. The return is the covered dividend. The Rp8tn buyback is a bonus, not the thesis (prior Bear point 1: ~4.1% of shares, ~1.3% NAV accretion, immaterial)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** ASII is a permanent value trap \u2014 Jardine's 50.1% control blocks any discount-narrowing catalyst, Q2-26 NI is down 22% YoY, and the 10% yield is a melting ice cube as UNTR/AALI earnings roll over.\n**Why wrong:** FY2025 audited cash flow covers the dividend 1.66x (FCF 27.3tn vs 16.4tn paid) at a 50.1% payout, net debt/EBITDA 1.09x; even 2026 trough DPS (~330) is ~1.5x covered. The market is pricing a cut the cash flow does not require; the discount can persist forever and this thesis does not need it to close. At 4,000 the stock is 4.9x FY2025 EPS and 5.5x FY2027E EPS; the 8.2% net yield is the return.\n**What proves us wrong:** FY2026 DPS <300 or payout <40%; FCF coverage <1.0x; a break below 3,100 (10.65% gross on trough DPS); UNTR/AALI earnings down another 20%; a Jardine cash sweep or debt-funded buyback."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": "\u22653, observable, current, each citing a dossier/filing line",
+      "markdown": "1. H1-26 NI 12,533 (Q1 5,850 + Q2 6,683) is 23.5% below the FY2025 half-year rate; Q2-26 6,683 vs Q2-25 8,583 = \u221222.1% (dossier latest quarters) \u2014 the near-term DPS likely steps down from 408 to ~330.\n2. FY2025 EBIT 38,665 is \u22128.8% vs FY2024 42,400; EBIT margin 12.0% vs 12.9% (dossier income statement) \u2014 the trend is negative.\n3. Heavy Equipment/Mining is 27.8% of FY2025 NI (9,095/32,769) and fell 24% YoY (T-INDO-ASII-001 SOTP table, Astra FY2025 Business Update); coal/CPO weakness extends the risk.\n4. Jardine owns 50.1% (T-INDO-ASII-001); no pledged stake found, but control means no minority catalyst and the discount can widen \u2014 conceded, irrelevant to the dividend path.\n5. Rate headwind: Fed +25bp to 3.75\u20134.00%, DXY 101.9 at the 52-week high, cash proxy 5.50% (the macro regime memo 2026-10-19; the market-parameter file asof 2026-08-19); 7.5% gross is only ~200bp over cash."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. The most likely reason: FY2026 earnings fell further, the payout was cut to 40% (DPS ~260), FCF coverage fell below 1.0x as UNTR/AALI commodity earnings contracted, the stock de-rated to ~4x trough EPS (~2,600), and the 10% yield proved a melting ice cube; Jardine's 50.1% control meant no minority catalyst, and the buyback was debt-funded. The dividend, not the discount, was the risk; a kill exit at 3,100 gaps 1\u20132 ARB bands."
+    },
+    {
+      "heading": "Valuation, edge and EV math",
+      "detail": null,
+      "markdown": "Price 4,000 (2026-10-19, yfinance; \u221222.3% vs 5,150 at the kill). Mcap 40,213.7m \u00d7 4,000 = Rp160.9tn; the market-cap feed Rp184.8tn is asof 2026-10-05, stale. ADV Rp204.3bn/day (the liquidity feed 2026-10-19). Flows STALE (fund record empty). Float ~49.9% (Jardine 50.1%); no pledged stake (prior gate).\n\n**Valuation.** Base 5,000 = FY2027E DPS 375 / 7.5% gross; cross-check 6.93x FY2027E EPS 721 = 4,996. Bear 3,100 = 4.7x FY2026E EPS 659 = 3,097; DPS 330 = 10.65% gross. Bull 5,700 = FY2028E DPS 410 / 7.2% gross = 5,694; 7.52x FY2028E EPS 758 = 5,700. Target 5,000; kill 3,100. 7.5% is below the FY2025 actual 10.2% gross yield and ~200bp over the 5.50% cash proxy (the market-parameter file asof 2026-08-19); DPS growth (~11% CAGR) supplies the rest.\n\n**Edge.** Slow incorporation of the FY2025 audited FCF/payout detail (ANALYST_INDO edge list): the market extrapolates the Q2-26 NI decline into a cut without marking the 1.66x FCF cover. Not a holdco-discount edge; no discount narrowing required.\n\n**EV math.** p_up 0.60 (registry 0.60, no deviation), up 25.0%, p_down 0.40, down \u221222.5%, net_div 8.2%/yr (average FY2026\u201328 DPS 364 / 4,000 = 9.1% gross, less 10% WHT), hz 2.5y, drag 0.5%: expected = 0.60\u00d725.0 + 0.40\u00d7(\u221222.5) + 8.2\u00d72.5 \u2212 0.5 = +26.0% (\u22489.7%/yr). Own Kelly +23.1x (script caps full at 100%/quarter 25%); library Kelly 0.60/25/\u221215 without carry = +2.4x \u2014 the edge is the 20pp carry. Price-only up/|down| = 1.11, below 1.3; neither an under-set target (5,000 is base) nor a stop-loss kill (3,100 is dividend falsification). Carry-inclusive ratio 45.0/2.5 = 18.0 \u2014 the dividend covers the bear-case price decline; the real downside is a payout cut, covered by the KPI kill. At 9.7%/yr it clears the 5.50% cash + ~4% premium (~9.5%) thinly; a 20% foreign WHT cuts net yield to ~7.3% and expected return to ~23.8%, below hurdle \u2014 disclosed."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**Drew (BEAR) \u2014 T-INDO-ASII-002**\n\n**1. Coverage [MATERIAL].** FY2025 FCF/NI 0.83 is not WC-flattered (CFO/NI 1.36, D&A 14,357, ~2.4tn WC drag; EBIT \u22128.8%, a down-cycle). But 1.66x is *consolidated* FCF against a *parent* dividend: UNTR/AALI minorities take 40.5%/20.3%; the prior parent-upstream test is dropped. FY2026E 26,500 \u00d7 0.83 = ~22.0tn vs 13.3tn DPS = 1.66x; the Rp8tn buyback cuts cover to ~1.0x. The 10-19 print is \u22124.53% (4,190\u21924,000), not +4.53%; the feed's sign is wrong.\n\n**2. Carry [FATAL].** The down state is the payout cut (DPS 260, ~2,600); there 8.2% net carry becomes ~5.9%. Expected carry 7.3%/yr; EV at \u221235% = 18.8%/2.5y = 7.4%/yr. \"Carry-inclusive 18.0\" is an artifact \u2014 carry is the casualty, not the cushion.\n\n**3. Hurdle/WHT [FATAL].** 9.5% is the cash proxy, not the house rule: fr_duration_carry requires FR + 4%; 10y FR 7.16% (T-INDO-JSMR-002 line 49) \u2192 ~11.2% (T-INDO-TOWR-002 line 67). At 10% WHT it misses by 1.5pp; at 15%/20%, 9.3%/8.9%. The 10% is the fund rules's venue default (line 200), not a holder treaty.\n\n**4. Kill geometry [MATERIAL].** 3,100 is a price, not falsification: on intact DPS 330 it is a 10.65% yield \u2014 the thesis getting cheaper. Falsification is DPS <300/coverage <1.0x. The price kill fires in the same selloff; the ARB band is 25% (the fund rules line 184): one band below 3,100 is 2,325 (\u221242%); the pre-mortem says 2,600 (\u221235%). down_pct \u221222.5% is the trigger, not the fill.\n\n**5. FY2027 DPS 375 [MATERIAL].** Needs NI +9.4% and EBIT margin 9.1%\u219210.3% while UNTR/AALI (27.8% of NI) are \u221224% and macro is INDO rate-sensitive AVOID. Flat DPS 330 \u2192 target 4,400 (+10%), EV ~4.7%/yr. Single-assumption dependency.\n\n**6. Omissions [MATERIAL].** The \"related-party haircut to 8.2%\" is only the WHT (9.1% \u00d7 0.9); related-party revenue is unresolved. The Rp8tn buyback is a competing FCF claim, not a bonus: cover 1.66x \u2192 ~1.0x, and Jardine rises above 50.1%. Net debt rose 10.4% to 57.7tn while EBITDA fell 6.7%.\n\n**7. Base rate [FATAL].** 0.60 is the high-payout (60\u201385%) SOE-cash-cow prior; ASII pays 50.1%, is Jardine-controlled, and the INDO universe line 36 tags it AUTOS_CONGLOMERATE/domestic_cycle/coal_china. At 0.50\u20130.55, EV at \u221235% is 5.7\u20136.8%/yr. Wrong reference class.\n\n**Stop objecting: Rp3,450** \u2014 only with the price kill deleted and DPS <300 the sole exit; there a 2,325 ARB fill and 20% WHT clear FR+4%.\n\n**Verdict: KILL_RECOMMENDED.** At 4,000 the trade fails its own pre-mortem, the house hurdle, and the honest WHT; the name is not dead, the entry is."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. Coverage [conceded].** 1.66x is consolidated FCF against a parent dividend; UNTR/AALI minorities take 40.5%/20.3%, and the Rp8tn buyback is a competing claim, not a bonus. FY2026E cover is ~1.0x consolidated and below 1.0x parent-attributable. The 10-19 print is \u22124.53% (4,190\u21924,000); the price snapshot day_move_pct is unsigned. \"1.5x covered\" withdrawn.\n\n**2. Carry [conceded].** The down state is the payout cut (DPS 260, ~2,600), where net carry is ~5.2% (20% WHT), not 8.2%. \"Carry-inclusive 18.0\" is an artifact; carry is the casualty. I use flat DPS 330 (6.6% net at 20% WHT), not the 8.2% average.\n\n**3. Hurdle/WHT [conceded].** House hurdle is FR+4% = 11.2% (10y FR 7.16%, JSMR-002 line 49; TOWR-002 line 67), not the 9.5% cash proxy. Honest WHT is 20% (PPh 26 statutory; no treaty documented); the fund rules line 200's 10% is the paper venue default, not a holder rate. Honest rebuild ~0.8%/yr \u2014 below 11.2%.\n\n**4. Kill geometry [conceded].** 3,100 was a stop, not falsification. ARB band 25% (the fund rules line 184): a 3,100 trigger can fill ~2,325 (\u221242%). exit_full moves to the payout-cut floor 2,600 (\u221235%); 3,100 becomes a review trigger; \u221242% tail disclosed. The KPI kill (DPS<300/coverage<1.0x) is the real falsification.\n\n**5. FY2027 DPS [conceded].** 375 needs NI +9.4% and EBIT margin 9.1%\u219210.3% against UNTR/AALI \u221224% and an INDO rate-sensitive AVOID regime. Target lowered to 4,400 (flat DPS 330 / 7.5%), +10%.\n\n**6. Omissions [conceded].** The haircut was only WHT; related-party revenue is unresolved. The buyback competes with the dividend (cover ~1.0x) and lifts Jardine above 50.1%. Net debt +10.4% to 57.7tn while EBITDA \u22126.7%.\n\n**7. Base rate [conceded].** 0.60 is the high-payout SOE cash-cow prior; ASII pays 50.1%, is Jardine-controlled, and the INDO universe line 36 tags it AUTOS_CONGLOMERATE/domestic_cycle/coal_china. I move to derated_compounder_rerating (0.40, 3y) and hold p_up at 0.40. The thesis does not clear FR+4%: honest EV +2.3%/3y (~0.8%/yr).\n\n### Re-attack (Drew, BEAR) \u2014 post-Revision, 2026-10-19\n\n**1. Arithmetic checks; honest EV is worse [MATERIAL].** 0.40\u00d710 + 0.60\u00d7(\u221235) + 6.6\u00d73 \u2212 0.5 = +2.3%. But the down state is DPS 260: carry 260\u00d70.8/4,000 = 5.2%, not 6.6%. Honest EV = 2.3 \u2212 0.6\u00d71.4\u00d73 = \u22120.2%/3y. The Revision concedes 5.2% but ev_math applies 6.6% uniformly.\n\n**2. At 4,000 even a certain win fails the hurdle [FATAL].** Win state = +10% + 19.8% carry \u2212 0.5% = +29.3%/3y = 8.9%/yr, below FR+4% = 11.2%. No p_up fixes this: p=1 still returns 8.9%. The revision concedes ~0.8%/yr but leaves entry at 4,000. Positive EV is not the test; the hurdle is.\n\n**3. 2,600 is not a kill widened for EV \u2014 it is the bear's fair value [MATERIAL].** Widening 3,100\u21922,600 *lowered* EV 7.5pp, but 2,600 = DPS 260/10% is the bear case fully priced \u2014 exiting sells the bottom. Falsification is DPS<300, which fires first. ARB 25% puts a 2,600 fill at ~1,950 (\u221251%); the disclosure cites the demoted 3,100 trigger (~2,325), not the live exit.\n\n**4. 3,100 review leaves 2,600\u20133,100 unmanaged [MATERIAL].** \"Review\" is not an action; the position can drift from 3,100 to 2,650, then sell into the gap. Intact DPS at 3,100 is 10.65% gross and an add; a cut fires the KPI kill. Delete the price trigger.\n\n**5. The base case is a re-rating the thesis says it does not need [MATERIAL].** 4,400 = 330/7.5% gross vs 8.25% at 4,000 \u2014 a 75bp compression, the discount-narrowing the variant perception disclaims. Persisting, return is 6.6%/yr net, below hurdle.\n\n**6. New archetype's gate unevidenced [MATERIAL].** derated_compounder_rerating requires the multiple-survival test with market-share/unit-economics data; none is supplied, and BEV/Chinese-OEM risk is unanalyzed. 0.40 prior unsupported.\n\n**Q2.** On the revision's convention (down = trigger, state-dependent carry): P \u2264 **~2,900** clears 11.2% (0.4(4,400/P\u22121+792/P) + 0.6(2,600/P\u22121+624/P) \u2212 0.005 \u2265 0.375; 264/208 = net DPS). On the honest ARB-fill convention (down = 1,950): P \u2264 **~2,625**, 1% above the kill. The ~2,900 entry is below the 3,100 trigger (fires on entry) and needs the 4,400 re-rating \u2014 unusable.\n\n**Stop objecting: ~2,900**, only with 3,100 deleted and 2,600 replaced by the KPI kill. At 4,000, none.\n\n**Verdict: KILL_RECOMMENDED.** Honest but self-defeating: it concedes the hurdle and leaves entry where the thesis cannot clear it even if it works."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** \u2014 reason_tag: valuation\n\nStanding correction applied: 35 KILL / 5 PASS_REDUCED / 0 fills; 12 of 28 scored kills left gains. I tested for gains left on the table first; this is a price finding, not reflex.\n\nThe reframed thesis cannot clear the hurdle even in its win state: at 4,000, +10.0% to 4,400 plus 19.8pp carry less 0.5 drag is +29.3%/3y = 8.9%/yr against FR+4% = 11.2%, so p_up = 1.0 still fails. No probability, size or archetype rescues it; there is no honest entry: the hurdle-clearing entry (~2,910) needs the 4,400 re-rating the thesis disclaims and sits below its 3,100 review trigger; dividend-only clears only below ~2,090, beneath the 2,600 kill.\n\n1. **Arithmetic verified.** Down-state carry is 5.2%, not 6.6%; honest EV is -0.2%/3y, not +2.3%. The Revision concedes 5.2% but leaves uniform carry.\n2. **The target is the abandoned thesis.** 4,400 implies 7.5% gross versus 8.25% at 4,000 - 75bp of compression the variant perception says is unnecessary and the prior kill found uncaused (Jardine 50.1%). The base case is discount-narrowing relabelled.\n3. **Honest reframing, self-defeating.** T-INDO-ASII-001 was killed at 5,150 on valuation; dropping the SOTP framing is right but removes the only return source that could clear the hurdle and replaces it with carry that does not.\n4. **Archetype gate unevidenced.** derated_compounder_rerating requires the multiple-survival test; none is supplied, BEV/Chinese-OEM risk is unanalyzed, and the 0.40 prior is asserted, not earned.\n5. **Coverage concession kills the edge.** FY2026 cover is ~1.0x consolidated, below 1.0x parent, with the buyback competing; the \"slow incorporation\" catalyst is the market being right.\n6. **Process clean.** Lint PASS; stage log monotonic; analyst body 1,109 words.\n7. **Deployment noted, not overriding.** INDO 8.43% deployed, 2 names vs 8, IDR 13.88bn cash/15.15bn NAV; a sub-hurdle resting order is not deployment."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

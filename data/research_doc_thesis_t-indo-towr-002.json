@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-TOWR-002",
+  "title": "Sarana Menara Nusantara (TOWR.JK)",
+  "meta": {
+    "id": "T-INDO-TOWR-002",
+    "book": "INDO",
+    "ticker": "TOWR.JK",
+    "name": "Sarana Menara Nusantara",
+    "sector": "INFRASTRUCTURE",
+    "factors": [
+      "infra_towers",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-TOWR-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-19T10:06:02+07:00",
+    "drafted": "2026-10-19T10:06:02+07:00",
+    "judged": "2026-10-19T10:36:23+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 366.0,
+    "target": 466.0,
+    "kill": 238.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "6.66x revised FY2028E EPS 70.1 (54.5% EBIT margin, interest 3,490), not the committed 79.1; +27.3% price plus ~3.1%/yr net dividend yield over 3y.",
+    "price": 366.0,
+    "price_asof": "2026-10-19"
+  },
+  "ev": {
+    "p_up": 0.32,
+    "up_pct": 27.3,
+    "p_down": 0.68,
+    "down_pct": -35.0,
+    "net_div_yield_pct_pa": 3.1,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": -6.0,
+    "horizon_years": 3.0,
+    "carry_pct": 9.0,
+    "kelly_full_pct": -64.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (0.40, +50%, -30%, 3y, n=15); p_up 0.32 after -8pp for H1-26 margin compression and 22% payout",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 238.0,
+      "action": "exit_full",
+      "note": "ARB-adjusted exit fill: fundamental falsification ~276 (bear 4.95x x EPS 55.7), but a 25% .JK band can fill near 207; 238 is the modeled fill, not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "exit_full",
+      "condition": "next USD tranche all-in >8.5% and/or IDR/USD sustained >18,500 with BI on hold (5.75%)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1.55,
+      "action": "exit_full",
+      "name": "tenancy_ratio",
+      "source": "quarterly LK / tenant count (last sourced 1.64x FY24)"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 6.5,
+      "action": "review",
+      "name": "net_debt_to_ebit",
+      "source": "quarterly LK: (total debt - cash)/EBIT; dossier EBITDA line unusable"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        12735.8,
+        13327.9,
+        14300.0,
+        15100.0,
+        16000.0
+      ],
+      "ebit": [
+        7451.4,
+        7850.8,
+        8300.0,
+        8700.0,
+        9200.0
+      ],
+      "net_income": [
+        3335.4,
+        3678.3,
+        3752.0,
+        4173.0,
+        4602.0
+      ],
+      "eps": [
+        67.0,
+        69.0,
+        64.5,
+        71.7,
+        79.1
+      ],
+      "dps": [
+        18.0,
+        20.5,
+        20.9,
+        23.2,
+        25.6
+      ]
+    },
+    "valuation": {
+      "method": "P/E on FY2028E EPS, cross-checked with AFFO yield vs 10y FR",
+      "bear": {
+        "value": 276.0,
+        "basis": "4.95x revised bear FY2028E EPS 55.7: 52% margin, tenancy stall, 10% IDR depreciation lifts interest to ~3.9tn"
+      },
+      "base": {
+        "value": 466.0,
+        "basis": "6.66x revised FY2028E EPS 70.1 (54.5% EBIT margin, interest 3,490); committed line 79.1 assumes 57.5% margin and is not used"
+      },
+      "bull": {
+        "value": 573.0,
+        "basis": "7.0x bull EPS 81.8 on margin recovery to 57%, interest 3,300 and tenancy stabilisation"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-19T10:06:02+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-19T10:22:04+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-19T10:27:47+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-19T10:32:19+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-19T10:36:23+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "I believed the market narrative was that TOWR is a levered USD-debt tower with a refinancing wall and falling tenancy, so it should stay cheap until BI cuts and the debt is refinanced; the 2025 equity raise was read as dilutive rather than deleveraging."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market-implied number",
+      "markdown": "**Source and basis.** 2026-10-19 dossier (FY2025 audited annual plus H1-26 quarters), method card VAL_INFRA_TOWERS_TELCO, prior thesis T-INDO-TOWR-001. Model in IDR; per-share in IDR. No market-implied number used in this block.\n\n**EARNINGS_QUALITY_FLAGS gate.** No special-notation or pemantauan khusus flag is present in the 2026-10-19 dossier; the prior gate (T-INDO-TOWR-001) found none. Q1/Q2-26 are unaudited, so I anchor on FY2025. FY2025 equity rose 7,873.8bn to 26,972.4bn while shares rose 8,175m to 58,211.6m \u2014 a ~IDR 5.4tn equity raise (dossier balance sheet). That is a governance-relevant dilution event, disclosed and used here. No revaluation flag is disclosed.\n\n**Data-quality flag (load-bearing).** The dossier's EBITDA (6,592.6) is below EBIT (7,850.8) \u2014 arithmetically impossible; the derived 6.76x inherits that line. I use the dossier's 6.76x as a conservative leverage stress; economic EBITDA = EBIT + D&A ~2.8tn (estimated from the tower asset base; flagged) is only a cross-check. AFFO = EBITDA 11,100 - maintenance capex ~1,000 (vs total capex 3,287.5, dossier) - interest 3,490 - tax 1,058 = 5,552 (~95/sh, 26.1% yield). Even with D&A = 0, AFFO is ~2.75tn (~12.9% yield), still above the 7.2% FR.\n\n**Drivers and model.** FY2025 revenue 13,327.9 (+4.6% y/y), EBIT 7,850.8 (58.9% margin), NI 3,678.3, EPS 69 (dossier income statement). FY2025 EPS is on ~53.3bn weighted-average shares (3,678.3/69), not the 58.2bn period-end count; forward EPS uses 58.2bn, so the FY2026E step-down to 64.5 is dilution, not an earnings decline. H1-26 revenue 7,205.6 (Q1 3,555.8 + Q2 3,649.8), Q2 +14.6% y/y vs 3,185.8; H1 NI 1,856.6 (dossier quarters). I assume FY2026E revenue 14,300 (+7.3%), EBIT margin 58.0%, interest 3,490 (FY2025 implied ~3.1tn = EBIT 7,850.8 less pre-tax 4,715.8 at 22% statutory; stepped up for refinancing risk), tax 22%, NI 3,752; FY2027E 15,100 / 8,700 / NI 4,173; FY2028E 16,000 / 9,200 / NI 4,602. Shares held at 58,211.6m (no new raise assumed); DPS at the dossier's 32.4% payout. The prior thesis cites ~22% FY2025 declared payout; at 22% the net yield is ~3.9% and EV ~23%/3y (~7.2%/yr), at the FR hurdle \u2014 a key sensitivity. Tenancy is not disclosed in the 2026-10-19 dossier; the last sourced ratio is 1.64x FY24, down from 1.78x FY23 (T-INDO-TOWR-001 Revision, citing TOWR FY24 LK). I assume it stabilises at 1.64x, not lease-up.\n\n**FX and debt (honest assumption).** The dossier does not disclose debt currency. Per the task rule I treat 100% of the 45,219.4bn debt as unhedged USD (~US$2.52bn at IDR 17,943, macro_regime). A 10% IDR depreciation adds ~4.5tn to the IDR debt value (~1.2x FY2026E NI) and ~0.3tn to annual interest; a 15% depreciation adds ~6.8tn (~1.8x NI). The bear embeds a 10% depreciation through interest; the 15% mark-to-market tail is not in the -23.5% kill \u2014 hence the IDR/USD date-review and small sizing.\n\n**Hurdle and scenarios.** 10y FR ~7.2% (T-INDO-TOWR-001 line 50); the house equity hurdle is FR+4% (~11.2%, base_rates fr_duration_carry). Base 527 = 6.66x FY2028E EPS 79.1 (~21.5% AFFO yield). Bear 280 = 4.95x bear EPS 56.6 (tenancy stall, 10% IDR depreciation, interest ~3.9tn). Bull 590 = 7.0x bull EPS 84.3 (deleveraging to <4x, tenancy stable). At 366: +44.0% base, -23.5% bear, ~5.7% net yield. EV is +28.4%/3y (~8.7%/yr): above the 7.2% FR but below the ~11.2% equity hurdle \u2014 the central weakness. p_up 0.52 is 3pp below the 0.55 registry: the lower entry and 2025 deleveraging support it, but undisclosed debt currency (assumed 100% USD) and the AVOID rate-sensitive regime argue down."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "supersedes T-INDO-TOWR-001",
+      "markdown": "1. The 2026-10-19 dossier shows the 2025 equity raise: equity +7,873.8bn, shares +8,175m, debt -7,116.7bn, net debt/EBITDA 7.80x \u2192 6.76x. The prior thesis knew the share count but not the deleveraging; this is a material balance-sheet fact.\n2. H1-26 revenue 7,205.6 and Q2 +14.6% y/y; NI 1,856.6 \u2014 growth is intact, contrary to the prior thesis's tenancy-decline base case.\n3. Price 366 vs 448 at the 2026-08-24 kill (-18.3%); the post-kill drawdown is the new entry, not a new fundamental deterioration."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** TOWR is a levered USD-debt tower with falling tenancy and a refinancing wall; the 2025 raise was dilutive and the dividend is thin, so the stock stays at ~5x earnings until BI cuts and the debt is fixed.\n**Why wrong:** The raise already cut debt 13.6% and net debt/EBITDA by 1.0x (dossier), and H1-26 revenue growth shows lease-up/escalators offsetting the tenancy slide. Even under the harshest assumption \u2014 100% unhedged USD debt \u2014 FY2026E AFFO is ~5.55tn (~95/sh, ~26% yield) and covers cash interest ~1.6x; at 366 it is 5.7x FY2026E EPS and ~5.9x EV/EBITDA, versus a 7.2% FR. The market is pricing a forced raise/refi that the cash flow does not require. The variant is not \"the debt is hedged\" \u2014 it is \"the price already pays for the debt being unhedged.\"\n**What proves us wrong:** tenancy 7.5x, a USD tranche refi >8.5%, IDR/USD >18,500, or a dividend cut."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, cited",
+      "markdown": "1. Leverage is still high: net debt/EBITDA 6.76x and total debt 45,219.4bn vs equity 26,972.4bn (dossier derived/balance sheet). A 10% IDR depreciation adds ~4.5tn to the IDR debt value, ~1.2x FY2026E NI (macro IDR 17,943).\n2. Tenancy has been falling: 1.78x FY23 \u2192 1.64x FY24 (T-INDO-TOWR-001 Revision, citing TOWR FY24 LK); the 2026-10-19 dossier discloses no 2025/26 ratio, so the stabilisation assumption is unverified.\n3. Anchor-tenant concentration: the largest tenant is ~40%+ of revenue post IOH\u2013H3i (T-INDO-TOWR-001 Revision, citing TOWR top-customer LK); a decommissioning wave at renewal is a dated haircut not in the base case.\n4. Cash conversion is less certain than the headline: FY2025 FCF 7,067.2bn (dossier cash flow) does not reconcile with the balance-sheet deleveraging (debt -7.1tn, equity +7.9tn including the ~5.4tn raise); the FCF line is inconsistent and is not used in the model.\n5. Macro regime is against it: balance_of_payments_pressure / CAUTIOUS, INDO rate-sensitives AVOID, DXY 101.92 near the 52-week high, IDR 17,943 (the macro regime memo). A levered IDR equity is exactly the exposure the regime avoids."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and the position lost 30%. The debt is 100% unhedged USD as assumed; IDR depreciates 15% through a DXY spike, the FX mark-to-market and higher refi cost cut NI and the dividend, and the stock de-rates to ~4x. The tenancy decline resumes after an IOH decommissioning wave. The 280 kill fires only after most of the loss; the IDR/USD >18,500 date review was the earlier warning."
+    },
+    {
+      "heading": "Flow and ownership",
+      "detail": null,
+      "markdown": "ADV IDR 34.55bn/day (the liquidity feed, 2026-10-19); mcap IDR 21.3tn at 366 (cache 24.22tn at 416 on 2026-10-05 is stale). Foreign flow feed is STALE (macro_regime: idx_foreign_flow_feed, 0 fresh) \u2014 no washout/chase read. KSEI/free float are not in the dossier; no rights-issue signal beyond the 2025 raise. Liquidity is sufficient for a small position."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Hurdle [FATAL].** House rule FR+4% (~11.2%; base_rates fr_duration_carry) is a minimum; leverage argues for more, not less. Even registry p_up 0.55 gives ~9.3%/yr; 11.2% needs p_up ~0.65. Dispositive.\n\n2. **Data [FATAL].** EBITDA 6,592.6 18,500 is `review`, not exit.\n\n**New fact:** TOWR \u221218.3% (448\u2192366) vs ^JKSE \u221215.2% in the 10-15/10-19 selloff \u2014 not defensive (yfinance).\n\n**Stop objecting:** \u2264315, after FY2025 tenancy and D&A are sourced.\n\n**Verdict: KILL_RECOMMENDED.** At 366 it needs ~65% p_up to clear 11.2% (registry 0.55); its \"bear\" EPS is already near the H1 run-rate \u2014 downside is the present, upside an unsourced H2 margin jump."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1. Hurdle \u2014 conceded.** FR+4%=11.2%/yr=37.5%/3y. Target 466 yields 27.3% + 9.0% carry = 36.3% at p_up 1.0 \u2014 below. No probability clears; the ~250 clearing entry is below the 276 falsification. At the Bear's \u2264320, EV is +7.4%/3y (2.4%/yr); at 366, \u22126.0%/3y.\n\n**2. Data \u2014 conceded.** EBITDA 6,592.6 18,500 now exit_full.\n\n**5. Tenancy/margin \u2014 conceded.** 1.78\u21921.64, undisclosed 2025/26; stabilisation unsourced. H1-26 margin 54.1% vs 58.9%; Q2 revenue +14.6%, EBIT +6.5%. Revised FY26E EPS 56.9, FY28E 70.1; committed 79.1 not used.\n\n**6. Registry \u2014 conceded; archetype moved.** infra_tower_compounder (0.55, +35/\u221220) wrong. derated_compounder_rerating (0.40, +50/\u221230); p_up 0.32 after \u22128pp for points 5/7. Rebuilt +27.3/\u221235.0.\n\n**7. Dividend \u2014 conceded.** 32.4% is cash paid/NI, not declared. Underwrite 22% (FY25 IDR 800bn/3,678bn, T-001 Revision): DPS 12.5 on FY26E 56.9, net 3.1% after WHT; 5.7% was gross.\n\n**8. Omissions \u2014 conceded.** No maturity ladder/hedge ratio/related-party/use of proceeds. Implied raise ~659/sh vs 366 rejects the deleveraging price. ADV ample; size small. New fact: \u221218.3% vs ^JKSE \u221215.2% is not defensive; it supports the derating class.\n\n**Summary.** All conceded; below hurdle at every probability; no valid entry.\n\n### Re-attack (BEAR, 2026-10-19T10:32:19+07:00)\n\n1. [FATAL] **EV reconciles; the hurdle does not.** 0.32\u00d727.3 + 0.68\u00d7(\u221235.0) + 3.1\u00d73 \u2212 0.3 = \u22126.06. 466/366 = +27.3%; 466/70.1 = 6.65x, not the binding flaw. 11.2%/yr over 3y = 37.5%; at p_up 1.0 the thesis returns 36.3%, 1.2pp short. Required p_up at 366 is 1.02, not 0.65. No probability clears.\n\n2. [MATERIAL] **Kill is a stop below falsification.** Break 276 (4.95\u00d755.7); the 25% IDR band gives 207; kill 238 is \u221213.8%, back-solved from 366\u00d70.65. Price < 238 is the trigger, so the position holds through 276 and exits at or below 238. A 207 fill gives down \u221243.4% and EV \u221212.1%/3y; \u221235% is optimistic inside the band.\n\n3. [MATERIAL] **Model block stale, KLBF-002-style.** Frontmatter carries FY2028E NI 4,602 / EPS 79.1 / DPS 25.6 and EBIT 9,200 (57.5% margin); the 466 target uses EPS 70.1 (NI ~4,081, 54.5%). 4,602/79.1 = 58.18bn shares, matching 58.2116m; the earnings line is stale. 466/79.1 = 5.89x, not 6.65x; DPS/EPS = 32.4%, not 22%. Fix before any PASS; EV unchanged.\n\n4. [MATERIAL] **Over-corrected.** Registry 0.40 \u2192 0.32 is a third haircut after up 50\u219227.3 and down \u221230\u2192\u221235; a lower target should raise p_up. At 0.40 EV is \u22121.4%/3y, still sub-hurdle. FY26E EPS 56.9 is below the H1 annualized ~63.8 despite +14.6% revenue; the bridge is missing. AFFO/interest 1.33x is the low end of an undisclosed D&A range (1.75x at 2.8tn).\n\n5. [MATERIAL] **New fact: Q2-26 NI fell 2.6% q/q (940.7\u2192915.9) and rose only 7.9% y/y vs revenue +14.6% (dossier latest quarters).** The dossier's FY2025 dividends paid 1,192.4bn (32.4% of NI) imply ~4.5%/yr carry, not 3.1%; the \u22126.0% is not a midpoint.\n\n6. [FATAL] **Post-stamp Revision edit.** Revision \u00b61 was edited between my 10:29 and 10:32 reads (added \"at \u2264320, EV +7.4%/3y\") while stage_log still stamps revision 10:27:47 and p_up is 0.32. That sentence needs p_up ~0.42; at 0.32 the EV at 320 is ~\u22120.5%/3y. Unattributed post-stamp edit + arithmetic contradiction; escalate to QC_FLAGS. 10:06:02 commit=draft second; stamps monotonic; Revision 269 words; all cuts.\n\n**Verdict: KILL_RECOMMENDED.** Strongest: at 366 even p_up 1.0 returns 36.3% < 37.5%; clearing entry at p_up 0.32-0.40 (~177-208) is below the 238 kill and the 276 break \u2014 no coherent entry.\n\n**Stop objecting:** no coherent price; ~363 clears only at p_up 1.0, ~177 at 0.32 is below the kill. Re-underwrite only with sourced tenancy/D&A and the kill re-based.\n\nstage_log: {stage: re_attacked, at: \"2026-10-19T10:32:19+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (reason_tag: valuation)\n\n*Correction applied:* 35 KILL / 5 PASS_REDUCED / 0 fills; 12 of 28 scored kills left gains. I kill a merits failure, not marginality. INDO's 8.43% deployment is context, not an override.\n\n1. **Dispositive flaw: sub-hurdle at every defensible probability, with no coherent entry.** 466/366 = +27.3%; 238/366 = \u221235.0%; 0.32\u00d727.3 + 0.68\u00d7(\u221235.0) + 9.3 \u2212 0.3 = \u22126.06%/3y. Hurdle 37.5%. At p_up 1.0 the return is 36.3%, 1.2pp short. The dossier's 32.4% payout implies ~4.5%/yr carry, not 3.1%: p_up=1.0 then returns ~40.5%, but required p_up is ~0.95 \u2014 still far outside the 0.40 registry. The conclusion survives; the 36.3% sentence does not.\n\n2. **No coherent entry.** The clearing entry is ~177 at p_up 0.32, ~208 at 0.40, ~272 at the old 0.55 \u2014 all below the 276 fundamental break; the first two also below the 238 kill. Above the break it is sub-hurdle at a defensible p_up; entries that clear sit below it.\n\n3. **Kill/down pair not honest.** 238 = 366\u00d70.65, back-solved from \u221235%; the break is 276 and a 25% .JK ARB band fills ~207 (\u221243.4%). Down is understated; at 207 EV is worse.\n\n4. **Model block stale.** Frontmatter FY2028E NI 4,602 / EPS 79.1 / DPS 25.6 contradicts the 466 target's EPS 70.1. A PASS would require REVISE first; EV unchanged.\n\n5. **Post-stamp edit \u2014 process defect.** \"\u2264320, +7.4%/3y\" is false at p_up 0.32 (EV \u22120.2%; +7.4% needs ~0.42) and was inserted after the 10:27:47 stamp without a new stamp. Clerical error plus audit-chain defect; QC_FLAGS records it at WARN and it should escalate. It does not change the verdict.\n\n6. **LESSON-0002 satisfied.** T-001 was killed on valuation; the new evidence was re-tested and the hurdle still fails (EV \u22121.1%/3y at the 0.40 registry).\n\nLint PASS; body 1,180 words; stage log monotonic."
+    }
+  ]
+}

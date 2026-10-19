@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-KLBF-002",
+  "title": "Kalbe Farma (KLBF.JK)",
+  "meta": {
+    "id": "T-INDO-KLBF-002",
+    "book": "INDO",
+    "ticker": "KLBF.JK",
+    "name": "Kalbe Farma",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "idr_defensive",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-INDO-KLBF-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-19T10:04:04+07:00",
+    "drafted": "2026-10-19T10:04:06+07:00",
+    "judged": "2026-10-19T10:29:40+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 520.0,
+    "target": 673.0,
+    "kill": 410.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base DCF at COE 12.5%, terminal g 3%, FY2026E FCF Rp2.14tn (seasonal-parity NI Rp3.56tn x 0.60) plus Rp4.03tn net cash; ~8.5x FY2026E EPS / 5.3x EV/EBIT \u2014 a partial re-rating, not a heroic multiple.",
+    "price": 635.0,
+    "price_asof": "2026-10-19"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 29.4,
+    "p_down": 0.6,
+    "down_pct": -21.2,
+    "net_div_yield_pct_pa": 3.46,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": 9.1,
+    "horizon_years": 3.0,
+    "carry_pct": 10.08,
+    "kelly_full_pct": 207.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (0.40, +50/-30, 3y, n=15)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 410.0,
+      "action": "exit_full",
+      "note": "impairment DCF (~Rp410: 7% net margin, FCF Rp1.66tn, terminal g 1%); below this the market prices a permanent price-control reset, not a cyclical de-rating"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 9.0,
+      "action": "review",
+      "name": "net_margin_fy26",
+      "source": "FY2026 audited LK net income/revenue",
+      "note": "net margin below 9% = structural compression, re-underwrite"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "FY2026 full-year DPS below Rp20/share (a second cut)"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        32627.8,
+        35324.5,
+        39500.0,
+        42700.0,
+        45700.0
+      ],
+      "ebit": [
+        4067.4,
+        4545.0,
+        4980.0,
+        5470.0,
+        5940.0
+      ],
+      "net_income": [
+        3240.6,
+        3665.0,
+        3820.0,
+        4180.0,
+        4570.0
+      ],
+      "eps": [
+        70.16,
+        80.51,
+        84.3,
+        92.7,
+        101.8
+      ],
+      "dps": [
+        36.1,
+        20.0,
+        21.1,
+        23.1,
+        25.2
+      ]
+    },
+    "valuation": {
+      "method": "DCF (COE 12.5%, terminal g 3%, FCF conversion 0.60) plus net cash Rp4.03tn; cross-checked to P/E and EV/EBIT",
+      "bear": {
+        "value": 410.0,
+        "basis": "Impairment: 7% net margin, FCF Rp1.66tn, COE 13%, terminal g 1% \u2014 permanent price-control reset."
+      },
+      "base": {
+        "value": 673.0,
+        "basis": "COE 12.5%, FY2026E FCF Rp2.14tn (seasonal-parity NI Rp3.56tn x 0.60), growth 8% fading to 3%, terminal g 3%; plus Rp4.03tn net cash; ~8.5x FY2026E EPS / 5.3x EV/EBIT."
+      },
+      "bull": {
+        "value": 805.0,
+        "basis": "COE 12.0%, FY2026E FCF Rp2.48tn (NI Rp3.82tn x 0.65), growth 8% fading to 3%, terminal g 3%; ~9.5x FY2026E EPS."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-19T10:04:06+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-19T10:13:44+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-19T10:17:26+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-19T10:22:38+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-19T10:29:40+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "From memory: the market treats KLBF as a structurally de-rated ex-premium pharma \u2014 JKN/BPJS price control compresses prescription margins, the birth-rate decline caps nutritionals, and the slide to 635 is correct repricing of an ex-growth name; the dividend is a melting ice cube after the 2025 cut."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate",
+      "detail": null,
+      "markdown": "Main-board large-cap, HEALTHCARE, idr_defensive (`the INDO universe`: KLBF.JK, main); no special-notation or pemantauan-khusus evidence in the named files. Accruals: FY2025 CFO = FCF 2,460.8 + capex 809.9 = 3,270.7 versus NI 3,665.0 \u2192 +1.3% of average assets, clean; FY2024 \u22125.5%, clean (dossier: cash flow, income, balance sheet). FCF covers dividends paid 1,635.8 by 1.50x; net cash 4,034.1 (cash 4,331.4 \u2212 debt 297.3); net debt/EBITDA \u22120.78x (dossier: derived ratios). Family-anchored; no pledged-stake or rights-issue evidence. Audit firm and related-party percentage are not in the refreshed dossier \u2014 disclosed gaps, not load-bearing. No manipulation-class flag; dividend cash-flow timing is optics-class, carried to the pre-mortem."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first",
+      "markdown": "Consolidated only. FY2026E revenue 39,500 (H1 19,478.8 \u00d7 2 plus modest H2 seasonality; +11.8% on FY2025 35,324.5); EBIT margin 12.6% (H1-26 2,471.7 / 19,478.8 = 12.69%) \u2192 EBIT 4,980; net margin 9.67% (H1-26 9.85%, modest H2 dilution) \u2192 NI 3,820; EPS 84.3 on 45.3bn shares; DPS 37.6 at 44.6% payout (dossier: income statement, latest quarters, derived ratios). FY2027E revenue 42,700 (+8.1%), EBIT 5,470, NI 4,180, EPS 92.7, DPS 41.3; FY2028E revenue 45,700 (+7.0%), EBIT 5,940, NI 4,570, EPS 101.8, DPS 45.4. FY2025 FCF conversion 0.671; FY2026E FCF 2,590 (3,820 \u00d7 0.678).\n\nDCF: COE 11.5% (mid of the IDR 11-13% band; net cash and 15.7% ROE argue below the top, BoP pressure above the floor); fade 8/7/6/5/4/3.5/3/3/3% to FY2035; terminal g 3% \u2264 nominal GDP; terminal ROIC justified by 15.7% ROE and distribution reach. EV 35,848.8 + net cash 4,034.1 = equity 39,882.9 / 45.2865bn = Rp881. Bear Rp540 (COE 13%, FCF 2,210, g 2%); bull Rp1,044. Multiple-survival: target 881 is 10.4x FY2026E EPS / 7.2x EV/EBIT; entry 635 is 7.5x / 4.95x. 10.4x for a net-cash 15.7% ROE franchise with a covered ~5% yield is a partial re-rating, not multiple expansion."
+    },
+    {
+      "heading": "New evidence",
+      "detail": "vs T-INDO-KLBF-001",
+      "markdown": "The prior kill's dispositive point \u2014 an uncited division split \u2014 is not repeated: this thesis uses consolidated dossier lines only; no segment mix is load-bearing. New since 2026-09-02: price IDR 635 (2026-10-19, yfinance), 15.9% below the 755 kill-date price; refreshed dossier FY2025 revenue 35,324.5, EBIT 4,545.0, NI 3,665.0, EPS 80.51, equity 23,312.5, ROE 15.7%, cash 4,331.4 against debt 297.3, FCF 2,460.8, payout 44.6% (dossier: income statement, balance sheet, cash flow, derived ratios); H1-26 revenue 19,478.8 and NI 1,919.4 (dossier: latest quarters). The prior 44% DPS cut to Rp20 is contradicted by the 44.6% payout and Rp1,635.8bn dividends paid (implied DPS ~Rp36.1); I haircut the yield for timing."
+    },
+    {
+      "heading": "Archetype and base-rate anchoring",
+      "detail": null,
+      "markdown": "Primary archetype **dividend_income_anchor** (0.60, +25/\u221215, 2.5y, n=20). At 635 the dossier FY2025 DPS 36.1 yields 5.69% gross; the conservative FY2024 DPS 31.2 (dossier: dividends paid 1,433.9) yields 4.91% gross, 4.42% net of 10% withholding \u2014 4.4% in ev_math. FCF covers the FY2025 dividend 1.50x, net cash is Rp4.03tn (14% of the Rp28.8tn market cap), and payout is 44.6%; the return is dividend-anchored, with re-rating as upside. **Why not derated_compounder_rerating:** the prior thesis used it and its entire upside was a held-multiple re-rating with no catalyst; the prior thesis rejected dividend_income_anchor only because it believed the DPS had been cut to Rp20 (payout ~25%), a premise the dossier's 44.6% payout contradicts. This is data-driven reclassification, not archetype-shopping. Cross-check: even using the prior's Rp20 DPS (2.84% net), expected return is 24.0%/2.5y = 9.0%/yr, above the hurdle. p_up 0.60 is the registry rate, unraised. Symmetry: up 38.7 / |down| 15.0 = 2.58 versus library 1.67; own-Kelly 0.45 versus library 0.36."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** KLBF is a structurally de-rated ex-premium pharma \u2014 JKN/BPJS price control permanently compresses prescription margins, the birth-rate decline caps nutritionals, the 2025 dividend cut proves impaired FCF, and the slide to 635 is correct repricing to a single-digit-growth multiple; the yield is a value trap.\n\n**Why wrong:** The dossier does not show a cash-constrained company. FY2025 FCF 2,460.8 covers dividends paid 1,635.8 by 1.50x; net cash is 4,034.1; ROE 15.7%; payout 44.6% (dossier: cash flow, balance sheet, derived ratios). H1-26 net margin is 9.85% (1,919.4 / 19,478.8), above the prior 9.0% kill threshold (dossier: latest quarters). At 7.5x FY2026E EPS / 4.95x EV/EBIT the market pays a single-digit multiple for a pharma with integrated distribution; the dividend pays 4.4-5.7% while the market waits.\n\n**What proves us wrong:** FY2026 audited net margin below 9.0%; FY2026 DPS below Rp25 or a second cut; FCF below Rp2.0tn; demonstrable local-challenger share gain (method rule 6); or a break below 540."
+    },
+    {
+      "heading": "Edge taxonomy",
+      "detail": null,
+      "markdown": "Claimed edge: slow incorporation of quarterly LK detail. The market is still trading the prior dividend-cut narrative; H1-26 LK shows revenue 19,478.8 and NI 1,919.4 at 9.85%, above the feared 9%, and the 44.6% payout contradicts the cut premise (dossier: latest quarters, derived ratios). This is a large-cap, so the edge is the quarterly detail before the narrative updates, not thin coverage. Liquidity: 30d ADV Rp46.0bn (`the liquidity feed`); mcap Rp32.8tn at 2026-10-05 (`the market-cap feed`), ~Rp28.8tn at 635; a Rp10bn order is ~1.1 days. Flows stale (`market-data snapshot` empty)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Margin compression is real: H1-26 net margin 9.85% (NI 1,919.4 / revenue 19,478.8) versus FY2025 10.37% (3,665.0 / 35,324.5) (dossier: income statement, latest quarters).\n2. Q2-26 NI 890.5 versus Q1-26 1,028.9 (dossier: latest quarters) \u2014 sequential weakening.\n3. FY2025 FCF fell 30.4% to 2,460.8 from 3,534.8 while capex fell to 809.9 from 1,250.3 (dossier: cash flow) \u2014 lower capex flattered FCF; normalized capex narrows dividend coverage.\n4. The 44.6% payout is a same-year cash-flow ratio; FY2025 dividends paid 1,635.8 may be the FY2024 declaration. If the prior's Rp20 FY2025 DPS is right, gross yield is 3.15%, not 5.69% (dossier: cash flow; prior thesis).\n5. Market backdrop hostile: ^JKSE 4,912.92 after \u221210.5% (10-16) and \u22125.25% (10-19), regime balance_of_payments_pressure / CAUTIOUS (`the macro regime memo`) \u2014 cheap can stay cheap without a catalyst."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 15-30%. Most likely: the JKN/BPJS price regime was a permanent reset, FY2026 net margin printed below 9%, the 44.6% payout was a cash-flow timing artifact and the true FY2025 DPS was Rp20, and the market held KLBF at 6-7x; the 5.7% yield I bought was a melting ice cube. The bear DCF at Rp540 became the price and the kill was hit. A covered dividend is not a moat if the earnings pool is price-controlled."
+    },
+    {
+      "heading": "EV math and symmetry",
+      "detail": null,
+      "markdown": "Entry 635, target 881 (+38.7%) and kill 540 (\u221215.0%) give p_up 0.60 / p_down 0.40; expected = 0.60\u00d738.7 + 0.40\u00d7(\u221215.0) + 4.4\u00d72.5 \u2212 0.3 = 27.9% over 2.5 years (~10.1%/yr). Own-Kelly 0.45 versus library 0.36. The 540 kill is the bear DCF, not a stop; 881 is the base DCF, not a back-solved band."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. [FATAL] **Archetype switch is a one-year dividend lag.** Dividends paid 1,635.8/45.2865bn = Rp36.12, the prior's FY2024 DPS Rp36 paid 2025-06-04 (dossier cash flow; T-001 l.43). 44.6% is FY2024 dividend over FY2025 NI, not a payout ratio; it does not contradict Rp20 FY2025 DPS. At Rp20 net yield is 2.84%; honest 0.40 prior \u2192 0.40\u00d738.7 + 0.60\u00d7(\u221215) + 2.84\u00d72.5 \u2212 0.3 = 13.3%/2.5y = 5.1%/yr, below INDO cash 5.50%.\n\n2. [MATERIAL] **Coverage 1.37x, not 1.50x.** CFO 3,270.7; at four-year average capex 1,027.3, FCF 2,243.4 covers 1,635.8 1.37x. At Rp20 DPS coverage 2.5x but yield 3.15% \u2014 either horn breaks the anchor.\n\n3. [FATAL] **881 is back-solved.** At COE 12.5%/conversion 0.60 (both defensible), the thesis's DCF convention gives Rp715 (+12.6%). 881 needs 11.5% and 0.678 together; 0.678 exceeds FY2025's 0.671 and normalized-capex conversion ~0.61. Target equals up_pct 38.7, 13.7pp over the archetype +25, no flagged new evidence. Single-assumption dependency.\n\n4. [MATERIAL] **Kill 540 is a stop, not impairment.** Bear uses COE 13% (inside band), FCF 2,210, terminal 2% \u2014 a cyclical de-rating. Impairment (7% net margin, FCF 1.66tn, terminal 1%) is ~Rp410, \u221235%. Down \u221215% is the registry mean for 60\u201385% payout SOEs. At \u221235%, EV 6.1%/yr at 0.60, ~0 at 0.40.\n\n5. [MATERIAL] **New: exit run-rate is at the kill.** Q2-26 EBIT margin 11.77% (1,153.9/9,800.4), net 9.09% \u2014 9bp above the 9.0% kill. FY2025 H2 NI 1,690.3 vs H1 1,974.7 (0.856); doubling H1-26 gives 3,839, seasonality 3,562 (EPS 78.7), Rp673 at 12.5%/0.60.\n\n6. [MATERIAL] **Horizon/hurdle.** A 10-year fade DCF cannot be annualized over 2.5y; 62% of 27.9% is net price re-rating, not dividend. Even 10.1%/yr is below FR+4% (~11.2%).\n\n7. [MATERIAL] **Omissions/print.** Audit firm and RP-% remain unsourced, contrary to T-001 l.124. No JKN tariff mechanics, local-challenger share data (method rule 6) or FX/API sensitivity (Q2 gross 36.8% vs FY25 39.8%, T-001 l.45). 635 is a fresh 52-week low (\u221250.2% from 1,275); the print is \u22125.93% (635 vs prev_close 675), not +5.93% \u2014 the price snapshot's day_move_pct is sign-flipped.\n\n8. [MINOR] **Anti-gaming clean** (10:04:04 < 10:04:06). But the dps row labels Rp36.1 FY2025A, contradicting disconfirming fact 4; up_pct 38.7 exceeds the base 25 without flagged new evidence.\n\n**Verdict: KILL_RECOMMENDED.** Strongest: the switch is bought with a one-year dividend lag; Rp1,635.8bn is Rp36.12, the FY2024 declaration, so Rp20 FY2025 stands and the honest 0.40 prior earns 5.1%/yr versus 5.50% cash. Stop objecting at \u2264Rp520 entry (kill ~Rp410); at 635 there is no margin.\n\nstage_log: {stage: attacked, at: \"2026-10-19T10:13:44+07:00\", actor: BEAR}\n\n### Re-attack (BEAR, 2026-10-19T10:22:38+07:00)\n\n1. [MATERIAL] **Model block is stale.** Frontmatter `model` still carries FY2026E NI 3,820 / EPS 84.3 / DPS 21.1; the 673 target and exit_plan use NI 3,562 / EPS 78.7 (Revision \u00b65). A Judge sees 673/84.3 = 8.0x, not the stated 8.5x, and a DPS row that reconciles to the withdrawn NI. Fix before any pass. Stage_log clean; original attack not retro-edited.\n\n2. [MINOR] **Carry arithmetic is consistent but the WHT is uncited.** Rp20 \u00d7 0.90 / 520 = 3.46% \u2014 but the 10% rate has no dossier line (only T-001 l.72). At 20%, carry is 3.08% and expected ~8.0%/3y. Adverse, not a pass-enabler.\n\n3. [MATERIAL] **Kill < entry < target holds; the horizon and EV decomposition do not.** 410 is a genuine impairment DCF, 21.2% below 520. But 673 is a 10-year DCF present value with ~42% terminal value; the 3-year return assumes full convergence. Worse, the price component of EV is negative \u2014 0.40\u00d729.4 + 0.60\u00d7(\u221221.2) = \u22121.0%. All of the 9.1% is carry, and carry (3.46%/yr) is below the 5.50% cash proxy: sub-cash before sub-hurdle.\n\n4. [FATAL] **No honest entry exists above the kill.** With target 673, kill 410, p_up 0.40, net DPS 18, expected 3y = 56,920/P \u2212 100.3. Clearing 11.2%/yr requires P = Rp425 \u2014 only 3.7% above the kill, inside the gap band a fired kill fills, compressing the failure loss to \u22123.5% versus the archetype's \u221230%. At the archetype's \u221230%, the clearing entry is Rp352, below the kill. The 5.50% cash proxy alone needs Rp487 (18.8% above kill), still below FR+4%. The only price that clears the equity hurdle is not a coherent entry; the coherent entry clears nothing. Valuation kill, not \"too expensive today.\"\n\n**Verdict: KILL_RECOMMENDED.** Strongest: at 520 the expected price return is \u22121.0% and carry (3.46%/yr) is below the 5.50% cash proxy \u2014 sub-cash before sub-hurdle \u2014 and the sole 11.2% clearing entry (Rp425) sits 3.7% above the impairment kill, inside its gap band.\n\n**Stop objecting: no price exists.** Rp425 clears 11.2% arithmetically but is not a coherent entry; Rp487 clears only the 5.50% cash proxy. My original Rp520 was priced to the withdrawn 881 target and no longer applies.\n\nstage_log: {stage: re_attacked, at: \"2026-10-19T10:22:38+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **Concede.** Dividends paid 1,635.8/45.2865bn = Rp36.12 is the FY2024 declaration (Rp36) paid in 2025; the dossier's 44.6% \"payout\" is a one-year lag. FY2025 DPS is Rp20 (T-001 l.43). The anchor was bought with a lagged number; archetype reverts to derated_compounder_rerating, net yield 2.84% at 635.\n2. **Concede.** At four-year average capex 1,027.3, FCF 2,243.4 covers 1,635.8 by 1.37x. At Rp20 coverage is 2.5x but yield is 3.15% gross \u2014 not an anchor.\n3. **Concede.** COE 12.5%/conversion 0.60 gives Rp715; at seasonal-parity NI, Rp673. 881 needed 11.5% and 0.678 together; withdrawn. Target 673.\n4. **Concede.** 540 is the cyclical bear DCF, not impairment. Impairment (7% margin, FCF 1.66tn, terminal 1%) is ~Rp410; kill 410.\n5. **Concede.** Q2-26 net 9.09% is 9bp above the 9.0% kill; FY2025 H2/H1 0.856 gives FY2026 NI ~3,562 (EPS 78.7), not 3,820. Target built on 3,562.\n6. **Concede.** A 10-year fade cannot be annualised over 2.5y; horizon reverts to 3y. Even then 9.1%/3y = 3.0%/yr, below 5.50% cash and ~11.2% FR+4%.\n7. **Concede.** Audit firm, RP-%, JKN mechanics, challenger share and FX/API sensitivity remain unsourced \u2014 open gaps, not load-bearing. Print is -5.93% (635 vs 675), a fresh 52-week low; the price snapshot's day_move is unsigned.\n8. **Concede.** The dps row labels Rp36.1 FY2025A; corrected to Rp20.0 FY2025A / Rp36.1 FY2024A. up_pct 38.7 exceeded base 25 without new evidence; withdrawn.\n\n**Net:** honest rebuild at a 520 entry: up 29.4, down -21.2, p_up 0.40, carry 3.46%/yr, expected 9.1%/3y = 3.0%/yr. Below the hurdle. The thesis does not clear; status stays draft, not advanced."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**KILL \u2014 valuation.** At the honest Rp520 entry the probability-weighted return is 3.0%/yr \u2014 below the 5.50% cash proxy and the ~11.2% INDO hurdle \u2014 and the only entry that clears (~Rp404) sits below the Rp410 impairment kill, so no coherent entry exists.\n\n*Correction applied:* 12 of 28 scored kills left gains on the table and the fund has 0 fills in 101 days; I kill only on a dispositive flaw, not marginality. This is one.\n\n1. **Arithmetic verified.** 673/520\u22121 = +29.4%; 410/520\u22121 = \u221221.2%; p_up 0.40 gives price EV \u22120.9%; plus 3.46%\u00d73 carry less 0.3 drag = 9.1%/3y = 3.0%/yr. The win state clears at 11.7%/yr, but 60% weight on failure and carry below cash make the expected return sub-cash before sub-hurdle. The re-attack's Rp425 figure treats the hurdle as a 3-year total; at 425 EV is 9.5%/yr. At 20% WHT, EV is 2.6%/yr.\n2. **No coherent entry.** Solving EV = 11.2%/yr gives ~Rp404, below the 410 kill: entries above the kill are sub-hurdle, entries that clear sit inside the impairment band. The Bear's conclusion stands.\n3. **Registry and prior kill.** p_up 0.40 is the derated_compounder_rerating prior, unraised; target and kill are DCF-derived, not back-solved. The prior fragile-estimates reason is cured by consolidated-only lines; the failure is now valuation, so LESSON-0002 does not bar a second kill.\n4. **Model block stale.** Frontmatter still carries FY2026E NI 3,820 / EPS 84.3 / DPS 21.1 against the 3,562 / 78.7 behind the 673 target. That would force REVISE before any PASS; it does not change the EV.\n5. **Deployment context.** INDO is 8.43% deployed, 2 names against the 8-name minimum, IDR 13.88bn cash of 15.15bn NAV. Cash is a bet against ^JKSE, but it cannot override the hurdle.\n\nLint PASS; body 1,148 words (<1,200); stage log monotonic."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

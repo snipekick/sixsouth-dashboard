@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-SMFG-003",
+  "title": "Sumitomo Mitsui Financial (ADR) (SMFG)",
+  "meta": {
+    "id": "T-GLOBAL-SMFG-003",
+    "book": "GLOBAL",
+    "ticker": "SMFG",
+    "name": "Sumitomo Mitsui Financial (ADR)",
+    "sector": "FINANCIALS",
+    "factors": [
+      "japan_reflation",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "dividend_income_anchor",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": "T-GLOBAL-SMFG-002",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-19T10:05:18+07:00",
+    "drafted": "2026-10-19T10:05:50+07:00",
+    "judged": "2026-10-19T10:29:45+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 17.75,
+    "target": 18.78,
+    "kill": 14.2,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "REVISED: recurring 8.6% ROE (reported 10.0% less ~JPY224bn one-offs), COE 8.3% (JGB10y 2.84-2.90% + 5.4-5.5% ERP), g 3.5% -> warranted 1.063x on FY2028E BVPS 2,795.5 yen/ADR at USDJPY 158.14 = $18.78; +5.8% from the $17.75 limit. Bull 22.96 (9.0% ROE, COE 7.85%/g 4.0%); bear 14.71 (8.0% ROE). Kill 14.20 is the -20% failure mean, not a stop.",
+    "price": 24.75,
+    "price_asof": "2026-10-16"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 5.8,
+    "p_down": 0.6,
+    "down_pct": -20.0,
+    "net_div_yield_pct_pa": 2.2,
+    "fee_tax_drag_pct": 1.3,
+    "expected_pct": -5.48,
+    "horizon_years": 2.5,
+    "carry_pct": 4.2,
+    "kelly_full_pct": -346.8
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library archetypes.dividend_income_anchor (rate 0.60, n=20, 2.5y). Moved from quality_bank_rerating (EM/IDX cost-of-funds-easing, sub-1x, zero Japan - wrong class, Bear #4). Downlift 0.60->0.40: SMFG pays 34%, not the archetype's 60-85%, so the dividend anchor is weaker; no dated catalyst.",
+    "library": {
+      "rate": 0.6,
+      "base_up_pct": 25.0,
+      "base_down_pct": -15.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 14.2,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop; -20% failure mean; ~0.90x current book, below the 8.0%-ROE warrant"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 8.0,
+      "action": "review",
+      "name": "consolidated_roe",
+      "source": "data/dossiers/SMFG.md asof 2026-10-16 (FY2026 ROE 10.0% reported; recurring 8.6% ex ~JPY224bn one-offs); quarterly NI/equity"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 1.3,
+      "action": "review",
+      "name": "consolidated_npl_ratio",
+      "source": "SMFG Investor Meeting FY3/2026, Asset Quality (Mar-26 0.97%; via T-GLOBAL-SMFG-002); refreshed dossier lacks the line"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "review if BOJ policy rate is cut below 1.25% or no hike beyond 1.25% is delivered; NII tailwind stalls"
+    }
+  ],
+  "model": {
+    "currency": "JPY",
+    "unit": "bn",
+    "years": [
+      "2025A",
+      "2026A",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        5066.3,
+        5791.6,
+        6140.0,
+        6450.0
+      ],
+      "net_income": [
+        1178.0,
+        1583.0,
+        1730.0,
+        1840.0
+      ],
+      "eps": [
+        152.05,
+        207.37,
+        230.67,
+        248.65
+      ],
+      "dps": [
+        53.19,
+        70.75,
+        79.58,
+        87.03
+      ],
+      "bvps": [
+        1897.9,
+        2067.9,
+        2199.5,
+        2329.6
+      ]
+    },
+    "valuation": {
+      "method": "Residual income / warranted P/BV (recurring ROE 8.6%; COE 8.3% = JGB10y 2.84-2.90% + 5.4-5.5% ERP; g 3.5%); base and bull on FY2028E BVPS, bear on current BV",
+      "bear": {
+        "value": 14.71,
+        "basis": "8.0% recurring ROE -> 0.938x x FY2026 BVPS 2,481.5 yen/ADR / 158.14; credit/one-off erosion falsification"
+      },
+      "base": {
+        "value": 18.78,
+        "basis": "8.6% recurring ROE -> 1.063x x FY2028E BVPS 2,795.5 yen/ADR / 158.14; COE 8.3%, g 3.5%"
+      },
+      "bull": {
+        "value": 22.96,
+        "basis": "9.0% recurring ROE -> 1.299x x FY2028E BVPS 2,795.5 yen/ADR / 158.14; COE 7.85%, g 4.0%"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-19T10:05:50+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-19T10:14:51+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-19T10:22:02+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-19T10:24:08+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-19T10:29:45+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, before document work",
+      "markdown": "The market narrative is that Japan's megabanks have largely completed their BOJ-normalisation re-rating: at roughly 1.5-1.6x book and a 10% ROE, SMFG is fairly valued and the remaining return is book growth plus a ~2% dividend."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Sources: data/dossiers/SMFG.md (asof 2026-10-16); prior filing lines carried only where the refreshed dossier lacks the table. Bank format \u2014 no EBIT line; the engine is NII less credit cost less opex, so revenue-to-net-income is the meaningful bridge.\n\nFY2026A: revenue JPY5,791.6bn, net income JPY1,583.0bn, shareholders' equity JPY15,786.0bn, ROE 10.0% (dossier income statement, balance sheet, derived ratios). FY2025A: revenue JPY5,066.3bn, net income JPY1,178.0bn (dossier FY2025 column; its header repeats \"FY2025\" \u2014 a known mislabel). Revenue +14.3%, net income +34.4% \u2014 net income outgrew revenue on NIM plus one-offs.\n\nFY2027E revenue JPY6,140.0bn (+6.0%), net income JPY1,730.0bn (+9.3%). Basis: Q1 FY3/27 (quarter to 2026-06) net income JPY501.4bn (dossier latest quarters) versus Q1 FY3/26's implied JPY376.9bn (1,583.0 - 188.2 - 461.3 - 556.6), +33% YoY; I discount the Q1 annualisation for seasonality (Q1 FY3/26 was 23.8% of the full year) and for credit normalisation. FY2028E revenue JPY6,450.0bn (+5.0%), net income JPY1,840.0bn (+6.4%). Post-split shares: 3,816.9m x 2 = 7,633.8m (dossier share count; Oct-2026 2-for-1), assumed 7,500m in FY2027E and 7,400m in FY2028E on buybacks. EPS is net income / post-split shares: 152.05, 207.37, 230.67, 248.65 yen. DPS is cash dividends / post-split shares: 53.19 (412.1), 70.75 (540.1), then 34.5% and 35.0% payout: 79.58, 87.03 yen. The FY2026 payout check is exact: 70.75 / 207.37 = 34.1%, matching the dossier's derived payout 34.1%. The dossier's reported EPS (247.13) uses a legacy ~6.41bn share count and is not split-consistent; not used.\n\nSustainable ROE 10.0% (dossier derived ratio; ending equity), COE 7.8% = JGB10y 2.8% + Japan ERP 5.0% (house residual-income frame, VAL_BANKS \u00a72; prior thesis T-002 line 46), g 4.5%. Warranted P/BV = 1 + (0.10 - 0.078)/(0.078 - 0.045) = 1.667x. BVPS: 2,067.9 yen (FY2026), 2,329.6 yen (FY2028E on 4.5% BV growth and buybacks); per ADR x1.2 = 2,481.5 and 2,795.5 yen.\n\nEarnings-quality gate: bank \u2014 Sloan ratio not applicable. Provisioning trend: credit cost JPY388bn FY3/26 (~35bp), guided to JPY340bn FY3/27; NPL 0.97% Mar-26 vs 0.67% Mar-25, overseas/OTO-SOF-specific (prior filing line, Investor Meeting FY3/2026; the refreshed dossier does not carry the provisioning table \u2014 flagged). Divergence: net income +34.4% vs revenue +14.3% is flattered by ~JPY224bn of disclosed one-offs (equity-sale gains, subsidiary dividend, VPBank reversal; prior filing line), so recurring ROE is ~8.6-9.0%, not 10.0%. Structure/ADR: no VIE; ADR ratio 1.2 post-split; no governance flag in the dossier. Net gate: one optics-class flag (one-offs), zero manipulation-class \u2014 PASSES with the 9% bear case."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** SMFG's BOJ re-rating is largely complete; at ~1.58x attributable book and 10% ROE it is fairly valued, and the return from here is book growth plus a ~2% dividend.\n\n**Why wrong:** The market's fair-value anchor is still the prior 9% recurring ROE / 1.36x warranted multiple. The refreshed FY2026 delivery is 10.0% ROE on attributable equity (JPY1,583.0bn / JPY15,786.0bn) and Q1 FY3/27 net income is +33% YoY; at 10% the same frame warrants 1.667x, so the stock is ~5.7% below warranted today (market cap JPY24.90tn / equity JPY15,786bn = 1.58x) and compounds BV at ~4.5%/yr. The mispricing is one ROE point and its multiple, not a new story. Edge taxonomy: (a) analytical only \u2014 no informational-synthesis, time-arbitrage or structural-flow claim. The 5.7% current gap is inside the ADR's FX noise, so the trade clears the cash hurdle only at the limit.\n\n**What proves us wrong:** recurring ROE falls to 9% or below as the one-offs roll off and credit costs exceed the JPY340bn guide; NPL passes 1.3%; the BOJ stalls below 1.25%; or the buyback/dividend is cut."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. FY2026 net income JPY1,583.0bn includes ~JPY224bn of one-offs (prior filing line, Investor Meeting FY3/2026 \"Breakdown of net income\"); recurring ROE = (1,583.0 - 224)/15,786.0 = 8.6%, below the 10.0% base (dossier income statement and balance sheet).\n2. NPL rose to 0.97% at Mar-26 from 0.67% at Mar-25 (prior filing line, Investor Meeting FY3/2026 Asset Quality); the refreshed dossier has no NPL line, so this is a monitoring gap, not a clean input.\n3. Q1 FY3/27 net income JPY501.4bn is seasonally strong: Q1 FY3/26 was JPY376.9bn, 23.8% of FY2026 (dossier latest quarters); annualising 501.4 overstates FY2027.\n4. Dividends paid JPY540.1bn = 34.1% payout (dossier cash flow and derived ratios); the 4.5% BV growth assumes ~55% total payout including buybacks (prior thesis T-002 line 45: total payout 51-61%), and the refreshed dossier carries no CET1 line to test the buyback capacity.\n5. USDJPY 158.14 (yfinance JPY=X, 2026-10-16): a 10% yen appreciation cuts the USD base target from $29.50 to ~$26.8, leaving only ~14% from the $23.55 limit before dividends; the ADR return is not hedged.\n6. The archetype window is n=20 EM/IDX banks with no Japan case (the base-rate library); the 0.48 prior is a transfer, not a measured Japan base rate."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is October 2029 and the position lost ~30%. The most likely reason is that the yen rallied to ~140 on BOJ hikes and Fed cuts, cutting the USD value ~13% even as the bank delivered, while the FY2026 one-offs rolled off and credit costs rose above the JPY340bn guide, taking recurring ROE to 9%; the stock de-rated to 1.36x, gapped through the $21.40 kill on ADR liquidity, and the dividend/buyback was trimmed. The thesis was right on book value and wrong on the recurring earnings base and the USD translation."
+    },
+    {
+      "heading": "New evidence",
+      "detail": null,
+      "markdown": "Refreshed dossier asof 2026-10-16: FY2026 net income JPY1,583.0bn, shareholders' equity JPY15,786.0bn, ROE 10.0%, Q1 FY3/27 net income JPY501.4bn. The prior dossier's 6.87% ROE / JPY1.14tn net-income contradiction is resolved: that file was FY3/25-vintage. Prior kill price $25.74 vs $24.75 now; the prior honest-bear 1.36x at 9% becomes 1.667x at 10% (re-derived: 1 + (0.10-0.078)/(0.078-0.045)). ADR ratio verified at 1.2 common shares per ADR post the Oct-2026 2-for-1 split (0.6 pre-split): 8316.T JPY3,276 / USDJPY 158.143 = $20.71 per common; SMFG $24.75 / $20.71 = 1.195. I use the dossier's shareholders' equity line (attributable), not a total-equity denominator \u2014 no denominator switch. Market cap JPY24.90tn / equity JPY15,786bn = 1.58x P/BV.\n\nEntry limit $23.55 = 10% below the current warranted value $26.16 (1.667x x 2,481.5 yen/ADR / 158.143). At the $24.75 last the 3y EV is +7.5%, below the 3.88% GLOBAL cash proxy (~12.1% compounded over 3y, the market-parameter file); the limit restores the cash-hurdle margin. EV uses a 2.2% net dividend yield (DPS 70.75 x 1.2 / 158.14 / 23.55 = 2.28%, rounded down) and 1.3% ADR/fee drag (prior T-002 ev_math). Own Kelly at the limit: p 0.48, b 2.77 -> 29.2% full / 7.3% quarter. Library Kelly at 0.48 / +42% / -20%: 23.2% full / 5.8% quarter. up/|down| 2.77 vs library 2.10 \u2014 the asymmetry is time-based: the target compounds BV for three years while the kill is the immediate 9%-ROE falsification. Symmetry check passes."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**BEAR ATTACK \u2014 Drew \u2014 2026-10-19T10:14:51+07:00 \u2014 KILL_RECOMMENDED**\n\n0. **[FATAL] 10.0% \"sustainable\" ROE is the reported print, not the recurring rate.** Fact #1: recurring 8.6-9.0% after ~JPY224bn one-offs. At 9.0%, warranted 1.364x = $21.40 now, $24.11 on FY2028 book (+2.4% from the $23.55 limit). At 1.58x the thesis's formula implies **9.71%** ROE; at the limit, 9.45% - both above its own recurring. The variant runs against it.\n\n1. **[FATAL] The time-base mismatch inflates EV.** p_down 0.52 is the 3-year failure probability; -9.13% is the immediate kill. The registry's `base_down_pct` is -20%. At -20%: 0.48x25.27 + 0.52x(-20) + 6.6 - 1.3 = **+7.0%**, below the 12.1% cash hurdle. 12.68 scores the failure floor as the failure mean.\n\n2. **[FATAL] COE is stale/circular.** 7.8% = JGB10y 2.8% + ERP 5.0%, cited to T-002 line 46, unsourced. House MUFG revision cites JGB10y **2.84-2.90%** (2026-08-18); the BOJ has since hiked to 1.25% (2026-09-18). At COE 8.3%/g 3.5%, the target is $23.94 - within 1.7% of the limit. VAL_BANKS has no JPY band; the IDR 5.0% floor is unargued.\n\n3. **[MATERIAL] The limit and the yen both fail the hurdle.** 3.88%^3 = 12.10%; 12.68 clears by 58bp. But $23.55 is exactly 10% below the 10%-ROE warranted $26.16 - a round discount, not value; at 1.50x it is still 10% above the 9%-ROE 1.364x. A 10% yen move (158.14 -> 143.8) cuts the target to $26.82, EV to 7.2%; the fixed USD $21.40 kill slides to 1.24x book - FX alone can fire it.\n\n4. **[MATERIAL] Base rate and omissions.** 0.48 is EM/IDX, cost-of-funds easing, sub-1x, n=20, zero Japan. SMFG is DM, rate-hiking, 1.58x, re-rated; the archetype's own failure mode is live (NPL 0.67 -> 0.97%). \"No uplift\" is not a defense - the prior needs a downlift; at 0.40/-20%, EV = +3.4%. CET1 11.1% vs ~10.5% target leaves ~60bp; buybacks thin. BOJ is already at 1.25% (the market-parameter file), so kill #3's \"below 1.25%\" limb is dead. Off-screen (fund record); card's \"#9 momentum\" stale.\n\n**Stop-objecting price: $18.60**, with the kill at ~$18.00 (8.3% ROE). At the 9%-ROE 3y value ($24.11), clearing 12.1% needs ~$19.40 at the thesis's -9.13% down state, ~$17.75 at the registry's -20%; nothing above $21.40 clears.\n\n**Verdict: KILL_RECOMMENDED.** *At 1.58x the market already prices 9.71% ROE, above the thesis's own 8.6-9.0% recurring; its 12.68% EV clears 12.1% only by scoring a 3-year 52% failure at the immediate -9.13% kill instead of the registry's -20% loss.*"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**ANALYST_GLOBAL (Sloane) \u2014 Revision \u2014 2026-10-19T10:22:02+07:00**\n\n0. **ROE** \u2014 I underwrite recurring, not reported. (1,583.0 \u2212 224) / 15,786.0 = 8.6%. At COE 8.3%, g 3.5%: warranted P/BV = 1 + (0.086 \u2212 0.083)/(0.083 \u2212 0.035) = 1.063x, not 1.667x. On FY2028E BVPS 2,795.5 yen/ADR / 158.14, the target is $18.78. The 1.58x print implies 9.71% ROE \u2014 above my recurring. Variant conceded and withdrawn.\n\n1. **Horizon** \u2014 p_down 0.60 is a 3-year failure probability; the failure mean is the registry's \u221220%, not the \u22129.13% kill. At the $17.75 entry: 0.40\u00d75.80 + 0.60\u00d7(\u221220) + 2.2\u00d72.5 \u2212 1.3 = \u22125.48%. The old 12.68 was a horizon mismatch. Conceded.\n\n2. **COE** \u2014 VAL_BANKS has no JPY ERP band and I cannot source one; I say so rather than assert 7.8%. I use JGB10y 2.84\u20132.90% (T-GLOBAL-MUFG-001 Revision line 106, 2026-08-18) + the USD band's 5.4\u20135.5% = 8.3%, g 3.5%. Sensitivity: 7.85%/4.0% \u2192 1.195x = $21.12; 8.3%/3.5% \u2192 1.063x = $18.78. The 7.8% is withdrawn.\n\n3. **Limit/FX** \u2014 Conceded: $23.55 was a round 10% discount, not value. At $24.75 the stock is above even my $22.96 bull. A 10% yen move cuts the target to ~$17.07 and fires the fixed $14.20 kill at 0.81x book; FX alone can fire it. I claim no FX edge.\n\n4. **Archetype** \u2014 Conceded: quality_bank_rerating is EM/IDX cost-of-funds-easing from sub-1x, n=20, zero Japan. Moved to dividend_income_anchor (0.60, 2.5y), downlifted to 0.40: SMFG pays 34%, not 60\u201385%, and has no dated catalyst. Dead BOJ limb deleted \u2014 trigger is now a cut below 1.25% or no hike beyond 1.25% by 2027-03-31.\n\nHonest rebuild: below the 12.1% hurdle at every Bear-named entry ($18.60/$19.40/$17.75). Only \u2264$12.54 clears (2.5y carry) \u2014 a watchlist level, not an entry. No trade.\n\n**BEAR RE-ATTACK \u2014 Drew \u2014 2026-10-19T10:24:08+07:00 \u2014 KILL_RECOMMENDED**\n\n0. **[MATERIAL] Honest rebuild, over-corrected.** The revision concedes all four points and withdraws the variant. But it stacks conservative choices: recurring ROE 8.6% uses ending equity; on average equity it is 8.9%, the top of the original range. g 3.5% is below the original 4.5% total-book growth and the model's 6.1%/yr BVPS path with buybacks. At 8.6-8.9% ROE and 4.5% g, the target is $19.07-20.47, not $18.78 \u2014 understated $0.30-1.70. State the denominator and g.\n\n1. **[FATAL] No entry at $17.75 clears, even at p_up=1.0.** Upside +5.8%; 3y carry net of drag +5.3pp; maximum 3y return +11.1% < 12.1% hurdle. No probability rescues it. The entry is 5.8% below its target, 28.3% below the $24.75 last, up/|down| 0.29. At p 0.40 the clearing entry is $12.78 (3y carry); with the corrected target, $13.93. Nothing above $13.93 clears. Valuation kill at the proposed entry.\n\n2. **[MATERIAL] Archetype still the wrong key, components mixed.** dividend_income_anchor is a 60-85% payout SOE archetype; SMFG pays 34%, is not an SOE, yields 2.2%. The 0.40 downlift is judgment, not measurement. It keeps down_pct -20 from quality_bank_rerating while the new archetype's base_down is -15. At 0.60/-15 EV is +1.68%; at 0.40/-15, -2.48% \u2014 both sub-hurdle, so the prior is not load-bearing.\n\n3. **[MINOR] Arithmetic reconciles exactly.** 0.40\u00d75.80 + 0.60\u00d7(\u221220) + 2.2\u00d72.5 \u2212 1.3 = 2.32 \u2212 12.00 + 5.50 \u2212 1.30 = \u22125.48%. But 2.5y carry is compared to the 3y 12.1% hurdle; 3y carry gives \u22124.38%, and the 2.5y hurdle is 9.98%, so honest shortfall ~15.5pp. Sign unaffected; the comparison makes $12.54 ~$0.46 too harsh.\n\n4. **[MINOR] New disconfirming fact.** No cash-coverage test for the dividend anchor: FY2026 operating cash flow \u2212JPY10,283.1bn, CFO/NI \u22126.50x, from +JPY4,848.5bn FY2025 (dossier cash-flow line 41; ratios line 47). Noisy for a bank, not dispositive \u2014 but a 34% payout presented as cash-anchored should address it.\n\n5. **[MINOR] Anti-gaming clean.** stage_log monotonic; estimates_committed_at 10:05:18 precedes draft; no retro-edit.\n\n**Stop-objecting price: $13.90** (3-year hurdle, corrected target; $12.78 on the revision's own levels) \u2014 a ~0.89x-book watchlist trigger, not an actionable entry.\n\n**Verdict: KILL_RECOMMENDED.** *At $17.75 the trade returns at most +11.1% over three years even if certain to work \u2014 below the 12.1% cash hurdle \u2014 so no prior, archetype or probability rescues it; the no-trade conclusion is right, though the target is $0.30-1.70 too low and the clearing price ~$0.46 too harsh.*"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**JUDGE VERDICT \u2014 Aldrich \u2014 2026-10-19T10:29:45+07:00 \u2014 KILL (reason_tag: valuation)**\n\n**Dispositive flaw:** At $17.75 the maximum three-year return is +11.10% even at p_up = 1.0 \u2014 below the 12.10% cash hurdle \u2014 and the entry at which the trade clears (~$12.97-13.93 on the corrected target) sits below the $14.20 kill, so no entry that clears the hurdle remains above the thesis's own falsification level.\n\nLint passes (WARN only); stage log monotonic, actors correct; body 1,176 words \u2264 1,200.\n\n1. At $17.75: +5.80% price + 6.60pp carry \u2212 1.30 drag = +11.10%/3y, below 12.10%. Even p_up = 1.0 fails; no probability or size rescues it.\n2. On the Bear's corrected target ($19.07-20.47 at 8.6-8.9% ROE, 4.5% g), the clearing entry at p 0.40 / \u221220% is ~$12.97-13.93 \u2014 below the $14.20 kill and the $14.71 8.0%-ROE bear value. The price that makes the math work is a price at which the thesis is already falsified.\n3. The stated \u22125.48% applies 2.5y carry against the 3y hurdle; 3y-consistent is \u22124.38%. Sign and conclusion unaffected; the comparison is inconsistent.\n4. LESSON-0002: the prior valuation kill (002, $24.86) is not now wrong. The FY2026 10.0% print does not survive the recurring correction (8.6% ex ~JPY224bn one-offs); at $24.75 the stock is ~1.58x book against ~1.06x warranted. Repeat kill earned.\n5. Construction is also defective \u2014 0.29:1 payoff on a 0.40 prior, a \u221220 kill carried from quality_bank_rerating (new archetype: \u221215), and dividend_income_anchor is a 60-85% payout SOE class against a 34%-payout non-SOE. But 6a does not rescue it: after the Bear's corrections the clearing entry is still below the kill, so the merits fail independently.\n\nGLOBAL is 0.00% deployed (0 names, $1,010,393.56 cash); context noted, but it cannot override a negative-EV trade."
+    }
+  ]
+}

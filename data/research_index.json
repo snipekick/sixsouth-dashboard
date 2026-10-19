@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "asof": "2026-10-19T09:44:00+07:00",
+  "asof": "2026-10-19T10:39:05+07:00",
   "counts": {
-    "theses": 40,
+    "theses": 44,
     "ideas": 15,
     "stocks": 36,
-    "dossiers": 16,
+    "dossiers": 23,
     "ic": 2,
     "daily": 42,
     "lessons": 3,
@@ -14,12 +14,12 @@
   "pipeline": {
     "by_verdict": {
       "PENDING": 1,
-      "KILL": 35,
+      "KILL": 39,
       "PASS_REDUCED": 4
     },
     "by_book": {
-      "GLOBAL": 23,
-      "INDO": 17
+      "GLOBAL": 24,
+      "INDO": 20
     }
   },
   "kill_scorecard": {
@@ -27,7 +27,7 @@
     "scored": 35,
     "avoided": 23,
     "missed": 12,
-    "avg_move_pct": -6.2,
+    "avg_move_pct": -6.1,
     "rows": [
       {
         "thesis_id": "T-GLOBAL-NVO-001",
@@ -69,9 +69,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 1180.0,
         "reason": "valuation",
-        "px_now": 1230.0,
+        "px_now": 1215.0,
         "px_asof": "2026-10-19",
-        "move_pct": 4.2
+        "move_pct": 3.0
       },
       {
         "thesis_id": "T-INDO-ELSA-001",
@@ -91,9 +91,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 875.0,
         "reason": "other",
-        "px_now": 705.0,
+        "px_now": 710.0,
         "px_asof": "2026-10-19",
-        "move_pct": -19.4
+        "move_pct": -18.9
       },
       {
         "thesis_id": "T-GLOBAL-SONY-001",
@@ -113,9 +113,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 5150.0,
         "reason": "valuation",
-        "px_now": 4020.0,
+        "px_now": 4000.0,
         "px_asof": "2026-10-19",
-        "move_pct": -21.9
+        "move_pct": -22.3
       },
       {
         "thesis_id": "T-INDO-JSMR-001",
@@ -146,9 +146,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1220.0,
+        "px_now": 1225.0,
         "px_asof": "2026-10-19",
-        "move_pct": -9.0
+        "move_pct": -8.6
       },
       {
         "thesis_id": "T-GLOBAL-SMFG-002",
@@ -201,9 +201,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1360.0,
         "reason": "liquidity",
-        "px_now": 1230.0,
+        "px_now": 1215.0,
         "px_asof": "2026-10-19",
-        "move_pct": -9.6
+        "move_pct": -10.7
       },
       {
         "thesis_id": "T-INDO-TAPG-001",
@@ -212,9 +212,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1830.0,
         "reason": "valuation",
-        "px_now": 1645.0,
+        "px_now": 1695.0,
         "px_asof": "2026-10-19",
-        "move_pct": -10.1
+        "move_pct": -7.4
       },
       {
         "thesis_id": "T-GLOBAL-MUFG-001",
@@ -234,9 +234,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 370.0,
+        "px_now": 366.0,
         "px_asof": "2026-10-19",
-        "move_pct": -17.4
+        "move_pct": -18.3
       },
       {
         "thesis_id": "T-GLOBAL-COST-001",
@@ -267,9 +267,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 630.0,
+        "px_now": 635.0,
         "px_asof": "2026-10-19",
-        "move_pct": -16.6
+        "move_pct": -15.9
       },
       {
         "thesis_id": "T-GLOBAL-JPM-001",
@@ -399,9 +399,9 @@
         "killed": "2026-10-12",
         "px_at_kill": 184.0,
         "reason": "other",
-        "px_now": 159.0,
+        "px_now": 158.0,
         "px_asof": "2026-10-19",
-        "move_pct": -13.6
+        "move_pct": -14.1
       },
       {
         "thesis_id": "T-INDO-TAPG-002",
@@ -410,9 +410,9 @@
         "killed": "2026-10-12",
         "px_at_kill": 2010.0,
         "reason": "other",
-        "px_now": 1645.0,
+        "px_now": 1695.0,
         "px_asof": "2026-10-19",
-        "move_pct": -18.2
+        "move_pct": -15.7
       }
     ]
   },
@@ -420,7 +420,7 @@
     "doc": "research_doc_macro_regime",
     "regime": "balance_of_payments_pressure",
     "risk_appetite": "CAUTIOUS",
-    "asof": "2026-10-10",
+    "asof": "2026-10-19",
     "next_full_rebuild": "2026-11-07",
     "authors": [
       "Severin (global macro)",
@@ -455,6 +455,110 @@
     ]
   },
   "theses": [
+    {
+      "id": "T-INDO-TOWR-002",
+      "book": "INDO",
+      "ticker": "TOWR.JK",
+      "name": "Sarana Menara Nusantara",
+      "sector": "INFRASTRUCTURE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-19T10:06:02+07:00",
+      "judged": "2026-10-19T10:36:23+07:00",
+      "entry": 366.0,
+      "target": 466.0,
+      "kill": 238.0,
+      "price": 366.0,
+      "expected_pct": -6.0,
+      "p_up": 0.32,
+      "kelly_full_pct": -64.3,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-towr-002"
+    },
+    {
+      "id": "T-GLOBAL-SMFG-003",
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "sector": "FINANCIALS",
+      "archetype": "dividend_income_anchor",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-19T10:05:50+07:00",
+      "judged": "2026-10-19T10:29:45+07:00",
+      "entry": 17.75,
+      "target": 18.78,
+      "kill": 14.2,
+      "price": 24.75,
+      "expected_pct": -5.48,
+      "p_up": 0.4,
+      "kelly_full_pct": -346.8,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-global-smfg-003"
+    },
+    {
+      "id": "T-INDO-ASII-002",
+      "book": "INDO",
+      "ticker": "ASII.JK",
+      "name": "Astra International",
+      "sector": "AUTOS_CONGLOMERATE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-19T10:04:31+07:00",
+      "judged": "2026-10-19T10:30:32+07:00",
+      "entry": 4000.0,
+      "target": 4400.0,
+      "kill": 2600.0,
+      "price": 4000.0,
+      "expected_pct": 2.3,
+      "p_up": 0.4,
+      "kelly_full_pct": 50.0,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-asii-002"
+    },
+    {
+      "id": "T-INDO-KLBF-002",
+      "book": "INDO",
+      "ticker": "KLBF.JK",
+      "name": "Kalbe Farma",
+      "sector": "HEALTHCARE",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-19T10:04:06+07:00",
+      "judged": "2026-10-19T10:29:40+07:00",
+      "entry": 520.0,
+      "target": 673.0,
+      "kill": 410.0,
+      "price": 635.0,
+      "expected_pct": 9.1,
+      "p_up": 0.4,
+      "kelly_full_pct": 207.7,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-klbf-002"
+    },
     {
       "id": "T-GLOBAL-ABBV-001",
       "book": "GLOBAL",
@@ -497,13 +601,13 @@
       "entry": 165.0,
       "target": 190.0,
       "kill": 120.0,
-      "price": 159.0,
+      "price": 158.0,
       "expected_pct": 0.9,
       "p_up": 0.38,
       "kelly_full_pct": 20.4,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -13.6,
+      "kill_move_pct": -14.1,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-dmas-001"
     },
@@ -549,13 +653,13 @@
       "entry": 1840.0,
       "target": 2196.0,
       "kill": 1240.0,
-      "price": 1645.0,
+      "price": 1695.0,
       "expected_pct": 4.7,
       "p_up": 0.42,
       "kelly_full_pct": 79.4,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -18.2,
+      "kill_move_pct": -15.7,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-tapg-002"
     },
@@ -835,7 +939,7 @@
       "entry": 1400.0,
       "target": 2250.0,
       "kill": 920.0,
-      "price": 1240.0,
+      "price": 1230.0,
       "expected_pct": 15.0,
       "p_up": 0.42,
       "kelly_full_pct": 85.9,
@@ -913,13 +1017,13 @@
       "entry": 760.0,
       "target": 1140.0,
       "kill": 532.0,
-      "price": 630.0,
+      "price": 635.0,
       "expected_pct": 7.7,
       "p_up": 0.4,
       "kelly_full_pct": 56.9,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -16.6,
+      "kill_move_pct": -15.9,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-klbf-001"
     },
@@ -1017,13 +1121,13 @@
       "entry": 390.0,
       "target": 527.0,
       "kill": 312.0,
-      "price": 370.0,
+      "price": 366.0,
       "expected_pct": 15.6,
       "p_up": 0.48,
       "kelly_full_pct": 324.6,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -17.4,
+      "kill_move_pct": -18.3,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-towr-001"
     },
@@ -1043,13 +1147,13 @@
       "entry": 1840.0,
       "target": 2500.0,
       "kill": 1060.0,
-      "price": 1645.0,
+      "price": 1695.0,
       "expected_pct": -8.3,
       "p_up": 0.3,
       "kelly_full_pct": -53.6,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -10.1,
+      "kill_move_pct": -7.4,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-tapg-001"
     },
@@ -1069,13 +1173,13 @@
       "entry": 1355.0,
       "target": 1500.0,
       "kill": 750.0,
-      "price": 1230.0,
+      "price": 1215.0,
       "expected_pct": -20.8,
       "p_up": 0.28,
       "kelly_full_pct": -292.5,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -9.6,
+      "kill_move_pct": -10.7,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-dsng-002"
     },
@@ -1225,13 +1329,13 @@
       "entry": null,
       "target": null,
       "kill": null,
-      "price": 1220.0,
+      "price": 1225.0,
       "expected_pct": -5.5,
       "p_up": 0.33,
       "kelly_full_pct": -35.8,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -9.0,
+      "kill_move_pct": -8.6,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-lsip-001"
     },
@@ -1329,13 +1433,13 @@
       "entry": null,
       "target": null,
       "kill": null,
-      "price": 4020.0,
+      "price": 4000.0,
       "expected_pct": -13.6,
       "p_up": 0.15,
       "kelly_full_pct": -404.8,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -21.9,
+      "kill_move_pct": -22.3,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-asii-001"
     },
@@ -1459,13 +1563,13 @@
       "entry": 880.0,
       "target": 1050.0,
       "kill": 460.0,
-      "price": 705.0,
+      "price": 710.0,
       "expected_pct": -24.3,
       "p_up": 0.3,
       "kelly_full_pct": -242.2,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -19.4,
+      "kill_move_pct": -18.9,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-pnbn-001"
     },
@@ -1485,18 +1589,28 @@
       "entry": 1170.0,
       "target": 1650.0,
       "kill": 655.0,
-      "price": 1230.0,
+      "price": 1215.0,
       "expected_pct": -8.9,
       "p_up": 0.33,
       "kelly_full_pct": -50.4,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": 4.2,
+      "kill_move_pct": 3.0,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-dsng-001"
     }
   ],
   "ideas": [
+    {
+      "book": "GLOBAL",
+      "ticker": "SMFG",
+      "name": "Sumitomo Mitsui Financial (ADR)",
+      "verdict": "DISCARD",
+      "regime": "WITH",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-19",
+      "doc": "research_doc_idea_global-smfg"
+    },
     {
       "book": "GLOBAL",
       "ticker": "SAP",
@@ -1576,16 +1690,6 @@
       "sleeve": "UNSCREENED",
       "asof": "2026-09-28",
       "doc": "research_doc_idea_global-lly"
-    },
-    {
-      "book": "GLOBAL",
-      "ticker": "SMFG",
-      "name": "Sumitomo Mitsui Financial (ADR)",
-      "verdict": "WATCH",
-      "regime": "WITH",
-      "sleeve": "MOMENTUM",
-      "asof": "2026-09-28",
-      "doc": "research_doc_idea_global-smfg"
     },
     {
       "book": "INDO",
@@ -1765,7 +1869,11 @@
         }
       ],
       "ideas": [],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-10-19",
+        "kind": "auto",
+        "doc": "research_doc_dossier_amd"
+      },
       "price": 528.75,
       "price_asof": "2026-10-16",
       "latest_verdict": "KILL",
@@ -2171,6 +2279,14 @@
       "sector": "FINANCIALS",
       "theses": [
         {
+          "id": "T-GLOBAL-SMFG-003",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-19T10:29:45+07:00",
+          "drafted": "2026-10-19T10:05:50+07:00",
+          "doc": "research_doc_thesis_t-global-smfg-003"
+        },
+        {
           "id": "T-GLOBAL-SMFG-002",
           "verdict": "KILL",
           "status": "judged",
@@ -2189,8 +2305,8 @@
       ],
       "ideas": [
         {
-          "verdict": "WATCH",
-          "asof": "2026-09-28",
+          "verdict": "DISCARD",
+          "asof": "2026-10-19",
           "doc": "research_doc_idea_global-smfg"
         }
       ],
@@ -2416,6 +2532,14 @@
       "sector": "AUTOS_CONGLOMERATE",
       "theses": [
         {
+          "id": "T-INDO-ASII-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-19T10:30:32+07:00",
+          "drafted": "2026-10-19T10:04:31+07:00",
+          "doc": "research_doc_thesis_t-indo-asii-002"
+        },
+        {
           "id": "T-INDO-ASII-001",
           "verdict": "KILL",
           "status": "judged",
@@ -2425,8 +2549,12 @@
         }
       ],
       "ideas": [],
-      "dossier": null,
-      "price": 4020.0,
+      "dossier": {
+        "asof": "2026-10-19",
+        "kind": "auto",
+        "doc": "research_doc_dossier_asii-jk"
+      },
+      "price": 4000.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2436,9 +2564,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 5150.0,
         "reason": "valuation",
-        "px_now": 4020.0,
+        "px_now": 4000.0,
         "px_asof": "2026-10-19",
-        "move_pct": -21.9
+        "move_pct": -22.3
       }
     },
     {
@@ -2468,7 +2596,7 @@
         "kind": "full",
         "doc": null
       },
-      "price": 159.0,
+      "price": 158.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2478,9 +2606,9 @@
         "killed": "2026-10-12",
         "px_at_kill": 184.0,
         "reason": "other",
-        "px_now": 159.0,
+        "px_now": 158.0,
         "px_asof": "2026-10-19",
-        "move_pct": -13.6
+        "move_pct": -14.1
       }
     },
     {
@@ -2508,7 +2636,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 1230.0,
+      "price": 1215.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2518,9 +2646,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 1180.0,
         "reason": "valuation",
-        "px_now": 1230.0,
+        "px_now": 1215.0,
         "px_asof": "2026-10-19",
-        "move_pct": 4.2
+        "move_pct": 3.0
       }
     },
     {
@@ -2648,6 +2776,14 @@
       "sector": "HEALTHCARE",
       "theses": [
         {
+          "id": "T-INDO-KLBF-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-19T10:29:40+07:00",
+          "drafted": "2026-10-19T10:04:06+07:00",
+          "doc": "research_doc_thesis_t-indo-klbf-002"
+        },
+        {
           "id": "T-INDO-KLBF-001",
           "verdict": "KILL",
           "status": "judged",
@@ -2657,8 +2793,12 @@
         }
       ],
       "ideas": [],
-      "dossier": null,
-      "price": 630.0,
+      "dossier": {
+        "asof": "2026-10-19",
+        "kind": "auto",
+        "doc": "research_doc_dossier_klbf-jk"
+      },
+      "price": 635.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2668,9 +2808,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 630.0,
+        "px_now": 635.0,
         "px_asof": "2026-10-19",
-        "move_pct": -16.6
+        "move_pct": -15.9
       }
     },
     {
@@ -2690,7 +2830,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 1220.0,
+      "price": 1225.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2700,9 +2840,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1220.0,
+        "px_now": 1225.0,
         "px_asof": "2026-10-19",
-        "move_pct": -9.0
+        "move_pct": -8.6
       }
     },
     {
@@ -2732,7 +2872,7 @@
         "kind": "full",
         "doc": null
       },
-      "price": 1240.0,
+      "price": 1230.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -2754,7 +2894,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 705.0,
+      "price": 710.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2764,9 +2904,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 875.0,
         "reason": "other",
-        "px_now": 705.0,
+        "px_now": 710.0,
         "px_asof": "2026-10-19",
-        "move_pct": -19.4
+        "move_pct": -18.9
       }
     },
     {
@@ -2823,7 +2963,7 @@
         "kind": "full",
         "doc": null
       },
-      "price": 1645.0,
+      "price": 1695.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2833,9 +2973,9 @@
         "killed": "2026-08-19",
         "px_at_kill": 1830.0,
         "reason": "valuation",
-        "px_now": 1645.0,
+        "px_now": 1695.0,
         "px_asof": "2026-10-19",
-        "move_pct": -10.1
+        "move_pct": -7.4
       }
     },
     {
@@ -2877,6 +3017,14 @@
       "sector": "INFRASTRUCTURE",
       "theses": [
         {
+          "id": "T-INDO-TOWR-002",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-10-19T10:36:23+07:00",
+          "drafted": "2026-10-19T10:06:02+07:00",
+          "doc": "research_doc_thesis_t-indo-towr-002"
+        },
+        {
           "id": "T-INDO-TOWR-001",
           "verdict": "KILL",
           "status": "judged",
@@ -2886,8 +3034,12 @@
         }
       ],
       "ideas": [],
-      "dossier": null,
-      "price": 370.0,
+      "dossier": {
+        "asof": "2026-10-19",
+        "kind": "auto",
+        "doc": "research_doc_dossier_towr-jk"
+      },
+      "price": 366.0,
       "price_asof": "2026-10-19",
       "latest_verdict": "KILL",
       "kill": {
@@ -2897,9 +3049,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 370.0,
+        "px_now": 366.0,
         "px_asof": "2026-10-19",
-        "move_pct": -17.4
+        "move_pct": -18.3
       }
     }
   ],
@@ -2920,12 +3072,44 @@
       "source": null
     },
     {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_amd"
+    },
+    {
       "ticker": "AMMN.JK",
       "name": "Amman Mineral Internasional",
       "asof": "2026-10-16",
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
       "doc": "research_doc_dossier_ammn-jk"
+    },
+    {
+      "ticker": "ASII.JK",
+      "name": "Astra International",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_asii-jk"
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_cop"
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_crm"
     },
     {
       "ticker": "DMAS.JK",
@@ -2954,6 +3138,14 @@
       "asof": "2026-10-10",
       "kind": "full",
       "source": null
+    },
+    {
+      "ticker": "KLBF.JK",
+      "name": "Kalbe Farma",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_klbf-jk"
     },
     {
       "ticker": "LLY",
@@ -3016,11 +3208,27 @@
       "doc": "research_doc_dossier_tins-jk"
     },
     {
+      "ticker": "TOWR.JK",
+      "name": "Sarana Menara Nusantara",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_towr-jk"
+    },
+    {
       "ticker": "TXN",
       "name": "Texas Instruments",
       "asof": null,
       "kind": "analyst",
       "source": null
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "asof": "2026-10-19",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_v"
     }
   ],
   "ic": [
