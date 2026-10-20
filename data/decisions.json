@@ -1,6 +1,39 @@
 [
   {
     "meta": {
+      "date": "2026-10-20T08:45:59.952838+07:00",
+      "book": "INDO",
+      "title": "staged entry MEDC.JK confirmed against thesis",
+      "thesis": "T-INDO-MEDC-001",
+      "kind": "entry"
+    },
+    "body": "Staged tranche ORD-20261020084518-MEDC.JK-307f (buy 172,300 MEDC.JK limit 1400, max chase 5% -> max fill 1470) still matches T-INDO-MEDC-001: entry_plan limit 1400 / max_chase 5% (valid_until 2026-12-31), target 2250, kill 920. Current 1260 is below the 1400 limit (fills at limit or better) and 37.0% above the 920 kill \u2014 no averaging down through a kill level. Tranche 1.669% NAV against PM cap 6.00% NAV; thesis live, no re-size or REVISE needed. Ticket left in place for the 09:00 open.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-20T08:46:05.569134+07:00",
+      "book": "INDO",
+      "title": "preopen triggers reviewed \u2014 no action",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "Kill exits: kill_actions_due empty and no fired kill in the brief \u2014 nothing missing, no fail-closed breach. Governor NONE on INDO (and GLOBAL) \u2014 no de-gross tickets owed, no sells written, buys not vetoed. Entry staging: MEDC staged and confirmed; no blocked entries to journal or escalate; T-INDO-TINS-001 waiting on price (last 3380 vs max fill 819, gap 312.7%) \u2014 a price trigger, no journal line needed. Kill revisits PNBN.JK (-18.3%) and ELSA.JK (-18.0%) remain prior kills, not new actions. QC OK, 0 flags. No tickets created this session.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-20T08:45:18.235654+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry MEDC.JK",
+      "thesis": "T-INDO-MEDC-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-MEDC-001: buy 172,300 MEDC.JK limit 1400 (max chase 5%, max fill 1470) = 1.67% NAV at most. Target 6.00% NAV (PM sizing); held 4.33%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261020084518-MEDC.JK-307f is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-19T10:02:28.062735+07:00",
       "book": "INDO",
       "title": "Weekly portfolio review 2026-10-19 \u2014 ERAA, MEDC re-affirmed; no action",
@@ -872,27 +905,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-08-25 (Tue)\n\n## State at entry\n- QC: OK, 0 flags. Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped.\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/KLBF/MEDC ADVANCE + ADRO/GGRM/INCO WATCH) + AKRA/DSNG/ELSA/PWON/TAPG/TOWR DISCARD. Both under the 12-card cap. Nothing older than 21 days (oldest active SMFG-W 08-06 = 19d).\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only the README + two helper scripts \u2014 no raw ticker exports. No new\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-24T08:46:21.837565+07:00",
-      "book": "INDO",
-      "title": "IDX preopen 2026-08-24 08:45 WIB \u2014 no tickets, pass",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. QC=WARN (PRICE_CACHE_OLD, price cache 46h old) \u2014 WARN only, not CRITICAL, so no trading ban; all-cash book so no exposure to stale marks. Governor NONE both books (GLOBAL & INDO), no DEGROSS, so no de-gross sells. pending_orders empty, no live theses, kill_actions_due empty (no fired kills needing ticket verification). Only judged_unticketed thesis T-GLOBAL-0700HK-001 is GLOBAL book with pm_pct=0.0 (PASS_REDUCED binds like a kill; closed at WEEKLY_DEEP 2026-08-22, no re-open without material new evidence) \u2014 out of scope for IDX and not ticketable at 0 sizing. No new theses intraday. No tickets created; risk_check --orders not needed. PRICE_CACHE_OLD carried as the sole warning.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-24 (Mon)\n\n## State at entry\n- QC: OK, 0 flags (the 08-20/21 stale-feed cohort cleared; fund record refreshed by WEEKLY_DEEP 08-22; INDO foreign-flow feed still STALE n=0 \u2014 ops lane). Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 concluded at 0% by WEEKLY_DEEP 08-22.\n- Macro regime: FULL rebuild 08-22 \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL (eased from CAUTIOUS). Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries (new) + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7, fed_path repriced); china_impulse marker still no-reflation.\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/GE/JPM/LLY/MRK/UNH/XOM ADVANCE + SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/GGRM/INCO/KLBF/MEDC ADVANCE + ADRO WATCH) + AKRA/DSNG/ELSA/PWON/TAPG/TOWR DISCARD. Both under the 12-card cap. Nothing older than 21 days (oldest\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# 2026-08-22 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (5 stale-feed flags: fund record asof 08-04; published cash-rate policy cash_yield_proxy.INDO + fx_carry EUR/JPY/BRL asof mid-June; INDO foreign-flow layer STALE n=0). Both books 100% cash, 0 holdings, 0 live theses, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing), governor NONE. No orders, no kill actions, no reviews open.\n\n## Step 1 \u2014 Triage\n\n- audit record all 5 files resolved/triaged (07-11 claude_exit, 07-11 risk_check, 07-12 thesis_lint isoformat, 07-18 IDEATION claude_exit false-alarm, 07-18 analyst NOC api_error). No open blocker.\n- HUMAN_ATTENTION backlog: kill-ledger rows for NOC (07-22) and the four 08-19 CONSTRUCT kills (AMD, TXN-002, DSNG-002, TAPG-001) all present in fund record \u2014 ops applied. Office_state `--session` enum gap (CONSTRUCT/IDEATION refused) is journaled (08-19), non-blocking for WEEKLY_DEEP. Stale-feed refresh (08-22 06:30 US_CLOSE entry) is a live OPS feed action \u2014 re-escalated at session end; `fund record refresh-adv` in step 2 refreshed fund record (15 tickers, 0 missing), but published cash-rate policy asofs (cash_yield_proxy.INDO, fx_carry EUR/JPY/BRL) remain\u2026",
     "persona": ""
   }
 ]
