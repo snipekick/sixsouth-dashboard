@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AADI-001",
+  "title": "Adaro Andalan Indonesia (AADI.JK)",
+  "meta": {
+    "id": "T-INDO-AADI-001",
+    "book": "INDO",
+    "ticker": "AADI.JK",
+    "name": "Adaro Andalan Indonesia",
+    "sector": "COAL",
+    "factors": [
+      "coal_china",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "dividend_income_anchor",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-21T13:11:27+07:00",
+    "drafted": "2026-10-21T13:11:27+07:00",
+    "judged": "2026-10-21T14:35:06+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 8600.0,
+    "target": 11950.0,
+    "kill": 7900.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "base NAV IDR 11,962/sh (FCF 561.7m/11% + net cash 99.3m) to 11,950; FY2027E EBIT 980m and the 60% payout ramp carry it",
+    "price": 11125.0,
+    "price_asof": "2026-10-21"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 39.0,
+    "p_down": 0.5,
+    "down_pct": -8.1,
+    "net_div_yield_pct_pa": 7.7,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": 33.2,
+    "horizon_years": 2.5,
+    "carry_pct": 17.75,
+    "kelly_full_pct": null
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library dividend_income_anchor registry 0.60; deviated to 0.50 (Revision 3+6)",
+    "library": {
+      "rate": 0.6,
+      "base_up_pct": 25.0,
+      "base_down_pct": -15.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 7900.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level (fade-case trough-NAV), not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2028-06-30",
+      "action": "exit_full",
+      "condition": "two consecutive audited FYs payout <40% with net cash still building"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.4,
+      "action": "review",
+      "name": "annual_payout_ratio",
+      "source": "AADI audited FY statements"
+    }
+  ],
+  "model": {
+    "currency": "USD",
+    "unit": "m",
+    "years": [
+      "2023A",
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        5915.4,
+        5319.6,
+        4910.3,
+        5300.0,
+        4850.0,
+        4600.0
+      ],
+      "ebit": [
+        1417.1,
+        1150.4,
+        1014.6,
+        1180.0,
+        980.0,
+        880.0
+      ],
+      "net_income": [
+        1143.8,
+        1210.8,
+        760.2,
+        870.0,
+        700.0,
+        620.0
+      ],
+      "eps": [
+        0.1469,
+        0.1713,
+        0.0976,
+        0.1117,
+        0.0899,
+        0.0796
+      ],
+      "dps": [
+        0.1302,
+        0.3817,
+        0.0321,
+        0.0369,
+        0.0539,
+        0.0478
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle NAV (VAL_COMMODITY_CYCLICAL): cap-FCF on 3y-avg FY2023-25 FCF 561.7m at 11% + net cash 99.3m, per share, converted at USD/IDR 17,893",
+      "bear": {
+        "value": 7900.0,
+        "basis": "fade-case: through-cycle FCF falls ~29% to 400m on the structural ICI/HBA fade, cap rate +100bp to 12% -> 0.4407/sh x 17,893 = IDR 7,886, payout capped at ~33%"
+      },
+      "base": {
+        "value": 11950.0,
+        "basis": "through-cycle FCF 561.7m (3y avg) at 11% + net cash 99.3m = 0.6685/sh x 17,893 = IDR 11,962, rounded to the target frame"
+      },
+      "bull": {
+        "value": 15550.0,
+        "basis": "war premium holds the energy complex above through-cycle, FCF 700m at 10.5% + net cash -> IDR 15,548/sh on a 70% payout"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-21T13:11:27+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-21T13:31:52+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-21T13:52:06+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-21T14:16:55+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-21T14:35:06+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market-implied number",
+      "markdown": "**EARNINGS_QUALITY_FLAGS gate.** Accruals: FY2025 NI $760.2m vs FCF $534.6m \u2014 gap is capex ($324.6m), not receivables. Divergence/IDX regime flags: none (no *pemantauan khusus*, no B/E/L/M/S, no PSAK 16); FY audited anchors. Related-party gravity: no schedule \u2014 flagged, not cleared. Class: optics-class.\n\n**Operating model (USD m).** H1-2026 banked $473.7m NI; H2 ~$396m on fading ICI markers. FY2026E 5,300/1,180/870 (revenue/EBIT/NI, frozen), FY2027E 4,850/980/700, FY2028E 4,600/880/620; EPS on 7,786.9m shares; payout 33% to 60% in 2027-28E.\n\n**Through-cycle frame (VAL_COMMODITY_CYCLICAL).** No coal price series in the repo \u2014 the card's sourced marker is unobtainable. Proxy: 3y-avg FY2023-25 FCF $561.7m (323.0/827.4/534.6), war-premium years. NAV 561.7 \u00f7 11% + net cash 99.3 = $0.6685/sh \u00d7 17,893 = IDR 11,962 \u2192 base = target 11,950; bear 7,900; bull 15,550. **Entry 8,600** \u2248 fade-FCF NAV at 11% (400 \u00f7 11% = 8,584).\n\n**Haircuts.** HBA/ICI not Newcastle; $70/t DMO cap; IUPK royalties; DHE retention \u2014 unsized (point 4).\n\n**Symmetry/Kelly.** up/|down| 4.8 vs library 1.67 (above the 1.3 line); target the base NAV, kill the fade-case NAV. Own-Kelly +4.89; library +2.40.\n\n**Q1.** A 60% payout needs NI \u2248 $578m at FY2025's 20.7% margin (~25% below). Cost curve: **ASSUMPTION** \u2014 no AISC, costs, reserves, reserve life, volumes or mine plan in the dossier; assumed first-quartile, uncited. **Q2.** Payout 88.6/245.4/32.9% is revealed, not committed; **ASSUMPTION: no policy document in packet** (point 6). **Q3.** **Cannot be answered from the packet** \u2014 the perpetuity is a reserve-life assumption (point 4)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "Market narrative from memory: AADI is a low-payout Adaro spinoff, parent-controlled cash, fading coal cycle \u2014 a governance discount."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** AADI is a low-payout spinoff whose cash the parent controls, earning into a fading coal cycle \u2014 worth a third of FCF.\n**Why wrong:** the $99.3m net-cash balance sheet (debt $1,486.2m\u2192$826.1m) and 2.1\u00d7 FCF cover of the FY2025 dividend leave capacity above the 32.9% paid; through-cycle NAV is IDR 11,962/share.\n**What proves us wrong:** two consecutive audited FYs payout below 40% while net cash builds, or through-cycle FCF below $400m."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. FY2025 payout fell to 32.9% from FY2024's 245.4% (dossier ratios) \u2014 but FY2024's was a balance-sheet raid (cash \u2212$1,015.8m, debt +$527.0m, net cash $1,575.3m \u2192 $32.5m), so FY2025's is arithmetic, not policy; the 60% payout is an unstated re-rate bet.\n2. FCF fell $827.4m \u2192 $534.6m FY2024\u2192FY2025 while capex stayed at $324.6m (cash-flow table) \u2014 the fade is already audited.\n3. H1-2026 (unaudited) is 62% of FY2025 net income ($473.7m vs $760.2m) \u2014 my H2 deceleration is the load-bearing uncited bet."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Mid-2029, down ~30%: the Group holds payout near 33% as the ICI/HBA marker fades, the re-rate never comes, and the stock de-rates to fade-case trough-NAV; the ARB band fills below 7,900 (\u221226/\u221241%)."
+    },
+    {
+      "heading": "Flow and ownership",
+      "detail": null,
+      "markdown": "**Price check.** Last IDR 11,125; entry 8,600 = **22.7% below the tape** \u2192 PASS at a price (max chase 3%). **Liquidity.** 30d ADV **IDR 128.1bn/day**; a IDR 50bn line exits ~2 sessions at 20% participation. Float: not in packet. **Flow.** `fund record` `{}` \u2192 **flows stale**; entry read unavailable \u2014 valuation alone."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "DREW (BEAR), 2026-10-21T13:31:52+07:00 \u2014 attacked gate. Verbatim, survives the Judge verdict.\n\n1. [MATERIAL] Through-cycle marker unsourced \u2014 the card's output contract (NAV/share at through-cycle price, source named) is breached: no coal price is named anywhere. \"Through-cycle FCF\" is a 3y average of the company's own realized FCF (FY2023-25), all war-premium years \u2014 procyclical error #1 wearing the label \u2014 and the desk's own memo (the macro regime memo:10: thermal coal NEUTRAL, that fade \"unchanged\") contradicts it. Window alone moves NAV 11,396-14,454.\n2. [MATERIAL] The frame capitalizes the war premium into perpetuity \u2014 561.7 \u00f7 11% is a perpetual annuity of peak-cycle cash at a trough cap; the card carries the premium *alongside* NAV, never inside it. At the thesis's own 11%, the analyst's own fade FCF (400) gives IDR 8,584: entry 9,500 is 10.7% above it, paying for through-cycle FCF \u2265 ~$444m.\n3. [MATERIAL] Archetype circularity: dividend_income_anchor needs a covered anchor dividend; FY2025 dps 0.0321 (payout 32.9%, \u221291.6% y/y) is not it. p_up 0.60 comes from the archetype whose qualifying condition *is* the re-rate being bet on; the registry evidence (ADRO/ITMG/PTBA, n=20) is group-level, and the conservatism sits in a below-tape limit executed only in the adverse state. Sourcing sleeve: MOMENTUM (mom12 +65.9%).\n4. [MATERIAL, FATAL-if-wrong] Cost-curve position (Q1) and the 60% payout policy (Q2) are uncited; reserves/reserve life/volumes (Q3) unanswered \u2014 yet the valuation is a perpetuity, which *is* a reserve-life assumption. Reserves <15y, or 2nd/3rd-quartile costs, kill it. $70 DMO cap, IUPK royalties, DHE retention: named, never sized.\n5. [MATERIAL] Falsification is self-sealing: \"two consecutive audited FYs payout <40%\" is already one-in (FY2025 32.9%), FY2026E is 33%, FY2027E jumps to 60% \u2014 it fires only if FY2027 disappoints, and it is `review`, not exit. Only the 7,900 price kill bites.\n6. [MATERIAL] New fact: FY2024's 245.4% payout ($2,971.7m vs FCF $827.4m) was a balance-sheet raid \u2014 cash \u22121,015.8, debt +527.0 \u2014 net cash $1,575.3m (FY2023) \u2192 $32.5m (FY2024) (dossier balance-sheet/cash-flow lines). FY2025's 32.9% is arithmetic, not policy. Q2 answers against it.\n7. [MATERIAL] The ARB fill (\u221233/\u221247%) is in the pre-mortem, absent from `down_pct` (\u221216.8); at \u221233 own-Kelly falls 2.02 \u2192 0.27. `fee_tax_drag_pct` 1.5 is unit-ambiguous.\n8. [MINOR] \"Entry 9,500 is 17.1% below market\" is mis-derived \u2014 (11,125\u22129,500)/9,500 = +17.1% is the tape's premium *to* entry; the discount is 14.6%. FY2026E models revenue +8.1% h/h on EBIT \u221221.6% h/h.\n9. I stop objecting at entry \u2264 IDR 8,600 (fade-FCF NAV at the thesis's own 11% cap) absent a sourced marker.\n\n**Classification: MAJOR_REVISION.** It capitalizes a war-premium three-year average into a perpetuity, then borrows the archetype's 0.60 prior to bet on the payout re-rate that archetype requires \u2014 a circle, not a margin of safety."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **Concede** \u2014 no coal price series in the repo; FY2023-25 average is war-premium FCF, an assumption, not a marker.\n2. **Concede** \u2014 561.7 \u00f7 11% capitalizes peak cash; fade FCF at 11% = IDR 8,584 \u2192 **entry 8,600** (point 9). Target 11,950 / kill 7,900 held.\n3. **Partly concede** \u2014 **p_up 0.60\u21920.50** (no covered anchor dividend, FY2025 dps 0.0321); the class is right; conservatism priced once in the 0.719\u00d7 base entry.\n4. **Concede** \u2014 no cost curve, reserves, reserve life, volumes or mine plan in the dossier; the entry cut removes the perpetuity objection, not the reserve-life gap.\n5. **Concede** \u2014 the payout kill was review-only and already one-in; the >2028-06-30 kill is now **exit_full**; the 7,900 price kill is live, 8.1% below entry.\n6. **Concede** \u2014 FY2024's 245.4% was a balance-sheet raid (net cash 1,575.3\u219232.5), not policy; buys the p_up cut.\n7. **Concede (units)** \u2014 fee_tax_drag 1.5 = 1.5pp off the 2.5y EV. **Hold** \u2014 down_pct is the falsification loss (\u22128.1%) per card 6; ARB \u221226%/\u221241% stays in the pre-mortem.\n8. **Concede** \u2014 the tape is +29.4% to entry, which sits 22.7% below it (fixed in Flow).\n9. **Concede** \u2014 entry \u2192 8,600, your line.\n\n**ev_math >20% relative: up_pct 25.8\u219239.0, down_pct \u221216.8\u2192\u22128.1, expected_pct 26.8\u219233.2 \u2014 back to Drew before the Judge.**"
+    },
+    {
+      "heading": "Re-attack",
+      "detail": null,
+      "markdown": "DREW (BEAR), 2026-10-21T14:16:55+07:00 \u2014 re-attack gate. Verbatim, survives the Judge verdict.\n\n1. [MATERIAL] The target was never re-based while the entry was: base 11,950 still capitalizes the $561.7m war-premium FY2023-25 average the analyst concedes is no marker, so up_pct 39.0 measures a fade-NAV entry against a war-premium target and takes credit for the un-fade.\n2. [MATERIAL] down_pct \u22128.1% is the mark-to-kill, not the loss: on the card-mandated ARB-adjusted downside (\u221221.9% to \u221240.3%) up/|down| falls from 4.8 to 1.8\u20130.97 \u2014 at/below the 1.3 symmetry line \u2014 and own-Kelly falls +4.89 \u2192 +1.00/+0.33/\u22120.04, i.e. quarter-Kelly to zero at the wide band. Revision 7's \"per card 6\" refusal misreads that card.\n3. [MATERIAL] The card's output contract stays unmet: sourced through-cycle marker, cost-curve quartile, reserve life. Bounded fixes, not a kill. Verified: entry 8,600 = fade-FCF NAV at 11% (principled, connects to the model); kill 7,900 = fade-NAV at 12%, a valuation level not a stop; all ev_math recomputes exactly.\n\n**Classification: MAJOR_REVISION.** No fabrication, no liquidity breach (ADV IDR 128bn), EV positive on every defensible downside."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**REVISE** \u2014 construction defects (rule 6a) return to ANALYST_INDO; `status: attacked`; no verdict stamp, no kill-ledger row, no cooldown. Not KILL: no fabrication, no governance/mandate/liquidity breach (ADV IDR 128.1bn), and entry 8,600 is a valuation level (fade FCF 400 @ 11% = IDR 8,584) \u2014 Drew verified both entry and kill connect to the model. Not PASS: the upside leg is built on an input the analyst has disowned, so EV is not positive at honestly derived levels. Correction applied against the 35-KILL/40 record: a return is not a kill.\n\n1. (a) Unsourced through-cycle marker \u2014 construction defect, conceded, unrepaired. Card step 2 and the output contract require a named public series; the FY2023-25 own-FCF average is the \"name's own P&L alone\" the card forbids. Return with a sourced marker, or an explicit no-marker frame.\n2. (c) Target 11,950 \u2014 construction defect, NOT repaired by the entry cut. It still capitalizes the conceded war-premium $561.7m, so up_pct 39.0 spans a fade-NAV entry and a war-FCF target \u2014 two inconsistent bases. Re-derive the target on the entry's basis; on honest fade FCF it is ~IDR 8,584 and there is no trade at 8,600 \u2014 say so, or supply a sourced re-rate case.\n3. (b) `down_pct` \u22128.1 is an honest modelling choice, not an ev_math defect: card rule 1/lint require down_pct at the kill, and the ARB band sits in the pre-mortem. But card 6's \"size on ARB-adjusted downside\" and the output contract's ARB-adjusted-downside line are unmet \u2014 a sizing input for the sizing engine, not a kill.\n4. Cost curve / reserve life (Drew 4) \u2014 construction defect, restated not repaired: a perpetuity is a reserve-life assumption. p_up 0.50 vs the 0.60 prior, justified by \"no covered anchor dividend,\" is archetype circularity across the 6a three-haircut pattern \u2014 apply the class at 0.60 or change archetype. Falsification self-sealing is repaired (exit_full) = priced risk."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Placeholder \u2014 Voss; deterministic VETO is absolute.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(Placeholder \u2014 sizing block records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}
