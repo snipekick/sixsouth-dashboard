@@ -28,6 +28,17 @@
   },
   {
     "meta": {
+      "date": "2026-10-22T20:03:24.832072+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-10-22 \u2014 no trading actions; no kills fired, governor NONE, nothing staged, no Macro-FX thesis",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "North Book, 20:00 WIB US_PREOPEN (six South duty / North Book; tier cheap). QC WARN, not CRITICAL \u2014 single standing flag MARKET_PARAM_STALE: published cash-rate policy fx_carry_rates.CNH value 1.40 asof 2026-08-22 aged past the 60d threshold. It is US-close-diagnosed and already escalated at 2026-10-22T06:35 with owner OPS/MONTHLY_IC (policy-rate proxy, unchanged since the May-2025 PBoC cut, not suspected wrong); GLOBAL holds no FX positions so no carry or mark depends on it, and no action this session would consume it. Flag carried, no new escalation, no CRITICAL restriction. (a) Kill exits: none fired. GLOBAL fund record shows 0 holdings / 100% cash / gross 0.0%, kill_actions_due empty, kill_monitoring_suspended empty, and fund record is {}. No fired kill exists, so no exit ticket is missing and no fail-closed breach arises; live_theses are the two INDO names (T-INDO-ERAA-001, T-INDO-MEDC-001), South Book, out of scope here. Historical GLOBAL kill-ledger rows (SMFG, T-GLOBAL-0700HK-001; 2026-10-19) correspond to no held position. (b) Governor de-gross: GLOBAL governor state NONE, live false, dd 0.0% vs review -8.0% / degross -15.0% \u2014 not DEGROSS, so the wrapper's deterministic\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-10-21T14:39:41+07:00",
       "book": "INDO",
       "title": "CONSTRUCT 2026-10-21 \u2014 1 chain, REVISE (construction defect), no ticket staged",
@@ -906,17 +917,6 @@
       "kind": "other"
     },
     "body": "Session US_PREOPEN 2026-09-01 20:00 (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping). Governor NONE, book all-cash 100% cash / 0% gross, no DEGROSS, none. Kill exits: kill_actions_due empty, orders_pending empty \u2014 no fired kill missing a ticket/fill; no de-gross sells. Entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill, PM decision 2026-08-22 WEEKLY_DEEP; Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed). Runbook: quantity from sizing.pm_pct, never resize \u2192 0 qty = no valid entry to ticket; no live order to cancel. Did NOT create a ticket, did NOT re-size. FX: no judged FX thesis awaiting level on GLOBAL; no ticket. No tickets created, so risk_check --orders N/A. All decisions pass. Exiting runbook.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-08-31T08:45:55.758031+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN pass: no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed 2026-08-31 08:45 WIB: QC WARN (price cache 47h old; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) - not CRITICAL, no fail-closed. Governor NONE both books - no de-gross, no VETO. pending_orders empty. kill_actions_due empty - no kill exits to verify/write. judged_unticketed T-GLOBAL-0700HK-001 is GLOBAL-book, out of scope for INDO ticketing. No INDO thesis judged+sized+waiting on level (live=0, n_names=0). INDO flow regime STALE - not estimated. Cash 100%, no positions. No tickets created; no action.",
     "persona": ""
   }
 ]
