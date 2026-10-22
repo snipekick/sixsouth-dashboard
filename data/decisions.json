@@ -11,6 +11,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-22T16:07:45.999932+07:00",
+      "book": "INDO",
+      "title": "IDX_CLOSE 2026-10-22: no fired kills, no review_condition due, no trading action \u2014 club report validated",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "IDX-hours trigger review at 16:00 WIB (step 6). (1) Fired unconditional kills: kill_actions_due [] and kill_monitoring_suspended [] on the brief, fund record {} \u2014 nothing fired, so nothing to confirm. (2) review_condition, judged on brief/dossier facts: ERAA (T-INDO-ERAA-001) date-kill 2027-03-31 not reached; its KPI criterion cash_conversion CFO/NI LTM < 0.4 is below threshold on the last reported print (0.19x in the FY25/H1-26 accounts), but the criterion's own gate is the Q3-2026 LK due 2026-10-31 and the condition was adjudicated at judgment 2026-10-19 \u2014 the entry was restructured to a 560 limit and the thesis kept live against that number \u2014 so it does not hold today as a fresh trigger and re-arguing it would renegotiate a decision three days old. MEDC (T-INDO-MEDC-001) reserve-replacement criterion is satisfied on the FY25 AR2025 2P table (493 to 564 mmboe) and its date-kill 2027-09-30 is not reached \u2014 does not hold. No new evidence arrived to re-open either: the IDX keterbukaan endpoint is unconfigured, so fund record returned unchecked for ERAA.JK and MEDC.JK (fail-soft, no web crawl improvised); SEC was up and returned only generic 6-K rows for NVO, which is not a holding\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-22 (Thu)\n\nSession 2026-10-22T11:00:18+07:00 \u2192 2026-10-22T11:10:46+07:00. **Early exit per step 4: no un-carded candidate clears the fast-disqualify sniff test in either book.** No cards written; no hygiene actions due (nothing at the 21-day boundary, no invalidated signals); one WARN filed (GLOBAL screen price-window lag). The GLOBAL sweep carried no new information at all \u2014 its price window ends at the 2026-10-20 close, so today's rows and ranks are identical to 10-21's; the two genuinely new INDO rows (GGRM, MAPI) fail on grounds the prior thirteen sessions established, both now dossier-anchored.\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already filed to HUMAN_ATTENTION at 06:35 by US_CLOSE, not IDEATION's, not re-filed. Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; pending orders []. GLOBAL 100% cash / 0 names (NAV $1,010,930.67, DD 0.0%, week_trades 0/10); INDO 88.7% cash / 2 names (ERAA +12.38%, MEDC +8.92% since entry; NAV IDR 15.407bn, gross 11.3%, DD 0.15%, week_trades 1/10). Deployment vs the 60\u201395% band: GLOBAL 0.0%, INDO 11.3% \u2014 both\u2026",
     "persona": ""
@@ -906,11 +917,6 @@
       "kind": "other"
     },
     "body": "Triggers reviewed 2026-08-31 08:45 WIB: QC WARN (price cache 47h old; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) - not CRITICAL, no fail-closed. Governor NONE both books - no de-gross, no VETO. pending_orders empty. kill_actions_due empty - no kill exits to verify/write. judged_unticketed T-GLOBAL-0700HK-001 is GLOBAL-book, out of scope for INDO ticketing. No INDO thesis judged+sized+waiting on level (live=0, n_names=0). INDO flow regime STALE - not estimated. Cash 100%, no positions. No tickets created; no action.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-08-31 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `china_impulse` still \"no-reflation, property risk-containment (data not fresh)\". `idx_foreign_flow_feed` STALE \u2014 flow narratives stay quarantined.\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/KLBF/MEDC ADVANCE + ADRO/GGRM/INCO WATCH) +\u2026",
     "persona": ""
   }
 ]
