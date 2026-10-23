@@ -1,5 +1,27 @@
 [
   {
+    "meta": {
+      "date": "2026-10-23T14:35:14.888964+07:00",
+      "book": "INDO",
+      "title": "SIZE AADI.JK 2.5% NAV starter \u2014 waiting price trigger at 7,000",
+      "thesis": "T-INDO-AADI-001",
+      "kind": "sizing"
+    },
+    "body": "Decision: SIZE \u2014 PASS_REDUCED honored at the Judge's 0.25 multiplier. fund record script_pct 10.0% (binding constraint constitution_cap 10.0%; quarter-Kelly 25.0%, correlation haircut 11.0%) -> pm_pct 2.5% NAV = IDR 386.4m, 55,200 sh at 7,000. No further downward deviation.\n\nPrice at decision: AADI.JK last IDR 11,675 (2026-10-23); 30d ADV ~IDR 125bn/day. Entry 7,000 = 40.0% below the tape. Flows: flows stale (market-data snapshot is {}), so the liquidity-driven-fill condition is unverifiable \u2014 a monitor, not a size input.\n\nWhy the Voss ceiling and not below: book heat rises 0.81% -> 1.01% (budget 12%), 6.99pp headroom to REVIEW; deployment 11.6% vs the 60-95% band with 2 of 8 names. Drew's and the Judge's honest read is that the +11.3pp EV is a carry clip; a quarter-Kelly starter is the correct expression of that, and a smaller size would not change the conclusion while widening an already-attributed deployment gap. The 88.4% cash flag is no reason to size this name up.\n\nEntry plan: level 7,000, max_chase 1% (max fill 7,070), mode limit, valid_until 2026-12-31. Max fill 7,070 sits 39.4% below the 11,675 close vs entries.stage_within_pct 10.0, so fund record will NOT write a ticket\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-23T14:40:13.537757+07:00",
+      "book": "INDO",
+      "title": "CONSTRUCT 2026-10-23 \u2014 1 chain: AADI PASS_REDUCED 0.25, sized 2.5% NAV, no ticket (resting price trigger at 7,000)",
+      "thesis": "T-INDO-AADI-001",
+      "kind": "other"
+    },
+    "body": "Session launched 2026-10-23T13:00:17+07:00 (CONSTRUCT, Mon/Wed/Fri 13:00). Step 1 queue inventory: (a) `awaiting_pm_sizing` empty; (b) `judged_missing_levels` empty; (c) `revise_queue` empty, but ONE thesis is `attacked` with no verdict \u2014 T-INDO-AADI-001, returned by the Judge 2026-10-21 as REVISE (construction defects); oldest-first puts it at the head of the queue; (d) `buy_verdict_sized_zero` empty; (e) no ADVANCE idea cards \u2014 fund record holds 20 cards (5 PROMOTED, 4 WATCH, 11 DISCARD) and none carries `verdict: ADVANCE`. The two judged-unticketed theses (T-GLOBAL-NVO-002, T-INDO-TINS-001) are already sized and risk-checked, resting at value-anchored limits far below spot (NVO last 39.06 vs max_fill 24.72, gap 58.0%; TINS 3,840 vs 819, gap 368.9%) \u2014 no section 3 action belongs to CONSTRUCT.\n\n**Chain processed: T-INDO-AADI-001 (AADI.JK, PT Adaro Andalan Indonesia, INDO, long, thermal coal, `commodity_capex_turnaround` + VAL_COMMODITY_CYCLICAL).** Every stage was an isolated spawn; an `fund record observe --session CONSTRUCT` ran immediately before each and every one was refused with `write_failed` \u2014 the known 2026-10-21T14:39 defect, fail-soft, work unaffected.\n- **Revision 2**\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-23 (Fri)\n\nSession 2026-10-23T11:00:17+07:00 \u2192 2026-10-23T11:11:52+07:00. **3 cards written (GLOBAL 1, INDO 2), all DISCARD; 1 row declined without a card; no hygiene action due; no new escalation.** Not an early exit \u2014 three genuinely new un-carded rows (SONY, MA, PGEO) appeared on a GLOBAL price window that is finally current, and each was worked to a free kill. **No ADVANCE and no WATCH today:** every un-carded row fails the valuation-anchored target check, so Saturday's triage gets three pre-killed names plus hard re-advance gates instead of four cold screen rows.\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 filed to HUMAN_ATTENTION at 06:35 by US_CLOSE, not IDEATION's, not re-filed. Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; pending orders [].\n- GLOBAL 100% cash / 0 names (NAV $1,011,038.13, DD 0.0%, week_trades 0/10); INDO 88.4% cash / 2 names (NAV IDR 15.460bn, gross 11.6%, DD 0.22%, week_trades 1/10; MEDC +15.5%, ERAA +11.4% since entry). Deployment vs the 60\u201395% band: GLOBAL 0.0%, INDO 11.6% \u2014 both below (standing WEEKLY_DEEP/IC matter, no\u2026",
     "persona": ""
@@ -895,22 +917,6 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-09-02 (Wed)\n\n## State at entry\n- Queue: 1 parked draft (T-GLOBAL-COST-001, created 08-26, >5 trading days old \u2192 mandatory freshness pass) + ADVANCE cards without theses (GLOBAL JPM/LLY/UNH/XOM; INDO AMMN/KLBF/MEDC).\n- Both books all-cash, governor NONE, 0 holdings, 0 live theses. Macro regime unchanged (08-22 FULL rebuild): balance_of_payments_pressure, NEUTRAL appetite; tilts nickel FAVOR, thermal coal NEUTRAL, oil-import AVOID (Brent ~94), INDO rate-sensitive AVOID.\n\n## Chains advanced (\u22642 per book per WEEKLY_DEEP \u00a77)\n- **GLOBAL-COST** (parked draft, freshness pass \u2192 attacked \u2192 full-concession revision \u2192 re-attack \u2192 Judge) \u2192 **KILL (valuation)**. Honest EV \u221227.8% on conceded inputs (p_up 0.35, up +12, down \u221250); 47x-forward premium-multiple survival bet fails the derated-compounder base rate. Card GLOBAL-COST \u2192 DISCARD.\n- **GLOBAL-UNH** (fresh MOMENTUM ADVANCE) \u2192 **KILL (valuation)**. Honest EV \u22123.5%/3y (~\u22121.2%/yr) below risk-free and the ~7.2% hurdle; target 479 = DCF mid-case, zero margin of safety, no catalyst; MOMENTUM +40% runner mislabeled as derated compounder. Card GLOBAL-UNH \u2192 DISCARD.\n- **INDO-KLBF** (fresh UNSCREENED ADVANCE) \u2192\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-01T08:46:52.831219+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN pass: no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed 2026-09-01 08:45 WIB. QC WARN (single flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d staleness) - not CRITICAL, no fail-closed. Governor NONE both books (GLOBAL & INDO) - no DEGROSS, no de-gross sells, no buy VETOes. pending_orders empty. kill_actions_due empty - no fired kills to verify/write (step 3a N/A). judged_unticketed only T-GLOBAL-0700HK-001: GLOBAL-book, pm_pct 0.0 (PASS_REDUCED 0.5x binds like a kill, concluded at 0% at WEEKLY_DEEP 2026-08-22, no re-open without material new evidence) - out of scope for INDO ticketing and not resizable here. No INDO thesis judged+risk-checked+sized waiting on level (live=0, n_names=0). INDO flow regime STALE (n=0) - not estimated. Both books 100% cash, no positions. No tickets created; step 4/6 N/A. No action.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-01 (Tue)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item; ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `china_impulse` still \"no-reflation, property risk-containment (data not fresh)\". `idx_foreign_flow_feed` STALE \u2014 flow narratives stay quarantined.\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO 12 files = 6 active (AMMN/KLBF/MEDC ADVANCE +\u2026",
     "persona": ""
   }
 ]
