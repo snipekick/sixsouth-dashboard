@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-MRK-001",
+  "title": "Merck (MRK)",
+  "meta": {
+    "id": "T-GLOBAL-MRK-001",
+    "book": "GLOBAL",
+    "ticker": "MRK",
+    "name": "Merck",
+    "sector": "HEALTHCARE",
+    "factors": [
+      "us_defensive",
+      "us_rates"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-24T10:15:54+07:00",
+    "drafted": "2026-10-24T10:15:54+07:00",
+    "judged": null,
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 135.0,
+    "target": 184.0,
+    "kill": 108.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Bull value: 21x FY2028E bull EPS $8.75 \u2014 the CURRENT multiple on higher forward earnings, i.e. the re-rate HOLDS, it does not compound. Base 18x = 143. Capped at the multiple the market already pays (MOMENTUM_CONTINUATION pt 6).",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 36.3,
+    "p_down": 0.5,
+    "down_pct": -20.0,
+    "net_div_yield_pct_pa": 2.5,
+    "fee_tax_drag_pct": 0.5,
+    "expected_pct": 9.53,
+    "horizon_years": 0.75,
+    "carry_pct": 1.38,
+    "kelly_full_pct": 135.7
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library momentum_continuation rate 0.50 (n=200; Jegadeesh & Titman 1993, AQR). Anchored AT the prior, NO deviation claimed: the hurdle is cleared by payoff (1.81 vs library 1.36) and by entry below base fair value (135 vs 143), not by a raised p_up (SIZING_EV_BASE_RATES pt 1).",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 108.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop \u2014 14x FY2027E, the re-rate fully unwound"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-02-15",
+      "action": "review",
+      "condition": "FY2026 results or FY2027 opening guidance show revenue declining and/or EBIT excluding charges at/below the 2026 H2 run-rate \u2014 i.e. the H1-26 losses were operating, not one-off"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.0,
+      "action": "review",
+      "name": "Trailing-4Q total revenue, yoy growth pct",
+      "source": "Merck quarterly income statement, data/dossiers/MRK.md quarterly table"
+    }
+  ],
+  "model": {
+    "currency": "USD",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        64.2,
+        65.0,
+        66.0,
+        68.0,
+        69.5
+      ],
+      "ebit": [
+        20.2,
+        22.1,
+        7.0,
+        23.2,
+        23.6
+      ],
+      "net_income": [
+        17.1,
+        18.3,
+        5.6,
+        19.0,
+        19.4
+      ],
+      "eps": [
+        6.74,
+        7.28,
+        2.24,
+        7.68,
+        7.92
+      ],
+      "dps": [
+        3.09,
+        3.31,
+        3.4,
+        3.55,
+        3.7
+      ]
+    },
+    "valuation": {
+      "method": "P/E on forward earnings, cycle-aware and capped; FCF yield cross-check",
+      "bear": {
+        "value": 108.0,
+        "basis": "14x FY2027E EPS $7.68 \u2014 the multiple unwinds toward the pre-re-rate 11-13x; the 12m +74% was multiple-only, so the bear IS the multiple unwinding."
+      },
+      "base": {
+        "value": 143.0,
+        "basis": "18x FY2028E EPS $7.92 \u2014 a slight de-rate of the market's implied forward multiple, for a pharma facing a dated 2028 US Keytruda cliff."
+      },
+      "bull": {
+        "value": 184.0,
+        "basis": "21x FY2028E bull EPS $8.75 \u2014 subQ Keytruda plus pipeline cover the cliff; the multiple HOLDS at today's level, it does not expand."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-24T10:15:54+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-24T10:38:44+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, written from memory BEFORE document work",
+      "markdown": "What I believe the market narrative is: Merck re-rated because the market decided Keytruda's 2028 cliff is solved (subQ Keytruda plus the acquired pipeline) and that the H1-2026 losses are one-off charges \u2014 so MRK reads as a de-risked compounder, not a patent-cliff name."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed \u2014 timestamp above, before any market number",
+      "markdown": "Sources: `data/dossiers/MRK.md` (asof 2026-10-21) \u2014 annual, quarterly, balance-sheet and cash-flow tables. No primary filing is in-repo; load-bearing lines cite dossier lines.\n\n**EARNINGS_QUALITY_FLAGS gate \u2014 the card's question 1.** Revenue is FLAT, not falling: H1-26 $32.9bn (16.3 + 16.6) vs ~$31.3bn derived for H1-25 (FY25 65.0 less H2-25 17.3 + 16.4). So the ~-$15bn EBIT swing (H1-25 ~+11.4 to H1-26 -3.6) cannot be a gross-margin event \u2014 the charge sits *inside* operating income. Three dossier lines support a one-off:\n1. FY2023 is the same shape and RESOLVED: EBIT $3.0bn, EPS $0.14, then EPS $6.74 on revenue growth of +6.8% \u2014 a 48x EPS recovery on 6.8% growth only happens if the depressed year was non-recurring.\n2. FY2023 cash did not collapse: OCF $13.0bn against net income $0.4bn (CFO/NI 35.6x) \u2014 a non-cash charge depresses GAAP EBIT and leaves cash intact.\n3. Accruals clean: FY25 (18.3-16.5)/127 = 1.4%. (Receivables/inventory data: unavailable.)\n\n**Ruling: charge-driven (acquisition IPR&D / litigation), NOT operating deterioration** \u2014 optics-class. Honest limit: the dossier does NOT itemise the H1-26 charge, so this is shape-plus-precedent inference, not line-verified \u2014 the weakest joint. FY2026 is the crushed year; FY27-28 normalise to the FY2025 margin.\n\n**Revenue (USD bn):** 65.0A (+1.2%) \u2192 66.0E \u2192 68.0E (+3.0%) \u2192 69.5E. Load-bearing: (i) low-single-digit growth \u2014 FY25 +1.2%, quarterly revenue flat at $16.3-16.6bn; (ii) +3% FY27 from subQ Keytruda plus Winrevair/Ohtuvayre \u2014 analyst judgment, the widest error bar. Keytruda unit revenue is not itemised in-repo (cite-gap).\n\n**Margins:** FY25A 34.0% \u2192 FY26E 10.6% (H1 -3.6 plus H2-26E ~+10.5) \u2192 FY27E 34.1% / FY28E 34.0%, flat \u2014 no expansion claimed. NI = 0.82 x EBIT. Diluted shares 2,514m falling ~1%/yr."
+    },
+    {
+      "heading": "Valuation, the re-rate case and EV math",
+      "detail": null,
+      "markdown": "Market context: $145.27 (2026-10-23 close, `fund record`); mom12 +73.87%, mom6 +31.53%, mom1 -1.83%, off 52w high -6.60%, vol 35.8%, corr_bench 0.08, ADV $1.489bn; mcap $356.0bn (`the market-cap feed`). Reversal filter: mom1 -1.83% PASSES.\n\n**Q2 \u2014 what re-rated, and does it survive the FY27 guide.** The +74% 12m move came on revenue growth of +1.2%; FY25 EPS $7.28 is only +8% over FY24's $6.74. It was a pure multiple re-rating, ~11x \u2192 ~20x trailing, on the market's decision that the 2028 US Keytruda cliff is solved (subQ Keytruda plus the acquired pipeline \u2014 Verona's Ohtuvayre is now in the dossier's brand list). The FY2027 guide is the one datapoint narrative cannot reverse: the dated review sits there.\n\n**Q3 \u2014 Keytruda schedule / pipeline replacement NPV: NOT underwritten.** The dossier itemises neither Keytruda revenue nor LOE dates, so no replacement NPV is computed. This thesis does not claim to have solved the cliff; it claims the market has already paid for a solution. That is the ceiling on conviction.\n\n**Method.** P/E on forward earnings (the card's engine), capped at the current multiple: base 18x FY2028E $7.92 = 143; bull 21x FY2028E bull $8.75 = 184; bear 14x FY2027E $7.68 = 108. FY25 FCF $12.4bn on a $356bn cap is a 3.5% FCF yield \u2014 no cash-flow support for 20x unless the cliff is covered.\n\n**EV math (TARGET-FIRST, kill-second).** Target 184 / kill 108 / entry 135. up = +36.3%; down = -20.0%; ratio 1.81 vs momentum library 1.36 \u2014 no symmetry defect. p_up 0.50 \u2014 registry anchor, zero deviation. carry = 2.5 x 0.75 - 0.5 = 1.375; expected = 0.5(36.3) + 0.5(-20.0) + 1.375 = **+9.53% over 0.75y = +12.7%/yr vs the 11%/yr GLOBAL hurdle: CLEARS.** Kelly: own +112 vs library +61 (x10^4) \u2014 positive and above library; the gap is payoff and entry, not a shaded prior.\n\n**WIN-STATE CHECK:** at p_up = 1.0, 36.3 + 2.5x0.75 - 0.5 = **+37.7%** over 0.75y vs the hurdle 11%/yr x 0.75y = 8.25% \u2014 clears by +29.4pp. NOT dead on arrival.\n\n**Entry honesty:** at $145.27 the base case (143) sits 1.6% BELOW spot \u2014 the market already pays full value for the recovery. Entry 135 is 7.1% below spot and 5.9% below base fair value: a resting limit, not an endorsement of spot."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the H1-2026 losses are one-off charges (correct) and that subQ Keytruda plus the acquired pipeline cover the 2028 cliff (the re-rate driver), so MRK is a de-risked defensive compounder worth ~20x.\n\n**Why wrong:** the re-rate has already been paid. Normalising the charges gives FY2028E EPS ~$7.9, only ~+8% over FY2025 \u2014 the multiple doubled for earnings that barely move. The outcome from here is asymmetric against us: the multiple is the entire 12m return, and the multiple is what unwinds in the bear. Mechanically, FY2026 GAAP EPS ~$2.2 puts trailing P/E near 65x \u2014 a de-rating trigger for screens and style boxes before any FY2027 guide arrives.\n\n**What proves us wrong:** the FY2027 guide showing revenue growth >=3% with EBIT ex-charges at/above the 2026 H2 run-rate and no margin give-back; subQ Keytruda conversion demonstrably revenue-accretive; a Keytruda LOE schedule pushed later than 2028.\n\n**Edge taxonomy:** (a) analytical \u2014 the reported-vs-normalised decomposition locates *where* the mispricing sits, not that the stock is cheap: at base 143 the price already embeds the recovery, so the edge lives entirely in the entry price. No (b)/(c)/(d)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, each citing a dossier line",
+      "markdown": "1. FY2025 revenue grew only +1.2% ($64.2bn \u2192 $65.0bn); quarterly revenue is flat at $16.3-16.6bn \u2014 the top line does not support a doubled multiple (annual + quarterly tables).\n2. FY2025 CFO/NI 0.90x (OCF $16.5bn vs NI $18.3bn) \u2014 income modestly ahead of cash, a mild accrual flag (derived ratios).\n3. FY2025 net debt $34.7bn; net debt/EBITDA 1.23x, up from 0.93x \u2014 acquisitions funded on the balance sheet (balance-sheet table, derived ratios).\n4. The H1-2026 -$15bn EBIT swing is un-itemised in-repo: the one-off claim is inference, not a filed line \u2014 if any part is operating, FY27-28 normalisation is too high (quarterly table)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2027-08 and this position lost 30%. Most likely: the H1-2026 losses were not one-off \u2014 part of the charge recurred in H2-2026 and the FY2027 guide showed EBIT ex-charges at/below the 2026 H2 run-rate \u2014 so the market reverted to pricing Merck as a cliff-facing pharma and the multiple unwound from ~20x to ~14x, my 108 kill, with no revenue offset because the top line never grew. Second: Keytruda LOE guidance moved earlier and subQ conversion proved volume-neutral. Lesson either way: I bought a multiple that had already doubled on flat earnings, and I could not verify the charge decomposition from any in-repo filing."
+    },
+    {
+      "heading": "Microstructure and ownership",
+      "detail": null,
+      "markdown": "13F crowding, insider Form 4 activity, short interest/borrow: all unavailable. Index/passive mechanics: none found \u2014 checked, no pending add/delete sourced. Nothing inferred. Liquidity: ADV $1.489bn non-binding; days-to-exit at 20% participation trivial. Factor overlap: us_defensive/us_rates \u2014 no overlap (GLOBAL book 100% cash)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. [FATAL] Underived target input: up_pct 36.3 (the whole win branch) rests on \"FY2028E bull EPS $8.75\" \u2014 uncited; `model.lines` holds no bull revenue, EBIT or margin. Back-solved on FY28E revenue $69.5bn it needs EBIT $26.1bn = 37.6% margin, 3.6pp above the best year in the dossier (FY25 34.0%, line 46); card pt 6 requires a sourced multiple.\n\n2. [FATAL] The one-off joint. X = recurring operating share of the -$15bn H1-26 swing: FY28E EPS (19.4-0.82X)/2.449, so X=$1.2bn (8%) puts base 135 at entry (no safety) and X=$3.6bn (24%) puts EV ~0. The charge spans two quarters and improves; Q4-25 EBIT broke first (4.1 from 6.6) (lines 53-55); the FY23 one-off derives ~$15.9bn vs ~$15.0bn now, paid in debt (37.1 to 49.3, line 32). Charge excluded; the pipeline it buys is capitalised.\n\n3. [MATERIAL] Unfalsifiable frame: FY27/28 revenue (+3.0%/+2.2%) and the 34% margin assume the 2028 Keytruda LOE is covered \u2014 what line 69 declines to underwrite \u2014 and no kill criterion can fail on it. momentum_continuation (0.50) labels a de-rate argument (\"the multiple is what unwinds\", line 83), card pt-1 auto-kill; the 11%/yr hurdle \"CLEARED\" is unsourced (fund record GLOBAL = 100.0006).\n\n4. [MATERIAL] Construction. 1.81 holds only if filled 7.1% below spot; from 145.27 they give 1.04, and P(fill) rises with the loss branch \u2014 +9.53% is no tradeable path EV. Kill 108 is where the bear case is realised \u2014 a stop. Card pt 4 wants mode: scale (file: limit); the review skips the next print. No inside-band shading (36.3/-20.0 exact); no triple haircut (p_up at prior, up_pct above library 30, kill tighter than -22).\n\n5. [MATERIAL] Disconfirming fact (absent from the file): MRK 12m momentum fell four straight sessions, to 73.87 from 81.50, sleeve rank 3 to 7 (screen_GLOBAL_2026-10-2{1,2,3,4}.csv MRK rows) \u2014 the file cites the weakest row and calls mom1 -1.83% \"PASSES\". series.MRK: 52w high 152.55; vol 35.82% tops its cohort (ABBV 21.23, LLY 30.17).\n\n6. [MINOR] Pipeline: estimates_committed_at 10:15:54 post-dates fund record (10:12:58), so \"before any market number\" (line 48) is not disk-verifiable; stage_log monotonic, no retro-edit. No calibration ledger exists (fund record empty). GLOBAL live:false.\n\nStop objecting at entry =90% non-operating.\n\nVerdict: KILL_RECOMMENDED \u2014 the win branch prices off a bull EPS never derived and a margin never earned; an 8% operating-charge share erases the base-case safety margin."
+    }
+  ]
+}

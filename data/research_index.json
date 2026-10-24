@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "asof": "2026-10-24T06:30:15+07:00",
+  "asof": "2026-10-24T10:39:13+07:00",
   "counts": {
-    "theses": 45,
-    "ideas": 20,
-    "stocks": 41,
+    "theses": 46,
+    "ideas": 21,
+    "stocks": 42,
     "dossiers": 32,
     "ic": 2,
     "daily": 46,
@@ -14,10 +14,11 @@
   "pipeline": {
     "by_verdict": {
       "KILL": 40,
+      "PENDING": 1,
       "PASS_REDUCED": 5
     },
     "by_book": {
-      "GLOBAL": 24,
+      "GLOBAL": 25,
       "INDO": 21
     }
   },
@@ -299,7 +300,7 @@
         "killed": "2026-09-16",
         "px_at_kill": 331.3399963378906,
         "reason": "other",
-        "px_now": 347.7250061035156,
+        "px_now": 347.7300109863281,
         "px_asof": "2026-10-23",
         "move_pct": 4.9
       },
@@ -474,7 +475,7 @@
     "doc": "research_doc_macro_regime",
     "regime": "balance_of_payments_pressure",
     "risk_appetite": "CAUTIOUS",
-    "asof": "2026-10-19",
+    "asof": "2026-10-24",
     "next_full_rebuild": "2026-11-07",
     "authors": [
       "Severin (global macro)",
@@ -509,6 +510,32 @@
     ]
   },
   "theses": [
+    {
+      "id": "T-GLOBAL-MRK-001",
+      "book": "GLOBAL",
+      "ticker": "MRK",
+      "name": "Merck",
+      "sector": "HEALTHCARE",
+      "archetype": "momentum_continuation",
+      "status": "attacked",
+      "verdict": null,
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-10-24T10:15:54+07:00",
+      "judged": null,
+      "entry": 135.0,
+      "target": 184.0,
+      "kill": 108.0,
+      "price": null,
+      "expected_pct": 9.53,
+      "p_up": 0.5,
+      "kelly_full_pct": 135.7,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-global-mrk-001"
+    },
     {
       "id": "T-INDO-AADI-001",
       "book": "INDO",
@@ -993,7 +1020,7 @@
       "entry": 332.27,
       "target": 360.0,
       "kill": 259.0,
-      "price": 347.7250061035156,
+      "price": 347.7300109863281,
       "expected_pct": -7.0,
       "p_up": 0.5,
       "kelly_full_pct": -388.8,
@@ -1683,6 +1710,16 @@
   "ideas": [
     {
       "book": "GLOBAL",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "verdict": "DISCARD",
+      "regime": "NEUTRAL",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-24",
+      "doc": "research_doc_idea_global-crm"
+    },
+    {
+      "book": "GLOBAL",
       "ticker": "SONY",
       "name": "Sony Group (ADR)",
       "verdict": "DISCARD",
@@ -1725,7 +1762,7 @@
       "book": "GLOBAL",
       "ticker": "MRK",
       "name": "Merck",
-      "verdict": "WATCH",
+      "verdict": "PROMOTED",
       "regime": "NEUTRAL",
       "sleeve": "MOMENTUM",
       "asof": "2026-10-21",
@@ -1755,7 +1792,7 @@
       "book": "INDO",
       "ticker": "DSNG.JK",
       "name": "Dharma Satya Nusantara",
-      "verdict": "WATCH",
+      "verdict": "DISCARD",
       "regime": "NEUTRAL",
       "sleeve": "NEGLECTED",
       "asof": "2026-10-21",
@@ -1795,7 +1832,7 @@
       "book": "INDO",
       "ticker": "AMMN.JK",
       "name": "Amman Mineral Internasional",
-      "verdict": "WATCH",
+      "verdict": "DISCARD",
       "regime": "NEUTRAL",
       "sleeve": "UNSCREENED",
       "asof": "2026-10-19",
@@ -1936,7 +1973,7 @@
       ],
       "ideas": [],
       "dossier": null,
-      "price": 347.7250061035156,
+      "price": 347.7300109863281,
       "price_asof": "2026-10-23",
       "latest_verdict": "KILL",
       "kill": {
@@ -1946,7 +1983,7 @@
         "killed": "2026-09-16",
         "px_at_kill": 331.3399963378906,
         "reason": "other",
-        "px_now": 347.7250061035156,
+        "px_now": 347.7300109863281,
         "px_asof": "2026-10-23",
         "move_pct": 4.9
       }
@@ -2094,6 +2131,29 @@
       }
     },
     {
+      "ticker": "CRM",
+      "book": "GLOBAL",
+      "name": "Salesforce",
+      "sector": "TECH",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "DISCARD",
+          "asof": "2026-10-24",
+          "doc": "research_doc_idea_global-crm"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-19",
+        "kind": "auto",
+        "doc": "research_doc_dossier_crm"
+      },
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
       "ticker": "CVX",
       "book": "GLOBAL",
       "name": "Chevron",
@@ -2176,10 +2236,19 @@
       "book": "GLOBAL",
       "name": "Merck",
       "sector": "HEALTHCARE",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-GLOBAL-MRK-001",
+          "verdict": null,
+          "status": "attacked",
+          "judged": null,
+          "drafted": "2026-10-24T10:15:54+07:00",
+          "doc": "research_doc_thesis_t-global-mrk-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "WATCH",
+          "verdict": "PROMOTED",
           "asof": "2026-10-21",
           "doc": "research_doc_idea_global-mrk"
         }
@@ -2749,7 +2818,7 @@
       "theses": [],
       "ideas": [
         {
-          "verdict": "WATCH",
+          "verdict": "DISCARD",
           "asof": "2026-10-19",
           "doc": "research_doc_idea_indo-ammn"
         }
@@ -2875,7 +2944,7 @@
       ],
       "ideas": [
         {
-          "verdict": "WATCH",
+          "verdict": "DISCARD",
           "asof": "2026-10-21",
           "doc": "research_doc_idea_indo-dsng"
         }
