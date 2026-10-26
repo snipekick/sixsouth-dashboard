@@ -12,6 +12,11 @@
   },
   {
     "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-10-26 (Mon)\n\nSession 2026-10-26T11:00:22+07:00 \u2192 2026-10-26T11:10:03+07:00. **2 cards written (GLOBAL 1, INDO 1 \u2014 both un-carded new rows); 3 terminal 21-day DISCARDs deleted; 1 dossier built; 1 WARN filed.** Both new rows were worked to a conclusion, so no early exit.\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already filed at 06:35 by US_CLOSE on 10-22, not IDEATION's, not re-filed. Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; pending orders [].\n- GLOBAL 100% cash / 0 names (NAV $1,011,145.60, DD 0.0%, week_trades 0/10); INDO 88.8% cash / 2 names (NAV IDR 15.392bn, gross 11.19%, DD \u22120.33%, week_trades 0/10; MEDC +12.02%, ERAA +5.71% since entry). Deployment vs the 60\u201395% band: GLOBAL 0.0%, INDO 11.2% \u2014 both below (standing WEEKLY_DEEP/IC matter, no new escalation).\n- judged_unticketed: **T-GLOBAL-NVO-002** (last 39.43 vs max_fill 24.72, gap 59.5%) and **T-INDO-TINS-001** (last 3,900 vs max_fill 819, gap 376.2%) plus T-INDO-AADI-001 \u2014 all far outside entries.stage_within_pct. Recorded for the next trading session; not IDEATION's to execute.\n- Macro\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# WEEKLY_DEEP Session Journal \u2014 2026-10-24 (Sat)\n\nSession launched 2026-10-24T10:00:17+07:00. **Four deep-dives worked, three killed by their own arithmetic before any Bear/Judge spawn was spent (CRM, AMMN, DSNG); one chain survives into construction (MRK, GLOBAL). One material audit finding (the DSNG \u2212002 liquidity kill was a ~30\u00d7 unit error). Macro = DELTA. No post-mortem, no ingestion, no escalation of a trading trigger.**\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `MARKET_PARAM_STALE: published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`, first_seen 2026-10-22T06:30:03, filed to HUMAN_ATTENTION 2026-10-22T06:35 by US_CLOSE. Not this session's, not re-filed; re-affirmed in step 10 (the CNH value is a PBOC policy-rate proxy, legitimately flat since the May-2025 cut; no FX positions anywhere).\n- Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; `kill_monitoring_suspended` []. Staging waiting-list: **T-INDO-TINS-001** only (last 3,840 vs max_fill 819, gap 368.9% \u2014 far outside `entries.stage_within_pct` 10.0, so `fund record` correctly writes nothing).\n- GLOBAL: NAV **$1,011,145.60**, 100% cash, **0 holdings** (`deployed_pct` 0.0, below band)\u2026",
     "persona": ""
   },
@@ -912,11 +917,6 @@
       "kind": "other"
     },
     "body": "Triggers reviewed, no action. Kill exits: kill_actions_due empty, no fired kills to verify. Governor: NONE on GLOBAL and INDO, no DEGROSS. Entries: no INDO thesis judged-unticketed waiting on level (only T-GLOBAL-0700HK-001, GLOBAL book, out of scope for this session); pending_orders empty. QC WARN (published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) carried, not CRITICAL. Cash 100% both books, 0 positions.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-02 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item; ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures (INDO screen emitted only a benign numpy divide warning).\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `china_impulse` still \"no-reflation, property risk-containment (data not fresh)\". `idx_foreign_flow_feed` STALE \u2014 flow narratives stay quarantined.\n- Cards at entry: GLOBAL 13 files = 9 active (AMZN/COST/JPM/LLY/UNH/XOM ADVANCE + GE/MRK/SMFG WATCH) + AMD/MUFG/NVO/TXN DISCARD. INDO\u2026",
     "persona": ""
   }
 ]
