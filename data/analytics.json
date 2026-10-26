@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-26T20:00:22+07:00",
+  "asof": "2026-10-27T06:30:16+07:00",
   "method": {
     "returns": "TWR from inception on official and reconstructed NAV marks, external flows stripped; total-return benchmark rebased to 100 at inception",
     "risk_free": "book cash-yield proxy (published cash-rate policy)",
@@ -10,56 +10,56 @@
     "GLOBAL": {
       "benchmark": "80% ACWI + 20% AGG (adj close, TR)",
       "metrics": {
-        "n_obs": 80,
+        "n_obs": 81,
         "low_n": false,
         "rf_annual_pct": 3.88,
-        "cum_return_pct": 1.11,
-        "ann_return_pct": 3.55,
+        "cum_return_pct": 1.15,
+        "ann_return_pct": 3.61,
         "ann_vol_pct": 0.2,
-        "sharpe": -1.62,
-        "sortino": -1.99,
+        "sharpe": -1.33,
+        "sortino": -1.65,
         "max_drawdown_pct": -0.07,
-        "bench_cum_return_pct": 0.0,
-        "bench_ann_return_pct": 0.0,
-        "active_cum_pp": 1.11,
+        "bench_cum_return_pct": 0.41,
+        "bench_ann_return_pct": 1.29,
+        "active_cum_pp": 0.73,
         "beta": 0.0,
-        "jensen_alpha_ann_pct": -0.32,
-        "tracking_error_ann_pct": 9.8,
-        "info_ratio": 0.36,
-        "correlation": 0.08
+        "jensen_alpha_ann_pct": -0.26,
+        "tracking_error_ann_pct": 9.76,
+        "info_ratio": 0.24,
+        "correlation": 0.09
       },
       "attribution": [
         {
           "bucket": "Cash yield",
-          "contribution_pp": 1.115
+          "contribution_pp": 1.147
         }
       ]
     },
     "INDO": {
       "benchmark": "100% ^JKSE (+5.15%/y div proxy, TR)",
       "metrics": {
-        "n_obs": 80,
+        "n_obs": 81,
         "low_n": false,
         "rf_annual_pct": 5.5,
-        "cum_return_pct": 2.95,
-        "ann_return_pct": 9.59,
-        "ann_vol_pct": 1.98,
-        "sharpe": 2.07,
-        "sortino": 6.44,
+        "cum_return_pct": 2.72,
+        "ann_return_pct": 8.71,
+        "ann_vol_pct": 2.02,
+        "sharpe": 1.59,
+        "sortino": 4.21,
         "max_drawdown_pct": -0.35,
-        "bench_cum_return_pct": -6.02,
-        "bench_ann_return_pct": -17.76,
-        "active_cum_pp": 8.97,
+        "bench_cum_return_pct": -5.98,
+        "bench_ann_return_pct": -17.45,
+        "active_cum_pp": 8.7,
         "beta": 0.03,
-        "jensen_alpha_ann_pct": 4.77,
-        "tracking_error_ann_pct": 28.29,
-        "info_ratio": 0.97,
-        "correlation": 0.43
+        "jensen_alpha_ann_pct": 3.89,
+        "tracking_error_ann_pct": 28.12,
+        "info_ratio": 0.93,
+        "correlation": 0.42
       },
       "attribution": [
         {
           "bucket": "Cash yield",
-          "contribution_pp": 1.659
+          "contribution_pp": 1.7
         },
         {
           "bucket": "MEDC.JK",
