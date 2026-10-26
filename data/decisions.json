@@ -16,6 +16,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-10-26T14:08:12.230155+07:00",
+      "book": "GLOBAL",
+      "title": "CONSTRUCT 2026-10-26 \u2014 1 chain, REVISE (construction defect), no ticket staged",
+      "thesis": "T-GLOBAL-MRK-001",
+      "kind": "other"
+    },
+    "body": "Session launched 2026-10-26T13:00:18+07:00. Queue inventory (step 1): (a) `awaiting_pm_sizing` empty; (b) `judged_missing_levels` empty; (c) `revise_queue` empty, but **one attacked thesis with no verdict** \u2014 T-GLOBAL-MRK-001 (attacked 2026-10-24T10:38:44, the only open chain on either book); (d) `buy_verdict_sized_zero` empty; (e) **no ADVANCE idea cards** \u2014 every `PROMOTED` card (GLOBAL-MRK, INDO-AADI, INDO-ERAA, INDO-MEDC, INDO-TINS) is already the sourcing record for a judged or live thesis, and no card is unconsumed. The three judged-unticketed theses (AADI, NVO-002, TINS-001) are already sized and risk-checked and rest at value-anchored triggers far below spot (AADI 11,375 vs max_fill 7,070; NVO 39.43 vs 24.72; TINS 3,900 vs 819) \u2014 no \u00a73 sizing action belongs to CONSTRUCT.\n\n**Chain processed: T-GLOBAL-MRK-001 (MRK, GLOBAL, long, `momentum_continuation` + MOMENTUM_CONTINUATION card).** All stages isolated spawns, each preceded by `fund record observe --session CONSTRUCT --stage  --book GLOBAL` (every observe refused with `write_failed`; refused observations are fail-soft and did not alter the work):\n- **Revision** (ANALYST_GLOBAL, mid) 2026-10-26T13:14:02 \u2014 answers all 6 of\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# WEEKLY_DEEP Session Journal \u2014 2026-10-24 (Sat)\n\nSession launched 2026-10-24T10:00:17+07:00. **Four deep-dives worked, three killed by their own arithmetic before any Bear/Judge spawn was spent (CRM, AMMN, DSNG); one chain survives into construction (MRK, GLOBAL). One material audit finding (the DSNG \u2212002 liquidity kill was a ~30\u00d7 unit error). Macro = DELTA. No post-mortem, no ingestion, no escalation of a trading trigger.**\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `MARKET_PARAM_STALE: published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`, first_seen 2026-10-22T06:30:03, filed to HUMAN_ATTENTION 2026-10-22T06:35 by US_CLOSE. Not this session's, not re-filed; re-affirmed in step 10 (the CNH value is a PBOC policy-rate proxy, legitimately flat since the May-2025 cut; no FX positions anywhere).\n- Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; `kill_monitoring_suspended` []. Staging waiting-list: **T-INDO-TINS-001** only (last 3,840 vs max_fill 819, gap 368.9% \u2014 far outside `entries.stage_within_pct` 10.0, so `fund record` correctly writes nothing).\n- GLOBAL: NAV **$1,011,145.60**, 100% cash, **0 holdings** (`deployed_pct` 0.0, below band)\u2026",
     "persona": ""
@@ -906,17 +917,6 @@
       "kind": "other"
     },
     "body": "Session US_PREOPEN 2026-09-03 20:00 (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping). Governor NONE, GLOBAL all-cash 100% cash / 0% gross, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, no live theses/positions \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS, nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill, PM decision 2026-08-22 WEEKLY_DEEP; Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed). Runbook: qty from sizing.pm_pct, never resize, so 0 qty = no valid entry to ticket; no live order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged FX thesis awaiting level on GLOBAL; no ticket. Step 5: no tickets created, risk_check --orders N/A. All decisions pass. Exiting runbook.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-02T08:45:59.831916+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 09-02: no action \u2014 all three categories clean",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. Kill exits: kill_actions_due empty, no fired kills to verify. Governor: NONE on GLOBAL and INDO, no DEGROSS. Entries: no INDO thesis judged-unticketed waiting on level (only T-GLOBAL-0700HK-001, GLOBAL book, out of scope for this session); pending_orders empty. QC WARN (published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) carried, not CRITICAL. Cash 100% both books, 0 positions.",
     "persona": ""
   }
 ]
