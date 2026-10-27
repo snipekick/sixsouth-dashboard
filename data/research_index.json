@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "asof": "2026-10-27T11:09:22+07:00",
+  "asof": "2026-10-27T11:11:03+07:00",
   "counts": {
     "theses": 46,
-    "ideas": 20,
-    "stocks": 44,
+    "ideas": 22,
+    "stocks": 45,
     "dossiers": 33,
     "ic": 2,
     "daily": 47,
@@ -1710,6 +1710,16 @@
   "ideas": [
     {
       "book": "INDO",
+      "ticker": "ASII.JK",
+      "name": "Astra International",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-10-27",
+      "doc": "research_doc_idea_indo-asii"
+    },
+    {
+      "book": "INDO",
       "ticker": "PTBA.JK",
       "name": "Bukit Asam",
       "verdict": "DISCARD",
@@ -1727,6 +1737,16 @@
       "sleeve": "MOMENTUM",
       "asof": "2026-10-26",
       "doc": "research_doc_idea_global-cop"
+    },
+    {
+      "book": "INDO",
+      "ticker": "ADRO.JK",
+      "name": "Alamtri Resources (Adaro Energy)",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-10-26",
+      "doc": "research_doc_idea_indo-adro"
     },
     {
       "book": "INDO",
@@ -2818,6 +2838,25 @@
       "kill": null
     },
     {
+      "ticker": "ADRO.JK",
+      "book": "INDO",
+      "name": "Alamtri Resources (Adaro Energy)",
+      "sector": "COAL",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-10-26",
+          "doc": "research_doc_idea_indo-adro"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
       "ticker": "AKRA.JK",
       "book": "INDO",
       "name": "AKR Corporindo",
@@ -2886,7 +2925,13 @@
           "doc": "research_doc_thesis_t-indo-asii-001"
         }
       ],
-      "ideas": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-10-27",
+          "doc": "research_doc_idea_indo-asii"
+        }
+      ],
       "dossier": {
         "asof": "2026-10-19",
         "kind": "auto",

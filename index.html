@@ -260,9 +260,10 @@ details.rsec>summary:hover{color:#fff}
     </div>
   </div>
   <div class="tabrow" aria-label="Dashboard sections">
+    <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
+    <button class="wstab" id="ws-coverage" onclick="go('coverage')">IDX Coverage</button>
     <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
-    <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
     <button class="wstab" id="ws-research" onclick="go('research')">Research</button>
     <button class="wstab" id="ws-about" onclick="go('about')">About</button>
   </div>
@@ -305,8 +306,8 @@ details.rsec>summary:hover{color:#fff}
       <div class="panel">
         <div class="ptitle"><span class="dot"></span>Books — positions &amp; NAV</div>
         <div class="pbody flush">
-          <section class="book north" id="bookG"></section>
-          <section class="book south" id="bookI" style="border-top:1px solid var(--hair)"></section>
+          <section class="book south" id="bookI"></section>
+          <section class="book north" id="bookG" style="border-top:1px solid var(--hair)"></section>
         </div>
       </div>
     </div>
@@ -350,6 +351,7 @@ details.rsec>summary:hover{color:#fff}
 
   <div id="view-book" style="display:none"></div>
   <div id="view-research" style="display:none"></div>
+  <div id="view-coverage" style="display:none"></div>
   <div id="view-structure" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
@@ -360,6 +362,7 @@ details.rsec>summary:hover{color:#fff}
 
 <script src="office-floor.js?v=20260719-public-truth-v6"></script>
 <script src="research.js?v=20261016-v42"></script>
+<script src="coverage.js?v=20261027-v5-2-konglo-b"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -550,18 +553,18 @@ async function boot(){
   }
 }
 
-// ---- workspace routing (Fund Monitor / North Book / South Book) ----
+// ---- workspace routing (V5 South first: South Book / IDX Coverage / Fund Monitor / North Book) ----
 const BOOK_OF={north:'GLOBAL',south:'INDO'};
 let activeWorkspace=null,bookViewGeneration=0;
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
-let lastResearchPath=null;
+let lastResearchPath=null,lastCoveragePath=null;
 function route(){
-  let h=(location.hash||'#monitor').slice(1);
+  let h=(location.hash||'#south').slice(1);
   if(h==='structure')h='about';        // legacy links
   const top=h.split('/')[0];
-  const cur=(BOOK_OF[top]||top==='about'||top==='research')?top:'monitor';
+  const cur=(BOOK_OF[top]||top==='about'||top==='research'||top==='coverage')?top:'monitor';
   const previousWorkspace=activeWorkspace;activeWorkspace=cur;const viewGeneration=++bookViewGeneration;
-  ['monitor','north','south','research','about'].forEach(k=>{
+  ['south','coverage','monitor','north','research','about'].forEach(k=>{
     const b=document.getElementById('ws-'+k); if(!b)return;
     b.className='wstab'+(k===cur?' on':'');
     if(k===cur)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
@@ -570,6 +573,11 @@ function route(){
   document.getElementById('view-book').style.display=BOOK_OF[cur]?'':'none';
   document.getElementById('view-structure').style.display=cur==='about'?'':'none';
   document.getElementById('view-research').style.display=cur==='research'?'':'none';
+  document.getElementById('view-coverage').style.display=cur==='coverage'?'':'none';
+  if(cur==='coverage'&&window.SixSouthCoverage){
+    const sub=h.slice('coverage'.length).replace(/^\//,'');
+    if(sub!==lastCoveragePath||previousWorkspace!=='coverage'){lastCoveragePath=sub;window.SixSouthCoverage.render(sub);}
+  }else if(cur!=='coverage'){lastCoveragePath=null;}
   if(cur==='research'&&window.SixSouthResearch){
     const sub=h.slice('research'.length).replace(/^\//,'');
     // the 5-minute data refresh must not reset a reader's place in a long document
@@ -660,6 +668,7 @@ async function renderBookView(b,generation=++bookViewGeneration){
         </div>
       </div>
       <div class="col">
+        ${b==='INDO'?`<div class="panel"><div class="ptitle"><span class="dot"></span>South Research — IDX coverage<span class="aux"><a class="rlink" href="#coverage">open coverage →</a></span></div><div class="pbody" id="bkCoverage"><div class="muted small">Loading coverage…</div></div></div>`:''}
         <div class="panel">
           <div class="ptitle"><span class="dot"></span>Analytics &amp; attribution<span class="aux">${m.low_n?esc(m.n_obs+' obs — low sample'):''}</span></div>
           <div class="pbody">${anBlock(b)}</div>
@@ -686,6 +695,9 @@ async function renderBookView(b,generation=++bookViewGeneration){
         </div>
       </div>
     </div>`;
+  if(b==='INDO'&&window.SixSouthCoverage&&window.SixSouthCoverage.summaryPanel){
+    window.SixSouthCoverage.summaryPanel('bkCoverage');
+  }
   const tradeData=await api('trades');if(!active())return;
   const tr=records(tradeData).filter(t=>t.book===b);
   const trows=tr.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
@@ -874,7 +886,7 @@ async function renderStructureView(){
 }
 
 function renderTop(){
-  document.getElementById('sub').textContent=`${S.tagline||''} · ${bookName('GLOBAL')} / ${bookName('INDO')} · inception ${S.inception||'—'}`;
+  document.getElementById('sub').textContent=`${S.tagline||''} · ${bookName('INDO')} / ${bookName('GLOBAL')} · inception ${S.inception||'—'}`;
   document.getElementById('mode').textContent=String(S.mode||'paper').toUpperCase();
   document.getElementById('asof').textContent=`as of ${String(S.asof||'').slice(0,16).replace('T',' ')} WIB`;
   const qc=document.getElementById('qc'); qc.textContent=`QC ${S.qc}`; qc.className='chip'+(S.qc==='OK'?' ok':' alert');
@@ -898,17 +910,20 @@ function renderBanners(){
 }
 
 function renderStrip(){
+  // V5 South first: consolidated NAV in IDR first (USD alongside), South Book before North.
   const g=S.books.GLOBAL,i=S.books.INDO;
   const complete=validNumber(g.nav_usd)&&validNumber(i.nav_usd);
   const usd=complete?Number(g.nav_usd)+Number(i.nav_usd):null;
+  const fx=validNumber(i.nav)&&validNumber(i.nav_usd)&&Number(i.nav_usd)>0?Number(i.nav)/Number(i.nav_usd):null;
+  const idr=complete&&fx?usd*fx:null;
   const marks=[g.mark,i.mark].filter(Boolean),markLabel=marks.length===2&&marks[0]===marks[1]?marks[0]:'mixed marks';
   const cells=[
-    [`Current total NAV (USD) · ${markLabel}`,complete?'$'+fmt0(usd):'— (incomplete)',''],
-    [`${bookName('GLOBAL')} — inception / official`,pct(g.since_inception_pct),cls(g.since_inception_pct)],
-    [`${bookName('INDO')} — inception / official`,pct(i.since_inception_pct),cls(i.since_inception_pct)],
-    ['Official benchmarks (N / S)',`${pct(g.bench_since_inception_pct)} / ${pct(i.bench_since_inception_pct)}`,'']];
+    [`Current total NAV (IDR) · ${markLabel}`,idr!=null?'Rp'+fmt(idr/1e9,1)+'bn':'— (incomplete)','',usd!=null?'≈ $'+fmt0(usd):''],
+    [`${bookName('INDO')} — inception / official`,pct(i.since_inception_pct),cls(i.since_inception_pct),''],
+    [`${bookName('GLOBAL')} — inception / official`,pct(g.since_inception_pct),cls(g.since_inception_pct),''],
+    ['Official benchmarks (S / N)',`${pct(i.bench_since_inception_pct)} / ${pct(g.bench_since_inception_pct)}`,'','']];
   document.getElementById('strip').innerHTML=cells.map(c=>
-    `<div class="cell"><div class="k">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}</div></div>`).join('');
+    `<div class="cell"><div class="k">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}${c[3]?`<span class="muted" style="font-size:11px;font-weight:400;margin-left:8px">${esc(c[3])}</span>`:''}</div></div>`).join('');
 }
 
 // governor thresholds come from the published constitution snapshot — never hardcoded
@@ -971,6 +986,17 @@ function miniChart(b){
      description:'Fund NAV and total-return benchmark, both rebased to 100 at inception.'});
 }
 function renderTotal(){
+  // V5: consolidated official NAV in IDR (each paired date converted at that day's South Book rate)
+  const fxByDate={};records(N&&N.INDO).forEach(r=>{if(validNumber(r.nav_ccy)&&validNumber(r.nav_usd)&&Number(r.nav_usd)>0)fxByDate[r.date]=Number(r.nav_ccy)/Number(r.nav_usd);});
+  const tIdr=records(N&&N.USD_TOTAL).filter(r=>fxByDate[r.date]).map(r=>({date:r.date,nav_idr:Number(r.nav_usd)*fxByDate[r.date]}));
+  if(tIdr.length>=2){
+    document.getElementById('anAux').textContent=`official paired marks in IDR · latest ${String(tIdr[tIdr.length-1].date)}`;
+    document.getElementById('chTotal').innerHTML=chart(tIdr.map(r=>r.date),[{name:'Total',color:'#3E8EDD',vals:tIdr.map(r=>r.nav_idr)}],
+      {h:230,fmtY:v=>'Rp'+fmt(v/1e9,1)+'bn',fill:true,pills:true,
+       title:'Consolidated official NAV in rupiah',
+       description:'Paired official South and North book marks, converted at each date\'s South Book rate; indicative snapshots excluded.'});
+    return;
+  }
   const t=records(N&&N.USD_TOTAL);
   const latest=t.length?t[t.length-1]:null;
   document.getElementById('anAux').textContent=latest

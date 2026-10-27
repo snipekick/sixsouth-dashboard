@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-27T11:09:19.702220+07:00",
+  "asof": "2026-10-27T11:10:57.857525+07:00",
   "limits": {
     "books": {
       "GLOBAL": {
@@ -36,7 +36,11 @@
       "degross_trigger_pct": -15.0
     },
     "pipeline": {
-      "max_new_theses_per_book_per_week": 5
+      "max_new_theses_per_book_per_week": 5,
+      "max_new_theses_by_book": {
+        "GLOBAL": null,
+        "INDO": null
+      }
     }
   }
 }

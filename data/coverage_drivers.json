@@ -1,0 +1,1492 @@
+{
+  "schema": 1,
+  "asof": "2026-10-27T11:10:47+07:00",
+  "decks": {
+    "agri": {
+      "title": "Agricultural & soft-commodity deck",
+      "owner": "SECTOR_LEAD_CONSUMER_NON_CYCLICALS",
+      "asof": "2026-10-27",
+      "variables": {
+        "cpo": {
+          "label": "Crude palm oil (benchmark)",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 886,
+            "FY2024A": 963,
+            "FY2025A": 1007,
+            "FY2026E": 1135,
+            "FY2027E": 1240,
+            "FY2028E": 1210,
+            "FY2029E": 1180
+          },
+          "lt": 1150,
+          "spot": {
+            "value": 1180,
+            "asof": "2026-09-30",
+            "source": "S1"
+          },
+          "status": "reviewed",
+          "basis": "World Bank Pink Sheet (S1), palm oil Malaysia crude/RBD, USD/t annual averages: FY2023A 886, FY2024A 963, FY2025A 1007; 2026 tape Q1 1081, Q2 1164, Q3 1148, July 1133, August 1132, September 1180. The World Bank re-based the palm oil series from January 2026 (S1 series note), so pre-2026 annual averages and the 2026 monthly tape are not perfectly homogeneous. Spot 1180 is the September-2026 monthly Pink Sheet print (S1). FY2026E 1135 takes the nine-month 2026 Pink Sheet average (1131 = mean of Q1 1081, Q2 1164, Q3 1148) and holds a firm Q4, itself bracketed by the Indonesia October-2026 CPO reference price (Harga Referensi, Kemendag) of US$1,042.15/t (S8, S9) - struck off a 20 Aug to 19 Sep window that printed Bursa CPO Malaysia US$1,145.42/t and Rotterdam US$1,526.56/t - and the rising Nov-Dec Bursa Malaysia FCPO strip (S2, S4). FY2027E 1240 anchors to the quoted forward strip: the FCPO curve is in backwardation, Nov-2026 RM4,587, Dec-2026 RM4,733, Jan-2027 RM4,818 rising to RM5,030 for Apr-2027 (S4), and RM5,022 to RM5,034 for May-Jul 2027 (S3), about 10 percent above the Nov-2026 contract, with the 2026-27 El Nino expected to hit 2027 FFB yields (S3) and MPOC guiding CPO above RM4,600 and RM4,700 (S5, S6); applied to the Kemendag-published Bursa Malaysia USD level (US$1,145.42, S8) the strip implies roughly US$1,240/t. FY2028E 1210 and FY2029E 1180 glide from the El Nino-inflated 2027 back toward the through-cycle as the weather deficit clears and Malaysian and Indonesian output and stocks normalise (S3). lt 1150 is the through-cycle anchor in FY2029 money: the 2026 Pink Sheet tape (about 1131, S1) plus the structural biodiesel bid (Indonesia B40 toward B50, Malaysia B20) and recurring El Nino supply risk (S3, S5), i.e. above the 2023-25 realised average (about 945) rather than reverting to it. lt_escalation is idr: PLANTATIONS is the one industry priced in USD and costed in IDR (fund record, unit_factor 0.001), so the USD/t CPO anchor must rise with the Indonesian rupiah cost base it is set against rather than with US inflation, preserving the USD margin over IDR costs. Realisation wedge for analysts: Indonesia applies an October-2026 export duty (BK) of US$178/t plus a 12.5 percent export levy (US$130.269/t) on the US$1,042.15/t reference price (S7, S8)."
+        },
+        "soyoil": {
+          "label": "Soybean oil",
+          "unit": "USD/t",
+          "values": {
+            "FY2021A": 1281.8306,
+            "FY2022A": 1568.1999,
+            "FY2023A": 1119,
+            "FY2024A": 1022,
+            "FY2025A": 1140,
+            "FY2026E": 1556.67,
+            "FY2027E": 1556.67,
+            "FY2028E": 1093.67,
+            "FY2029E": 1093.67
+          },
+          "lt": 1093.67,
+          "spot": {
+            "value": 1615,
+            "asof": "2026-09-30",
+            "source": "S1"
+          },
+          "status": "reviewed",
+          "basis": "World Bank Pink Sheet (S1) soybean oil, USD/t: FY2023A 1119, FY2024A 1022, FY2025A 1140; 2026 tape Q1 1310, Q2 1722, Q3 1638 (July 1658, August 1639, September 1615). FY2026E 1556.67 is the nine-month 2026 Pink Sheet average ((1310+1722+1638)/3). FY2027E 1556.67 holds that tape, supported by the El Nino-driven tightening in competing vegetable oils flagged in S3. FY2028E and FY2029E 1093.67 are the three-year Pink Sheet through-cycle average ((1119+1022+1140)/3) and lt 1093.67 is that anchor in FY2029 money - the longest Pink Sheet window archived in this edition. Values FY2023A onward and the forward anchors are the World Bank Pink Sheet (S1); FY2021A and FY2022A are retained from the engine Yahoo ZL=F fiscal-year averages. Spot 1615 is the September-2026 Pink Sheet monthly print (S1). The Pink Sheet basis differs from the Yahoo CBOT series by construction, so realisation should be calibrated on this Pink Sheet basis."
+        },
+        "wheat": {
+          "label": "Wheat",
+          "unit": "USD/t",
+          "values": {
+            "FY2021A": 258.0643,
+            "FY2022A": 331.307,
+            "FY2023A": 340.4,
+            "FY2024A": 268.7,
+            "FY2025A": 243.3,
+            "FY2026E": 293.5,
+            "FY2027E": 293.5,
+            "FY2028E": 284.13,
+            "FY2029E": 284.13
+          },
+          "lt": 284.13,
+          "spot": {
+            "value": 347.0,
+            "asof": "2026-09-30",
+            "source": "S1"
+          },
+          "status": "reviewed",
+          "basis": "World Bank Pink Sheet (S1) wheat US HRW, USD/t: FY2023A 340.4, FY2024A 268.7, FY2025A 243.3; 2026 tape Q1 261.2, Q2 290.3, Q3 329.0 (July 310.0, August 330.0, September 347.0). FY2026E 293.5 is the nine-month 2026 average ((261.2+290.3+329.0)/3). FY2027E 293.5 holds that tape as El Nino risk (S3) keeps grain markets firm. FY2028E and FY2029E 284.13 are the three-year Pink Sheet through-cycle average ((340.4+268.7+243.3)/3) and lt 284.13 is that anchor in FY2029 money. Values FY2023A onward and the forward anchors are the World Bank Pink Sheet (S1); FY2021A and FY2022A are retained from the engine Yahoo ZW=F fiscal-year averages. Spot 347.0 is the September-2026 Pink Sheet monthly print (S1). The September-2026 print sits about 18 percent above FY2027E 293.5: the desk reads that gap as a near-term weather and competing-oil premium, not a level expected to persist into 2027."
+        },
+        "corn": {
+          "label": "Corn",
+          "unit": "USD/t",
+          "values": {
+            "FY2021A": 229.1176,
+            "FY2022A": 273.1709,
+            "FY2023A": 252.7,
+            "FY2024A": 190.6,
+            "FY2025A": 203.2,
+            "FY2026E": 214.57,
+            "FY2027E": 214.57,
+            "FY2028E": 215.5,
+            "FY2029E": 215.5
+          },
+          "lt": 215.5,
+          "spot": {
+            "value": 239.6,
+            "asof": "2026-09-30",
+            "source": "S1"
+          },
+          "status": "reviewed",
+          "basis": "World Bank Pink Sheet (S1) maize (US no.2 yellow), USD/t: FY2023A 252.7, FY2024A 190.6, FY2025A 203.2; 2026 tape Q1 208.9, Q2 209.1, Q3 225.7 (July 213.4, August 224.0, September 239.6). FY2026E 214.57 is the nine-month 2026 average ((208.9+209.1+225.7)/3). FY2027E 214.57 holds that tape. FY2028E and FY2029E 215.5 are the three-year Pink Sheet through-cycle average ((252.7+190.6+203.2)/3) and lt 215.5 is that anchor in FY2029 money. Values FY2023A onward and the forward anchors are the World Bank Pink Sheet (S1); FY2021A and FY2022A are retained from the engine Yahoo ZC=F fiscal-year averages. Spot 239.6 is the September-2026 Pink Sheet monthly print (S1)."
+        },
+        "soymeal": {
+          "label": "Soybean meal",
+          "unit": "USD/t",
+          "values": {
+            "FY2021A": 421.092,
+            "FY2022A": 488.3277,
+            "FY2023A": 541,
+            "FY2024A": 442,
+            "FY2025A": 366,
+            "FY2026E": 411.0,
+            "FY2027E": 411.0,
+            "FY2028E": 449.67,
+            "FY2029E": 449.67
+          },
+          "lt": 449.67,
+          "spot": {
+            "value": 447.0,
+            "asof": "2026-09-30",
+            "source": "S1"
+          },
+          "status": "reviewed",
+          "basis": "World Bank Pink Sheet (S1) soybean meal (US, 48 percent protein), USD/t: FY2023A 541, FY2024A 442, FY2025A 366; 2026 tape Q1 393, Q2 419, Q3 421 (July 410, August 406, September 447). FY2026E 411.0 is the nine-month 2026 average ((393+419+421)/3). FY2027E 411.0 holds that tape. FY2028E and FY2029E 449.67 are the three-year Pink Sheet through-cycle average ((541+442+366)/3) and lt 449.67 is that anchor in FY2029 money. Values FY2023A onward and the forward anchors are the World Bank Pink Sheet (S1); FY2021A and FY2022A are retained from the engine Yahoo ZM=F fiscal-year averages. Spot 447.0 is the September-2026 Pink Sheet monthly print (S1). Read by POULTRY_FEED alongside corn."
+        }
+      },
+      "scalars": {},
+      "tables": {},
+      "sources": {
+        "S1": {
+          "title": "World Bank Commodity Markets Outlook Pink Sheet October 2026",
+          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+          "publisher": "thedocs.worldbank.org",
+          "published": null
+        },
+        "S2": {
+          "title": "Palm Oil Magazine - Malaysia CPO Futures Rise Across Contracts as Export Demand Strengthens, KPBN Price Hits IDR 15,200 - Palm Oil Magazine",
+          "url": "https://www.palmoilmagazine.com/cpo-price/2026/10/24/malaysia-cpo-futures-rise-across-contracts-as-export-demand-strengthens-kpbn-price-hits-idr-15200/",
+          "publisher": "www.palmoilmagazine.com",
+          "published": "2026-10-24"
+        },
+        "S3": {
+          "title": "Harga CPO Menguat, Stok Sawit Malaysia dan Ancaman El Ni\u00f1o Jadi Penentu Pasar 2027",
+          "url": "https://sawitsetara.co/artikel/Berita/harga-cpo-menguat-stok-sawit-malaysia-dan-ancaman-el-nino-jadi-penentu-pasar-2027",
+          "publisher": "sawitsetara.co",
+          "published": null
+        },
+        "S4": {
+          "title": "BernamaBiz - CPO Futures Extend Gains On Stronger Export Demand",
+          "url": "https://bernamabiz.com/news.php?id=2624772",
+          "publisher": "bernamabiz.com",
+          "published": "23/10/2026"
+        },
+        "S5": {
+          "title": "Berita Sawit - MPOC Prediksi Harga CPO Bertahan di Atas RM4.600 per Ton pada November 2026 - InfoSAWIT",
+          "url": "https://www.infosawit.com/2026/10/23/mpoc-prediksi-harga-cpo-bertahan-di-atas-rm4-600-per-ton-pada-november-2026/",
+          "publisher": "www.infosawit.com",
+          "published": "2026-10-23"
+        },
+        "S6": {
+          "title": "CPO prices to stay above RM4,600 in November as output dips, biodiesel demand holds | KLSE Screener",
+          "url": "https://www.klsescreener.com/v2/news/view/1813693/cpo-prices-to-stay-above-rm4-600-in-november-as-output-dips-biodiesel-demand-holds",
+          "publisher": "www.klsescreener.com",
+          "published": null
+        },
+        "S7": {
+          "title": "Harga Referensi Naik, Tarif Bea Keluar CPO Oktober Jadi US$178/MT",
+          "url": "https://news.ddtc.co.id/data-alat/pungutan-komoditas/1823057/harga-referensi-naik-tarif-bea-keluar-cpo-oktober-jadi-us178mt",
+          "publisher": "news.ddtc.co.id",
+          "published": null
+        },
+        "S8": {
+          "title": "Harga Referensi Minyak Kelapa Sawit Naik Oktober 2026",
+          "url": "https://finance.detik.com/berita-ekonomi-bisnis/d-8689278/harga-referensi-minyak-kelapa-sawit-naik-oktober-2026",
+          "publisher": "finance.detik.com",
+          "published": "2026-10-02"
+        },
+        "S9": {
+          "title": "Kemendag: HR CPO naik pada September 2026 - ANTARA News",
+          "url": "https://www.antaranews.com/berita/5768015/kemendag-hr-cpo-naik-pada-september-2026",
+          "publisher": "www.antaranews.com",
+          "published": "2026-10-02"
+        }
+      }
+    },
+    "coal": {
+      "title": "Coal deck",
+      "owner": "SECTOR_LEAD_ENERGY",
+      "asof": "2026-10-26",
+      "variables": {
+        "newc": {
+          "label": "Newcastle 6,000 kcal/kg NAR thermal coal",
+          "unit": "USD/t",
+          "values": {
+            "FY2024A": 136.1,
+            "FY2025A": 108.4,
+            "FY2026E": 137.0,
+            "FY2027E": 118.0,
+            "FY2028E": 110.0,
+            "FY2029E": 105.0
+          },
+          "lt": 105.0,
+          "spot": {
+            "value": 150.35,
+            "asof": "2026-10-15",
+            "source": "S19"
+          },
+          "status": "reviewed",
+          "basis": "Actuals are the World Bank Pink Sheet (S23, October-2026 edition): Australian thermal coal f.o.b. Newcastle, 6,000 kcal/kg, annual averages FY2024A 136.1 and FY2025A 108.4 US$/t, with 2026 quarterly assessments Q1 122.3, Q2 135.4, Q3 138.1. Spot is the 2026-10-14 Newcastle October-2026 contract print (US$150.35/t, S19). FY2026E 137.0 blends nine months of Pink Sheet 2026 tape (~131.9 average) with the quoted Q4 forward curve (Oct-2026 149.35-150.35, Nov-2026 151.55-151.75, Dec-2026 152.75-153.30, S8/S19): the war-premium bid, China output curbs and Indonesia RKAB/drought supply discipline (S3, S7, S8, S22, S27) hold the year well above the 2025 average. The standing 146.5 estimate predated the Pink Sheet 2026 tape and is superseded. FY2027E ~118 assumes mean reversion as China mines restart (S3), Indonesian output runs near the ~700-720mt RKAB level (S27) and India/Vietnam demand normalises; the flag that spot 150.35 sits ~27% above FY2027E 118 is the war-premium carry, not a level the desk expects to persist. The ~110/105 path and lt 105 track flat-to-falling long-run thermal demand outside a sustained Iran-war premium, where marginal Indonesian supply historically clears near US$100-110/t on 6,000 NAR. Long-run escalation is usd: lt is a FY2029-money USD/t seaborne market-price anchor set against USD-denominated marginal supply costs, so it should preserve real value with m.inflation_usd_lt once the macro desk's scalar is in place. LESSON-0001 in force: commodity complex repriced; war premium intact."
+        },
+        "ici4": {
+          "label": "Indonesian Coal Index 4 (4,200 kcal/kg GAR)",
+          "unit": "USD/t",
+          "values": {},
+          "lt": null,
+          "spot": null,
+          "status": "needs_source",
+          "basis": "No archivable public print this window. The Argus/Coalindo Indonesian Coal Index (ICI 1-5) is a proprietary subscriber product produced jointly by Argus Media Ltd and PT Coalindo Energy (ICI 4 = 4,200 kcal/kg GAR) and published only in the paid Argus/Coalindo report (S28, S31); the Coalindo site carries no public quote for the index level. The ICI-4 ~US$75/t figure quoted in industry-body commentary (IMEF chair to Bloomberg Technoz via S27) is a scenario projection tied to a proposed 700mt RKAB 2027 quota, not a published index level, so no spot is stated rather than estimated. HBA II at 4,100 GAR is a separate government index, not ICI-4."
+        },
+        "ici3": {
+          "label": "Indonesian Coal Index 3 (5,000 kcal/kg GAR)",
+          "unit": "USD/t",
+          "values": {},
+          "lt": null,
+          "spot": null,
+          "status": "needs_source",
+          "basis": "No archivable public print this window. The Argus/Coalindo Indonesian Coal Index (ICI 1-5) is a proprietary subscriber product produced jointly by Argus Media Ltd and PT Coalindo Energy (ICI 3 = 5,000 kcal/kg GAR) and published only in the paid Argus/Coalindo report (S28, S31); the Coalindo site carries no public quote for the index level. Left needs_source rather than estimated. HBA I at 5,300 GAR is a separate government index, not ICI-3."
+        },
+        "hba": {
+          "label": "Harga Batubara Acuan (government reference price)",
+          "unit": "USD/t",
+          "values": {
+            "FY2026E": 118.0,
+            "FY2027E": 112.0,
+            "FY2028E": 108.0,
+            "FY2029E": 105.0
+          },
+          "lt": 105.0,
+          "spot": {
+            "value": 126.81,
+            "asof": "2026-10-15",
+            "source": "S14"
+          },
+          "status": "reviewed",
+          "basis": "High-GAR HBA (6,322 kcal/kg) is set twice-monthly by Kepmen ESDM and is the export pricing floor since 1 Mar 2025 (Kepmen 384.K/MB.01/MEM.B/2026 for Oct-I 122.52, S1; Kepmen 401.K/MB.01/MEM.B/2026 for Oct-II 126.81, S14; Jul-II: 131.85 high-GAR / 89.90 I / 63.25 II / 45.08 III, S11). Spot is the latest archived decree print (Oct-II 2026, S14). No full FY actual series in one archivable table, so no FYyyyyA stated. Forward path tracks newc with the observed HBA/high-GAR-to-Newcastle spread (Oct 2026: HBA-II 126.81 vs NEWC Oct ~149.35-150.35, i.e. ~0.84x), normalised as the 2026 tightness abates toward the newc lt view. Long-run escalation is usd: HBA is a USD/t reference derived from coal market indices rather than a fixed nominal administered price, and lt follows the same USD-denominated through-cycle anchor as newc; m.inflation_usd_lt therefore applies once the macro desk's scalar is in place."
+        },
+        "dmo_cap": {
+          "label": "DMO price cap for coal sold to power plants",
+          "unit": "USD/t",
+          "values": {},
+          "lt": 70.0,
+          "spot": {
+            "value": 70.0,
+            "asof": "2026-07-09",
+            "source": "S6"
+          },
+          "status": "reviewed",
+          "basis": "Policy cap, not a market price: the DMO cap for the national electricity sector is a standing regulatory ceiling (MEMR Decree 261 K/30/MEM/2019, still USD 70/t FOB for 6,322 kcal/kg GAR in 2020, S2; reconfirmed current at USD 70/t for power in Jul-2026 industry reporting, S6). DMO for smelter/cement/fertilizer sits at USD 90/t (S6). No forecast path other than the standing cap (lt 70.0); any revision is a policy decision, not estimated. Long-run escalation is none: USD 70/t is a fixed nominal regulatory ceiling with no automatic inflation indexation, so only a new policy decision changes it."
+        },
+        "hba_i": {
+          "label": "HBA I \u2014 reference price for 5,300 kcal/kg GAR coal",
+          "unit": "USD/t",
+          "values": {},
+          "lt": null,
+          "spot": {
+            "value": 93.62,
+            "asof": "2026-10-15",
+            "source": "S25"
+          },
+          "status": "reviewed",
+          "basis": "HBA I is set twice-monthly by Kepmen ESDM alongside the high-GAR HBA. Spot is the Period-II October 2026 print (Kepmen 401.K/MB.01/MEM.B/2026, effective 15 Oct 2026): HBA I 5,300 kcal/kg GAR = US$93.62/t, reported in the same decree article as the deck high-GAR spot 126.81 (S25, S14). Prior period (Oct-I, Kepmen 384.K/MB.01/MEM.B/2026) was US$90.60 (S24, S27); it tracks the high-GAR HBA with the observed grade spread (Jul-II: 131.85 high-GAR vs 89.90 I, S11). No forecast path; the desk re-prints the governing decree each period."
+        },
+        "hba_ii": {
+          "label": "HBA II \u2014 reference price for 4,100 kcal/kg GAR coal",
+          "unit": "USD/t",
+          "values": {},
+          "lt": null,
+          "spot": {
+            "value": 66.1,
+            "asof": "2026-10-15",
+            "source": "S25"
+          },
+          "status": "reviewed",
+          "basis": "HBA II is set twice-monthly by Kepmen ESDM alongside the high-GAR HBA. Spot is the Period-II October 2026 print (Kepmen 401.K/MB.01/MEM.B/2026, effective 15 Oct 2026): HBA II 4,100 kcal/kg GAR = US$66.10/t (S25). Prior period (Oct-I) was US$63.45 (S24, S27); Jul-II was 63.25 (S11). No forecast path; the desk re-prints the governing decree each period."
+        },
+        "hba_iii": {
+          "label": "HBA III \u2014 reference price for 3,400 kcal/kg GAR coal",
+          "unit": "USD/t",
+          "values": {},
+          "lt": null,
+          "spot": {
+            "value": 45.53,
+            "asof": "2026-10-15",
+            "source": "S25"
+          },
+          "status": "reviewed",
+          "basis": "HBA III is set twice-monthly by Kepmen ESDM alongside the high-GAR HBA. Spot is the Period-II October 2026 print (Kepmen 401.K/MB.01/MEM.B/2026, effective 15 Oct 2026): HBA III 3,400 kcal/kg GAR = US$45.53/t (S25). Prior period (Oct-I) was US$43.84 (S24, S27); Jul-II was 45.08 (S11). No forecast path; the desk re-prints the governing decree each period."
+        }
+      },
+      "scalars": {},
+      "tables": {
+        "royalty_iupk": {
+          "label": "IUPK (ex-PKP2B) coal royalty rate by HBA band",
+          "unit": "rate by USD/t",
+          "rows": [
+            [
+              0,
+              0.15
+            ],
+            [
+              70,
+              0.18
+            ],
+            [
+              120,
+              0.19
+            ],
+            [
+              140,
+              0.22
+            ],
+            [
+              160,
+              0.25
+            ],
+            [
+              180,
+              0.28
+            ]
+          ],
+          "status": "reviewed"
+        },
+        "royalty_iup": {
+          "label": "IUP coal royalty rate by HBA band",
+          "unit": "rate by USD/t",
+          "rows": [],
+          "status": "needs_source"
+        },
+        "royalty_pkp2b": {
+          "label": "PKP2B (coal contract of work) royalty rate by HBA band",
+          "unit": "rate by USD/t",
+          "rows": [],
+          "status": "needs_source"
+        },
+        "royalty_iup_low": {
+          "label": "IUP open-pit coal royalty by HBA band \u2014 calorific value up to 4,200 kcal/kg GAR",
+          "unit": "rate by USD/t",
+          "rows": [
+            [
+              0,
+              0.05
+            ],
+            [
+              70,
+              0.06
+            ],
+            [
+              90,
+              0.09
+            ]
+          ],
+          "status": "reviewed"
+        },
+        "royalty_iup_mid": {
+          "label": "IUP open-pit coal royalty by HBA band \u2014 above 4,200 up to 5,200 kcal/kg GAR",
+          "unit": "rate by USD/t",
+          "rows": [
+            [
+              0,
+              0.07
+            ],
+            [
+              70,
+              0.085
+            ],
+            [
+              90,
+              0.115
+            ]
+          ],
+          "status": "reviewed"
+        },
+        "royalty_iup_high": {
+          "label": "IUP open-pit coal royalty by HBA band \u2014 above 5,200 kcal/kg GAR",
+          "unit": "rate by USD/t",
+          "rows": [
+            [
+              0,
+              0.095
+            ],
+            [
+              70,
+              0.115
+            ],
+            [
+              90,
+              0.135
+            ]
+          ],
+          "status": "reviewed"
+        }
+      },
+      "sources": {
+        "S1": {
+          "title": "Harga Batu Bara Kalori Tinggi RI Oktober 2026 Dipatok US$122,52 per Ton",
+          "url": "https://wartaekonomi.co.id/read638363/harga-batu-bara-kalori-tinggi-ri-oktober-2026-dipatok-us12252-per-ton",
+          "publisher": "wartaekonomi.co.id",
+          "published": null
+        },
+        "S2": {
+          "title": "Kementerian ESDM RI - Media Center - News Archives - As of 1 January 2020, DMO is Set at 25% and Sales Price to Power Plant USD 70 per Ton",
+          "url": "https://www.esdm.go.id/en/media-center/news-archives/as-of-1-january-2020-dmo-is-set-at-25-and-sales-price-to-power-plant-usd-70-per-ton",
+          "publisher": "www.esdm.go.id",
+          "published": null
+        },
+        "S3": {
+          "title": "Asia's coal appetite endures as winter looms and supply tightens; Iran war boosts outlook - The Business Times",
+          "url": "https://www.businesstimes.com.sg/companies-markets/energy-commodities/asias-coal-appetite-endures-winter-looms-and-supply-tightens-iran-war-boosts-outlook",
+          "publisher": "www.businesstimes.com.sg",
+          "published": "2026-10-14"
+        },
+        "S4": {
+          "title": "Purbaya Ngaku Baru Tahu Kenaikan Royalti Tambang Ditunda: Kita Ikuti Pak Bahlil",
+          "url": "https://finance.detik.com/energi/d-8485611/purbaya-ngaku-baru-tahu-kenaikan-royalti-tambang-ditunda-kita-ikuti-pak-bahlil",
+          "publisher": "finance.detik.com",
+          "published": "2026-05-12"
+        },
+        "S5": {
+          "title": "Asosiasi Ajak Pemerintah dan Industri Batubara Tinjau Ulang Kebijakan Harga DMO",
+          "url": "https://www.tribunnews.com/nasional/2024/11/15/asosiasi-ajak-pemerintah-dan-industri-batubara-tinjau-ulang-kebijakan-harga-dmo",
+          "publisher": "www.tribunnews.com",
+          "published": null
+        },
+        "S6": {
+          "title": "DMO Batubara di Persimpangan: Antara Tarif Listrik, Pasokan PLN, dan Kepastian Industri",
+          "url": "https://www.tribunnews.com/bisnis/7851887/dmo-batubara-di-persimpangan-antara-tarif-listrik-pasokan-pln-dan-kepastian-industri",
+          "publisher": "www.tribunnews.com",
+          "published": null
+        },
+        "S7": {
+          "title": "Harga Batu Bara Rekor Tertinggi 3 Tahun, RI Jadi Penyelamat Dunia?",
+          "url": "https://www.cnbcindonesia.com/research/20261020073610-128-777684/harga-batu-bara-rekor-tertinggi-3-tahun-ri-jadi-penyelamat-dunia",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026/10/20"
+        },
+        "S8": {
+          "title": "Harga Batu Bara Newcastle dan Rotterdam Naik, Pasokan China dan Indonesia Jadi Sorotan",
+          "url": "https://www.topik.id/harga-batu-bara-newcastle-dan-rotterdam-naik-pasokan-china-dan-indonesia-jadi-sorotan",
+          "publisher": "www.topik.id",
+          "published": "2026-10-13"
+        },
+        "S9": {
+          "title": "Daftar Emiten yang Terdampak Aturan Royalti Minerba - PAGE ALL : Okezone Economy",
+          "url": "https://economy.okezone.com/read/2025/04/19/278/3132061/daftar-emiten-yang-terdampak-aturan-royalti-minerba?page=all",
+          "publisher": "economy.okezone.com",
+          "published": "2025-04-19"
+        },
+        "S10": {
+          "title": "Purbaya Sebut Royalti Tambang Diterapkan Juni",
+          "url": "https://finance.detik.com/energi/d-8484613/purbaya-sebut-royalti-tambang-diterapkan-juni",
+          "publisher": "finance.detik.com",
+          "published": "2026-05-11"
+        },
+        "S11": {
+          "title": "4 Harga Batu Bara Acuan Juli 2026, Tertinggi USD131,85 per Ton : Okezone Economy",
+          "url": "https://economy.okezone.com/read/2026/07/17/320/3230662/4-harga-batu-bara-acuan-juli-2026-tertinggi-usd131-85-per-ton",
+          "publisher": "economy.okezone.com",
+          "published": "2026-07-17"
+        },
+        "S12": {
+          "title": "Gelombang Penolakan Tidak Digubris, Tarif Baru Royalti Berlaku Bulan Ini - Dunia Energi",
+          "url": "https://www.dunia-energi.com/gelombang-penolakan-tidak-digubris-tarif-baru-royalti-berlaku-bulan-ini/",
+          "publisher": "www.dunia-energi.com",
+          "published": "2025-04-10"
+        },
+        "S13": {
+          "title": "Tarif Royalti Minerba Dipastikan Naik, Pemerintah \"Pede\" Tidak Ganggu Iklim Investasi - Dunia Energi",
+          "url": "https://www.dunia-energi.com/tarif-royalti-minerba-dipastikan-naik-pemerintah-pede-tidak-ganggu-iklim-investasi/",
+          "publisher": "www.dunia-energi.com",
+          "published": "2025-03-14"
+        },
+        "S14": {
+          "title": "Harga Batu Bara Acuan Periode II Oktober 2026 Naik ke US$126,81/Ton",
+          "url": "https://news.ddtc.co.id/data-alat/pungutan-komoditas/1823399/harga-batu-bara-acuan-periode-ii-oktober-2026-naik-ke-us12681ton",
+          "publisher": "news.ddtc.co.id",
+          "published": null
+        },
+        "S15": {
+          "title": "Royalti Batu Bara untuk BUMI-Adaro Cs Diubah, Ini Rinciannya",
+          "url": "https://www.cnbcindonesia.com/news/20250422100922-4-627691/royalti-batu-bara-untuk-bumi-adaro-cs-diubah-ini-rinciannya",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2025/04/22"
+        },
+        "S16": {
+          "title": "Sah! Prabowo Ubah Aturan Tarif Royalti Batu Bara Bagi Pemegang IUPK",
+          "url": "https://www.cnbcindonesia.com/news/20250421180742-4-627584/sah-prabowo-ubah-aturan-tarif-royalti-batu-bara-bagi-pemegang-iupk",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2025/04/21"
+        },
+        "S17": {
+          "title": "Prabowo Resmi Ubah Aturan Royalti Batu Bara, Segini Besarannya",
+          "url": "https://www.cnbcindonesia.com/news/20250422073401-4-627654/prabowo-resmi-ubah-aturan-royalti-batu-bara-segini-besarannya",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2025/04/22"
+        },
+        "S18": {
+          "title": "Ada Aturan Baru Soal Royalti Batu Bara, Ini Penjelasan ESDM",
+          "url": "https://www.cnbcindonesia.com/news/20250506175846-4-631473/ada-aturan-baru-soal-royalti-batu-bara-ini-penjelasan-esdm",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2025/05/06"
+        },
+        "S19": {
+          "title": "Harga Batu Bara Anjlok Namun Diprediksi Segera Pecahkan Rekor Tertinggi, Kok Bisa?",
+          "url": "https://www.suara.com/bisnis/2026/10/15/085357/harga-batu-bara-anjlok-namun-diprediksi-segera-pecahkan-rekor-tertinggi-kok-bisa",
+          "publisher": "www.suara.com",
+          "published": null
+        },
+        "S20": {
+          "title": "Harga Batu Bara Melemah, Impor China Turun dan Stok Melimpah",
+          "url": "https://investor.id/market/458039/harga-batu-bara-melemah-impor-china-turun-dan-stok-melimpah",
+          "publisher": "investor.id",
+          "published": null
+        },
+        "S21": {
+          "title": "Coal cash dip: PNBP and stabilization strategies - Markets - The Jakarta Post",
+          "url": "https://www.thejakartapost.com/business/2025/07/09/coal-cash-dip-pnbp-and-stabilization-strategies",
+          "publisher": "www.thejakartapost.com",
+          "published": null
+        },
+        "S22": {
+          "title": "Produksi Turun, Transaksi Batu Bara RI Justru Melampaui 2025",
+          "url": "https://www.cnbcindonesia.com/news/20261013101035-4-775627/produksi-turun-transaksi-batu-bara-ri-justru-melampaui-2025",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026/10/13"
+        },
+        "S23": {
+          "title": "World Bank Commodity Markets Outlook Pink Sheet October 2026",
+          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+          "publisher": "thedocs.worldbank.org",
+          "published": null
+        },
+        "S24": {
+          "title": "Harga Batu Bara Acuan Oktober 2026 Turun, Ini Rinciannya",
+          "url": "https://www.akurat.co/riil/895790/harga-batu-bara-acuan-oktober-2026-turun-ini-rinciannya",
+          "publisher": "www.akurat.co",
+          "published": "2026-10-03"
+        },
+        "S25": {
+          "title": "HBA Kalori Tinggi Mulai Rebound ke US,81",
+          "url": "https://wartaekonomi.co.id/read642214/hba-kalori-tinggi-mulai-rebound-ke-us12681-per-ton-masih-di-bawah-posisi-juli-2026",
+          "publisher": "wartaekonomi.co.id",
+          "published": null
+        },
+        "S26": {
+          "title": "Dirjen Minerba Pastikan Kenaikan Tarif Royalti Tambang Tetap Untungkan Pelaku Usaha",
+          "url": "https://tambang.co.id/dirjen-minerba-pastikan-kenaikan-tarif-royalti-tambang-tetap-untungkan-pelaku-usaha/",
+          "publisher": "tambang.co.id",
+          "published": "2025-04-22"
+        },
+        "S27": {
+          "title": "IMEF Usulkan Kuota Batu Bara 2027 Sebesar 700 Juta Ton",
+          "url": "https://koridor.co.id/imef-usulkan-kuota-batu-bara-2027",
+          "publisher": "koridor.co.id",
+          "published": "2026-10-24"
+        },
+        "S28": {
+          "title": "Home - PT COALINDO ENERGY",
+          "url": "https://coalindoenergy.com/",
+          "publisher": "www.coalindoenergy.com",
+          "published": null
+        },
+        "S31": {
+          "title": "arguscoalindo-ici-report - PT COALINDO ENERGY",
+          "url": "https://coalindoenergy.com/arguscoalindo-ici-report",
+          "publisher": "coalindoenergy.com",
+          "published": null
+        },
+        "S34": {
+          "title": "PP No. 19 Tahun 2025 - Jenis dan Tarif atas Jenis PNBP yang Berlaku pada Kementerian ESDM",
+          "url": "https://jdih.esdm.go.id/dokumen/download?id=2025pp19.pdf",
+          "publisher": "jdih.esdm.go.id",
+          "published": null
+        },
+        "S35": {
+          "title": "PP No. 18 Tahun 2025 (perubahan PP 15/2022) - perlakuan perpajakan/PNBP pertambangan batubara",
+          "url": "https://jdih.esdm.go.id/dokumen/download?id=2025pp18.pdf",
+          "publisher": "jdih.esdm.go.id",
+          "published": null
+        },
+        "S36": {
+          "title": "PP No. 15 Tahun 2022 - Perlakuan Perpajakan dan/atau PNBP di Bidang Usaha Pertambangan Batubara",
+          "url": "https://jdih.esdm.go.id/dokumen/download?id=2022pp15.pdf",
+          "publisher": "jdih.esdm.go.id",
+          "published": null
+        }
+      }
+    },
+    "konglo": {
+      "title": "Konglo and concentrated-ownership regime deck",
+      "owner": "DIRECTOR_RESEARCH",
+      "asof": null,
+      "variables": {},
+      "scalars": {
+        "compress_base": {
+          "label": "share of the log price/value gap that closes in 12 months, base case",
+          "unit": "fraction",
+          "value": 0.3,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "compress_bear": {
+          "label": "share of the log price/value gap that closes in 12 months, bear case",
+          "unit": "fraction",
+          "value": 0.7,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "compress_bull": {
+          "label": "share of the log price/value gap that closes in 12 months, bull case (negative = re-expands)",
+          "unit": "fraction",
+          "value": -0.15,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "adj_hsc": {
+          "label": "added to every scenario's closing share for an HSC-listed name",
+          "unit": "fraction",
+          "value": 0.05,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "adj_ff_deadline": {
+          "label": "added when the next free-float step falls inside the window",
+          "unit": "fraction",
+          "value": 0.05,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "adj_enforcement_manipulation": {
+          "label": "added when OJK found trading manipulation",
+          "unit": "fraction",
+          "value": 0.1,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "adj_enforcement_offering": {
+          "label": "added when OJK sanctioned concealed IPO allocations",
+          "unit": "fraction",
+          "value": 0.05,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "ff_deadline_window_months": {
+          "label": "months ahead in which a free-float step counts",
+          "unit": "months",
+          "value": 18.0,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "prob_bear": {
+          "label": "regime scenario probability, bear case",
+          "unit": "fraction",
+          "value": 0.25,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "prob_base": {
+          "label": "regime scenario probability, base case",
+          "unit": "fraction",
+          "value": 0.5,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        },
+        "prob_bull": {
+          "label": "regime scenario probability, bull case",
+          "unit": "fraction",
+          "value": 0.25,
+          "asof": "2026-10-27",
+          "source": "house prior on the cited konglo-deck sources",
+          "status": "reviewed"
+        }
+      },
+      "tables": {},
+      "sources": {
+        "S1": {
+          "title": "OJK raises the minimum free float to 15% after MSCI's review (Jakarta Globe)",
+          "url": "https://jakartaglobe.id/business/indonesia-to-raise-minimum-free-float-requirement-to-15-after-msci-review",
+          "publisher": "jakartaglobe.id",
+          "published": "2026-01-29"
+        },
+        "S2": {
+          "title": "IDX puts the 15% free-float rule into force, with deadlines (IDX Channel)",
+          "url": "https://www.idxchannel.com/market-news/bei-resmi-berlakukan-aturan-free-float-jadi-15-persen-ini-tenggat-waktunya",
+          "publisher": "www.idxchannel.com",
+          "published": "2026-04-01"
+        },
+        "S3": {
+          "title": "IDX high-shareholding-concentration (HSC) list, 82 issuers as of 22 Oct 2026 (detikFinance)",
+          "url": "https://finance.detik.com/bursa-dan-valas/d-8723936/saham-hsc-tambah-lagi-ini-daftar-lengkapnya/amp",
+          "publisher": "finance.detik.com",
+          "published": "2026-10-26"
+        },
+        "S4": {
+          "title": "HSC list 82 issuers; HSC excluded from IHSG (Fortune IDN)",
+          "url": "https://www.fortuneidn.com/market/daftar-saham-hsc-terbaru-film-masuk-lagi-tfsco-ditambahkan-d7w02-00-lflgw-vpm0fv",
+          "publisher": "www.fortuneidn.com",
+          "published": "2026-10-26"
+        },
+        "S5": {
+          "title": "MSCI consultation on reclassifying Indonesia to Standalone Market status",
+          "url": "https://www.msci.com/downloads/documents/press-releases/media-room/Indonesia_PR_Oct_26.pdf",
+          "publisher": "www.msci.com",
+          "published": "2026-10-15"
+        },
+        "S6": {
+          "title": "MSCI weighs downgrading Indonesia to standalone status (Jakarta Post)",
+          "url": "https://www.thejakartapost.com/business/2026/10/16/msci-weighs-downgrading-indonesia-to-standalone-market-status",
+          "publisher": "www.thejakartapost.com",
+          "published": "2026-10-16"
+        },
+        "S7": {
+          "title": "OJK fines in the DSSA, BREN and CUAN cases total Rp2.1tn (CNBC Indonesia)",
+          "url": "https://www.cnbcindonesia.com/market/20261017094739-17-777064/ojk-denda-dssa-bren-dan-cuan-totalnya-tembus-rp-21-triliun",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026-10-17"
+        },
+        "S8": {
+          "title": "OJK names the parties sanctioned in the DSSA, BREN and CUAN cases (Bareksa)",
+          "url": "https://www.bareksa.com/berita/saham/2026-10-22/ojk-ungkap-identitas-pelanggar-kasus-dssa-bren-cuan-ini-daftarnya/amp",
+          "publisher": "www.bareksa.com",
+          "published": "2026-10-22"
+        },
+        "S9": {
+          "title": "Konglo stocks: from peak to collapse (CNBC Indonesia Research)",
+          "url": "https://www.cnbcindonesia.com/research/20261016165244-128-776992/dulu-terbang-tinggi-kini-ambruk-bubble-saham-konglo-pecah",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026-10-16"
+        },
+        "S10": {
+          "title": "MSCI's May 2026 review deletes BREN, TPIA, DSSA, CUAN, AMMN (Investortrust)",
+          "url": "https://investortrust.id/market/103143/msci-purges-barito-complex-and-mining-giants-massive-exodus-expected",
+          "publisher": "investortrust.id",
+          "published": "2026-05-13"
+        },
+        "S11": {
+          "title": "FTSE Russell deletes DSSA from its Large Cap index (Investortrust)",
+          "url": "https://investortrust.id/market/104273/global-index-purge-ftse-russell-demotes-of-energy-giant-dssa-compunding-institutional-shift-for-indonesian-equities",
+          "publisher": "investortrust.id",
+          "published": "2026-05-24"
+        },
+        "S12": {
+          "title": "Conglomerate stocks on the HSC list by group (Katadata)",
+          "url": "https://katadata.co.id/finansial/bursa/6ad7129a04791/deret-saham-konglomerat-di-daftar-hsc-afiliasi-salim-sinar-mas-hingga-prajogo",
+          "publisher": "katadata.co.id",
+          "published": "2026-10-20"
+        },
+        "S13": {
+          "title": "PTRO becomes a SINI shareholder after the KMS sale (CNBC Indonesia)",
+          "url": "https://www.cnbcindonesia.com/market/20260727003417-17-753929/prajogo-hapsoro-makin-mesra-ptro-kini-jadi-pemegang-saham-sini",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026-07-27"
+        },
+        "S14": {
+          "title": "Happy Hapsoro-affiliated stocks: RAJA, RATU and others (IDX Channel via RCTI+)",
+          "url": "https://www.rctiplus.com/news/detail/ekonomi/5296390/saham-happy-hapsoro-naik-panggung-raja-sentuh-rekor-ath",
+          "publisher": "www.rctiplus.com",
+          "published": "2026-01-06"
+        },
+        "S15": {
+          "title": "Conglomerate stocks by group, YTD 2026 (Kontan)",
+          "url": "https://investasi.kontan.co.id/news/saham-konglomerasi-2026-grup-lippo-melesat-prajogo-justru-anjlok",
+          "publisher": "investasi.kontan.co.id",
+          "published": "2026-01-23"
+        },
+        "S16": {
+          "title": "Conglomerate stocks by group (KBK News)",
+          "url": "https://www.kbknews.id/peta-kinerja-saham-konglomerasi-2026-ada-yang-moncer-dan-juga-terkoreksi/",
+          "publisher": "www.kbknews.id",
+          "published": "2026-01-23"
+        },
+        "S17": {
+          "title": "IHSG down 38.38% in 2026 to 21 Oct; OJK on the causes (Liputan6)",
+          "url": "https://www.liputan6.com/bisnis/read/8319064/ihsg-anjlok-3838-sepanjang-2026-ojk-ungkap-pemicunya",
+          "publisher": "www.liputan6.com",
+          "published": "2026-10-21"
+        },
+        "S18": {
+          "title": "Haji Isam's Jhonlin to take over Bayan; BYAN, JARR, TEBE rally (IDX Channel via RCTI+)",
+          "url": "https://www.rctiplus.com/news/detail/ekonomi/5475525/haji-isam-resmi-caplok-bayan--saham-byan--jarr-hingga-tebe-terbang",
+          "publisher": "www.rctiplus.com",
+          "published": "2026-09-18"
+        },
+        "S19": {
+          "title": "Haji Isam-group stocks TEBE, JARR, PGUN, PACK rally (IDX Channel via RCTI+)",
+          "url": "https://www.rctiplus.com/news/detail/idxchannel/5483591/saham-haji-isam-tebe-jarr-cs-kompak-reli",
+          "publisher": "www.rctiplus.com",
+          "published": "2026-09-30"
+        },
+        "S20": {
+          "title": "Big caps of the Prajogo, Aguan and Salim groups below the free-float rule (Kabar Bursa)",
+          "url": "https://www.kabarbursa.com/market-hari-ini/ada-saham-big-caps-prajogo-aguan-dan-salim-belum-patuhi-free-float",
+          "publisher": "www.kabarbursa.com",
+          "published": "2026-07-15"
+        },
+        "S21": {
+          "title": "DCII ownership (Toto Sugiri, Salim) and its 99.9% HSC concentration (Katadata)",
+          "url": "https://katadata.co.id/finansial/bursa/6a59b895e1857/fitch-ratings-ungkap-prospek-emiten-salimtoto-sugiri-dcii-di-tengah-hsc-99-9",
+          "publisher": "katadata.co.id",
+          "published": "2026-07-20"
+        },
+        "S22": {
+          "title": "DCII, BYAN, MORA, FILM and 30 issuers added to the HSC list; price-impact-ratio criterion (Katadata)",
+          "url": "https://katadata.co.id/finansial/bursa/6a56dc6336919/dcii-byan-mora-film-dan-30-emiten-masuk-daftar-saham-terkonsentrasi-tinggi",
+          "publisher": "katadata.co.id",
+          "published": "2026-07-15"
+        },
+        "S23": {
+          "title": "Is the konglo-stock era over? (Suara)",
+          "url": "https://www.suara.com/bisnis/2026/10/14/154534/era-saham-konglo-berakhir-dulu-angkat-ihsg-kini-jadi-beban-pasar",
+          "publisher": "www.suara.com",
+          "published": "2026-10-14"
+        },
+        "S24": {
+          "title": "PTRO on selling its KMS coal mine to SINI (IDX Channel)",
+          "url": "https://www.idxchannel.com/market-news/petrosea-ptro-buka-suara-soal-tambang-batu-baranya-yang-mau-diakuisisi-singaraja-putra-sini",
+          "publisher": "www.idxchannel.com",
+          "published": "2026-04-16"
+        },
+        "S25": {
+          "title": "IDX free-float status of 956 issuers as of 31 Mar 2026: BREN in transition, DSSA compliant (Bareksa)",
+          "url": "https://www.bareksa.com/berita/saham/2026-05-07/bei-rilis-status-free-float-956-emiten-bren-masih-transisi-dssa-sudah-memenuhi/amp",
+          "publisher": "www.bareksa.com",
+          "published": "2026-05-07"
+        }
+      }
+    },
+    "macro": {
+      "title": "House macro deck",
+      "owner": "MACRO_FX",
+      "asof": "2026-10-27",
+      "variables": {
+        "usd_idr": {
+          "label": "IDR per USD",
+          "unit": "IDR/USD",
+          "values": {
+            "FY2021A": 14310.5396,
+            "FY2022A": 14843.1773,
+            "FY2023A": 15228.8,
+            "FY2024A": 15846.2378,
+            "FY2025A": 16448.0929,
+            "FY2026E": 17570.0,
+            "FY2027E": 18350.0,
+            "FY2028E": 18600.0,
+            "FY2029E": 18850.0
+          },
+          "lt": 19000.0,
+          "spot": {
+            "value": 18110.0,
+            "asof": "2026-10-26",
+            "source": "Yahoo Finance IDR=X"
+          },
+          "status": "reviewed",
+          "basis": "Desk review 2026-10-26 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo IDR=X daily-close fiscal-year averages (history_source); FY2026E 17,570 keeps the deterministic convention (year-to-date average blended with the reviewed spot 18,080, rounded \u2014 the seeded 17,546.8045 used the Yahoo placeholder spot 17,956). Spot is the reviewed onshore close Rp18,080/USD on 23-Oct-2026 (S7; corroborated S10). The desk rejects the Yahoo IDR=X placeholder (17,956 asof 25-Oct, ~0.7% below the onshore close) as stale/offshore and non-citable. FY2027E 18,350 (+1.5% vs spot), FY2028E 18,600, FY2029E 18,850, lt 19,000 (~+2.4%/yr trend) are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: IDR weakens on a persistent current-account deficit (elevated oil import bill, Brent ~100\u2013107/bbl per S8) and a narrowed carry gap (BI-Rate 5.75% on hold per S4 vs USD effective ~3.88% after the Sep-2026 Fed +25bp hike), with MSCI standalone-review risk keeping foreign portfolio flows a headwind (per S11, IHSG \u221211.6% on the MSCI proposal) and BI intervention capping the pace. The futures-broker projection inside S7 was quarantined and not used. Deck mode 2026-10-26 (MACRO_FX): `lt_escalation: ppp` set \u2014 IDR/USD is quoted rupiah-per-dollar, so after the last explicit year (FY2029E) the path must drift with the inflation gap for nominal consistency (the engine grows `lt` at (1+i_idr)/(1+i_usd)\u22121, ~+0.49%/yr on the sourced long-run anchors BI 2.5% vs Fed 2.0%), not `none` (which would pin a flat nominal rate while IDR costs still escalate at 2.5%, implying perpetual real IDR appreciation \u2014 the wrong sign for a held balance_of_payments_pressure regime). Note the explicit path runs faster than ppp (FY2026E 17,570\u2192FY2029E 18,850 \u2248 +2.4%/yr): the deck places the real IDR depreciation from the current-account deficit in the transition years and reverts to inflation-gap-only (real-flat) drift in the long run, i.e. ppp is the long-run steady state, the faster slide is the transition."
+        },
+        "dxy": {
+          "label": "US dollar index",
+          "unit": "index",
+          "values": {
+            "FY2021A": 92.5108,
+            "FY2022A": 104.0495,
+            "FY2023A": 103.4466,
+            "FY2024A": 104.1984,
+            "FY2025A": 100.7849,
+            "FY2026E": 99.9535,
+            "FY2027E": 102.25,
+            "FY2028E": 102.0,
+            "FY2029E": 102.0
+          },
+          "lt": 102.0,
+          "spot": {
+            "value": 102.03,
+            "asof": "2026-10-26",
+            "source": "Yahoo Finance DX-Y.NYB"
+          },
+          "status": "reviewed",
+          "basis": "Desk review 2026-10-26 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo DX-Y.NYB daily-close fiscal-year averages (history_source); FY2026E 99.9535 keeps the deterministic convention (year-to-date average blended with the Yahoo spot 101.81). Spot stays the Yahoo DX-Y.NYB close 101.81 asof 23-Oct-2026 \u2014 no citable archived print at that date was reachable this session. Corroborating context from archived press: DXY closed 102.58 on 12-Oct-2026, an 18-month high (S8), and 102 on 19-Oct-2026 (S11) \u2014 inside the ~2% band of the Yahoo spot, so no correction was applied. Both were left out of `sources` because their `published` fields are unset (the engine accepts reviewed variables without an evidence quote when history_source is present). FY2027E 102.25, FY2028E 102.0, lt 102.0 are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: the USD stays firm at/near its highs \u2014 a hawkish Fed that hiked +25bp in Sep-2026 with a further hike live (S8), a war-premium oil bid and safe-haven demand (S8) \u2014 easing only gradually to a ~102.0 long-run level as US real rates and the war premium fade. Quarantined: the S8/S11 and other press carry analyst/broker FX projections (e.g. DXY to 104); none were used."
+        },
+        "bi_rate": {
+          "label": "BI-Rate (year average)",
+          "unit": "rate",
+          "values": {
+            "FY2027E": 5.75,
+            "FY2028E": 5.75,
+            "FY2029E": 5.75
+          },
+          "lt": 5.75,
+          "spot": {
+            "value": 5.75,
+            "asof": "2026-10-21",
+            "source": "Bank Indonesia RDG decision via liputan6 (deck source S4)"
+          },
+          "status": "reviewed",
+          "basis": "Spot is the BI-Rate held at 5.75% at the 21-Oct-2026 RDG (S4; Deposit Facility raised to 5%, Lending Facility held 6.5%). FY2027E+ held flat at that level pending the owning desk; FY2026E and prior-year averages are omitted \u2014 no citable year-average on record this session."
+        },
+        "cpi_id": {
+          "label": "Indonesia CPI inflation",
+          "unit": "rate",
+          "values": {
+            "FY2027E": 3.28,
+            "FY2028E": 3.28,
+            "FY2029E": 3.28
+          },
+          "lt": 3.28,
+          "spot": {
+            "value": 3.28,
+            "asof": "2026-09-30",
+            "source": "BPS September-2026 release via ANTARA (deck source S5)"
+          },
+          "status": "reviewed",
+          "basis": "Spot is BPS September-2026 yoy inflation of 3.28% (S5; ytd 2.17%, mtm 0.30%; August yoy was 3.19%). FY2027E+ held flat at the September print pending the owning desk; FY averages are omitted \u2014 no citable FY average on record this session."
+        },
+        "gdp_real_id": {
+          "label": "Indonesia real GDP growth",
+          "unit": "rate",
+          "values": {
+            "FY2027E": 5.29,
+            "FY2028E": 5.29,
+            "FY2029E": 5.29
+          },
+          "lt": 5.29,
+          "spot": {
+            "value": 5.29,
+            "asof": "2026-08-05",
+            "source": "BPS Q2-2026 release via beritasatu (deck source S6)"
+          },
+          "status": "reviewed",
+          "basis": "Spot is BPS Q2-2026 real GDP growth of 5.29% yoy (S6; Q1 2026 was 5.61%, Q2 2025 was 5.12%). BI expects full-2026 growth in the 4.9\u20135.7% range (S4) \u2014 a range, so no FY2026E point is set. FY2027E+ held flat at the Q2 print pending the owning desk."
+        }
+      },
+      "scalars": {
+        "rf_idr": {
+          "label": "10-year Indonesian government bond yield (IDR)",
+          "unit": "rate",
+          "value": 0.0745,
+          "asof": "2026-10-25",
+          "source": "investor.id \u2014 \"Yield SUN 7,45%, Saatnya Borong atau Tunggu Lebih Tinggi?\" (25 Okt 2026 20:58 WIB; deck source S3); corroborated by kalderanews S1 (10Y SUN 7.41%, 2026-10-16) and Jakarta Post S2 (indicative 10Y ~7.22%, end-Sept).",
+          "status": "reviewed"
+        },
+        "rf_usd": {
+          "label": "10-year US Treasury yield",
+          "unit": "rate",
+          "value": 0.04986,
+          "asof": "2026-10-26",
+          "source": "Yahoo Finance ^TNX (US 10-year Treasury yield)",
+          "status": "reviewed"
+        },
+        "erp_mature": {
+          "label": "Mature-market equity risk premium (Damodaran)",
+          "unit": "rate",
+          "value": 0.0423,
+          "asof": "2026-10-27",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "status": "reviewed"
+        },
+        "crp_id": {
+          "label": "Indonesia country risk premium (Damodaran)",
+          "unit": "rate",
+          "value": 0.0246,
+          "asof": "2026-10-27",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "status": "reviewed"
+        },
+        "default_spread_id": {
+          "label": "Indonesia sovereign default spread (Damodaran)",
+          "unit": "rate",
+          "value": 0.0162,
+          "asof": "2026-10-27",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "status": "reviewed"
+        },
+        "debt_spread_corp": {
+          "label": "House pre-tax corporate debt spread over the risk-free",
+          "unit": "rate",
+          "value": 0.02,
+          "asof": "2026-10-25",
+          "source": "SEED house assumption pending the macro desk: 200 bp over the risk-free rate for an average IDX corporate borrower",
+          "status": "seed"
+        },
+        "tax_rate_id": {
+          "label": "Indonesia statutory corporate income tax rate",
+          "unit": "rate",
+          "value": 0.22,
+          "asof": "2022-01-01",
+          "source": "Law 7/2021 on Harmonisation of Tax Regulations (UU HPP): 22% corporate income tax from fiscal 2022",
+          "status": "reviewed"
+        },
+        "inflation_usd_lt": {
+          "label": "US long-run inflation (escalates USD prices and costs after the deck years)",
+          "unit": "rate",
+          "value": 0.02,
+          "asof": "2026-09-16",
+          "source": "Federal Reserve FOMC statement, 16-Sep-2026 (deck source S14) \u2014 the Committee's \"2 percent goal\"; the Summary of Economic Projections submitted at the same 15-16 Sep meeting (S15) carries longer-run projections, with PCE inflation at 3.7% for 2026 and 2.3% for 2027 converging on that goal. Primary central-bank anchor.",
+          "status": "reviewed"
+        },
+        "inflation_idr_lt": {
+          "label": "Indonesia long-run inflation (escalates IDR prices and costs after the deck years)",
+          "unit": "rate",
+          "value": 0.025,
+          "asof": "2026-10-02",
+          "source": "Bank Indonesia inflation target band 2.5%\u00b11%, reaffirmed by BI (deck source S17, BI written statement 02-Oct-2026 \u2014 \"sasaran Bank Indonesia (BI) sebesar 2,5 persen plus minus 1 persen ... pada 2026 dan 2027\"); corroborated by ANTARA S12 (BI Governor Perry Warjiyo, 22-Apr-2026, \"sasaran 2,5\u00b11 persen\" for 2026 and 2027). Primary central-bank anchor.",
+          "status": "reviewed"
+        }
+      },
+      "tables": {},
+      "sources": {
+        "S1": {
+          "title": "Isu MSCI Bikin Panik, Yield Obligasi RI Justru Melesat Saat Rupiah Terpuruk \u2013 https://www.kalderanews.com",
+          "url": "https://www.kalderanews.com/2026/10/isu-msci-bikin-panik-yield-obligasi-ri-justru-melesat-saat-rupiah-terpuruk/",
+          "publisher": "www.kalderanews.com",
+          "published": "2026-10-20"
+        },
+        "S2": {
+          "title": "Indonesia\u2019s bond market offers attractive yields, but risks remain - Economy - The Jakarta Post",
+          "url": "https://www.thejakartapost.com/business/2026/10/06/indonesias-bond-market-offers-attractive-yields-but-risks-remain",
+          "publisher": "www.thejakartapost.com",
+          "published": null
+        },
+        "S3": {
+          "title": "Yield SUN 7,45%, Saatnya Borong atau Tunggu Lebih Tinggi?",
+          "url": "https://investor.id/market/459377/yield-sun-745-saatnya-borong-atau-tunggu-lebih-tinggi",
+          "publisher": "investor.id",
+          "published": null
+        },
+        "S4": {
+          "title": "BI Rate Tetap di 5,75%, Tapi Deposit Facility Naik Jadi 5%",
+          "url": "https://www.liputan6.com/bisnis/read/8318080/bi-rate-tetap-di-575-tapi-deposit-facility-naik-jadi-5",
+          "publisher": "www.liputan6.com",
+          "published": "2026-10-21"
+        },
+        "S5": {
+          "title": "Inflasi tahunan RI capai 3,28 persen pada September 2026 - ANTARA News",
+          "url": "https://www.antaranews.com/berita/5766035/inflasi-tahunan-ri-capai-328-persen-pada-september-2026",
+          "publisher": "www.antaranews.com",
+          "published": "2026-10-01"
+        },
+        "S6": {
+          "title": "Pertumbuhan Ekonomi Indonesia Kuartal II 2026 Capai 5,29 Persen",
+          "url": "https://www.beritasatu.com/ekonomi/3016677/pertumbuhan-ekonomi-indonesia-kuartal-ii-2026-capai-529-persen",
+          "publisher": "www.beritasatu.com",
+          "published": null
+        },
+        "S7": {
+          "title": "Rupiah Babak Belur Dihantam Reli Dolar",
+          "url": "https://investor.id/market/459341/rupiah-babak-belur-dihantam-reli-dolar",
+          "publisher": "investor.id",
+          "published": null
+        },
+        "S8": {
+          "title": "Kacau! Dolar AS Menggila, Tertinggi 18 Bulan!",
+          "url": "https://www.cnbcindonesia.com/research/20261013130917-128-775706/kacau-kacau-dolar-as-menggila-tertinggi-18-bulan-ini-5-pemicunya",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026/10/13"
+        },
+        "S9": {
+          "title": "Rupiah pada Jumat pagi melemah jadi Rp18.074 per dolar AS",
+          "url": "https://www.antaranews.com/berita/5806559/rupiah-pada-jumat-pagi-melemah-jadi-rp18074-per-dolar-as",
+          "publisher": "www.antaranews.com",
+          "published": "2026-10-23"
+        },
+        "S10": {
+          "title": "Rupiah Makin Tertekan, Ditutup Melemah di Akhir Pekan",
+          "url": "https://rri.co.id/keuangan/2837449/rupiah-makin-tertekan-ditutup-melemah-di-akhir-pekan",
+          "publisher": "rri.co.id",
+          "published": null
+        },
+        "S11": {
+          "title": "Dolar AS Menguat Didorong Pelemahan Euro dan Aksi Jual di Pasar Obligasi",
+          "url": "https://www.metrotvnews.com/read/bD2C8yny-dolar-as-menguat-didorong-pelemahan-euro-dan-aksi-jual-di-pasar-obligasi",
+          "publisher": "www.metrotvnews.com",
+          "published": null
+        },
+        "S12": {
+          "title": "Gubernur BI: Inflasi 2026 dan 2027 tetap dalam sasaran 2,5\u00b11 persen - ANTARA News",
+          "url": "https://www.antaranews.com/berita/5537647/gubernur-bi-inflasi-2026-dan-2027-tetap-dalam-sasaran-251-persen",
+          "publisher": "www.antaranews.com",
+          "published": "2026-04-22"
+        },
+        "S13": {
+          "title": "U.S. Fed announces 1st interest rate hike in over 3 years as inflation stays sticky-Xinhua",
+          "url": "https://english.news.cn/20260917/67b94888c9274c068b66325cc7037de2/c.html",
+          "publisher": "english.news.cn",
+          "published": "2026-09-17"
+        },
+        "S14": {
+          "title": "Federal Reserve Board - Federal Reserve issues FOMC statement",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "publisher": "www.federalreserve.gov",
+          "published": null
+        },
+        "S15": {
+          "title": "Update: U.S. Fed announces 1st interest rate hike in over 3 years as inflation stays sticky-Xinhua",
+          "url": "https://english.news.cn/20260917/43a47ee1b7ce471eadf1d04bb676c3c0/c.html",
+          "publisher": "english.news.cn",
+          "published": "2026-09-17"
+        },
+        "S16": {
+          "title": "BI Optimistis Inflasi Terkendali, Pertumbuhan Ekonomi Bisa Tembus 5,7 Persen",
+          "url": "https://money.kompas.com/read/2026/10/25/181736926/bi-optimistis-inflasi-terkendali-pertumbuhan-ekonomi-bisa-tembus-57-persen",
+          "publisher": "money.kompas.com",
+          "published": "2026-10-25"
+        },
+        "S17": {
+          "title": "Inflasi September 2026 Capai 3,28 Persen, Masih dalam Sasaran BI | IDN Times",
+          "url": "https://www.idntimes.com/business/economy/inflasi-september-2026-capai-3-28-persen-masih-dalam-sasaran-bi-00-bvq5c-6dq5qb",
+          "publisher": "www.idntimes.com",
+          "published": null
+        }
+      }
+    },
+    "metals": {
+      "title": "Metals deck",
+      "owner": "SECTOR_LEAD_BASIC_MATERIALS",
+      "asof": "2026-10-27",
+      "variables": {
+        "gold": {
+          "label": "Gold",
+          "unit": "USD/oz",
+          "values": {
+            "FY2023A": 1943,
+            "FY2024A": 2388,
+            "FY2025A": 3442,
+            "FY2026E": 4493.75,
+            "FY2027E": 4300,
+            "FY2028E": 4300,
+            "FY2029E": 4300
+          },
+          "lt": 4300,
+          "spot": {
+            "value": 4319,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals are the World Bank Pink Sheet (S2, October-2026 edition, published 2026-10-02): gold spot average of daily rates, annual averages FY2023A 1,943, FY2024A 2,388 and FY2025A 3,442 US$/oz, with the 2026 quarterly tape Q1 4,876, Q2 4,512, Q3 4,268 and the September 2026 monthly print 4,319 (S2). Spot is the latest Pink Sheet monthly print (Sep 2026 US$4,319/oz, S2); it supersedes the unreviewed Yahoo GC=F seed (4,029.7) as the desk's sourced print. FY2026E 4,493.75 is the four 2026 Pink Sheet averages with Q4 set at the Sep-2026 print: nine months of tape average 4,552 and the year runs well above FY2025A 3,442 on central-bank and ETF demand. No liquid COMEX/LBMA forward or GOFO/lease strip could be archived this window (news discovery returned only broker commentary, excluded by the consensus quarantine), so the forecast path is anchored to the World Bank Commodity Markets Outlook April 2026 forecast (S4): 2026f 4,700, 2027f 4,300. The FY2026E tape blend supersedes the April 2026f because Q3-2026 spot has corrected ~17% from the Q1 peak. FY2027E 4,300 is the WB 2027f; FY2028E/FY2029E/lt 4,300 hold that level in real terms as the through-cycle anchor (no posted forward exists beyond the nearby strip; the WB forecast is the named public series). lt_escalation is usd: gold is a USD-denominated price set against USD-cost marginal supply, so lt should rise with m.inflation_usd_lt once the macro desk's scalar is in place. Spot 4,319 sits ~0.4% above FY2027E 4,300 (no drift flag). LESSON-0001 in force: commodity complex repriced."
+        },
+        "silver": {
+          "label": "Silver",
+          "unit": "USD/oz",
+          "values": {
+            "FY2023A": 23.4,
+            "FY2024A": 28.3,
+            "FY2025A": 39.8,
+            "FY2026E": 71.25,
+            "FY2027E": 65.0,
+            "FY2028E": 65.0,
+            "FY2029E": 65.0
+          },
+          "lt": 65.0,
+          "spot": {
+            "value": 64.6,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): silver 99.9% refined, London afternoon fixing, annual averages FY2023A 23.4, FY2024A 28.3, FY2025A 39.8 US$/oz; 2026 tape Q1 84.0, Q2 73.5, Q3 62.9, September 2026 monthly 64.6 (S2). Spot is the latest Pink Sheet monthly (Sep 2026 US$64.6/oz, S2). FY2026E 71.25 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print); the year runs far above FY2025A on the industrial/solar plus monetary bid. FY2027E 65.0 is the World Bank CMO April 2026 forecast 2027f for silver (S4) \u2014 the sourced through-cycle anchor; FY2028E/ FY2029E/lt 65.0 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs."
+        },
+        "copper": {
+          "label": "Copper",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 8490,
+            "FY2024A": 9142,
+            "FY2025A": 9947,
+            "FY2026E": 13692,
+            "FY2027E": 11000,
+            "FY2028E": 11000,
+            "FY2029E": 11000
+          },
+          "lt": 11000,
+          "spot": {
+            "value": 14474,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): copper LME standard grade A, annual averages FY2023A 8,490, FY2024A 9,142, FY2025A 9,947 US$/t; 2026 tape Q1 12,831, Q2 13,349, Q3 14,114, September 2026 monthly 14,474 (S2). Spot is the Sep-2026 Pink Sheet monthly (US$14,474/t, S2). FY2026E 13,692 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print). FY2027E 11,000 is the World Bank CMO April 2026 2027f (S4) \u2014 the sourced through-cycle anchor. The flag that spot 14,474 sits ~32% above FY2027E 11,000 is the current tightness (Chinese demand, thin mine supply), not a level the desk expects to persist; the WB 2027f carries the mean-reversion view. FY2028E/FY2029E/lt 11,000 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs."
+        },
+        "aluminium": {
+          "label": "Aluminium",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 2256,
+            "FY2024A": 2419,
+            "FY2025A": 2632,
+            "FY2026E": 3319,
+            "FY2027E": 3000,
+            "FY2028E": 3000,
+            "FY2029E": 3000
+          },
+          "lt": 3000,
+          "spot": {
+            "value": 3283,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): aluminium LME unalloyed primary ingots, annual averages FY2023A 2,256, FY2024A 2,419, FY2025A 2,632 US$/t; 2026 tape Q1 3,193, Q2 3,568, Q3 3,232, September 2026 monthly 3,283 (S2). Spot is the Sep-2026 Pink Sheet monthly (US$3,283/t, S2). FY2026E 3,319 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print). FY2027E 3,000 is the World Bank CMO April 2026 2027f (S4) \u2014 the sourced through-cycle anchor; FY2028E/FY2029E/lt 3,000 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs."
+        },
+        "iron_ore": {
+          "label": "Iron ore 62% Fe",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 120.6,
+            "FY2024A": 109.4,
+            "FY2025A": 100.2,
+            "FY2026E": 100.8,
+            "FY2027E": 95.0,
+            "FY2028E": 95.0,
+            "FY2029E": 95.0
+          },
+          "lt": 95.0,
+          "spot": {
+            "value": 97.7,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): iron ore 62% Fe fines c.f.r. China, annual averages FY2023A 120.6, FY2024A 109.4, FY2025A 100.2 US$/dmt; 2026 tape Q1 102.9, Q2 105.2, Q3 97.4, September 2026 monthly 97.7 (S2). Spot is the Sep-2026 Pink Sheet monthly (US$97.7/dmt, S2). FY2026E 100.8 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print). FY2027E 95.0 is the World Bank CMO April 2026 2027f (S4) \u2014 the sourced through-cycle anchor; FY2028E/FY2029E/lt 95.0 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs. Note: the deck unit is USD/t; the Pink Sheet series is USD/dmt (62% Fe fines)."
+        },
+        "nickel": {
+          "label": "Nickel (LME)",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 21521,
+            "FY2024A": 16814,
+            "FY2025A": 15162,
+            "FY2026E": 17089.25,
+            "FY2027E": 17500,
+            "FY2028E": 17500,
+            "FY2029E": 17500
+          },
+          "lt": 17500,
+          "spot": {
+            "value": 16324,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): nickel LME cathodes, annual averages FY2023A 21,521, FY2024A 16,814, FY2025A 15,162 US$/t; 2026 tape Q1 17,339, Q2 18,119, Q3 16,575, September 2026 monthly 16,324 (S2). Spot is the Sep-2026 Pink Sheet monthly (US$16,324/t, S2). FY2026E 17,089.25 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print). FY2027E 17,500 is the World Bank CMO April 2026 2027f (S4) \u2014 the sourced through-cycle anchor, which sits above the current tape and is consistent with the macro desk's FAVOR tilt on nickel / ID supply-discipline names (RKAB quota discipline); FY2028E/FY2029E/lt 17,500 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs. ID-specific realisation (HPM pricing, ore vs NPI vs matte split) is the analyst's calibration, not a deck variable."
+        },
+        "tin": {
+          "label": "Tin (LME)",
+          "unit": "USD/t",
+          "values": {
+            "FY2023A": 25938,
+            "FY2024A": 30066,
+            "FY2025A": 34059,
+            "FY2026E": 52014,
+            "FY2027E": 37000,
+            "FY2028E": 37000,
+            "FY2029E": 37000
+          },
+          "lt": 37000,
+          "spot": {
+            "value": 53712,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Actuals from the World Bank Pink Sheet (S2, October-2026 edition): tin LME refined, annual averages FY2023A 25,938, FY2024A 30,066, FY2025A 34,059 US$/t; 2026 tape Q1 48,519, Q2 51,802, Q3 54,023, September 2026 monthly 53,712 (S2). Spot is the Sep-2026 Pink Sheet monthly (US$53,712/t, S2). FY2026E 52,014 is the four 2026 Pink Sheet averages (Q4 proxied by the Sep print). FY2027E 37,000 is the World Bank CMO April 2026 2027f (S4) \u2014 the sourced through-cycle anchor; the step down from the 2026 tape is large and the flag that spot sits ~45% above FY2027E is the current squeeze, not a level the desk expects to persist. FY2028E/FY2029E/lt 37,000 hold it in real terms. lt_escalation usd: USD-denominated price against USD costs."
+        }
+      },
+      "scalars": {},
+      "tables": {},
+      "sources": {
+        "S1": {
+          "title": "Commodity Markets",
+          "url": "https://www.worldbank.org/en/research/commodity-markets",
+          "publisher": "www.worldbank.org",
+          "published": null
+        },
+        "S2": {
+          "title": "World Bank Pink Sheet October 2026",
+          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+          "publisher": "thedocs.worldbank.org",
+          "published": null
+        },
+        "S3": {
+          "title": "World Bank Commodity Price Forecasts",
+          "url": "https://www.worldbank.org/en/research/commodity-markets/price-forecasts",
+          "publisher": "www.worldbank.org",
+          "published": null
+        },
+        "S4": {
+          "title": "World Bank CMO April 2026 Price Forecasts",
+          "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+          "publisher": "thedocs.worldbank.org",
+          "published": null
+        }
+      }
+    },
+    "oil": {
+      "title": "Oil & gas deck",
+      "owner": "SECTOR_LEAD_ENERGY",
+      "asof": "2026-10-27",
+      "variables": {
+        "brent": {
+          "label": "Brent crude",
+          "unit": "USD/bbl",
+          "values": {
+            "FY2023A": 82.1904,
+            "FY2024A": 79.8213,
+            "FY2025A": 68.1015,
+            "FY2026E": 96.0,
+            "FY2027E": 84.0,
+            "FY2028E": 80.0,
+            "FY2029E": 78.0,
+            "FY2021A": 70.9538,
+            "FY2022A": 98.9663
+          },
+          "lt": 75.0,
+          "spot": {
+            "value": 110.37,
+            "asof": "2026-10-26",
+            "source": "Yahoo Finance BZ=F"
+          },
+          "status": "reviewed",
+          "basis": "Actuals are the World Bank Pink Sheet (S1, October-2026 edition): Brent crude annual averages FY2023A 82.6, FY2024A 80.7 and FY2025A 69.0 US$/bbl, superseding the pre-review Yahoo-carried placeholders; pre-2023 actuals are omitted \u2014 no archivable primary print this session. Spot is the Friday-2026-10-23 settlement close (US$117.38/bbl, S8; EIA Europe Brent spot FOB last print US$115.22 on 2026-10-20, S4). FY2026E 96.0 blends nine months of 2026 tape (Pink Sheet Jan-Sep average ~93.7) with the EIA October-2026 STEO Q4 average of US$105/bbl (S11) under the current Saudi-Houthi / Strait-of-Hormuz supply-risk bid (S2, S3, S8): the Q4 market print runs ~114-120 against the STEO US$105 assumption. FY2027E 84.0 follows the EIA STEO 2027 annual average of US$84/bbl Brent (S11). FY2028E/FY2029E and lt 75 track a mean-reversion band above the 2025 average while the Iran-adjacent supply overhang persists, per the STEO assumption that Middle-East flows rebuild only gradually (S10, S11). Long-run escalation is usd: lt is a FY2029-money USD/bbl global market-price anchor set against USD-denominated supply costs, so it should preserve real value with m.inflation_usd_lt once the macro desk's scalar is in place. LESSON-0001 in force: war-premium tape intact."
+        },
+        "wti": {
+          "label": "WTI crude",
+          "unit": "USD/bbl",
+          "values": {
+            "FY2023A": 77.5971,
+            "FY2024A": 75.758,
+            "FY2025A": 64.7395,
+            "FY2026E": 90.0,
+            "FY2027E": 78.0,
+            "FY2028E": 74.0,
+            "FY2029E": 72.0,
+            "FY2021A": 68.106,
+            "FY2022A": 94.3315
+          },
+          "lt": 69.0,
+          "spot": {
+            "value": 101.36,
+            "asof": "2026-10-26",
+            "source": "Yahoo Finance CL=F"
+          },
+          "status": "reviewed",
+          "basis": "Actuals are the World Bank Pink Sheet (S1, October-2026 edition): WTI annual averages FY2023A 77.7, FY2024A 75.8 and FY2025A 64.9 US$/bbl, superseding the pre-review Yahoo-carried placeholders; pre-2023 actuals are omitted \u2014 no archivable primary print this session. Spot is the Friday-2026-10-23 settlement close (US$103.44/bbl, +3.99%, S8; EIA Cushing WTI spot FOB prints US$110.01/107.89 on 19-20 Oct 2026, S6). FY2026E 90.0 blends nine months of 2026 tape (Pink Sheet Jan-Sep average ~83.7) with the October-2026 STEO Q4 average (Brent US$105/bbl, S11) carried across at the observed Brent-WTI spread of roughly US$6/bbl, consistent with the September ICP-benchmark readings (Brent 102.02 vs WTI 95.69, S2). FY2027E 78.0 tracks the EIA STEO 2027 Brent average of US$84/bbl (S11) at the same observed spread. FY2028E/FY2029E and lt 69 follow the Brent mean-reversion band at the observed spread, above the 2025 average. LESSON-0001 in force: war-premium tape intact."
+        },
+        "henry_hub": {
+          "label": "Henry Hub gas",
+          "unit": "USD/MMBtu",
+          "values": {
+            "FY2023A": 2.6657,
+            "FY2024A": 2.4086,
+            "FY2025A": 3.6198,
+            "FY2026E": 3.48,
+            "FY2027E": 3.16,
+            "FY2028E": 3.1,
+            "FY2029E": 3.1,
+            "FY2021A": 3.7276,
+            "FY2022A": 6.5419
+          },
+          "lt": 3.1,
+          "spot": {
+            "value": 3.03,
+            "asof": "2026-10-26",
+            "source": "Yahoo Finance NG=F"
+          },
+          "status": "reviewed",
+          "basis": "Actuals are the World Bank Pink Sheet (S1, October-2026 edition): U.S. natural gas (Henry Hub) annual averages FY2023A 2.54, FY2024A 2.19 and FY2025A 3.53 US$/MMBtu, superseding the pre-review Yahoo-carried placeholders; pre-2023 actuals are omitted \u2014 no archivable primary print this session. The EIA October-2026 STEO prints the same 2024/2025 annuals (2.19, 3.53, S10). Spot is the EIA daily Henry Hub print (US$3.28/MMBtu on Mon 2026-10-19, S5). FY2026E 3.48 and FY2027E 3.16 are the EIA STEO October-2026 annual averages (S10, S11; 2027 is 9% below 2026 on higher-than-average inventories offsetting LNG export growth). FY2028E/FY2029E and lt 3.1 hold near the STEO 2027 level on the same inventory-versus-LNG-export balance."
+        },
+        "icp": {
+          "label": "Indonesian Crude Price (ICP)",
+          "unit": "USD/bbl",
+          "values": {
+            "FY2026E": 92.0,
+            "FY2027E": 78.0,
+            "FY2028E": 74.0,
+            "FY2029E": 72.0
+          },
+          "lt": 69.0,
+          "spot": {
+            "value": 112.81,
+            "asof": "2026-09-30",
+            "source": "S2"
+          },
+          "status": "reviewed",
+          "basis": "Spot-series ICP is set monthly by Kepmen ESDM. Spot is the September-2026 monthly ICP of US$112.81/bbl, +US$23.38 vs August US$89.43/bbl, per Kepmen ESDM 395.K/MG.03/MEM.M/2026 reported via investor.id (S2); the same print is carried in the Oct-2026 industry.co.id close report (S8). No FYyyyyA is stated: the monthly Kepmen prints are archived (Dec-2025 US$61.10, Nov-2025 US$62.83, S12) but no full-year ESDM average is published in one archivable table this session, so no annual actual is estimated. FY2026E 92.0 is the ESDM-reported January-October 2026 ICP average of US$91-92/bbl stated by Minister Bahlil to the press on 19 Oct 2026 (S9) \u2014 a realised ten-month average, carried as FY2026E rather than a forecast (corroborated by the Jan-May 2026 average of US$91.86/bbl from the ESDM monthly series, S14). FY2027E 78.0 positions between the FY2026E realised average and the STEO-anchored Brent 2027 view (~84, S11) given ICP's discount to the Brent/WTI benchmarks observed in the September decree (S2). FY2028E/FY2029E and lt 69 converge toward the pre-war ICP/APBN band (APBN 2026 assumption US$70/bbl, S14). LESSON-0001 in force: war-premium tape intact."
+        }
+      },
+      "scalars": {},
+      "tables": {},
+      "sources": {
+        "S1": {
+          "title": "World Bank Commodity Markets Outlook Pink Sheet October 2026",
+          "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+          "publisher": "thedocs.worldbank.org",
+          "published": null
+        },
+        "S2": {
+          "title": "ICP September 2026 Loncat ke US$ 112,81 per Barel",
+          "url": "https://investor.id/business/457984/icp-september-2026-loncat-ke-us-11281-per-barel",
+          "publisher": "investor.id",
+          "published": null
+        },
+        "S3": {
+          "title": "Harga BBM Hari Ini 26 Oktober 2026: Pasar Minyak Dibuka Kembali Usai Libur, Brent Bertahan di US$117,38 dan WTI di US$103,44, Berikut Daftar Lengkap Pertamina, BP, Shell, dan Vivo - Industry.co.id",
+          "url": "https://www.industry.co.id/read/157968/harga-bbm-hari-ini-26-oktober-2026-pasar-minyak-dibuka-kembali-usai-libur-brent-bertahan-di-us11738-dan-wti-di-us10344-berikut-daftar-lengkap-pertamina-bp-shell-dan-vivo",
+          "publisher": "www.industry.co.id",
+          "published": "2026-10-26"
+        },
+        "S4": {
+          "title": "Europe Brent Spot Price FOB  (Dollars per Barrel)",
+          "url": "https://www.eia.gov/dnav/pet/hist/rbrted.htm",
+          "publisher": "www.eia.gov",
+          "published": null
+        },
+        "S5": {
+          "title": "Henry Hub Natural Gas Spot Price (Dollars per Million Btu)",
+          "url": "https://www.eia.gov/dnav/ng/hist/rngwhhdD.htm",
+          "publisher": "www.eia.gov",
+          "published": null
+        },
+        "S6": {
+          "title": "Cushing, OK WTI Spot Price FOB  (Dollars per Barrel)",
+          "url": "https://www.eia.gov/dnav/pet/hist/rwtcd.htm",
+          "publisher": "www.eia.gov",
+          "published": null
+        },
+        "S7": {
+          "title": "Sempat Sentuh Level Tertinggi 5 Bulan, Minyak Brent Kini Berada di Level US$112,96 per Bar",
+          "url": "https://wartaekonomi.co.id/read642932/sempat-sentuh-level-tertinggi-5-bulan-minyak-brent-kini-berada-di-level-us11296-per-bar",
+          "publisher": "wartaekonomi.co.id",
+          "published": null
+        },
+        "S8": {
+          "title": "Harga BBM Hari Ini 25 Oktober 2026: Brent Ditutup Menguat di US$117,38 dan WTI ke US$103,44, Tertinggi dalam 5 Bulan, Berikut Daftar Lengkap Pertamina, BP, Shell, dan Vivo - Industry.co.id",
+          "url": "https://www.industry.co.id/read/157925/harga-bbm-hari-ini-25-oktober-2026-brent-ditutup-menguat-di-us11738-dan-wti-ke-us10344-tertinggi-dalam-5-bulan-berikut-daftar-lengkap-pertamina-bp-shell-dan-vivo",
+          "publisher": "www.industry.co.id",
+          "published": "2026-10-25"
+        },
+        "S9": {
+          "title": "Rerata ICP Januari\u2014Oktober Tembus US$92, Bahlil Lapor ke Prabowo - Energi",
+          "url": "https://www.bloombergtechnoz.com/detail-news/125090/rerata-icp-januari-oktober-tembus-us-92-bahlil-lapor-ke-prabowo",
+          "publisher": "www.bloombergtechnoz.com",
+          "published": null
+        },
+        "S10": {
+          "title": "Short-Term Energy Outlook - U.S. Energy Information Administration (EIA)",
+          "url": "https://www.eia.gov/outlooks/steo/",
+          "publisher": "www.eia.gov",
+          "published": null
+        },
+        "S11": {
+          "title": "https://www.eia.gov/outlooks/steo/pdf/steo_text.pdf",
+          "url": "https://www.eia.gov/outlooks/steo/pdf/steo_text.pdf",
+          "publisher": "www.eia.gov",
+          "published": null
+        },
+        "S12": {
+          "title": "Kelebihan Pasokan Global Tekan Harga Minyak Mentah Indonesia Desember 2025 - merdeka.com",
+          "url": "http://www.merdeka.com/uang/read/8071129/kelebihan-pasokan-global-tekan-harga-minyak-mentah-indonesia-desember-2025",
+          "publisher": "www.merdeka.com",
+          "published": "2026-01-17"
+        },
+        "S13": {
+          "title": "Harga Minyak Mentah Indonesia Turun Jadi US$ 61",
+          "url": "https://www.beritasatu.com/ekonomi/2958581/harga-minyak-mentah-indonesia-turun-jadi-us-61",
+          "publisher": "www.beritasatu.com",
+          "published": null
+        },
+        "S14": {
+          "title": "Harga Minyak RI (ICP) Rata-Rata Januari-Mei 2026 Tembus US$ 91,8/Barel",
+          "url": "https://www.cnbcindonesia.com/news/20260609112709-4-741314/harga-minyak-ri--icp--rata-rata-januari-mei-2026-tembus-us--918-barel",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026/06/09"
+        }
+      }
+    }
+  }
+}
