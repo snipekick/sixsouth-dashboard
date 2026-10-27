@@ -1,22 +1,22 @@
 {
   "schema": 1,
-  "asof": "2026-10-27T15:35:00+07:00",
+  "asof": "2026-10-27T19:10:50+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
     "published": 18,
-    "in_progress": 12,
+    "in_progress": 10,
     "parked": 5,
     "stale": 0,
-    "not_rated": 9
+    "not_rated": 7
   },
   "ratings": {
     "BUY": 3,
-    "REDUCE": 1,
+    "REDUCE": 2,
     "HOLD": 2,
-    "NOT RATED": 9,
+    "NOT RATED": 7,
     "ADD": 2,
-    "SELL": 1
+    "SELL": 2
   },
   "desks": [
     {
@@ -32,7 +32,7 @@
         "OIL_GAS_DOWNSTREAM",
         "ENERGY_SERVICES"
       ],
-      "universe": 87,
+      "universe": 86,
       "published": 11
     },
     {
@@ -64,7 +64,7 @@
         "INDUSTRIAL_GOODS",
         "INDUSTRIAL_SERVICES"
       ],
-      "universe": 74,
+      "universe": 75,
       "published": 6
     },
     {
@@ -188,7 +188,7 @@
       "name": "Coal producers",
       "desk": "ENERGY",
       "template": "commodity_producer",
-      "universe": 22,
+      "universe": 21,
       "published": 10,
       "workbook": "models/COAL.xlsx",
       "methods": {
@@ -384,7 +384,7 @@
       "name": "Conglomerates & multi-sector holdings",
       "desk": "INDUSTRIALS",
       "template": "holdco_sotp",
-      "universe": 11,
+      "universe": 12,
       "published": 6,
       "workbook": "models/CONGLOMERATES.xlsx",
       "methods": {
@@ -1036,9 +1036,9 @@
       "ticker": "ABMM.JK",
       "code": "ABMM",
       "name": "PT ABM Investama Tbk",
-      "desk": "ENERGY",
-      "industry": "COAL",
-      "stage": "revision",
+      "desk": "INDUSTRIALS",
+      "industry": "CONGLOMERATES",
+      "stage": "draft",
       "published": false,
       "stale": false,
       "rating": null,
@@ -5362,22 +5362,22 @@
       "name": "PT Bayan Resources Tbk.",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "signoff",
+      "stage": "published",
       "published": true,
       "stale": false,
-      "rating": "NOT RATED",
-      "tp": null,
+      "rating": "REDUCE",
+      "tp": 7909,
       "price": 10475.0,
-      "tr_pct": null,
+      "tr_pct": -19.28,
       "mcap_idr": 349166684125000.0,
       "adtv_idr": 25343718929.0,
       "investable": true,
       "last_update": "2026-10-27",
-      "version": 2,
+      "version": 3,
       "report_type": "update",
       "doc": "fund record",
-      "konglo": false,
-      "suspended": true
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "CAKK.JK",
@@ -8720,7 +8720,7 @@
       "name": "PT Golden Energy Mines Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "signoff",
+      "stage": "revision",
       "published": true,
       "stale": false,
       "rating": "NOT RATED",
@@ -19461,7 +19461,7 @@
       "name": "PT Singaraja Putra Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "qc",
+      "stage": "revision",
       "published": false,
       "stale": false,
       "rating": null,
@@ -19898,22 +19898,22 @@
       "name": "PT Golden Eagle Energy Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "signoff",
+      "stage": "published",
       "published": true,
       "stale": false,
-      "rating": "NOT RATED",
-      "tp": null,
+      "rating": "SELL",
+      "tp": 1615,
       "price": 3100.0,
-      "tr_pct": null,
+      "tr_pct": -46.93,
       "mcap_idr": 10617500000000.0,
       "adtv_idr": 2423329159.0,
       "investable": true,
       "last_update": "2026-10-27",
-      "version": 1,
+      "version": 2,
       "report_type": "update",
       "doc": "fund record",
-      "konglo": false,
-      "suspended": true
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "SMRA.JK",
