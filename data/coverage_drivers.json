@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-10-28T02:05:19+07:00",
+  "asof": "2026-10-28T05:02:20+07:00",
   "decks": {
     "agri": {
       "title": "Agricultural & soft-commodity deck",
       "owner": "SECTOR_LEAD_CONSUMER_NON_CYCLICALS",
-      "asof": "2026-10-27",
+      "asof": "2026-10-28",
       "variables": {
         "cpo": {
           "label": "Crude palm oil (benchmark)",
@@ -44,7 +44,7 @@
           },
           "lt": 1093.67,
           "spot": {
-            "value": 1472.9083,
+            "value": 1468.4991,
             "asof": "2026-10-27",
             "source": "Yahoo Finance ZL=F"
           },
@@ -67,7 +67,7 @@
           },
           "lt": 284.13,
           "spot": {
-            "value": 226.3412,
+            "value": 224.504,
             "asof": "2026-10-27",
             "source": "Yahoo Finance ZW=F"
           },
@@ -90,7 +90,7 @@
           },
           "lt": 215.5,
           "spot": {
-            "value": 178.6337,
+            "value": 177.1574,
             "asof": "2026-10-27",
             "source": "Yahoo Finance ZC=F"
           },
@@ -113,7 +113,7 @@
           },
           "lt": 449.67,
           "spot": {
-            "value": 377.7617,
+            "value": 368.8329,
             "asof": "2026-10-27",
             "source": "Yahoo Finance ZM=F"
           },
@@ -844,7 +844,7 @@
     "macro": {
       "title": "House macro deck",
       "owner": "MACRO_FX",
-      "asof": "2026-10-27",
+      "asof": "2026-10-28",
       "variables": {
         "usd_idr": {
           "label": "IDR per USD",
@@ -885,7 +885,7 @@
           },
           "lt": 102.0,
           "spot": {
-            "value": 102.184,
+            "value": 102.293,
             "asof": "2026-10-27",
             "source": "Yahoo Finance DX-Y.NYB"
           },
@@ -956,7 +956,7 @@
         "rf_usd": {
           "label": "10-year US Treasury yield",
           "unit": "rate",
-          "value": 0.04988,
+          "value": 0.04993,
           "asof": "2026-10-27",
           "source": "Yahoo Finance ^TNX (US 10-year Treasury yield)",
           "status": "reviewed"
@@ -965,24 +965,24 @@
           "label": "Mature-market equity risk premium (Damodaran)",
           "unit": "rate",
           "value": 0.0423,
-          "asof": "2026-10-27",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "asof": "2026-10-28",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-28",
           "status": "reviewed"
         },
         "crp_id": {
           "label": "Indonesia country risk premium (Damodaran)",
           "unit": "rate",
           "value": 0.0246,
-          "asof": "2026-10-27",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "asof": "2026-10-28",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-28",
           "status": "reviewed"
         },
         "default_spread_id": {
           "label": "Indonesia sovereign default spread (Damodaran)",
           "unit": "rate",
           "value": 0.0162,
-          "asof": "2026-10-27",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-27",
+          "asof": "2026-10-28",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-10-28",
           "status": "reviewed"
         },
         "debt_spread_corp": {
@@ -1127,7 +1127,7 @@
     "metals": {
       "title": "Metals deck",
       "owner": "SECTOR_LEAD_BASIC_MATERIALS",
-      "asof": "2026-10-27",
+      "asof": "2026-10-28",
       "variables": {
         "gold": {
           "label": "Gold",
@@ -1145,7 +1145,7 @@
           },
           "lt": 4300,
           "spot": {
-            "value": 4038.8,
+            "value": 4074.3,
             "asof": "2026-10-27",
             "source": "Yahoo Finance GC=F"
           },
@@ -1168,7 +1168,7 @@
           },
           "lt": 65.0,
           "spot": {
-            "value": 54.065,
+            "value": 54.47,
             "asof": "2026-10-27",
             "source": "Yahoo Finance SI=F"
           },
@@ -1191,7 +1191,7 @@
           },
           "lt": 11000,
           "spot": {
-            "value": 14561.5324,
+            "value": 14676.1729,
             "asof": "2026-10-27",
             "source": "Yahoo Finance HG=F"
           },
@@ -1214,7 +1214,7 @@
           },
           "lt": 3000,
           "spot": {
-            "value": 3154.5,
+            "value": 3194.0,
             "asof": "2026-10-27",
             "source": "Yahoo Finance ALI=F"
           },
@@ -1319,7 +1319,7 @@
     "oil": {
       "title": "Oil & gas deck",
       "owner": "SECTOR_LEAD_ENERGY",
-      "asof": "2026-10-27",
+      "asof": "2026-10-28",
       "variables": {
         "brent": {
           "label": "Brent crude",
@@ -1337,7 +1337,7 @@
           },
           "lt": 75.0,
           "spot": {
-            "value": 110.09,
+            "value": 109.21,
             "asof": "2026-10-27",
             "source": "Yahoo Finance BZ=F"
           },
@@ -1360,7 +1360,7 @@
           },
           "lt": 69.0,
           "spot": {
-            "value": 101.02,
+            "value": 99.58,
             "asof": "2026-10-27",
             "source": "Yahoo Finance CL=F"
           },
@@ -1383,7 +1383,7 @@
           },
           "lt": 3.1,
           "spot": {
-            "value": 3.002,
+            "value": 3.023,
             "asof": "2026-10-27",
             "source": "Yahoo Finance NG=F"
           },
