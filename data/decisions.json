@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-10-27 (Tue)\n\nSession 2026-10-27T11:00:22+07:00 \u2192 2026-10-27T11:08:00+07:00. **No new candidates \u2014 screens unchanged vs card stack.** 0 cards written (GLOBAL 0, INDO 0), 1 card re-stamped, 0 deleted, 0 escalations filed. Early exit under step 4: every un-carded row on both screens carries a standing decline (2026-08-17\u202610-26) and none clears the fast-disqualify sniff test.\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 filed 2026-10-22 by US_CLOSE, owner OPS/MONTHLY_IC, not IDEATION's and not re-filed. Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; pending_orders [].\n- GLOBAL 100% cash / 0 names (NAV $1,011,468.06, DD 0.0%, week_trades 0/10); INDO 88.6% cash / 2 names (NAV IDR 15.428bn, gross 11.36%, DD \u22120.09%, week_trades 0/10; MEDC +12.41%, ERAA +9.52% since entry). Deployment vs the 60\u201395% band: GLOBAL 0.0%, INDO 11.4% \u2014 both below (standing WEEKLY_DEEP/IC matter; the 10-19 WARN `deployment_pipeline_fault` already attributes it to entry levels, and \"the remedy is not a lower bar\" \u2014 no new escalation).\n- judged_unticketed: **T-GLOBAL-NVO-002** (last 39.05\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-10-26T08:45:44.944112+07:00",
       "book": "INDO",
@@ -906,17 +911,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-09-03 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item; ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures (INDO screen emitted only the benign numpy divide warning). HUMAN_ATTENTION head: `2026-09-03T09:15+07:00` IDX_PREOPEN/claude_timeout rc=TIMEOUT \u2014 prior-session blocker, already tracked, not mine.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine).\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped. `idx_foreign_flow_feed` STALE \u2014 flow narratives stay quarantined.\n- Cards at entry: GLOBAL 13 files = 7 active (JPM/LLY/XOM ADVANCE +\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-03T20:01:21.319723+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass: no tickets; 0700.HK closed at 0%; QC WARN",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Session US_PREOPEN 2026-09-03 20:00 (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping). Governor NONE, GLOBAL all-cash 100% cash / 0% gross, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, no live theses/positions \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS, nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill, PM decision 2026-08-22 WEEKLY_DEEP; Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed). Runbook: qty from sizing.pm_pct, never resize, so 0 qty = no valid entry to ticket; no live order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged FX thesis awaiting level on GLOBAL; no ticket. Step 5: no tickets created, risk_check --orders N/A. All decisions pass. Exiting runbook.",
     "persona": ""
   }
 ]
