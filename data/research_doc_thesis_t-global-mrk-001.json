@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "momentum_continuation",
-    "status": "attacked",
-    "verdict": "REVISE",
+    "status": "judged",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
@@ -187,6 +187,18 @@
       "at": "2026-10-26T14:02:11+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-28T13:10:07+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-28T13:14:49+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -251,6 +263,16 @@
       "heading": "Judge verdict",
       "detail": null,
       "markdown": "**REVISE \u2014 construction defect; return to ANALYST_GLOBAL.** I rule on 6a: the *shape* of this trade fails, not Merck's business. The file is a `momentum_continuation` long whose own base value (135) sits 7.6% *below* spot (145.27), with an entry (118) that can only fill after price first falls 18.8%. Drew's sentence is true and I adopt it: the +3.18% is the average of a fill that never occurs in the win branch and a loss that always occurs in the loss branch \u2014 it is not the EV of any position you can own. The analyst concedes exactly this (Revision 2, pt 1) and reaches no trade.\n\n1. **p_up 0.45 vs registry 0.50 \u2014 within argued distance.** 5pp, inside the \u00b115pp clamp, and the basis is legitimate: the analyst conceded zero continuation edge and shaded to the prior's lower side. Not the stacked haircut card 6a warns of \u2014 the kill (108) is *tighter* than base_down (\u221222), so only two of three legs exist, and the compressed band is the construction defect itself, not a discretionary cut.\n2. **Document citation \u2014 thin, not a step-3 auto-kill.** The 18x multiple and X=$1.2bn one-off share are inferences the analyst flags (weakest joint; the Bear's own number); the Keytruda LOE is openly not underwritten. Disclosed, not hidden.\n3. **Drew's sentence survives the thesis.** Restated above; dispositive of the construction.\n4. **Not KILL.** The flaw is the *build*, not the *business*; a kill spends 30 cooldown days on a name that cleared the screen (MOMENTUM rank 7, ADV $1.49bn), against a ledger whose standing correction is over-killing (35/40 KILL, 0 fills, 12/28 kills left gains).\n5. **Not PASS/PASS_REDUCED.** No honest entry clears: below 135 every fill is a dip-buy (washout economics, wrong archetype); at spot up_pct is negative; \u2264108 is under the hurdle. Nothing to size, so \"uncertainty shrinks size\" never engages.\n6. **Rebuild required:** re-base the target above spot on *flagged new evidence*, or re-file as `washout_rebound` with an honest capitulation entry and that prior. No kill-ledger row, no cooldown."
+    },
+    {
+      "heading": "Revision",
+      "detail": "3",
+      "markdown": "Answering Judge point 6 directly. **Disposition: (c) \u2014 no construction clears; recommend the file close; the Judge rules.**\n\n**Judge pts 3\u20135 (dispositive):** the +3.18% is the average of a fill that never occurs in the win branch and a loss that always occurs in the loss branch. CONCEDED, unchanged from Rev 2 pt 1. The packet does not cure it: spot is 141.82 (screen 2026-10-28; 10-24 145.27, 10-27 140.61), so base 135 is 4.8% below spot and the 118 bid is 16.8% below spot \u2014 negative-selection economics intact.\n\n**(a) Re-base above spot \u2014 unavailable.** This needs a flagged `new evidence:` citation raising valuation. None exists: dossier asof 2026-10-21 unchanged; macro asof 2026-10-24 unchanged; no new filing or FY2027 guide in the packet. The only fresh print is price, and it fell. A raise would require un-doing the conceded X=$1.2bn haircut (Bear pt 2; Rev 1) or lifting the multiple on nothing (card pt 6: momentum does not lift the ceiling) \u2014 both the unflagged-raise Judge kill this protocol forbids.\n\n**(b) Re-file as `washout_rebound` \u2014 facts do not fit.** The archetype requires a deep drawdown (>25\u201340% off) with capitulation. MRK is \u22128.82% off its 52-week high and +74.94%/+30.59% over 12m/6m (screen 2026-10-28) \u2014 a pullback from a momentum high, not a washout. Re-labelling would misdescribe the tape.\n\n**(c) No trade.** Fields held: entry 118, target 135, kill 108, `ev_math` +3.18% \u2014 still a bid that fills only in the loss branch. No field moved; `ev_math` moves 0% (>20% test: no). Recommend close, no kill-ledger row, no cooldown. Bought by Judge pts 3\u20136."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "round 2",
+      "markdown": "**Correction applied:** the standing record (inception \u2192 2026-10-15: 40 theses, 35 KILL, 5 PASS_REDUCED, 0 fills; 12 of 28 scored kills left gains) is over-killing \u2014 this kill is earned by the file, not by prudence.\n\nI issued REVISE because the defect was construction: a momentum long whose base value (135) sat below spot. Revision 3 answers point 6 honestly. (a) is unavailable \u2014 no flagged new evidence; dossier and macro are unchanged, and price fell to 141.82. (b) is a misfit \u2014 MRK is \u22128.82% off its 52-week high, +74.94% over 12m: a pullback, not a washout. Both hold. No construction remains: base 135 is 4.8% below spot, every fillable entry is 16.8%+ below spot, and fill probability rises with the loss branch. A second REVISE naming an unavailable remedy is not a ruling.\n\n1. **Valuation \u2014 dispositive.** The business is worth 135 on the analyst's honest numbers; the market pays 141.82. At spot the target sits below entry; below 135 every fill is a dip-buy conditional on the bear path (EV \u22124.25% at 118 on base_down); EV\u22650 needs entry \u2264108, the bear value. The analyst concedes no trade.\n2. **Prior \u2014 moot.** 0.45 vs 0.50 is within argued distance but cannot rescue a trade with no fillable positive-EV entry.\n3. **Process \u2014 clean.** Stage log monotonic; Bear attack and re-attack verbatim; Revision 3 moved no field, so no re-attack was owed.\n4. **Not PASS at a price.** A PASS must name a working entry; I cannot. 108 is the bear value, not an entry \u2014 23.9% below spot, assuming the bear case.\n\n**KILL \u2014 reason_tag: `valuation`.** Ledger row at 141.82; 30-day cooldown. Re-open on a filing showing the H1-2026 charge \u226590% non-operating, or an FY2027 guide supporting a target above spot, resubmitted by ANALYST_GLOBAL with flagged new evidence."
     }
   ]
 }

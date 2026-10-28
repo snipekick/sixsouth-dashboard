@@ -1,7 +1,23 @@
 [
   {
+    "meta": {
+      "date": "2026-10-28T15:07:52.135525+07:00",
+      "book": "INDO",
+      "title": "PTBA.JK deferred: sizing anchor refuses",
+      "thesis": "T-INDO-PTBA-001",
+      "kind": "other"
+    },
+    "body": "Accept Judge PASS_REDUCED 0.5 but do not size or stage this session: fund record refuses (carry +33.8pp swamps the -17.1pp down leg; carry_convention_kill_state, Proposal E) and fund record has no PTBA.JK snapshot so a ticket fails closed. Price at decision Rp3,100 spot; entry Rp3,000; target 4,842; kill 2,488. Unblock: convention ruling + snapshot refresh at next pre-open prelude.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-28 (Wed)\n\nSession 2026-10-28T11:00:21+07:00 \u2192 2026-10-28T11:10:47+07:00. **Coverage gate session:** 3 cards rewritten (INDO 3, GLOBAL 0), 1 re-affirmed, 0 deleted, 0 escalations. No new screen card cleared the fast-disqualify sniff test; the session's work was step 4b \u2014 the coverage engine's published ratings now differ from the card stack (PTBA BUY, ASII BUY, ADRO\u2192HOLD).\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` [] ; `reviews_open` [] (nothing for the next trading session on either count); `pending_orders` [].\n- GLOBAL 100% cash / 0 names (NAV $1,011,575.58, DD 0.0%, week_trades 0/10); INDO 89.1% cash / 2 names (NAV IDR 15.353bn, gross 10.91%, DD \u22120.58%, week_trades 0/10; MEDC +7.37%, ERAA +4.76% since entry). Deployment GLOBAL 0.0% / INDO 10.9% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated here.\n- Live theses ERAA (550 vs target 960 / kill 420) and MEDC (1,385 vs 2,250 / 920). `judged_unticketed`: T-INDO-AADI-001, T-GLOBAL-NVO-002\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-10-28 (Wed)\n\nSession 2026-10-28T13:00:22+07:00 \u2192 2026-10-28T15:14:00+07:00. **Queue worked: 1 revise-chain judged, 1 new thesis built and judged, 1 sizing block escalated.** GLOBAL 0 tickets, INDO 0 tickets (one PASS_REDUCED left unsized by a deterministic refusal).\n\n## Queue as found (session_brief, step 1)\n- (a) `awaiting_pm_sizing`: **empty**. (b) `judged_missing_levels`: **empty**. (d) `buy_verdict_sized_zero`: **empty**.\n- (c) `revise_queue`: **T-GLOBAL-MRK-001** (status attacked, verdict REVISE). No other draft/attacked thesis without a verdict.\n- (e) ADVANCE idea cards: **INDO-PTBA** (sleeve COVERAGE, house BUY, 2026-10-28) \u2014 the only ADVANCE card. Quota clear: 0/5 GLOBAL and 0/8 INDO new theses drafted this ISO week (MRK drafted 2026-10-24, prior week).\n- Not in any queue, left untouched: `judged_unticketed` T-INDO-AADI-001, T-GLOBAL-NVO-002, T-INDO-TINS-001 (all sized; waiting on price, gap 65.5% / 58.3% / 355.4% \u2014 trading-session matter).\n- Clocks: QC WARN (1 flag, CNH market param \u2014 already logged). Governor NONE both books. GLOBAL 100% cash / 0 names; INDO 89.2% cash / 2 names, 10.8% deployed vs 60\u201395% band.\n\n## Per-thesis outcome\n\u2026",
     "persona": ""
   },
   {
@@ -895,22 +911,6 @@
       "kind": "other"
     },
     "body": "Triggers reviewed, no action. Kill exits: kill_actions_due empty, no live theses, no fired kills to verify. Governor: NONE on GLOBAL and INDO, no DEGROSS. Entries: no INDO thesis judged-unticketed waiting on level (only T-GLOBAL-0700HK-001, GLOBAL book, pm_pct 0.0 concluded-closed \u2014 out of scope for this INDO session); pending_orders empty. QC WARN (published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) carried, not CRITICAL; flow_regime STALE (no fresh foreign-flow data) \u2014 regime not estimated. Cash 100% both books, 0 positions.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-04 (Fri)\n\n## State at entry\n- QC: WARN, 1 flag (jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item; ops lane, not mine). Prices live, both screens ran clean, 0 fetch failures (INDO screen emitted only the benign numpy divide warning). HUMAN_ATTENTION head: `2026-09-03T09:15+07:00` IDX_PREOPEN/claude_timeout rc=TIMEOUT \u2014 prior-session blocker, already tracked, not mine.\n- Governor: both books NONE, all-cash, zero drawdown, 0/6 week trades. No kill actions due, no open reviews, pending orders none \u2014 nothing to carry to the next trading session. judged_unticketed T-GLOBAL-0700HK-001 unchanged (WEEKLY_DEEP queue, not mine). Tomorrow is WEEKLY_DEEP + the macro FULL rebuild (next_full_rebuild 2026-09-05) \u2014 last IDEATION before triage; not pre-empted.\n- Macro regime: unchanged from the 08-22 FULL rebuild (asof 2026-08-22) \u2014 balance_of_payments_pressure, risk_appetite NEUTRAL. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives. War-premium markers (brent ref 94, dxy ref 98.7) in force; no marker tripped\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-04T20:01:08.633392+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN pass: no tickets; 0700.HK closed at 0%; QC WARN",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Session US_PREOPEN 2026-09-04 20:00 WIB (North Book, GLOBAL). QC=WARN (not CRITICAL), not trading-blocking \u2014 sole flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d (IDX data staleness, housekeeping, carried into this entry). Governor NONE (state file confirms GLOBAL live=false, state=NONE), GLOBAL all-cash 100% cash / 0% gross / 0 names, no DEGROSS. Step 3a kill exits: kill_actions_due empty, orders_pending empty, theses.live 0 \u2014 no fired kill missing a ticket/fill; no fail-closed breach. Step 3b de-gross: no DEGROSS (governor NONE), nothing to sell. Step 3c entries: sole judged_unticketed thesis T-GLOBAL-0700HK-001 (0700.HK, entry_plan level 468.00) is CLOSED \u2014 sizing.pm_pct=0.0 (PASS_REDUCED binds like a kill; PM decision 2026-08-22 WEEKLY_DEEP, Kelly<=0, negative EV, three Judge-ordered Phase-2 deliverables never completed; no re-open without material new evidence). Runbook rule: qty from sizing.pm_pct, never resize here, so 0 qty = no valid entry to ticket; no stale order to cancel (orders_pending empty). Did NOT create a ticket, did NOT re-size. Step 4 FX: no judged Macro-FX thesis awaiting level on GLOBAL; no FX ticket. Step 5: no\u2026",
     "persona": ""
   }
 ]
