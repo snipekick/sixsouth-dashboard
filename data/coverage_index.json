@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "asof": "2026-10-29T05:05:22+07:00",
+  "asof": "2026-10-29T05:55:08+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 27,
-    "in_progress": 3,
-    "parked": 10,
+    "published": 28,
+    "in_progress": 1,
+    "parked": 11,
     "stale": 0,
     "not_rated": 3
   },
@@ -15,7 +15,7 @@
     "ADD": 3,
     "REDUCE": 4,
     "HOLD": 6,
-    "SELL": 8,
+    "SELL": 9,
     "NOT RATED": 3
   },
   "desks": [
@@ -166,7 +166,7 @@
         "CONSTRUCTION"
       ],
       "universe": 66,
-      "published": 0
+      "published": 1
     },
     {
       "desk": "TRANSPORTATION_LOGISTICS",
@@ -845,8 +845,8 @@
       "desk": "INFRASTRUCTURES",
       "template": "corporate",
       "universe": 9,
-      "published": 0,
-      "workbook": null,
+      "published": 1,
+      "workbook": "models/POWER_UTILITIES.xlsx",
       "methods": {
         "dcf_fcff": 0.6,
         "ev_ebitda": 0.3,
@@ -4764,7 +4764,7 @@
       "name": "PT Barito Renewables Energy Tbk",
       "desk": "INFRASTRUCTURES",
       "industry": "POWER_UTILITIES",
-      "stage": "revision",
+      "stage": "parked",
       "published": false,
       "stale": false,
       "rating": null,
@@ -5707,22 +5707,22 @@
       "name": "PT Chandra Daya Investasi TBK.",
       "desk": "INFRASTRUCTURES",
       "industry": "POWER_UTILITIES",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "SELL",
+      "tp": 311,
       "price": 436.0,
-      "tr_pct": null,
+      "tr_pct": -28.35,
       "mcap_idr": 54390929847600.0,
       "adtv_idr": 33833193129.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": true,
+      "last_update": "2026-10-29",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "CEKA.JK",
