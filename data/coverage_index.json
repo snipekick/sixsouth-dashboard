@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-10-28T16:16:16+07:00",
+  "asof": "2026-10-28T19:31:40+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 22,
-    "in_progress": 7,
+    "published": 23,
+    "in_progress": 6,
     "parked": 7,
     "stale": 0,
     "not_rated": 2
@@ -15,7 +15,7 @@
     "ADD": 2,
     "REDUCE": 4,
     "HOLD": 6,
-    "SELL": 5,
+    "SELL": 6,
     "NOT RATED": 2
   },
   "desks": [
@@ -65,7 +65,7 @@
         "INDUSTRIAL_SERVICES"
       ],
       "universe": 75,
-      "published": 8
+      "published": 9
     },
     {
       "desk": "CONSUMER_NON_CYCLICALS",
@@ -385,7 +385,7 @@
       "desk": "INDUSTRIALS",
       "template": "holdco_sotp",
       "universe": 12,
-      "published": 8,
+      "published": 9,
       "workbook": "models/CONGLOMERATES.xlsx",
       "methods": {
         "sotp": 0.6,
@@ -4649,7 +4649,7 @@
       "name": "PT. Borneo Olah Sarana Sukses Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "revision",
+      "stage": "qc",
       "published": false,
       "stale": false,
       "rating": null,
@@ -8421,22 +8421,22 @@
       "name": "PT Multi Garam Utama Tbk",
       "desk": "INDUSTRIALS",
       "industry": "CONGLOMERATES",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "SELL",
+      "tp": 23,
       "price": 78.0,
-      "tr_pct": null,
+      "tr_pct": -71.1,
       "mcap_idr": 319125888432.0,
       "adtv_idr": 6201226263.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": false,
+      "last_update": "2026-10-28",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": false,
+      "suspended": false
     },
     {
       "ticker": "FOOD.JK",
@@ -9203,7 +9203,7 @@
       "name": "PT Garda Tujuh Buana Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "revision",
+      "stage": "qc",
       "published": false,
       "stale": false,
       "rating": null,
@@ -12239,7 +12239,7 @@
       "name": "PT Resource Alam Indonesia Tbk",
       "desk": "ENERGY",
       "industry": "COAL",
-      "stage": "red_team",
+      "stage": "revision",
       "published": false,
       "stale": false,
       "rating": null,
@@ -23279,7 +23279,7 @@
       "name": "PT Dosni Roha Indonesia Tbk",
       "desk": "INDUSTRIALS",
       "industry": "CONGLOMERATES",
-      "stage": "qc",
+      "stage": "revision",
       "published": false,
       "stale": false,
       "rating": null,
