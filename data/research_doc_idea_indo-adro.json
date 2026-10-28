@@ -7,16 +7,16 @@
     "book": "INDO",
     "ticker": "ADRO.JK",
     "name": "Alamtri Resources (Adaro Energy)",
-    "verdict": "ADVANCE",
-    "regime": "UNASSESSED",
+    "verdict": "DISCARD",
+    "regime": "NEUTRAL",
     "sleeve": "COVERAGE",
-    "asof": "2026-10-26"
+    "asof": "2026-10-28"
   },
   "sections": [
     {
       "heading": "Overview",
       "detail": null,
-      "markdown": "# ADRO.JK \u2014 house coverage rates it BUY\n\nSignal: the South Research division published coverage (v2) with a 12-month target of Rp3,002.0 against Rp2,460.0 (expected total return 35.1%). Why now: the rating crossed the BUY band on the engine's probability-weighted target.\n\nArchetype guess: dividend_income_anchor \u00b7 method card: per fund record routing for Coal producers.\n\nSharpest questions for a thesis:\n- Sections 1, 5 and 6 publish \"insider ownership is 6889.7% against a free float of 3806.2% [S0]\". These are arithmetically impossible (a free float cannot exceed 100%) and the datapack already stores them in percent (mark\n- Section 4 states the dividend-yield method runs off \"the next twelve months' declared dividend of US$320.3838 per share\". The engine's val.dps12 is 320.3838, which is the RUPIAH per-share figure (0.01772 USD x 18,080); t\n- The primary method that sets the BUY is a 20-year DCF whose horizon is the template constant params.horizon=20 (assumptions params_basis concedes no reserve/resource statement ties the PKP2B concessions to twenty years),\n\nRegime stance vs the macro desk is UNASSESSED: IDEATION/CONSTRUCT sets WITH / NEUTRAL / AGAINST before any deep-dive. Fast-disqualify checks and the thesis itself follow the full analyst -> Bear -> Judge law."
+      "markdown": "# ADRO.JK \u2014 house coverage downgraded to HOLD\n\n**Signal / why now:** the live coverage engine (fund record generated 2026-10-28T08:56) rates ADRO **HOLD** at Rp2,089.6 against Rp2,460.0 \u2014 expected total return **\u22123.1%**. The published refresh summary: \"we hold the name and let the near-total distribution carry the return.\" The 2026-10-26 ADVANCE card was built on v2 (BUY, TP Rp3,002, TR +35.1%), which the refresh replaced; the why-now is gone.\n\n**Regime: NEUTRAL** \u2014 thermal coal is a NEUTRAL tilt; the story is holdco discount plus distribution, neither rate- nor oil-import-sensitive.\n\n**Archetype:** `holdco_discount_narrowing` (0.33, +28/\u221218, 3y) \u00b7 method card: VAL_HOLDCO_DISCOUNT.\n\n**3 sharpest questions (carry to Saturday as a pre-vetted attack brief if a BUY returns):**\n1. The SOTP marks the ADMR stake at market while the house's own ADMR coverage is REDUCE at 41% of that price \u2014 at the house mark the SOTP falls to ~Rp1,735/share. Which mark is right?\n2. Can a ~100% payout be funded with FY26E FCFF negative and no net borrowing?\n3. Does the FY26E debt path reconcile to the observed June-2026 balance (a 1,118m gap per the red team)?\n\n**Fast-disqualify:** EV at holdco prior = **\u22122.8%** (FAIL). Valuation-anchored target \u22123.1% does not clear entry at all (FAIL). Sources: coverage deck present but S0 unavailable to the red team (\u26a0) \u2192 **DISCARD**. Card-KILL, not a thesis-level kill."
     }
   ]
 }
