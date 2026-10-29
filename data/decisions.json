@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-10-29 (Thu)\n\nSession 2026-10-29T11:00:20+07:00 \u2192 2026-10-29T11:13:01+07:00. **Cards: INDO 2 written (GGRM, KKGI), both DISCARD, 0 ADVANCE; GLOBAL 0 written, 1 re-stamped `PROMOTED \u2192 DISCARD` (MRK, killed 10-28). 2 cards re-affirmed (MEDC, ERAA). No escalations; one coverage observation journaled.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]** and `reviews_open` **[]** \u2014 nothing to hand the next trading session on either count; `pending_orders` **[]**.\n- GLOBAL 100% cash / 0 names (NAV $1,011,683.11, DD 0.0%, week_trades 0/10). INDO 89.4% cash / 2 names (NAV IDR 15.308bn, gross 10.64%, DD \u22120.87%; MEDC +7.37%, ERAA \u22121.90% since entry). Deployment 0.0% / 10.6% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated here.\n- Live theses ERAA (515 vs target 960 / kill 420) and MEDC (1,385 vs 2,250 / 920). `judged_unticketed` AADI (gap 64.8%), TINS (366.4%), NVO (56.4%) \u2014 all far outside `entries.stage_within_pct`. `revise_queue` empty (MRK resolved KILL\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-10-28T15:07:52.135525+07:00",
       "book": "INDO",
@@ -900,17 +905,6 @@
   {
     "meta": {},
     "body": "# 2026-09-05 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 the 08-22 deliberately-left-stale item, ops lane, expected trip). Both books 100% cash, 0 holdings, 0 live theses, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing, concluded). Governor NONE both books. No orders, no kill actions, no reviews open. INDO foreign-flow layer STALE (n=0).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\n- audit record all historical files resolved/triaged. 08-29-WEEKLY_DEEP-claude_exit (rc=1, \"API Error: ... can't help with this. Start a new session\") \u2014 that session aborted in the LLM stage; no 08-29 decision journal exists; macro memo stayed 08-22. This session IS the re-run; no open blocker. 09-03 US_CLOSE + IDX_PREOPEN claude_timeout (rc=TIMEOUT) \u2014 informational (30m wall-clock kills), already tracked in HUMAN_ATTENTION, no action.\n- HUMAN_ATTENTION backlog: no new unresolved items. Open ops-lane items re-escalated at end: (1) jkse_dividend_yield_proxy stale (planned trip), (2) INDO foreign-flow feed STALE, (3) published cash-rate policy fed_path/memo re-anchor \u2014\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-04T08:46:44.806855+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 09-04: no action \u2014 all three categories clean",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. Kill exits: kill_actions_due empty, no live theses, no fired kills to verify. Governor: NONE on GLOBAL and INDO, no DEGROSS. Entries: no INDO thesis judged-unticketed waiting on level (only T-GLOBAL-0700HK-001, GLOBAL book, pm_pct 0.0 concluded-closed \u2014 out of scope for this INDO session); pending_orders empty. QC WARN (published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d) carried, not CRITICAL; flow_regime STALE (no fresh foreign-flow data) \u2014 regime not estimated. Cash 100% both books, 0 positions.",
     "persona": ""
   }
 ]
