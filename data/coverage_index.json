@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "asof": "2026-10-29T05:55:08+07:00",
+  "asof": "2026-10-29T07:56:59+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 28,
+    "published": 29,
     "in_progress": 1,
     "parked": 11,
     "stale": 0,
@@ -12,7 +12,7 @@
   },
   "ratings": {
     "BUY": 3,
-    "ADD": 3,
+    "ADD": 4,
     "REDUCE": 4,
     "HOLD": 6,
     "SELL": 9,
@@ -51,7 +51,7 @@
         "MATERIALS_OTHER"
       ],
       "universe": 114,
-      "published": 0
+      "published": 1
     },
     {
       "desk": "INDUSTRIALS",
@@ -329,8 +329,8 @@
       "desk": "BASIC_MATERIALS",
       "template": "corporate",
       "universe": 29,
-      "published": 0,
-      "workbook": null,
+      "published": 1,
+      "workbook": "models/CHEMICALS.xlsx",
       "methods": {
         "dcf_fcff": 0.6,
         "ev_ebitda": 0.25,
@@ -21646,22 +21646,22 @@
       "name": "PT Chandra Asri Pacific Tbk",
       "desk": "BASIC_MATERIALS",
       "industry": "CHEMICALS",
-      "stage": "queued",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "ADD",
+      "tp": 1785,
       "price": 1500.0,
-      "tr_pct": null,
+      "tr_pct": 19.68,
       "mcap_idr": 129696744288000.0,
       "adtv_idr": 411697679357.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": true,
+      "last_update": "2026-10-29",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "TPMA.JK",
