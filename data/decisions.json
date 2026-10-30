@@ -6,6 +6,11 @@
   },
   {
     "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-10-30 (Fri)\n\nSession 2026-10-30T13:00:22+07:00 \u2192 2026-10-30T13:06:04+07:00. **Queue worked: 1 sizing re-check \u2014 blocked deterministically; 0 chains advanced; 0 tickets staged.** No role spawn ran: the only queue item is a deterministic anchor that refuses, unchanged from 2026-10-28, and no draft/attacked thesis exists to advance.\n\n## Queue as found (session_brief, step 1)\n- (a) `awaiting_pm_sizing`: **T-INDO-PTBA-001** (PASS_REDUCED 0.5, judged 2026-10-28) \u2192 step 3.\n- (b) `judged_missing_levels`: **empty**. (c) `revise_queue` and any no-verdict draft/attacked thesis: **empty** (42 judged, 2 live, 3 killed; no `draft`/`attacked` on disk). (d) `buy_verdict_sized_zero`: **empty**.\n- (e) ADVANCE idea cards: **INDO-PTBA** only (asof 2026-10-30, sleeve COVERAGE, house BUY v2 tp Rp4,989). It maps to the existing T-INDO-PTBA-001; the card itself states it is not a new deep-dive and that Saturday reconciles the house v2 target with the committed thesis. No new thesis built; quota not invoked (this ISO week: GLOBAL 0/5, INDO 1/8).\n- Not in any queue, left untouched: `judged_unticketed` T-INDO-AADI-001, T-INDO-TINS-001, T-GLOBAL-NVO-002 \u2014 all sized; waiting\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-29 (Thu)\n\nSession 2026-10-29T11:00:20+07:00 \u2192 2026-10-29T11:13:01+07:00. **Cards: INDO 2 written (GGRM, KKGI), both DISCARD, 0 ADVANCE; GLOBAL 0 written, 1 re-stamped `PROMOTED \u2192 DISCARD` (MRK, killed 10-28). 2 cards re-affirmed (MEDC, ERAA). No escalations; one coverage observation journaled.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]** and `reviews_open` **[]** \u2014 nothing to hand the next trading session on either count; `pending_orders` **[]**.\n- GLOBAL 100% cash / 0 names (NAV $1,011,683.11, DD 0.0%, week_trades 0/10). INDO 89.4% cash / 2 names (NAV IDR 15.308bn, gross 10.64%, DD \u22120.87%; MEDC +7.37%, ERAA \u22121.90% since entry). Deployment 0.0% / 10.6% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated here.\n- Live theses ERAA (515 vs target 960 / kill 420) and MEDC (1,385 vs 2,250 / 920). `judged_unticketed` AADI (gap 64.8%), TINS (366.4%), NVO (56.4%) \u2014 all far outside `entries.stage_within_pct`. `revise_queue` empty (MRK resolved KILL\u2026",
     "persona": ""
   },
@@ -894,17 +899,6 @@
   {
     "meta": {},
     "body": "# 2026-09-12 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 deliberately left stale, IDX source unreachable, ops lane). GLOBAL: nav $1.01M, 100% cash, 0 holdings, dd \u22120.01%, governor NONE. INDO: nav Rp 15.15B, 100% cash, 0 holdings, governor NONE. Both books zero holdings, zero live theses, zero pending orders. 1 judged_unticketed: T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x \u2192 0% sizing, concluded 08-22). INDO foreign-flow layer STALE (n=0).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\naudit record all historical (07\u201309). 09-03 US_CLOSE + IDX_PREOPEN claude_timeout rc=TIMEOUT \u2014 tracked in HUMAN_ATTENTION. HUMAN_ATTENTION head (2026-09-11): ops resolved the __pycache__ manifest bug; engine backlog applied; verified_bootstrap re-anchored; cash-yield \u2212800.18 USD correction applied; 30 NAV rows reconstructed. Open ops items: (1) jkse_dividend_yield_proxy stale \u2014 external source needed; (2) fund record backfill after next official marks. No new blockers.\n\n## Step 2 \u2014 Telemetry / feeds\n\noffice_state observe --session WEEKLY_DEEP --stage ops: write_failed (known fail-soft\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-11T20:03:30.333045+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-11: no trading actions \u2014 WARN QC, no deployable ticket",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "SESSION_US_PREOPEN 20:00 WIB. QC=WARN (2 flags: price cache 153h old; published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 both known/expected; the dividend proxy is a documented deliberate leave-stale per HUMAN_ATTENTION pending an IDX-statistics-sourced figure; WARN is not CRITICAL so trading is permitted but nothing warranted a ticket). Governor NONE (no de-gross). kill_actions_due empty (no fired kills to verify). pending_orders empty. 0 live theses. Sole judged_unticketed thesis T-GLOBAL-0700HK-001 (Tencent 0700.HK) has sizing.pm_pct=0.0 and was explicitly concluded by the PM decision (2026-08-22 WEEKLY_DEEP) with no ticket staged and no re-open without material new evidence; runbook forbids resizing, so no entry written. No tickets created -> risk_check not needed. All categories (kill exits / de-gross / entries) exercised: none applied. Exit. Wrapper owns commits.",
     "persona": ""
   }
 ]
