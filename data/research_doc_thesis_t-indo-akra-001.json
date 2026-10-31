@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AKRA-001",
+  "title": "AKR Corporindo (AKRA.JK)",
+  "meta": {
+    "id": "T-INDO-AKRA-001",
+    "book": "INDO",
+    "ticker": "AKRA.JK",
+    "name": "AKR Corporindo",
+    "sector": "ENERGY",
+    "factors": [
+      "oil_gas",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "dividend_income_anchor",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-31T10:14:42+07:00",
+    "drafted": "2026-10-31T10:31:44+07:00",
+    "judged": "2026-10-31T11:49:57+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1070.0,
+    "target": 1490.0,
+    "kill": 860.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Committed base value 1,490 (warranted P/B 2.4x on FY2025 BVPS 613.9 = 1,473; through-cycle DPS 104/(11%-4%) = 1,486, gross). From the 1,070 entry: +39.3% price plus ~7.1%/yr state-weighted net dividend over 2.5y \u2014 through-cycle 104 net in the up state, trough 60 net in the down state.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.55,
+    "up_pct": 39.25,
+    "p_down": 0.45,
+    "down_pct": -19.63,
+    "net_div_yield_pct_pa": 7.08,
+    "fee_tax_drag_pct": 1.25,
+    "expected_pct": 29.21,
+    "horizon_years": 2.5,
+    "carry_pct": 16.45,
+    "kelly_full_pct": 1648.8
+  },
+  "sizing": {
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "Judge PASS_REDUCED 0.25 multiplier applied to the 10.0% script anchor"
+  },
+  "base_rate": {
+    "rate": 0.55,
+    "source": "the base-rate library dividend_income_anchor registry 0.60 (n=20, 2.5y); shaded -0.05 for private issuer, 0.92x 3y FCF cover and FY2022 34.5% payout (bear points 5-6)",
+    "library": {
+      "rate": 0.6,
+      "base_up_pct": 25.0,
+      "base_down_pct": -15.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 860.0,
+      "action": "exit_full",
+      "note": "thesis-invalidating level, NOT a stop: trough DPS ~60 capitalised at 7% = 857, below bear value 900; price kills confirm before exit; the 25% ARB clamp (~645) is a sizing tail, not a second EV haircut (constitution \u00a75)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 100.0,
+      "action": "review",
+      "name": "trailing_12m_DPS",
+      "source": "IDX dividend announcement / LK",
+      "note": "a >17% cut from 2026E DPS 121 falsifies the dividend anchor"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.85,
+      "action": "review",
+      "name": "FCF_dividend_coverage_3y",
+      "source": "LK cash-flow statement (CFO - capex vs dividends)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 2400.0,
+      "action": "review",
+      "name": "through_cycle_EBIT_5y",
+      "source": "audited LK",
+      "note": "below FY2024 trough 2,562.6 signals structural margin loss"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "FY2026 audited payout 0.5x"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2023A",
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        42087.0,
+        38729.5,
+        46018.5,
+        60500.0,
+        52000.0,
+        54600.0
+      ],
+      "ebit": [
+        3544.9,
+        2562.6,
+        3068.3,
+        3650.0,
+        3640.0,
+        3930.0
+      ],
+      "net_income": [
+        2780.3,
+        2225.1,
+        2472.6,
+        2995.0,
+        2940.0,
+        3175.0
+      ],
+      "eps": [
+        140.87,
+        112.73,
+        125.24,
+        151.26,
+        148.49,
+        160.36
+      ],
+      "dps": [
+        125.0,
+        99.9,
+        99.9,
+        121.0,
+        118.8,
+        128.3
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle enterprise value: warranted P/B vs sustainable ROE, cross-checked on through-cycle dividend capacity (DPS/(r-g)); adapted from VAL_COMMODITY_CYCLICAL because AKRA owns no reserves.",
+      "bear": {
+        "value": 900.0,
+        "basis": "8.0x FY2024 trough EPS 112.4; payout cut to 60%, net-cash buffer drawn (roughly 1.5x trough book)."
+      },
+      "base": {
+        "value": 1490.0,
+        "basis": "Warranted P/B 2.4x (ROE 21%, COE 11%, g 4%) on FY2025 BVPS 613.9; corroborated by through-cycle DPS 104/(11%-4%)=1,486; implies 9.0x through-cycle EBIT 3,191."
+      },
+      "bull": {
+        "value": 2600.0,
+        "basis": "JIIPE/utility mix lifts through-cycle EBIT to ~4,400 and ROE to ~24%, warranted P/B ~3.7x on BVPS ~700 (or ~14.5x bull EPS 179)."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-31T10:31:44+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-31T10:57:30+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-31T11:01:53+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-31T11:31:06+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-31T11:39:11+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-31T11:49:57+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-10-31T12:00:24+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-10-31T12:10:12+07:00",
+      "actor": "Gunawan",
+      "role": "PM_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first",
+      "markdown": "Committed pre-market; IDR bn.\n\n**2026E (partial actual).** 9M-26 revenue 46,531.4, EBIT 2,673.6, NI 2,211.2 (dossier lines 52-54). Q4-26E revenue 13,970 is below the Q3 run-rate, but EBIT 976 (6.99% margin) is 74bp ABOVE Q3's 6.25%, NI 784. Full year: revenue 60,500, EBIT 3,650 (6.03%), NI 2,995, EPS 151.3. The +43.6% y/y 9M revenue (vs 9M-25 32,395.7) is price-led: the deck's FY2027E Brent 84.0 is ~34% below war-premium spot \u2014 a high-price year, not a trend. EBIT grew 30.8%; trading volume thin-margin (9M-26 5.75% vs 6.31%).\n\n**2027E-2028E.** 2027E revenue 52,000 (-14%) as Brent normalises; EBIT 3,640 (7.0%) on price-insensitive distribution margin and the estate/utility mix (line 16) lifting margin toward FY2023's 8.4% (line 47). 2028E revenue 54,600 (+5% volume), EBIT 3,930 (7.2%). NI at the FY2025 NI/EBIT ratio 80.6% (lines 23-25); DPS at the 80.0% payout (line 45).\n\n**Load-bearing assumptions.** Shares 19,799.8m (line 35); equity 12,155.9; net cash 691.5 after a 1,906.8 (FY2023) \u2192 48.9 (FY2024) \u2192 691.5 (FY2025) path \u2014 a 97% FY2024 drawdown, rebuilt in FY2025 (lines 32-33), so the buffer is cyclical, not structural; capex 1,200-1,300/yr vs FY2025 actual 1,065.4 (line 40) \u2014 JIIPE capex undisclosed, the weakest input. Segment EBIT absent (lines 16, 49-54): the JIIPE inflection is unverifiable and gets no base credit. Net debt/EBITDA -0.20x (lines 32-33, 45). No reserves or cost-curve quartile apply; the asset is the distribution network's working capital.\n\n**Archetype and method.** dividend_income_anchor (registry rate 0.60), not commodity_capex_turnaround: no reserves, no life-of-asset capex cycle, so VAL_COMMODITY_CYCLICAL is adapted to through-cycle EBIT and dividend capacity. Spot earnings are cycle position, not value; the anchor is dividend capacity at through-cycle FCF. The SOE wrapper differs; the mature 80%-payout mechanism is AKRA's (line 45). p_up 0.55, a \u22120.05 deviation: 0.92x 3y FCF cover and FY2022's 34.5% payout (lines 25, 42) make the 80% payout a discretionary step-up, not entrenched; the named failure is live. Macro tilt: `balance_of_payments_pressure / CAUTIOUS` puts oil-import beneficiaries on AVOID; bear COE 12.5%. The 30-Oct DSI touches coal, not AKRA."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "From memory: the market frames AKRA as a high-yield fuel distributor with JIIPE a free option, anchored on dividend yield, not through-cycle earnings."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the ~80% payout is a melting ice cube because FY2024 FCF (159.2, line 41) missed the 1,973.7 dividend (line 42), and the 2026 spike is a cyclical peak.\n**Why wrong:** FY2024 was the outlier: FY2023/FY2025 covered 1.16x/1.45x, net cash is 691.5 (lines 32-33), and through-cycle EBIT held at 2.56-3.65tn (lines 21-25); JIIPE adds an unpaid non-cyclical utility/estate leg.\n**What proves us wrong:** a second FCF-collapse year (FY2026 FCF <1,000), a DPS cut below 100, or JIIPE/estate EBIT flat for two years once disclosed.\n**Market-implied read (Phase 2):** at 1,420 the tape capitalises FY2026E DPS 121 at 7.67% net (8.52% gross after 10% WHT) and sits 4.7% below our 1,490 base; on through-cycle DPS 104 it implies ~11.3% COE vs our 11% \u2014 a ~30bp durability premium. The market disputes durability, not level; at spot the ~7% net yield is the return, convergence ~1.9%/yr \u2014 a carry trade; hence entry below spot."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. FY2024 FCF 159.2 vs dividends 1,973.7 (lines 41-42); 3y FCF coverage 0.92x \u2014 not self-funded every year.\n2. 9M-26 revenue +43.6% vs EBIT +30.8% (lines 21, 52-54): low-margin trading volume, not franchise growth.\n3. FY2024 EBIT 2,562.6 vs FY2023 3,544.9 (line 23) \u2014 a 28% single-year swing; 25% ROE sits inside a 19.2-24.7% band (lines 45-47), not a step-up.\n4. ROE is leverage-assisted: assets/equity 3.01x (lines 31, 34) \u2014 returns depend on payables-funded working capital.\n5. Segment EBIT undisclosed (lines 16, 49-54); the JIIPE inflection may be entirely fuel-trading volume.\n6. The 2026-10-30 close 1,420 is 4.7% below base; mom6 +2.3% after mom12 +38.7% (screen 2026-10-26, \u22128.4% off 1,580) \u2014 the re-rating has happened; residual mispricing is durability, not price.\n7. 1-year range 1,070\u20131,580 (house series, 57 points); the 860 kill is below the whole tape, and flows are STALE (fund record empty, 0 fresh readings) \u2014 no ownership signal."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029; the position lost 30%: war-premium oil unwound, fuel-trading margins compressed, FY2026-27 earnings fell to the FY2024 trough, management cut the payout to fund JIIPE capex, and working capital consumed the net-cash buffer; DPS 104 fell toward 60. A 1,070-to-860 exit can clamp toward ~645 (\u221239.7%) through the 25% ARB band; a sizing tail, not down_pct."
+    },
+    {
+      "heading": "Earnings quality & governance",
+      "detail": null,
+      "markdown": "- **Accruals (3y, derived):** FY2023 -2.5%, FY2024 +2.8%, FY2025 -4.2% (CFO = FCF + capex, lines 40-41, over average assets, line 31); average -1.3%, below the ~10% flag; CFO derived, verify against the LK.\n- **Cash conversion:** CFO/NI 1.26x \u2192 0.61x \u2192 1.59x (2023-25); FCF/dividend 1.16x \u2192 0.08x \u2192 1.45x, 3y 0.92x.\n- **IDX notation:** not in dossier \u2014 data gap; confirm no *pemantauan khusus*/B/E/L/M/S.\n- **Related-party % of revenue:** not disclosed \u2014 data gap.\n- **Structure flags:** share count 19,737.2m \u2192 19,799.8m (line 35) is ESOP-consistent, not dilution; no PSAK 16 revaluation, pledge, auditor change or related-party placement. **Classified:** no manipulation-class flag; optics-class are the FY2024 FCF/payout gap and 2026 margin dilution."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "No published South Research report exists on AKRA.JK \u2014 no coverage folder, engine model, rating or target (checked 2026-10-31). The only house cross-reference, the 2026-10-26 WATCH idea card, scored the yield-inclusive return near +10.5%/yr against the card's ~9.5% cash proxy \u2014 not the house hurdle (10.44%, below); at the revised 1,070 entry this thesis clears the latter."
+    },
+    {
+      "heading": "Valuation, market state and EV math",
+      "detail": null,
+      "markdown": "Price 1,420 (2026-10-30, yfinance; prev 1,410), \u22128.4% off 1,580; 1-year range 1,070\u20131,580 (house series, 57 points); ADV IDR 28.25bn/day clears the 2bn floor 14x. Flows STALE (fund record empty, 0 fresh readings); float/pledge absent \u2014 disclosed gap.\n\n**Levels and EV math.** Target 1,490 = committed base (warranted P/B 2.4x on BVPS 613.9 = 1,473; the DPS cross-check 104/(11%\u22124%) = 1,486 is gross \u2014 net of 10% WHT it supports ~1,337, so the target rests on the P/B leg). Kill 860 = trough DPS ~60 at 7% (857), below bear 900 \u2014 falsification, not a stop. Entry 1,070 = the one-year low, the lowest level I will defend; 28.2% below base. ARB 25% (>IDR 200\u20135,000): a locked 860 exit clamps toward ~645 (\u221239.7% from 1,070), pre-mortem tail. p_up 0.55 (0.60 shaded \u22120.05, above); p_down 0.45. up_pct 39.25 = 1,490/1,070\u22121; down_pct \u221219.63 = 860/1,070\u22121. Carry is state-consistent: through-cycle DPS 104 net (8.75%) up, trough DPS 60 net (5.05%) down, weighted 7.08%; peak DPS 121 retired. Drag 1.25 = 0.15 buy + 0.25 sell + 0.10 final tax + 0.25\u00d72 slippage + 0.25 exit impact. expected_pct = 0.55\u00d739.25 + 0.45\u00d7(\u221219.63) + 7.08\u00d72.5 \u2212 1.25 = **+29.21% / 2.5y (10.80%/yr CAGR vs the 10.44% house hurdle, +0.35pp)**.\n\n**Win-state and Kelly.** p_up = 1.0: 39.25 + 8.75\u00d72.5 \u2212 1.25 = 59.9% / 2.5y = 24.0%/yr simple (20.6% CAGR), clears the 26.1% 2.5y hurdle by ~33.8pp; the maximum hurdle-clearing entry is 1,096 simple (139,595/E \u2212 101.25 = 26.10) and 1,078.5 compounded (1.1044^2.5 \u2212 1 = 28.18%); at 1,200 the same construction is ~6.0%/yr, so spot does not clear. Price-only up/|down| 39.25/19.63 = 2.00 vs library 1.67 \u2014 neither an under-set target (1,490 is committed base) nor a stop-loss kill (860 is falsification). Carry-inclusive ratio 59.9/8.3 = 7.2; the true downside is a payout cut, caught by the KPI kill (DPS <100; FCF cover <0.85x). Own-Kelly price-only 0.55/19.63 \u2212 0.45/39.25 = **+1.7%**; carry-inclusive, state-consistent 0.55/8.26 \u2212 0.45/59.87 = **+5.9%** (the flat-6.83-carry +7.3% was wrong; +3.9% at the old 1,110); library 0.60/15 \u2212 0.40/25 = **+2.4%**. At spot price-only own-Kelly is \u22127.7%, hence the discount."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check.** No fabrication: BVPS 613.9 = 12,155.9/19,799.8 (dossier 34-35); 9M-26 46,531.4/2,673.6/2,211.2 = quarterly sums (52-54); FY2024 FCF 159.2 vs div 1,973.7 (41-42). Caveat: \"through-cycle EBIT 3,191\" is 3.7% above FY22-25 mean 3,076 (23); \"2.56-3.65\" cites the forecast peak, not a dossier line. [MINOR]\n\n2. **Carry, widest error bar.** Target capitalizes through-cycle DPS 104 (1,486); ev_math pays peak FY2026E DPS 121 (9.08%) both states. At 104: carry 7.8%, up 42.4, down -10.1 \u2192 EV 0.6\u00d742.4+0.4\u00d7(-10.1)=+21.4%/2.5y = 8.6%/yr, under the 9.5% hurdle. \"Thin clear\" is a peak-DPS artifact. [MATERIAL \u2014 curable by lower entry]\n\n3. **Down-state double-count.** Down is defined by a payout cut (kill DPS<100; pre-mortem 60) yet still pays 9.08%/yr; state-consistent carry alone takes EV under hurdle. [MATERIAL]\n\n4. **Variant perception is noise.** Spot: 104/1420+4%=11.3% gross COE vs 11% (30bp); net of WHT 10.6% \u2014 no cheapness. Target capitalizes gross DPS while carry is net; net, target \u22481,337, up \u2248+11%, not +24. [MATERIAL]\n\n5. **Archetype misfit.** dividend_income_anchor needs a well-covered SOE/cash-cow payout (base_rates 156); AKRA is private, 3y FCF cover 0.92x, FY2024 0.08x \u2014 borrowing 0.60 without the -15% downside. At honest p_up 0.55, EV \u22487%/yr. [MATERIAL]\n\n6. **New disconfirming fact.** FY2022 dividends 829.0 vs NI 2,403.3 = 34.5% payout (dossier 25, 42); the 80-89% payout dates only from FY2023 \u2014 a three-year discretionary step-up, not the entrenched distribution cited. Gross debt 5,712.8 (32) is +89% since FY2022; net cash 691.5 is 12% of it. [MATERIAL]\n\n7. **Sizing/construction.** Body admits a locked 860 exit may clamp to ~645 (-46%), yet ev_math keeps -28.33%. up/down 0.85 \u21d2 price-only breakeven p_up \u224854%; the cushion is the disputed carry. Entry 1,200 sits 12% above the 1y low 1,070, filling on impaired news as readily as beta. ARB gap, not days-to-exit, is the risk. [MATERIAL]\n\n8. **Catalyst/anti-gaming.** No catalyst_date; AKRA dropped from the sleeve (absent 10-30/10-31) and flows are stale (0 readings) \u2014 no counterparty read. Idea card regime AGAINST, yet base COE stays 11%; LESSON-0001's tilt sits only in the bear. Stamps ordered/unedited; sole anomaly: the 10:14 commitment postdates the 10-30 close, so \"before any market number\" is unprovable. [MINOR]\n\n**Stop-objecting price:** entry \u22641,175 (\u22481,150 at p_up 0.55); at 1,200 honest EV \u22488.6%/yr, below hurdle.\n\n**Verdict: MAJOR_REVISION.** The \"thin clear\" is manufactured by paying peak FY2026E DPS against a model capitalizing through-cycle DPS 104 \u2014 price the carry as you price the target and this misses its own hurdle at 1,200."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. Fact-check [MINOR]: conceded. Through-cycle EBIT 3,191 is 3.7% above the FY22-25 mean 3,076 (dossier 23); base rests on the warranted-P/B leg.\n2. Carry [MATERIAL \u2014 conceded]: peak DPS 121 is out; up pays through-cycle 104 net (8.43% at 1,110), buying the lower entry.\n3. Down-state double-count [MATERIAL \u2014 conceded]: the down state pays trough 60 net (4.86%), weighted to 6.83% (was 9.08%); this bought 1,110.\n4. Gross-vs-net target [MATERIAL \u2014 partly conceded]: target 1,490 held on the committed P/B leg (2.4x \u00d7 613.9 = 1,473); the gross DPS cross-check supports ~1,337 net. WHT taxes the cross-check, not the multiple; base frozen; gap sits in the entry.\n5. Archetype misfit [MATERIAL \u2014 conceded]: label kept (no better key), p_up cut 0.60\u21920.55 for the private issuer and 0.92x 3y FCF cover.\n6. Payout history [MATERIAL \u2014 conceded]: FY2022's 34.5% payout (829.0/2,403.3, 25/42) makes 80-89% a three-year discretionary step-up; with point 5 it bought p_up 0.55.\n7. Sizing [MATERIAL \u2014 conceded]: entry 1,200\u21921,110; up/|down| 1.52. The ARB clamp (~645, \u221242%) is in the pre-mortem; down_pct stays level-based (lint binds it to kill/entry). Kill stays 860 \u2014 the derived falsification level; moving it into the ARB band would be a stop.\n8. Catalyst/anti-gaming [MINOR]: no catalyst_date; flows stale. The Phase-1 packet had NO market data \u2014 no prices, screen rows, targets or ratings \u2014 so the 10:14 commitment could not have used one. Stamps ordered; estimates unedited; LESSON-0001 now in the carry and entry.\n\n**Construction:** entry 1,110; target 1,490 (held); kill 860. p_up 0.55/p_down 0.45; up 34.23, down \u221222.52; carry 6.83; EV = 0.55\u00d734.23 + 0.45\u00d7(\u221222.52) + 6.83\u00d72.5 \u2212 1.25 = +24.5%/2.5y = 9.8%/yr vs 9.5%. Max hurdle-clearing entry 1,117; at 1,200 ~6.0%/yr.\n\n**ev_math >20% relative: up_pct 24.17\u219234.23 (+41.7%); down_pct \u221228.33\u2192\u221222.52 (20.5% relative); net_div_yield 9.08\u21926.83 (\u221224.8%) \u2014 back to Drew before the Judge.**"
+    },
+    {
+      "heading": "Re-attack",
+      "detail": null,
+      "markdown": "The revision is true in substance. 1: FY22-25 EBIT mean 3,076.4, 3,191 +3.7% \u2713. 2: up carry 8.43% \u2713. 3: down 4.865%, weighted 6.827 \u2713. 4: 2.4\u00d7613.9 = 1,473 and 93.6/0.07 = 1,337 \u2713 \u2014 WHT taxes dividends, not the multiple; holds. 5-6: p_up 0.55 now argued. 7: \u221222.52 vs \u221222.523 \u2713; clamp \u221242% \u2713. 8: the dossier header (\"Fundamentals only \u2014 no prices, valuation multiples, analyst targets or estimates\") makes the pre-market claim TRUE. EV recomputes exactly: 18.83 \u2212 10.13 + 17.075 \u2212 1.25 = 24.51.\n\n**Hurdle [MATERIAL \u2014 entry-curable].** 9.5% is the cash proxy (INDO cash 5.50% + 4%), not the house rule: base_rates fr_duration_carry and BOND_FR_MATH line 8 set FR+4%; 10y FR 7.16% (JSMR-002 line 49) \u2192 ~11.2%, the correction ASII-002 line 134 already conceded. Required 2.5y 27.9% simple / 30.3% compounded against 24.51% delivered (9.8% simple, 9.17% CAGR) \u2014 3.4/5.8pp short. And even on 9.5% the clear is rounding: at the computed P/B base 1,473 (the thesis's own), EV = 23.69% \u2014 0.06pp under \u2014 and the hurdle-clearing entry falls to 1,109. The +0.76pp is bought by the 1.13% round-up to 1,490. FR+4%-clearing entry \u22481,081 simple, \u22481,061 compounded.\n\n**Surviving.** [MATERIAL] ARB tail disclosed (\u221242%) but unpriced: a 10% clamp probability in the down state takes EV to 23.6% and down to \u221224.46% \u2014 it erases even the padded clear; carry it in size. [MINOR] Body Kelly applies flat 6.83 carry to both legs; state-consistent is 0.55/11.61 \u2212 0.45/54.06 = +3.9%, not +7.3% (quarter-Kelly \u22480.95%). [MINOR] \"Q4 EBIT 976 (6.25%)\" is 6.99% (976.4/13,968.6) against Q3's 6.25% \u2014 Q4 is the residual to committed FY EBIT, 74bp above not below the run-rate. [MINOR] Net cash 1,906.8 \u2192 48.9 \u2192 691.5 (dossier 32-33): a 97% FY2024 drawdown the thesis omits.\n\nSymmetry 1.52 vs library 1.67; kill 860 = 60/7% = 857 is falsification, not a stop (though 7% is below the thesis's 11% COE; 60/0.11 = 545 sits inside the clamp).\n\n**Verdict: MAJOR_REVISION.** The revision fixed the carry and paid with the entry, then measured it against a hurdle 1.7pp too low: at FR+4% the 1,110 entry earns 9.8%/yr against 11.2%, and even the 9.5% margin is a 1.13% target round-up.\n\n**Stop-objecting: entry \u22641,081 (\u22641,061 compounded); size carries the ARB tail.**"
+    },
+    {
+      "heading": "Revision",
+      "detail": "(2) \u2014 post re-attack",
+      "markdown": "**Hurdle [MATERIAL].** Net carry, 10y FR: 7.16% \u00d7 0.9 = 6.44%; + 4.00% = **10.44%/yr** (T-INDO-JSMR-002 line 49, 2026-10-02; BOND_FR_MATH \u00a74). 5y 6.70\u00d70.9+4 = 10.03% and the 2026-07-10 cache 6.95\u00d70.9+4 = 10.26% are lower, so 10.44% is the strictest honest bar. Drew's 11.2% omits the 10% coupon tax. Clearing entry: 1,096 simple (139,595/E \u2212 101.25 = 26.10), 1,078.5 compounded (1.1044^2.5 \u2212 1 = 28.18%); his 1,061 is 11.16% compounded, not the net hurdle.\n\n1. **Hurdle:** answered above; 1,070 clears at 29.21%/2.5y = 10.80% CAGR, +0.35pp.\n2. **ARB clamp [MATERIAL \u2014 sizing input]:** at 1,070 a 10% clamp probability moves the down state from \u221219.63% to \u221221.64% and EV from 29.21% to 28.31% (10.48% CAGR) \u2014 4bp over the hurdle. It cannot sit in down_pct (lint binds it to kill/entry): Voss/PM must cap size; any entry above ~1,071 fails tail-inclusive.\n3. **Kelly [MINOR \u2014 corrected]:** flat 6.83 carry on both legs was wrong. State-consistent at 1,070: 0.55/8.26 \u2212 0.45/59.87 = **+5.9%** own-Kelly (quarter \u22481.5%); +3.9% at the old 1,110, not +7.3%. Sentence corrected.\n4. **Q4 EBIT [MINOR \u2014 corrected]:** 976.4/13,968.6 = 6.99% vs Q3 6.25% \u2014 74bp ABOVE, not below; label corrected.\n5. **Net cash [MINOR \u2014 disclosed]:** 1,906.8 \u2192 48.9 \u2192 691.5 (FY2023-25, dossier 32-33) is a 97% FY2024 drawdown; added to load-bearing assumptions.\n6. **Stop-objecting:** entry 1,070 \u2264 1,081, at (not below) the 1y low; size capped for point 2.\n\n**Construction:** entry 1,070; target 1,490; kill 860. p_up 0.55/p_down 0.45; up 39.25, down \u221219.63; carry 7.08; EV = 0.55\u00d739.25 + 0.45\u00d7(\u221219.63) + 7.08\u00d72.5 \u2212 1.25 = **+29.21%/2.5y = 10.80%/yr** vs 10.44%. **Clears.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED \u2014 size_multiplier 0.25 \u2014 at a price (entry 1,070, resting limit; tail-inclusive ceiling \u22481,071).**\n\nGoverning hurdle: **10.44%/yr** \u2014 10y FR net carry (7.16% \u00d7 0.9 = 6.44%) + 4% (BOND_FR_MATH \u00a74, \"net carry\" per \u00a72 after the 10% coupon tax). Drew's 11.2% is gross \u2014 rejected; the analyst's 10.44% is the strictest honest bar in the 5\u201310y band (5y 10.03%, cache 10.26%).\n\n1. **Lint.** `pass: true`; sole WARN is whole-file 3,080 vs 1,600, structural from the immutable attack/revision logs; analyst body \u22481,267 words at the 1,200 operative cap \u2014 treated non-blocking. Stage chain monotonic and role-correct (draft 10:31:44 \u2192 attacked 10:57:30 \u2192 revision 11:01:53 \u2192 re_attacked 11:31:06 \u2192 revision 11:39:11); Bear logs verbatim and adversarial, no retro-edit, no consensus contamination.\n2. **Verdict margin.** The +0.35pp clear (10.80% vs 10.44%) is real but thin; after the admitted ARB tail it is ~10.48% (+4bp). Positive EV at honestly derived levels and no dispositive flaw \u2192 PASS, not KILL; a marginal kill would spend the 30-day cooldown on a defensible name and leave INDO 89.6% cash against its 60\u201395% band.\n3. **Entry at the 1y low = PASS at a price, not a 6a defect.** Payoff 2.00 (>1.3), kill not widened into the ARB band, p_up shaded only 0.05 with citation \u2014 the triple-haircut pattern is absent. Entry 1,070 is the hurdle-derived ceiling coinciding with the 1y low, not a momentum anchor; it rests as a price trigger.\n4. **Residual \u2192 size.** The surviving MATERIAL (ARB tail: a 10% clamp moves the down state to \u221221.64%, EV to 28.31%) is a sizing input, not dispositive. Undisclosed JIIPE capex (no base credit) and the private-issuer archetype misfit are the unverified inputs \u2192 starter size 0.25."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**Output contract: RECOMMEND_REDUCE (0.00 of PM size) \u2014 deterministic anchor 0.00% NAV because the ADV ruler is blind; re-review on refresh-adv. Ceiling once ADV is finite: Judge 0.25 \u00d7 anchor 10.00% = 2.50% NAV (IDR 381.79mn).**\n\n**Deterministic layer (run 2026-10-31T11:55:56+07:00).** `the risk checker --orders fund record --book INDO` returned `[]` \u2014 no pending tickets; book PASS. Governor NONE, dd \u22121.11%, gross 10.4%, cash 89.6%, NAV IDR 15,271,633,624. Flags: cash 89.6% above the 40% ceiling; only 2 names post-ramp (NORM); short-horizon theses below minimum (NORM). `the sizing engine size` (read-only): kelly_full 100.00%, kelly_quarter 25.00%, correlation haircut 10.3% (existing oil_gas 6.19% NAV), constitution cap 10.00%, **liquidity cap 0.00%**, **recommended_pct 0.00%**, **hard_max 0.00%**, binding constraint liquidity_cap; book heat 0.73% before and after; budget 12.0%, no WARN. `the liquidity feed` holds `AKRA.JK = null` (39 tickers; ERAA 62.09bn, MEDC 74.65bn), so the thesis's \"ADV IDR 28.25bn/day\" is not visible to the ruler; `the risk checker` lines 688-691 VETO and delete any AKRA buy on a missing/non-finite ADV. Nearest house datum: `market-data snapshot` adv_value 29.08bn (lookback 474d) \u2014 a real number, but not the ruler's file.\n\n1. **Factor-tag audit \u2014 PASS, no retag.** AKRA.JK carries oil_gas (factor) + domestic_cycle (factor2), both in the closed taxonomy and on the CSV row (ENERGY, mid, moderate, main). Fit: oil_gas on a fuel distributor is inventory/price beta, not reserve beta, and the script pins the name to the stricter oil_gas \u22127% rather than the broader energy \u22126% \u2014 conservative. domestic_cycle is the JIIPE estate/chemicals/industrial-demand leg; PGAS carries the identical pair. **Concentration in disguise:** the tags are honest but blind to the book's real bet \u2014 Indonesian domestic energy demand. Post-trade at 2.50%: oil_gas 8.69% (MEDC 6.19 + AKRA 2.50), ENERGY sector 8.69%, domestic_cycle 6.71% (ERAA 4.21 + AKRA 2.50), digital_id 4.21%. The shared lever is the macro call \u2014 oil-import-beneficiary AVOID under balance_of_payments_pressure / CAUTIOUS \u2014 which hits AKRA (importer) and MEDC (producer) on opposite oil-price signs: a partial hedge, not a doubling. **Post-trade book heat (\u03a3|position \u00d7 stress move|, worst tagged factor per name): IDR 137.86mn = 0.90% NAV** (ERAA 0.29 + MEDC 0.43 + AKRA 0.18pp), from 0.73% today, vs the 12.0% budget. **Governor headroom:** NAV 15.2716bn vs peak 15.4424bn (dd \u22121.11%); the \u22128% REVIEW level 14.2070bn leaves IDR 1.0647bn = 6.97% of NAV; the \u221215% DEGROSS level 13.1260bn leaves IDR 2.1456bn = 14.05%. A full stress day post-trade consumes 12.95% of the REVIEW room; the clamped down-state (finding 8) consumes 7.76%.\n\n2. **Stress-table honesty \u2014 PASS at this size.** Per-position 1-day loss at the proposed 2.50% (worst tagged factor, script convention): ERAA.JK 4.21% NAV \u00d7 digital_id \u22127% = \u2212IDR 44.97mn (\u22120.294% NAV); MEDC.JK 6.19% \u00d7 oil_gas \u22127% = \u2212IDR 66.16mn (\u22120.433%); AKRA.JK 2.50% \u00d7 oil_gas \u22127% = \u2212IDR 26.73mn (\u22120.175%). Book heat after: **\u2212IDR 137.86mn = 0.90% NAV**, vs 0.73% now. At the undiluted 10.00% anchor: AKRA \u2212IDR 106.90mn, book heat 1.43% NAV. Both inside the 12.0% budget. Honest caveat: the pinned \u22127% is a factor beta; AKRA's real stress day is inventory revaluation plus an estate-demand gap, and a policy shock can hit both legs at once \u2014 the table likely understates that joint move. No recalibration proposed here (MONTHLY_IC duty, needs realized worst days).\n\n3. **Concentration \u2014 PASS.** Name cap at cost 10.00%: proposed 2.50% (10.00% anchor). Sector ENERGY 8.69% vs 30.0%; factor oil_gas 8.69% vs 40.0% soft / 60.0% hard; gross post-trade 12.90% vs 100%; single trade 2.50% vs 5.0%; 3 names vs 15. Nothing binds but liquidity. At the full 10.00% anchor oil_gas = ENERGY 16.19% and domestic_cycle 14.21% \u2014 still inside 40/30. **The anchor equals the 10.00% at-cost cap; it is not above it.**\n\n4. **Liquidity \u2014 FAIL-CLOSED at the ruler, PASS on house data.** Script ADV for AKRA.JK is null, so days-to-exit is undefined and the cap is 0.00%; `the risk checker` will VETO. On house data, the FULL position at 20% ADV (screen adv 29.08bn \u2192 5.82bn/day) is **0.066 days at 2.50% (IDR 381.79mn)** and 0.263 days at 10.00% (IDR 1.527bn); on the thesis's 28.25bn, 0.068 / 0.270 days. Far under 7. The tape can absorb the exit; the source cannot certify it. **Do not stage until refresh-adv writes a finite AKRA ADV**; if it persists after one refresh, the source returned no volume history and the name is untradeable until fixed.\n\n5. **Kill-criteria hygiene \u2014 PASS, with two monitor-pipeline notes.** Price 2027-06-30 with the compound condition (FY2026 payout 0.5x): monitorable at the date, sources named. No vague criterion; nothing returns to the analyst.\n\n6. **Sizing audit \u2014 process clean; anchor binds at zero today.** `sizing.pm_pct` is null. Script anchor `recommended_pct` = 0.00% and `hard_max` = 0.00% because the ADV ruler is blind; kelly_quarter 25.00% less the 10.3% correlation haircut = 22.43%, not binding. The Judge's 0.25 applies after this review: 0.25 \u00d7 0.00% = **0.00% NAV today.** Once ADV populates at the house 29.08bn, the liquidity cap is 258.98% (non-binding), the anchor is the 10.00% at-cost cap, and the Judge's 0.25 permits **2.50% NAV = IDR 381.79mn**. The anchor is not above the constitution cap. Any `pm_pct` > 0 written today is above the script anchor \u2014 a process breach, VETO-level; after ADV populates, `pm_pct` \u2264 10.00% and the staged tranche \u2264 2.50%, downward deviation only.\n\n7. **Horizon balance \u2014 GAP, flagged.** risk_check NORM: short-horizon theses below the 2 minimum; the book is 2 long holdings plus this long candidate, zero short. Flagged in writing; no trade is forced or manufactured to clear it. Deployment: cash 89.6% vs the 60\u201395% band; a 2.50% starter takes cash to 87.1%, still above band \u2014 deployment pressure is not a reason to skip the ADV gate, and \u00a79a forbids it.\n\n8. **ARB-clamp tail \u2014 carried in size, not EV.** At a 10% clamp probability the down state is \u221221.64% and EV 28.31%/2.5y = **10.48% CAGR vs the 10.44% hurdle, +4bp.** The tail consumes the entire +0.35pp margin; the honest edge after it is 4bp. Tail-inclusive own-Kelly is still ~9.8x NAV full (~245% quarter), so Kelly does not bind \u2014 liquidity (today) and the 10.00% cap (once ADV exists) do. **Size I permit: 0.00% now; once ADV is finite, no more than the Judge's 2.50% NAV.** At 2.50% the tail-inclusive down loss is IDR 82.62mn (\u22120.54% NAV, 7.76% of the REVIEW room); at 10.00% it is IDR 330.48mn (\u22122.16% NAV, 31.0% of the room) bet on a 4bp edge \u2014 not permitted on this evidence."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "Sized at 2.5% NAV vs the script anchor's 10.0% \u2014 downward deviation only, applying the Judge's PASS_REDUCED 0.25 multiplier (0.25 \u00d7 10.0 = 2.50%). Script: constitution_cap 10.0% binding; liquidity cap 324.75% non-binding at ADV IDR 35.42bn/day; book heat 0.73% \u2192 1.43%.\n\nEntry rests as a waiting limit at 1,070 \u2014 24.6% below the 1,420 close, so nothing stages pre-open. Max fill 1,070 \u00d7 1.03 = 1,102.1; it tickets when price enters the 10% staging band.\n\nDeployment context: INDO 89.6% cash, below the 60\u201395% band \u2014 this starter is a step toward it, not a reason to chase. Voss CLEAR-with-notes at this size (ADV now finite; tail-inclusive cap 2.50%). Carry-guard: carry +16.4pp against a \u221219.63 down leg still nets a negative total, so the guard is not tripped."
+    }
+  ]
+}

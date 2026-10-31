@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "asof": "2026-10-31T09:23:22+07:00",
+  "asof": "2026-10-31T12:26:52+07:00",
   "counts": {
-    "theses": 47,
-    "ideas": 25,
-    "stocks": 48,
-    "dossiers": 35,
+    "theses": 49,
+    "ideas": 26,
+    "stocks": 49,
+    "dossiers": 36,
     "ic": 2,
     "daily": 51,
     "lessons": 3,
@@ -14,11 +14,11 @@
   "pipeline": {
     "by_verdict": {
       "KILL": 41,
-      "PASS_REDUCED": 6
+      "PASS_REDUCED": 8
     },
     "by_book": {
       "GLOBAL": 25,
-      "INDO": 22
+      "INDO": 24
     }
   },
   "kill_scorecard": {
@@ -485,7 +485,7 @@
     "doc": "research_doc_macro_regime",
     "regime": "balance_of_payments_pressure",
     "risk_appetite": "CAUTIOUS",
-    "asof": "2026-10-24",
+    "asof": "2026-10-31",
     "next_full_rebuild": "2026-11-07",
     "authors": [
       "Severin (global macro)",
@@ -520,6 +520,58 @@
     ]
   },
   "theses": [
+    {
+      "id": "T-INDO-AKRA-001",
+      "book": "INDO",
+      "ticker": "AKRA.JK",
+      "name": "AKR Corporindo",
+      "sector": "ENERGY",
+      "archetype": "dividend_income_anchor",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.25,
+      "horizon": "long",
+      "drafted": "2026-10-31T10:31:44+07:00",
+      "judged": "2026-10-31T11:49:57+07:00",
+      "entry": 1070.0,
+      "target": 1490.0,
+      "kill": 860.0,
+      "price": null,
+      "expected_pct": 29.21,
+      "p_up": 0.55,
+      "kelly_full_pct": 1648.8,
+      "pm_pct": 2.5,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-akra-001"
+    },
+    {
+      "id": "T-INDO-JPFA-001",
+      "book": "INDO",
+      "ticker": "JPFA.JK",
+      "name": "Japfa Comfeed Indonesia",
+      "sector": "CONSUMER",
+      "archetype": "neglected_midcap_discovery",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.5,
+      "horizon": "long",
+      "drafted": "2026-10-31T10:28:06+07:00",
+      "judged": "2026-10-31T11:39:11+07:00",
+      "entry": 1500.0,
+      "target": 2450.0,
+      "kill": 1125.0,
+      "price": null,
+      "expected_pct": 30.7,
+      "p_up": 0.44,
+      "kelly_full_pct": 466.7,
+      "pm_pct": 5.0,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-jpfa-001"
+    },
     {
       "id": "T-INDO-PTBA-001",
       "book": "INDO",
@@ -1746,9 +1798,29 @@
   "ideas": [
     {
       "book": "INDO",
+      "ticker": "AKRA.JK",
+      "name": "AKR Corporindo",
+      "verdict": "PROMOTED",
+      "regime": "AGAINST",
+      "sleeve": "MOMENTUM",
+      "asof": "2026-10-31",
+      "doc": "research_doc_idea_indo-akra"
+    },
+    {
+      "book": "INDO",
+      "ticker": "JPFA.JK",
+      "name": "Japfa Comfeed Indonesia",
+      "verdict": "PROMOTED",
+      "regime": "WITH",
+      "sleeve": "NEGLECTED",
+      "asof": "2026-10-31",
+      "doc": "research_doc_idea_indo-jpfa"
+    },
+    {
+      "book": "INDO",
       "ticker": "PTBA.JK",
       "name": "Bukit Asam",
-      "verdict": "ADVANCE",
+      "verdict": "PROMOTED",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
       "asof": "2026-10-31",
@@ -1853,16 +1925,6 @@
       "sleeve": "MOMENTUM",
       "asof": "2026-10-26",
       "doc": "research_doc_idea_global-cop"
-    },
-    {
-      "book": "INDO",
-      "ticker": "AKRA.JK",
-      "name": "AKR Corporindo",
-      "verdict": "WATCH",
-      "regime": "AGAINST",
-      "sleeve": "MOMENTUM",
-      "asof": "2026-10-26",
-      "doc": "research_doc_idea_indo-akra"
     },
     {
       "book": "GLOBAL",
@@ -2941,11 +3003,20 @@
       "book": "INDO",
       "name": "AKR Corporindo",
       "sector": "ENERGY",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-AKRA-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-10-31T11:49:57+07:00",
+          "drafted": "2026-10-31T10:31:44+07:00",
+          "doc": "research_doc_thesis_t-indo-akra-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "WATCH",
-          "asof": "2026-10-26",
+          "verdict": "PROMOTED",
+          "asof": "2026-10-31",
           "doc": "research_doc_idea_indo-akra"
         }
       ],
@@ -2956,7 +3027,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -3217,6 +3288,38 @@
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
+      "kill": null
+    },
+    {
+      "ticker": "JPFA.JK",
+      "book": "INDO",
+      "name": "Japfa Comfeed Indonesia",
+      "sector": "CONSUMER",
+      "theses": [
+        {
+          "id": "T-INDO-JPFA-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-10-31T11:39:11+07:00",
+          "drafted": "2026-10-31T10:28:06+07:00",
+          "doc": "research_doc_thesis_t-indo-jpfa-001"
+        }
+      ],
+      "ideas": [
+        {
+          "verdict": "PROMOTED",
+          "asof": "2026-10-31",
+          "doc": "research_doc_idea_indo-jpfa"
+        }
+      ],
+      "dossier": {
+        "asof": "2026-10-31",
+        "kind": "auto",
+        "doc": "research_doc_dossier_jpfa-jk"
+      },
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -3481,7 +3584,7 @@
       ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-10-31",
           "doc": "research_doc_idea_indo-ptba"
         }
@@ -3749,6 +3852,14 @@
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
       "doc": "research_doc_dossier_ggrm-jk"
+    },
+    {
+      "ticker": "JPFA.JK",
+      "name": "Japfa Comfeed Indonesia",
+      "asof": "2026-10-31",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_jpfa-jk"
     },
     {
       "ticker": "KLBF.JK",

@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-JPFA-001",
+  "title": "Japfa Comfeed Indonesia (JPFA.JK)",
+  "meta": {
+    "id": "T-INDO-JPFA-001",
+    "book": "INDO",
+    "ticker": "JPFA.JK",
+    "name": "Japfa Comfeed Indonesia",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "neglected_midcap_discovery",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.5,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-10-31T10:11:41+07:00",
+    "drafted": "2026-10-31T10:28:06+07:00",
+    "judged": "2026-10-31T11:39:11+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1500.0,
+    "target": 2450.0,
+    "kill": 1125.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base at 7.0% normalised EBIT margin (4y mean) on FY2026E revenue 70,800 -> EPS ~272 x 9.0x justified P/E; DCF cross-check withdrawn (point 8). Exit at/before target or on a kill criterion.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.44,
+    "up_pct": 63.3,
+    "p_down": 0.56,
+    "down_pct": -25.0,
+    "net_div_yield_pct_pa": 7.2,
+    "fee_tax_drag_pct": 1.2,
+    "expected_pct": 30.7,
+    "horizon_years": 2.5,
+    "carry_pct": 16.8,
+    "kelly_full_pct": 466.7
+  },
+  "sizing": {
+    "script_pct": 10.0,
+    "pm_pct": 5.0,
+    "deviation_reason": "Judge PASS_REDUCED 0.5 multiplier applied to the 10.0% script anchor (constitution cap); governance/related-party disclosure cap"
+  },
+  "base_rate": {
+    "rate": 0.44,
+    "source": "the base-rate library neglected_midcap_discovery (0.44; +55/-30; 2.5y; n=30; Arbel & Strebel 1982). washout_rebound (0.45/+50/-25; 1.5y) not used: re-keying would raise p_up without new evidence and its 1.5y horizon misfits the 2.5y normalisation.",
+    "library": {
+      "rate": 0.44,
+      "base_up_pct": 55.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1125.0,
+      "action": "exit_full",
+      "note": "Honest failure value: ~5.0-5.65x Q2-26 annualised EPS 227 / bear EPS 199, -25% from entry - a falsification mark, NOT a 13.8% stop; margin KPIs fire first; ARA/ARB gap fill 1-2 bands below is the tail beyond down_pct"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "exit_full",
+      "condition": "FY2026 audited LK prints EBIT margin <6.0% or FY2026 net income <IDR3,000bn (no H2-26 recovery toward mid-cycle)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 5.0,
+      "action": "exit_full",
+      "name": "quarterly EBIT margin",
+      "source": "JPFA.JK quarterly LK, operating income / revenue; two consecutive quarters"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 3.5,
+      "action": "review",
+      "name": "net_debt_to_ebitda",
+      "source": "JPFA.JK audited FY LK, (total debt - cash) / EBITDA"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 74.0,
+      "action": "exit_full",
+      "name": "DPS cut below 74 or rights issue",
+      "source": "RUPST/IDX keterbukaan; DPS below FY2025's 74 or any rights issue"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        55800.8,
+        60715.8,
+        70800.0,
+        74700.0,
+        78400.0
+      ],
+      "ebit": [
+        4975.2,
+        5926.7,
+        6050.0,
+        5229.0,
+        5880.0
+      ],
+      "net_income": [
+        3018.9,
+        4004.0,
+        4017.0,
+        3338.0,
+        3845.0
+      ],
+      "eps": [
+        260.0,
+        344.0,
+        345.0,
+        287.0,
+        331.0
+      ],
+      "dps": [
+        70.0,
+        74.0,
+        120.0,
+        115.0,
+        132.0
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle normalised EPS x justified P/E (9x at ~19% ROE, 5% g, ~13% IDR CoE); FCFF DCF cross-check (WACC 11.5%, g 4%)",
+      "bear": {
+        "value": 1500.0,
+        "basis": "Trough: EBIT margin 5.5% (near FY2022 5.3%) on ~IDR72tn revenue -> EPS ~IDR199; 7.5x = IDR1,500; FY2023 net-debt/EBITDA 4.76x is the downside template."
+      },
+      "base": {
+        "value": 2700.0,
+        "basis": "Mid-cycle EPS ~IDR300 (7.0-7.5% EBIT margin, between FY2023 4.0% and FY2025 9.8%) x 9x; DCF cross-check ~IDR2,300-2,650; ~4.0-4.4% dividend capacity."
+      },
+      "bull": {
+        "value": 4250.0,
+        "basis": "Downstream/consumer mix holds 8.5% EBIT margin through cycle (FY2024-25 8.9-9.8%) -> EPS ~IDR387 x 11x re-rate = IDR4,250."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-10-31T10:28:06+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-10-31T10:57:08+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-10-31T11:09:58+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-10-31T11:21:04+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-10-31T11:39:11+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-10-31T12:01:21+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-10-31T12:10:26+07:00",
+      "actor": "Gunawan",
+      "role": "PM_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first",
+      "markdown": "Actuals from the dossier.\n\n**Through-cycle frame.** EBIT was IDR2,578.0bn (FY2022, 5.3%), 2,033.4bn (FY2023 trough, 4.0%), 4,975.2bn (FY2024, 8.9%), 5,926.7bn (FY2025 record, 9.8%) on revenue 48,972.1/51,175.9/55,800.8/60,715.8bn (Income statement); mean 7.0%. I normalise at 7.0-7.5% EBIT, not the FY2025 peak or FY2023 trough: the Processing & Consumer and Feed mix (Business) supports the upper half; the house ag deck has FY2027E corn US$214.57 vs spot US$176.17 (+22%) and soymeal US$411.0 vs US$357.92 (+15%). Marker: observed 4-year range.\n\n**FY2026E.** Revenue IDR70,800bn: H1-26 actual 35,355.1bn annualises to ~70,710bn; H2 flat H/H (Latest quarters). EBIT 6,050bn (8.5%): H1 3,536.2bn (10.0%; Q1 13.7%, Q2 6.3%) plus H2 at 7.1%. Q1's 13.7% is the peak; annualising it (EPS ~625) is the incentive-price trap. Net interest ~900bn (FY2025: 5,926.7 less NI/0.78 = 793.4bn); tax 22%. NI 4,017bn, EPS 345 - flat vs FY2025's 344 on +17% revenue: margin, not volume, normalises.\n\n**FY2027-28E.** Revenue 74,700/78,400bn (+5.5%/+5.0%); EBIT margin 7.0%/7.5%; NI 3,338/3,845bn; EPS 287/331; normalised ~IDR300. DPS 70/74 (FY2024A/25A); FY2026E 120 = IDR90 interim (2026-10-28, IDR1.05tn; coverage/companies/JPFA.JK/news.jsonl) plus a final; FY2027-28E 115/132 at ~40% payout vs FY2025 21.5%/FY2023 62.5% (Derived ratios).\n\n**Valuation.** Base IDR2,700 = 9.0x normalised EPS 300; 9x is the justified P/E at ~19% normalised ROE, 5% growth and ~13% IDR CoE (FY2025 ROE 21.5%, FY2024 19.5%; BI 5.75% house macro deck plus ERP). FCFF DCF cross-check (7.0-7.5% margin, 2.5% capex, 11.5% WACC, 4% g) ~IDR2,300-2,650. At the H1-26 10.0% margin value is ~IDR3,930 (EPS ~437 x 9x); the ~45% gap is uncapitalised cycle premium. Bear IDR1,500 (5.5% margin, EPS 199, 7.5x); bull IDR4,250 (8.5% margin, EPS 387, 11x). Net-debt/trough-EBITDA was 4.76x in FY2023 vs 1.27x now (Derived ratios): the balance sheet survives; dividend capacity ~4.0-4.4%, so earnings, not yield, is the anchor. Cost-curve quartile, segment data, volumes and realised prices are absent - missing, not assumed."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "From memory, pre-document: \"Japfa is a peak-cycle poultry/feed commodity name - record FY2025 earnings rolling over (Q2-26 NI 659 vs Q1 1,816), thin coverage, family-controlled; a value trap until the cycle troughs.\""
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** FY2025 EPS 344 and Q1-26's 13.7% margin are the top; Q2-26's collapse confirms a down-cycle; thin coverage and family control make the neglect deserved.\n\n**Why wrong:** The four-year EBIT margin range (4.0-9.8%, mean 7.0%) brackets mid-cycle 7.0-7.5%, i.e. normalised EPS ~300 on the FY2026E revenue base - not FY2023's 80 or FY2025's 344. Net debt/EBITDA is 1.27x vs 4.76x at the FY2023 trough (Derived ratios); the IDR90 interim (2026-10-28) shows cash reaching minorities. Neglect is a coverage gap (universe \"thin\"; no house model), not a fundamentals gap. Archetype is neglected_midcap_discovery, not capex-turnaround (capex +62% FY2025, fact 5 - no supply discipline); discovery signal: the IDR90 interim.\n\n**Market-implied read (Phase 2):** IDR1,740 is ~6.4x normalised EPS 272 (1,740/272) versus the 9.0x warranted: the market capitalises the FY2023-trough EPS (~199) as permanent, ignoring FY2026E DPS 120 (6.9% gross yield at spot). That is wrong because the 4.0-9.8% range already brackets the mid-cycle the market refuses to price.\n\n**What proves us wrong:** two consecutive quarters of EBIT margin 3.5x, or a dividend cut/rights issue - then Q2-26's margin is the run-rate."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, observable, current, each citing a dossier/filing line",
+      "markdown": "1. Q2-26 EBIT 1,102.9bn vs Q1-26 2,433.3bn (-55%) on flat revenue (17,641.1 vs 17,714.0bn): the swing is margin, and H1 is front-loaded by a peak Q1 (Latest quarters).\n2. FY2025 EBIT margin 9.8% vs 5.3% (FY2022)/4.0% (FY2023); ROE 21.5% (Income statement; Derived ratios) - not a mid-cycle base.\n3. Derived CFO/NI 2.55x -> 1.61x -> 1.25x (FY2023-25); assets +15.6% vs revenue +8.8% in FY2025; FCF 2,193.5bn vs 3,120.7bn despite record NI (Balance sheet; Cash flow).\n4. Q4-25 NI 1,592.6bn = 40% of FY2025's 4,004.0bn (Latest quarters; Income statement): Q1-Q3 unaudited; Q4 true-ups can flatter it.\n5. FY2025 capex 2,818.7bn vs FY2024 1,739.7bn (+62%) (Cash flow): capex is expanding, not contracting - not a capex-turnaround setup; growth capex explains lagging FCF.\n6. No segment revenue/EBIT or related-party note (Business): the Japfa Ltd parent channel is unverifiable, so \"deserved neglect\" cannot be excluded."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "2029, down 30%: Q1-26's 13.7% margin was the peak, corn/soymeal rose, poultry prices normalised, group EBIT margin settled at 5.5-6.0% (FY2023: 4.0%), EPS came near IDR200, not 300, and the stock de-rated to 7x. Second: the parent captured the recovery via related-party terms (peer WMPP lesson: a protein recovery the holding structure does not pass on); the interim dividend was a one-off. Third: balance_of_payments_pressure kept IDR weak (USD/IDR FY2027E 18,350 vs spot 18,070.4 deck / 18,080 onshore), raising feed costs while the INDO rate-sensitive consumer tilt stayed AVOID."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "No South Research report is published on JPFA.JK \u2014 no coverage dossier, engine model, rating or target; coverage/companies/JPFA.JK holds only fund record (checked 2026-10-31). The only peer coverage is WMPP.JK (house SELL, \"a protein recovery the holding structure does not pass on\"). That is a different holding structure, so it does not contradict this thesis; it is, however, why the pre-mortem's parent-capture risk is load-bearing."
+    },
+    {
+      "heading": "Earnings quality & governance",
+      "detail": null,
+      "markdown": "- **Accruals ratio (3y):** FY2023 -4.3%, FY2024 -5.4%, FY2025 -2.7% = (NI - CFO)/average total assets; CFO derived as FCF + |capex| (Cash flow); the dossier gives no reported CFO - a derived proxy, not an audited line. Negative = cash-backed; no accruals red flag.\n- **Cash-conversion trend:** CFO/NI 2.55x -> 1.61x -> 1.25x (FY2023-25), above 1 but deteriorating; FY2025 FCF 2,193.5bn vs NI 4,004.0bn. Optics-class watch from capex/working capital, not revenue recognition.\n- **IDX board/notation:** main board (the INDO universe); no special notation (B/E/L/M/S) or papan pemantauan khusus in the dossier - unverified against the LK cover (missing). Q1-Q3 LK unaudited; Q4 true-ups expected (Q4-25 = 40% of FY2025 NI).\n- **Related-party % of revenue:** not disclosed; Japfa Ltd control also undocumented - verify in audited LK notes. Structure flag, unquantified.\n- **Structure flags:** shares stable 11,627.7m FY2022-25 (no rights issue); pledged shares, auditor, PSAK 16 revaluation not disclosed (missing). No manipulation-class flag; three optics-class gaps. Not a clean pass.\n\n**Win-state and Kelly.** At p_up = 1.0 the gross win is 63.3 + 7.2\u00d72.5 \u2212 1.2 = 80.1% over 2.5y (32.0%/yr simple; ~26.5%/yr compounded; 25.3%/yr price-only) versus the ~9.5%/yr hurdle. From the required 23.75% over 2.5y: (2,450/E \u2212 1)\u00d7100 + 7.2\u00d72.5 \u2212 1.2 = 23.75, so E = 2,450/(1 + (23.75 \u2212 16.8)/100) = 2,450/1.0695 \u2248 2,291 \u2014 the maximum hurdle-clearing entry, well above the 1,500 limit. Own-Kelly price-only = 0.44/25 \u2212 0.56/63.3 = 0.88%; library-Kelly = 0.44/30 \u2212 0.56/55 = 0.45%; up/|down| = 63.3/25 = 2.53 versus the archetype library ratio 55/30 \u2248 1.83."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check clean.** FY2025 EBIT 5,926.7/9.8% (dossier L23/L45); 4y mean 7.0% (L23/L21); ND/EBITDA 1.27x (L45). H1-26 sums and Rp90 interim tie. [MINOR]\n\n2. **Estimates.** 7.0-7.5% is above the 6.98% 4y mean; Q2-26 printed 6.25% (L52-53); deck corn +21.8%/soymeal +14.8%, unpriced. At 6.0%: EPS 240, 9x = 2,160 (+24%). Needs 7.5% AND 9x: fragile, single-assumption dependency. [MATERIAL]\n\n3. **Valuation.** 9.0x requires a ~74% payout; the model pays 40% (115/287), so 13% CoE/5% g gives 5.0x = 1,500 - your kill is your base. Basis: 4.0-4.4% capacity, ev_math 6.21%. [MATERIAL]\n\n4. **Variant.** 1,740/344 = 5.06x FY2025 EPS - the market pays 5x on PEAK earnings, not 8.7x on \"trough EPS 199.\" The bet is a 1.8x re-rating on lower EPS; family control and related-party opacity (fact 6) make 5x fair. [MATERIAL]\n\n5. **Archetype.** US$1.1bn cap, IDR24.5bn ADV, dividend already press-covered at ~5% (Kontan 2026-10-29, fund record d647da8c0ee3ea6e): not thin-coverage discovery. Shape (-37% off high, mom6 -30%) is washout_rebound (0.45/+50/-25); key keeps up 55, cuts down 30 to 13.8. [MATERIAL]\n\n6. **Construction.** Kill -13.8%; at 42.8% vol that barrier is ~84% likely touched in 2.5y, zero drift - a stop, not a falsification. 1,500 is ~7.5x bear EPS 199, above today's 5.06x: Q2-26 annualised EPS 227 at 5.06x = ~1,150, -34% (L54). At -30%: EV 21.8%, 8.2%/yr  EV 28% (~10.6%/yr); kill re-set to the margin criteria.\n\n**Verdict: KILL_RECOMMENDED.** The trade needs the market to double its multiple on lower earnings while its own 13.8% kill is ~84% likely to fire on noise first."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. Accepted \u2014 fact-check clean.\n2. Conceded \u2014 margin 7.0\u20137.5% \u2192 7.0% (the 4y mean); target 2,700 \u2192 2,450. Not 6.5%: the feed spike is in the range.\n3. Held \u2014 9x = Gordon at 16\u201319% normalised ROE, 5% g, 13% CoE (payout ~69\u201374%); the 40% DPS is conservative carry, not policy (FY2023 62.5%). 5x assumes FY2023's 7% ROE is permanent \u2014 the variant.\n4. Conceded \u2014 spot pays 5.06x peak EPS; on revised EPS 272 spot is 6.4x, so the re-rate is 1.41x, not 1.78x. The bet is ROE durability.\n5. Partly conceded \u2014 coverage is not thin. I keep the 2.5y neglected key: re-keying to washout (0.45/1.5y) raises p_up without new evidence and misfits the horizon. No number move.\n6. Conceded (FATAL) \u2014 1,500 under 1,740 was a 13.8% stop. Entry \u2192 1,500 (bear value; max fill 1,545, 11.2% below close, outside stage_within_pct 10% \u2192 waiting trigger). Kill \u2192 1,125 (\u221225%), the failure value at ~5.0\u20135.65x Q2-26 annualised/bear EPS, not a stop; margin KPIs fire first. Base \u2192 2,450 (7.0% \u00d7 9x); EV +30.7%/2.5y (~11.3%/yr), still ~10.3%/yr at \u221230%.\n7. Conceded \u2014 no dated catalyst; catalyst_date null. Entry at 1,500, not spot, answers the Q3/feed risk; margin KPI and date kill cover the print.\n8. Conceded \u2014 D&A 598.2bn is a derived proxy; capex/D&A 4.7x (capex 4.64% vs DCF 2.5%) \u2192 DCF cross-check withdrawn. Target rests on 9x; capex/D&A risk is the \u221225% leg.\n9. Conceded \u2014 the Rp1.05tn interim may be parent cash-upstreaming; unproven. Priced in the wider down leg and a DPS-cut/rights exit, not a second carry cut.\n10. Conceded \u2014 USD/IDR corrected to 18,070.4/18,080; commit evidenced by estimates_committed_at; revision stamped.\n\n**ev_math >20% relative: down_pct \u221213.8 \u2192 \u221225.0 \u2014 back to Drew before the Judge.**"
+    },
+    {
+      "heading": "Re-attack",
+      "detail": null,
+      "markdown": "**FATAL 6 is answered.** Entry 1,500 = bear fair value; kill 1,125 = 4.96x Q2-26 annualised EPS 227 / 5.65x bear EPS 199 \u2014 a permanent-trough falsification, not a stop. Recompute: up 63.3%; down \u221225.0%; carry 120\u00d70.9/1,500 = 7.20%/yr; EV = 0.44\u00d763.3 + 0.56\u00d7(\u221225) + 18 \u2212 1.2 = 30.7% (11.3%/yr). Clears 23.75% by 6.9pp (25.47% compounded by 5.2pp); at \u221230%, 27.9% \u2192 10.3%/yr \u2014 the kill survives a 30% gap-fill.\n\n**Point-by-point.** 1,4,7,9,10 conceded \u2014 accepted. 2: target checks (70,800\u00d77.0%\u2212900 interest, \u00d70.78, \u00f711.628 = EPS 272.1; \u00d79 = 2,449). 3: Gordon is consistent (0.69\u20130.74 payout = 9.06\u20139.71x; 16.7\u201319.2% ROE); my old 5x held g=5% at 40% payout, violating sustainable growth \u2014 withdrawn. 5: neglected (0.44) sits below washout (0.45), so it does not flatter. 8: only partly conceded.\n\n**Surviving objections.**\n- [MATERIAL] 9x is load-bearing: the hurdle breaks at 8.14x; Gordon at CoE 14% = 8.17x, leaving ~0.3pp. A 42.8%-vol family-controlled name does not obviously merit 13%.\n- [MATERIAL] 7.0% is still *reported* EBIT after the D&A point: FY2022-25 capex/D&A 5.56x, D&A 1.49% of assets. At a half-adjusted 6.5% margin, EV 24.4% \u2192 9.1%/yr, below the 9.5% hurdle. The DCF was withdrawn; the margin was not.\n- [MATERIAL] Carry is added to both branches, but the DPS-cut kill at 74 will not fire on a 120\u219290 cut (90>74), which cuts carry to 5.4%. Normalised carry (5.7%) still clears at 10.0%/yr; the listed kill does not protect it.\n- [MINOR] 1,125 likely binds before the two-quarter <5% KPI (5% margin implies ~885\u20131,000); \"margin KPIs fire first\" is wrong, but 1,125 is a valid 5x backstop.\n- [MINOR] Entry is 13.8% below spot \u2014 a conditional fill against an unconditional p_up 0.44.\n- [MINOR] Body stale: \"Bottom-up estimates\" still says 2,700/EPS 300 with a live DCF vs frontmatter 2,450/272. Reconcile.\n- [MINOR] Bear EPS 199 is loose: 5.5% on 72tn gives 205.\n\nNo original MATERIAL survives as a block. **Stop objecting at 1,450; at the proposed 1,500 only if carry is normalised to 5.7% and the DPS kill is re-set to the FY2026E forecast.**\n\n**Verdict: SURVIVES_WITH_SCARS.** The revision is real; the edge is one multiple-notch and one margin-notch wide."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**PASS_REDUCED \u2014 size_multiplier 0.5.** Right-shaped and honestly rebuilt, but the edge is one multiple-notch and one margin-notch wide. Half size; not a kill.\n\n1. **Governing hurdle: BOND_FR_MATH \u00a74 \u2014 10.44%/yr** (10y IDR 7.16% \u00d7 0.9 net + ~4% equity premium), not the desk's round 9.5%. Base case (30.7%/2.5y, ~11.3%/yr compounded) clears by ~0.9pp: positive but thin. The reviewed deck's 7.45% print implies ~10.7%; noted, not decisive.\n2. **Entry 1,500 is a PASS at a price, not a construction defect.** It is valuation-derived (bear value: 5.5% margin, EPS ~199, 7.5x); the kill 1,125 is falsification-derived (~5x trough EPS), with a 2.53:1 payoff and p_up at the registry prior. The conditional fill (13.8% below spot) is a size haircut.\n3. **Surviving MATERIAL scars \u21d2 0.5, not PASS.** (i) 9x is load-bearing: the 10.44% break is ~8.7x (~8.4x on simple annualisation). (ii) 7.0% is reported EBIT after the D&A undercharge; 6.5% \u2192 ~9.1%/yr. (iii) The DPS kill at 74 misses a 120\u219290 cut; normalised carry ~5.7% \u2192 ~10.0%/yr. Each alone fails the hurdle.\n4. **No dispositive flaw \u21d2 no KILL.** Inputs cite the dossier/news.jsonl (IDR90 interim verified); archetype is a registry key; no consensus input; main board, no manipulation flag; ADV IDR24.5bn clears liquidity. The archetype is conservative (0.44 < washout 0.45).\n5. **Rule 6:** up_pct's rise (55\u219263%) is mechanical from the 1,740\u21921,500 entry; the target was cut 2,700\u21922,450, so no win-case raise and no new-evidence citation is owed.\n6. **Correction applied:** 35 KILL / 5 PASS_REDUCED / 0 fills and 89.6% INDO cash \u2014 a marginal kill spends the cooldown on the one name that cleared the screen.\n7. **Before the ticket:** re-base the DPS kill to FY2026E; reconcile the stale body (2,700/EPS 300/live DCF) to frontmatter 2,450/272."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "CLEAR_WITH_NOTES \u2014 clear in judgment at 3.5x (source: audited FY LK); date 2027-03-31 vs FY2026 audited LK margin  74), so it does not protect the 7.2%/yr carry leg \u2014 re-base to FY2026E before the ticket (Judge item 7); (b) the 1,125 price kill likely binds before the two-quarter margin KPI (a 5.0% margin implies ~885-1,000), so margin KPIs fire first is wrong, though 1,125 remains a valid ~5x backstop. No vague criteria; no return to the analyst required.\n\n9. **Horizon balance.** JPFA is long / 2.5y. The book holds 0 short-horizon theses against min_short_horizon_theses 2 (risk_check NORM). This trade does not close that gap and is not asked to; journaled, and no catalyst trade is manufactured to clear the flag.\n\n10. **Structural risk \u2014 governance and the wait trigger.** Japfa Ltd (family/parent) control is documented; related-party revenue share, segment revenue/EBIT, auditor, pledged shares and any PSAK 16 revaluation are all **undisclosed** in the dossier (fact 6). The Rp1.05tn interim (2026-10-28) is 48% of FY2025 FCF, paid days before a quarter whose EBIT fell 55%: the Bear reading \u2014 parent cash-upstreaming through related-party terms \u2014 is at least as plausible as the thesis reading that cash is reaching minorities, and neither can be verified on current disclosure. Stated plainly: an unquantified governance risk that can invert its own discovery signal, with a peer precedent (WMPP.JK) for a protein recovery the holding structure did not pass on. It reduces the size I permit: it is why I would not allow the 10.0% anchor even on clean ADV \u2014 permitted size is the Judge 0.50 x 10.0 = 5.0% and no more, and no add without related-party disclosure verified in the audited LK notes. It does not force a cut below 5.0%: the -25% kill leg and p_up 0.44 already price a failed pass-through, and a maximum loss-to-kill of 1.25% NAV is survivable. The entry 1,500 (max fill 1,545) is 13.8% (11.2%) below the 1,740 close, outside stage_within_pct 10.0, so the entry stager writes no ticket by intent: a waiting price trigger, not an immediate fill. The governance risk is not being bought at spot."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "Sized at **5.0% NAV** (IDR ~763.6m) against the script anchor's 10.0%: the Judge's PASS_REDUCED 0.50 multiplier binds, and Voss's governance cap (Japfa Ltd related-party disclosure unverified; the Rp1.05tn interim possibly parent cash-upstreaming) confirms no add above 5.0%. Sizing is downward-only, fully justified.\n\n**No ticket today.** At 1,500 the max fill is 1,545 \u2014 11.2% below the 1,740 close, outside the 10% stage window \u2014 so `the entry stager` writes nothing; this rests as an **intended waiting price trigger** until 2027-03-31. At 1,500 the trade is only available **if the market falls another 13.8%**.\n\nDeployment context: INDO is 10.4% gross vs the 60\u201395% band \u2014 a standing IC gap; this name stays a conditional fill, not a reason to chase. Flows stale (0 readings). Voss conditions precedent before any add: verified related-party disclosure and a DPS kill re-based to FY2026E."
+    }
+  ]
+}

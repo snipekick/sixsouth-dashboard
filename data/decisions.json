@@ -1,6 +1,33 @@
 [
   {
     "meta": {},
+    "body": "# WEEKLY_DEEP Session Journal \u2014 2026-10-31 (Sat)\n\nSession launched 2026-10-31T10:02:04+07:00. **Two INDO deep-dives built and both survived the gauntlet: JPFA PASS_REDUCED 0.50 (5.0% NAV) and AKRA PASS_REDUCED 0.25 (2.5% NAV); both entries rest as waiting price triggers, so nothing stages today. Macro = DELTA (no marker tripped). No post-mortem, no ingestion, no GLOBAL deep-dive. One systemic finding (the INDO equity hurdle) and one plumbing finding (ADV feed gap) escalated.**\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d` (standing; owner OPS/MONTHLY_IC 2026-11-07). Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; `pending_orders` [].\n- GLOBAL: NAV **$1,011,898.20**, 100% cash, 0 holdings. INDO: NAV **IDR 15,271,633,624**, 89.6% cash, 2 holdings, gross **10.4%**, dd \u22121.11% (peak 15,442,359,817). Both books below the 60\u201395% deployment band \u2014 standing IC matter, not re-escalated as a trigger.\n- `kill_revisits`: QCOM (GLOBAL, \u221218.4% vs kill 201.97), PNBN.JK (\u221215.4%), ELSA.JK (\u221210.1%). `judged_unticketed`: AADI, TINS, NVO, PTBA. `awaiting_pm_sizing`: PTBA (anchor refuses \u2014 open carry-convention\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-31T12:11:25.696325+07:00",
+      "book": "INDO",
+      "title": "JPFA.JK sized 5.0% NAV (PASS_REDUCED 0.50) \u2014 waiting limit 1,500",
+      "thesis": "T-INDO-JPFA-001",
+      "kind": "sizing"
+    },
+    "body": "Deterministic anchor fund record size = 10.0% NAV (constitution_cap 10.0 binding; Kelly quarter 25.0 x 0.93 correlation haircut; liquidity cap 225%; book_heat_after 1.23%). Judge PASS_REDUCED size_multiplier 0.50 binds: pm_pct = 0.50 x 10.0 = 5.0% NAV (~IDR 763.6m). Voss CLEAR_WITH_NOTES at <=5.0% NAV; governance cap (Japfa Ltd related-party disclosure unverified; Rp1.05tn interim possibly parent cash-upstreaming) blocks any add above 5.0%. Price at decision 1,740; entry 1,500 limit (max fill 1,545) sits 11.2% below close, outside stage_within_pct 10%, so fund record writes NO ticket \u2014 rests as an intended waiting price trigger until 2027-03-31; the trade fills only if the market falls another 13.8%. Target 2,450, kill 1,125 unchanged. Deployment context: INDO gross 10.4% vs 60-95% band (standing IC gap); flows stale (0 readings). Voss conditions precedent before any add: related-party disclosure verified in audited LK notes, and DPS kill re-based to FY2026E.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-10-31T12:12:12.465217+07:00",
+      "book": "INDO",
+      "title": "AKRA.JK sized 2.5% NAV (PASS_REDUCED 0.25) \u2014 waiting limit 1,070",
+      "thesis": "T-INDO-AKRA-001",
+      "kind": "sizing"
+    },
+    "body": "Judge PASS_REDUCED with size_multiplier 0.25. Script anchor recommended_pct 10.0% (binding constitution_cap; liquidity_cap 324.75% non-binding at refreshed ADV IDR 35.42bn/day; book heat 0.73% -> 1.43%). PM takes 2.50% NAV = 0.25 x 10.0, downward deviation only. Price at decision 1,420 (2026-10-30 close); entry limit 1,070 rests as a waiting price trigger 24.6% below spot, max fill 1,102.1 (level x 1.03); fund record tickets only inside the 10% staging band, nothing stages now. Upside target 1,490, kill 860 unchanged. Voss CLEAR-with-notes at the 0.25-bound size: ADV now resolves (IDR 35.42bn/day, tape clears), tail-inclusive size cap 2.50%, entry rests at a price. Deployment context: INDO 89.6% cash, below the 60-95% band. Carry-guard: carry +16.4pp vs down leg -19.63 leaves total loss negative, guard not tripped. Flows STALE (0 readings); no flow fact underwritten. Rules: LESSON-0001, LESSON-0002.",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-30 (Fri)\n\nSession 2026-10-30T11:00:21+07:00 \u2192 2026-10-30T11:17:50+07:00. **Cards: INDO 1 written (PRDA, DISCARD), 1 ADVANCE completed (PTBA \u2014 step 4b regime + fast-disqualify), 2 updated (ASII house v6 ADD, AKRA signal lapsed); GLOBAL 1 re-stamped (SAP, 21d). 0 ADVANCE/WATCH written from either screen. No escalations filed; two coverage/process observations journaled.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**, `reviews_open` **[]** \u2014 nothing to hand the next trading session on either count; `pending_orders` **[]**.\n- GLOBAL 100% cash / 0 names (NAV $1,011,790.65, DD 0.0%, week_trades 0/10). INDO 89.8% cash / 2 names (NAV IDR 15,237,503,158.59, gross 10.21%, DD \u22121.33%, week_trades 0/10; MEDC +3.49%, ERAA \u22127.43% since entry). Deployment GLOBAL 0.0% / INDO 10.2% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated here.\n- Live theses ERAA (486 vs target 960 / kill 420) and MEDC (1,335 vs 2,250 / 920). `judged_unticketed` AADI (gap 57.4%)\u2026",
     "persona": ""
   },
@@ -872,33 +899,6 @@
       "kind": "other"
     },
     "body": "QC=WARN (stale published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d) \u2014 not CRITICAL, proceed. GLOBAL all-cash, 0 names, governor NONE, 0 pending. Step3a: kill_actions_due empty, no live theses \u2014 no kill exits to verify/slot. Step3b: governor NONE \u2014 no de-gross. Step3c: sole judged_unticketed is T-GLOBAL-0700HK-001 (Tencent) with sizing.pm_pct=0.0 \u2014 PM decision 2026-08-22 bound PASS_REDUCED 0.5x like a kill (0% size, negative-EV math never re-sized; no re-open without material new evidence). No valid entry quantity (never resize here) \u2014 PASS, no ticket. Step4 FX: no pending judged Macro-FX theses \u2014 no-op. Step5: no tickets created \u2014 risk_check not required. Carried QC WARN into journal.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-14T08:49:57.739958+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 09-14: no action \u2014 all three categories clean",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed, no action. Kill exits: kill_actions_due empty, no live theses, no fired kills to verify (3a). Governor: NONE on GLOBAL and INDO, no DEGROSS (3b). Entries: no INDO thesis judged-unticketed waiting on level \u2014 only T-GLOBAL-0700HK-001, GLOBAL book, pm_pct 0.0 concluded-closed, out of scope for this INDO session; pending_orders empty (3c). QC WARN (price cache 47h old; published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d), not CRITICAL \u2014 no diagnostics/escalation required. flow_regime STALE (no fresh foreign-flow data) \u2014 regime not estimated. Cash 100% both books, 0 positions, mark indicative. No tickets created, so risk_check re-run not required.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-14T20:04:34.259221+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-14: no tickets placed",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "State: WARN (published cash-rate policy staleness, non-critical); GLOBAL NAV .0M, 100% cash, 0 names, governor NONE. One judged-unticketed thesis: T-GLOBAL-0700HK-001 (07:00.HK). Sizing pm_pct=0.0 (hard_max=0.0, PASS_REDUCED fraction binds like a kill; PM decision 2026-08-22 WEEKLY_DEEP). Phase-2 deliverables never completed (3-yr ROIIC, SBC trajectory, entry multiple + kill levels). No kill actions due. No governor de-gross. No FX tickets (Macro-FX theses not in scope). No tickets written this session.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# 2026-09-12 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 > 60d \u2014 deliberately left stale, IDX source unreachable, ops lane). GLOBAL: nav $1.01M, 100% cash, 0 holdings, dd \u22120.01%, governor NONE. INDO: nav Rp 15.15B, 100% cash, 0 holdings, governor NONE. Both books zero holdings, zero live theses, zero pending orders. 1 judged_unticketed: T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x \u2192 0% sizing, concluded 08-22). INDO foreign-flow layer STALE (n=0).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\naudit record all historical (07\u201309). 09-03 US_CLOSE + IDX_PREOPEN claude_timeout rc=TIMEOUT \u2014 tracked in HUMAN_ATTENTION. HUMAN_ATTENTION head (2026-09-11): ops resolved the __pycache__ manifest bug; engine backlog applied; verified_bootstrap re-anchored; cash-yield \u2212800.18 USD correction applied; 30 NAV rows reconstructed. Open ops items: (1) jkse_dividend_yield_proxy stale \u2014 external source needed; (2) fund record backfill after next official marks. No new blockers.\n\n## Step 2 \u2014 Telemetry / feeds\n\noffice_state observe --session WEEKLY_DEEP --stage ops: write_failed (known fail-soft\u2026",
     "persona": ""
   }
 ]
