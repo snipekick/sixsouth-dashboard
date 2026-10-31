@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-10-31T15:27:28+07:00",
+  "asof": "2026-10-31T18:43:22+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 36,
-    "in_progress": 1,
+    "published": 37,
+    "in_progress": 2,
     "parked": 13,
     "stale": 0,
     "not_rated": 2
@@ -14,7 +14,7 @@
     "BUY": 5,
     "ADD": 2,
     "REDUCE": 8,
-    "HOLD": 8,
+    "HOLD": 9,
     "SELL": 11,
     "NOT RATED": 2
   },
@@ -51,7 +51,7 @@
         "MATERIALS_OTHER"
       ],
       "universe": 114,
-      "published": 1
+      "published": 2
     },
     {
       "desk": "INDUSTRIALS",
@@ -287,8 +287,8 @@
       "desk": "BASIC_MATERIALS",
       "template": "commodity_producer",
       "universe": 8,
-      "published": 0,
-      "workbook": null,
+      "published": 1,
+      "workbook": "models/PRECIOUS_BASE_METALS.xlsx",
       "methods": {
         "dcf_life": 0.6,
         "ev_ebitda": 0.3,
@@ -4810,22 +4810,22 @@
       "name": "PT Bumi Resources Minerals Tbk",
       "desk": "BASIC_MATERIALS",
       "industry": "PRECIOUS_BASE_METALS",
-      "stage": "qc",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "HOLD",
+      "tp": 323,
       "price": 340.0,
-      "tr_pct": null,
+      "tr_pct": -5.0,
       "mcap_idr": 48206573714920.0,
       "adtv_idr": 203838733735.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": true,
+      "last_update": "2026-10-31",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "BRNA.JK",
@@ -6834,7 +6834,7 @@
       "name": "PT Darma Henwa Tbk",
       "desk": "ENERGY",
       "industry": "MINING_CONTRACTORS",
-      "stage": "queued",
+      "stage": "draft",
       "published": false,
       "stale": false,
       "rating": null,
@@ -17943,7 +17943,7 @@
       "name": "PT Petrosea Tbk",
       "desk": "ENERGY",
       "industry": "MINING_CONTRACTORS",
-      "stage": "queued",
+      "stage": "red_team",
       "published": false,
       "stale": false,
       "rating": null,
