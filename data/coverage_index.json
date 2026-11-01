@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-11-01T08:51:25+07:00",
+  "asof": "2026-11-01T11:56:27+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 45,
-    "in_progress": 3,
+    "published": 46,
+    "in_progress": 2,
     "parked": 17,
     "stale": 0,
     "not_rated": 2
@@ -13,7 +13,7 @@
   "ratings": {
     "BUY": 7,
     "ADD": 3,
-    "REDUCE": 10,
+    "REDUCE": 11,
     "HOLD": 10,
     "SELL": 13,
     "NOT RATED": 2
@@ -96,7 +96,7 @@
         "APPAREL_DURABLES"
       ],
       "universe": 168,
-      "published": 0
+      "published": 1
     },
     {
       "desk": "HEALTHCARE",
@@ -567,8 +567,8 @@
       "desk": "CONSUMER_CYCLICALS",
       "template": "corporate",
       "universe": 56,
-      "published": 0,
-      "workbook": null,
+      "published": 1,
+      "workbook": "models/LEISURE_TOURISM.xlsx",
       "methods": {
         "dcf_fcff": 0.6,
         "ev_ebitda": 0.25,
@@ -5293,22 +5293,22 @@
       "name": "PT Bukit Uluwatu Villa Tbk",
       "desk": "CONSUMER_CYCLICALS",
       "industry": "LEISURE_TOURISM",
-      "stage": "draft",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "REDUCE",
+      "tp": 269,
       "price": 314.0,
-      "tr_pct": null,
+      "tr_pct": -14.17,
       "mcap_idr": 7729755157588.0,
       "adtv_idr": 82980499407.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": true,
+      "last_update": "2026-11-01",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "BVIC.JK",
