@@ -1,5 +1,16 @@
 [
   {
+    "meta": {
+      "date": "2026-11-02T08:46:09.225776+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-11-02: no action - no kills due, nothing staged or blocked, governor NONE",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "Triggers reviewed at 08:45 WIB, no trading action. (1) Kills: kill_actions_due and kill_monitoring_suspended empty; no fired kill to verify and orders_pending is empty, so no missing-ticket breach. Live ERAA 482 is 14.8% above kill 420 and MEDC 1,390 is 51.1% above kill 920; no exit due. (2) Governor NONE (INDO gross 10.4%, cash 89.6%, DD -1.11%), so no de-gross sells and no buy veto. (3) Entry staging: staged none, blocked none. Four theses are waiting on price triggers, no journal line required: AADI last 11,475 vs max fill 7,070 (+62.3%), AKRA 1,375 vs 1,102.1 (+24.8%), JPFA 1,740 vs 1,545 (+12.6%), TINS 3,660 vs 819 (+346.9%). INDO deployment 10.4% is below the 60-95% band, but the runbook permits no new theses intraday and no staged ticket is fillable, so no action. (4) QC is WARN not CRITICAL: price cache 47h old is the Monday weekend artifact already documented as qc_price_cache_false_positive; the brief shows stale_any false and both live theses stale false. CNH fx_carry_rates asof 2026-08-22 past 60d is already escalated for the 2026-11-07 MONTHLY_IC re-stamp and has no bearing on the IDR book. No new escalation. (5) Open review T-INDO-ERAA-001 catalyst_unresolved (Q3 LK\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# WEEKLY_DEEP Session Journal \u2014 2026-10-31 (Sat)\n\nSession launched 2026-10-31T10:02:04+07:00. **Two INDO deep-dives built and both survived the gauntlet: JPFA PASS_REDUCED 0.50 (5.0% NAV) and AKRA PASS_REDUCED 0.25 (2.5% NAV); both entries rest as waiting price triggers, so nothing stages today. Macro = DELTA (no marker tripped). No post-mortem, no ingestion, no GLOBAL deep-dive. One systemic finding (the INDO equity hurdle) and one plumbing finding (ADV feed gap) escalated.**\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d` (standing; owner OPS/MONTHLY_IC 2026-11-07). Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; `pending_orders` [].\n- GLOBAL: NAV **$1,011,898.20**, 100% cash, 0 holdings. INDO: NAV **IDR 15,271,633,624**, 89.6% cash, 2 holdings, gross **10.4%**, dd \u22121.11% (peak 15,442,359,817). Both books below the 60\u201395% deployment band \u2014 standing IC matter, not re-escalated as a trigger.\n- `kill_revisits`: QCOM (GLOBAL, \u221218.4% vs kill 201.97), PNBN.JK (\u221215.4%), ELSA.JK (\u221210.1%). `judged_unticketed`: AADI, TINS, NVO, PTBA. `awaiting_pm_sizing`: PTBA (anchor refuses \u2014 open carry-convention\u2026",
     "persona": ""
@@ -888,17 +899,6 @@
       "kind": "other"
     },
     "body": "Triggered: IDX_PREOPEN 08:46 WIB. Brief review: qc=WARN (published cash-rate policy jkse_dividend_yield_proxy annual pct asof 2026-06-30 stale, informational only, not a trading blocker). Governor NONE, cash 100%, n_names 0 \u2014 no position-level constraints. kill_actions_due empty; no governor degross. No INDO theses judged-unticketed \u2014 T-GLOBAL-0700HK-001 is a GLOBAL book thesis, out of scope for INDO actions. No tickets created. Proceeding to exit.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-15T20:03:47.778649+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-15: no trades \u2014 all-cash book, 0%-sized thesis passes",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC=WARN (stale published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d) \u2014 not CRITICAL, proceed. GLOBAL all-cash, 0 names, governor NONE, 0 pending. Step3a: kill_actions_due empty, no live theses \u2014 no kill exits to verify/slot. Step3b: governor NONE \u2014 no de-gross. Step3c: sole judged_unticketed is T-GLOBAL-0700HK-001 (Tencent) with sizing.pm_pct=0.0 \u2014 PM decision 2026-08-22 bound PASS_REDUCED 0.5x like a kill (0% size, negative-EV math never re-sized; no re-open without material new evidence). No valid entry quantity (never resize here) \u2014 PASS, no ticket. Step4 FX: no pending judged Macro-FX theses \u2014 no-op. Step5: no tickets created \u2014 risk_check not required. Carried QC WARN into journal.",
     "persona": ""
   }
 ]

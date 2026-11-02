@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-02T08:12:03+07:00",
+  "asof": "2026-11-02T08:46:18+07:00",
   "counts": {
     "theses": 49,
     "ideas": 26,
@@ -464,9 +464,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 417.79998779296875,
         "reason": "other",
-        "px_now": 383.6000061035156,
-        "px_asof": "2026-10-30",
-        "move_pct": -8.2
+        "px_now": 385.79998779296875,
+        "px_asof": "2026-11-02",
+        "move_pct": -7.7
       },
       {
         "thesis_id": "T-GLOBAL-MRK-001",
@@ -536,14 +536,14 @@
       "entry": 1070.0,
       "target": 1490.0,
       "kill": 860.0,
-      "price": null,
+      "price": 1375.0,
       "expected_pct": 29.21,
       "p_up": 0.55,
       "kelly_full_pct": 1648.8,
       "pm_pct": 2.5,
       "has_model": true,
       "kill_move_pct": null,
-      "entry_state": null,
+      "entry_state": "waiting",
       "doc": "research_doc_thesis_t-indo-akra-001"
     },
     {
@@ -562,14 +562,14 @@
       "entry": 1500.0,
       "target": 2450.0,
       "kill": 1125.0,
-      "price": null,
+      "price": 1740.0,
       "expected_pct": 30.7,
       "p_up": 0.44,
       "kelly_full_pct": 466.7,
       "pm_pct": 5.0,
       "has_model": true,
       "kill_move_pct": null,
-      "entry_state": null,
+      "entry_state": "waiting",
       "doc": "research_doc_thesis_t-indo-jpfa-001"
     },
     {
@@ -1602,13 +1602,13 @@
       "entry": 330.0,
       "target": 370.0,
       "kill": 180.0,
-      "price": 383.6000061035156,
+      "price": 385.79998779296875,
       "expected_pct": -19.0,
       "p_up": 0.4,
       "kelly_full_pct": -289.4,
       "pm_pct": 0.0,
       "has_model": true,
-      "kill_move_pct": -8.2,
+      "kill_move_pct": -7.7,
       "entry_state": null,
       "doc": "research_doc_thesis_t-global-0700hk-001"
     },
@@ -2079,8 +2079,8 @@
         "kind": "auto",
         "doc": "research_doc_dossier_0700-hk"
       },
-      "price": 383.6000061035156,
-      "price_asof": "2026-10-30",
+      "price": 385.79998779296875,
+      "price_asof": "2026-11-02",
       "latest_verdict": "KILL",
       "kill": {
         "thesis_id": "T-GLOBAL-0700HK-001",
@@ -2089,9 +2089,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 417.79998779296875,
         "reason": "other",
-        "px_now": 383.6000061035156,
-        "px_asof": "2026-10-30",
-        "move_pct": -8.2
+        "px_now": 385.79998779296875,
+        "px_asof": "2026-11-02",
+        "move_pct": -7.7
       }
     },
     {
@@ -3025,8 +3025,8 @@
         "kind": "auto",
         "doc": "research_doc_dossier_akra-jk"
       },
-      "price": null,
-      "price_asof": null,
+      "price": 1375.0,
+      "price_asof": "2026-10-30",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
@@ -3317,8 +3317,8 @@
         "kind": "auto",
         "doc": "research_doc_dossier_jpfa-jk"
       },
-      "price": null,
-      "price_asof": null,
+      "price": 1740.0,
+      "price_asof": "2026-10-30",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
