@@ -12,6 +12,11 @@
   },
   {
     "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-11-02 (Mon)\n\nSession 2026-11-02T11:00:22+07:00 \u2192 2026-11-02T11:10:52+07:00. **Cards: GLOBAL 2 (QCOM re-stamped DISCARD\u2192WATCH; V DISCARD), INDO 2 (ITMG DISCARD; PNBN DISCARD). 0 ADVANCE written. No escalations filed; one open review noted for the next trading session.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `pending_orders` **[]**.\n- **`reviews_open`: T-INDO-ERAA-001** \u2014 `catalyst_unresolved 2026-10-31@2026-Q4`, action review, created 2026-11-02T08:45. **Noted for the next trading session; not IDEATION's to execute.**\n- GLOBAL 100% cash / 0 names (NAV $1,011,898.20, DD 0.0%, week_trades 0/10). INDO 89.4% cash / 2 names (NAV IDR 15,302,152,024, gross 10.57%, DD \u22120.91%, week_trades 0/10; MEDC +6.98%, ERAA \u22122.86% since entry). Deployment GLOBAL 0.0% / INDO 10.6% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated.\n- Live theses ERAA (510 vs target 960 / kill 420) and MEDC (1,380 vs 2,250 / 920). `judged_unticketed` AADI (gap 62.3%), TINS\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# WEEKLY_DEEP Session Journal \u2014 2026-10-31 (Sat)\n\nSession launched 2026-10-31T10:02:04+07:00. **Two INDO deep-dives built and both survived the gauntlet: JPFA PASS_REDUCED 0.50 (5.0% NAV) and AKRA PASS_REDUCED 0.25 (2.5% NAV); both entries rest as waiting price triggers, so nothing stages today. Macro = DELTA (no marker tripped). No post-mortem, no ingestion, no GLOBAL deep-dive. One systemic finding (the INDO equity hurdle) and one plumbing finding (ADV feed gap) escalated.**\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d` (standing; owner OPS/MONTHLY_IC 2026-11-07). Governor **NONE** both books; `kill_actions_due` []; `reviews_open` []; `pending_orders` [].\n- GLOBAL: NAV **$1,011,898.20**, 100% cash, 0 holdings. INDO: NAV **IDR 15,271,633,624**, 89.6% cash, 2 holdings, gross **10.4%**, dd \u22121.11% (peak 15,442,359,817). Both books below the 60\u201395% deployment band \u2014 standing IC matter, not re-escalated as a trigger.\n- `kill_revisits`: QCOM (GLOBAL, \u221218.4% vs kill 201.97), PNBN.JK (\u221215.4%), ELSA.JK (\u221210.1%). `judged_unticketed`: AADI, TINS, NVO, PTBA. `awaiting_pm_sizing`: PTBA (anchor refuses \u2014 open carry-convention\u2026",
     "persona": ""
   },
@@ -888,17 +893,6 @@
       "kind": "other"
     },
     "body": "QC WARN (1 flag: jkse_dividend_yield_proxy_annual_pct stale asof 2026-06-30 >60d; known/unresolvable without authoritative IDX statistics datum; documented in HUMAN_ATTENTION, not blockable by this session). Governor NONE \u2014 no de-gross. Kill actions_due: [] \u2014 no exit tickets. Pending orders: [] \u2014 nothing to risk_check. Judged_unticketed: T-GLOBAL-0700HK-001 (Tencent; PASS_REDUCED, pm_pct 0.0, Phase-2 deliverables never completed; no ticket). Harrison FX sleeve: not actionable \u2014 no Macro-FX theses judged. No new entries intraday (runbook law). No tickets written. Session complete.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-15T08:47:48.494953+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-09-15 \u2014 no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggered: IDX_PREOPEN 08:46 WIB. Brief review: qc=WARN (published cash-rate policy jkse_dividend_yield_proxy annual pct asof 2026-06-30 stale, informational only, not a trading blocker). Governor NONE, cash 100%, n_names 0 \u2014 no position-level constraints. kill_actions_due empty; no governor degross. No INDO theses judged-unticketed \u2014 T-GLOBAL-0700HK-001 is a GLOBAL book thesis, out of scope for INDO actions. No tickets created. Proceeding to exit.",
     "persona": ""
   }
 ]
