@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-05T06:32:19.773486+07:00",
+      "book": "INDO",
+      "title": "US_CLOSE 2026-11-05: ERAA review_condition judged \u2014 Q3 LK unresolved, condition does not hold; no kills, no trades",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "review"
+    },
+    "body": "US_CLOSE 06:30 WIB trigger review on the session brief and thesis/dossier files. (1) Fired unconditional kills: kill_actions_due [], kill_monitoring_suspended [] \u2014 none, so no exit ticket exists to confirm. (2) review_condition T-INDO-ERAA-001, trigger catalyst_unresolved 2026-10-31@2026-Q4, from the date kill-criterion (> 2027-03-31) whose condition is 'if Q3-2026 LK (2026-10-31) fails the CFO-conversion or GM test, review before this date'. Condition judged on available facts: the brief marks the catalyst unresolved; data/dossiers/ERAA.fund record (asof 2026-10-10) carries no Q3-2026 row (quarterly table ends Q2-2026); the 2026-10-31 WEEKLY_DEEP and 2026-11-04 IDX_CLOSE journals both record the Q3 LK as not reachable in the fund's data (IDX disclosure feed unconfigured \u2014 idx_disclosures_unconfigured_and_unreported, escalated 2026-10-31). The CFO-conversion/GM test therefore cannot be shown to fail; fail-closed, failure is NOT inferred. Condition does not hold, so no exit ticket. The price kill (60d, assigned MONTHLY_IC 2026-11-07); governor NONE in both books; no fills; orders_pending empty. No trading action taken or implied. The 2026-10-31 HUMAN_ATTENTION item stands unchanged\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-04T16:05:52.049190+07:00",
       "book": "INDO",
       "title": "IDX_CLOSE 2026-11-04: no fired kills, no review_condition due, ERAA catalyst unresolved \u2014 no trading action; club report validated",
@@ -888,11 +899,6 @@
       "kind": "other"
     },
     "body": "QC WARN (3 flags: ERAA stale price; jkse_dividend_yield_proxy_annual_pct stale asof 2026-06-30 >60d; fx_carry_rates.EUR stale asof 2026-07-23 >60d) \u2014 known published cash-rate policy/data-feed staleness, none blockable by this session, none CRITICAL. Governor NONE both books \u2014 no de-gross. Kill actions_due: [] \u2014 no exit tickets, wrapper's fund record covers unconditional kills/governor de-gross. Pending orders: [] \u2014 nothing to risk_check. Judged_unticketed assessed: T-GLOBAL-0700HK-001 (Tencent, PASS_REDUCED, pm_pct 0.0 \u2014 concluded at 0% sizing 2026-08-22 WEEKLY_DEEP, no re-open without material new evidence; no ticket); T-INDO-ERAA-001 (ERAA, PASS_REDUCED, pm_pct 0.0 \u2014 size_position fail-closed on DEGRADED adv/mcap feed, PM deferred until refresh-adv + universe refresh re-run sizing; INDO thesis, not this GLOBAL book's session; no ticket). Harrison FX sleeve: not actionable \u2014 no Macro-FX theses judged. No new entries intraday (runbook law). 0 tickets written.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# 2026-09-26 WEEKLY_DEEP \u2014 session journal\n\n## Prelude / brief (10:00 WIB)\n\nqc WARN (4 flags): (1) fund record 2026-09-12 >10d \u2014 RESOLVED in-session (refresh-adv wrote 2026-09-26, 27 tickers, 0 missing); (2) published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 ops lane, re-escalated; (3) published cash-rate policy fx_carry_rates.EUR asof 2026-07-23 >60d \u2014 ops lane, re-escalated (macros flagged the USD cash proxy 3.63% as additionally STALE post-hike on 09-15/16); (4) dossier fund record 809w >800 \u2014 RESOLVED in-session (re-written 739w, valid contract). Both books 100% cash, 0 holdings, 1 judged_unticketed (T-GLOBAL-0700HK-001 @ 0% sizing, concluded). T-INDO-MEDC-001 + T-INDO-TINS-001 judged PASS_REDUCED in prior sessions but risk-vetoed (dossier/mcap gates). INDO foreign-flow feed STALE (0 fresh).\n\n## Step 1 \u2014 Blocker / HUMAN_ATTENTION triage\n\n- audit record all recent blockers are benign recurring provider-side API 400s (messages content validation); journaled/tracked, no action.\n- HUMAN_ATTENTION backlog: no new unresolved items; ops-lane items re-escalated at end (mcap gate, published cash-rate policy staleness).\n\n## Step 2 \u2014 Telemetry / feeds\n\u2026",
     "persona": ""
   }
 ]
