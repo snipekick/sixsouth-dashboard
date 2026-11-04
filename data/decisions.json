@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-04T13:04:48.385544+07:00",
+      "book": "INDO",
+      "title": "CONSTRUCT 2026-11-04: QC CRITICAL (price-source prelude race) - diagnostics only, zero actions, PTBA sizing blocked",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Queue inventory at 13:00 then diagnostics only. QC level CRITICAL (PRICE_SOURCES_DEAD, cache 2.1d old at qc_state time 13:00:02) restricts the session to diagnostics and reports per failure law; qc_state was not retried. Diagnosis: the cache was stale only because the host was powered off from 2026-11-02 11:32 to 2026-11-04 13:00; fund record refreshed it at 13:00:08, six seconds after qc_state, with all 44 symbols stale=false and implausible=false (IDX/IDR asof 2026-11-04, US asof 2026-11-03), so both sources are alive and this is the prelude-ordering race already documented 2026-10-19. Dispositions: (a) awaiting_pm_sizing T-INDO-PTBA-001 PASS_REDUCED - NOT sized, blocked by QC CRITICAL, carried to the next CONSTRUCT; (b) judged_missing_levels - empty; (c) revise_queue - empty, and a scan of fund record shows no draft or attacked thesis without a verdict; (d) buy_verdict_sized_zero - empty; (e) ADVANCE idea cards - none (all fund record cards are WATCH or PASS), so no chain was started and no quota was consumed. Live theses untouched: ERAA 486 vs kill 420, MEDC 1,200 vs kill 920, both marks stale=false. Escalation with the exact run_session reorder fix written to fund record No\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-02T08:46:09.225776+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-11-02: no action - no kills due, nothing staged or blocked, governor NONE",
@@ -882,17 +893,6 @@
       "kind": "risk_veto"
     },
     "body": "Deterministic VETO from fund record: **dossier  absent.**\n\nFail-closed gate (fund record lines 561-565): dossier missing, malformed, incomplete, or stale > dossier_freeze_days = new equity risk blocked.\n\nThis is the Phase 1 gate \u2014 thesis is not killed by Judge, but fails the pipeline gate for entry sizing. Phase 2 (dossier diligence) is the required path.\n\nQC state: WARN only (MARKET_PARAM_STALE). Governor INDO: NONE. Book NAV: valid.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-16T20:08:23.477835+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-16: all-clear pass \u2014 0 tickets, 0 actions",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (1 flag: jkse_dividend_yield_proxy_annual_pct stale asof 2026-06-30 >60d; known/unresolvable without authoritative IDX statistics datum; documented in HUMAN_ATTENTION, not blockable by this session). Governor NONE \u2014 no de-gross. Kill actions_due: [] \u2014 no exit tickets. Pending orders: [] \u2014 nothing to risk_check. Judged_unticketed: T-GLOBAL-0700HK-001 (Tencent; PASS_REDUCED, pm_pct 0.0, Phase-2 deliverables never completed; no ticket). Harrison FX sleeve: not actionable \u2014 no Macro-FX theses judged. No new entries intraday (runbook law). No tickets written. Session complete.",
     "persona": ""
   }
 ]
