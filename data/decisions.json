@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-04T16:05:52.049190+07:00",
+      "book": "INDO",
+      "title": "IDX_CLOSE 2026-11-04: no fired kills, no review_condition due, ERAA catalyst unresolved \u2014 no trading action; club report validated",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "IDX-hours trigger review at 16:00 WIB (step 6), on the brief and thesis files only. (1) Fired unconditional kills: kill_actions_due [], kill_monitoring_suspended [], fund record {} \u2014 nothing fired, so nothing to confirm. (2) review_condition triggers: none due. ERAA (T-INDO-ERAA-001) date-kill 2027-03-31 not reached; price 490 vs kill 420 (16.7% above, live mark, stale=false). MEDC (T-INDO-MEDC-001) date-kill 2027-09-30 not reached; price 1,240 vs kill 920 (34.8% above); reserve-replacement KPI confirmed >1.0 on the FY25 AR2025 2P table (564 vs 493 mmboe). (3) Open review item: ERAA catalyst_unresolved 2026-10-31@2026-Q4 \u2014 the Q3-2026 LK (CFO-conversion/GM gate) is still not reachable: the IDX disclosure feed is unconfigured and marks ERAA.JK and MEDC.JK unchecked (fail-soft, no web crawl improvised); the KPI cash_conversion CFO/NI LTM remains untestable and is NOT inferred. No exit/trim: no kill has fired and the item is a review, not a conditional exit; the 2026-10-31 escalation stands and it resolves on the first session with the official LK. (4) Staging: waiting entries T-INDO-AADI-001, AKRA-001, JPFA-001, TINS-001 remain price-gated (gaps 62.3%, 24.8%, 12.6%, 346.9% to max\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-04T13:04:48.385544+07:00",
       "book": "INDO",
       "title": "CONSTRUCT 2026-11-04: QC CRITICAL (price-source prelude race) - diagnostics only, zero actions, PTBA sizing blocked",
@@ -882,17 +893,6 @@
       "kind": "other"
     },
     "body": "IDX_PREOPEN 2026-09-17 08:45 WIB.\n\nDecision basis: reviewed all trigger conditions; no action taken.\n\nQC = WARN (single flag: jkse_dividend_yield_proxy_annual_pct market param stale asof 2026-06-30 >60d). Not CRITICAL \u2014 trading actions permitted.\n\nGovernor: NONE (both books). No de-gross condition.\n\nKill exits (step 3a): brief shows kill_actions_due: [], no kill actions pending. Verified none missing a ticket.\n\nGovernor de-gross (step 3b): governor is NONE \u2014 not applicable.\n\nEntries (step 3c): zero eligible INDO entries. The only judged-unticketed thesis in the brief is T-GLOBAL-0700HK-001 \u2014 GLOBAL book (not INDO), verdict PASS_REDUCED 0.5x, pm_pct 0.0 explicitly concluded by PM (WEEKLY_DEEP 2026-08-22), no ticket staged, closed as judged_unticketed. No INDO thesis is simultaneously (1) judged + (2) risk-checked + (3) sized (sizing.pm_pct present and non-zero) with an entry level waiting. All sampled INDO theses are either KILL verdict (T-INDO-ASII-001, T-INDO-JSMR-001, T-INDO-KLBF-001, T-INDO-DSNG-001) or PASS_REDUCED but VETOed with no entry level (T-INDO-MEDC-001: VETO hard gates \u2014 no dossier, no market cap record; entry_plan.level: null).\n\nNo tickets created. No risk_check run\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-16 13:00:00+07:00",
-      "book": "INDO",
-      "title": "VETO TINS.JK buy (dossier absent)",
-      "thesis": "T-INDO-TINS-001",
-      "kind": "risk_veto"
-    },
-    "body": "Deterministic VETO from fund record: **dossier  absent.**\n\nFail-closed gate (fund record lines 561-565): dossier missing, malformed, incomplete, or stale > dossier_freeze_days = new equity risk blocked.\n\nThis is the Phase 1 gate \u2014 thesis is not killed by Judge, but fails the pipeline gate for entry sizing. Phase 2 (dossier diligence) is the required path.\n\nQC state: WARN only (MARKET_PARAM_STALE). Governor INDO: NONE. Book NAV: valid.",
     "persona": ""
   }
 ]
