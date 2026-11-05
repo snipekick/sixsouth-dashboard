@@ -44,6 +44,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-11-05 (Wed)\n\nSession 2026-11-05T11:00:28+07:00 \u2192 2026-11-05T11:09:22+07:00. **Cards: GLOBAL 1 (KO DISCARD), INDO 2 (INDF WATCH, CMRY WATCH). 0 ADVANCE written. No escalations filed; one open review and one passed gate noted for the next trading session.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**.\n- **`reviews_open`: T-INDO-ERAA-001** \u2014 `catalyst_unresolved 2026-10-31@2026-Q4`, action review, created 2026-11-02T08:45. **Noted for the next trading session; not IDEATION's to execute.**\n- GLOBAL 100% cash / 0 names (NAV $1,012,436.03, DD 0.0%, week_trades 0/10). INDO 90.1% cash / 2 names (NAV IDR 15,193,733,905, gross 9.87%, DD \u22121.61%, week_trades 0/10; MEDC \u22125.03%, ERAA \u22124.76% since entry). Deployment GLOBAL 0.0% / INDO 9.9% vs the 60\u201395% band \u2014 both below; standing IC/WEEKLY_DEEP matter, not re-escalated.\n- `pending_orders`: **JPFA ORD-20261105084520-JPFA.JK-603d** (buy 481,700 @ 1,500) \u2014 already risk-PASS and already carries the 08:47 HUMAN_ATTENTION\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-04T16:05:52.049190+07:00",
       "book": "INDO",
@@ -894,17 +899,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-09-29 (Tue)\n\n## State at entry\n- QC: WARN, now 4 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 fund record escalation; ops lane, owns the deferred T-INDO-ERAA-001 ticket) and `published cash-rate policy` staleness: `jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`, `fx_carry_rates.EUR asof 2026-07-23 >60d`, plus NEW `fx_carry_rates.GBP asof 2026-07-30 >60d` \u2014 same stale-params family, ops lane, not session-actionable. No kill actions due, no open reviews, no pending orders, governor NONE both books. judged_unticketed: T-INDO-ERAA-001 (feed-gap deferral; re-stage at pre-open) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks/property/consumer discretionary). Read frontmatter only, not re-edited, not re-reasoned.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 active WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2 PROMOTED) + `ELSA` DISCARD. All \u226417d\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-29T20:01:32.949250+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-29: pass \u2014 no trading actions (both judged theses zero-size)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (not CRITICAL; 4 flags: stale ERAA price, published cash-rate policy staleness \u2014 none trade-blocking this session). Governor NONE both books, no DEGROSS. No pending orders, no live theses, no kill actions due, no reviews open. Judged_unticketed scan: T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly<=0/ADV-unknown fail-closed; PM concluded 2026-08-22 at 0%, no re-open without material new evidence) and T-INDO-ERAA-001 pm_pct 0.0 (size_position fail-closed on fund record ERAA key gap; PM ruling DEFER, 'Place nothing today'; price also stale). Neither is sized \u2192 no entries cut per step 3c. No FX theses to execute (step 4). No risk_check run \u2014 no tickets written.",
     "persona": ""
   }
 ]
