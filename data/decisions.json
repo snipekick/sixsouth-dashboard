@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-06T06:31:18.896100+07:00",
+      "book": "INDO",
+      "title": "US_CLOSE 2026-11-06: ERAA review_condition judged \u2014 Q3 LK still absent, condition does not hold; no kills, no trades",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "review"
+    },
+    "body": "US_CLOSE 06:30 WIB trigger review on the 2026-11-06 session brief and the ERAA dossier. (1) Fired unconditional kills: kill_actions_due [] and kill_monitoring_suspended [] \u2014 none, so no exit ticket exists to confirm and none is written. (2) review_condition T-INDO-ERAA-001, trigger catalyst_unresolved 2026-10-31@2026-Q4, arising from the date kill-criterion (> 2027-03-31) whose condition is 'if Q3-2026 LK (2026-10-31) fails the CFO-conversion or GM test, review before this date'. Judged on brief/dossier facts only: the brief still carries the review as open and surfaces no Q3-2026 LK data; data/dossiers/ERAA.fund record (asof 2026-10-10) has no Q3-2026 row \u2014 its quarterly table ends at Q2-2026 (revenue 20,482.4bn, GP 2,407.6bn, NI 331.3bn). No CFO-conversion or gross-margin figure for the 2026-10-31 print is reachable in the fund's data, so the test cannot be shown to fail; fail-closed, failure is NOT inferred. Condition does not hold, so no exit ticket. The price kill (60d assigned MONTHLY_IC 2026-11-07; governor NONE in both books; no fills this session; orders_pending holds only the JPFA.JK buy ticket, untouched. No trading action taken or implied. The underlying IDX-disclosure\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-05T06:32:19.773486+07:00",
       "book": "INDO",
       "title": "US_CLOSE 2026-11-05: ERAA review_condition judged \u2014 Q3 LK unresolved, condition does not hold; no kills, no trades",
@@ -900,11 +911,6 @@
       "kind": "other"
     },
     "body": "QC WARN (stale ERAA price; published cash-rate policy dividend-proxy + FX-carry EUR/JPY/GBP asof >60d) \u2014 not CRITICAL, no trading-action block. Kill exits: none due (kill_actions_due empty, live_theses 0, pending_orders empty). Governor: NONE both books, no DEGROSS path. Entries (step 3c): T-INDO-ERAA-001 remains feed-blocked \u2014 HUMAN_ATTENTION head (2026-10-02 08:45) confirms ERAA still stale (first_seen 2026-09-28, live 3 sessions; fetch emits bare ERAA, cache row price null), fund record still lacks the ERAA key, sizing anchor stays script 0.0 / pm 0.0; PM deferral (judged 2026-09-26) stands \u2014 no ticket. T-GLOBAL-0700HK-001 out of scope: GLOBAL book (not South/INDO) and PM-concluded at 0% sizing 2026-08-22 WEEKLY_DEEP (Kelly<=0, ADV-unknown fail-closed), closed as judged_unticketed, no re-open without material new evidence. No tickets created; nothing passed risk_check (nothing written). Feed-block escalation already on HUMAN_ATTENTION; no new escalations needed before 09:00.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-02 (Fri)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 escalation; bare `ERAA` cannot resolve vs the `.JK`-suffixed fetch set, owns the deferred T-INDO-ERAA-001 ticket, ops lane) + `published cash-rate policy` staleness family (`jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`; `fx_carry_rates.EUR asof 2026-07-23`, `JPY asof 2026-07-31`, `GBP asof 2026-07-30` all >60d). Same ops-lane family already escalated 09-26; not session-actionable. No kill actions due, no reviews open, no pending orders, governor NONE both books (100% cash). judged_unticketed: T-INDO-ERAA-001 (feed gap) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2\u2026",
     "persona": ""
   }
 ]
