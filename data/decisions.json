@@ -12,6 +12,39 @@
   },
   {
     "meta": {
+      "date": "2026-11-05T08:47:28.447233+07:00",
+      "book": "INDO",
+      "title": "Preopen: triggers reviewed, no action (pass)",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "[2026-11-05T08:47:28+07:00] Pass. (a) Kills: kill_actions_due empty, so no fired kill is missing a ticket or fill; the kill_revisits (ELSA -20.1%, PNBN -18.9%, QCOM -14.2%) are informational only - no new evidence, and Gunawan may not open a thesis intraday. (b) Governor: NONE on both books (INDO dd -1.63% vs -8% review), so no de-gross mix to choose. (c) Entries: no blocked entries; the one INDO stage (JPFA) is confirmed in the entry journal above. ERAA/MEDC top-ups were skipped as below the 0.5% NAV minimum tranche; AADI (+50.3%), AKRA (+18.0%) and TINS (+310.3%) are waiting on price, a trigger rather than a fault. (d) Holds: ERAA 490 vs kill 420 and MEDC 1,240 vs kill 920, no kill level breached; ERAA's catalyst_unresolved review (opened 2026-11-02) stays open and is not a trading action today. (e) QC: level WARN, single stale market param (fx_carry_rates.CNH, GLOBAL-only, no GLOBAL exposure) - not CRITICAL, so the runbook proceeds. No ticket created by this session; the wrapper's JPFA ticket was already risk-stamped PASS, so fund record --orders was not re-run.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T08:47:20.261725+07:00",
+      "book": "INDO",
+      "title": "Preopen: staged JPFA.JK entry confirmed; two Judge conditions still open",
+      "thesis": "T-INDO-JPFA-001",
+      "kind": "entry"
+    },
+    "body": "[2026-11-05T08:47:19+07:00] Staged entry reviewed. T-INDO-JPFA-001 buy 481,700 JPFA.JK limit 1,500 (max fill 1,545, max chase 3%) = 4.90% NAV at max fill, order ORD-20261105084520-JPFA.JK-603d, wrapper dry-run risk PASS. Still matches the thesis: last 1,620 (2026-11-04, yfinance, not stale) sits 7.4% above the 1,500 limit so the ticket simply rests for a dip within valid_until 2027-03-31; 1,620 is 44% above kill 1,125 and 34% below target 2,450; PASS_REDUCED 0.5 / PM size 5.0% NAV unchanged. The 2026-10-31 ADV plumbing gate is cleared: market-data snapshot now carries JPFA.JK (ADV ~IDR26.5bn). Two Judge conditions precedent recorded in the thesis Risk check are still unmet in the file: (2) the DPS kill remains 'cut below 74' instead of re-based to FY2026E 120, so a 120->90 cut would not fire (the re-attack's surviving MATERIAL on carry); (3) the body still says 2,700 / EPS 300 / live DCF against frontmatter 2,450 / 272, and the entry_plan comment still says fund record writes no ticket. Ticket kept because the valuation/entry/kill view itself is intact at 1,620; the text defects are a thesis-maintenance breach, escalated to HUMAN_ATTENTION with the exact edit. Never average down\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T08:45:20.112480+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry JPFA.JK",
+      "thesis": "T-INDO-JPFA-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-JPFA-001: buy 481,700 JPFA.JK limit 1500 (max chase 3%, max fill 1545) = 4.90% NAV at most. Target 5.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261105084520-JPFA.JK-603d is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-04T16:05:52.049190+07:00",
       "book": "INDO",
       "title": "IDX_CLOSE 2026-11-04: no fired kills, no review_condition due, ERAA catalyst unresolved \u2014 no trading action; club report validated",
@@ -872,33 +905,6 @@
       "kind": "other"
     },
     "body": "QC WARN (not CRITICAL; 4 flags: stale ERAA price, published cash-rate policy staleness \u2014 none trade-blocking this session). Governor NONE both books, no DEGROSS. No pending orders, no live theses, no kill actions due, no reviews open. Judged_unticketed scan: T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly<=0/ADV-unknown fail-closed; PM concluded 2026-08-22 at 0%, no re-open without material new evidence) and T-INDO-ERAA-001 pm_pct 0.0 (size_position fail-closed on fund record ERAA key gap; PM ruling DEFER, 'Place nothing today'; price also stale). Neither is sized \u2192 no entries cut per step 3c. No FX theses to execute (step 4). No risk_check run \u2014 no tickets written.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-28T08:46:56.708140+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-09-28: triggers reviewed, no action",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (not CRITICAL) so session proceeds. Governor NONE for both books, dd 0.0 \u2014 no de-gross. no kill_actions_due and zero live theses \u2014 nothing to verify on kill exits; no tickets to ticket from step 3a. Pending orders: none. Entries step: T-INDO-ERAA-001 remains DEFERRED \u2014 the WEEKLY_DEEP feed gate is still binding at this pre-open: fund record records {} (generated 2026-09-26 10:19) and fund record (asof 2026-09-26 10:01) still lacks the ERAA key, so size_position stays fail-closed script_pct 0.0 and pm_pct cannot deviate up; PM ruling 2026-09-26 'place nothing until adv/mcap feed resolves' stands. No ticket written, no re-cut attempted (never dodge a veto). T-GLOBAL-0700HK-001 not eligible: GLOBAL book (this desk is INDO) and PM clearly closed it at 0.0 with no-reopen-without-material-new-evidence 2026-08-22. Governor target 50.0, cash 100%. No tickets created at or after 09:00 WIB; no slip. Feed-resolution ops items (fund record refresh, refresh-adv, then size_position re-run for ERAA) already on HUMAN_ATTENTION from 2026-09-26 WEEKLY_DEEP \u2014 leaving with ops, not duplicated here.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-28 (Mon)\n\n## State at entry\n- QC: WARN, 3 flags \u2014 `stale prices: ['ERAA']` (the ERAA price feed gap behind the deferred T-INDO-ERAA-001 ticket; ops lane, tied to the 09-26 fund record escalation), `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` and `fx_carry_rates.EUR asof 2026-07-23 >60d` (both long-standing ops-lane items, re-escalated 09-26). No kill actions due, no open reviews, no pending orders, governor NONE both books \u2014 nothing to carry to the next trading session. judged_unticketed: T-INDO-ERAA-001 (ticket deferred on the feed gap; re-stage at pre-open) + T-GLOBAL-0700HK-001 \u2014 WEEKLY_DEEP queue, not mine.\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks/property/consumer discretionary). Not re-read beyond frontmatter, not re-edited.\n- Cards at entry: GLOBAL 9 files = 7 active WATCH (AMZN/BAC/GE/LLY/MRK/MS/SMFG) + 2 DISCARD (NVO/QCOM). INDO 10 files = 7 active (ADRO/AMMN/ERAA/GGRM/INCO/MEDC/TINS) + 1 DISCARD\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-28T20:06:56.242891+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-28: all-clear pass \u2014 0 tickets, 0 actions",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (3 flags: ERAA stale price; jkse_dividend_yield_proxy_annual_pct stale asof 2026-06-30 >60d; fx_carry_rates.EUR stale asof 2026-07-23 >60d) \u2014 known published cash-rate policy/data-feed staleness, none blockable by this session, none CRITICAL. Governor NONE both books \u2014 no de-gross. Kill actions_due: [] \u2014 no exit tickets, wrapper's fund record covers unconditional kills/governor de-gross. Pending orders: [] \u2014 nothing to risk_check. Judged_unticketed assessed: T-GLOBAL-0700HK-001 (Tencent, PASS_REDUCED, pm_pct 0.0 \u2014 concluded at 0% sizing 2026-08-22 WEEKLY_DEEP, no re-open without material new evidence; no ticket); T-INDO-ERAA-001 (ERAA, PASS_REDUCED, pm_pct 0.0 \u2014 size_position fail-closed on DEGRADED adv/mcap feed, PM deferred until refresh-adv + universe refresh re-run sizing; INDO thesis, not this GLOBAL book's session; no ticket). Harrison FX sleeve: not actionable \u2014 no Macro-FX theses judged. No new entries intraday (runbook law). 0 tickets written.",
     "persona": ""
   }
 ]
