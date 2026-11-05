@@ -202,7 +202,7 @@ function evPanel(doc){
   return panel('Expected value &amp; sizing',`<div class="scroll"><table class="rtable"><thead><tr><th>Leg</th><th class="num">Probability</th><th class="num">Return</th><th>At</th></tr></thead><tbody>
     ${row('Thesis works (target)',validNumber(e.p_up)?fmt(e.p_up*100,0)+'%':'—',sgn(e.up_pct),`target ${esc(px(lv.target))}`)}
     ${row('Thesis falsified (kill)',validNumber(e.p_down)?fmt(e.p_down*100,0)+'%':'—',sgn(e.down_pct),`kill ${esc(px(lv.kill))}`)}
-    ${row('Dividends &amp; carry','',sgn(validNumber(e.net_div_yield_pct_pa)&&validNumber(e.horizon_years)?e.net_div_yield_pct_pa*e.horizon_years:null),`${fmt(e.net_div_yield_pct_pa,2)}%/yr × ${fmt(e.horizon_years,1)}y`)}
+    ${row('Dividends, if it works',validNumber(e.p_up)?fmt(e.p_up*100,0)+'%':'—',sgn(validNumber(e.net_div_yield_pct_pa)&&validNumber(e.horizon_years)?e.net_div_yield_pct_pa*e.horizon_years:null),`${fmt(e.net_div_yield_pct_pa,2)}%/yr × ${fmt(e.horizon_years,1)}y · none at the kill`)}
     ${row('Fees &amp; taxes','',sgn(validNumber(e.fee_tax_drag_pct)?-e.fee_tax_drag_pct:null),'round trip')}
     ${row('<b>Expected return</b>','',`<b class="${cls(e.expected_pct)}">${sgn(e.expected_pct)}</b>`,'probability-weighted, over the horizon')}
     </tbody></table></div>

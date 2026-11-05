@@ -12,6 +12,50 @@
   },
   {
     "meta": {
+      "date": "2026-11-05T16:32:02.534106+07:00",
+      "book": "INDO",
+      "title": "TINS sized 0.045% NAV under V5.4 carry rule",
+      "thesis": "T-INDO-TINS-001",
+      "kind": "sizing"
+    },
+    "body": "Suggested: script anchor 0.09% NAV (quarter-Kelly after 9% correlation haircut; binding constraint). Chosen: 0.045% NAV, the Judge PASS_REDUCED 0.50 applied unsoftened (0.09 x 0.50), no further deviation. Price at decision: TINS.JK 3,510 (prev close 3,360), ADV 187.28bn/day; flows stale. Why: V5.4 re-sizes the carry to the up leg only (net div 2.0%/yr x 3y, +6.0pp), cutting the anchor from 3.45% to 0.09%; at 0.045% NAV (~IDR 6.8m) the position is economically trivial and the Judge-endorsed limit 780 (max fill 819) rests ~77.8% below the tape as a waiting price trigger, not an executable path at spot. Ticket per script: 8,300 sh (83 lots), limit 780, max fill 819. Not typed by PM; fund record stages in range.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T16:05:14.552849+07:00",
+      "book": "INDO",
+      "title": "T-INDO-TINS-001 sizing re-queued under the V5.4 carry rule",
+      "thesis": "T-INDO-TINS-001",
+      "kind": "sizing"
+    },
+    "body": "Owner ruling 2026-11-05 (REVISION_LOG V5.4): dividend carry is earned on the up leg only; the kill leg exits at the kill level without it, and drag is paid on both legs. At T-INDO-TINS-001's recorded legs (p_up 0.42, +60.0% / -45.0%, 2.0%/yr x 3y, drag 1.5) the anchor now reads kelly_full 0.4%, recommended 0.09%; it was script_pct 3.45 under the pre-V5.4 rule, which credited the full horizon of dividends to the kill leg. The recorded sizing (script 3.45 / pm 1.725) is cleared, so the thesis sits in awaiting_pm_sizing and the next CONSTRUCT re-sizes it with fund record. A buy that sizes to zero takes the runbook's sized-zero path: the analyst re-derives the levels or the Judge re-rules. The verdict is unchanged. No order was pending and nothing was placed. Filed by owner-directed ops.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T16:05:14.471071+07:00",
+      "book": "INDO",
+      "title": "T-INDO-AADI-001 sizing re-queued under the V5.4 carry rule",
+      "thesis": "T-INDO-AADI-001",
+      "kind": "sizing"
+    },
+    "body": "Owner ruling 2026-11-05 (REVISION_LOG V5.4): dividend carry is earned on the up leg only; the kill leg exits at the kill level without it, and drag is paid on both legs. At T-INDO-AADI-001's recorded legs (p_up 0.35, +22.6% / -31.7%, 8.5%/yr x 3y, drag 1.5) the anchor now reads kelly_full 0.0, recommended 0.0% (Kelly -0.34); it was script_pct 10.0 under the pre-V5.4 rule, which credited the full horizon of dividends to the kill leg. The recorded sizing (script 10.0 / pm 2.5) is cleared, so the thesis sits in awaiting_pm_sizing and the next CONSTRUCT re-sizes it with fund record. A buy that sizes to zero takes the runbook's sized-zero path: the analyst re-derives the levels or the Judge re-rules. The verdict is unchanged. No order was pending and nothing was placed. Filed by owner-directed ops.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T18:05:59.803589+07:00",
+      "book": "INDO",
+      "title": "T-INDO-AADI-001 KILLED \u2014 no fillable price has positive EV under V5.4",
+      "thesis": "T-INDO-AADI-001",
+      "kind": "other"
+    },
+    "body": "Re-ruled under the V5.4 carry rule after the thesis's buy verdict sized to 0.0% NAV (script Kelly -0.34, expected_pct -5.3 at the old levels). Chain: Aldrich REVISE 16:37 (house-coverage reconciliation and target re-derivation owed) -> Dani Revision 4 (target 11,885, house primary DCF) -> Drew Re-attack 4 MAJOR_REVISION (3 FATAL: entry did not reproduce, two decks spliced, 21.4% of target an un-granted IUPK licence) -> Dani Revision 5 (conceded; target 9,344 = house DCF truncated at the 1-Oct-2032 IUPK expiry, entry 7,475 = that DCF less 20%, kill 3,320, exit 1,868 at two ARB bands) -> Drew Re-attack 5 SURVIVES_WITH_SCARS, agrees no trade -> Aldrich KILL, reason valuation, 17:59. EV -33.0% at the honest entry; zero-EV entry Rp4,822 is 30.9% below the 52-week low, so fill and target are mutually exclusive. No position was ever opened; no ticket existed. Price at decision Rp10,250 (2026-11-05), above the honest target Rp9,344. Lint PASS at every gate. The kill ledger row is emitted by fund record at the next prelude.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-05T12:27:49.916901+07:00",
       "book": "INDO",
       "title": "PTBA declined again: sizing anchor refuses on carry convention",
@@ -19,6 +63,17 @@
       "kind": "sizing"
     },
     "body": "Declined to size. fund record size --thesis fund record --book INDO refuses verbatim: {\"error\": \"carry +33.8pp swamps a payoff leg \u2014 a data error, not a riskless trade\"} (exit 1). Cause unchanged: the open carry_convention_kill_state convention (PENDING_PATCHES Proposal E) folds net dividend 11.59%/yr x 3y into both payoff legs, +33.8pp against a -17.1pp down leg. Judge PASS_REDUCED 0.5 (2026-10-28; entry 3,000, max fill 3,090, target 4,842, kill 2,488) and Voss CLEAR_WITH_NOTES stand, but no deterministic anchor exists, so no size and no ticket. Price at decision: last 2,980 vs entry 3,000 / max fill 3,090 (-3.6%) / target 4,842 / kill 2,488 \u2014 the price is now INSIDE the entry band, so the trade is fillable today and blocked solely by the ruler. No hand-sizing, ev_math untouched, thesis file not edited. Flows stale (n=0, not estimated). Deployment context: INDO 9.78% gross vs the 60-95% band.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-05T16:24:41.434601+07:00",
+      "book": "INDO",
+      "title": "PTBA-001 sized 5.0% NAV under V5.4 carry rule",
+      "thesis": "T-INDO-PTBA-001",
+      "kind": "sizing"
+    },
+    "body": "Suggested script 10.0% NAV (binding constraint: constitution cap); Judge PASS_REDUCED 0.5 -> chosen 5.0% NAV, no further deviation. Ticket 240,500 sh (2,405 board lots), limit Rp3,000, max fill Rp3,090, est Rp743mn = 4.90% NAV. Price at decision Rp2,950 (below entry, so fund record stages the ticket at the next pre-open). Why now: V5.4 carry ruling prices the +34.8pp dividend carry on the up leg only and no dividends on the kill leg, removing the sizing refusal; price snapshot refreshed. Flows stale. Book cash 90.3%, deployment 9.7% vs 60-95% band; drawdown -1.76%, governor NONE.",
     "persona": ""
   },
   {
@@ -89,6 +144,11 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-11-05 (Wed)\n\nSession 2026-11-05T11:44:57+07:00 \u2192 2026-11-05T12:31:36+07:00. **Queue worked: 1 sizing (blocked deterministically, re-escalated); 1 repair chain advanced to restamp and closed; 0 new theses; 0 tickets typed by this session.** Five role spawns, all INDO: Dani (2 revisions), Drew (2 re-attacks), Aldrich (restamp), Voss (restamp), Gunawan (PM decisions). GLOBAL had no queue item and no spawn.\n\n## Queue as found (session_brief, step 1)\n- (a) `awaiting_pm_sizing`: **T-INDO-PTBA-001** (PASS_REDUCED 0.5, judged 2026-10-28) \u2192 step 3.\n- (b) `judged_missing_levels`: **empty**. (c) `revise_queue` and any no-verdict `draft`/`attacked` thesis: **empty** (51 theses on disk: 2 live, 44 judged, 5 killed; no draft/attacked). (d) `buy_verdict_sized_zero`: **empty**.\n- (e) ADVANCE idea cards: **INDO-PTBA only** (asof 2026-11-04, sleeve COVERAGE, house BUY v4 tp Rp4,894). It maps to the existing judged thesis T-INDO-PTBA-001 (house TP vs thesis target 1.1% apart, house base Rp4,758.6 vs thesis Rp4,842 \u2014 no material change), so no second thesis was built and the quota was not invoked. Card stamped **PROMOTED \u2192 T-INDO-PTBA-001** so the scouting desk sees\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-11-05 (Wed, second launch)\n\nSession 2026-11-05T16:05:39+07:00 \u2192 2026-11-05T18:06:00+07:00. **Queue worked: 3 theses under V5.4 \u2014 2 sized and 1 killed; 0 new theses built; 0 tickets typed by this session.** Ten role spawns, all INDO: Voss \u00d72, Gunawan \u00d72, Aldrich \u00d72, Dani \u00d72, Drew \u00d72. GLOBAL had no queue item and no spawn.\n\nThis is a second launch of the same session-day: the first CONSTRUCT ran 11:44:57 \u2192 12:31:36 (catch-up journal `fund record`), and the V5.4 data-fix (`1479212d`, owner ruling) was committed at 16:05:14 as this session's prelude. The 16:05 launch was fired to run the V5.4 re-size queue that ruling created.\n\n## Queue as found (session_brief, step 1)\n- (a) `awaiting_pm_sizing`: **T-INDO-AADI-001, T-INDO-PTBA-001, T-INDO-TINS-001** (all judged PASS_REDUCED; AADI and TINS sizing cleared by the owner's V5.4 ruling, PTBA never sized) \u2192 step 3.\n- (b) `judged_missing_levels`: **empty**. (c) `revise_queue` / any no-verdict `draft`/`attacked`: **empty** at entry. (d) `buy_verdict_sized_zero`: **empty at entry** \u2014 AADI became one when the anchor returned 0.0 (below).\n- (e) ADVANCE idea cards: **none**. All cards are PROMOTED (AADI, AKRA\u2026",
     "persona": ""
   },
   {
@@ -845,60 +905,6 @@
       "kind": "other"
     },
     "body": "QC WARN (carried 5 flags: stale ERAA price (3 sessions, HA tracked); published cash-rate policy jkse_dividend_yield_proxy_annual_pct >60d; fx_carry_rates EUR/JPY/GBP >60d). Not CRITICAL \u2014 both books 100% cash, zero exposure, dd 0.0. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kills to verify; wrapper wrote none.\n(3b) Governor de-gross: governor_state NONE/live=false for GLOBAL and INDO \u2014 no obligation.\n(3c) Entries: only judged_unticketed names are T-GLOBAL-0700HK-001 and T-INDO-ERAA-001, both non-tradeable.\n  - 0700HK: PM ruled pm_pct 0.0 (size_position fail-closed: Kelly<=0, ADV-unknown liquidity cap), concluded 2026-08-22 WEEKLY_DEEP at 0% sizing; entry_plan level 468 also stale (2026-07-22). No re-open without material new evidence. PASS_REDUCED 0.5x binds like a kill.\n  - ERAA: PM ruling DEFER until adv/mcap feed resolves; verified today that fund record still lacks ERAA key, last_prices price null/stale/missing+cached, mcap records empty (DEGRADED feed); QC flags ERAA stale 3 sessions. Also INDO book \u2014 not this GLOBAL session's mandate. spot-600 never the trade; entry gate 2026-10-31 Q3 print; deferral costs only ~0.16% dividend carry.\n(4) FX sleeve\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-01T08:46:36.636027+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-01: no action \u2014 no tickets, no kills, entries 0/2 ticketable",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (stale ERAA price; published cash-rate policy dividend-proxy + FX-carry EUR/JPY/GBP asof >60d) \u2014 not CRITICAL, no trading-action block. Kill exits: none due (kill_actions_due empty, live_theses 0, pending_orders empty). Governor DEGROSS: no (governor NONE both books). Entries (step 3c): T-INDO-ERAA-001 remains feed-blocked \u2014 HUMAN_ATTENTION head (2026-10-01T06:30) confirms the price layer is still dead for ERAA (cache row price:null, fetch emits bare ERAA not .JK), fund record still lacks the ERAA key, sizing anchor stays 0.0; PM deferral (judged 2026-09-26) stands, 560-limit entry untouched. T-GLOBAL-0700HK-001 is out of scope: GLOBAL book (not South/INDO) and PM-concluded at 0% sizing 2026-08-22 WEEKLY_DEEP (Kelly<=0, ADV-unknown fail-closed), closed as judged_unticketed with no re-open without material new evidence. No tickets created this session; nothing passed risk_check (nothing written).",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-01 (Thu)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 escalation; owns the deferred T-INDO-ERAA-001 ticket, ops lane) + `published cash-rate policy` staleness family (`jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`, `fx_carry_rates.EUR/JPY/GBP asof 2026-07-23/07-31/07-30 >60d`). Same ops-lane family already escalated 09-26; not session-actionable. No kill actions due, no reviews open, no pending orders, governor NONE both books (100% cash). judged_unticketed: T-INDO-ERAA-001 (feed gap) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2 PROMOTED) + `ELSA` DISCARD. Oldest active-asof MEDC 09-12 (19d, PROMOTED), GLOBAL-MS 09-15 (16d) \u2014\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-01T20:02:11.165198+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-01 20:00 WIB: no tickets \u2014 both judged_unticketed theses sized 0.0",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Step1 brief: QC WARN (5 flags, all stale-price/published cash-rate policy asof: ERAA price; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30; fx_carry_rates EUR/JPY/GBP asof 2026-07-23/31/30), NOT CRITICAL -> judgment proceeded. Governor NONE both books; kill_actions_due empty; no fired kill lacking a ticket; orders_pending empty; GLOBAL 100% cash, dd 0.\n\nCategory 3c review of judged_unticketed (AWAITING_LEVEL):\n- T-GLOBAL-0700HK-001: sizing.pm_pct=0.0. PM decision 2026-08-22 (WEEKLY_DEEP): PASS_REDUCED fraction binds like kill; thesis concluded at 0% sizing, closed as judged_unticketed, no re-open without material new evidence (sponsoring analyst may resubmit). No ticket (runbook: never resize here).\n- T-INDO-ERAA-001: sizing.pm_pct=0.0 (size_position fail-closed: fund record lacks ERAA key). PM ruling DEFER until refresh-adv + universe refresh re-stages size_position; 'place nothing today'; spot 600 is not the trade, 560-limit at max_chase 0 waits on the Q3-2026 print. HUMAN_ATTENTION (2026-10-01 IDX pre-open) confirms feed still dead: last_prices ERAA row still price null/stale, bare 'ERAA' fetch cannot resolve vs .JK-suffixed peers. Deferral stands. No ticket.\n\nNo kill\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-30T08:47:13.374888+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-09-30: no action \u2014 no tickets, no kills, feed-gated entries",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (stale ERAA price; published cash-rate policy dividend-proxy/EX-EUR/JPY/GBP>60d) \u2014 not CRITICAL, no trading-action block. Kill exits: none due (kill_actions_due empty, live_theses 0, pending_orders empty). Governor DEGROSS: no (governor NONE both books). Entries: T-INDO-ERAA-001 judged_unticketed but PM-ruled DEFER until adv/mcap feed resolves \u2014 verified feed still DEGRADED (market-data snapshot no ERAA key asof 2026-09-26, fund record records empty; refresh-adv not in prelude), sizing anchor remains 0.0, 560-limit entry untouched per ruling; T-GLOBAL-0700HK-001 is GLOBAL-book (out of INDO scope) and PM-concluded at 0% sizing (2026-08-22 WEEKLY_DEEP), no re-open without material new evidence. No tickets created this session.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-30 (Wed)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 escalation; owns the T-INDO-ERAA-001 deferral, ops lane) + `published cash-rate policy` staleness family: `jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`, `fx_carry_rates.EUR asof 2026-07-23 >60d`, `fx_carry_rates.JPY asof 2026-07-31 >60d`, `fx_carry_rates.GBP asof 2026-07-30 >60d`. Same ops-lane family already escalated 09-26; not session-actionable. No kill actions due, no reviews open, no pending orders, governor NONE both books (100% cash). judged_unticketed: T-INDO-ERAA-001 (feed-gap deferral, trading owns re-stage) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2 PROMOTED)\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-09-30T20:04:24.057495+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-09-30 20:00 WIB: no tickets \u2014 both judged_unticketed theses sized 0.0",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "Step1 brief: QC WARN (5 flags, all stale-price/published cash-rate policy asof: ERAA price; jkse_dividend_yield_proxy_annual_pct asof 2026-06-30; fx_carry_rates EUR/JPY/GBP asof 2026-07-23/31/30). NOT CRITICAL -> judgment proceeded. Governor NONE both books; kill_actions_due empty; kill_confirm {} (no fired kill lacking a ticket); orders_pending empty.\n\nCategory 3c review of judged_unticketed:\n- T-GLOBAL-0700HK-001: sizing.pm_pct=0.0. PM decision 2026-08-22 (WEEKLY_DEEP): PASS_REDUCED fraction binds like kill; thesis concluded at 0% sizing, no re-open without material new evidence. No ticket (runbook: no resize here).\n- T-INDO-ERAA-001: sizing.pm_pct=0.0 (size_position fail-closed: fund record lacks ERAA key). PM ruling DEFER until refresh-adv + universe refresh re-stage size_position; 'place nothing today'. Also INDO-heavy, out of scope for GLOBAL US-preopen sleeve. No ticket.\n\nNo kill exits to verify beyond wrapper's fund record scan (none fired). No de-gross (governor NONE). No FX tickets (none judged-awaiting in scope).\n\nNo risk_check --orders needed (zero tickets created). Warnings carried per runbook: ERAA stale price + 4 stale published cash-rate policy; noted for ops, not\u2026",
     "persona": ""
   }
 ]

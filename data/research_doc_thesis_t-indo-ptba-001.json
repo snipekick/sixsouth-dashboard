@@ -46,13 +46,13 @@
     "fee_tax_drag_pct": 1.0,
     "expected_pct": 49.7,
     "horizon_years": 3.0,
-    "carry_pct": 33.77,
-    "kelly_full_pct": null
+    "carry_pct": 34.77,
+    "kelly_full_pct": 171.1
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 5.0,
+    "deviation_reason": "Judge PASS_REDUCED 0.5 applied to script 10.0 (no further deviation)"
   },
   "base_rate": {
     "rate": 0.42,
@@ -175,6 +175,18 @@
       "at": "2026-10-28T14:51:30+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-11-05T16:20:38+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-11-05T16:24:47+07:00",
+      "actor": "Gunawan",
+      "role": "PM_INDO"
     }
   ],
   "kill_outcome": null,
@@ -253,6 +265,16 @@
       "heading": "PM decision",
       "detail": null,
       "markdown": "GUNAWAN, PM_INDO, 2026-10-28T15:07:31+07:00. I accept the Judge's PASS_REDUCED, size_multiplier 0.5, and the Rp3,000 entry (max fill Rp3,090), target Rp4,842, kill Rp2,488. I do not size or stage this session. The deterministic sizing anchor refuses: `the sizing engine` folds 11.59%/yr net dividend carry into both payoff legs, +33.8pp against a \u221217.1pp down leg \u2014 the open `carry_convention_kill_state` convention question (Proposal E). Separately, `the price snapshot` has no PTBA.JK snapshot, so a ticket fails closed. Price at decision: Rp3,100 spot; entry Rp3,000. Unblock: the convention ruling plus the snapshot refresh at the next pre-open prelude."
+    },
+    {
+      "heading": "Risk check",
+      "detail": "V5.4 re-review (2026-11-05T16:20:38+07:00)",
+      "markdown": "**CLEAR_WITH_NOTES \u2014 VOSS.** PM 5.00% NAV (script 10.0 \u00d7 Judge 0.5); pm_pct \u2264 script_pct holds.\n\n1. **Layer 1** (`the risk checker` has no per-thesis mode). Tags: `the INDO universe` PTBA.JK = coal_china/energy, both in the closed taxonomy (`the fund rules` 149-154). At 5.00%: position 5.00/10 at cost; single trade 5.00/5.0 (tranches \u22644.90%, `size_position.ticket`); sector COAL 5.00/30; energy 10.42/60; coal_china 5.00/60; gross 14.73/100. `risk_check --book INDO`: governor NONE, dd -1.76%, cash 90.27%, gross 9.73%; flags cash ceiling and 2 names. Dossier asof 2026-10-28, 8d < 60 (`_dossier_frozen`). Snapshots: Rp2,950 2026-11-05 (fresh, plausible), ADV Rp155.71bn 2026-11-05, mcap Rp37.31tn 2026-10-31 (<45d). Kills price/KPI/date machine-monitorable, sources named.\n\n2. **Stress.** PTBA -8% 0.40pp + ERAA -7% 0.30pp + MEDC -7% 0.38pp = **post-trade stress-day book loss 1.08% NAV (Rp164mn)**; script 10.0% = 1.48% (Rp225mn). Headroom at dd -1.76%: **6.24pp to -8% REVIEW / 13.24pp to -15% DEGROSS**.\n\n3. **Liquidity and ARB tail.** Full 5.00% exits in **0.024 sessions** at 20% ADV; 7-day cap not binding. Kill -17.1% sits inside one 25% band; a band-exceeding shock suspends the price kill (\u00a75) \u2014 one band -25% = -1.25% NAV, two bands -43.75% = -2.19% NAV.\n\n4. **Notes.** (a) `ev_math.expected_pct` 49.7 is pre-V5.4; lint WARNs restate 29.5. Record defect only \u2014 `size_position` prices up-leg carry itself, anchor 10.0 stands. (b) `sizing` null: record script_pct 10.0, pm_pct 5.0, reason \"Judge 0.5\". (c) Energy 5.42\u219210.42%: MEDC/PTBA share commodity beta; not disguised concentration at these weights. (d) Flows stale. (e) Long horizon; short-horizon WARN journals."
+    },
+    {
+      "heading": "PM sizing \u2014 V5.4",
+      "detail": null,
+      "markdown": "GUNAWAN, PM_INDO. Sized at 5.00% NAV (Rp743mn): script_pct 10.0 (binding: constitution cap) \u00d7 Judge PASS_REDUCED 0.5; no further deviation. Ticket: 240,500 shares (2,405 board lots), limit Rp3,000, max fill Rp3,090 \u2014 within the 3% chase and 4.75% above the Rp2,950 last close, so the entry stager stages it at the next pre-open. V5.4 carry is priced on the up leg only (+34.8pp, net div 11.59%/yr \u00d7 3y); the kill leg carries none, which makes the thesis sizeable. Post-trade stress 1.08% NAV; headroom 6.24pp to REVIEW. Flows stale. Entry valid_until 2027-02-05 (quarterly re-underwrite)."
     }
   ]
 }

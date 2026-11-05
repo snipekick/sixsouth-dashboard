@@ -46,13 +46,13 @@
     "fee_tax_drag_pct": 1.5,
     "expected_pct": 3.6,
     "horizon_years": 3.0,
-    "carry_pct": 4.5,
-    "kelly_full_pct": 13.8
+    "carry_pct": 6.0,
+    "kelly_full_pct": 0.4
   },
   "sizing": {
-    "script_pct": 3.45,
-    "pm_pct": 1.725,
-    "deviation_reason": "Judge PASS_REDUCED 0.50 applied unsoftened to script recommended_pct 3.45 (binding: quarter-Kelly after haircut; kelly_full 13.78%) \u2192 exact PM cap 1.725% NAV (lint bound = 3.45 x 0.5); fraction binds like a KILL, no further deviation."
+    "script_pct": 0.09,
+    "pm_pct": 0.045,
+    "deviation_reason": "Judge PASS_REDUCED 0.50 applied unsoftened (0.09 x 0.50 = 0.045); no further deviation"
   },
   "base_rate": {
     "rate": 0.42,
@@ -199,6 +199,18 @@
       "at": "2026-10-16T03:04:51+07:00",
       "actor": "Voss",
       "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-11-05T16:29:12+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-11-05T16:32:09+07:00",
+      "actor": "Gunawan",
+      "role": "PM_INDO"
     }
   ],
   "kill_outcome": null,
@@ -273,6 +285,16 @@
       "heading": "Risk review",
       "detail": null,
       "markdown": "**Layer 1 (deterministic) \u2014 PASS, no VETO.**\n- Dossier `data/dossiers/TINS.fund record` present; frontmatter valid (`fundamentals_complete: true`, `kind: auto`, `asof 2026-10-16`), mtime 2026-10-16 \u2192 age 0d  2027-12-31 (review); kpi `realized_tin_price_usd_mt`  script_pct` breach. Anchor stated; the 0.50 binds like a KILL and is applied unsoftened.\n7. **Horizon balance.** Long-horizon thesis; book long-horizon count below min (NORM \u2014 journaled, never forced).\n\n**Note (not a veto) \u2014 entry limit 780 vs spot 4,170.** The limit sits **81.3% below spot** (max_chase 5% \u2192 819, still ~80% below); the ticket will rest unfilled and expires in `order_expiry_venue_days` = 3. Read: **genuine value discipline AND a liquidity-of-idea problem** \u2014 780 is below even the base-case NAV (1,250) and far below spot, so it is honest refusal to pay the market's price, but it is **unreachable absent an ~81% collapse**, leaving no executable path to the thesis at the market's price. Not a veto; PM/analyst decide whether to re-price or park the idea.\n\n**Contract: CLEAR_WITH_NOTES.**"
+    },
+    {
+      "heading": "Risk check",
+      "detail": "V5.4 re-review (2026-11-05T16:29:12+07:00)",
+      "markdown": "**Layer 1 \u2014 PASS, no VETO.** Dossier asof 2026-10-16 (age 20d1T; ADV IDR 187.28bn>2bn. `nickel_ev`/`energy` are on the closed taxonomy (deterministic pass) but mislabel a tin-centric name; no tin/industrial-metal factor \u2014 accepted flag, PENDING_PATCHES, not fail-closed. Governor NONE, official dd \u22121.63%; no order pending. PM unsized: anchor 0.09%, Judge 0.50 \u2192 0.045% cap (0.04% display); pm\u2264script holds. Headline `expected_pct` 3.6 prices carry in the kill state (pre-V5.4); V5.4 EV +0.1% \u2014 legs correct, restate next revision. Kill criteria monitorable: price2027-12-31; `realized_tin_price_usd_mt`<18,000 (World Bank Pink Sheet). Flows stale \u2014 not estimated.\n\n**Layer 2.** Stress tier `nickel_ev` \u22128%. (1) Post-trade stress-day book loss **0.69% NAV (IDR 104.7m)** at the 0.09% anchor; **0.68% (IDR 103.7m)** at PM 0.045%, TINS's own leg 0.004% (IDR 0.55m). (2) Governor headroom from official dd \u22121.63%: **5.68pp to \u22128% REVIEW / 12.68pp to \u221215% DEGROSS** after that loss (6.37/13.37 pre-stress). Full-position exit 0.0002d (20% ADV IDR 37.46bn/day); no reduce. `energy` bucket 5.42%\u21925.47% (soft cap 40%), `nickel_ev` 0.045%, METALS sector 0.045%. ARB tail: one 25% band gap below the 430 kill \u2192 full loss \u22480.03% NAV (IDR ~4.0m). Horizon: long adds; short still below minimum (NORM, journaled).\n\nAt 0.045% NAV (~IDR 6.8m) the position is economically trivial and rests 77.8% below the 3,510 tape (max fill 819, \u221276.7%): it cannot fill absent an ~78% collapse or move either governor alone; risk contribution \u22480. No thesis view.\n\n**Contract: CLEAR_WITH_NOTES** (notes: on-list tag mislabel/taxonomy gap; pre-V5.4 headline EV; unhittable resting bid)."
+    },
+    {
+      "heading": "PM sizing \u2014 V5.4",
+      "detail": null,
+      "markdown": "**SIZED \u2014 0.045% NAV (~IDR 6.8m).** Script anchor 0.09% NAV (binding: quarter-Kelly after the 9% nickel_ev/energy correlation haircut); Judge PASS_REDUCED 0.50 applied unsoftened \u2192 pm_pct 0.045%, no further deviation. Ticket: 8,300 sh (83 lots), limit 780, max fill 819. Max fill sits ~77.8% below the 3,510 tape, so this remains a waiting price trigger, not an executable path at spot; the entry stager tickets only if the market comes within range. I would re-price only on a fresh through-cycle tin anchor or new primary valuation, not on price alone. Flows stale. Economically trivial; no thesis view added."
     }
   ]
 }

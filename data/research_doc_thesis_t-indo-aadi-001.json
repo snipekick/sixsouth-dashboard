@@ -18,8 +18,8 @@
     "horizon": "long",
     "archetype": "commodity_capex_turnaround",
     "status": "judged",
-    "verdict": "PASS_REDUCED",
-    "size_multiplier": 0.25,
+    "verdict": "KILL",
+    "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-10-21T13:11:27+07:00",
@@ -28,35 +28,35 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": 7000.0,
-    "target": 8584.0,
-    "kill": 4778.0,
+    "entry": 7475.0,
+    "target": 9344.0,
+    "kill": 1868.0,
     "max_chase_pct": 1.0,
     "entry_mode": "limit",
-    "target_rationale": "fade-FCF NAV: $400m (ASSUMPTION) / 11% + net cash $99.3m = $0.4797/sh x 17,893 = IDR 8,584; no sourced re-rate case, so 11,950 is withdrawn. Revision 3: target unchanged \u2014 it is the honest central value; the entry's 18.5% discount to it is the margin of safety, not an under-set target",
+    "target_rationale": "Revision 5: the house primary life-of-asset DCF TRUNCATED AT THE IUPK EXPIRY (1 Oct 2032, S15/F19). Same house inputs as Rev 4 \u2014 deck path 137/118/110/105 then lt, realisation 0.63, volume 71.94 Mt, royalty 14.2%, LK cost stack, Kestrel $700m + $165m, WACC 10.13% \u2014 but the PV stops at FY2032E: pv_sum 3,244.6, plus net cash 221.1, less minority 346.2, plus investments 26.5 and bridge 865.0 = equity 4,011.0 = Rp9,344. The 21.4% of the 12-year 11,885 that sits after 1 Oct 2032 is an extension the annual report says is available but not granted; it is no longer capitalised. Target sits 8.8% BELOW ",
     "price": 10250.0,
     "price_asof": "2026-11-05"
   },
   "ev": {
     "p_up": 0.35,
-    "up_pct": 22.6,
+    "up_pct": 25.0,
     "p_down": 0.65,
-    "down_pct": -31.7,
-    "net_div_yield_pct_pa": 8.5,
+    "down_pct": -75.0,
+    "net_div_yield_pct_pa": 8.1,
     "fee_tax_drag_pct": 1.5,
-    "expected_pct": 11.3,
+    "expected_pct": -33.0,
     "horizon_years": 3.0,
-    "carry_pct": 24.0,
-    "kelly_full_pct": 315.1
+    "carry_pct": 24.3,
+    "kelly_full_pct": -90.2
   },
   "sizing": {
-    "script_pct": 10.0,
-    "pm_pct": 2.5,
-    "deviation_reason": "0.25 Judge PASS_REDUCED multiplier x script 10.0% = 2.50% NAV (IDR 386.4m, 55,200 sh at 7,000) = the Voss ceiling; held at the ceiling, no further cut: book heat rises only 0.81% -> 1.01% (budget 12%) and the book is 11.6% deployed vs the 60-95% band with 2 of 8 names, so cutting the starter further would widen an already-attributed deployment gap"
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
   },
   "base_rate": {
     "rate": 0.42,
-    "source": "the base-rate library commodity_capex_turnaround registry 0.42 (VAL_COMMODITY_CYCLICAL step 6 mandates this key for a commodity producer; the valuation frame is that card's). Applied p_up 0.35 = an itemised DOWNWARD reference-class deviation: the key's qualifying condition (supply contraction) is absent \u2014 AADI capex 272.2/371.1/324.6 flat-to-up, no industry capex series in the packet, thermal coal",
+    "source": "the base-rate library commodity_capex_turnaround registry 0.42 (VAL_COMMODITY_CYCLICAL step 6 mandates this key for a commodity producer; the valuation frame is now that card's life-of-asset DCF). Applied p_up 0.35 = the itemised DOWNWARD reference-class deviation upheld by Judge verdict 2: the key's qualifying condition (supply contraction) is absent \u2014 AADI capex 272.2/371.1/324.6 flat-to-up, no ",
     "library": {
       "rate": 0.42,
       "base_up_pct": 75.0,
@@ -68,16 +68,16 @@
     {
       "metric": "price",
       "op": "<",
-      "value": 5973.0,
+      "value": 3320.0,
       "action": "review",
-      "note": "falsification NAV \u2014 FY2028E fade FCF $300m at the 12% trough cap + net cash $99.3m = IDR 5,973; the thesis is dead here and the exit is initiated. The fill is ARB-clamped at the level below (Revision 3)"
+      "note": "Revision 5 \u2014 falsification NAV: granted-life life-DCF at a flat US$95/t Newcastle marker, below the deck's US$100-110 marginal-cost band = IDR 3,320 (engine life rule, max cumulative PV). The thesis is dead here and the exit is initiated. Execute the review same-session, no discretion; the fill is ARB-clamped at the level below"
     },
     {
       "metric": "price",
       "op": "<",
-      "value": 4778.0,
+      "value": 1868.0,
       "action": "exit_full",
-      "note": "ARB-clamped falsification exit = the loss the sizer carries: 5,973 x 0.80 per the fund rules price_bands (20% at >=IDR 5,000) = IDR 4,778 = -31.7% from entry 7,000. A 49% vol IDX name cannot gap-exit at the NAV (SIZING_EV_BASE_RATES 6; Judge ground 3; Drew 6)"
+      "note": "Revision 5 \u2014 TWO 25% ARB bands below the kill (3,320 x 0.75 x 0.75) = IDR 1,868 = -75.0% from entry 7,475: the sizing leg. One band (2,490 = -66.7%) is the central fill; two is carried because a 49% vol IDX name can gap a band per session and Drew has twice required the tail to be sized. SIZING_EV_BASE_RATES 6"
     },
     {
       "metric": "date",
@@ -149,14 +149,18 @@
       ]
     },
     "valuation": {
-      "method": "Fade frame: fade-FCF NAV = fade FCF $400m (ASSUMPTION) / 11% + net cash $99.3m, per share x USD/IDR 17,893 = IDR 8,584. Entry anchor, same frame at AADI's worst audited FCF ($323.0m, FY2023): $323.0m/",
+      "method": "Revision 5 \u2014 the house primary life-of-asset DCF truncated at the IUPK expiry (1 Oct 2032, S15/F19). Same inputs as the house: deck path (Newcastle 137/118/110/105, then lt), realisation 0.63 calibrat",
       "bear": {
-        "value": 5973.0,
-        "basis": "FY2028E fade FCF $300m (below the worst audited $323.0m) at the 12% trough cap + net cash $99.3m \u2014 the falsification level = the kill. A kill exit is ARB-clamped one band below (the fund rules price_bands 20% at >=IDR 5,000) -> IDR 4,778 = the sizing downside (Revision 3)"
+        "value": 3320.0,
+        "basis": "Revision 5 \u2014 granted-life life-DCF at a flat US$95/t Newcastle marker, below the deck's US$100-110 marginal-cost band: the falsification level = the kill. The engine's life rule (max cumulative PV, fund record:621-631) truncates at FY2032E = Rp3,320; the 2,582 a straight sum-of-all-years gives inc"
       },
       "base": {
-        "value": 8584.0,
-        "basis": "fade-FCF NAV = the target; no sourced re-rate case, so the war-premium 11,950 is withdrawn"
+        "value": 9344.0,
+        "basis": "Revision 5 \u2014 the house primary life-DCF truncated at the IUPK expiry = Rp9,344 = the target; the post-expiry 21.4% of 11,885 is not paid for"
+      },
+      "bull": {
+        "value": 18830.0,
+        "basis": "house bull scenario (deck +20%, volume +5%, cost -15%) truncated at the licence expiry = Rp18,830; the full-window bull (24,170) includes the un-granted extension; not capitalised in the target"
       }
     }
   },
@@ -232,15 +236,46 @@
       "at": "2026-10-23T14:35:47+07:00",
       "actor": "Gunawan",
       "role": "PM_INDO"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-05T16:37:23+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-05T17:03:27+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-05T17:17:16+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-05T17:42:56+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-05T17:48:37+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-05T17:59:07+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
-  "entry_status": {
-    "state": "waiting",
-    "asof": "2026-11-05T08:45:17+07:00",
-    "gap_pct": 50.3,
-    "max_fill": 7070.0
-  },
+  "entry_status": null,
   "sections": [
     {
       "heading": "Bottom-up estimates",
@@ -326,6 +361,41 @@
       "heading": "Judge verdict",
       "detail": "2",
       "markdown": "ALDRICH (JUDGE), 2026-10-23T14:24:41+07:00.\n\n**PASS_REDUCED \u2014 `size_multiplier: 0.25`, `status: judged`.** Lint PASS (one WARN: the three-round verbatim-chain word count; not dispositive). Correction against the 35-KILL/40-thesis, 0-fill record: the 2026-10-21 return cured three of four grounds; re-killing a defect I already adjudicated is that record's reflex. INDO at 11.6% deployed with 2 of 8 names favours a starter PASS at a resting limit.\n\n1. (a) p_up 0.35 vs 0.42 \u2014 argued distance: capex 272.2/371.1/324.6 flat-to-up is a cited absence of the key's supply-contraction qualifier, corroborated by the macro regime memo (coal NEUTRAL). The mild double-count is a scar, not a defect.\n2. (b) The $400m fade FCF is a flagged ASSUMPTION in the no-marker frame I authorised, bounded by audited FCF (323.0/534.6); entry 6,975 and kill 5,973 rest on audited numbers alone. Cost-curve quartile and reserve life stay unmet \u2014 the cap on size, not an auto-kill.\n3. (c) Drew in my words: the whole edge is carry buyable only 40% below the tape, in the state where that carry is at risk. True, and conceded \u2014 a carry clip, not a trade.\n4. Archetype holds (card step 6 mandates the key). Drew's surviving MATERIALs \u2014 down-leg carry (house convention), parent-directed payout, two-band tail \u2014 are priced risks and sizing instructions; no level is back-solved, so 6a does not fire.\n5. No live raise: Rev 1's up_pct 25.8\u219239.0 lacked a `new evidence:` flag but was arithmetic from a lower entry against a target I had already returned, and is fully unwound; every current estimate is a cut. Committed lines un-retro-edited.\n\n*Session close: one chain judged, 1 PASS_REDUCED / 0 KILL; AADI was passable at starter size had it been built correctly first \u2014 its first two builds sized to zero by construction.*"
+    },
+    {
+      "heading": "Judge re-rule \u2014 V5.4",
+      "detail": null,
+      "markdown": "**REVISE \u2014 construction defect; `status: attacked`; returns to ANALYST_INDO; no kill-ledger row, no cooldown.** Not PASS/PASS_REDUCED: at the judged legs (p_up 0.35, +22.6%/\u221231.7%, carry on the up leg only) V5.4 EV is **\u22125.3pp** and Kelly **\u22120.34** \u2014 a buy verdict cannot stand at zero size. Not KILL: that zero is arithmetic from a target the thesis itself under-set, not a finding that AADI's business value supports no sensible entry.\n\n1. **Missing house-coverage reconciliation.** Since verdict 2 the firm published South coverage AADI.JK (2026-10-27): BUY, Rp12,399 target, +30.7% TR, first-quartile costs, net cash, monetised Australian asset. The thesis has no `## House coverage reconciliation` section and never addresses it; a South thesis must reconcile with house coverage, and an unexplained contradiction is a REVISE, not a KILL.\n\n2. **Target under-set on a premise now falsified.** Revision 3 withdrew every level above Rp8,584 on \"no sourced re-rate case.\" A sourced first-party case now exists above the tape (Rp10,250 < Rp12,399). Method card 3(a): a target below the central value is a construction defect \u2014 re-derive it on the reconciled basis, or argue with sources why the fade frame is the honest one against the house.\n\n3. **Rule 6a fires.** The \u22125.3pp/\u22120.34 is measured against that under-set target; it is not evidence the business is overvalued at any entry. A rebuilt, higher target changes the up leg and the EV. Killing now scores the build, not the name, and spends the 30-day cooldown on a name with fresh BUY coverage.\n\n4. **No dispositive flaw.** No level fabricated; ADV IDR 128.1bn; no governance/mandate/liquidity breach. Cash 90.3% / 9.7% deployed favours repairing, not killing, a name the fund may own.\n\n*Correction applied: against the 35-KILL/40-thesis record, a mis-specified thesis I can send back is returned, not killed.*"
+    },
+    {
+      "heading": "Revision",
+      "detail": "4 (2026-11-05T17:03:27+07:00)",
+      "markdown": "1. **House reconciliation (ground 1).** Appended below, line by line. Conceded: the section was missing and the omission was a construction defect.\n\n2. **Target (ground 2).** The premise \"no sourced re-rate case\" is withdrawn. **new evidence:** South coverage AADI.JK, published 2026-10-27 (BUY, Rp12,399), its engine model (`coverage/companies/AADI.JK/model.json`, DCF Rp11,884.6), and the 2026-10-26 method-card changelog naming the statutory-royalty-over-effective-cost-base, missing-Kestrel and unsourced volume/cost errors behind the old ~45% understatement. Target re-derived on the house primary life-of-asset DCF = **Rp11,885**. I do not take 12,399: it adds 15% of a peer EV/EBITDA cross-check, and card step 1 forbids current multiples as a value input for a cyclical. **The target rises 38.5% \u2014 a material target raise and a new-thesis event; flagged for Drew/Aldrich, not silently banked.**\n\n3. **Levels and EV (ground 3).** Kill = the falsification, life-DCF at a US$95/t through-cycle marker (below the deck's US$100-110 marginal-cost band) = **Rp3,948**; ARB-clamped exit 2,961. Entry **6,600** = the NAV at the US$100/t band floor (6,627), 0.4% below it \u2014 derived, not fitted. up +80.1%, down \u221255.1%, p_up 0.35 (registry 0.42 less 7pp for the still-absent supply contraction), carry 9.0%/yr \u00d7 3y = 27.0pp on the up leg, drag 1.5 \u2192 **expected_pct +0.2**, own-Kelly +0.2%, library-Kelly +42.7%. Carry-free up/|down| 1.45 vs library 2.14 (carry-inclusive 1.86). The gap is the deeper bear (\u221255% vs \u221235%): **(c) a genuinely less-asymmetric payoff**, not (a) an under-set target and not (b) a stop-placed kill. At the tape (10,250) the trade is deeply negative; it exists only at/below 6,660.\n\n4. **No dispositive flaw (ground 4).** Agreed \u2014 no fabricated level, ADV IDR 128.1bn, no breach. `status: attacked`, no verdict stamp."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "The house prices AADI on a 12-year life-of-asset DCF; my $400m perpetual fade is withdrawn. Through-cycle price: the coal deck's reviewed path (Newcastle 137/118/110/105, then lt 105) replaces an uncited fade. Realisation: 0.63 = FY2025A ASP $68.3 / deck $108.4, calibrated on the FY2025 actual (card step 4); my frame had no ratio. Volume: 71.94 Mt flat \u2014 the FY2025 record and plan, against ~11.6 years ex-Kestrel reserve; my $4.6bn revenue fade was unsourced. Royalty: 14.2% of revenue, the audited paid rate (F20/F22). Costs: the LK stack, $39.4/t ex-royalty at 4.35x strip, not a first-quartile claim. Kestrel: $700m plus $165m contingent in the bridge; my $99.3m net cash predates the 30 June 2026 accounts ($221.1m). WACC 10.13%, not my 11-12% caps. The house 12,399 is 4.3% above its primary because it weights 15% peer EV/EBITDA \u2014 card step 1 bars current multiples, so my target is the primary DCF."
+    },
+    {
+      "heading": "Re-attack 4",
+      "detail": null,
+      "markdown": "DREW (BEAR), 2026-11-05T17:17:16+07:00 \u2014 re-attack 4. Verbatim, survives the Judge verdict.\n\n1. [FATAL] The entry does not reproduce. Replicating the cited house model exactly (Rp11,884.58 vs 11,884.57) and holding d.coal.newc flat: US$100 \u2192 Rp5,121; US$95 \u2192 Rp2,582. Neither stated number reproduces; 6,627 \u2248 the deck \u00d70.90 (6,568). Entry 6,600 is 28.9% above its stated basis, not 0.4% below. up_pct, EV and size rest on a number absent from its source.\n\n2. [FATAL] Two decks again. Entry priced at a flat marker, target at the deck path 137/118/110/105. Up +80.1% embeds the marker rising 100\u2192137 in year one \u2014 cycle timing, which card step 2 calls \"timing input, never value.\" Verdict 1's two-inconsistent-bases defect, re-based not repaired.\n\n3. [FATAL] 21.4% of the target is an un-granted licence. Stopping the DCF at IUPK expiry (1 Oct 2032, F19) gives Rp9,344; EV at 9,344/6,600 is \u221213.3pp. The house calls this its single largest judgment; Rev 4 adopted it unhaircut.\n\n4. [MATERIAL] The US$95 falsification (3,948) fires 53% above the true US$95 NAV (2,582) \u2014 a stop, not a falsification. The cited house bear \"DCF Rp2,261\" is not in fund record (bear v0 4,176.6).\n\n5. [MATERIAL] One ARB band sized, two possible: 2,961\u00d70.75 = 2,221 (\u221266.4%) \u2192 EV \u22127.1pp. Rev 3's tail demand stays unsized.\n\n6. [MATERIAL] +0.17pp is carry residue (carry +9.45, price-only \u22129.28). 1pp of p_up moves EV 1.35pp \u2014 8\u00d7 the edge. It sizes 0.06% NAV (Rp9.1m): a token, not a trade.\n\n7. [MATERIAL] Fill and target exclude each other. 6,600 is below the 52-week low (6,975), 0 of 57 weekly closes. A de-rate there prices coal near US$74 (house reverse-DCF 119.07 at the tape) \u2014 the state in which the 137/118 path is falsified.\n\n8. [MATERIAL] Reconciliation is half-done: the house BUY at 10,675 is +16.2%; the thesis calls 10,250 deeply negative and tradeable only \u22646,660. Both cannot hold; ground 1 is unreconciled on the rating.\n\n9. [MATERIAL] Volume (100% of revenue) is flat on a contracted book of F24 = 72 Mt total for 2025-2032 (~9 Mt/yr, 12.5% of plan).\n\n10. [MINOR] Own-Kelly +0.2 vs sizer 0.28; library-Kelly 42.7 unreproducible.\n\nStop objecting at a target on granted reserves (\u22659,344), a reproducing entry basis, and the two-band tail priced.\n\n**MAJOR_REVISION.** Strongest sentence: the up leg splices a $100 entry to a $137 target \u2014 it needs the market to halve on coal it simultaneously assumes recovers."
+    },
+    {
+      "heading": "Revision",
+      "detail": "5 (2026-11-05T17:42:56+07:00)",
+      "markdown": "1. **CONCEDE.** Flat US$100 gives Rp5,121 or Rp5,309 (life-DCF rule), not 6,627 \u2014 unreproducible under any convention (deck x0.90 = 5,348). New entry **7,475** = granted-life DCF 9,344 less 20%.\n2. **CONCEDE.** One basis: entry and target both from the deck path truncated at the licence; the entry is a discount to that DCF, not a re-priced marker.\n3. **CONCEDE.** Target on granted life: PV to FY2032E 3,244.6, equity 4,011.0, **Rp9,344**; the 21.4% post-expiry tail is unpaid.\n4. **PARTLY.** 3,948 withdrawn; \"house bear 2,261\" was wrong (bear v0 4,176.6). 2,582 sums the post-2032 flows the life-DCF rule discards (fund record:621-631); the consistent US$95 NAV is **Rp3,320** \u2014 the new kill.\n5. **CONCEDE.** Two 25% ARB bands: 3,320 x 0.5625 = **Rp1,868**, down -75.0%; the tail is the sizing leg.\n6. **CONCEDE.** The edge was carry; at 8.1%/yr it no longer covers the loss leg \u2014 EV **-33.0pp**, Kelly -0.90.\n7. **CONCEDE.** 7,475 is inside the 52-week range, but a fill that deep is the market pricing the deck path as wrong; flows stale.\n8. **CONCEDE.** No BUY at 10,675: I strike the tail the house calls its largest judgment (report \u00a74); the target sits 8.8% below the tape.\n9. **PARTLY.** F24 is 72 Mt over 2025-2032, 12.5% of plan \u2014 it does not corroborate flat volume; the citation is withdrawn, volume resting on FY2025A and the FY2026 plan alone.\n10. **PARTLY REBUT.** Library-Kelly 42.7 reproduces (0.42/0.35 - 0.58/0.75); Rev 4's 0.29% equals the sizer's 0.28%. Both moot \u2014 Kelly is negative.\n\n**No trade.** EV is negative at every price printed in 52 weeks; the zero-EV entry is ~5,300, 24% below the low. Streak (c), not an under-set target or a stop-placed kill: the upside needs the deck path, the fill needs disbelief in it."
+    },
+    {
+      "heading": "Re-attack 5",
+      "detail": null,
+      "markdown": "DREW (BEAR), 2026-11-05T17:48:37+07:00 \u2014 re-attack 5. Verbatim, survives the Judge verdict.\n\n1. [MINOR] Target reproduces: 3,244.6 + 221.1 \u2212 346.2 + 26.5 + 865.0 = equity 4,011.0; \u00d718,140/7,786.89 = Rp9,344.0. The PV leg is the house model's own cum_pv at FY2032E (fund record, dcf_life). Entry 9,344\u00d70.80 = 7,475.2; exit 3,320\u00d70.5625 = 1,867.5; up +25.0, down \u221275.0, EV \u221233.0, Kelly \u22120.90 (the sizing engine:79). All recompute.\n\n2. [MINOR] Kill reproduces: flat US$95 in the house engine gives pv_sum 658.7, life end FY2032E, Rp3,319.7 = the kill; the all-year sum gives Rp2,582 as stated. The gap is the negative post-2032 rows the life rule discards (fund record:621-631).\n\n3. [MATERIAL] \"Zero-EV entry ~5,300\" does not reproduce: on this ev_math it is **Rp4,822**, 30.9% below the 6,975 low. Rp5,309 is the flat-US$100 NAV quoted in Rev 5 point 1 \u2014 imported from another computation. It does not rescue the trade; it understates how absurd the entry must be. Fix before the Judge quotes it.\n\n4. [MINOR] \"Truncated at the IUPK expiry\" is three months loose: FY2032E takes a full-year fraction (0.9993, PV 310.2). At 0.75, Rp9,163. ~2%, no verdict impact.\n\n5. [MINOR] The 20% entry haircut is undivided \u2014 three inputs, one number; up_pct is its exact reciprocal, so the up leg is set by the haircut, not evidence. Harmless because nothing is bought.\n\n6. [MINOR] **No trade: agreed, and over-determined.** At the unshaded prior, p_up 0.42, EV is \u221224.3pp; one ARB band (2,490) \u221227.6; no ARB clamp at the kill (3,320, \u221255.6%) \u221220.4. Zero EV needs p_up ~0.62 or an entry of 4,822 \u2014 below the house bear. The required up leg is +119%, target Rp16,393, near the bull, not the base. (c), honestly labelled.\n\n**SURVIVES_WITH_SCARS.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "3 (2026-11-05T17:59:07+07:00)",
+      "markdown": "**KILL \u2014 `reason_tag: valuation`; `status: judged`; no size.** Lint PASS. Correction against the 35-KILL/40-thesis, 0-fill record: I do not kill a mis-specified thesis \u2014 but this one's third rebuild says no trade on its own honest levels. A finding about the name, not the build.\n\n1. **The target is honest and below the tape.** Rp9,344 is the house primary life-DCF truncated at the IUPK expiry (1 Oct 2032); the 21.4% post-expiry tail is un-granted (report \u00a74, S15/F19) and the 12,399 peer-multiple premium is barred by card step 1. Tape Rp10,250: the house's granted-life value does not support a long today.\n2. **The entry is honest and does not work.** Rp7,475 = 9,344 less 20%; up +25.0%, down \u221275.0% (two ARB bands to 1,868), p_up 0.35 (registry 0.42 less the 7pp deviation upheld in verdict 2), carry 8.1%\u00d73 up-leg, drag 1.5 \u2192 EV \u221233.0pp, Kelly \u22120.90. All legs reproduce (Drew 1\u20132).\n3. **No fillable price rescues it.** EV is negative at the unshaded 0.42 prior (\u221224.3), at one ARB band (\u221227.6) and with no clamp (\u221220.4). Zero EV needs Rp4,822 \u2014 30.9% below the 52-week low \u2014 or p_up ~0.62, a target near Rp16,393 (the bull). Fill and target exclude each other: the price that makes the trade work is where its deck path is disbelieved. Drew's MATERIAL is upheld; Rev 5's \"~5,300\" understates this.\n4. **Not a construction defect.** Target, kill (Rp3,320, US$95 granted-life NAV) and entry are valuation-derived on one basis; the 0.62 symmetry is honestly labelled (c), and Drew agrees. A fourth REVISE would ask for a target above the house primary without evidence.\n\n*Session close: one chain, 1 KILL / 0 PASS; AADI is not passable at any fillable price even built correctly \u2014 the no-trade is the name, not the build.*"
     }
   ]
 }
