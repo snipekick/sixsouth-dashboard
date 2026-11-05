@@ -142,6 +142,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-11-05T20:01:21.326065+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 no GLOBAL actions: 100% cash, no staged/blocked entries, NVO price trigger, QC WARN only",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Session 2026-11-05T20:01 WIB (North Book). QC=WARN, one flag: published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d \u2014 known and already assigned to OPS/MONTHLY_IC 2026-11-07 (HUMAN_ATTENTION 2026-10-22T06:35; no FX positions anywhere, so no carry accrues on it). Not CRITICAL, no trading restriction. Governor GLOBAL=NONE (dd 0.0, nav 1,012,436.03) \u2014 no de-gross. Kill exits: none fired today in GLOBAL (last GLOBAL kill MRK 2026-10-28); book holds 0 names, so no kill ticket can be missing. Entry staging GLOBAL (asof 20:00:16): staged=[] (nothing to confirm), blocked=[] (nothing to escalate), waiting=[T-GLOBAL-NVO-002 last 42.18 vs max fill 24.72, gap 70.6%] \u2014 a price trigger outside entries.stage_within_pct, correctly waiting, no action. FX sleeve: no judged Macro-FX theses exist, so no FX ticket written. Pending orders: only INDO ORD-20261105084520-JPFA.JK-603d (limit 1500, 4.899% NAV), staged by the IDX prelude at 08:45 and not this session's to touch. No ticket created, so no risk_check run. Pass: GLOBAL remains 100% cash (deployment band 60-95% not met; the binding gate remains valuation \u2014 no GLOBAL candidate at a fillable level).",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-11-05 (Wed)\n\nSession 2026-11-05T11:44:57+07:00 \u2192 2026-11-05T12:31:36+07:00. **Queue worked: 1 sizing (blocked deterministically, re-escalated); 1 repair chain advanced to restamp and closed; 0 new theses; 0 tickets typed by this session.** Five role spawns, all INDO: Dani (2 revisions), Drew (2 re-attacks), Aldrich (restamp), Voss (restamp), Gunawan (PM decisions). GLOBAL had no queue item and no spawn.\n\n## Queue as found (session_brief, step 1)\n- (a) `awaiting_pm_sizing`: **T-INDO-PTBA-001** (PASS_REDUCED 0.5, judged 2026-10-28) \u2192 step 3.\n- (b) `judged_missing_levels`: **empty**. (c) `revise_queue` and any no-verdict `draft`/`attacked` thesis: **empty** (51 theses on disk: 2 live, 44 judged, 5 killed; no draft/attacked). (d) `buy_verdict_sized_zero`: **empty**.\n- (e) ADVANCE idea cards: **INDO-PTBA only** (asof 2026-11-04, sleeve COVERAGE, house BUY v4 tp Rp4,894). It maps to the existing judged thesis T-INDO-PTBA-001 (house TP vs thesis target 1.1% apart, house base Rp4,758.6 vs thesis Rp4,842 \u2014 no material change), so no second thesis was built and the quota was not invoked. Card stamped **PROMOTED \u2192 T-INDO-PTBA-001** so the scouting desk sees\u2026",
     "persona": ""
@@ -894,17 +905,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-02 (Fri)\n\n## State at entry\n- QC: WARN, 5 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 escalation; bare `ERAA` cannot resolve vs the `.JK`-suffixed fetch set, owns the deferred T-INDO-ERAA-001 ticket, ops lane) + `published cash-rate policy` staleness family (`jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`; `fx_carry_rates.EUR asof 2026-07-23`, `JPY asof 2026-07-31`, `GBP asof 2026-07-30` all >60d). Same ops-lane family already escalated 09-26; not session-actionable. No kill actions due, no reviews open, no pending orders, governor NONE both books (100% cash). judged_unticketed: T-INDO-ERAA-001 (feed gap) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-02T20:02:32.969780+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-02: pass \u2014 no trading actions",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "QC WARN (carried 5 flags: stale ERAA price (3 sessions, HA tracked); published cash-rate policy jkse_dividend_yield_proxy_annual_pct >60d; fx_carry_rates EUR/JPY/GBP >60d). Not CRITICAL \u2014 both books 100% cash, zero exposure, dd 0.0. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kills to verify; wrapper wrote none.\n(3b) Governor de-gross: governor_state NONE/live=false for GLOBAL and INDO \u2014 no obligation.\n(3c) Entries: only judged_unticketed names are T-GLOBAL-0700HK-001 and T-INDO-ERAA-001, both non-tradeable.\n  - 0700HK: PM ruled pm_pct 0.0 (size_position fail-closed: Kelly<=0, ADV-unknown liquidity cap), concluded 2026-08-22 WEEKLY_DEEP at 0% sizing; entry_plan level 468 also stale (2026-07-22). No re-open without material new evidence. PASS_REDUCED 0.5x binds like a kill.\n  - ERAA: PM ruling DEFER until adv/mcap feed resolves; verified today that fund record still lacks ERAA key, last_prices price null/stale/missing+cached, mcap records empty (DEGRADED feed); QC flags ERAA stale 3 sessions. Also INDO book \u2014 not this GLOBAL session's mandate. spot-600 never the trade; entry gate 2026-10-31 Q3 print; deferral costs only ~0.16% dividend carry.\n(4) FX sleeve\u2026",
     "persona": ""
   }
 ]
