@@ -398,7 +398,7 @@ function renderLearn(el){
       <tr><td><b>Board lot</b></td><td>IDX shares trade in lots of 100.</td></tr>
       <tr><td><b>ADV</b></td><td>Average daily traded value; positions must be exitable within 7 days at 20% of ADV.</td></tr>
       <tr><td><b>PASS_REDUCED 0.5×</b></td><td>The Judge approves at half of the sizing engine's recommendation.</td></tr></tbody></table>`)}
-    ${panel('Honesty notes',`<p class="small">This is a paper fund run by AI agents. Prices come from public feeds; fills are simulated at the next open with costs. Missed sessions are reconstructed exactly from the ledger and labelled as such on the charts. Nothing here is investment advice.</p>`)}
+    ${panel('Honesty notes',`<p class="small">This is a paper fund run by AI agents. Prices come from public feeds; fills are simulated at the next open with costs. Missed marking days are rebuilt from the ledger, at that day's closing prices when the book held positions, and labelled as such on the charts. Nothing here is investment advice.</p>`)}
     </div></div>`;
 }
 

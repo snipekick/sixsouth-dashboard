@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "asof": "2026-11-05T10:29:21+07:00",
+  "asof": "2026-11-05T14:48:34+07:00",
   "decks": {
     "agri": {
       "title": "Agricultural & soft-commodity deck",
@@ -208,11 +208,21 @@
         "ici4": {
           "label": "Indonesian Coal Index 4 (4,200 kcal/kg GAR)",
           "unit": "USD/t",
-          "values": {},
-          "lt": null,
-          "spot": null,
-          "status": "needs_source",
-          "basis": "No archivable public print this window. The Argus/Coalindo Indonesian Coal Index (ICI 1-5) is a proprietary subscriber product produced jointly by Argus Media Ltd and PT Coalindo Energy (ICI 4 = 4,200 kcal/kg GAR) and published only in the paid Argus/Coalindo report (S28, S31); the Coalindo site carries no public quote for the index level. The ICI-4 ~US$75/t figure quoted in industry-body commentary (IMEF chair to Bloomberg Technoz via S27) is a scenario projection tied to a proposed 700mt RKAB 2027 quota, not a published index level, so no spot is stated rather than estimated. HBA II at 4,100 GAR is a separate government index, not ICI-4."
+          "values": {
+            "FY2025A": 40.56,
+            "FY2026E": 62.0,
+            "FY2027E": 52.5,
+            "FY2028E": 48.0,
+            "FY2029E": 46.0
+          },
+          "lt": 46.0,
+          "spot": {
+            "value": 65.06,
+            "asof": "2026-09-01",
+            "source": "S47"
+          },
+          "status": "reviewed",
+          "basis": "ICI-4 is the Argus/Coalindo Indonesian Coal Index for 4,200 kcal/kg GAR FOB Kalimantan, a subscriber-only weekly assessment (S28, S31, S39). Public prints located: the FY2025 average of US$40.56/t disclosed by PT Tri Oetama Persada (PKPK) in its 26 May 2026 annual public expose (S52), corroborated by the 18 Jul 2025 Argus-based print of US$40.74/t (S51); the 17 Apr 2026 Argus/Coalindo weekly print of US$60.69/t (S53); and the latest public page print of US$65.06/t as of 1 Sep 2026 (S47, a market-data republication with no methodology note). Spot is the latest print (S47); the last print explicitly tied to the Argus/Coalindo weekly report is S53. No archivable FY2024 ICI-4 average was found. HBA II (4,100 GAR) is a separate government index and is not substituted for ICI-4 (S37); its Nov-2026 print of US$69.28/t is consistent with the 2026 low-CV strength, as is SMM's October-2026 review reporting ICI gains across all five grades on constrained spot supply (S40). No ICI-4 forward curve is available in the archived public sources, so the forecast path is a desk ratio path: ICI-4 printed 0.369x Newcastle in Jul-2025 (40.74/110.5, S51/S23) and ~0.44x in 2026 (60.69/135.4 and 65.06/147.1, S53/S47/S23); applying 0.45 to FY2026E and easing the ratio to 0.438 by FY2029E against the deck newc path (137/118/110/105) gives FY2026E 62.0, FY2027E 52.5, FY2028E 48.0, FY2029E 46.0. lt 46.0 is the through-cycle anchor: it equals newc lt 105 x 0.438 and sits ~13% above the Jul-2025 print of US$40.74/t that IDX Channel reported was almost at production cost (S51). lt_escalation is usd because ICI-4 is a USD/t seaborne price set against USD-denominated marginal supply costs. IMEF's ~US$75/t is a 700mt-RKAB scenario, not a base case, and is not used (S27). No broker research, rating, target or consensus number is used."
         },
         "ici3": {
           "label": "Indonesian Coal Index 3 (5,000 kcal/kg GAR)",
@@ -589,6 +599,108 @@
           "url": "https://jdih.esdm.go.id/dokumen/download?id=2022pp15.pdf",
           "publisher": "jdih.esdm.go.id",
           "published": null
+        },
+        "S37": {
+          "title": "Harga Batu Bara Acuan November 2026 Turun untuk Kalori Tinggi, Kalori Rendah Naik",
+          "url": "https://money.kompas.com/read/2026/11/04/201600826/harga-batu-bara-acuan-november-2026-turun-untuk-kalori-tinggi-kalori-rendah",
+          "publisher": "money.kompas.com",
+          "published": "2026-11-04"
+        },
+        "S38": {
+          "title": "\u3010ICI-3 Indonesia Naik 37% YTD ke US$85,7/t, karena Risiko Energi Mendukung Harga Batu Bara tetapi Pertumbuhan Pasokan Membatasi Kenaikan\u3011 - Shanghai Metals Market (SMM)",
+          "url": "https://news.metal.com/id/newscontent/104091239-ici-3-indonesia-naik-37-ytd-ke-us857t-karena-risiko-energi-mendukung-harga-batu-bara-tetapi-pertumbuhan-pasokan-membatasi-kenaikan",
+          "publisher": "news.metal.com",
+          "published": null
+        },
+        "S39": {
+          "title": "[SMM Analysis] Indonesia Coal Enters a New Supply Cycle: Export Strength, RKAB Discipline and the H2 2026 Outlook - Shanghai Metals Market (SMM)",
+          "url": "https://news.metal.com/newscontent/104023026-smm-analysis-indonesia-coal-enters-a-new-supply-cycle-export-strength-rkab-discipline-and-the-h2-2026-outlook",
+          "publisher": "news.metal.com",
+          "published": null
+        },
+        "S40": {
+          "title": "[SMM Analysis] Indonesia Thermal Coal Market Review for October 2026 - Shanghai Metals Market (SMM)",
+          "url": "https://news.metal.com/newscontent/104189502-smm-analysis-indonesia-thermal-coal-market-review-for-october-2026",
+          "publisher": "news.metal.com",
+          "published": null
+        },
+        "S41": {
+          "title": "Review Sepekan: Harga Batu Bara Ogah Turun, Naik Berturut-Turut!",
+          "url": "https://www.cnbcindonesia.com/research/20261025000236-128-779179/review-sepekan-harga-batu-bara-ogah-turun-naik-berturut-turut",
+          "publisher": "www.cnbcindonesia.com",
+          "published": "2026/10/25"
+        },
+        "S42": {
+          "title": "Update HBA November 2026: Batu Bara Kalori Tinggi Turun Tipis, Kalori Rendah Justru Meroket",
+          "url": "https://infoekonomi.id/2026/11/update-hba-november-2026-batu-bara-kalori-tinggi-turun-tipis-kalori-rendah-justru-meroket/",
+          "publisher": "infoekonomi.id",
+          "published": "2026-11-05"
+        },
+        "S43": {
+          "title": "Govt mulls mandatory use of benchmark price for coal exports - Economy - The Jakarta Post",
+          "url": "https://www.thejakartapost.com/business/2025/02/04/govt-mulls-mandatory-use-of-benchmark-price-for-coal-exports",
+          "publisher": "www.thejakartapost.com",
+          "published": null
+        },
+        "S44": {
+          "title": "Methodology Detail - PT COALINDO ENERGY",
+          "url": "https://coalindoenergy.com/ici-methodology/ici-methodology",
+          "publisher": "coalindoenergy.com",
+          "published": null
+        },
+        "S45": {
+          "title": "coalindo news - PT COALINDO ENERGY",
+          "url": "https://coalindoenergy.com/coalindo-news",
+          "publisher": "coalindoenergy.com",
+          "published": null
+        },
+        "S46": {
+          "title": "El Ni\u00f1o chokes Indonesia\u2019s coal exports as rivers run shallow - Economy - The Jakarta Post",
+          "url": "https://www.thejakartapost.com/business/2026/09/16/el-nio-chokes-indonesias-coal-exports-as-rivers-run-shallow",
+          "publisher": "www.thejakartapost.com",
+          "published": null
+        },
+        "S47": {
+          "title": "Indonesian Coal (ICI4) Price | Asian Oil Intelligence Platfo\u2026",
+          "url": "https://asianoil.com/markets/ici-coal",
+          "publisher": "asianoil.com",
+          "published": null
+        },
+        "S48": {
+          "title": "Indonesia Coal Price | JWC Indonesia Energi",
+          "url": "https://www.jwcindonesia.com/price-index",
+          "publisher": "www.jwcindonesia.com",
+          "published": null
+        },
+        "S49": {
+          "title": "Client Challenge",
+          "url": "https://www.scribd.com/document/1065533148/Ici-05-June-2026",
+          "publisher": "www.scribd.com",
+          "published": null
+        },
+        "S50": {
+          "title": "Client Challenge",
+          "url": "https://www.scribd.com/document/853001027/20250214ici",
+          "publisher": "www.scribd.com",
+          "published": null
+        },
+        "S51": {
+          "title": "Harga Batu Bara Terus Tertekan di Tengah Lesunya Permintaan",
+          "url": "https://www.idxchannel.com/market-news/harga-batu-bara-terus-tertekan-di-tengah-lesunya-permintaan",
+          "publisher": "www.idxchannel.com",
+          "published": null
+        },
+        "S52": {
+          "title": "Sektor Batu Bara Loyo, Laba PKPK Justru Meroket 206 Persen - KabarBursa.com",
+          "url": "https://www.kabarbursa.com/market-hari-ini/sektor-batu-bara-loyo-laba-pkpk-justru-meroket-206-persen",
+          "publisher": "www.kabarbursa.com",
+          "published": "2026-05-26"
+        },
+        "S53": {
+          "title": "Fluktuasi Harga Batubara Global dan Domestik (ICI vs HBA) Jumat, 17 April 2026",
+          "url": "https://redaksindo.com/fluktuasi-harga-batubara-global-dan-domestik-ici-vs-hba-jumat-17-april-2026/",
+          "publisher": "redaksindo.com",
+          "published": "2026-04-18"
         }
       }
     },
