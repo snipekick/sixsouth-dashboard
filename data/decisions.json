@@ -49,6 +49,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-11-05 (second launch)\n\nSession 2026-11-05T11:38:05+07:00 \u2192 2026-11-05T11:43:02+07:00. **No new candidates \u2014 screens unchanged vs the card stack. Zero cards written; early exit per runbook step 4.**\n\nThis is a second launch of the same session-day: the first IDEATION run completed 11:00:28 \u2192 11:09:22 and was committed at 11:10:41 (`7efbd550`). I re-ran the full step-1\u21923 sweep rather than assuming, and every row is identical (same prices, same ranks, 0 fetch failures, prices live).\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, OPS/MONTHLY_IC owns it, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**.\n- **`reviews_open`: T-INDO-ERAA-001** (`catalyst_unresolved 2026-10-31@2026-Q4`, review, created 2026-11-02T08:45) \u2014 **for the next trading session; not IDEATION's to execute.**\n- GLOBAL 100% cash, 0 names (NAV $1,012,436.03); INDO 90.2% cash, 2 names (NAV IDR 15,181,602,705, gross 9.8%, DD \u22121.69%). Both below the 60\u201395% deployment band \u2014 IC/WEEKLY_DEEP matter, not re-escalated.\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-04T16:05:52.049190+07:00",
       "book": "INDO",
@@ -894,11 +899,6 @@
       "kind": "other"
     },
     "body": "QC WARN (not CRITICAL): stale price ERAA; published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30, EUR carry 2026-07-23, GBP carry 2026-07-30 all >60d \u2014 feed/config lag, none blocking. Governor NONE (no de-gross). kill_actions_due empty \u2014 every fired kill has a ticket/fill by construction. orders_pending empty (no tickets). Theses: 0 live, 2 judged_unticketed (ERAA deferred, 0700HK GLOBAL/closed) \u2014 both passed on, see tagged entries. No trades, no kill slips, no post-09:00 tickets.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-09-29 (Tue)\n\n## State at entry\n- QC: WARN, now 4 flags \u2014 `stale prices: ['ERAA']` (same feed root as the 09-26 fund record escalation; ops lane, owns the deferred T-INDO-ERAA-001 ticket) and `published cash-rate policy` staleness: `jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d`, `fx_carry_rates.EUR asof 2026-07-23 >60d`, plus NEW `fx_carry_rates.GBP asof 2026-07-30 >60d` \u2014 same stale-params family, ops lane, not session-actionable. No kill actions due, no open reviews, no pending orders, governor NONE both books. judged_unticketed: T-INDO-ERAA-001 (feed-gap deferral; re-stage at pre-open) + T-GLOBAL-0700HK-001 (WEEKLY_DEEP queue, not mine).\n- Macro regime (frontmatter 2026-09-26): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks/property/consumer discretionary). Read frontmatter only, not re-edited, not re-reasoned.\n- Cards at entry: GLOBAL `BAC`/`LLY`/`MS`/`SMFG` (4 active WATCH) + `QCOM` DISCARD. INDO `AMMN`/`ERAA`/`MEDC`/`TINS` (4 active incl. 2 PROMOTED) + `ELSA` DISCARD. All \u226417d\u2026",
     "persona": ""
   }
 ]
