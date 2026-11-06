@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-11-06T08:08:22+07:00",
+  "asof": "2026-11-06T08:11:33+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 62,
-    "in_progress": 5,
+    "published": 63,
+    "in_progress": 4,
     "parked": 129,
     "stale": 0,
     "not_rated": 2
@@ -15,7 +15,7 @@
     "ADD": 2,
     "REDUCE": 9,
     "HOLD": 14,
-    "SELL": 20,
+    "SELL": 21,
     "NOT RATED": 2
   },
   "desks": [
@@ -81,7 +81,7 @@
         "PERSONAL_HOUSEHOLD"
       ],
       "universe": 135,
-      "published": 6
+      "published": 7
     },
     {
       "desk": "CONSUMER_CYCLICALS",
@@ -483,7 +483,7 @@
       "desk": "CONSUMER_NON_CYCLICALS",
       "template": "corporate",
       "universe": 21,
-      "published": 4,
+      "published": 5,
       "workbook": "models/POULTRY_FEED.xlsx",
       "methods": {
         "dcf_fcff": 0.5,
@@ -2809,22 +2809,22 @@
       "name": "PT Janu Putra Sejahtera Tbk.",
       "desk": "CONSUMER_NON_CYCLICALS",
       "industry": "POULTRY_FEED",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "SELL",
+      "tp": 20,
       "price": 484.0,
-      "tr_pct": null,
+      "tr_pct": -95.78,
       "mcap_idr": 1936000000000.0,
       "adtv_idr": 12526451958.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": true,
+      "last_update": "2026-11-06",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": false,
+      "suspended": false
     },
     {
       "ticker": "AYLS.JK",
