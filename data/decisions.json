@@ -50,6 +50,17 @@
   },
   {
     "meta": {
+      "date": "2026-11-06T20:02:17.038677+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN pass \u2014 no GLOBAL actions: 100% cash, nothing staged/blocked, NVO price trigger, QC WARN only",
+      "thesis": "",
+      "kind": "pass"
+    },
+    "body": "Session 2026-11-06T20:02 WIB (North Book). QC=WARN, one flag: published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d (MARKET_PARAM_STALE, first_seen 2026-10-22T06:30) \u2014 already tracked in HUMAN_ATTENTION (2026-10-22T06:35) and assigned to OPS/MONTHLY_IC 2026-11-07; no FX positions anywhere, so no carry accrues on it. Not CRITICAL, no trading restriction. Governor GLOBAL=NONE (dd 0.0, nav 1,012,543.65, gross 0.0%, week_trades 0/10) \u2014 no de-gross. Kill exits: none fired in GLOBAL today (last GLOBAL kill T-GLOBAL-MRK-001 on 2026-10-28); the book holds 0 names and kill_actions_due=[], so no kill ticket can be missing. Entry staging GLOBAL (asof 2026-11-06T20:00:18): staged=[] (nothing to confirm), blocked=[] (nothing to escalate), waiting=[T-GLOBAL-NVO-002 last 40.30 vs max fill 24.72, gap 63.0%] \u2014 a price trigger outside entries.stage_within_pct, correctly waiting, no action and no journal line required. FX sleeve: no judged Macro-FX theses exist (grep for instrument/archetype fx across fund record returns none), so no FX ticket written. Pending orders: only INDO ORD-20261105084520-JPFA.JK-603d (buy 481,700 @ limit 1,500, 4.899% NAV), staged by the IDX prelude on\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-05T06:32:19.773486+07:00",
       "book": "INDO",
       "title": "US_CLOSE 2026-11-05: ERAA review_condition judged \u2014 Q3 LK unresolved, condition does not hold; no kills, no trades",
@@ -912,11 +923,6 @@
       "kind": "other"
     },
     "body": "20:00 WIB pre-open, North Book. QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d, carried since 2026-08-31) \u2014 not CRITICAL, trading permitted. Both books 100% cash, 0 names, dd 0.0, governor NONE. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kill to reconcile; wrapper wrote none; GLOBAL all-cash n_names=0, so no live ticket or fill to verify. No missing-ticket breach.\n(3b) Governor de-gross: governor_state NONE (GLOBAL, live=false) \u2014 no deterministic sells emitted, no mix to choose; buys vetoed by rule anyway.\n(3c) Entries: sole GLOBAL judged_unticketed names are T-GLOBAL-NVO-002 and T-GLOBAL-0700HK-001, both non-tradeable \u2014 sized to zero, no ticket.\n  - T-GLOBAL-NVO-002 (judged, PASS_REDUCED): sizing pm_pct 0.0 / script_pct 0.0 \u2014 size_position Kelly<=0 at spot 37.00 (quarter-Kelly after haircut binding); Judge 0x multiplies any size to zero, binds like a kill. deviation_reason: 'No ticket staged.' No re-open without material new evidence.\n  - T-GLOBAL-0700HK-001 (judged, PASS_REDUCED, risk_checked): sizing pm_pct 0.0 / script_pct 0.0 \u2014 Kelly<=0, ADV-unknown liquidity cap fail-closed; PM ruling recorded\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# CONSTRUCT Session Journal \u2014 2026-10-07 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (1 flag, ops lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source). Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders empty, kill_actions_due empty, reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\n**Construction queue (runbook step 1) \u2014 EMPTY:**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. The 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2 (ERAA, MEDC); both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001). No `verdict: ADVANCE` card exists anywhere in `fund record`.\n\n## Step 2 \u2014 Construction chains\n\nNone advanced (queue empty). No analyst / Drew / Aldrich spawns; ~zero sourcing tokens.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a now-satisfied re-stage condition)\n\nThe queue\u2026",
     "persona": ""
   }
 ]
