@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-IATA-001",
+  "title": "IATA.JK (IATA.JK)",
+  "meta": {
+    "id": "T-INDO-IATA-001",
+    "book": "INDO",
+    "ticker": "IATA.JK",
+    "name": "IATA.JK",
+    "sector": null,
+    "factors": [],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-06T13:21:02+07:00",
+    "drafted": "2026-11-06T13:21:02+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 27.0,
+    "target": 90.0,
+    "kill": 1.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base NAV/share.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.3,
+    "up_pct": 233.3,
+    "p_down": 0.7,
+    "down_pct": -96.3,
+    "net_div_yield_pct_pa": 0.0,
+    "fee_tax_drag_pct": 2.0,
+    "expected_pct": 0.6,
+    "horizon_years": 3.0,
+    "carry_pct": 0.0,
+    "kelly_full_pct": 0.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (n=40).",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1.0,
+      "action": "exit_full",
+      "note": "bear NAV=equity floor, not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "no 2027 RKAB >=6.5Mt or no Series B refi terms"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 12.0,
+      "action": "review",
+      "name": "cash_cost_usd_per_t",
+      "source": "LK 9M2026 USD10.64/t, F56/S17"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 65.0,
+      "action": "review",
+      "name": "net_debt_usd_m",
+      "source": "LK 30-Sep-2026 USD55.2m, F72"
+    }
+  ],
+  "model": {
+    "currency": "USD",
+    "unit": "m",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        117.9,
+        79.6,
+        77.4,
+        139.5,
+        151.6
+      ],
+      "ebit": [
+        19.5,
+        15.7,
+        12.6,
+        26.2,
+        29.3
+      ],
+      "net_income": [
+        7.7,
+        7.6,
+        1.6,
+        16.0,
+        18.5
+      ],
+      "eps": [
+        0.0003,
+        0.0002,
+        5e-05,
+        0.00051,
+        0.00059
+      ],
+      "dps": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "valuation": {
+      "method": "Life-of-asset DCF, newc 105 lt x 0.21 = USD22.05/t, 25y to FY2051, WACC 11.5%, less net debt USD55.2m, IDR 19,000.",
+      "bear": {
+        "value": 1.0,
+        "basis": "All-shocks: newc 0.8x, 5.2Mt, cost +USD1.0/t, refi +300bp; NAV below net debt, equity floor."
+      },
+      "base": {
+        "value": 90.0,
+        "basis": "Through-cycle NAV: 7.0Mt from FY2028 at USD22.05/t, cash cost USD10.4/t, 25y, WACC 11.5%, plus Note-13 funds, less port capex."
+      },
+      "bull": {
+        "value": 185.0,
+        "basis": "Filed 7.85Mt plan, ASP USD24/t, cost USD9.9/t, 30y, WACC 11%."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-06T13:21:02+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T13:53:03+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-06T14:07:03+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T14:41:29+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "MNC-legacy sub-scale coal shell; control change, RKAB quota, refi decide."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "3.51 Mt [F2] x 22.69 = 79.64 [F74]; 7.15% [F9]; 22.5% [S17]; FY2026E 3.65 Mt = 9M 55.37 [F54] + Q4 [F11]; ASP 20.8 = HBA III 32-35 x 62% [S8 p.86, F27]; cost 10.64 [F56]; FY2027E 6.5 [S11]; FY2028E 7.0 [F10]; accruals +1.9%/-3.8%; CFO/NI 0.42; special board 2024 [S15]/Sep-26 [S14]."
+    },
+    {
+      "heading": "Valuation and EV math",
+      "detail": null,
+      "markdown": "298 Mt [F5] (42.6y), 25y FY2051 [S12 Note 1g]; 105/t lt x 0.21 (22.69/108.4; 36.50 x 0.62) = 22.05/t; cost 10.4/t, capex 1.16/t, tax 15%->22%, WACC 11.5%; ND 55.2, +Note-13 18.66 [F73], -Rp200bn (USD12m) [S5]; IDR 19,000; HBA III 45.53 x 0.62 = Rp218; margin 5.1; div 0% [S0/S12]; ND/EBITDA 9.7x/1.5x; newc 150.35 = +43%, not 3,400 kcal; Kelly +0.01/+0.43; ratio 2.35/2.14."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "WACC 10.55% (pre-tax 6.84%; bonds 10-11.25% [S12 Notes 18/20]; 0.83pp); 30y FY2055 (2028-2033 [S12 Note 1g]); 95.8 (6%); 10.9; ours 90, house 94."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** Rp72 vs Rp90 NAV (20% discount); only refi.\n**Why wrong:** EV-zero at p_up 0.81; 0.42 fair at Rp174; 20% gap =6.5 Mt; rollback/discounted rights = bear."
+    },
+    {
+      "heading": "Microstructure and liquidity",
+      "detail": null,
+      "markdown": "Float <19%: controller 62.47% + MNC Asia 18.84% [F67/F21]; ADV: IATA.JK absent from last_prices/adv/mcap/flows, the INDO universe; datapack 3m ADTV Rp97.3bn / 44.06% float; 5% NAV Rp756m / Rp15.13bn, 10.5m shares; lot 100 (Rp7,200); ARA/ARB 35% [the fund rules]."
+    },
+    {
+      "heading": "Entry re-test",
+      "detail": null,
+      "markdown": "Rp72 (2026-11-04), no chase; up +25.0%, down -98.6%, p_up 0.42, drag 2.0 \u2192 0.42(25.0)+0.58(-98.6)-2.0 = **-48.7pp**; Rp37.6 zero-EV; Rp27 clears 11.5% CoE (~11.9%/yr)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. CL 77.35 > CA 62.13 [F60/F59]; 11.25% Series B 6-Oct-2026 [S12 Notes 18/20; S17].\n2. FCF FY2022-25 (-17.0/-34.0/-0.8/-22.0) [dossier]; Feb-2025 rights +23.9% to 31,275.8m [S12 Note 27].\n3. Inventory 26.6 [F71] ~0.8x 9M cost 33.66 [F56]; NRV writedown.\n4. 9M2026 profit 0.97 [F51] after 2.38 FX [F53], 4.05 finance [F57]; ROE 5.6% [dossier]."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Nov 2029, down 80-100%: refi via discounted rights before KPP cash; 2027 RKAB rollback to 2 Mt; NRV writedown on 26.6 stockpile; special board/float gaps exit \u2014 full loss, not Rp1."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check.** Cash USD1.45m [F58, fund record:589] \u2713; current liabilities USD77.35m [F60:609] \u2713; FCF \u221217.0/\u221234.0/\u22120.8/\u221222.0 [dossier:41] \u2713; 3.51 Mt \u00d7 USD22.69 = USD79.64m [F2/F74] \u2713. Net debt USD55.2m cites [F58/F72], both cash lines. Dossier:32 gives FY2025 debt 54.7 less cash 2.2 = 52.5; 55.2 is 30-Sep cash against a 30-Jun gross-debt pack figure (house:153). Load-bearing, uncited, cross-date. [MATERIAL]\n\n1. **Estimates.** The 7 Mt is not a permit. FY2027E 6.5 Mt rests on the KPP contract [S11], which discloses no tonnage (house:83); FY2028E 7.0 Mt is the 7.85 Mt *request* [F10] against 2.0 Mt approved [F34], with the national RKAB cut to 600 Mt from 790 Mt actual [F26/F22]. The 25-year life is an expiry-plus-extension horizon: Note 1g discloses the expiry, not the extension (house:141). Base needs ramp + extension + 10% refi at once; kill_criteria cover two. [FATAL]\n\n2. **Variant perception.** The thesis concedes \u221248.7pp at Rp72. No variant: it agrees with the tape and waits for a crash. [MATERIAL]\n\n3. **Catalyst.** None dated; the Series B is 31 days past maturity undisclosed. [MATERIAL]\n\n4. **Base rate.** Key right, but the archetype's note says \"size on the trough-survival balance sheet\" \u2014 current liabilities exceed current assets by USD15.2m on USD1.45m cash. The 0.42 prior is drawn on survivors; this instance fails the archetype's stated condition. [MATERIAL]\n\n5. **Sizing.** Kill Rp1 is a total loss, not a stop; \u221296.3% is honest. The entry is the defect: Rp27 is 62.5% below tape and prints only after three ARB days \u2014 only in the state where the conditioning variables have failed. p_up at fill is not 0.42; at 0.30 the entry is EV-zero (Rp27.2) and Rp20 is needed to clear 11.5%. The thesis prices its up-leg at a probability its own trigger falsifies. [FATAL]\n\n6. **Disconfirming fact.** Note-13 funds rose USD11.40m [F13] to USD18.66m [F73] while the company borrowed USD8.03m from related parties [F50] and cash fell to USD1.45m. The USD18.66m bridge is largely controller-funded debt inside the USD77.35m of current liabilities \u2014 an asset added, never netted. [MATERIAL]\n\n7. **Pre-mortem.** Unmentioned: suspension. Special board plus full call auction [S15/S14] means price, date and KPI kills cannot fire; the position freezes. The audit opinion is unverified (house:191) \u2014 a going-concern qualification is the tail. [MATERIAL]\n\n8. **Integrity.** stage_log and frontmatter are ordered and stamped; estimates_committed_at 13:21:02 precedes the 13:44 file write and the body's only market datum (2026-11-04). No retro-edit detectable (file untracked; no diff history). stage_log/frontmatter integrity: clean. [MINOR]\n\n9. **Liquidity/universe.** Not in the INDO universe, so factor UNTAGGED, a fail-closed VETO (the risk checker:396). No ADV, a VETO (the risk checker:686). Special-monitoring board vs main_board_only: true excludes it (the fund rules:65). Entry Rp27 is below min_price_idr 50 (the fund rules:64). Four independent constitutional bars; disclosure does not cure them. [FATAL]\n\n**Verdict: KILL_RECOMMENDED.** The Rp27 entry is not a discount but a conditional: the only world in which this stock trades at Rp27 is the world in which the 42% prior has already failed, so the thesis prices its up-leg at a probability its own trigger falsifies.\n\n**Stop objecting at Rp20** (10.9%/yr at p_up 0.30), and only after the board, ADV and price-floor bars are cured; no price clears a name the constitution excludes."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "0. **Fact-check.** Lines check. Net debt 55.2 is cross-dated (30-Sep cash, 30-Jun gross debt); Q3 lines sum within USD1.1m, =6.5 Mt AND in-CSV/main board/>=Rp50/ADV>=Rp2bn}."
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "**1. p_up 0.30 \u2014 bought, not drift.** Points 4 (0.42 drawn on survivors) and 5 (at-fill p_up 0.30) each name it; arithmetic reconciles: 0.30\u00d7233.3 \u2212 0.70\u00d796.3 \u2212 2.0 = +0.6. But the levels were not re-based: at p_up 0.30 Rp27 is EV-zero (Rp27.2), earning ~0.2%/yr against 11.5% CoE. Revision point 6 concedes Rp90 is an upper bound: its ~Rp11/share Note-13 asset is really debt; netting it gives ~Rp79, up_pct 192.6, expected **\u221211.6%**. The probability moved; the target should have.\n\n**2. KILL \u2014 the constitution decides, not EV.** Dispositive: off-CSV/UNTAGGED buy VETO (the risk checker:396), fail-closed at order time, uncurable by price. Corollary: min_price_idr 50 (the fund rules:64) makes every +EV entry (\u2264Rp27) unbuyable; special board vs main_board_only and missing ADV are independent bars.\n\n**3. Gaming \u2014 clean.** stage_log ordered (13:21:02/13:53:03/14:07:03); estimates_committed_at precedes revision; model and levels unchanged; both ev_math moves bought by points 4/5; no retro-edit detectable.\n\n**Verdict: KILL_RECOMMENDED.** The revision cut the probability but not the price, and its own Rp11/share concession turns the retained Rp90 target into \u221211.6% expected \u2014 dead on its own numbers before the constitution speaks."
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-DEWA-001",
+  "title": "DEWA.JK (DEWA.JK)",
+  "meta": {
+    "id": "T-INDO-DEWA-001",
+    "book": "INDO",
+    "ticker": "DEWA.JK",
+    "name": "DEWA.JK",
+    "sector": null,
+    "factors": [],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "holdco_discount_narrowing",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-06T13:19:44+07:00",
+    "drafted": "2026-11-06T13:19:44+07:00",
+    "judged": "2026-11-06T15:15:32+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 59.0,
+    "target": 180.6,
+    "kill": 8.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Rp7,053.8bn / 39,049m = Rp180.6",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.33,
+    "up_pct": 206.1,
+    "p_down": 0.67,
+    "down_pct": -86.4,
+    "net_div_yield_pct_pa": 3.1,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": 11.7,
+    "horizon_years": 3.0,
+    "carry_pct": 9.3,
+    "kelly_full_pct": 6.2
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.33,
+    "source": "the base-rate library holdco_discount_narrowing (n=25; 28/-18; 3y)",
+    "library": {
+      "rate": 0.33,
+      "base_up_pct": 28.0,
+      "base_down_pct": -18.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 8.0,
+      "action": "exit_full",
+      "note": "joint-failure NAV, not a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2031-12-31",
+      "action": "review",
+      "condition": "KPC IUPK expiry; re-underwrite renewal"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 18.0,
+      "action": "review",
+      "name": "gross_margin_pct",
+      "source": "S4 9M-2026 LK p.5 (20.28%)"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        6032.0,
+        6392.8,
+        6936.2,
+        7283.0,
+        7574.3
+      ],
+      "ebit": [
+        184.6,
+        726.4,
+        968.3,
+        1091.0,
+        1134.6
+      ],
+      "net_income": [
+        55.2,
+        366.1,
+        423.8,
+        503.9,
+        534.0
+      ],
+      "eps": [
+        2.53,
+        9.0,
+        10.85,
+        12.9,
+        13.68
+      ],
+      "dps": [
+        0.0,
+        1.44,
+        1.74,
+        2.06,
+        2.19
+      ]
+    },
+    "valuation": {
+      "method": "DCF FY2026E-31E, WACC 13.0%: Rp2,268 + 60% TV Rp5,485 + GMR Rp5,380 - net debt Rp3,885.3bn.",
+      "bear": {
+        "value": 8.0,
+        "basis": "PV Rp1,711bn, GMR consideration Rp844.5bn [F20], no renewal, floored Rp8."
+      },
+      "base": {
+        "value": 180.6,
+        "basis": "Rp2,268 + Rp3,291 + Rp5,380 [F19/F90] - Rp3,885.3 = Rp7,053.8bn / 39,049m."
+      },
+      "bull": {
+        "value": 295.4,
+        "basis": "PV Rp2,894 + TV Rp5,485 + GMR Rp7,041 [F66] - net debt = Rp11,534.9bn."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-06T13:19:44+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T13:58:15+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-06T14:07:08+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T14:56:21+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-06T15:15:32+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "Bakrie-group coal contractor, finite related-party book, 2025 profit an accounting artefact, equity a leveraged copper-gold option."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "FY2025: NI Rp4,306.7bn includes Rp4,535.4bn negative goodwill [F18, S5 p.81], excluded. 40.69bn shares [F55, F56]. Underlying NI Rp366.1bn = EBIT Rp726.4bn [F88]; EPS Rp9.00, not Rp112.00. Revenue FY2026E +8.5% (9M Rp5,102.0bn [F28]); gross margin 20.3% (9M 20.28%) to 21.3%, subcontractor cost Rp593.4bn from Rp1,137.8bn [F62, S4]; capex 25% to 19% [S4, S10]; OCF Rp1,456.1bn [F47]. Rp950bn buyback at Rp579.7 [F53/F54/F93]. Related-party revenue 95.50% FY2025 [F27] / 97.67% 9M [F87]: fails by construction."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House DCF Rp241.6 on EV Rp7,904bn; PV Rp2,419bn vs my Rp2,268bn; net debt, GMR (99.75%) match; WACC 13.2%. Gap: TV Rp5,485bn is 69.4% of EV, a 4%-growth perpetuity on zero post-FY2031 revenue; rebased 60% (Jan-2026 Arutmin extension)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** Rp220 pays Rp8,591bn against the Rp5,380bn GMR bridge [F19/F90]; ex-GMR EV Rp7,096bn, 1.28x my Rp5,559bn. **Why wrong:** FY2025 profit is a Rp4,535.4bn gain [F18]; 97.67% related-party revenue [F87]; overburden fell 28% [F71-F73]; fees end 2030-31 [F91/F92]. **Proves us wrong:** JORC resource (bull Rp295.4); IUPK extension >120 Mbcm; gross margin >22%."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. 95.50% FY2025 revenue from three related parties [F27, S3 p.119]; 97.67% 9M [F87, S4 p.102].\n2. Arutmin IUPK expires 1-Nov-2030 [F92, S5 p.378], KPC 31-Dec-2031 [F91].\n3. KPC overburden 122.09 to 102.16 Mbcm [F71-F73]; Arutmin 36.47 from 28.03, below 53.97 [F77-F79].\n4. Related-party receivables Rp1,818.3bn from Rp1,537.2bn [F68/F69]."
+    },
+    {
+      "heading": "Market microstructure and liquidity",
+      "detail": null,
+      "markdown": "Free float 49.86% vs 15% minimum [S25; registry 2026-10-27]. Register: a 15.56% Zurich bloc, treasury 4.03% [S3 p.77]; conversion block in public [S3 p.11-12]. ADTV Rp193.0bn, mcap Rp8,591bn (2026-10-30); no the liquidity feed key: 5% NAV (Rp756m) is 0.02 days at 20% ADTV. ARA/ARB 25%/15%: Rp59 to Rp8 is a dozen limits. Price Rp220.0."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Down 86.4%: GMR never produced a resource, the Rp5,380bn appraisal written back; KPC cuts Bengalon volumes as Rp4,575bn refinances higher; renewal refused at 2030-31. Gap risk: exit below Rp8 deepens the loss. Dilution: 18,833.7m at Rp75, 46.29% of capital [F55, F95]."
+    },
+    {
+      "heading": "Valuation and EV math",
+      "detail": null,
+      "markdown": "DCF FY2026E-31E. FY2025 output 138.63 Mbcm, 17.04 Mt [F21/F22]; WACC 13.0%. Operating PV Rp2,268bn. Renewal: per Arutmin's 19-Jan-2026 extension [S3 p.131], at 60% of house TV Rp5,485bn = Rp3,291bn. GMR Rp5,380bn at fair value less DTL [F19/F90]; net debt Rp3,885.3bn [F34/F103/F104] = Rp7,053.8bn, Rp180.6/share. Net debt/trough EBITDA 4.4x (FY2024 Rp874.8bn), 1.8x FY2026E. Complex: coal/commodity NEUTRAL, IDR AVOID; Brent 84 vs 99.18; RKAB 600 Mt [F38]."
+    },
+    {
+      "heading": "Entry re-test",
+      "detail": null,
+      "markdown": "Entry Rp59 is 8.5% below Rp64.5; kill Rp8 < entry Rp59 < target Rp180.6."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check.** GMR bridge Rp5,380bn = (F19 6,699.1 - F90 1,305.8) x 99.75% (S5 p.81), correct. Shares 39,049m = F16 - F54 - correct. Net debt Rp3,885.3bn fails [F34/F103/F104]: they sum to Rp3,830.0bn; the Rp55.3bn gap is uncited leases. FY2025 underlying NI Rp366.1bn reconciles neither to its inputs (Rp348.2bn) nor the filing (~Rp293bn ex-F18 pre-tax loss). No fabrication; one unreconciled base year. [MATERIAL]\n\n1. **(a) Not excluded.** The Rp4,535.4bn sits in equity of Rp8,254.8bn (F35, S4 p.11), and the GMR line of Rp5,380bn *is* the bargain gain's cause: the Rp5,854.6bn uplift of appraised value (F19) over consideration (F20). The entry is dropped, its consequence kept. Strip F18 and the Rp591bn treasury over-mark (F67): equity is Rp80/share. Widest error bar is GMR: at consideration NAV is Rp64.5. [MATERIAL]\n\n2. **Variant is a short.** The claimed edge is Rp220 being 18% above base NAV - a short argument filed as a long. The discount is governance and terminal life, correctly priced: 97.67% related-party revenue (F87), a 15.56% Zurich bloc, contracts ending 2030/2031 (F91/F92), 4.4x trough leverage, a commissioner chairing both customers. [MATERIAL]\n\n3. **Catalyst.** catalyst_date null; nothing dated before FY2026 results, and any re-rating needs KPC/Arutmin - which sets the rates - to renew. [MATERIAL]\n\n4. **(b) Wrong archetype.** Operating PV Rp2,268bn vs net debt Rp3,885bn is -Rp41/share; all positive equity is GMR (76% of NAV) plus uncontracted renewal (47%) - an asset-holding/SOTP thesis mislabelled. commodity_capex_turnaround (0.42/75/-35) requires capex DOWN; DEWA's is 25% of revenue, rising (F105). holdco_discount_narrowing (0.33/28/-18) is the right key, demands a NAMED catalyst, and has none. On 0.33 these legs are +11.7% over 3y, under the 11.2% hurdle; quarter-Kelly 1.4%. [FATAL]\n\n5. **Entry unfillable.** Rp59 is below the Rp64.5 GMR-at-consideration value: it prints only where the base case is already broken - and the target then needs a 6.4x re-rating of the appraisal. 59 to 8 at the stated 15% ARB is ~14 limits, not seven; own Kelly 18.2%, not 20.5%. [MATERIAL]\n\n6. **Disconfirming.** S4 p.5: \"Lain-lain - bersih 260,203,417\" - Rp260.2bn other income, 50.7% of 9M profit; FY2026E Rp423.8bn is below the 9M Rp513.1bn actual, implying an undisclosed Rp89bn Q4 loss. S4 p.4/p.18: E&E of Rp7,040.6bn moved Rp32.0bn in 9M; GMR still \"Belum beroperasi\". [MATERIAL]\n\n7. **Pre-mortem steelman.** The avoided mode is dilution, not write-down: Feb-2025 issued 18,833.7m shares at Rp75, 46.29% of capital (F55, F95). A failed refinance on Rp4,575bn of ~10% debt repeats it; no dilution scenario or kill. \"Lost 30%\" also contradicts the model's -86.4%. [MATERIAL]\n\n8. **Pipeline.** stage_log clean: one draft entry 2026-11-06T13:19:44+07:00, identical to estimates_committed_at, ordered, no retro-edited estimates detected; one timestamp covers both - \"committed before any market number\" is unverifiable, not contradicted. [MINOR]\n\n9. 1 FATAL, 7 MATERIAL, 1 MINOR.\n\n**Verdict: MAJOR_REVISION.** At Rp220 the analyst's own base NAV of Rp180.6 is 18% below the tape, so expected return is negative at every admissible p_up - the long exists only at an entry the thesis concedes is \"not a fillable order\", which is a short call wearing a long's clothes.\n\n**Stop objecting at Rp78** - 0.7x a NAV that already halves GMR and pays 60% for renewal."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "0. Conceded: cited lines sum Rp3,830.0bn; the Rp55.3bn is lease liabilities, in the house bridge (report \u00a74) \u2014 held. FY2025 base year unreconciled (Rp366.1bn vs ~Rp293bn), not in the DCF.\n1. Held: NAV is bottom-up, so the Rp4,535.4bn never enters it; Rp5,380bn is appraised net assets less DTL, not the gain. Conceded: equity (Rp80/share) is no anchor; GMR at consideration, renewal kept, is Rp64.5.\n2. Conceded: at Rp220 the long is negative; the variant is a short we cannot express. No trade at the tape.\n3. Conceded: no dated catalyst; holdco_discount_narrowing requires a named one.\n4. FATAL conceded. Operating PV Rp2,268bn - net debt Rp3,885.3bn = -Rp41/share; all positive equity is GMR (76% of NAV) plus uncontracted renewal (47%). Re-keyed to holdco_discount_narrowing (0.33/28/-18); p_up 0.42 to 0.33, bought by this point. Target Rp180.6 and kill Rp8 stay valuation-derived. Renewal Rp3,291bn exceeds contracted PV Rp2,268bn: a 60% weight on uncontracted perpetuity.\n5. Conceded: Rp59 is 73% below the Rp220 tape and below the Rp64.5 soft-bear \u2014 a watchlist trigger, not an order; Rp59 to Rp8 is over a dozen ARB limits, not seven.\n6. Conceded: Rp260.2bn other income is 50.7% of 9M profit; FY2026E Rp423.8bn is below 9M Rp513.1bn, implying a Q4 loss. The DCF runs on contract cash flow; the estimate is flagged, not edited. E&E Rp7,040.6bn moved Rp32.0bn; GMR \"Belum beroperasi\".\n7. Conceded: dilution is the avoided mode \u2014 18,833.7m shares at Rp75, 46.29% of capital [F55, F95]; a failed refinance of Rp4,575bn repeats it. \"Lost 30%\" was wrong; -86.4% is the model.\n8. Conceded minor; nothing retro-edited.\nEV at 0.33: 0.33 x (206.1 + 9.3) + 0.67 x (-86.4) - 1.5 = +11.7% over 3y, 3.8%/yr, below the 11.2% hurdle; at Rp220, -61.0%. No trade at any fillable price; watchlist."
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "All answered; key fits in form only: one unoperated appraisal (76% of NAV) plus renewal right (47%), the prior's +28/-18 against +206/-86. p_up 0.33 equals the prior, unargued, generous for an -86.4% leg. No-trade stands: the hurdle needs Rp47.8; above Rp66 EV is negative, below Rp64.5 the base breaks. My Rp78 lapses (-15.2%). Pipeline ordered; cut bought by point 4; no level moved; no retro-edit; estimates_committed_at stale; -61.0% is 0.42-era. New: FY2025 gross margin 15.1%, under the 18.0% kill.\n\nKILL_RECOMMENDED. The target, not the entry, is on trial."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "KILL \u2014 reason_tag valuation. No fillable price supports a long: at Rp220 the analyst's own base NAV is Rp180.6, a short the book cannot express, with tape EV \u2248\u221269% (the revision's \u221261% is stale 0.42-era). At the stated Rp59 entry return is +3.8%/yr \u2014 below 5.5% INDO cash and the 11.2% hurdle \u2014 and Rp59 prints only below the Rp64.5 GMR-at-consideration floor, where the base case breaks; the only hurdle-clearing entry (\u2248Rp47.8) lies in that same broken zone.\n\n1. Operating PV \u2212 net debt = \u2212Rp41/share; all positive NAV is one unoperated appraisal (76%) plus uncontracted renewal (47%).\n2. p_up 0.33 equals the prior despite an \u221286.4% leg vs the prior's \u221218% \u2014 generous, not conservative.\n3. Chain clean and revision compliant (p_up cut 0.42\u21920.33, no level raised, so no new-evidence flag owed); business value, not construction, is the defect."
+    }
+  ]
+}

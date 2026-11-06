@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ESSA-001",
+  "title": "Essa Industries Indonesia (ESSA.JK)",
+  "meta": {
+    "id": "T-INDO-ESSA-001",
+    "book": "INDO",
+    "ticker": "ESSA.JK",
+    "name": "Essa Industries Indonesia",
+    "sector": "MATERIALS",
+    "factors": [
+      "oil_gas",
+      "energy"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "attacked",
+    "verdict": "REVISE",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-06T13:15:53+07:00",
+    "drafted": "2026-11-06T13:15:53+07:00",
+    "judged": "2026-11-06T15:14:21+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 440.0,
+    "target": 627.0,
+    "kill": 315.0,
+    "max_chase_pct": 0.0,
+    "entry_mode": "limit",
+    "target_rationale": "Audited 3y EBIT $76.6m at 8.86%; 70% of EV and cash; IDR 19,000",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.42,
+    "up_pct": 42.5,
+    "p_down": 0.58,
+    "down_pct": -28.4,
+    "net_div_yield_pct_pa": 9.4,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 12.2,
+    "horizon_years": 3.0,
+    "carry_pct": 28.2,
+    "kelly_full_pct": 59.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (n=40, 0.42, +75/-35, 3y); no deviation",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 420.0,
+      "action": "review",
+      "note": "falsification NAV: EBIT $46.1m, 14.6%, below every audited year"
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 315.0,
+      "action": "exit_full",
+      "note": "one 25% ARB band under 420 = modelled fill; down_pct read off it"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2028-12-31",
+      "action": "review",
+      "condition": "FY2027 audited LK shows realised ammonia below $400/t, marker unrevised"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 400.0,
+      "action": "review",
+      "name": "realised ammonia USD/t (ammonia revenue / sales volume)",
+      "source": "FY LK segment note, F21/F19 basis"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 200.0,
+      "action": "review",
+      "name": "Senoro feedstock USD/t (raw materials used / ammonia sales)",
+      "source": "FY LK raw-materials note F24"
+    }
+  ],
+  "model": {
+    "currency": "USD",
+    "unit": "m",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        301.4,
+        295.0,
+        421.0,
+        378.9,
+        386.5
+      ],
+      "ebit": [
+        82.0,
+        70.8,
+        120.0,
+        100.5,
+        100.2
+      ],
+      "net_income": [
+        45.2,
+        40.3,
+        70.3,
+        60.0,
+        59.9
+      ],
+      "eps": [
+        0.00262,
+        0.00234,
+        0.00408,
+        0.00348,
+        0.00348
+      ],
+      "dps": [
+        0.00061,
+        0.00316,
+        0.00367,
+        0.00314,
+        0.00313
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle NAV: FCFF DCF at $445/t, WACC 10.86%, g 2.0%; 70% of PAU + net cash; IDR 19,000",
+      "bear": {
+        "value": 493.0,
+        "basis": "$340/t with a re-priced gas formula and only 17% EBIT margin"
+      },
+      "base": {
+        "value": 829.0,
+        "basis": "$445/t, 26.5% EBIT margin, $77m FCFF capitalised at 8.86%"
+      },
+      "bull": {
+        "value": 1095.0,
+        "basis": "$560/t held on European curtailment, 30% EBIT margin"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-06T13:15:53+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T13:55:22+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-06T14:16:40+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T15:03:56+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-06T15:14:21+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first, timestamp above",
+      "markdown": "FY2025: 756,368t (F19) at $337.7/t (F21/F19) = $255.4m + LPG $36.1m (F22) + other $3.5m = $295.0m (F1); the FY2022 fall of $436.5m is price (realised $929\u2192$337.7/t), volume 740\u2192756kt. Audited EBIT $77.0/$82.0/$70.8m (FY2023-25). Costs escalate with Brent (59% of COGS exposed, 65% passed through).\n\nEarnings quality: accruals (NI\u2212CFO)/assets \u22127.3%/\u221211.9%/\u221213.7% (FY2025/24/23), cash ahead; receivables +43.8% ($21.5m\u2192$31.0m, F47/F48) on revenue \u22122.1%, 79.7% Genesis (F49). IDX clean: unmodified, no notation, 9M-26 unaudited, no PSAK 16 reval. Related-party revenue 86.58% (F26), Akraya $8.87m (F25), no rights issue (F30), public sub-5% 54.08% (F45)."
+    },
+    {
+      "heading": "Valuation, entry and fillability",
+      "detail": null,
+      "markdown": "Through-cycle NAV: FCFF DCF, WACC 10.86%, g 2.0%, Rp19,000/USD (model block). Feedstock $153.7/t (F24/F19) against a European TTF marginal cost above $550/t; net cash / bear EBITDA \u22121.3x. The 493 kill sat 0.6% under the tape \u2014 re-derived below."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "Within 4%: my Rp829 against the house Rp802.5 (engine Rp827.4; DCF Rp909.9 at spot FX 18,080, 33.1% gross margin in perpetuity, terminal $85.1m at 2%). I deduct more on the 30% PAU minority ($262m of $873m EV against the house's $244.9m) and decline the Rp941 blend \u2014 a quarter is the house bull Rp1,637."
+    },
+    {
+      "heading": "Microstructure and liquidity",
+      "detail": null,
+      "markdown": "Free float 51.51% (IDX-IC mirror, 2026-11-04); the AR's public sub-5% line 54.08% (F45). 3-month ADTV Rp57.0bn (datapack, 2026-11-05); no 30-day figure (`the liquidity feed` empty), so 3m is the only sourced number and the \"thin\" tag in `the INDO universe` is stale (28x the Rp2bn floor). Band 25% (`the fund rules` 184). Flows stale: no `fund record` entry."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "Before documents: the market reads ESSA as a spent 2022 ammonia spike \u2014 revenue halved, one related-party customer, family control, dividend stub."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** at Rp496 the plant is capitalised at $472.6m \u2014 $272.5m EV after $200.1m net cash, 1.8x my FY2027E EBITDA, a 10.8% net yield: the bear NAV.\n\n**Why wrong:** volume never fell (756kt vs 740kt); the de-rating is price, set by a European cost curve with a third curtailed (\u00a72, S8). On the audited 3-year EBIT ($76.6m) the plant is worth Rp627. The market refuses to pay for the related-party structure (F26).\n\n**What proves us wrong:** an audited year below $400/t with the marker unrevised; the Senoro PJBG (28 October 2026, undisclosed terms, F40) failing the 65% pass-through; a dividend cut."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Sole customer is a related party: 86.58% of revenue, 79.7% of receivables (F26/F49); terms \"may differ\" (\u00a76).\n2. Receivables +43.8% to $31.0m (F47/F48) while revenue fell 2.1% \u2014 timing or a credit concession (\u00a73).\n3. The $8.87m Akraya fee (F25) runs to the group dominating the register (\u00a76).\n4. Single train: a 34-day June 2026 turnaround cut H1 volume as price rose (S3).\n5. FY2025's Rp52 dividend (F29) was 135% of earnings, from cash (S6); FY2023 paid 148.7% (dossier l.47)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "2029, down 30%: Middle East capacity restarted what Europe curtailed, Chinese FOB settled at $400 (F42's top), the Senoro PJBG re-priced feedstock, and the dividend was cut with the earnings."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. Fact-check. Revenue $295.0m (l.21; F1), realised $337.7/t (F21/F19), feedstock $153.7/t (F24/F19), 86.58% related-party (F26), net cash $125.6m (F13); Rp829 reproduces. [MINOR]\n\n1. Marker circular. $445/t is a house FY2027E forecast, not a sourced series (method card \u00a72). At the last actual $337.7/t: FCFF $38.4m, EV $433m \u2192 Rp489, below the Rp496 tape. The 67% upside is one unsourced forecast. [FATAL]\n\n2. Variant perception is a risk premium. Rp496 is the bear NAV; base Rp829 carries no governance discount. 86.58% related-party revenue (F26), 79.7% receivables (F49), $8.87m Akraya fee (F25): the market may price it. [MATERIAL]\n\n3. Catalyst is a price, not an event: Tampa (Dec), European gas (Jun), FY2026 results are observations; the tape saw Tampa $645 and Chinese FOB $510-535 (F41/F42) and still prices the bear. No dated catalyst. [MATERIAL]\n\n4. Base rate right; payoff not. 0.42/+75/\u221235 gives EV +11.2%; the +16.0% compresses both legs to 38.17/\u221217.83. Peak-margin failure is live: H1 2026 realised $531/t (F34). [MATERIAL]\n\n5. Structural. Kill Rp493 is 0.6% below Rp496; \u221217.83% is distance to kill, not executable loss. At the 25% band (limits l.184) it fills Rp370: \u221238.3% from 600, \u221225.4% from 496. At 600 EV is +4.0% (one band), \u22124.9% (two, the pre-mortem); up/|down| falls 3.39\u21921.0, so quarter-Kelly rounds to zero. The ARB gap is the loss leg. [FATAL]\n\n6. Disconfirming fact. FY2023 payout 148.7% (l.47): $51.5m dividends against $34.6m net income (l.42, 25); cash fell $157.5m\u2192$125.8m in FY2025 despite $96.1m FCF. The 8.9% yield is return of capital. [MATERIAL]\n\n7. Steelman. Failure is earlier than 2029: the PJBG was signed 28 October 2026 (F40) on undisclosed terms, after the last audited cost line. If the formula is at the $200/t kill (F24/F19 = $153.7), the bear is base from Q1 2027. [MATERIAL]\n\n8. Minority and pass-through. Base deducts 30% of EV ($262m) but adds 100% of net cash; if the cash sits in PAU, NAV is overstated ~Rp42/share (5%). The 65% pass-through of a 59%-exposed cost base is a calibration, not a contract. [MATERIAL]\n\n9. Integrity. Clean: estimates committed 2026-11-06T13:15:53+07:00, body after, no retro-edits. [MINOR]\n\nVerdict: **KILL_RECOMMENDED**\n\nStrongest: The 67% upside is a house-forecast price, and its only loss leg is a kill 0.6% below the tape that fills one ARB band lower \u2014 executable EV is +4%, not +16%.\n\nStop: Rp440 (kill \u2264420, ARB fill in ev_math); at Rp496 with a kill 0.6% away, no."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "0. Held; fact-check reproduces.\n\n1. **Part-conceded (FATAL).** Not a loop \u2014 the deck never sees this thesis \u2014 but $445 is a forecast, not a sourced series. Re-run on audited numbers: FY2023-25 EBIT $77.0/$82.0/$70.8m (avg $76.6m), each embedding its own price and gas cost. FCFF $58.9m, EV $665m; 70% of (EV + $125.6m cash) + $15m LPG = $569m \u2192 **target Rp627**, \u221224%, bought by point 1. Rp829 stays the $445/t case.\n\n2. Held: the discount is in the level \u2014 Rp627 is 24% below the house's Rp827 engine and prices a margin earned under the same 86.58% related-party structure (F26).\n\n3. Held. `commodity_capex_turnaround` needs no `catalyst_date`; the FY2027 LK is the date kill.\n\n4. Conceded in the levels \u2014 42.5/\u221228.4 at 440 \u2014 not the prior: p_up stays 0.42.\n\n5. **Conceded (FATAL).** 493 was the tape, not a falsification: the market had already conceded the bear, so a kill there kills on noise. Re-derived **Rp420** (EBIT $46.1m, 14.6%, below every audited year); executed one 25% band lower at **Rp315 = \u221228.4% from 440** = `down_pct`.\n\n6. Conceded: DPS Rp59.6\u2192Rp46 (90% of $46.0m audited earnings, not the deck's $60m); 9.4% net.\n\n7. Part-conceded: at feedstock $200/t NAV is Rp389, through the kill. Terms undisclosed (F40), so $153.7/t stands; the >$200/t KPI binds.\n\n8. Conceded: the minority takes 30% of net cash (\u2212Rp42), inside Rp627.\n\n9. Held; clean.\n\n**Honest EV.** At 440: 0.42\u00d7(42.5+28.2)+0.58\u00d7(\u221228.4)\u22121 = **+12.2%**, ex-carry +1.4%. At the Rp496 tape: **\u22120.6%**, ex-carry \u221211.1%. Below the 15% hurdle; the hurdle price Rp429 sits 2% above the kill. **No trade.**"
+    },
+    {
+      "heading": "Bear re-attack",
+      "detail": null,
+      "markdown": "1. 420/315 is a fair fill model: 315 is one ARB band under falsification and down_pct \u221228.4 carries the executable loss. \"Review\" at 420, falsification, lets a falsified position ride a band; exit_full belongs there. [MATERIAL]\n\n2. Rp627 reproduces (58.9/8.86%=$665m; 70% of EV+cash+$15m=$568m; \u00d719,000/17,227m=Rp626.8), bought by point 1. D&A=capex assumed; audited \u2212$3.3m gap gives ~$56m, Rp599-619. p_up 0.42 is the prior; flat is conservative. [MINOR]\n\n3. No trade: 440 gives +12.2%; 15% needs \u2264429, inside the ARB band \u2014 unfillable. I stop objecting at 440.\n\n4. Gaming clean: cuts bought, no retro-edit; tape EV (\u22120.6%) misreproduces (+0.8%). [MINOR]\n\nVerdict: **SURVIVES_WITH_SCARS** \u2014 construction honest; no fillable price clears 15%."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "Correction against my record (35 KILL / 5 PASS_REDUCED / 0 fills; 12 of 28 scored kills left gains): I return mis-specified arithmetic instead of killing what it obscures, and I never kill a name whose business value supports a price I can name.\n\nChain verified: lint pass, stamps 13:15\u219213:55\u219214:16\u219215:03 monotonic, actors correct, both Bear logs verbatim; the target was cut, not raised. Grounds:\n\n1. **The two-tier kill is a legitimate executable-fill model, not a device.** 315 is the limit-down fill of a 420 falsification on a 25% ARB band, and EV already charges the whole gap (\u221228.4%): conservative, not generous. The defect is \"review\" at 420 where exit_full belongs \u2014 a falsified position must not ride a band.\n2. **The EV arithmetic is internally inconsistent, and it decides the trade.** At 440, +12.2% is the price-only formula; at the 496 tape, \u22120.6% is that formula plus ~10.5pp of dividend; \"ex-carry +1.4\" subtracts a yield the 12.2 never contained. Carry in both legs makes 440 +22.7% and clears the hurdle; price-only makes the tape \u221211.1%.\n3. p_up 0.42 is the registry prior, unraised, cited; Rp627 reproduces on audited EBIT and the Bear bought it.\n\nREVISE_CONSTRUCTION: one stated horizon, one dividend treatment, EV re-run at 440/429/496, 420 to exit_full. Not KILL: at 14.1% deployed against a 60-95% band, these merits deserve the test."
+    }
+  ]
+}

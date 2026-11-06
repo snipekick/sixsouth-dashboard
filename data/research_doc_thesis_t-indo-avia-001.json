@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AVIA-001",
+  "title": "Avia Avian (AVIA.JK)",
+  "meta": {
+    "id": "T-INDO-AVIA-001",
+    "book": "INDO",
+    "ticker": "AVIA.JK",
+    "name": "Avia Avian",
+    "sector": "MATERIALS",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-06T13:17:57+07:00",
+    "drafted": "2026-11-06T13:17:57+07:00",
+    "judged": "2026-11-06T15:19:32+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 300.6,
+    "target": 386.4,
+    "kill": 250.0,
+    "max_chase_pct": 0.0,
+    "entry_mode": "limit",
+    "target_rationale": "12x FY2026E EPS = COE-band DCF midpoint (348 at 13.5% to 426.34 at 11.5%).",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 28.54,
+    "p_down": 0.6,
+    "down_pct": -16.83,
+    "net_div_yield_pct_pa": 7.85,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 9.7,
+    "horizon_years": 3.0,
+    "carry_pct": 23.55,
+    "kelly_full_pct": 106.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (n=15, horizon 3y; premium-multiple de-rating history)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 250.0,
+      "action": "exit_full",
+      "note": "below the bear DCF (284.28)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 42.0,
+      "action": "review",
+      "name": "gross_margin",
+      "source": "quarterly LK (S3) gross profit/revenue; FY2022 trough 40.59%"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 3.5,
+      "action": "review",
+      "name": "architectural_volume_growth",
+      "source": "quarterly press release S5/F21; 9M2026 3.5%"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2029-12-31",
+      "action": "review",
+      "condition": "re-underwrite at horizon"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "lines": {
+      "revenue": [
+        7471.4,
+        8123.7,
+        9415.4,
+        10074.5,
+        10779.7
+      ],
+      "ebit": [
+        1772.9,
+        1923.4,
+        2242.8,
+        2452.1,
+        2623.8
+      ],
+      "net_income": [
+        1664.3,
+        1747.5,
+        1900.4,
+        2065.0,
+        2203.0
+      ],
+      "eps": [
+        27.16,
+        29.11,
+        32.2,
+        35.17,
+        37.52
+      ],
+      "dps": [
+        22.2,
+        23.0,
+        24.2,
+        26.4,
+        28.1
+      ]
+    },
+    "valuation": {
+      "method": "DCF (FCFF, COE 11.5%, terminal g 4.0%, ROIIC fade to 20% by 2035)",
+      "bear": {
+        "value": 284.28,
+        "basis": "GM 40.2%, growth 3%, terminal g 3.0%, ROIIC 11% (falsification)"
+      },
+      "base": {
+        "value": 426.34,
+        "basis": "GM 44.2-44.7% held, 7% volume-led growth, terminal g 4.0%, ROIIC 20%"
+      },
+      "bull": {
+        "value": 530.88,
+        "basis": "GM 45.7-46.2%, 11% growth on Cirebon, terminal g 4.5%, ROIIC 22%"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-06T13:17:57+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-06T13:51:54+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-06T14:06:44+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-06T15:19:32+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "From memory: a de-rating paint leader, growth presumed over."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "**EQ gate: PASS (optics).** 9M2026 OCF 1,689.1 > NI 1,384.4 (F19, F18); inventory 2,233.6 Sep vs 1,679.6 Dec, +33% on revenue +16.7% (F24). Crowe unmodified.\n\nFY2026E revenue 9,415 = 9M 6,917.6 (F17) + Q4 2,326.9 \u00d7 1.075; GM 44.22% (not Q4 47.1%), SG&A 20.4%, tax 21.9%; growth 15.9/7.0/6.5/6.0% (F9); payout 75.5% (l.45; floor 50%, F15); EPS 32.20/35.17/37.52; DPS 24.2/26.4/28.1."
+    },
+    {
+      "heading": "Valuation and EV math",
+      "detail": null,
+      "markdown": "**DCF (FCFF).** COE 11.5% = 6.7% + 4.8% \u00d7 1.0 (band 11\u201313%: 452/367). Reinvestment FY2026E 633.8 (583.8+332.5\u2212282.5) = 36.2% of NOPAT, FY2027E 409.6 (21.4%); incremental 25.8%, so 7.0% = 21.4% \u00d7 32.7%; ROIIC 33\u219220% by 2035, g 4.0%. Owner earnings: NOPAT 1,752 (1,900\u2212149) + 283 \u2212 584 \u2212 333 = **FCFF 1,118**, 1,933 by FY2030E.\n\n**Multiple.** 15,210/2,243 = 6.8x in, old 20,590/2,794 = 7.4x out, terminal 8.3x; >30x never ROE-supported (18.3% \u00d7 24.5% = 4.5% \u2248 11\u201312x). Sensitivity: GM \u00b11 \u2192 411/442; COE 10.5/11.5/12.5 \u2192 481/**426.34**/384; g \u00b10.5 \u2192 437/417.\n\n**Levels (Revision 1\u20132):** target **386.4**, kill **250**, entry **300.6** = (386.4+70.8)/1.15\u00b3."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** 304 pays 9.4x FY2026E, 5.3x EV/EBITDA, 7.9%; a reverse DCF implies \u22122.1% revenue a year to FY2035E.\n\n**Why wrong:** GM 44.2% held a 37% Brent rise (pass-through ~92% oil, ~90% FX); 9M volume +3.5% (F21); 150 centres, 227kt, 76% utilisation (F22, F1, F6); FY2027E 7.0% is volume, not 15.9% price.\n\n**What proves us wrong:** GM <42% two quarters; volume negative two; Cirebon past FY2027; a March-2027 placement at a discount; payout to 50%."
+    },
+    {
+      "heading": "Microstructure and liquidity",
+      "detail": null,
+      "markdown": "Float **13.29%**, insiders 81.40% (Wahana, Tancorp); below the IDX minimum, March-2027 deadline: forced placement. ADTV 3m **5.99bn** (datapack); 5% of 15.13bn NAV = 756m = 2.49m shares = 12.6% ADV, 0.63 days at 20%. **Flows stale** \u2014 fund record empty; last_prices/adv lack it. **ARB 25%:** limit-down from the kill fills 187.5, two 140.6 \u2014 \u221237.6%/\u221253.2% from entry."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House BUY **413** (60% DCF 455.9; multiple legs 320.7/272.4 at 25/15%). Rebased 386.4 is 6.4% below the blend, 15.2% below the DCF. **COE:** house 11.86% = 7.45 \u2212 1.62 + 0.90 \u00d7 (4.23 + 2.46); 13.47/13.72% un-subtract the default spread and double-count sovereign risk \u2014 11.86% is the model, 13.5% a stress. Explicit FCFF 1,120 vs 1,118; gap is the terminal (31,973 on 2,510)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Inventory 2,233.6 vs 1,679.6, +33% on revenue +16.7% (F24).\n2. FY2025 revenue +8.73% on production +15.16% (F1, F2), 9M volume +3.5% (F21): price \u22125.6%, not volume.\n3. Related-party purchases 42.2% of COGS, 1,628.2 (F10, F11): margin is the only test.\n4. Payout 75.5% exceeds FCFE by ~158 (F15, F23)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "2029, down 30%: price rises give back faster than Brent falls, GM at 40%; the placement clears at a discount, payout to 50%. The kill fills 187.5/140.6 \u2014 \u221237.6%/\u221253.2%, not \u221216.8%."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check.** FY2025A revenue 8,123.7 (dossier l.21), EBIT 1,923.4 (l.23), net income 1,747.5 (l.25) verify; GM 44.0%/ROE 18.3% (l.45); 9M volume +3.5% (F21). Uncited: \"FY2025 78%\" payout (l.57) vs dossier's 75.5%. [MINOR]\n\n1. **284.28 is a stop in a falsification's clothes.** It *is* the bear DCF value: the market pays the bear case exactly, so a holder earns the COE with the base case free. Falsification must sit *below* bear value. 284 prints on noise and the rule exits at peak return. If \u22126.5% falsifies a 1\u20134y thesis, 426.34 is a re-rating that must land before the next drawdown, not a three-year target. [FATAL]\n\n2. **COE carries the trade.** At 13.5% (the deck's printed 13.47/13.72%) the target is **Rp348**, the re-derived bear **Rp232**, the 14%-hurdle entry **Rp283** \u2014 below the kill. House 11.86% gives Rp409, max entry Rp324. At 13.0%, inside the band, EV is \u22125.7%. [FATAL]\n\n3. **Structural, not cyclical.** He concedes 4.5% sustainable growth and \"~11-12x at 11.5% \u2014 structural,\" then targets 13.2x, 10\u201320% above his own fair band. Multiple-survival: 6.8x entry (6.0x tape) to 7.4x exit \u2014 a quarter of the up-move is expansion. Hold the tape's 6.0x on FY2029E EBIT and the target is **Rp360**. [MATERIAL]\n\n4. **The variant is a risk premium.** 9.4x pays for a 13.29% float, a forced March-2027 placement and 42.2% related-party COGS; the catalyst assumes the family sells into a thin book without a discount. [MATERIAL]\n\n5. **Base rate and sizing.** Registry: 0.40 / +50 / \u221230 (n=15, 3y). The thesis keeps the prior but compresses both legs to +27.05/\u221215.28; the down leg is half the archetype's base_down. At \u221230% the EV at entry is +0.3%, not +9.1%. [MATERIAL]\n\n6. **Pricing power is cost recovery.** 9M volume +3.5% against a 7.0% FY2027E assumption \u2014 the rate must double, with Cirebon adding supply, not demand. Pass-through cuts both ways: FY2025 revenue +8.73% on production +15.16% is realised price **\u22125.6%** (dossier l.21, F1/F2). Pass-through is not a moat. [MATERIAL]\n\n7. **Disconfirming facts absent from the thesis.** Net margin fell three years running, 23.4%\u219222.3%\u219221.5% (dossier l.45\u201347); ROE rose on a shrinking equity base (9,914\u21929,537, l.34). The house's catalyst list also carries a 2027-06-30 MSCI decision on Indonesia moving to **Standalone** (report l.38), unmentioned; a 13% float loses index support. [MATERIAL]\n\n8. **Pre-mortem steelman.** The avoided failure: the margin break is *engineered*, not competitive. With 42.2% of COGS from related parties, the family can move profit upstream; the thesis's only arm's-length test is the gross margin \u2014 the exact variable that would move. No price protects the minority. [MINOR]\n\n9. **Pipeline integrity: clean.** One draft stamp at 2026-11-06T13:17:57+07:00 matching estimates_committed_at; file untracked, so no retro-edit; the target is a bottom-up DCF output. [MINOR]\n\n**Verdict: KILL_RECOMMENDED.** The kill is the bear value, so the rule sells at the one price where the thesis says to buy, and the target clears its own hurdle only at a COE the house does not use.\n\n**Strongest sentence:** A thesis whose falsification level is its own bear-case fair value, sitting 6.5% under the tape, is not a three-year thesis \u2014 it is a 6.5% stop with a Rp426 story attached.\n\n**I stop objecting at Rp300 or below**, with the kill reset to Rp250 (below the bear DCF, so noise cannot fire it) and the target rebased to Rp386 (12x FY2026E EPS, the top of the analyst's own fair band)."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "0. **Fact.** Payout **75.5%** (l.45); \"78%\" deleted. Estimates unchanged.\n1. **Fatal 1, conceded.** 284.28 *is* the bear DCF value \u2014 selling there sells at the bear's fair price. Kill to **250**: 12.1% below bear value, 13.2% under the 288 low, over half a 25% ARB band below the tape; loss at kill \u221216.8%, not \u22126.5%.\n2. **Fatal 2, conceded in the target, not the convention.** At 13.5% the base is 348 (sensitivity 481/426/384 at 10.5/11.5/12.5, next step \u2248 \u221236), the 14% entry (348+70.8)/1.14\u00b3 = **283**, below the old kill, and bear 284.28 \u00d7 0.816 = **232**: Drew's three numbers reproduce. But 13.47% un-subtracts the 1.62pp default spread the house deducts because CRP already prices it \u2014 11.86% is the model, 13.5% a stress. Target rebased to **386.4** = 12 \u00d7 FY2026E EPS 32.20, 0.2% off the COE-band midpoint (348+426.34)/2; entry **300.6** = (386.4+70.8)/1.15\u00b3 (14% hurdle + 1pp COE stress). No level moves >20%.\n3. **Half-conceded.** 7.4x exit gone; 386.4 implies 6.5x FY2029E EBIT from 5.9x \u2014 under the DCF's 8.3x terminal, but 0.5x expansion (6.0x held gives 362).\n4. Held, now priced: the float discount sits in an entry 1.1% *below* the tape.\n5. Down leg \u221215.28\u2192\u221216.83; at the archetype's \u221230% EV is +1.8%, not +0.3%. p_up held 0.40.\n6. Conceded: 12x one year capitalises no volume doubling. Volume trigger tightened <0% \u2192 <3.5%.\n7. Added: margin 23.4\u219222.3\u219221.5% (l.45\u201347), ROE on equity 9,914\u21929,537 (l.34), MSCI Standalone 2027-06-30 (l.38).\n8. Accepted; gross margin stays the only arm's-length test, at the 42% kill.\n9. No change.\n10. Tape 304: up +27.1%, down \u221217.8%, carry 7.77% \u2192 **+8.5%**, own-Kelly +3.8%. At 300.6: **+9.7%**, own-Kelly +27%, library +13%, symmetry 2.87. **Trade, limit \u2264301; do not chase 304.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "ALDRICH (JUDGE), 2026-11-06T15:19:32+07:00. Correction against the 35-KILL/40-thesis, 0-fill record: a rebuilt thesis is not killed for a sub-hurdle *price* \u2014 it is passed at the price that pays. ASII-002's test (EV vs FR+4%) applied without the reflex.\n\n**PASS_REDUCED \u2014 size_multiplier 0.25 \u2014 at a price: entry \u2264 Rp270.** Lint PASS; stage chain monotonic and role-correct (draft 13:17:57 \u2192 attacked 13:51:54 \u2192 revision 14:06:44); Bear log verbatim; no unflagged raise \u2014 every revision line is a cut.\n\n1. **Target is valuation-derived.** 386.4 = 12\u00d7 FY2026E EPS 32.20, 0.2% under the COE-band DCF midpoint (348/426.34) and 6.4% below the house 413; a three-year target struck on FY2026E EPS credits no growth. Not a multiple fitted to a price: fatal 2 does not survive.\n2. **Kill is falsification.** 250 sits 12.1% below the bear DCF 284.28, 13.2% under the 288 low, 17.8% under the tape; noise cannot file it. Fatal 1 cured.\n3. **p_up 0.40 is the registry prior**, unshaded; payoff 28.54/16.83 = 1.70, so no 6a pattern.\n4. **The hurdle is the one real finding \u2014 and it is a price finding.** At 300.6 expected return is +9.7%/3y (3.1%/yr, lint convention) or +23.9%/3y (7.4%/yr, house carry convention) against FR+4% = 10.44%/yr. Probability-weighted value, 0.4\u00d7386.4 + 0.6\u00d7250 = Rp304.6, equals the tape: no edge at 304. The entry formula clears 15%/yr only in the win state. Rp270 clears the hurdle (10.6%/yr) and is the fill level; 300.6 is not.\n5. **Residual \u2192 size.** Forced March-2027 placement on a 13.29% float; flows stale. Load-bearing, unverified. 0.25.\n\n*Session close: one chain judged, 1 PASS_REDUCED / 0 KILL; AVIA was passable once rebuilt \u2014 target and kill now survive Drew \u2014 at a starter size and the hurdle-clearing price.*"
+    }
+  ]
+}
