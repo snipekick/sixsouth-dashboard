@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-07T06:31:44.236294+07:00",
+      "book": "INDO",
+      "title": "US_CLOSE 2026-11-07: ERAA review_condition judged \u2014 Q3 LK still absent, condition does not hold; no kills, no trades",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "review"
+    },
+    "body": "US_CLOSE 06:30 WIB review on the 2026-11-07 session brief and the ERAA dossier. (1) Fired unconditional kills: kill_actions_due [] and kill_monitoring_suspended [] \u2014 none, so no exit ticket exists to confirm and none is written. (2) review_condition T-INDO-ERAA-001, trigger catalyst_unresolved 2026-10-31@2026-Q4, arising from the date kill-criterion (> 2027-03-31) whose condition is 'if Q3-2026 LK (2026-10-31) fails the CFO-conversion or GM test, review before this date'. Judged on brief/dossier facts only: the brief still carries the review as open and surfaces no Q3-2026 LK data; data/dossiers/ERAA.fund record (asof 2026-10-10) still ends at Q2-2026 (revenue 20,482.4bn, GP 2,407.6bn, NI 331.3bn) with no Q3-2026 row, and its own footer still lists the Q3-2026 LK as due ~end-October 2026. No CFO-conversion or gross-margin figure for the 2026-10-31 print is reachable in the fund's data, so the test cannot be shown to fail; fail-closed, failure is NOT inferred. Condition does not hold, so no exit ticket. The price kill (60d; governor NONE in both books; no fills this session; holdings now MEDC/ERAA/PTBA (INDO cash 85.6%, gross 14.42%); orders_pending holds only the JPFA.JK buy\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-06T06:31:18.896100+07:00",
       "book": "INDO",
       "title": "US_CLOSE 2026-11-06: ERAA review_condition judged \u2014 Q3 LK still absent, condition does not hold; no kills, no trades",
@@ -912,17 +923,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-07 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops lane; standing since 09-26, ops confirmed 10-05 there is no authoritative index-level source \u2014 deliberately not stamped on a guess). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 \u2014 ops lane, not session-actionable.\n- Macro regime (frontmatter 2026-10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`LLY`/`SMFG` (3 WATCH) + `BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`DMAS`/`TAPG`/`TINS` (4 WATCH) + `ERAA`/`MEDC` PROMOTED + `ELSA`/`PTBA` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only README + two helper scripts\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-07T20:01:36.842734+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-07: pass \u2014 no trading actions",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "20:00 WIB pre-open, North Book. QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d, carried since 2026-08-31) \u2014 not CRITICAL, trading permitted. Both books 100% cash, 0 names, dd 0.0, governor NONE. No tickets written.\n\n(3a) Kill exits: kill_actions_due [] \u2014 no fired kill to reconcile; wrapper wrote none; GLOBAL all-cash n_names=0, so no live ticket or fill to verify. No missing-ticket breach.\n(3b) Governor de-gross: governor_state NONE (GLOBAL, live=false) \u2014 no deterministic sells emitted, no mix to choose; buys vetoed by rule anyway.\n(3c) Entries: sole GLOBAL judged_unticketed names are T-GLOBAL-NVO-002 and T-GLOBAL-0700HK-001, both non-tradeable \u2014 sized to zero, no ticket.\n  - T-GLOBAL-NVO-002 (judged, PASS_REDUCED): sizing pm_pct 0.0 / script_pct 0.0 \u2014 size_position Kelly<=0 at spot 37.00 (quarter-Kelly after haircut binding); Judge 0x multiplies any size to zero, binds like a kill. deviation_reason: 'No ticket staged.' No re-open without material new evidence.\n  - T-GLOBAL-0700HK-001 (judged, PASS_REDUCED, risk_checked): sizing pm_pct 0.0 / script_pct 0.0 \u2014 Kelly<=0, ADV-unknown liquidity cap fail-closed; PM ruling recorded\u2026",
     "persona": ""
   }
 ]
