@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "asof": "2026-11-06T12:27:42+07:00",
+  "asof": "2026-11-06T19:01:01+07:00",
   "decks": {
     "agri": {
       "title": "Agricultural & soft-commodity deck",
@@ -44,8 +44,8 @@
           },
           "lt": 1093.67,
           "spot": {
-            "value": 1369.0706,
-            "asof": "2026-11-05",
+            "value": 1362.8977,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance ZL=F"
           },
           "status": "reviewed",
@@ -67,8 +67,8 @@
           },
           "lt": 284.13,
           "spot": {
-            "value": 220.4622,
-            "asof": "2026-11-05",
+            "value": 217.7064,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance ZW=F"
           },
           "status": "reviewed",
@@ -90,8 +90,8 @@
           },
           "lt": 215.5,
           "spot": {
-            "value": 173.6142,
-            "asof": "2026-11-05",
+            "value": 173.4174,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance ZC=F"
           },
           "status": "reviewed",
@@ -113,8 +113,8 @@
           },
           "lt": 449.67,
           "spot": {
-            "value": 351.7471,
-            "asof": "2026-11-05",
+            "value": 352.9597,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance ZM=F"
           },
           "status": "reviewed",
@@ -974,9 +974,9 @@
           },
           "lt": 19000.0,
           "spot": {
-            "value": 18080.0,
-            "asof": "2026-10-23",
-            "source": "S7 (Okezone, onshore close 23-Oct-2026), corroborated S10 (Bloomberg)"
+            "value": 18103.0,
+            "asof": "2026-11-06",
+            "source": "Yahoo Finance IDR=X"
           },
           "status": "reviewed",
           "basis": "Desk review 2026-10-26 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo IDR=X daily-close fiscal-year averages (history_source); FY2026E 17,570 keeps the deterministic convention (year-to-date average blended with the reviewed spot 18,080, rounded \u2014 the seeded 17,546.8045 used the Yahoo placeholder spot 17,956). Spot is the reviewed onshore close Rp18,080/USD on 23-Oct-2026 (S7; corroborated S10). The desk rejects the Yahoo IDR=X placeholder (17,956 asof 25-Oct, ~0.7% below the onshore close) as stale/offshore and non-citable. FY2027E 18,350 (+1.5% vs spot), FY2028E 18,600, FY2029E 18,850, lt 19,000 (~+2.4%/yr trend) are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: IDR weakens on a persistent current-account deficit (elevated oil import bill, Brent ~100\u2013107/bbl per S8) and a narrowed carry gap (BI-Rate 5.75% on hold per S4 vs USD effective ~3.88% after the Sep-2026 Fed +25bp hike), with MSCI standalone-review risk keeping foreign portfolio flows a headwind (per S11, IHSG \u221211.6% on the MSCI proposal) and BI intervention capping the pace. The futures-broker projection inside S7 was quarantined and not used. Deck mode 2026-10-26 (MACRO_FX): `lt_escalation: ppp` set \u2014 IDR/USD is quoted rupiah-per-dollar, so after the last explicit year (FY2029E) the path must drift with the inflation gap for nominal consistency (the engine grows `lt` at (1+i_idr)/(1+i_usd)\u22121, ~+0.49%/yr on the sourced long-run anchors BI 2.5% vs Fed 2.0%), not `none` (which would pin a flat nominal rate while IDR costs still escalate at 2.5%, implying perpetual real IDR appreciation \u2014 the wrong sign for a held balance_of_payments_pressure regime). Note the explicit path runs faster than ppp (FY2026E 17,570\u2192FY2029E 18,850 \u2248 +2.4%/yr): the deck places the real IDR depreciation from the current-account deficit in the transition years and reverts to inflation-gap-only (real-flat) drift in the long run, i.e. ppp is the long-run steady state, the faster slide is the transition. Re-mark 2026-11-06: the working tree had picked up the Yahoo IDR=X pack print (Rp17,509.1992, asof 5-Nov) as the spot. That is exactly the placeholder this basis rejects: it has no S# print, no onshore quote, and it breaks the forward path (FY2027E 18,350 = +1.5% on Rp18,080, not on Rp17,509). No onshore print dated 3-6 Nov-2026 is archived (S16/S17 are company documents; S18 is an index note), so the spot stays at the last reviewed onshore close, Rp18,080 on 23-Oct-2026 (S7, corroborated S10; S9 printed Rp18,074)."
@@ -997,8 +997,8 @@
           },
           "lt": 102.0,
           "spot": {
-            "value": 101.623,
-            "asof": "2026-11-05",
+            "value": 101.944,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance DX-Y.NYB"
           },
           "status": "reviewed",
@@ -1257,8 +1257,8 @@
           },
           "lt": 4300,
           "spot": {
-            "value": 4083.0,
-            "asof": "2026-11-05",
+            "value": 4084.2,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance GC=F"
           },
           "status": "reviewed",
@@ -1280,8 +1280,8 @@
           },
           "lt": 65.0,
           "spot": {
-            "value": 51.955,
-            "asof": "2026-11-05",
+            "value": 52.18,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance SI=F"
           },
           "status": "reviewed",
@@ -1303,8 +1303,8 @@
           },
           "lt": 11000,
           "spot": {
-            "value": 13832.9044,
-            "asof": "2026-11-05",
+            "value": 13789.9147,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance HG=F"
           },
           "status": "reviewed",
@@ -1326,8 +1326,8 @@
           },
           "lt": 3000,
           "spot": {
-            "value": 3182.75,
-            "asof": "2026-11-05",
+            "value": 3175.5,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance ALI=F"
           },
           "status": "reviewed",
@@ -1349,8 +1349,8 @@
           },
           "lt": 95.0,
           "spot": {
-            "value": 91.95,
-            "asof": "2026-11-04",
+            "value": 93.12,
+            "asof": "2026-11-05",
             "source": "Yahoo Finance TIO=F"
           },
           "status": "reviewed",
@@ -1449,8 +1449,8 @@
           },
           "lt": 75.0,
           "spot": {
-            "value": 99.18,
-            "asof": "2026-11-05",
+            "value": 97.85,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance BZ=F"
           },
           "status": "reviewed",
@@ -1472,8 +1472,8 @@
           },
           "lt": 69.0,
           "spot": {
-            "value": 91.09,
-            "asof": "2026-11-05",
+            "value": 90.02,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance CL=F"
           },
           "status": "reviewed",
@@ -1495,8 +1495,8 @@
           },
           "lt": 3.1,
           "spot": {
-            "value": 2.954,
-            "asof": "2026-11-05",
+            "value": 3.006,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance NG=F"
           },
           "status": "reviewed",
