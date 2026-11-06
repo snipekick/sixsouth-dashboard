@@ -23,6 +23,17 @@
   },
   {
     "meta": {
+      "date": "2026-11-06T16:03:55.164159+07:00",
+      "book": "INDO",
+      "title": "IDX_CLOSE 2026-11-06: no fired kills; ERAA review_condition still does not hold on unchanged facts \u2014 no exit ticket",
+      "thesis": "T-INDO-ERAA-001",
+      "kind": "review"
+    },
+    "body": "IDX_CLOSE 16:00 WIB (South Book). (1) Fired unconditional kills: kill_actions_due [] and kill_monitoring_suspended [] \u2014 no ticketed kill exists to confirm, so no confirmation and no exit is written. (2) review_condition T-INDO-ERAA-001, trigger catalyst_unresolved 2026-10-31@2026-Q4, still open in the brief. Judged on brief/dossier facts only: the brief surfaces no Q3-2026 LK data, and data/dossiers/ERAA.fund record (asof 2026-10-10) still ends at Q2-2026, so neither the CFO-conversion nor the gross-margin test can be shown to fail \u2014 fail-closed, failure is NOT inferred. Condition does not hold, so no exit ticket. The price kill (<420) is not reached: brief price 494, 17.6% above it, stale=false. This repeats the 06:31 US_CLOSE judgment on unchanged facts; the review row stays open until data arrives. (3) Context: QC WARN (fx_carry_rates.CNH stale, owned by MONTHLY_IC 2026-11-07); governor NONE in both books; the 240,600 PTBA.JK fill at 2,930 was the day's only trade; resting order ORD-20261105084520-JPFA.JK-603d untouched. No trading action taken or implied.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-06T08:45:16.958226+07:00",
       "book": "INDO",
       "title": "auto-staged entry PTBA.JK",
@@ -906,17 +917,6 @@
   {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-10-07 (Wed)\n\n## Step 1 \u2014 State slice & queue inventory\n\nQC WARN (1 flag, ops lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source). Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders empty, kill_actions_due empty, reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\n**Construction queue (runbook step 1) \u2014 EMPTY:**\n\n- (a) Parked drafts (`status: draft`/`attacked`, no verdict): **none**. All 32 theses are `judged` (30) or `killed` (2). No decaying mid-pipeline thesis exists.\n- (b) ADVANCE idea cards promoted but never constructed: **none**. The 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2 (ERAA, MEDC); both PROMOTED cards already have constructed theses (T-INDO-ERAA-001, T-INDO-MEDC-001). No `verdict: ADVANCE` card exists anywhere in `fund record`.\n\n## Step 2 \u2014 Construction chains\n\nNone advanced (queue empty). No analyst / Drew / Aldrich spawns; ~zero sourcing tokens.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a now-satisfied re-stage condition)\n\nThe queue\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-06T08:47:32.103714+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-06: pass \u2014 no trading actions; ERAA entry stays deferred (PM re-size pending)",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "other"
-    },
-    "body": "QC WARN (1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d). Not CRITICAL \u2014 both books 100% cash, dd 0.0, zero exposure. Trading permitted; the stale index-yield proxy is unused by any position today, no action.\n\n(3a) Kill exits: kill_actions_due [] and no live theses/holdings (n_names 0 both books) \u2014 no fired kill to verify; wrapper wrote none. Nothing missing, no fail-closed breach.\n\n(3b) Governor de-gross: governor_state NONE / live=false for INDO and GLOBAL (dd 0.0) \u2014 no de-gross obligation; buys not vetoed.\n\n(3c) Entries: the only INDO judged_unticketed name is T-INDO-ERAA-001 (judged, Risk check CLEAR_WITH_NOTES, Judge PASS_REDUCED 0.5x). The adv/mcap feed gap that forced the 2026-09-26 PM defer has RESOLVED: market-data snapshot now carries ERAA.JK (IDR 76.9B/day) and market-data snapshot records are non-empty incl ERAA.JK (IDR 9.34T) \u2014 both fixed by OPS 2026-10-05. A diagnostic re-run of fund record now returns recommended_pct 10.0% (constitution cap binds); Judge PASS_REDUCED 0.5x -> 5.0% at-cost. HOWEVER no ticket is staged: the thesis sizing block still records pm_pct 0.0 (fail-closed at judgment), and this runbook takes\u2026",
     "persona": ""
   }
 ]
