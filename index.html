@@ -4,75 +4,123 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
+<meta name="description" content="Six South Capital — autonomous paper fund dashboard: South Book (IDR) and North Book (USD), research, market division and learning curve.">
+<meta name="theme-color" content="#0A0B0E">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Six South · 6S</title>
 <style>
-/* Six South terminal skin — S&P Capital IQ-inspired. Design rules: dashboard/DESIGN.md.
-   Self-contained: no CDN scripts, no external fonts (Arial is a system font), no remote assets.
-   All dynamic content is HTML-escaped in JS (stored-XSS defense, findings state-data-07). */
+/* Six South V5.X design system — "institutional terminal".
+   Dense, data-first, calm. Self-contained (strict CSP): no CDN, no web fonts, no remote assets.
+   Rules: docs/DESIGN_V5X.md. Brand red marks identity and the active section only; colour
+   otherwise carries meaning (up / down / North / South / benchmark). All dynamic content is
+   HTML-escaped in JS (stored-XSS defense, findings state-data-07). */
 :root{
-  --bg:#0B0B0D;            /* page canvas */
-  --panel:#17181B;         /* panel body */
-  --panel2:#1D1E23;        /* raised cells / hover */
-  --bar:#101114;           /* panel title bars / table headers */
-  --hair:#2A2C31;          /* hairline borders */
-  --ink:#E8EAED;           /* primary text */
-  --muted:#9AA3AD;         /* secondary text */
-  --dim:#6B7280;           /* tertiary */
-  --brand:#E01F26;         /* CIQ red — brand + active tab ONLY */
-  --up:#3DBD4A; --down:#F0524E;
-  --north:#3E8EDD;         /* fund/NAV series (validated vs #17181B) */
-  --south:#E8A33D;         /* South Book accent dot */
+  --bg:#0A0B0E;            /* page canvas */
+  --panel:#111318;         /* panel body */
+  --panel2:#171A21;        /* raised cells / hover */
+  --panel3:#1D212A;        /* inputs, pressed */
+  --bar:#0E1014;           /* panel title bars / table headers */
+  --hair:#232731;          /* borders */
+  --hair2:#1A1D24;         /* row rules */
+  --ink:#E7EAF0;           /* primary text */
+  --ink2:#C8CDD6;          /* body copy */
+  --muted:#98A1B0;         /* secondary text */
+  --dim:#6B7384;           /* tertiary */
+  --brand:#E01F26;         /* 6S red — brand + active section ONLY */
+  --link:#8EC1F0;
+  --up:#3DBD4A; --down:#F0524E; --warn:#E8A33D;
+  --north:#3E8EDD;         /* fund/NAV series (validated vs panel) */
+  --south:#E8A33D;         /* South Book accent */
   --bench:#E84A93;         /* benchmark series (validated pair w/ north) */
-  --chartfill:rgba(62,142,221,.16);
+  --chartfill:rgba(62,142,221,.14);
+  --r:6px; --r2:4px;
+  --shadow:0 1px 0 rgba(255,255,255,.02) inset,0 8px 24px -16px rgba(0,0,0,.6);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--ink);font:12px/1.45 Arial,Helvetica,sans-serif}
-.mono{font-family:Arial,Helvetica,sans-serif;font-variant-numeric:tabular-nums lining-nums}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:12.5px/1.5 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.mono,.num,td.num{font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1}
+.mono{font-family:var(--font)}
 .small{font-size:11px}
 .muted{color:var(--muted)}
 a{color:inherit}
-.wrap{max-width:1720px;margin:0 auto;padding:0 10px}
+:focus-visible{outline:2px solid var(--north);outline-offset:2px}
+.wrap{max-width:1760px;margin:0 auto;padding:0 20px}
+@media (max-width:640px){.wrap{padding:0 12px}}
 
-header{background:#0D0E10;border-bottom:1px solid var(--hair)}
-.mast{display:flex;align-items:center;justify-content:space-between;padding:8px 0;flex-wrap:wrap;gap:8px}
-.brandrow{display:flex;align-items:center;gap:10px}
-.logo{background:var(--brand);color:#fff;font-weight:700;font-size:13px;padding:4px 8px;letter-spacing:.5px}
-.logo .pro{font-size:8px;vertical-align:top;letter-spacing:.08em}
-.mast h1{font-size:17px;font-weight:700;letter-spacing:.2px}
+/* ---- masthead ---- */
+header{background:linear-gradient(180deg,#0E1015,#0B0C10);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.2)}
+.mast{display:flex;align-items:center;justify-content:space-between;padding:10px 0 8px;flex-wrap:wrap;gap:10px}
+.brandrow{display:flex;align-items:center;gap:12px}
+.logo{background:var(--brand);color:#fff;font-weight:800;font-size:13px;padding:5px 8px;letter-spacing:.5px;border-radius:var(--r2);line-height:1}
+.logo .pro{font-size:8px;vertical-align:top;letter-spacing:.08em;margin-left:1px;opacity:.9}
+.mast h1{font-size:16px;font-weight:700;letter-spacing:.1px}
 .mast .sub{color:var(--muted);font-size:11px;margin-top:1px}
 .badges{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.chip{background:var(--panel2);border:1px solid var(--hair);padding:2px 8px;font-size:11px;color:var(--muted);white-space:nowrap}
+.chip{background:var(--panel2);border:1px solid var(--hair);padding:2px 9px;font-size:11px;color:var(--muted);white-space:nowrap;border-radius:999px}
 .chip.alert{border-color:#5A2A28;color:var(--down)}
 .chip.warn{border-color:#5A4A22;color:var(--south)}
 .chip.ok{border-color:#2C4A30;color:var(--up)}
-.tabrow{display:flex;gap:2px;padding:0 0 0;align-items:flex-end}
-.wstab{background:transparent;color:var(--muted);font-size:12px;padding:6px 14px;border:none;cursor:default}
-.wstab.on{background:var(--brand);color:#fff;font-weight:700}
+.tabrow{display:flex;gap:2px;align-items:flex-end;overflow-x:auto;scrollbar-width:none;margin:0 -4px}
+.tabrow::-webkit-scrollbar{display:none}
+.wstab{background:transparent;color:var(--muted);font:inherit;font-size:12.5px;padding:8px 12px 9px;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;border-radius:var(--r2) var(--r2) 0 0}
+.wstab:hover{color:var(--ink);background:rgba(255,255,255,.03)}
+.wstab.on{color:#fff;font-weight:700;border-bottom-color:var(--brand)}
+.tabsep{width:1px;align-self:center;height:16px;background:var(--hair);margin:0 6px;flex:none}
+.wstab .new{font-size:8.5px;font-weight:700;letter-spacing:.06em;color:var(--north);border:1px solid #21405F;border-radius:999px;padding:0 5px;margin-left:5px;vertical-align:1px}
 
-.statusline{display:flex;gap:18px;flex-wrap:wrap;padding:6px 0;font-size:11px;color:var(--muted)}
-.statusline b{color:var(--ink);font-weight:400}
+/* ---- ticker tape ---- */
+.tape{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;border-top:1px solid var(--hair2);font-size:11px}
+.tape::-webkit-scrollbar{display:none}
+.tape .ti{display:flex;gap:7px;align-items:baseline;padding:6px 14px 6px 0;margin-right:14px;border-right:1px solid var(--hair2);white-space:nowrap}
+.tape .ti:last-child{border-right:none}
+.tape .tl{color:var(--muted)} .tape .tv{color:var(--ink);font-weight:600}
+.tape .stale{opacity:.55}
+
+.statusline{display:flex;gap:18px;flex-wrap:wrap;padding:10px 0 2px;font-size:11px;color:var(--muted)}
+.statusline b{color:var(--ink);font-weight:600}
 .statusline .tag{color:var(--south)}
 
-.grid{display:grid;grid-template-columns:minmax(430px,1.15fr) minmax(480px,1.5fr) minmax(340px,1fr);gap:8px;margin:8px 0;align-items:start}
-.col{display:grid;gap:8px;min-width:0}
+/* ---- page structure ---- */
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:14px 0 2px}
+.pagehead h2{font-size:20px;font-weight:700;letter-spacing:-.2px}
+.pagehead p{color:var(--muted);font-size:12px;max-width:900px;margin-top:2px}
+.section-label{display:flex;align-items:center;gap:10px;margin:20px 0 8px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.section-label::after{content:"";flex:1;height:1px;background:var(--hair2)}
+.section-label a{order:2;color:var(--link);text-decoration:none;font-size:10.5px;letter-spacing:.04em;text-transform:none;font-weight:600}
+.section-label a:hover{text-decoration:underline}
+.dgrid{display:grid;gap:12px;align-items:start}
+.dg-perf{grid-template-columns:minmax(0,1.7fr) minmax(340px,1fr)}
+.dg-books{grid-template-columns:1fr 1fr}
+.dg-intel{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr)}
+.dg-risk{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
 
-.panel{background:var(--panel);border:1px solid var(--hair)}
-.ptitle{display:flex;align-items:center;gap:8px;background:var(--bar);border-bottom:1px solid var(--hair);padding:6px 10px;font-size:12px;font-weight:700}
-.ptitle .dot{width:7px;height:7px;border-radius:50%;background:var(--up);flex:none}
-.ptitle .aux{margin-left:auto;font-weight:400;font-size:10px;color:var(--dim)}
-.pbody{padding:8px 10px}
+.grid{display:grid;grid-template-columns:minmax(430px,1.15fr) minmax(480px,1.5fr) minmax(340px,1fr);gap:12px;margin:12px 0;align-items:start}
+.col{display:grid;gap:12px;min-width:0}
+
+.panel{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.ptitle{display:flex;align-items:center;gap:8px;background:var(--bar);border-bottom:1px solid var(--hair);padding:9px 12px;font-size:12px;font-weight:700;letter-spacing:.1px;min-height:38px;flex-wrap:wrap}
+.ptitle .dot{width:6px;height:6px;border-radius:50%;background:var(--up);flex:none;box-shadow:0 0 0 3px rgba(61,189,74,.12)}
+.ptitle .aux{margin-left:auto;font-weight:400;font-size:10.5px;color:var(--dim)}
+.ptitle .aux a,.ptitle a.more{color:var(--link);text-decoration:none} .ptitle .aux a:hover{text-decoration:underline}
+.pbody{padding:10px 12px}
 .pbody.flush{padding:0}
 
-.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin:8px 0 0}
-.strip .cell{background:var(--panel);padding:8px 12px}
-.cell .k{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.cell .v{font-size:17px;margin-top:2px;font-weight:700}
-.up{color:var(--up)} .down{color:var(--down)}
+/* KPI tiles */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:var(--r);overflow:hidden;margin:12px 0 0}
+.strip.kpis{grid-template-columns:repeat(6,minmax(0,1fr))}
+.strip .cell{background:var(--panel);padding:12px 14px;min-width:0}
+.cell .k{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell .v{font-size:19px;margin-top:4px;font-weight:700;letter-spacing:-.2px;white-space:nowrap}
+.cell .s{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell .s b{color:var(--ink2);font-weight:600}
+.up{color:var(--up)} .down{color:var(--down)} .warnc{color:var(--warn)}
 
-table{width:100%;border-collapse:collapse;font-size:11.5px}
-th{color:var(--muted);font-weight:400;text-align:left;padding:4px 8px;border-bottom:1px solid var(--hair);background:var(--bar);font-size:10.5px}
-td{padding:4px 8px;border-bottom:1px solid #202126}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{color:var(--muted);font-weight:600;text-align:left;padding:7px 10px;border-bottom:1px solid var(--hair);background:var(--bar);font-size:10px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+td{padding:6px 10px;border-bottom:1px solid var(--hair2)}
 td.num,th.num{text-align:right}
 tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:var(--panel2)}
@@ -80,106 +128,148 @@ tbody tr:hover td{background:var(--panel2)}
 .stale td:first-child::after{content:" · STALE";font-size:9px;color:var(--muted)}
 .scroll{overflow-x:auto}
 
-.bookhead{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.bookhead{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--hair);flex-wrap:wrap;background:var(--bar)}
 .bookmark{width:8px;height:8px;border-radius:50%;flex:none}
-.book .north-mark{background:var(--north)} .book .south-mark{background:var(--south)}
-.bookhead h2{font-size:13px;font-weight:700}
-.bookhead .ccy{color:var(--dim);font-size:10px}
-.pm{font-size:10.5px;color:var(--dim);padding:5px 10px 0}
-.bignav{font-size:21px;font-weight:700;padding:1px 10px 0}
-.bignav .chg{font-size:12px;font-weight:400;margin-left:8px}
-.govnote{font-size:10px;color:var(--dim);padding:0 10px 6px}
-.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin:4px 0 0}
-.kv div{background:var(--panel);padding:5px 10px}
-.kv .k{font-size:10px;color:var(--muted)}
-.kv .v{font-size:12.5px;margin-top:1px}
+.book .north-mark,.north-mark{background:var(--north)} .book .south-mark,.south-mark{background:var(--south)}
+.bookhead h2{font-size:13.5px;font-weight:700}
+.bookhead .ccy{color:var(--dim);font-size:10px;border:1px solid var(--hair);border-radius:999px;padding:0 6px}
+.bookhead .more{margin-left:auto;color:var(--link);text-decoration:none;font-size:11px}
+.pm{font-size:10.5px;color:var(--dim);padding:8px 12px 0}
+.bignav{font-size:24px;font-weight:700;padding:2px 12px 0;letter-spacing:-.3px}
+.bignav .chg{font-size:12.5px;font-weight:600;margin-left:8px}
+.govnote{font-size:10px;color:var(--dim);padding:0 12px 8px}
+.kv{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin:6px 0 0}
+.kv div{background:var(--panel);padding:7px 12px;min-width:0}
+.kv .k{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.kv .v{font-size:12.5px;margin-top:1px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:10px;color:var(--muted);padding:6px 10px 0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:10.5px;color:var(--muted);padding:6px 0 2px}
 .legend span::before{content:"";display:inline-block;width:14px;height:0;border-top:2px solid;margin-right:5px;vertical-align:middle}
+.seg{display:inline-flex;border:1px solid var(--hair);border-radius:999px;overflow:hidden;margin-left:auto}
+.seg button{background:transparent;border:none;color:var(--muted);font:inherit;font-size:10.5px;padding:2px 10px;cursor:pointer}
+.seg button.on{background:var(--panel3);color:#fff;font-weight:700}
+.seg+.aux{margin-left:10px}
 
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .book-kpis{grid-template-columns:repeat(6,minmax(0,1fr))}
 .book-layout{grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr)}
 .about-one{grid-template-columns:1fr}
 .about-pipeline{grid-template-columns:minmax(0,1.5fr) minmax(320px,1fr)}
 .about-authority{grid-template-columns:minmax(320px,1fr) minmax(0,1.2fr)}
 .about-cadence{grid-template-columns:minmax(0,1.2fr) minmax(320px,1fr)}
-.diag h4{font-size:11px;font-weight:700;color:var(--ink);margin:0 0 4px}
-.roster{display:grid;grid-template-columns:1fr 1fr;gap:1px 12px;font-size:11px}
-.roster .r{display:flex;justify-content:space-between;gap:8px;padding:2.5px 0;border-bottom:1px dotted var(--hair)}
+.diag h4{font-size:11.5px;font-weight:700;color:var(--ink);margin:0 0 6px}
+.roster{display:grid;grid-template-columns:1fr 1fr;gap:1px 14px;font-size:11.5px}
+.roster .r{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px dotted var(--hair)}
 .roster .r b{font-weight:700}
+.dg-risk .grid2{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.dg-risk .roster{grid-template-columns:1fr}
+#analytics.grid2{grid-template-columns:1fr 1fr}
+
+/* mini stat lists / meters (dashboard snapshots) */
+.mstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair2);border-bottom:1px solid var(--hair)}
+.mstats>div{background:var(--panel);padding:9px 12px;min-width:0}
+.mstats .k{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.mstats .v{font-size:15px;font-weight:700;margin-top:2px;white-space:nowrap}
+.mstats .s{font-size:10.5px;color:var(--dim)}
+.lrow{display:flex;gap:10px;align-items:baseline;padding:7px 12px;border-bottom:1px solid var(--hair2);font-size:12px}
+.lrow:last-child{border-bottom:none}
+.lrow .lt{flex:1;min-width:0;color:var(--ink2)}
+.lrow .lm{color:var(--dim);font-size:10.5px;white-space:nowrap}
+.pathbar{position:relative;height:6px;background:linear-gradient(90deg,rgba(240,82,78,.35),rgba(255,255,255,.06) 50%,rgba(61,189,74,.35));border-radius:3px;min-width:80px}
+.pathbar i{position:absolute;top:-3px;width:2px;height:12px;background:var(--ink);border-radius:1px}
+.pathbar b{position:absolute;top:-3px;width:2px;height:12px;background:var(--north);opacity:.8}
+.empty{padding:16px 14px;color:var(--muted);font-size:12px;line-height:1.6}
+.empty code{font-size:11px;background:var(--panel2);border:1px solid var(--hair);padding:1px 5px;border-radius:3px;color:var(--ink2)}
+.sev{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:0 6px;border-radius:999px;border:1px solid var(--hair);color:var(--muted)}
+.sev.act{color:var(--down);border-color:#5A2A28} .sev.watch{color:var(--warn);border-color:#5A4A22} .sev.info{color:var(--north);border-color:#21405F}
+.stance-ADD{color:var(--up)} .stance-HOLD{color:var(--ink2)} .stance-TRIM{color:var(--warn)} .stance-EXIT{color:var(--down)}
 
 .chart{width:100%;height:auto;display:block}
 .chart .axl{fill:var(--dim);font-size:9.5px}
-.chart .grid{stroke:#232529;stroke-width:1}
+.chart .grid{stroke:#20232B;stroke-width:1}
 .chart .pill{font-size:9px;font-weight:700}
-.chart .vgrid{stroke:#1C1E22;stroke-width:1}
+.chart .vgrid{stroke:#191C22;stroke-width:1}
 .chart .refline{stroke:#4B5058;stroke-width:1;stroke-dasharray:3 3}
-.chart .tip{font-size:10px;font-family:Arial,Helvetica,sans-serif}
+.chart .tip{font-size:10px;font-family:var(--font)}
 .chart .hit{cursor:crosshair}
-a.rlink{color:#8EC1F0;text-decoration:none;font-size:11px} a.rlink:hover{text-decoration:underline}
+a.rlink{color:var(--link);text-decoration:none;font-size:11px} a.rlink:hover{text-decoration:underline}
 
 /* 6S Virtual Office — canvas is visual; the status and full roster remain semantic DOM. */
-.office-panel{margin:8px 0 0;overflow:hidden}
+details.office-panel>summary{list-style:none;cursor:pointer}
+details.office-panel>summary::-webkit-details-marker{display:none}
+details.office-panel>summary .chev{margin-left:6px;color:var(--dim);transition:transform .15s}
+details.office-panel[open]>summary .chev{transform:rotate(90deg)}
+.office-panel{margin:0;overflow:hidden}
 .office-bar{flex-wrap:wrap}
 .office-bar .aux{white-space:normal;text-align:right}
 .office-meta{display:grid;grid-template-columns:minmax(230px,1.1fr) repeat(3,minmax(190px,1fr));gap:1px;background:var(--hair);border-bottom:1px solid var(--hair)}
-.office-meta>div{background:var(--panel);padding:8px 10px;min-width:0}
+.office-meta>div{background:var(--panel);padding:8px 12px;min-width:0}
 .office-meta .k{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
 .office-meta .v{font-size:11.5px;margin-top:2px;color:var(--ink);overflow-wrap:anywhere}
-.office-run-status{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid var(--hair);color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.05em;vertical-align:1px}
+.office-run-status{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid var(--hair);color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.05em;vertical-align:1px;border-radius:3px}
 .office-run-status.running{border-color:var(--north);color:var(--north)}
 .office-run-status.complete{border-color:var(--up);color:var(--up)}
 .office-run-status.degraded,.office-run-status.failed,.office-run-status.blocked{border-color:var(--down);color:var(--down)}
 .office-run-status.last-seen{border-color:var(--muted);color:var(--muted)}
 .office-stage{position:relative;background:var(--bg);overflow:auto;scrollbar-color:var(--hair) var(--bar)}
-.office-canvas{display:block;width:100%;height:auto;min-width:920px;aspect-ratio:5/2;image-rendering:pixelated;image-rendering:crisp-edges}
+.office-canvas{display:block;width:100%;height:auto;min-width:920px;image-rendering:pixelated;image-rendering:crisp-edges;aspect-ratio:1440/896}
 .office-loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:11px;pointer-events:none;background:var(--bg)}
 .office-loading[hidden]{display:none}
-.office-workflow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:7px 10px;border-top:1px solid var(--hair);color:var(--muted);font-size:10.5px}
+.office-workflow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid var(--hair);color:var(--muted);font-size:10.5px}
 .office-workflow b{color:var(--ink)}
 .office-workflow .arrow{color:var(--dim)}
 .office-handoff{margin-left:auto;color:var(--dim)}
 .office-handoff.active{color:var(--north)}
-.office-rhythm{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:6px 10px;border-top:1px solid var(--hair);color:var(--muted);font-size:10px}
+.office-rhythm{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:7px 12px;border-top:1px solid var(--hair);color:var(--muted);font-size:10px}
 .office-rhythm b{color:var(--ink)}
-.office-rhythm .hub{padding:1px 5px;border:1px solid var(--hair);color:var(--ink)}
+.office-rhythm .hub{padding:1px 6px;border:1px solid var(--hair);color:var(--ink);border-radius:3px}
 .office-rhythm .note{margin-left:auto;color:var(--dim)}
 .office-access{border-top:1px solid var(--hair)}
-.office-access summary{cursor:pointer;color:var(--muted);padding:6px 10px;font-size:10.5px;list-style-position:inside}
+.office-access summary{cursor:pointer;color:var(--muted);padding:7px 12px;font-size:10.5px;list-style-position:inside}
 .office-access summary:hover{color:var(--ink)}
 .office-agent-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--hair);list-style:none;padding:1px 0 0}
-.office-agent-list li{background:var(--panel);padding:7px 10px;min-width:0}
+.office-agent-list li{background:var(--panel);padding:7px 12px;min-width:0}
 .office-agent-list b{display:block;color:var(--ink);font-size:11px}
 .office-agent-list span{display:block;color:var(--muted);font-size:10px;overflow-wrap:anywhere}
-.office-help{position:absolute;right:8px;bottom:7px;padding:2px 6px;background:var(--bg);border:1px solid var(--hair);color:var(--muted);font-size:9px;pointer-events:none}
+.office-help{position:absolute;right:8px;bottom:7px;padding:2px 6px;background:var(--bg);border:1px solid var(--hair);color:var(--muted);font-size:9px;pointer-events:none;border-radius:3px}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-.tabs{display:flex;gap:0;border-bottom:2px solid var(--hair);margin:2px 0 0;flex-wrap:wrap}
-.tab{border:none;background:transparent;padding:6px 12px;font-size:11.5px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px}
+/* desk feed */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--hair);margin:0;flex-wrap:wrap;background:var(--bar);padding:0 6px}
+.tab{border:none;background:transparent;padding:8px 10px;font:inherit;font-size:11.5px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab:hover{color:var(--ink)}
 .tab.on{color:#fff;border-bottom-color:var(--brand);font-weight:700}
-.feed{display:grid;gap:0;max-height:900px;overflow-y:auto}
-.item{border-bottom:1px solid #202126;padding:8px 10px}
+.feed{display:grid;gap:0;max-height:760px;overflow-y:auto}
+.item{border-bottom:1px solid var(--hair2);padding:10px 12px}
 .item .meta{font-size:10.5px;color:var(--muted);margin-bottom:4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .item .who{color:var(--ink);font-weight:700}
-.item .body{font-size:11.5px;color:#C9CED4}
-.item .body h4{font-size:11.5px;margin:6px 0 2px;color:var(--ink)}
+.item .body{font-size:12px;color:var(--ink2)}
+.item .body h4{font-size:12px;margin:8px 0 2px;color:var(--ink)}
 .item .body p{margin:4px 0}
 .item .body ul{margin:4px 0 4px 16px}
-.item .body code{font-size:10.5px;background:var(--panel2);padding:0 4px;border:1px solid var(--hair)}
+.item .body code{font-size:10.5px;background:var(--panel2);padding:0 4px;border:1px solid var(--hair);border-radius:3px}
 .item .body strong{color:var(--ink)}
 .dotN{color:var(--north)} .dotS{color:var(--south)}
-.tag{background:var(--panel2);border:1px solid var(--hair);padding:0 6px;font-size:10px;color:var(--muted)}
-footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px solid var(--hair);margin-top:8px}
+.item .body.clamp{max-height:8.6em;overflow:hidden;position:relative;cursor:pointer}
+.item .body.clamp::after{content:"click to expand";position:absolute;left:0;right:0;bottom:0;height:2.6em;display:flex;align-items:flex-end;justify-content:flex-end;font-size:10px;color:var(--link);background:linear-gradient(transparent,var(--panel) 70%)}
+.item .body.clamp.open{max-height:none}.item .body.clamp.open::after{display:none}
+.tag{background:var(--panel2);border:1px solid var(--hair);padding:0 7px;font-size:10px;color:var(--muted);border-radius:999px;white-space:nowrap}
+footer{color:var(--dim);font-size:10.5px;padding:18px 0 34px;border-top:1px solid var(--hair);margin-top:24px;line-height:1.7}
+@media (max-width:1400px){
+  .dg-intel{grid-template-columns:1fr 1fr}.dg-intel>:last-child{grid-column:1/-1}
+  .strip.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
 @media (max-width:1300px){
   .grid{grid-template-columns:1fr 1fr}
   .grid .col:last-child{grid-column:1/-1}
   .office-meta{grid-template-columns:1fr 1fr}
   .book-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+@media (max-width:1060px){.dg-perf,.dg-books,.dg-risk{grid-template-columns:1fr}}
 @media (max-width:960px){
-  .grid{grid-template-columns:1fr}
+  .grid,.dg-intel{grid-template-columns:1fr}.dg-intel>:last-child{grid-column:auto}
   .strip{grid-template-columns:repeat(2,1fr)}
+  .strip.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
   .book-layout,.about-pipeline,.about-authority,.about-cadence{grid-template-columns:1fr}
   .book-layout>.col:last-child,.about-pipeline>.col:last-child,.about-authority>.col:last-child,.about-cadence>.col:last-child{grid-column:auto}
   .grid2,.roster{grid-template-columns:1fr}
@@ -188,58 +278,75 @@ footer{color:var(--dim);font-size:10.5px;padding:14px 0 30px;border-top:1px soli
   .office-canvas{width:920px}
   .office-help{position:sticky;display:inline-block;float:right;margin:-25px 7px 7px 0}
   .office-rhythm .note{margin-left:0;flex-basis:100%}
+  .kv{grid-template-columns:1fr 1fr}
+  header{position:static}
+}
+@media (max-width:640px){
+  .pagehead p{display:none}.pagehead h2{font-size:17px}
+  #flow,#asof{display:none}
+  .mast{padding:8px 0 6px}.mast .sub{display:none}
 }
 @media (max-width:560px){
   .book-kpis,.strip{grid-template-columns:1fr}
-  .wstab{padding:6px 9px}
+  .strip.kpis{grid-template-columns:1fr 1fr}
+  .wstab{padding:8px 9px}
+  .mstats{grid-template-columns:1fr 1fr}
 }
 
-/* ---- Research library (V4) ---- */
-.rnav{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0 2px}
-.rnav a{color:var(--muted);text-decoration:none;font-size:11.5px;padding:5px 10px;border:1px solid var(--hair);background:var(--panel)}
-.rnav a:hover{color:var(--ink)} .rnav a.on{color:#fff;border-color:var(--brand);background:#2A1416;font-weight:700}
-.rintro{padding:10px 2px 2px} .rintro h2{font-size:17px;margin:0 0 4px} .rintro p{color:var(--muted);max-width:980px;margin:0}
-.rstrip{margin-top:8px} .rpad{padding:14px 4px}
-.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0;align-items:start}
-.rgrid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:8px 0;align-items:start}
-.rgrid .col,.rgrid2 .col{display:grid;gap:8px;min-width:0}
-.rpanel{margin-top:8px} .rgrid .rpanel,.rgrid2 .rpanel{margin-top:0}
-.rhead{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
-.rhead h2{font-size:17px;margin:0 0 5px} .rhead2{margin:0 0 8px}
+/* ---- Research library (V4) — restyled on the V5.X tokens ---- */
+.rnav{display:flex;gap:4px;flex-wrap:wrap;margin:14px 0 2px}
+.rnav a{color:var(--muted);text-decoration:none;font-size:12px;padding:6px 12px;border:1px solid var(--hair);background:var(--panel);border-radius:999px}
+.rnav a:hover{color:var(--ink);border-color:#333845} .rnav a.on{color:#fff;border-color:var(--brand);background:#2A1416;font-weight:700}
+.rintro{padding:12px 2px 2px} .rintro h2{font-size:20px;margin:0 0 4px;letter-spacing:-.2px} .rintro p{color:var(--muted);max-width:980px;margin:0}
+.rstrip{margin-top:10px} .rpad{padding:14px 4px}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0;align-items:start}
+.rgrid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0;align-items:start}
+.rgrid .col,.rgrid2 .col{display:grid;gap:12px;min-width:0}
+.rpanel{margin-top:12px} .rgrid .rpanel,.rgrid2 .rpanel{margin-top:0}
+.rhead{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.rhead h2{font-size:18px;margin:0 0 5px} .rhead2{margin:0 0 8px}
 .rmeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
-.rcrumb{font-size:11px;margin:8px 2px 0} .rcrumb a,.rpanel a,.rlist a{color:#8EC1F0;text-decoration:none} .rcrumb a:hover,.rpanel a:hover{text-decoration:underline}
-.rchip{display:inline-block;font-size:10px;padding:1px 6px;border:1px solid var(--hair);white-space:nowrap}
+.rcrumb{font-size:11px;margin:10px 2px 0} .rcrumb a,.rpanel a,.rlist a{color:var(--link);text-decoration:none} .rcrumb a:hover,.rpanel a:hover{text-decoration:underline}
+.rchip{display:inline-block;font-size:10px;padding:1px 7px;border:1px solid var(--hair);white-space:nowrap;border-radius:999px}
 .rchip.north{color:var(--north);border-color:#21405F} .rchip.south{color:var(--south);border-color:#5A4A22}
-.vbadge{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border:1px solid;white-space:nowrap;letter-spacing:.02em}
+.vbadge{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border:1px solid;white-space:nowrap;letter-spacing:.02em;border-radius:3px}
 .v-pass{color:var(--up);border-color:#2C4A30} .v-reduced{color:#9BD76C;border-color:#38502A}
 .v-kill{color:var(--down);border-color:#5A2A28} .v-revise{color:var(--south);border-color:#5A4A22} .v-pending{color:var(--muted);border-color:var(--hair)}
 .stance{font-size:10px;font-weight:700} .s-favor{color:var(--up)} .s-avoid{color:var(--down)} .s-neutral{color:var(--muted)}
-.rfilters{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin:0 0 8px}
-.rfilters label{display:flex;flex-direction:column;gap:2px;font-size:10px;color:var(--muted)} .rfilters label.grow{flex:1;min-width:180px}
-.rfilters select,.rfilters input{background:var(--panel2);color:var(--ink);border:1px solid var(--hair);padding:4px 6px;font-size:11.5px}
-.rbtn{background:var(--panel2);color:var(--muted);border:1px solid var(--hair);padding:3px 9px;font-size:11px;cursor:pointer}
+.rfilters{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin:0 0 10px}
+.rfilters label{display:flex;flex-direction:column;gap:3px;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .rfilters label.grow{flex:1;min-width:180px}
+.rfilters select,.rfilters input{background:var(--panel3);color:var(--ink);border:1px solid var(--hair);padding:5px 8px;font:inherit;font-size:12px;border-radius:var(--r2)}
+.rbtn{background:var(--panel2);color:var(--muted);border:1px solid var(--hair);padding:4px 10px;font:inherit;font-size:11px;cursor:pointer;border-radius:var(--r2)}
 .rbtn.on,.rbtn:hover{color:#fff;border-color:var(--brand)}
-.rtable{width:100%;border-collapse:collapse;font-size:11.5px} .rtable td,.rtable th{padding:4px 7px;border-bottom:1px solid #202126;vertical-align:top}
+.rtable{width:100%;border-collapse:collapse;font-size:12px} .rtable td,.rtable th{padding:6px 9px;border-bottom:1px solid var(--hair2);vertical-align:top}
 tr.clickable{cursor:pointer}
-.kv3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin:8px 0 2px}
-.kv3>div{background:var(--panel);padding:6px 9px} .kv3 .k{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .kv3 .v{font-size:12px;margin-top:2px}
-.rbody{font-size:12px;color:#C9CED4;line-height:1.55;overflow-wrap:anywhere}
-.rbody p{margin:5px 0} .rbody ul,.rbody ol{margin:5px 0 5px 18px} .rbody li{margin:2px 0}
-.rbody h4,.rbody h5,.rbody h6{color:var(--ink);font-size:12px;margin:9px 0 3px}
-.rbody strong{color:var(--ink)} .rbody code{font-size:11px;background:var(--panel2);padding:0 4px;border:1px solid var(--hair)}
+.kv3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin:8px 0 2px;border-radius:var(--r2);overflow:hidden}
+.kv3>div{background:var(--panel);padding:7px 10px} .kv3 .k{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .kv3 .v{font-size:12.5px;margin-top:2px}
+.rbody{font-size:12.5px;color:var(--ink2);line-height:1.62;overflow-wrap:anywhere}
+.rbody p{margin:6px 0} .rbody ul,.rbody ol{margin:6px 0 6px 18px} .rbody li{margin:3px 0}
+.rbody h3,.rbody h4,.rbody h5,.rbody h6{color:var(--ink);font-size:12.5px;margin:12px 0 4px}
+.rbody h2{color:var(--ink);font-size:14px;margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--hair2)}
+.rbody strong{color:var(--ink)} .rbody code{font-size:11px;background:var(--panel2);padding:0 4px;border:1px solid var(--hair);border-radius:3px}
 .rbody blockquote{border-left:2px solid var(--hair);margin:6px 0;padding:2px 10px;color:var(--muted)}
-.rbody pre{white-space:pre-wrap;background:var(--panel2);border:1px solid var(--hair);padding:6px;font-size:11px}
-.rbody hr{border:none;border-top:1px solid var(--hair);margin:8px 0}
-.mdt{border-collapse:collapse;font-size:11px;margin:6px 0} .mdt td,.mdt th{border:1px solid #26282D;padding:3px 6px;text-align:left}
-.mdt th{background:var(--bar);color:var(--muted);font-weight:400}
-details.rsec{border-bottom:1px solid #202126;padding:6px 0} details.rsec>summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--ink);padding:3px 0}
+.rbody pre{white-space:pre-wrap;background:var(--panel2);border:1px solid var(--hair);padding:8px;font-size:11px;border-radius:var(--r2)}
+.rbody hr{border:none;border-top:1px solid var(--hair);margin:10px 0}
+.mdt{border-collapse:collapse;font-size:11.5px;margin:6px 0} .mdt td,.mdt th{border:1px solid #262A33;padding:4px 7px;text-align:left}
+.mdt th{background:var(--bar);color:var(--muted);font-weight:600}
+details.rsec{border-bottom:1px solid var(--hair2);padding:7px 0} details.rsec>summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--ink);padding:3px 0}
 details.rsec>summary:hover{color:#fff}
 .rh3{font-size:13px;margin:12px 0 4px;color:var(--ink)} .rh4{font-size:12px;margin:10px 0 4px}
 .rlist{margin:4px 0 4px 18px;font-size:12px} .rlist li{margin:4px 0}
 .rsteps{margin:4px 0 4px 18px;font-size:12px} .rsteps li{margin:7px 0} .rsteps .small{color:var(--muted)}
 .rtimeline{list-style:none;margin:0;padding:0;font-size:11.5px} .rtimeline li{padding:3px 0 3px 12px;border-left:2px solid var(--hair);margin-left:4px}
+.rsplit{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:12px;margin:12px 0;align-items:start}
+.rsplit .lst{max-height:72vh;overflow-y:auto}
+.rsplit .lst a{display:block;padding:9px 12px;border-bottom:1px solid var(--hair2);text-decoration:none;color:var(--ink2)}
+.rsplit .lst a:hover{background:var(--panel2)} .rsplit .lst a.on{background:var(--panel2);box-shadow:inset 2px 0 0 var(--brand);color:#fff}
+.rsplit .lst .t{font-weight:700;font-size:12px} .rsplit .lst .m{font-size:10.5px;color:var(--dim)}
 @media (max-width:1100px){.rgrid{grid-template-columns:1fr 1fr}.rgrid .col:last-child{grid-column:1/-1}}
+@media (max-width:860px){.rsplit{grid-template-columns:1fr}.rsplit .lst{max-height:none}}
 @media (max-width:760px){.rgrid,.rgrid2{grid-template-columns:1fr}.rgrid .col:last-child{grid-column:auto}.kv3{grid-template-columns:1fr}}
+@media print{header{position:static}.tabrow,.tape,details.office-panel{display:none}body{background:#fff;color:#000}}
 </style>
 </head>
 <body>
@@ -248,7 +355,7 @@ details.rsec>summary:hover{color:#fff}
     <div class="brandrow">
       <span class="logo">6S<span class="pro">CAP</span></span>
       <div>
-        <h1>Six South — Fund Monitor</h1>
+        <h1>Six South Capital</h1>
         <div class="sub" id="sub">paper · loading…</div>
       </div>
     </div>
@@ -259,32 +366,41 @@ details.rsec>summary:hover{color:#fff}
       <span class="chip" id="asof">—</span>
     </div>
   </div>
-  <div class="tabrow" aria-label="Dashboard sections">
+  <nav class="tabrow" aria-label="Dashboard sections">
+    <button class="wstab" id="ws-monitor" onclick="go('dashboard')">Dashboard</button>
+    <span class="tabsep" aria-hidden="true"></span>
     <button class="wstab" id="ws-south" onclick="go('south')">South Book</button>
-    <button class="wstab" id="ws-coverage" onclick="go('coverage')">IDX Coverage</button>
-    <button class="wstab" id="ws-monitor" onclick="go('monitor')">Fund Monitor</button>
     <button class="wstab" id="ws-north" onclick="go('north')">North Book</button>
+    <span class="tabsep" aria-hidden="true"></span>
+    <button class="wstab" id="ws-coverage" onclick="go('coverage')">IDX Coverage</button>
     <button class="wstab" id="ws-research" onclick="go('research')">Research</button>
+    <button class="wstab" id="ws-market" onclick="go('market')">Market Division<span class="new">NEW</span></button>
+    <button class="wstab" id="ws-learning" onclick="go('learning')">Learning Curve<span class="new">NEW</span></button>
+    <span class="tabsep" aria-hidden="true"></span>
     <button class="wstab" id="ws-about" onclick="go('about')">About</button>
-  </div>
+  </nav>
+  <div class="tape" id="tape" aria-label="Market tape"></div>
 </div></header>
 
 <div class="wrap">
   <div class="statusline" id="banners"></div>
 
   <div id="view-monitor">
-  <div class="strip" id="strip"></div>
-
-  <section class="panel office-panel" aria-labelledby="officeHeading">
-    <div class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="aux">11 fictional agents · working at assigned desks between exact meetings</span></div>
+  <div class="pagehead">
+    <div><h2>Fund dashboard</h2>
+      <p>The whole fund on one page — consolidated NAV, both books, what the desk is forecasting and how well it has forecast so far. Every panel opens into its own workspace.</p></div>
+  </div>
+  <div class="section-label">6S Virtual Office · live desk</div>
+  <details class="panel office-panel" id="officeDetails" open aria-labelledby="officeHeading">
+    <summary class="ptitle office-bar"><span class="dot"></span><span id="officeHeading">6S Virtual Office</span><span class="chev" aria-hidden="true">▸</span><span class="aux"><span id="officeCount">26</span> fictional agents · core desk + IDX Coverage Floor · click to open or close</span></summary>
     <div class="office-meta">
-      <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Illustrative working floor · 11 at assigned desks</span><span class="office-run-status" id="officeStatus">—</span></div></div>
+      <div><div class="k">Office activity</div><div class="v"><span id="officePhase">Illustrative working floor · 26 at assigned desks</span><span class="office-run-status" id="officeStatus">—</span></div></div>
       <div><div class="k">Meeting room</div><div class="v" id="officeMeetingStatus" role="status" aria-live="polite">Available · no meeting in progress</div></div>
       <div><div class="k">Next scheduled session</div><div class="v mono" id="officeNext">—</div></div>
       <div><div class="k">Market tape</div><div class="v" id="officeMarketMeta">Waiting for published market data</div></div>
     </div>
     <div class="office-stage" id="office">
-      <canvas class="office-canvas" id="officeCanvas" width="1440" height="576" aria-hidden="true"></canvas>
+      <canvas class="office-canvas" id="officeCanvas" width="1440" height="896" aria-hidden="true"></canvas>
       <div class="office-loading" id="officeLoading">Loading the 6S Virtual Office…</div>
       <span class="office-help">Working animation is illustrative · meeting and run provenance stays explicit</span>
       <p class="sr-only" id="officeMarketA11y" aria-live="polite"></p>
@@ -293,76 +409,98 @@ details.rsec>summary:hover{color:#fff}
       <b>Research workflow</b><span>Analyst</span><span class="arrow">→</span><span>Bear review</span><span class="arrow">→</span><span>Analyst revision</span><span class="arrow">→</span><span>Judge</span><span class="arrow">→</span><span>Risk</span><span class="arrow">→</span><span>PM</span><span class="arrow">→</span><span>Ops / fills</span><span class="arrow">→</span><span>Postmortem</span><span class="office-handoff" id="officeHandoff" aria-live="polite">No active desk handoff</span>
     </div>
     <div class="office-rhythm" aria-label="Market coverage clocks and always-working office behavior">
-      <b>Coverage clocks</b><span class="hub">North · New York</span><span class="hub">Macro · London</span><span class="hub">South + control · Jakarta</span><span class="note">Local market time only · all 11 avatars work at assigned desks between exact meetings</span>
+      <b>Coverage clocks</b><span class="hub">North · New York</span><span class="hub">Macro · London</span><span class="hub">South + control · Jakarta</span><span class="note">Local market time only · core desk joins exact meetings · coverage floor stays at its sector desks</span>
     </div>
     <details class="office-access">
       <summary id="officeRosterSummary">Accessible desk roster — loading</summary>
       <ol class="office-agent-list" id="officeAgentList"></ol>
     </details>
-  </section>
+  </details>
+  <div class="strip kpis" id="strip"></div>
+  <div class="panel" style="margin-top:12px"><div class="ptitle"><span class="dot"></span>Today at Six South<span class="aux">what changed · computed from the latest published feeds · press <kbd>/</kbd> to search anything</span></div><div id="briefBody"><div class="empty">Loading…</div></div></div>
 
-  <div class="grid">
-    <div class="col">
-      <div class="panel">
-        <div class="ptitle"><span class="dot"></span>Books — positions &amp; NAV</div>
-        <div class="pbody flush">
-          <section class="book south" id="bookI"></section>
-          <section class="book north" id="bookG" style="border-top:1px solid var(--hair)"></section>
-        </div>
+  <div class="section-label">Performance<a href="#south">South Book →</a><a href="#north">North Book →</a></div>
+  <div class="dgrid dg-perf">
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span><span id="navTitle">Consolidated NAV</span>
+        <span class="seg" role="group" aria-label="Consolidated NAV currency"><button id="ccyIDR" class="on" onclick="setCcy('IDR')">IDR</button><button id="ccyUSD" onclick="setCcy('USD')">USD</button></span>
+        <span class="aux" id="anAux"></span></div>
+      <div class="pbody">
+        <div class="legend"><span style="color:var(--north)">Total NAV · official paired marks</span></div>
+        <div id="chTotal" class="muted small">—</div>
       </div>
     </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>Learning curve<span class="aux"><a href="#learning">open ledger →</a></span></div>
+      <div class="pbody flush" id="learnSnap"><div class="empty">Loading the forecast ledger…</div></div>
+    </div>
+  </div>
 
-    <div class="col">
-      <div class="panel">
-        <div class="ptitle"><span class="dot"></span>Consolidated NAV (USD)<span class="aux" id="anAux"></span></div>
-        <div class="pbody">
-          <div class="legend"><span style="color:var(--north)">Total NAV</span></div>
-          <div id="chTotal" class="muted small">—</div>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="ptitle"><span class="dot"></span>Portfolio analytics<span class="aux" id="anNote"></span></div>
-        <div class="pbody"><div class="grid2" id="analytics">—</div></div>
-      </div>
-      <div class="panel">
-        <div class="ptitle"><span class="dot"></span>Desk &amp; diagnostics</div>
-        <div class="pbody">
-          <div class="grid2">
-            <div class="diag"><h4>Roster</h4><div class="roster" id="roster"></div></div>
-            <div class="diag">
-              <h4>Sleeve hit rates</h4><div id="sleeves" class="small muted">—</div>
-            </div>
-          </div>
-        </div>
+  <div class="section-label">Books</div>
+  <div class="dgrid dg-books">
+    <div class="panel"><section class="book south" id="bookI"></section></div>
+    <div class="panel"><section class="book north" id="bookG"></section></div>
+  </div>
+
+  <div class="section-label">Intelligence<a href="#market">Market Division →</a></div>
+  <div class="dgrid dg-intel">
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>6S House View<span class="aux"><a href="#learning/house">method →</a></span></div>
+      <div class="pbody flush" id="houseSnap"><div class="empty">Loading…</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>Market Division<span class="aux"><a href="#market">reports →</a></span></div>
+      <div class="pbody flush" id="marketSnap"><div class="empty">Loading…</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>Desk feed</div>
+      <div class="pbody flush">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Desk feed types"></div>
+        <div class="feed" id="feed" role="tabpanel" aria-live="polite" style="max-height:520px"></div>
       </div>
     </div>
+  </div>
 
-    <div class="col">
-      <div class="panel">
-        <div class="ptitle"><span class="dot"></span>Desk feed</div>
-        <div class="pbody flush">
-          <div class="tabs" id="tabs" role="tablist" aria-label="Desk feed types"></div>
-          <div class="feed" id="feed" role="tabpanel" aria-live="polite"></div>
+  <div class="section-label">Risk &amp; analytics</div>
+  <div class="dgrid dg-risk">
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>Portfolio analytics<span class="aux" id="anNote"></span></div>
+      <div class="pbody"><div class="grid2" id="analytics">—</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot"></span>Desk &amp; diagnostics</div>
+      <div class="pbody">
+        <div class="grid2">
+          <div class="diag"><h4>Roster</h4><div class="roster" id="roster"></div></div>
+          <div class="diag"><h4>Sleeve hit rates</h4><div id="sleeves" class="small muted">—</div></div>
         </div>
       </div>
     </div>
   </div>
+
   </div>
 
   <div id="view-book" style="display:none"></div>
   <div id="view-research" style="display:none"></div>
   <div id="view-coverage" style="display:none"></div>
+  <div id="view-learning" style="display:none"></div>
+  <div id="view-market" style="display:none"></div>
   <div id="view-structure" style="display:none"></div>
 
   <footer>Autonomous paper fund — Six South Capital. Positions are simulated; nothing here is
     investment advice. Prices via public feeds; STALE marks data held at its last good observation.
     ^JKSE is a price index (South Book relative return is dividend-proxied in the engine).
+    Superinvestor data are 13F filings (US long equity, up to 45 days stale); memo digests are AI summaries of public letters — read the originals.
     All desk personas are fictional characters played by AI agents — any resemblance to real persons is coincidental.</footer>
 </div>
 
-<script src="office-floor.js?v=20260719-public-truth-v6"></script>
-<script src="research.js?v=20261105-v54"></script>
-<script src="coverage.js?v=20261027-v5-2-konglo-b"></script>
+<script src="office-floor.js?v=20261105-v5x-floor2"></script>
+<script src="a4.js?v=20261105-v5x2"></script>
+<script src="research.js?v=20261107-v5x-v54b"></script>
+<script src="coverage.js?v=20261105-v5x2"></script>
+<script src="learning.js?v=20261105-v5x"></script>
+<script src="market.js?v=20261105-v5x"></script>
+<script src="insight.js?v=20261105-v5x2"></script>
 <script>
 "use strict";
 // ---- token: header only; strip from URL after bootstrap (findings state-data-20) ----
@@ -386,6 +524,14 @@ const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt
 const fmt=(x,d=2)=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
 const fmt0=x=>x==null||x===''?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:0});
 const pct=x=>x==null?'—':`${x>0?'+':''}${fmt(x)}%`;
+// currency-aware money: every amount on the page names its currency (V5.X fix: no unlabeled IDR in a USD panel)
+const CCY_SYM={IDR:'Rp',USD:'$'};
+const money=(v,ccy,d)=>!validNumber(v)?'—':(Number(v)<0?'−':'')+(CCY_SYM[ccy]||(ccy?ccy+' ':''))+fmt(Math.abs(Number(v)),d==null?(ccy==='IDR'?0:2):d);
+const moneyC=(v,ccy)=>{if(!validNumber(v))return'—';const a=Math.abs(Number(v)),sg=Number(v)<0?'−':'',sym=CCY_SYM[ccy]||'';
+  if(ccy==='IDR')return a>=1e12?`${sg}${sym}${fmt(a/1e12,2)}tn`:a>=1e9?`${sg}${sym}${fmt(a/1e9,2)}bn`:a>=1e6?`${sg}${sym}${fmt(a/1e6,1)}m`:`${sg}${sym}${fmt0(a)}`;
+  return a>=1e9?`${sg}${sym}${fmt(a/1e9,2)}B`:a>=1e6?`${sg}${sym}${fmt(a/1e6,2)}M`:`${sg}${sym}${fmt0(a)}`;};
+const pxFmt=(v,ccy)=>!validNumber(v)?'—':fmt(Number(v),ccy==='IDR'?0:2);
+const bookCcy=b=>(S&&S.books&&S.books[b]&&S.books[b].ccy)||(b==='INDO'?'IDR':b==='GLOBAL'?'USD':'');
 const cls=x=>x==null?'':(x>=0?'up':'down');
 const validNumber=x=>x!==null&&x!==''&&Number.isFinite(Number(x));
 const parseTime=value=>{const ms=Date.parse(value||'');return Number.isFinite(ms)?ms:null;};
@@ -485,10 +631,11 @@ function chart(dates,datasets,o){
   }else{
     const labels=[{x:padL,t:shortDate(xmin),a:'start'},{x:padL+iw,t:shortDate(xmax),a:'end'}];
     const f=new Date(xmin);let m=Date.UTC(f.getUTCFullYear(),f.getUTCMonth()+1,1);
+    const months=Math.max(1,Math.round(xspan/2.63e9)),mstep=months>40?12:months>20?6:months>10?3:1;
     while(m<xmax){const x=padL+((m-xmin)/xspan)*iw;
       gx+=`<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${padT+ih}" class="vgrid"/>`;
       const md=new Date(m);
-      if(x-padL>36&&padL+iw-x>36)labels.push({x,t:md.getUTCMonth()===0?`Jan ${md.getUTCFullYear()}`:MONTHS[md.getUTCMonth()],a:'middle'});
+      if(md.getUTCMonth()%mstep===0&&x-padL>36&&padL+iw-x>36)labels.push({x,t:md.getUTCMonth()===0?`Jan ${md.getUTCFullYear()}`:MONTHS[md.getUTCMonth()],a:'middle'});
       const d=new Date(m);m=Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,1);}
     gx+=labels.map(l=>`<text x="${l.x.toFixed(1)}" y="${Hh-6}" text-anchor="${l.a}" class="axl">${esc(l.t)}</text>`).join('');
   }
@@ -525,7 +672,7 @@ if(typeof document!=='undefined'&&typeof document.addEventListener==='function')
   document.addEventListener('pointerdown',chartReadout,{passive:true});
 }
 
-let S,N,L,SL,RO,AN,ST,OS,MT,H={},freshnessTimer=null,bootTimer=null,bootGeneration=0;
+let S,N,L,SL,RO,AN,ST,OS,MT,FL=null,MR=null,SI=null,MM=null,H={},freshnessTimer=null,bootTimer=null,bootGeneration=0;
 async function boot(){
   const generation=++bootGeneration;let completed=false;if(bootTimer){clearTimeout(bootTimer);bootTimer=null;}
   try{
@@ -536,9 +683,10 @@ async function boot(){
     if(!summaryReady(S)){S=null;document.getElementById('sub').textContent='dashboard data incomplete — retrying automatically';return;}
     N=asRecord(N);L=asRecord(L);SL=asRecord(SL);RO=asRecord(RO);AN=asRecord(AN);
     ST=asRecord(ST);OS=asRecord(OS);MT=asRecord(MT);
-    renderTop(); renderBanners(); renderStrip();
+    renderTop(); renderBanners(); renderTape(); renderStrip();
     renderBook('GLOBAL','bookG'); renderBook('INDO','bookI');
     renderTotal(); renderAnalytics(); renderDiag(); renderOffice();
+    loadIntel(generation);
     if(!curTab)curTab='reports'; tabs(curTab);
     route();
     if(!freshnessTimer)freshnessTimer=setInterval(()=>{if(S)renderBanners();},60000);
@@ -553,18 +701,18 @@ async function boot(){
   }
 }
 
-// ---- workspace routing (V5 South first: South Book / IDX Coverage / Fund Monitor / North Book) ----
+// ---- workspace routing (V5.X: Dashboard first, then books, research, market division, learning curve) ----
 const BOOK_OF={north:'GLOBAL',south:'INDO'};
 let activeWorkspace=null,bookViewGeneration=0;
 function go(v){ if(location.hash!=='#'+v){location.hash=v;} else route(); }
-let lastResearchPath=null,lastCoveragePath=null;
+let lastResearchPath=null,lastCoveragePath=null;const SUBPATH={learning:null,market:null};
 function route(){
-  let h=(location.hash||'#south').slice(1);
+  let h=(location.hash||'#dashboard').slice(1);
   if(h==='structure')h='about';        // legacy links
   const top=h.split('/')[0];
-  const cur=(BOOK_OF[top]||top==='about'||top==='research'||top==='coverage')?top:'monitor';
+  const cur=(BOOK_OF[top]||['about','research','coverage','learning','market'].includes(top))?top:'monitor';
   const previousWorkspace=activeWorkspace;activeWorkspace=cur;const viewGeneration=++bookViewGeneration;
-  ['south','coverage','monitor','north','research','about'].forEach(k=>{
+  ['south','coverage','monitor','north','research','about','learning','market'].forEach(k=>{
     const b=document.getElementById('ws-'+k); if(!b)return;
     b.className='wstab'+(k===cur?' on':'');
     if(k===cur)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
@@ -574,6 +722,14 @@ function route(){
   document.getElementById('view-structure').style.display=cur==='about'?'':'none';
   document.getElementById('view-research').style.display=cur==='research'?'':'none';
   document.getElementById('view-coverage').style.display=cur==='coverage'?'':'none';
+  document.getElementById('view-learning').style.display=cur==='learning'?'':'none';
+  document.getElementById('view-market').style.display=cur==='market'?'':'none';
+  for(const [key,mod] of [['learning','SixSouthLearning'],['market','SixSouthMarket']]){
+    if(cur===key&&window[mod]){const sub=h.slice(key.length).replace(/^\//,'');
+      if(sub!==SUBPATH[key]||previousWorkspace!==key){SUBPATH[key]=sub;window[mod].render(sub);}}
+    else if(cur!==key)SUBPATH[key]=null;
+  }
+  if(previousWorkspace!==cur&&typeof window.scrollTo==='function')window.scrollTo(0,0);
   if(cur==='coverage'&&window.SixSouthCoverage){
     const sub=h.slice('coverage'.length).replace(/^\//,'');
     if(sub!==lastCoveragePath||previousWorkspace!=='coverage'){lastCoveragePath=sub;window.SixSouthCoverage.render(sub);}
@@ -586,9 +742,11 @@ function route(){
   if(BOOK_OF[cur]&&S)renderBookView(BOOK_OF[cur],viewGeneration);
   if(cur==='about')renderStructureView();
   if(cur==='monitor'&&previousWorkspace&&previousWorkspace!=='monitor'&&curTab)tabs(curTab);
-  if(window.SixSouthOffice&&window.SixSouthOffice.setVisible)window.SixSouthOffice.setVisible(monitorVisible);
+  const officeOpen=!!(document.getElementById('officeDetails')||{}).open;
+  if(window.SixSouthOffice&&window.SixSouthOffice.setVisible)window.SixSouthOffice.setVisible(monitorVisible&&officeOpen);
 }
 window.addEventListener('hashchange',route);
+document.addEventListener('click',e=>{const c=e.target&&e.target.closest?e.target.closest('.body.clamp'):null;if(c&&!e.target.closest('a'))c.classList.toggle('open');});
 
 async function renderBookView(b,generation=++bookViewGeneration){
   const el=document.getElementById('view-book');
@@ -620,8 +778,8 @@ async function renderBookView(b,generation=++bookViewGeneration){
   const hrows=hs.map(h2=>`<tr class="${h2.stale?'stale':''}">
     <td class="mono">${esc(h2.ticker)}</td><td>${esc(h2.instrument)}</td>
     <td class="num mono">${fmt0(h2.qty)}</td>
-    <td class="num mono">${fmt(h2.price,h2.ccy==='IDR'?0:2)}</td>
-    <td class="num mono">${fmt0(h2.mv)}</td>
+    <td class="num mono">${pxFmt(h2.price,h2.ccy||s.ccy)}</td>
+    <td class="num mono">${money(h2.mv,h2.ccy||s.ccy,0)}</td>
     <td class="num mono ${cls(h2.pnl_pct)}">${pct(h2.pnl_pct)}</td></tr>`).join('')
     ||`<tr><td colspan="6" class="muted">No open positions — the book is fully in cash.</td></tr>`;
   const cell=(k,v,c='')=>`<div class="cell"><div class="k">${esc(k)}</div><div class="v mono ${esc(c)}">${esc(v)}</div></div>`;
@@ -630,14 +788,14 @@ async function renderBookView(b,generation=++bookViewGeneration){
       <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div>
         <h2>${esc(bookName(b))}</h2><span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}
         <span class="aux muted small" style="margin-left:auto">${pm?esc(pm)+' · PM · ':''}${esc(s.mark||'unknown')} snapshot · ${esc(String(s.asof||'').slice(0,16).replace('T',' '))}</span></div>
-      <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}<span class="chg ${cls(si)}">${pct(si)}</span></div>
+      <div class="bignav mono">${money(s.nav,s.ccy,0)}<span class="chg ${cls(si)}">${pct(si)}</span>${s.ccy!=='USD'&&validNumber(s.nav_usd)?`<span class="chg muted">≈ ${money(s.nav_usd,'USD',0)}</span>`:''}</div>
       <div class="govnote">${govNote()}</div>
     </div>
     <div class="strip book-kpis">
       ${cell('Since inception (official)',pct(si),cls(si))}
       ${cell('vs benchmark',alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp',cls(alphaPP(s)))}
       ${cell('Benchmark (cum)',pct(s.bench_since_inception_pct),'')}
-      ${cell('Cash %',cashPct==null?'—':cashPct+'%','')}
+      ${cell('Cash',cashPct==null?'—':`${moneyC(s.cash,s.ccy)} · ${cashPct}%`,'')}
       ${cell('Names',String(s.n_names||0),'')}
       ${cell('Drawdown',s.drawdown_pct==null?'—':fmt(s.drawdown_pct)+'%',s.drawdown_pct<0?'down':'')}
     </div>
@@ -659,7 +817,7 @@ async function renderBookView(b,generation=++bookViewGeneration){
         <div class="panel">
           <div class="ptitle"><span class="dot"></span>Holdings<span class="aux">${hs.length} position${hs.length===1?'':'s'}</span></div>
           <div class="pbody flush"><div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th>
-            <th class="num">Qty</th><th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
+            <th class="num">Qty</th><th class="num">Price (${esc(s.ccy||'')})</th><th class="num">Value (${esc(s.ccy||'')})</th><th class="num">P&L</th></tr></thead>
             <tbody>${hrows}</tbody></table></div></div>
         </div>
         <div class="panel">
@@ -695,18 +853,21 @@ async function renderBookView(b,generation=++bookViewGeneration){
         </div>
       </div>
     </div>`;
+  if(window.SixSouthInsight)window.SixSouthInsight.bookExtras(b,el,active);
   if(b==='INDO'&&window.SixSouthCoverage&&window.SixSouthCoverage.summaryPanel){
     window.SixSouthCoverage.summaryPanel('bkCoverage');
   }
   const tradeData=await api('trades');if(!active())return;
-  const tr=records(tradeData).filter(t=>t.book===b);
+  const trAll=records(tradeData).filter(t=>t.book===b),cy=trAll.filter(t=>t.type==='CASHYIELD'),tr=trAll.filter(t=>t.type!=='CASHYIELD');
+  const cySum=cy.reduce((a,t)=>a+(Number(t.cash_delta)||0),0);
   const trows=tr.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
     <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
-    <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${fmt(t.price,4)}</td>
-    <td class="num mono ${cls(t.cash_delta)}">${fmt(t.cash_delta)}</td></tr>`).join('');
+    <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${t.ticker==='CASH'?'—':pxFmt(t.price,s.ccy)}</td>
+    <td class="num mono ${cls(t.cash_delta)}">${money(t.cash_delta,s.ccy)}</td></tr>`).join('');
   const trEl=document.getElementById('bkTrades');
   if(trEl)trEl.innerHTML=trows?`<div class="scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Ticker</th>
-    <th class="num">Qty</th><th class="num">Price</th><th class="num">Cash Δ</th></tr></thead><tbody>${trows}</tbody></table></div>`
+    <th class="num">Qty</th><th class="num">Price (${esc(s.ccy||'')})</th><th class="num">Cash Δ (${esc(s.ccy||'')})</th></tr></thead><tbody>${trows}
+    ${cy.length?`<tr><td colspan="5" class="muted">Cash yield — ${cy.length} daily accruals since ${esc(String(cy[cy.length-1].ts||'').slice(0,10))} (hidden)</td><td class="num mono up">${money(cySum,s.ccy)}</td></tr>`:''}</tbody></table></div>`
     :'<div class="item muted">No trades in this book yet.</div>';
   const decisionData=await api('decisions');if(!active())return;
   const dec=records(decisionData).filter(x=>asRecord(x.meta).book===b).slice(0,12);
@@ -714,7 +875,7 @@ async function renderBookView(b,generation=++bookViewGeneration){
   if(deEl)deEl.innerHTML=dec.map(x=>{const mm=x.meta||{};return `<div class="item"><div class="meta">
     <span>${esc((mm.date||'').slice(0,10))}</span>${mm.kind?`<span class="tag">${esc(mm.kind)}</span>`:''}
     <span>${esc(mm.title||'Decision')}</span>${x.persona?`<span>${who(x.persona,mm.role||mm.actor||'')}</span>`:''}</div>
-    <div class="body">${md(x.body)}</div></div>`;}).join('')||'<div class="item muted">No decisions journaled for this book yet.</div>';
+    <div class="body clamp" title="Click to expand">${md(x.body)}</div></div>`;}).join('')||'<div class="item muted">No decisions journaled for this book yet.</div>';
   const thesisData=await api('theses');if(!active())return;
   const th=records(thesisData).filter(x=>asRecord(x.meta).book===b).slice(0,12);
   const thEl=document.getElementById('bkTheses');
@@ -729,6 +890,13 @@ async function renderBookView(b,generation=++bookViewGeneration){
 
 function renderOffice(){
   if(window.SixSouthOffice)window.SixSouthOffice.render({state:OS,roster:RO,summary:S,structure:ST,marketTape:MT});
+  const oc=document.getElementById('officeCount');if(oc&&window.SixSouthOffice.inspect){const i=window.SixSouthOffice.inspect();if(i&&i.agents&&i.agents.length)oc.textContent=String(i.agents.length);}
+  const d=document.getElementById('officeDetails');
+  if(d&&!d.dataset.wired){d.dataset.wired='1';
+    let pref=null;try{pref=localStorage.getItem('officeOpen');}catch(_){}
+    if(pref==='0'||(pref==null&&window.innerWidth<700))d.open=false;
+    d.addEventListener('toggle',()=>{try{localStorage.setItem('officeOpen',d.open?'1':'0');}catch(_){}
+      if(window.SixSouthOffice&&window.SixSouthOffice.setVisible)window.SixSouthOffice.setVisible(d.open&&activeWorkspace==='monitor');});}
 }
 
 // ---- Structure view: fund architecture, workflow, governance ----
@@ -812,7 +980,7 @@ async function renderStructureView(){
         <div class="pbody"><div class="item" style="border:none;padding:2px 0"><div class="body" style="max-width:1100px">
           <p><strong>Six South is an experiment: a hedge fund that runs itself.</strong> Every seat on the desk — the analysts, the risk officer, the portfolio managers, even the in-house devil's advocate — is an AI agent with a fixed mandate and fixed limits, working on a published cadence. No human picks the trades. The owner maintains the rulebook; the fund does the investing.</p>
           <p><strong>The money is simulated; the discipline is not.</strong> 6S runs two independent books: the <span class="dotN">●</span> <strong>North Book</strong> (global equities, bonds and FX, US$${esc(capN)} starting capital) and the <span class="dotS">●</span> <strong>South Book</strong> (Indonesian equities and government bonds, Rp${esc(capS)}). Each is measured honestly against a total-return benchmark it is trying to beat. Every trade, research note, mistake and lesson is journaled and published to this dashboard after each working session — wins and failures alike. It is a live, public test of one question: <em>can a disciplined process, run by machines, compound money?</em></p>
-          <p>The virtual office displays three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. They provide local market context only, not avatar schedules or persona locations. All 11 avatars illustratively work at their assigned desks between exact meetings; scheduled participants walk to the central room and return to work when the published meeting ends.</p>
+          <p>The virtual office displays three <strong>market-coverage clocks</strong>: New York for the North desk, London for macro and FX, and Jakarta for the South and control desks. They provide local market context only, not avatar schedules or persona locations. All 26 avatars illustratively work at their assigned desks between exact meetings; scheduled core-desk participants walk to the central room and return to work when the published meeting ends, while the IDX Coverage Floor stays at its sector desks.</p>
           <p class="muted" style="font-size:11px">Paper trading only — nothing on this site is investment advice or a solicitation. Prices come from public feeds and can be delayed or marked STALE. All desk personas — Sloane, Dani, Severin, Ferrand, Drew, Aldrich, Voss, Harrison, Gunawan, Pecora and Ledger — are fictional characters played by AI agents; any resemblance to real persons is coincidental.</p>
         </div></div></div></div>
     </div>
@@ -910,22 +1078,82 @@ function renderBanners(){
 }
 
 function renderStrip(){
-  // V5 South first: consolidated NAV in IDR first (USD alongside), South Book before North.
+  // V5.X: consolidated NAV in IDR (USD alongside), each book's official return and alpha,
+  // exposure, forecast skill and the 6S house estimate. Every money figure names its currency.
   const g=S.books.GLOBAL,i=S.books.INDO;
   const complete=validNumber(g.nav_usd)&&validNumber(i.nav_usd);
   const usd=complete?Number(g.nav_usd)+Number(i.nav_usd):null;
   const fx=validNumber(i.nav)&&validNumber(i.nav_usd)&&Number(i.nav_usd)>0?Number(i.nav)/Number(i.nav_usd):null;
   const idr=complete&&fx?usd*fx:null;
   const marks=[g.mark,i.mark].filter(Boolean),markLabel=marks.length===2&&marks[0]===marks[1]?marks[0]:'mixed marks';
+  const ap=x=>x==null?'—':`${x>0?'+':''}${fmt(x)}pp`;
+  const gross=complete&&usd>0?((Number(g.gross_exposure_pct)||0)*Number(g.nav_usd)+(Number(i.gross_exposure_pct)||0)*Number(i.nav_usd))/usd:null;
+  const ov=asRecord(FL&&FL.overall),hb=asRecord(FL&&FL.house_view&&FL.house_view.books);
+  const skill=ov.skill_vs_base,est=b=>asRecord(hb[b]).exp_12m_return_pct;
   const cells=[
-    [`Current total NAV (IDR) · ${markLabel}`,idr!=null?'Rp'+fmt(idr/1e9,1)+'bn':'— (incomplete)','',usd!=null?'≈ $'+fmt0(usd):''],
-    [`${bookName('INDO')} — inception / official`,pct(i.since_inception_pct),cls(i.since_inception_pct),''],
-    [`${bookName('GLOBAL')} — inception / official`,pct(g.since_inception_pct),cls(g.since_inception_pct),''],
-    ['Official benchmarks (S / N)',`${pct(i.bench_since_inception_pct)} / ${pct(g.bench_since_inception_pct)}`,'','']];
+    [`Total NAV · ${markLabel}`,idr!=null?moneyC(idr,'IDR'):'— (incomplete)','',usd!=null?`≈ <b>${esc(moneyC(usd,'USD'))}</b>${fx?` · USD/IDR ${esc(fmt0(fx))}`:''}`:''],
+    [`${bookName('INDO')} · since inception`,pct(i.since_inception_pct),cls(i.since_inception_pct),`alpha <b>${esc(ap(alphaPP(i)))}</b> · bmk ${esc(pct(i.bench_since_inception_pct))}`],
+    [`${bookName('GLOBAL')} · since inception`,pct(g.since_inception_pct),cls(g.since_inception_pct),`alpha <b>${esc(ap(alphaPP(g)))}</b> · bmk ${esc(pct(g.bench_since_inception_pct))}`],
+    ['Gross exposure (USD-wtd)',gross==null?'—':fmt(gross,1)+'%','',`S ${esc(fmt(i.gross_exposure_pct,1))}% · N ${esc(fmt(g.gross_exposure_pct,1))}% · ${esc(fmt0((i.n_names||0)+(g.n_names||0)))} names`],
+    ['Forecast skill vs base rate',skill==null?'—':`${skill>0?'+':''}${fmt(skill*100,0)}%`,skill==null?'':cls(skill),FL?`<b>${esc(fmt0(ov.n_resolved))}</b> resolved of ${esc(fmt0(ov.n))} · Brier ${esc(fmt(ov.brier,3))}`:'ledger not published yet'],
+    ['6S house est. · next 12m',est('INDO')==null?'—':pct(est('INDO')),cls(est('INDO')),est('GLOBAL')==null?'South book · ledger pending':`South · North <b>${esc(pct(est('GLOBAL')))}</b>`]];
   document.getElementById('strip').innerHTML=cells.map(c=>
-    `<div class="cell"><div class="k">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}${c[3]?`<span class="muted" style="font-size:11px;font-weight:400;margin-left:8px">${esc(c[3])}</span>`:''}</div></div>`).join('');
+    `<div class="cell"><div class="k" title="${esc(c[0])}">${esc(c[0])}</div><div class="v mono ${c[2]}">${esc(c[1])}</div>${c[3]?`<div class="s">${c[3]}</div>`:''}</div>`).join('');
 }
-
+function renderTape(){
+  const el=document.getElementById('tape');if(!el)return;
+  const rows=records(MT&&MT.instruments).filter(x=>x.available!==false);
+  el.innerHTML=rows.map(x=>{const v=Number(x.value),d=validNumber(x.value)?(Math.abs(v)>=1000?fmt0(v):fmt(v,2)):'—';
+    return `<span class="ti${x.stale?' stale':''}" title="${esc(x.source||'')} · ${esc(String(x.asof||'').slice(0,16))}"><span class="tl">${esc(x.label||x.symbol)}</span><span class="tv mono">${esc(d)}</span><span class="mono ${cls(x.change_pct)}">${esc(pct(x.change_pct))}</span></span>`;}).join('')
+    ||'<span class="ti"><span class="tl">market tape not published</span></span>';
+}
+async function loadIntel(generation){
+  const [fl,mr,si,mm]=await Promise.all([api('forecast_ledger'),api('market_reports'),api('superinvestors'),api('superinvestor_memos')]);
+  if(generation!==bootGeneration)return;
+  FL=isRecord(fl)?fl:null;MR=isRecord(mr)?mr:null;SI=isRecord(si)?si:null;MM=isRecord(mm)?mm:null;
+  window.SixSouthIntel={FL,MR,SI,MM};
+  renderStrip();renderLearnSnap();renderHouseSnap();renderMarketSnap();
+  if(window.SixSouthInsight)window.SixSouthInsight.brief();
+}
+function snapEmpty(msg,cmd){return `<div class="empty">${esc(msg)}${cmd?`<br>Engine job: <code>${esc(cmd)}</code>`:''}</div>`;}
+function renderLearnSnap(){
+  const el=document.getElementById('learnSnap');if(!el)return;
+  if(!FL){el.innerHTML=snapEmpty('The forecast ledger has not been published yet.','python -m sixsouth_v5x forecasts');return;}
+  const o=asRecord(FL.overall),j=asRecord(FL.judge);
+  const cal=records(FL.calibration).filter(b=>b.n);
+  const bars=cal.map(b=>`<div class="lrow"><span class="lt">p_up ${esc(b.bin)} <span class="muted">· n=${esc(fmt0(b.n))}</span></span>
+     <span class="lm">committed ${esc(fmt(b.mean_p_up,2))} · now ${esc(fmt(b.mean_p_now,2))}${b.n_resolved?` · realised ${esc(fmt(b.realized,2))} (${esc(fmt0(b.n_resolved))})`:''}</span></div>`).join('');
+  const les=records(FL.candidate_lessons).slice(0,2).map(l=>`<div class="lrow"><span class="sev ${esc(l.severity)}">${esc(l.severity)}</span><span class="lt">${esc(l.text)}</span></div>`).join('');
+  el.innerHTML=`<div class="mstats">
+      <div><div class="k">Forecasts</div><div class="v mono">${esc(fmt0(o.n))}</div><div class="s">${esc(fmt0(o.n_open))} open · ${esc(fmt0(o.n_awaiting_entry))} awaiting entry</div></div>
+      <div><div class="k">Brier · analyst / base</div><div class="v mono">${esc(fmt(o.brier,3))}</div><div class="s">base rate ${esc(fmt(o.brier_base_rate,3))} · n=${esc(fmt0(o.n_resolved))}</div></div>
+      <div><div class="k">Judge kills holding</div><div class="v mono">${esc(fmt0(j.kills_right_provisional))}/${esc(fmt0(j.kills))}</div><div class="s">killed names ${esc(pct(j.kills_avg_ret_since_pct))} since</div></div>
+    </div>${bars}${les}<div class="lrow"><span class="lt muted small">Low sample — scores firm up as forecasts resolve. Ledger as of ${esc(FL.asof||'—')}.</span></div>`;
+}
+function renderHouseSnap(){
+  const el=document.getElementById('houseSnap');if(!el)return;
+  const hv=asRecord(FL&&FL.house_view);
+  if(!FL){el.innerHTML=snapEmpty('House view appears once the forecast ledger is published.','python -m sixsouth_v5x forecasts');return;}
+  const names=records(hv.names).slice(0,7),books=asRecord(hv.books);
+  const bk=b=>{const x=asRecord(books[b]);return `<div><div class="k">${esc(bookName(b))} · 12m</div><div class="v mono ${cls(x.exp_12m_return_pct)}">${esc(pct(x.exp_12m_return_pct))}</div><div class="s">${esc(fmt(x.cash_weight_pct,0))}% cash at rf ${esc(fmt(x.rf_annual_pct,1))}%</div></div>`;};
+  el.innerHTML=`<div class="mstats">${bk('INDO')}${bk('GLOBAL')}<div><div class="k">Analyst weight λ</div><div class="v mono">${esc(fmt(hv.lambda_analyst,2))}</div><div class="s">vs base-rate library</div></div></div>
+    <div class="scroll"><table><thead><tr><th>Name</th><th class="num">p house</th><th class="num">EV p.a.</th><th>Stance</th></tr></thead><tbody>
+    ${names.map(n=>`<tr><td><span class="${n.book==='GLOBAL'?'dotN':'dotS'}">●</span> <a class="rlink" href="#research/thesis/${encodeURIComponent(n.thesis_id)}">${esc(n.ticker)}</a> <span class="muted small">${esc(n.status==='AWAITING_ENTRY'?'awaiting entry':'')}</span></td>
+      <td class="num mono">${esc(fmt(n.p_house,2))}</td><td class="num mono ${cls(n.ev_house_ann_pct)}">${esc(pct(n.ev_house_ann_pct))}</td><td class="stance-${esc(n.stance)}"><b>${esc(n.stance)}</b></td></tr>`).join('')
+      ||'<tr><td colspan="4" class="muted">No active PASS theses to estimate.</td></tr>'}</tbody></table></div>`;
+}
+function renderMarketSnap(){
+  const el=document.getElementById('marketSnap');if(!el)return;
+  const wk=records(MR&&MR.weekly)[0],mo=records(MR&&MR.monthly)[0],mgr=records(SI&&SI.managers),dg=records(MM&&MM.digests);
+  const rep=r=>r?`<a class="lrow" style="text-decoration:none" href="#market/report/${encodeURIComponent(r.id)}"><span class="lt"><b>${esc(r.title)}</b><br><span class="muted small">${esc(r.period_start)} → ${esc(r.period_end)}${r.narrative?' · with desk view':''}</span></span><span class="lm">read →</span></a>`:'';
+  el.innerHTML=`<div class="mstats">
+      <div><div class="k">Superinvestors</div><div class="v mono">${esc(fmt0(mgr.length))}</div><div class="s">${mgr.length?esc((mgr[0].period||'')+' filings'):'tracker not run yet'}</div></div>
+      <div><div class="k">Memo digests</div><div class="v mono">${esc(fmt0(dg.length))}</div><div class="s">${dg.length?esc(dg[0].author||''):'library not run yet'}</div></div>
+      <div><div class="k">Reports</div><div class="v mono">${esc(fmt0(records(MR&&MR.weekly).length+records(MR&&MR.monthly).length))}</div><div class="s">weekly + monthly</div></div></div>
+    ${rep(wk)}${rep(mo)}
+    ${dg.slice(0,2).map(d=>`<a class="lrow" style="text-decoration:none" href="#market/memos"><span class="lt">${esc(d.author||'')} — <i>${esc(d.title||'')}</i></span><span class="lm">${esc(d.date||'')}</span></a>`).join('')}
+    ${!wk&&!mo?snapEmpty('No Market Division report published yet.','python -m sixsouth_v5x report weekly'):''}`;
+}
 // governor thresholds come from the published constitution snapshot — never hardcoded
 function govLabel(st){return{DEGROSS:'DE-GROSS',REVIEW:'REVIEW',RECOVERY:'RECOVERY',NONE:'steady',UNKNOWN:'gov —'}[st]||esc(st);}
 function govChip(b){
@@ -942,31 +1170,33 @@ function pmPersona(b){
   const e=records(RO&&RO.roster).find(x=>x.role==='PM_'+b); return e?e.persona:'';
 }
 function renderBook(b,el){
-  const s=S.books[b],hs=records(H[b]),pm=pmPersona(b);
+  const s=S.books[b],hs=records(H[b]),pm=pmPersona(b),ccy=s.ccy||bookCcy(b);
   const rows=hs.map(h=>`<tr class="${h.stale?'stale':''}">
-    <td class="mono">${esc(h.ticker)}</td><td>${esc(h.instrument)}</td>
+    <td class="mono"><b>${esc(h.ticker)}</b></td>
     <td class="num mono">${fmt0(h.qty)}</td>
-    <td class="num mono">${fmt(h.price,h.ccy==='IDR'?0:2)}</td>
-    <td class="num mono">${fmt0(h.mv)}</td>
+    <td class="num mono">${pxFmt(h.price,h.ccy||ccy)}</td>
+    <td class="num mono">${moneyC(h.mv,h.ccy||ccy)}</td>
+    <td class="num mono">${validNumber(h.mv)&&s.nav?fmt(h.mv/s.nav*100,1)+'%':'—'}</td>
     <td class="num mono ${cls(h.pnl_pct)}">${pct(h.pnl_pct)}</td></tr>`).join('')
     ||`<tr><td colspan="6" class="muted">No open positions — the book is fully in cash.</td></tr>`;
-  const si=s.since_inception_pct;
+  const si=s.since_inception_pct,cashPct=s.nav?s.cash/s.nav*100:null;
   document.getElementById(el).innerHTML=`
     <div class="bookhead"><div class="bookmark ${b==='GLOBAL'?'north-mark':'south-mark'}"></div><h2>${esc(bookName(b))}</h2>
-      <span class="ccy mono">${esc(s.ccy||'')}</span>${govChip(b)}</div>
-    <div class="pm">${pm?esc(pm)+' · PM · ':''}${b==='GLOBAL'?'North Book (USD)':'South Book (IDR)'} · ${esc(s.mark||'unknown')} snapshot ${esc(String(s.asof||'').slice(0,16).replace('T',' '))}</div>
-    <div class="bignav mono">${s.ccy==='IDR'?'Rp':'$'}${fmt0(s.nav)}<span class="chg ${cls(si)}">${pct(si)}</span></div>
+      <span class="ccy mono">${esc(ccy)}</span>${govChip(b)}<a class="more" href="#${b==='GLOBAL'?'north':'south'}">open book →</a></div>
+    <div class="pm">${pm?esc(pm)+' · PM · ':''}${esc(s.mark||'unknown')} snapshot ${esc(String(s.asof||'').slice(0,16).replace('T',' '))}</div>
+    <div class="bignav mono">${money(s.nav,ccy,0)}<span class="chg ${cls(si)}">${pct(si)}</span>${ccy!=='USD'&&validNumber(s.nav_usd)?`<span class="chg muted">≈ ${money(s.nav_usd,'USD',0)}</span>`:''}</div>
     <div class="govnote">${govNote()}</div>
     <div class="kv">
-      <div><div class="k">Since inception · official</div><div class="v mono ${cls(si)}">${pct(si)}</div></div>
       <div><div class="k">vs benchmark</div><div class="v mono ${cls(alphaPP(s))}">${alphaPP(s)==null?'—':(alphaPP(s)>0?'+':'')+fmt(alphaPP(s))+'pp'}</div></div>
-      <div><div class="k">Cash / names</div><div class="v mono">${fmt0(s.cash)} · ${fmt0(s.n_names)}</div></div>
+      <div><div class="k">Cash (${esc(ccy)})</div><div class="v mono">${moneyC(s.cash,ccy)}${cashPct==null?'':` · ${fmt(cashPct,1)}%`}</div></div>
+      <div><div class="k">Names · gross</div><div class="v mono">${fmt0(s.n_names)} · ${s.gross_exposure_pct==null?'—':fmt(s.gross_exposure_pct,1)+'%'}</div></div>
+      <div><div class="k">Drawdown</div><div class="v mono ${s.drawdown_pct<0?'down':''}">${s.drawdown_pct==null?'—':fmt(s.drawdown_pct)+'%'}</div></div>
     </div>
-    <div class="scroll"><table><thead><tr><th>Ticker</th><th>Type</th><th class="num">Qty</th>
-      <th class="num">Price</th><th class="num">Value</th><th class="num">P&L</th></tr></thead>
+    <div class="scroll"><table><thead><tr><th>Ticker</th><th class="num">Qty</th>
+      <th class="num">Price (${esc(ccy)})</th><th class="num">Value (${esc(ccy)})</th><th class="num">Weight</th><th class="num">P&L</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="legend"><span style="color:var(--north)">Fund (inception = 100)</span><span style="color:var(--bench)">Benchmark · ${esc(benchName(b))}</span></div>
-    <div style="padding:2px 10px 10px">${miniChart(b)}</div>`;
+    <div style="padding:4px 12px 0"><div class="legend"><span style="color:var(--north)">Fund (inception = 100)</span><span style="color:var(--bench)">Benchmark · ${esc(benchName(b))}</span></div></div>
+    <div style="padding:2px 12px 12px">${miniChart(b)}</div>`;
 }
 function markNotes(ser){
   return ser.map(r=>r.mark==='reconstructed'?'missed session, exact ledger replay':r.mark==='inception'?'inception':'');
@@ -985,29 +1215,26 @@ function miniChart(b){
      title:`${bookName(b)} performance versus its total-return benchmark`,
      description:'Fund NAV and total-return benchmark, both rebased to 100 at inception.'});
 }
+let NAV_CCY=(()=>{try{return localStorage.getItem('navCcy')==='USD'?'USD':'IDR';}catch(_){return'IDR';}})();
+function setCcy(c){NAV_CCY=c==='USD'?'USD':'IDR';try{localStorage.setItem('navCcy',NAV_CCY);}catch(_){}if(S)renderTotal();}
 function renderTotal(){
-  // V5: consolidated official NAV in IDR (each paired date converted at that day's South Book rate)
+  // V5.X fix: the panel title, axis and read-out all follow the selected currency. IDR converts each
+  // paired official USD total at that same day's South Book rate; USD is the native consolidated series.
+  ['IDR','USD'].forEach(c=>{const b=document.getElementById('ccy'+c);if(b){b.className=c===NAV_CCY?'on':'';b.setAttribute('aria-pressed',c===NAV_CCY?'true':'false');}});
+  const title=document.getElementById('navTitle');if(title)title.textContent=`Consolidated NAV (${NAV_CCY})`;
+  const t=records(N&&N.USD_TOTAL).filter(r=>validNumber(r.nav_usd));
   const fxByDate={};records(N&&N.INDO).forEach(r=>{if(validNumber(r.nav_ccy)&&validNumber(r.nav_usd)&&Number(r.nav_usd)>0)fxByDate[r.date]=Number(r.nav_ccy)/Number(r.nav_usd);});
-  const tIdr=records(N&&N.USD_TOTAL).filter(r=>fxByDate[r.date]).map(r=>({date:r.date,nav_idr:Number(r.nav_usd)*fxByDate[r.date]}));
-  if(tIdr.length>=2){
-    document.getElementById('anAux').textContent=`official paired marks in IDR · latest ${String(tIdr[tIdr.length-1].date)}`;
-    document.getElementById('chTotal').innerHTML=chart(tIdr.map(r=>r.date),[{name:'Total',color:'#3E8EDD',vals:tIdr.map(r=>r.nav_idr)}],
-      {h:230,fmtY:v=>'Rp'+fmt(v/1e9,1)+'bn',fill:true,pills:true,
-       title:'Consolidated official NAV in rupiah',
-       description:'Paired official South and North book marks, converted at each date\'s South Book rate; indicative snapshots excluded.'});
-    return;
-  }
-  const t=records(N&&N.USD_TOTAL);
-  const latest=t.length?t[t.length-1]:null;
-  document.getElementById('anAux').textContent=latest
-    ?`official paired marks · latest ${String(latest.date||'—')}`
-    :'official paired marks only';
-  document.getElementById('chTotal').innerHTML=t.length<2
-    ?'<div class="muted small">consolidated series appears once both books print an official mark the same day</div>'
-    :chart(t.map(r=>r.date),[{name:'Total',color:'#3E8EDD',vals:t.map(r=>r.nav_usd)}],
-      {h:230,fmtY:v=>'$'+fmt0(v),fill:true,pills:true,
-       title:'Consolidated official NAV in US dollars',
-       description:'Paired official North and South book marks; current indicative snapshots are excluded.'});
+  const ser=NAV_CCY==='IDR'?t.filter(r=>fxByDate[r.date]).map(r=>({date:r.date,v:Number(r.nav_usd)*fxByDate[r.date]})):t.map(r=>({date:r.date,v:Number(r.nav_usd)}));
+  const aux=document.getElementById('anAux');
+  if(ser.length<2){
+    if(aux)aux.textContent='official paired marks only';
+    document.getElementById('chTotal').innerHTML='<div class="muted small">consolidated series appears once both books print an official mark the same day</div>';return;}
+  const first=ser[0].v,last=ser[ser.length-1].v,chg=first?(last/first-1)*100:null;
+  if(aux)aux.textContent=`${NAV_CCY==='IDR'?'converted at each date’s South Book USD/IDR':'native USD'} · ${pct(chg)} since ${ser[0].date} · latest ${ser[ser.length-1].date}`;
+  document.getElementById('chTotal').innerHTML=chart(ser.map(r=>r.date),[{name:`Total NAV (${NAV_CCY})`,color:'#3E8EDD',vals:ser.map(r=>r.v)}],
+    {h:250,fmtY:v=>moneyC(v,NAV_CCY),fill:true,pills:true,
+     title:`Consolidated official NAV in ${NAV_CCY==='IDR'?'rupiah':'US dollars'}`,
+     description:NAV_CCY==='IDR'?'Paired official South and North book marks, converted at each date\'s South Book rate; indicative snapshots excluded.':'Paired official North and South book marks in US dollars; indicative snapshots excluded.'});
 }
 
 function renderAnalytics(){
@@ -1108,18 +1335,19 @@ async function feed(kind,generation){
       ${m.kind?`<span class="tag">${esc(m.kind)}</span>`:''}
       <span>${esc(m.title||'Decision')}</span>${x.persona?`<span>${who(x.persona,m.role||m.actor||'')}</span>`:''}
       ${m.thesis?`<span class="mono">${esc(m.thesis)}</span>`:''}</div>
-      <div class="body">${md(x.body)}</div></div>`;}).join('')||empty();
+      <div class="body clamp" title="Click to expand">${md(x.body)}</div></div>`;}).join('')||empty();
   }else if(kind==='trades'){
-    const r=records(await api('trades'));if(!active())return;
-    const rows=r.map(t=>`<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
-      <td>${bdot(t.book)} ${esc(t.book||'')}</td>
+    const all=records(await api('trades'));if(!active())return;
+    const r=all.filter(t=>t.type!=='CASHYIELD'),cyN=all.length-r.length;
+    const rows=r.map(t=>{const c=bookCcy(t.book);return `<tr><td class="mono">${esc((t.ts||'').slice(0,10))}</td>
+      <td>${bdot(t.book)} ${esc(bookName(t.book)||'')}</td>
       <td>${esc(t.type||'')}${t.side?` / ${esc(t.side)}`:''}</td><td class="mono">${esc(t.ticker||'')}</td>
-      <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${fmt(t.price,4)}</td>
-      <td class="num mono">${fmt(t.fees)}</td><td class="num mono ${cls(t.cash_delta)}">${fmt(t.cash_delta)}</td></tr>`).join('');
-    box.innerHTML=`<div class="item"><div class="scroll"><table><thead><tr><th>Date</th><th>Book</th><th>Type</th>
+      <td class="num mono">${fmt0(t.qty)}</td><td class="num mono">${t.ticker==='CASH'?'—':money(t.price,c)}</td>
+      <td class="num mono">${money(t.fees,c)}</td><td class="num mono ${cls(t.cash_delta)}">${money(t.cash_delta,c)}</td></tr>`;}).join('');
+    box.innerHTML=`<div class="item" style="padding:0"><div class="scroll"><table><thead><tr><th>Date</th><th>Book</th><th>Type</th>
       <th>Ticker</th><th class="num">Qty</th><th class="num">Price</th><th class="num">Fees</th>
       <th class="num">Cash Δ</th></tr></thead><tbody>${rows}</tbody></table></div>
-      ${rows?'':'<div class="muted">No trades yet.</div>'}</div>`;
+      ${rows?'':'<div class="muted">No trades yet.</div>'}${cyN?`<div class="muted small" style="padding:8px 10px">${cyN} daily cash-yield accruals hidden.</div>`:''}</div>`;
   }else if(kind==='theses'){
     const r=records(await api('theses'));if(!active())return;
     box.innerHTML=r.map(x=>{const m=x.meta||{},ex=x.excerpt||{};return `<div class="item"><div class="meta">

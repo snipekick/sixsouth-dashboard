@@ -7,7 +7,8 @@
 (function(){
 "use strict";
 
-const TILE=16,COLS=90,ROWS=36,W=COLS*TILE,H=ROWS*TILE;
+// V5.X: one office, two floors — the core desk (rows 0-35) and the IDX Coverage Floor (rows 36-55).
+const TILE=16,COLS=90,ROWS=56,W=COLS*TILE,H=ROWS*TILE,CORE_ROWS=36;
 const SHEETS=[
 "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",
@@ -28,8 +29,26 @@ const TEAM=[
  {role:"PM_GLOBAL",roleLabel:"North PM",name:"Harrison",sheet:1,hue:190,home:"north_pm",book:"North"},
  {role:"PM_INDO",roleLabel:"South PM",name:"Gunawan",sheet:2,hue:42,home:"south_pm",book:"South"},
  {role:"POSTMORTEM",roleLabel:"Postmortem",name:"Pecora",sheet:3,hue:-75,home:"postmortem",book:"Cross-book"},
- {role:"OPS",roleLabel:"Operations",name:"Ledger",sheet:5,hue:95,home:"ops",book:"Cross-book"}
+ {role:"OPS",roleLabel:"Operations",name:"Ledger",sheet:5,hue:95,home:"ops",book:"Cross-book"},
+ // V5.X latest formation: the South research organisation on the IDX Coverage Floor. `fixed` agents
+ // work at their own desks and never join the core meeting room; `group` is their published roster role.
+ {role:"DIRECTOR_RESEARCH",group:"DIRECTOR_RESEARCH",roleLabel:"Research Director, South",name:"Laras",sheet:1,hue:-40,home:"dir_research",book:"South",fixed:true},
+ {role:"SECTOR_LEAD_ENERGY",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Energy",desk:"ENERGY",name:"Bayu",sheet:2,hue:20,home:"lead_energy",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_BASIC_MATERIALS",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Basic Materials",desk:"BASIC MAT.",name:"Sekar",sheet:3,hue:60,home:"lead_basic",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_INDUSTRIALS",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Industrials",desk:"INDUSTRIALS",name:"Reza",sheet:4,hue:100,home:"lead_industrials",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_CONSUMER_NON_CYCLICALS",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Consumer Non-Cyc.",desk:"STAPLES",name:"Wulan",sheet:5,hue:140,home:"lead_noncyc",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_CONSUMER_CYCLICALS",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Consumer Cyclicals",desk:"CYCLICALS",name:"Adit",sheet:1,hue:180,home:"lead_cyc",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_HEALTHCARE",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Healthcare",desk:"HEALTHCARE",name:"Nadia",sheet:2,hue:220,home:"lead_health",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_FINANCIALS",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Financials",desk:"FINANCIALS",name:"Hendra",sheet:3,hue:-120,home:"lead_fin",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_INFRASTRUCTURES",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Infrastructures",desk:"INFRA",name:"Tama",sheet:4,hue:-160,home:"lead_infra",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_PROPERTIES",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Properties",desk:"PROPERTY",name:"Citra",sheet:5,hue:-60,home:"lead_prop",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_TECHNOLOGY",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Technology",desk:"TECHNOLOGY",name:"Yoga",sheet:1,hue:80,home:"lead_tech",book:"South",fixed:true,compact:true},
+ {role:"SECTOR_LEAD_TRANSPORTATION",group:"SECTOR_LEAD",roleLabel:"Sector Lead · Transport & Logistics",desk:"TRANSPORT",name:"Arif",sheet:2,hue:-90,home:"lead_transport",book:"South",fixed:true,compact:true},
+ {role:"COVERAGE_RED_TEAM",group:"COVERAGE_RED_TEAM",roleLabel:"Head of Coverage Review",desk:"RED TEAM",name:"Kirana",sheet:3,hue:-20,home:"cov_review",book:"Independent",fixed:true,compact:true},
+ {role:"COVERAGE_QC",group:"COVERAGE_QC",roleLabel:"Head of Coverage QC",desk:"QC",name:"Ratna",sheet:4,hue:40,home:"cov_qc",book:"Independent",fixed:true,compact:true},
+ {role:"NEWS_DESK",group:"NEWS_DESK",roleLabel:"News Desk Editor",desk:"NEWS",name:"Lintang",sheet:5,hue:-140,home:"news",book:"South",fixed:true,compact:true}
 ];
+const CORE_TEAM=TEAM.filter(x=>!x.fixed);
 const CREW={
  US_CLOSE:["PM_GLOBAL","OPS"],IDX_PREOPEN:["PM_INDO","RISK_OFFICER","OPS"],IDX_CLOSE:["PM_GLOBAL","PM_INDO","OPS"],
  US_PREOPEN:["PM_GLOBAL","MACRO_FX","RISK_OFFICER","OPS"],IDEATION:["ANALYST_GLOBAL","ANALYST_INDO","OPS"],
@@ -38,7 +57,11 @@ const CREW={
 const POINTS={
  north_analyst:[[7,15],[11,15]],north_pm:[[19,15]],south_analyst:[[70,15],[74,15]],south_pm:[[83,15]],
  macro_global:[[34,9]],macro_fx:[[51,9]],bear:[[8,29],[12,29]],judge:[[28,28],[32,28]],
- risk:[[47,29],[51,29]],ops:[[63,29],[67,29]],postmortem:[[80,29],[84,29]],lobby:[[25,20],[65,20]]
+ risk:[[47,29],[51,29]],ops:[[63,29],[67,29]],postmortem:[[80,29],[84,29]],lobby:[[25,20],[65,20]],
+ dir_research:[[8,47]],
+ lead_energy:[[22,45]],lead_basic:[[29,45]],lead_industrials:[[36,45]],lead_noncyc:[[43,45]],lead_cyc:[[50,45]],lead_health:[[57,45]],
+ lead_fin:[[25,52]],lead_infra:[[32,52]],lead_prop:[[39,52]],lead_tech:[[46,52]],lead_transport:[[53,52]],
+ cov_review:[[70,45]],cov_qc:[[70,52]],news:[[83,45]],market_div:[[83,52]]
 };
 const MEETING_ROOM={x:27,y:12,w:37,h:8,label:"6S MEETING ROOM"};
 const MEETING_SEATS=[[30,15],[36,15],[42,15],[48,15],[54,15],[60,15],[33,18],[40,18],[47,18],[54,18],[61,18]];
@@ -54,8 +77,12 @@ const WORKSTATIONS=[
  ...POINTS.judge.map((point,i)=>({point,tone:"judge",seed:17+i})),
  ...POINTS.risk.map((point,i)=>({point,tone:"risk",seed:20+i})),
  ...POINTS.ops.map((point,i)=>({point,tone:"ops",seed:23+i})),
- ...POINTS.postmortem.map((point,i)=>({point,tone:"post",seed:26+i}))
+ ...POINTS.postmortem.map((point,i)=>({point,tone:"post",seed:26+i})),
+ ...POINTS.dir_research.map((point,i)=>({point,tone:"south",seed:29+i}))
 ];
+// Compact benches on the IDX Coverage Floor (dual monitor arm, sector name plate).
+const COMPACT_DESKS=TEAM.filter(x=>x.compact).map((x,i)=>({point:POINTS[x.home][0],tone:x.group==="SECTOR_LEAD"?"south":x.group==="NEWS_DESK"?"macro":"bear",seed:30+i,label:x.desk,role:x.role}))
+ .concat([{point:POINTS.market_div[0],tone:"north",seed:60,label:"MARKET DIV.",role:null,vacant:"V5.X desk · weekly / monthly / 13F / memos"}]);
 const ZONES=[
  {key:"north",x:2,y:8,w:22,h:12,label:"NORTH POD · RESEARCH / PM",color:"#142A3E",edge:"#3E8EDD",door:"right"},
  {key:"macro",x:27,y:2,w:31,h:9,label:"GLOBAL MACRO + FX · MARKET WALL",color:"#25231C",edge:"#E8A33D",door:"bottom"},
@@ -64,7 +91,11 @@ const ZONES=[
  {key:"judge",x:20,y:21,w:18,h:13,label:"INVESTMENT JUDGE",color:"#142536",edge:"#78B8F0",door:"top"},
  {key:"risk",x:41,y:22,w:13,h:12,label:"INDEPENDENT RISK",color:"#182A21",edge:"#3DBD4A",door:"top"},
  {key:"ops",x:57,y:22,w:14,h:12,label:"OPS / FILLS",color:"#202329",edge:"#9AA3AD",door:"top"},
- {key:"post",x:74,y:21,w:14,h:13,label:"POSTMORTEM / ARCHIVE",color:"#242126",edge:"#9AA3AD",door:"top"}
+ {key:"post",x:74,y:21,w:14,h:13,label:"POSTMORTEM / ARCHIVE",color:"#242126",edge:"#9AA3AD",door:"top"},
+ {key:"dir",x:2,y:38,w:13,h:17,label:"DIRECTOR OF RESEARCH",color:"#2E2416",edge:"#E8A33D",door:"top"},
+ {key:"bullpen",x:17,y:38,w:46,h:17,label:"IDX COVERAGE BULLPEN · 11 SECTOR DESKS + DESK ANALYSTS",color:"#2A2216",edge:"#E8A33D",door:"top"},
+ {key:"review",x:65,y:38,w:11,h:17,label:"RED TEAM · QC",color:"#301A29",edge:"#E84A93",door:"top"},
+ {key:"news",x:78,y:38,w:10,h:17,label:"NEWS · MARKET DIV.",color:"#142536",edge:"#78B8F0",door:"top"}
 ];
 const ROLE_ACTIVITY={ANALYST_GLOBAL:"type",ANALYST_INDO:"type",MACRO_FX:"read",MACRO_GLOBAL:"read",BEAR:"review",JUDGE:"review",RISK_OFFICER:"review",PM_GLOBAL:"read",PM_INDO:"read",POSTMORTEM:"read",OPS:"type"};
 const ROLE_NAMES=new Map(TEAM.map(x=>[x.role,x.name]));
@@ -75,7 +106,8 @@ const HUBS=Object.freeze({
 });
 const ROLE_HUB=Object.freeze({
  ANALYST_GLOBAL:"NEW_YORK",PM_GLOBAL:"NEW_YORK",MACRO_GLOBAL:"LONDON",MACRO_FX:"LONDON",
- ANALYST_INDO:"JAKARTA",PM_INDO:"JAKARTA",BEAR:"JAKARTA",JUDGE:"JAKARTA",RISK_OFFICER:"JAKARTA",POSTMORTEM:"JAKARTA",OPS:"JAKARTA"
+ ANALYST_INDO:"JAKARTA",PM_INDO:"JAKARTA",BEAR:"JAKARTA",JUDGE:"JAKARTA",RISK_OFFICER:"JAKARTA",POSTMORTEM:"JAKARTA",OPS:"JAKARTA",
+ ...Object.fromEntries(TEAM.filter(x=>x.fixed).map(x=>[x.role,"JAKARTA"]))
 });
 // Decorative soft seating; agents remain at their workstations outside meetings.
 const LOUNGE_POINTS=Object.freeze({
@@ -134,8 +166,8 @@ const PUBLIC_SESSIONS={US_CLOSE:"North close review",IDX_PREOPEN:"South pre-open
 function sessionKey(session){const raw=String(session||""),upper=raw.toUpperCase();if(CREW[upper])return upper;for(const key of Object.keys(PUBLIC_SESSIONS))if(PUBLIC_SESSIONS[key]===raw)return key;return "";}
 function explicitMeetingParticipants(entry){
  const source=entry&&(entry.participant_roles||entry.participants||entry.roles),raw=Array.isArray(source)?source:typeof source==="string"?source.split(/[;,]/):[],wanted=new Set();
- for(const value of raw){const role=String(value||"").trim().toUpperCase();if(role==="ALL")for(const member of TEAM)wanted.add(member.role);else if(ROLE_NAMES.has(role))wanted.add(role);}
- return TEAM.map(member=>member.role).filter(role=>wanted.has(role));
+ for(const value of raw){const role=String(value||"").trim().toUpperCase();if(role==="ALL")for(const member of CORE_TEAM)wanted.add(member.role);else if(ROLE_NAMES.has(role))wanted.add(role);}
+ return CORE_TEAM.map(member=>member.role).filter(role=>wanted.has(role)).slice(0,MEETING_SEATS.length);
 }
 function publishedMeetingDuration(entry){const configured=Number(entry&&entry.meeting_minutes);return Number.isFinite(configured)&&configured>0?Math.min(180,configured):null;}
 function validMeetingTime(value){const match=String(value).match(/^(\d{1,2}):(\d{2})$/);return !!match&&Number(match[1])<=23&&Number(match[2])<=59;}
@@ -177,6 +209,7 @@ function resolvedNextSession(rawNext,structure,now){
 }
 function publicSessionLabel(session){const raw=String(session||"");return PUBLIC_SESSIONS[raw.toUpperCase()]||raw||"Scheduled desk review";}
 function resolveStation(raw,role,book){
+ const fixed=TEAM.find(x=>x.role===role&&x.fixed);if(fixed)return fixed.home;
  const s=norm(raw),b=norm(book);
  if(/bear|red_team|attack/.test(s))return "bear";
  if(/judge|glass_ic|investment_committee|(^|_)ic($|_)/.test(s))return "judge";
@@ -230,7 +263,9 @@ function normalizeState(raw,roster,summary,structure,at){
  }
  const rosterRows=Array.isArray(roster&&roster.roster)?roster.roster.filter(x=>x&&typeof x==="object"):[],rosterMap=new Map(rosterRows.map(x=>[x.role,x]));
  const crew=CREW[sessionKey(session)],active=role=>crew==="ALL"||(Array.isArray(crew)&&crew.includes(role));
- const agents=TEAM.map((base,i)=>{
+ const rosterGroups=new Set(rosterRows.map(x=>String(x.role||"").toUpperCase()));
+ const team=TEAM.filter(base=>!base.fixed||!rosterRows.length||rosterGroups.has(base.group));
+ const agents=team.map((base,i)=>{
   const a=byRole.get(base.role)||{},r=rosterMap.get(base.role)||{};
   const fallbackActive=!!active(base.role),act=Array.isArray(raw&&raw.agents)?activityOf(a.state,a.activity):(fallbackActive?ROLE_ACTIVITY[base.role]:"idle");
   const bookId=String(a.book||base.book),book=bookId==="GLOBAL"?"North":bookId==="INDO"?"South":bookId==="SHARED"?"Cross-book":bookId==="INDEPENDENT"?"Independent":bookId;
@@ -258,6 +293,7 @@ function findPath(sc,sr,ec,er,blocked){
 class Floor{
  constructor(){
  this.canvas=document.getElementById("officeCanvas");if(!this.canvas)return;
+  this.dpr=Math.max(1,Math.min(2,Math.round(window.devicePixelRatio||1)));this.canvas.width=W*this.dpr;this.canvas.height=H*this.dpr;
   this.ctx=this.canvas.getContext("2d");this.ctx.imageSmoothingEnabled=false;this.images=[];this.agents=[];this.blocked=new Set();this.buildCollision();this.last=0;this.raf=0;
   this.meeting={active:false,session:null,key:null,participantRoles:[],meetingMinutes:null,startsAt:null,endsAt:null,source:"schedule"};this.meetingSignature="";this.meetingExit=null;this.nowOverride=null;this.meetingTimer=0;
   this.motionQuery=window.matchMedia("(prefers-reduced-motion: reduce)");this.reduced=this.motionQuery.matches;this.ready=false;
@@ -279,6 +315,7 @@ class Floor{
   }
   const desks=[...POINTS.north_analyst,...POINTS.north_pm,...POINTS.south_analyst,...POINTS.south_pm,...POINTS.macro_global,...POINTS.macro_fx,...POINTS.bear,...POINTS.judge,...POINTS.risk,...POINTS.ops,...POINTS.postmortem];
   for(const [c,r] of desks)for(let dc=-1;dc<=2;dc++){add(c+dc,r-2);add(c+dc,r-1);}
+  for(const d of COMPACT_DESKS){const [c,r]=d.point;for(let dc=-1;dc<=1;dc++)add(c+dc,r-1);}
   const room=MEETING_ROOM,left=room.x,right=room.x+room.w-1,top=room.y,bottom=room.y+room.h-1,doorRow=room.y+Math.floor(room.h/2),doorCol=room.x+Math.floor(room.w/2);
   for(let col=left;col<=right;col++){add(col,top);add(col,bottom);}for(let row=top;row<=bottom;row++){add(left,row);add(right,row);}
   for(let offset=-1;offset<=1;offset++){del(left,doorRow+offset);del(right,doorRow+offset);del(doorCol+offset,top);del(doorCol+offset,bottom);}
@@ -360,14 +397,14 @@ class Floor{
   }if(completed){for(const a of this.agents)if(!a.path.length){a.lifecycleMove=false;if(!a.meetingAssigned&&!a.handoffMove&&!a.returningMeeting)a.controlledMove=false;}this.updateMeetingStatus();this.updateA11y();}
  }
  draw(clock=0){
-  const c=this.ctx;c.save();c.imageSmoothingEnabled=false;this.drawOffice(c,clock);
+  const c=this.ctx;c.save();c.setTransform(this.dpr||1,0,0,this.dpr||1,0,0);c.imageSmoothingEnabled=false;this.drawOffice(c,clock);
   const sorted=[...this.agents].sort((a,b)=>a.y-b.y);for(const a of sorted)this.drawAgent(c,a,clock);
-  this.drawMeetingForeground(c);this.drawDeskForeground(c,clock);this.drawVignette(c);for(const a of sorted)this.drawAgentLabel(c,a);this.drawHeader(c,clock);c.restore();
+  this.drawMeetingForeground(c);this.drawDeskForeground(c,clock);for(const d of COMPACT_DESKS)this.compactFront(c,d,clock);this.drawVignette(c);for(const a of sorted)this.drawAgentLabel(c,a);this.drawHeader(c,clock);c.restore();
  }
  drawOffice(c,clock){
   this.floorMaterials(c);this.cityWindows(c,clock);
   for(const z of ZONES)this.zone(c,z);
-  this.marketWall(c,clock);this.hangingBoards(c,clock);this.officeFurniture(c,clock);this.meetingRoom(c,clock);this.decor(c,clock);this.desksBack(c,clock);
+  this.marketWall(c,clock);this.hangingBoards(c,clock);this.officeFurniture(c,clock);this.meetingRoom(c,clock);this.decor(c,clock);this.coverageFloor(c,clock);this.desksBack(c,clock);
  }
  floorMaterials(c){
   const floor=c.createLinearGradient(0,32,0,H);floor.addColorStop(0,"#20262D");floor.addColorStop(.5,"#151A20");floor.addColorStop(1,"#0C1014");c.fillStyle=floor;c.fillRect(0,0,W,H);
@@ -414,7 +451,44 @@ class Floor{
   rows.forEach((label,i)=>{const ry=y+22+i*9;c.fillStyle="#8E99A5";c.fillText(label,x+10,ry);c.fillStyle=i%2?"#E8A33D":"#3DBD4A";for(let k=0;k<8;k++){const h=1+((k*seed+i*3+Math.floor(clock/3))%5);c.fillRect(x+72+k*17,ry-h,11,h);}c.fillStyle="#26313B";c.fillRect(x+226,ry-5,87,3);c.fillStyle=color;c.fillRect(x+226,ry-5,18+((i+seed)*13)%62,3);});
   c.fillStyle="#6F7882";c.fillText("ILLUSTRATIVE",x+w-65,y+12);
  }
- desksBack(c,clock){for(const desk of WORKSTATIONS)this.deskBack(c,desk,clock);}
+ desksBack(c,clock){for(const desk of WORKSTATIONS)this.deskBack(c,desk,clock);for(const desk of COMPACT_DESKS)this.compactBack(c,desk,clock);}
+ // ---- V5.X IDX Coverage Floor -------------------------------------------------------------------
+ coverageFloor(c,clock){
+  const y0=CORE_ROWS*TILE;
+  const g=c.createLinearGradient(0,y0-8,0,y0+34);g.addColorStop(0,"#0A0D11");g.addColorStop(.25,"#3A2F24");g.addColorStop(1,"#2A221A");c.fillStyle=g;c.fillRect(0,y0-6,W,36);
+  c.fillStyle="rgba(232,200,142,.18)";c.fillRect(0,y0+14,W,1);c.fillStyle="rgba(0,0,0,.35)";c.fillRect(0,y0-6,W,4);
+  for(let x=24;x<W;x+=96){c.fillStyle="rgba(236,205,145,.06)";c.fillRect(x,y0+2,48,2);}
+  c.fillStyle="rgba(7,10,14,.92)";c.fillRect(W/2-170,y0+2,340,16);c.fillStyle="#E8A33D";c.fillRect(W/2-170,y0+2,3,16);
+  c.font="bold 9px Arial";c.textBaseline="middle";c.fillStyle="#F0E6D6";c.textAlign="center";c.fillText("IDX COVERAGE FLOOR · SOUTH RESEARCH ORGANISATION",W/2,y0+10);c.textAlign="left";
+  const bx=19*TILE,by=39*TILE+14,bw=42*TILE;c.fillStyle="#05080B";c.fillRect(bx,by,bw,22);c.fillStyle="#303A45";c.fillRect(bx,by,bw,2);
+  c.font="bold 7px Arial";const labels=TEAM.filter(x=>x.group==="SECTOR_LEAD").map(x=>x.desk),step=bw/labels.length;
+  labels.forEach((l,i)=>{const x=bx+i*step;c.fillStyle=i%2?"#0C1219":"#0A1016";c.fillRect(x+2,by+4,step-4,16);c.fillStyle="#E8A33D";c.fillRect(x+2,by+4,step-4,2);
+   c.fillStyle="#C9CED4";c.textAlign="center";c.fillText(l,x+step/2,by+13,step-8);
+   const h=1+((i*7+Math.floor(clock/3))%4);c.fillStyle=i%3?"#3DBD4A":"#3E8EDD";c.fillRect(x+step/2-8,by+19-h,16,h);});c.textAlign="left";
+  this.storage(c,2*TILE+10,51*TILE+6,13*TILE-20,46,"RESEARCH STANDARDS","#E8A33D");
+  c.fillStyle="#05080B";c.fillRect(65*TILE+6,40*TILE,11*TILE-12,14);c.fillStyle="#E84A93";c.fillRect(65*TILE+6,40*TILE,3,14);c.fillStyle="#D9DEE2";c.font="bold 7px Arial";c.fillText("QC · SOURCES · MATH · TONE",65*TILE+14,40*TILE+7,11*TILE-24);
+  c.fillStyle="#05080B";c.fillRect(78*TILE+6,40*TILE,10*TILE-12,14);c.fillStyle="#78B8F0";c.fillRect(78*TILE+6,40*TILE,3,14);c.font="bold 7px Arial";
+  c.save();c.beginPath();c.rect(78*TILE+12,40*TILE,10*TILE-20,14);c.clip();c.fillStyle="#D9DEE2";
+  const ticker="IDX NEWS · Q3 PRINTS · DSI EXPORT RULE · FREE-FLOAT STEP · MSCI · ",tw=c.measureText(ticker).width,off=(clock*18)%Math.max(1,tw);c.fillText(ticker+ticker,78*TILE+14-off,40*TILE+7);c.restore();
+  for(const x of [200,560,920,1280]){const glow=c.createRadialGradient(x,y0+150,6,x,y0+150,150);glow.addColorStop(0,"rgba(236,205,145,.055)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(x-160,y0+20,320,300);}
+ }
+ compactBack(c,desk,clock){
+  const [col,row]=desk.point,cx=(col+.5)*TILE,cy=(row+.5)*TILE,color={north:"#3E8EDD",south:"#E8A33D",macro:"#78B8F0",bear:"#E84A93"}[desk.tone]||"#9AA3AD";
+  c.fillStyle="rgba(0,0,0,.3)";c.fillRect(cx-36,cy+18,72,7);
+  c.fillStyle="#121820";c.fillRect(cx-12,cy-30,24,34);c.fillStyle="#2C3540";c.fillRect(cx-9,cy-27,18,24);
+  this.monitor(c,cx-30,cy-62,28,20,desk.seed,color,clock);this.monitor(c,cx+2,cy-62,28,20,desk.seed+4,color,clock);
+  c.fillStyle="#424C56";c.fillRect(cx-1,cy-42,2,10);c.fillStyle="#222A32";c.fillRect(cx-22,cy-33,44,4);
+ }
+ compactFront(c,desk,clock){
+  const [col,row]=desk.point,cx=(col+.5)*TILE,cy=(row+.5)*TILE,agent=desk.role&&this.agents.find(a=>a.role===desk.role),pulse=(Math.floor(clock*5)+desk.seed)%2,accent={north:"#3E8EDD",south:"#E8A33D",macro:"#78B8F0",bear:"#E84A93"}[desk.tone]||"#9AA3AD";
+  c.fillStyle="#3A2C20";c.fillRect(cx-34,cy+2,68,13);c.fillStyle="#6A5138";c.fillRect(cx-34,cy+2,68,3);
+  c.fillStyle="#181C21";c.fillRect(cx-13,cy+5,26,7);c.fillStyle=agent?(pulse?"#78B8F0":"#3DBD4A"):"#515A64";for(let k=0;k<5;k++)c.fillRect(cx-11+k*5,cy+7,3,2);
+  c.fillStyle="#D9DEE2";c.fillRect(cx-30,cy+5,10,6);c.fillStyle=accent;c.fillRect(cx-30,cy+5,2,6);c.fillStyle="#AAB2B9";c.fillRect(cx+22,cy+4,6,6);
+  const label=String(desk.label||"");c.font="bold 6px Arial";const pw=Math.max(34,c.measureText(label).width+8);
+  c.fillStyle="#0B0E12";c.fillRect(cx-pw/2,cy+15,pw,9);c.fillStyle=accent;c.fillRect(cx-pw/2,cy+15,pw,1);
+  c.fillStyle="#E4D3B5";c.textAlign="center";c.textBaseline="middle";c.fillText(label,cx,cy+20);c.textAlign="left";
+  if(desk.vacant){c.font="7px Arial";const t=desk.vacant,tw=c.measureText(t).width+10;c.fillStyle="rgba(7,10,13,.9)";c.fillRect(cx-tw/2,cy-22,tw,12);c.fillStyle="#8EC1F0";c.textAlign="center";c.fillText(t,cx,cy-16);c.textAlign="left";}
+ }
  deskBack(c,desk,clock){
   const [col,row]=desk.point,cx=(col+.5)*TILE,cy=(row+.5)*TILE,color={north:"#3E8EDD",south:"#E8A33D",macro:"#78B8F0",bear:"#E84A93",judge:"#78B8F0",risk:"#3DBD4A",ops:"#9AA3AD",post:"#9AA3AD"}[desk.tone]||"#9AA3AD";
   c.fillStyle="rgba(0,0,0,.32)";c.fillRect(cx-43,cy+22,86,9);c.fillStyle="#121820";c.fillRect(cx-14,cy-38,28,43);c.fillStyle="#303944";c.fillRect(cx-11,cy-35,22,31);c.fillStyle="#171D24";c.fillRect(cx-17,cy-18,5,22);c.fillRect(cx+12,cy-18,5,22);
@@ -511,7 +585,7 @@ class Floor{
   c.restore();
  }
  drawAgentLabel(c,a){
-  const x=Math.round(a.x),y=Math.round(a.y),meeting=!!a.meetingAssigned,floating=!!a.controlledMove&&!meeting,label=String(a.name||a.role).slice(0,20)+" · "+String(a.roleLabel||a.title||"Desk agent").slice(0,24),labelY=meeting?y+12:floating?y-70:(a.row<=10?y+8:y+18);c.save();c.font="bold "+(meeting?7:8)+"px Arial";const maxWidth=meeting?88:132,labelW=Math.min(maxWidth,Math.max(meeting?70:76,c.measureText(label).width+12)),labelX=Math.max(3,Math.min(W-labelW-3,Math.round(x-labelW/2))),center=labelX+labelW/2;c.fillStyle="rgba(7,10,13,.94)";c.fillRect(labelX,labelY,labelW,14);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(labelX,labelY,3,14);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,center,labelY+7,labelW-9);c.restore();
+  const x=Math.round(a.x),y=Math.round(a.y),meeting=!!a.meetingAssigned,floating=!!a.controlledMove&&!meeting,compact=!!a.compact&&!meeting&&!floating,label=compact?String(a.name||a.role).slice(0,14):String(a.name||a.role).slice(0,20)+" · "+String(a.roleLabel||a.title||"Desk agent").slice(0,24),labelY=meeting?y+12:floating?y-70:compact?y+26:(a.row<=10?y+8:y+18);c.save();c.font="bold "+(meeting?7:8)+"px Arial";const maxWidth=compact?60:meeting?88:132,labelW=Math.min(maxWidth,Math.max(compact?40:meeting?70:76,c.measureText(label).width+12)),labelX=Math.max(3,Math.min(W-labelW-3,Math.round(x-labelW/2))),center=labelX+labelW/2;c.fillStyle="rgba(7,10,13,.94)";c.fillRect(labelX,labelY,labelW,14);c.fillStyle=a.book==="North"?"#3E8EDD":a.book==="South"?"#E8A33D":"#9AA3AD";c.fillRect(labelX,labelY,3,14);c.fillStyle="#F0F2F4";c.textAlign="center";c.textBaseline="middle";c.fillText(label,center,labelY+7,labelW-9);c.restore();
  }
 }
 

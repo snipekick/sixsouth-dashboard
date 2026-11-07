@@ -243,13 +243,14 @@ async function renderThesis(el,id){
   const ix=await loadIndex();const t=records(ix&&ix.theses).find(x=>x.id===id);
   if(!t){el.innerHTML=nav('theses')+'<div class="muted small rpad">thesis not found</div>';return;}
   const doc=asRecord(await loadDoc(t.doc));const m=asRecord(doc.meta),lv=asRecord(doc.levels),ko=doc.kill_outcome;
+  if(window.SixSouthA4&&window.SixSouthA4.getView('reportView')==='a4'){await renderThesisA4(el,t,doc);return;}
   const stages=records(doc.stage_log).map(s=>`<li><span class="mono">${esc(String(s.at||'').slice(0,16).replace('T',' '))}</span> <b>${esc(s.stage)}</b> <span class="muted">${esc(s.actor||'')}</span></li>`).join('');
   const kc=records(doc.kill_criteria).map(k=>`<li><b>${esc(k.metric||'')}</b> ${esc(k.op||'')} ${esc(k.value??'')} <span class="tag">${esc(k.action||'')}</span>${k.name?` <span class="muted">${esc(k.name)}</span>`:''}${k.condition?`<div class="small muted">${esc(k.condition)}</div>`:''}${k.note?`<div class="small muted">${esc(k.note)}</div>`:''}</li>`).join('');
   const secs=records(doc.sections);
   const openByDefault=new Set(['Variant perception','Bear attack','Judge verdict','PM decision']);
   const sectionHtml=secs.map(s=>`<details class="rsec"${openByDefault.has(s.heading)?' open':''}><summary>${esc(s.heading)}${s.detail?` <span class="muted small">${esc(s.detail)}</span>`:''}</summary><div class="rbody">${mdx(s.markdown)}</div></details>`).join('');
   el.innerHTML=nav('theses')+`
-    <div class="rcrumb"><a href="#research/theses">← all theses</a> · <a href="#research/stock/${encodeURIComponent(m.ticker||'')}">${esc(m.ticker)} coverage</a> · <button class="rbtn" id="rCsv">Download model (CSV)</button></div>
+    <div class="rcrumb"><a href="#research/theses">← all theses</a> · <a href="#research/stock/${encodeURIComponent(m.ticker||'')}">${esc(m.ticker)} coverage</a> · <button class="rbtn" id="rCsv">Download model (CSV)</button> <button class="rbtn" id="rA4">A4 report view</button></div>
     <div class="panel rpanel"><div class="rhead">
       <div><h2>${esc(m.name||m.ticker)} <span class="mono muted">${esc(m.ticker)}</span></h2>
       <div class="rmeta">${bookChip(m.book)} ${verdictBadge(m.verdict,m.size_multiplier)} <span class="tag">${esc(m.status||'')}</span>
@@ -266,7 +267,72 @@ async function renderThesis(el,id){
     <div class="panel rpanel"><div class="ptitle"><span class="dot"></span>The thesis, in the desk's words<span class="aux"><button class="rbtn" id="rExpand">expand all</button></span></div>
       <div class="pbody">${sectionHtml||'<div class="muted small">no body</div>'}</div></div>`;
   const cs=document.getElementById('rCsv');if(cs)cs.addEventListener('click',()=>downloadCsv(doc));
+  const a4b=document.getElementById('rA4');if(a4b)a4b.addEventListener('click',()=>{window.SixSouthA4.setView('reportView','a4');renderThesis(el,id);});
   const ex=document.getElementById('rExpand');if(ex)ex.addEventListener('click',()=>{const all=[...el.querySelectorAll('details.rsec')];const open=all.some(d=>!d.open);all.forEach(d=>{d.open=open;});ex.textContent=open?'collapse all':'expand all';});
+}
+
+/* ---------------- Six South standard A4 thesis report ---------------- */
+const plain=t=>String(t||'').replace(/\*\*|`|#+\s/g,'').replace(/\s+/g,' ').trim();
+const firstSentence=t=>{const p=plain(t);const m=p.match(/^(.{40,240}?[.!?])\s/);return m?m[1]:p.slice(0,220);};
+async function renderThesisA4(el,t,doc){
+  const A4=window.SixSouthA4;A4.resetFigures();
+  const m=asRecord(doc.meta),lv=asRecord(doc.levels),e=asRecord(doc.ev),sz=asRecord(doc.sizing),br=asRecord(doc.base_rate),ko=doc.kill_outcome;
+  const book=bookName(m.book),ccy=m.book==='INDO'?'IDR':'USD',P=v=>validNumber(v)?(ccy==='IDR'?'Rp'+fmt0(Number(v)):'$'+fmt(Number(v),2)):'—';
+  const vClass=VERDICT_CLASS[m.verdict]||'';
+  const hdr={division:m.book==='INDO'?'South Book · Research':'North Book · Research',kind:'Investment Thesis',region:m.book==='INDO'?'Indonesia':'Global',
+    sector:String(m.sector||'').replace(/_/g,' '),ticker:m.ticker,date:m.judged||m.drafted};
+  const secs=records(doc.sections);
+  const vp=secs.find(x=>/^variant perception/i.test(x.heading||''));
+  const actors=records(doc.stage_log),who=role=>{const a=actors.find(x=>x.role===role);return a?a.actor:null;};
+  // price chart from the research price feed (weekly closes), with entry / target / kill read-outs
+  const prices=await loadPrices();const ser=(asRecord(prices.series)[m.ticker]||[]).filter(r=>Array.isArray(r)&&validNumber(r[1])).slice(-60);
+  const pchart=ser.length>3?chart(ser.map(r=>r[0]),[{name:'Price',color:'#0B3D91',vals:ser.map(r=>Number(r[1]))},
+      {name:'Target',color:'#1E7F3B',dash:true,vals:ser.map(()=>validNumber(lv.target)?Number(lv.target):null)},
+      {name:'Kill',color:'#B3261E',dash:true,vals:ser.map(()=>validNumber(lv.kill)?Number(lv.kill):null)}],
+      {h:200,fmtY:v=>fmt(v,v>=1000?0:2),pills:true,title:`${m.ticker} weekly close vs target and kill`,description:'Weekly closes with the committed target and falsification levels'}):'';
+  const priceFig=pchart?A4.fig(`${m.ticker} weekly close vs target and kill (${ccy})`,pchart,'Public price feed; Six South levels'):'';
+  const evFig=A4.fig('Expected value and sizing',`<table><tbody>
+      <tr><td>Thesis works (target)</td><td class="num">${validNumber(e.p_up)?fmt(e.p_up*100,0)+'%':'—'}</td><td class="num">${sgn(e.up_pct)}</td></tr>
+      <tr><td>Thesis falsified (kill)</td><td class="num">${validNumber(e.p_down)?fmt(e.p_down*100,0)+'%':'—'}</td><td class="num">${sgn(e.down_pct)}</td></tr>
+      <tr><td>Dividends, if it works (none at the kill)</td><td class="num">${validNumber(e.p_up)?fmt(e.p_up*100,0)+'%':'—'}</td><td class="num">${sgn(validNumber(e.net_div_yield_pct_pa)&&validNumber(e.horizon_years)?e.net_div_yield_pct_pa*e.horizon_years:null)}</td></tr>
+      <tr><td><b>Expected return</b></td><td class="num"></td><td class="num"><b>${sgn(e.expected_pct)}</b></td></tr>
+      <tr><td>Base rate (archetype)</td><td class="num" colspan="2">${validNumber(br.rate)?fmt(br.rate*100,0)+'%':'—'}</td></tr>
+      <tr><td>Kelly (full) · PM size</td><td class="num" colspan="2">${validNumber(e.kelly_full_pct)?fmt(e.kelly_full_pct,1)+'%':'—'} · ${validNumber(sz.pm_pct)?fmt(sz.pm_pct,2)+'% NAV':'—'}</td></tr></tbody></table>`,'Six South two-point EV; base-rate library');
+  const modelFig=(()=>{const md=doc.model;if(!md)return'';const years=md.years||[],lines=asRecord(md.lines);
+    const t1=`<div class="cv-tbl"><table><thead><tr><th>${esc(md.currency||'')} ${esc(md.unit||'')}</th>${years.map(y=>`<th class="num${/E$/.test(y)?' est':''}">${esc(y)}</th>`).join('')}</tr></thead><tbody>
+      ${Object.entries(lines).map(([k,v])=>`<tr><td>${esc(k.replace(/_/g,' '))}</td>${years.map((y,i)=>`<td class="num${/E$/.test(y)?' est':''}">${validNumber((v||[])[i])?mnum(v[i]):'—'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    const val=asRecord(md.valuation),sc=['bear','base','bull'].filter(k=>val[k]);
+    const t2=sc.length?`<div class="cv-tbl" style="margin-top:3mm"><table><thead><tr><th>Case</th><th class="num">Value / share</th><th>Basis</th></tr></thead><tbody>${sc.map(k=>`<tr><td><b>${esc(k)}</b></td><td class="num">${P(val[k].value)}</td><td style="white-space:normal">${esc(val[k].basis||'')}</td></tr>`).join('')}</tbody></table></div>`:'';
+    return A4.fig(`Financial model and valuation${val.method?' — '+val.method:''}`,t1+t2,'Analyst bottom-up estimates, committed before market data');})();
+  const killFig=A4.fig('Kill criteria (machine-checked)',`<ul class="a4-timeline">${records(doc.kill_criteria).map(k=>`<li><b>${esc(k.metric||'')} ${esc(k.op||'')} ${esc(k.value??'')}</b> → ${esc(k.action||'')}${k.name?` · ${esc(k.name)}`:''}${k.condition?`<br>${esc(k.condition)}`:''}</li>`).join('')||'<li>none recorded</li>'}</ul>`,'Six South constitution');
+  const trailFig=A4.fig('Decision trail',`<ul class="a4-timeline">${actors.map(x=>`<li><b>${esc(x.stage)}</b> · ${esc(x.actor||'')} · ${esc(String(x.at||'').slice(0,16).replace('T',' '))}</li>`).join('')||'<li>no stage log</li>'}</ul>`,'Six South stage log');
+  const strip=A4.strip([
+    ['Verdict',`<span class="a4-badge ${vClass}">${esc((VERDICT_LABEL[m.verdict]||m.verdict||'PENDING')+(m.verdict==='PASS_REDUCED'&&validNumber(m.size_multiplier)?' '+fmt(m.size_multiplier,2)+'×':''))}</span>`],
+    ['Target',P(lv.target),'big'],['Entry',P(lv.entry)],['Kill',P(lv.kill)],[`Last ${String(lv.price_asof||'').slice(5)}`,P(lv.price)],
+    ['P(target)',validNumber(e.p_up)?fmt(e.p_up*100,0)+'%':'—'],['Expected',sgn(e.expected_pct)],['Horizon',`${esc(m.horizon||'—')}${validNumber(e.horizon_years)?' '+fmt(e.horizon_years,1)+'y':''}`],['Status',esc(m.status||'—')]]);
+  const byline=`<div class="a4-byline">Analyst <b>${esc(m.analyst||who('ANALYST_'+m.book)||'—')}</b> · bear attack <b>${esc(who('BEAR')||'Drew')}</b> · verdict <b>${esc(who('JUDGE')||'Aldrich')}</b> · ${esc(m.id||'')} · drafted ${esc(dateOnly(m.drafted))}${m.judged?` · judged ${esc(dateOnly(m.judged))}`:''}</div>`;
+  const pages=[];
+  const coverFlow=A4.flow([
+    {html:vp?`<h3>Variant perception</h3>${mdx(vp.markdown)}`:'',text:true},
+    {html:priceFig,narrow:true},
+    {html:lv.target_rationale?`<h3>Target basis</h3><p>${esc(lv.target_rationale)}</p>`:'',text:true},
+    {html:ko?`<h3>Kill outcome</h3><p>Killed ${esc(ko.killed||'')} at ${esc(P(ko.px_at_kill))} (${esc(ko.reason||'')}); now ${esc(P(ko.px_now))}, ${sgn(ko.move_pct)} since.</p>`:'',text:true},
+    {html:evFig,narrow:true},{html:killFig,narrow:true},
+    {html:modelFig}]);
+  pages.push({cover:{kicker:`Investment thesis · ${book} · ${String(m.archetype||'').replace(/_/g,' ')}`,title:m.name||m.ticker,sub:m.ticker,
+      headline:vp?firstSentence(vp.markdown):(lv.target_rationale||'')},full:strip+byline+coverFlow});
+  const rest=secs.filter(x=>x!==vp);
+  pages.push({title:'The research record',full:`<h2 class="a4-h2">The research record<small>${esc(m.ticker)} · in the desk's own words</small></h2>`+
+    rest.map(x=>`<h3>${esc(plain(x.heading))}${x.detail?` <span style="font-weight:400;color:var(--pm)">· ${esc(plain(x.detail))}</span>`:''}</h3>${mdx(x.markdown)}`).join('')+
+    A4.flow([{html:trailFig,narrow:true},{html:'<div></div>',text:true}])+`<h2 class="a4-h2">Disclosures</h2>${A4.DISCLOSURES}`});
+  const total=pages.length;
+  const toolbar=`<span class="crumb"><a href="#research/theses">← all theses</a> · <a href="#research/stock/${encodeURIComponent(m.ticker||'')}">${esc(m.ticker)} coverage</a> · ${esc(m.id||'')} · <span class="a4-pages-count">${total} pages, A4</span></span>
+    <button class="rbtn" id="rCsv">Download model (CSV)</button><button class="rbtn" id="a4Web">Web view</button><button class="rbtn" id="a4Print">Print / save PDF (A4)</button>`;
+  el.innerHTML=nav('theses')+A4.doc(pages.map((p,i)=>A4.page(Object.assign({hdr,n:i+1,total},p))),toolbar);
+  A4.paginate(el.querySelector('.a4-doc'));
+  document.getElementById('a4Print').addEventListener('click',()=>A4.print());
+  document.getElementById('rCsv').addEventListener('click',()=>downloadCsv(doc));
+  document.getElementById('a4Web').addEventListener('click',()=>{A4.setView('reportView','web');renderThesis(el,t.id);});
 }
 
 async function renderCoverage(el){

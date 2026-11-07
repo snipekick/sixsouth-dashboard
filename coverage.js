@@ -444,10 +444,11 @@ function football(doc){
   return `<div class="cv-tbl"><div class="cap">Valuation range — methods (bar opacity = weight) and scenarios vs price and target</div><svg class="cv-svg" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Valuation football field">${bars}${line(m.price,'price','#B4541A')}${line(m.tp,'target','#1E7F3B')}</svg></div>`;
 }
 function priceChart(doc){
-  const s=records(asRecord(doc.charts).price).length?asRecord(doc.charts).price:[];
-  if(!Array.isArray(s)||s.length<3)return'';
-  const dates=s.map(r=>String(r[0])+'-01'),vals=s.map(r=>r[1]);
-  return `<div class="cv-tbl"><div class="cap">Share price, monthly close (IDR)</div>${chart(dates,[{name:'Price',color:'#3E8EDD',vals}],{h:170,fmtY:v=>fmt0(v),fill:true,title:'Share price',description:'Monthly closing price'})}</div>`;
+  const s=asArray(asRecord(doc.charts).price).filter(r=>Array.isArray(r)&&validNumber(r[1]));
+  if(s.length<3)return'';
+  const dates=s.map(r=>String(r[0]).length===7?String(r[0])+'-01':String(r[0])),vals=s.map(r=>Number(r[1]));
+  const m=asRecord(doc.meta),tp=validNumber(m.tp)?Number(m.tp):null;
+  return `<div class="cv-tbl"><div class="cap">Share price, monthly close (IDR)</div>${chart(dates,[{name:'Price',color:'#3E8EDD',vals}].concat(tp?[{name:'Target',color:'#1E7F3B',dash:true,vals:vals.map(()=>tp)}]:[]),{h:170,fmtY:v=>fmt0(v),fill:true,pills:true,title:'Share price',description:'Monthly closing price with the 12-month target'})}</div>`;
 }
 const DEFAULT_BLOCKS={s2:['table:drivers'],s3:['table:fin_summary','table:kpis'],s4:['table:wacc','table:valuation','table:dcf','table:sensitivity','table:peers','table:multiples'],s5:['table:scenarios'],s6:['table:konglo']};
 
@@ -496,9 +497,16 @@ async function renderReport(el,ticker,anchor){
   const wb=doc.industry?`models/${encodeURIComponent(doc.industry)}.xlsx`:null;
   const toc=[['summary','Investment summary']].concat(secs.filter(s=>s.key!=='summary').map(s=>[s.key,s.title]))
     .map(([k2,l])=>`<a href="#coverage/report/${encodeURIComponent(doc.ticker)}/${encodeURIComponent(k2)}" data-k="${esc(k2)}">${esc(l)}</a>`).join('');
+  if(window.SixSouthA4&&window.SixSouthA4.getView('reportView')==='a4'){
+    renderReportA4(el,doc,{secs,used,kd,rec,sevCount,modelTables:(()=>{const keep=aps.filter(p=>/^FY(20[0-9]{2})/.test(p)).slice(0,9);
+        return [['IS','Income statement'],['CF','Cash flow'],['BS','Balance sheet'],['OPS','Operating drivers'],['RATIO','Ratios']]
+          .filter(([key])=>records(apSec[key]).length).map(([key,l])=>A4.fig(`${l} (${m.unit||''})`,lineTable(doc,apSec[key],keep,''),'Six South engine model; company filings')).join('');})(),
+      assumptions,chal,checklist,qcHtml,sources,news,hist,so,wb,anchor});
+    return;
+  }
   el.innerHTML=`<div class="cv-paper ${CV.theme==='dark'?'dark':''}" id="cvPaper">
    <div class="cv-actions"><span class="crumb"><a href="#coverage">IDX Coverage</a> › <a href="#coverage/desk/${encodeURIComponent(doc.desk||'')}">${esc(deskName(doc.desk))}</a> › ${esc(doc.industry_name||doc.industry||'')} › <b>${esc(doc.code||doc.ticker)}</b></span>
-     ${wb?`<a class="cv-btn" href="${wb}" download>Download model (.xlsx)</a>`:''}<button class="cv-btn" id="cvPrint">Print / save PDF</button><button class="cv-btn" id="cvTheme">${CV.theme==='dark'?'Light':'Dark'} mode</button></div>
+     ${wb?`<a class="cv-btn" href="${wb}" download>Download model (.xlsx)</a>`:''}<button class="cv-btn" id="cvA4">A4 report view</button><button class="cv-btn" id="cvPrint">Print / save PDF</button><button class="cv-btn" id="cvTheme">${CV.theme==='dark'?'Light':'Dark'} mode</button></div>
    <div class="cv-layout"><nav class="cv-toc" aria-label="Report sections"><b>Report</b>${toc}<b>Appendix</b>
      <a href="#coverage/report/${encodeURIComponent(doc.ticker)}/model" data-k="model">Financial model</a><a href="#coverage/report/${encodeURIComponent(doc.ticker)}/assumptions" data-k="assumptions">Assumption log</a>
      <a href="#coverage/report/${encodeURIComponent(doc.ticker)}/review" data-k="review">Review record</a><a href="#coverage/report/${encodeURIComponent(doc.ticker)}/sources" data-k="sources">Sources</a>
@@ -533,9 +541,85 @@ async function renderReport(el,ticker,anchor){
    </article></div></div>`;
   const paper=document.getElementById('cvPaper');
   document.getElementById('cvPrint').addEventListener('click',()=>window.print());
+  const a4b=document.getElementById('cvA4');if(a4b)a4b.addEventListener('click',()=>{window.SixSouthA4.setView('reportView','a4');renderReport(el,ticker,anchor);});
   document.getElementById('cvTheme').addEventListener('click',()=>{CV.theme=CV.theme==='dark'?'light':'dark';try{localStorage.setItem('cvTheme',CV.theme);}catch(_){}
     paper.classList.toggle('dark',CV.theme==='dark');document.getElementById('cvTheme').textContent=CV.theme==='dark'?'Light mode':'Dark mode';});
   if(anchor){const t=document.getElementById('cv-'+anchor);if(t)t.scrollIntoView({block:'start'});}else{window.scrollTo(0,0);}
+}
+
+/* ---------------- Six South standard A4 equity research report ---------------- */
+const A4=window.SixSouthA4||null;
+const NARROW=new Set(['chart:price','chart:football','table:wacc']);
+const FIG_TITLE={'table:fin_summary':'Financial summary','table:kpis':'Operating drivers','table:valuation':'Valuation by method','chart:football':'Valuation range',
+  'table:wacc':'Cost of capital','table:dcf':'Discounted cash flow','table:scenarios':'Scenarios and probability-weighted target','table:sensitivity':'Target sensitivity',
+  'table:peers':'Industry peers','table:multiples':'Valuation multiples','table:drivers':'Industry and macro drivers','table:konglo':'Konglo lens','chart:price':'Share price'};
+const FIG_SRC='Six South estimates; company filings; house macro and sector decks';
+function renderReportA4(el,doc,x){
+  A4.resetFigures();
+  const m=asRecord(doc.meta),fm=asRecord(doc.report.frontmatter),k=asRecord(doc.key_data);
+  const sector=deskName(doc.desk),industry=doc.industry_name||String(doc.industry||'').replace(/_/g,' ');
+  const hdr={division:'South Research',kind:'Equity Research',region:'Indonesia',sector:`${sector} · ${industry}`,ticker:doc.ticker,date:m.published_at||m.data_asof};
+  const rCls=RCLASS[m.rating]||'r-nr';
+  const blockFig=ref=>{const h=blockHtml(ref,doc);if(!h)return'';return A4.fig(FIG_TITLE[ref]||ref.replace(/^\w+:/,'').replace(/_/g,' '),h,ref==='chart:price'?'IDX; Six South':FIG_SRC);};
+  const item=ref=>({html:blockFig(ref),narrow:NARROW.has(ref)});
+  const text=html=>({html,text:true});
+  const pages=[];
+  // ---- cover: title, rating strip, byline, summary, thesis, catalysts — all in one reading column ----
+  const strip=A4.strip([
+    ['Rating',`<span class="a4-badge ${rCls}">${esc(m.rating||'NOT RATED')}</span>`],
+    ['12m target',px(m.tp),'big'],['Price '+String(m.price_date||'').slice(5),px(m.price)],
+    ['Upside',pctv(m.upside_pct)],['Total return',pctv(m.tr_pct)],['Dividends 12m',px(m.dps12)],
+    ['Market cap',idrTn(k.mcap_idr)],['ADTV 3m',idrBn(k.adtv_3m_idr)],
+    ['Free float',validNumber(k.free_float_pct)?fmt(k.free_float_pct,1)+'%':'—'],['52-wk range',`${validNumber(k.w52_low)?fmt0(k.w52_low):'—'}–${validNumber(k.w52_high)?fmt0(k.w52_high):'—'}`]]);
+  const byline=`<div class="a4-byline"><b>${esc(m.sector_lead||'—')}</b>, ${esc(m.sector_lead_title||'Sector Lead')} · reviewed by <b>${esc(m.reviewer||'—')}</b> (red team) · approved by <b>${esc(m.director||'—')}</b>, Director of Research · data ${esc(m.data_asof||'')}${asRecord(m.investable).ok?'':' · <b>below fund liquidity floors</b>'}</div>`;
+  const catAll=records(fm.catalysts);
+  const coverFlow=A4.flow([
+    text(`<p><strong>${cite(fm.summary||'',doc)}</strong></p>`),
+    item('chart:price'),
+    text(Array.isArray(fm.thesis)&&fm.thesis.length?`<h3>Investment thesis</h3><ul>${fm.thesis.map(t=>`<li>${cite(t,doc)}</li>`).join('')}</ul>`:''),
+    text(catAll.length?`<h3>Catalysts</h3><ul class="a4-cols2">${catAll.map(c=>`<li><b>${esc(c.date||'')}</b> — ${cite(c.event||'',doc)}</li>`).join('')}</ul>`:''),
+    text(m.suspended?`<div class="cv-bg"><span class="lbl">Rating withdrawn</span>${esc(asRecord(m.suspended).reason||'')}</div>`:''),
+    text(m.konglo?`<p style="font-size:8pt;color:var(--pm)">Konglo lens applied: fundamental 12m value ${px(m.tp_fundamental)} before the concentrated-ownership regime; value today ${px(m.v0)}, base case ${px(m.tp_base)}.</p>`:''),
+    x.used.has('table:fin_summary')?null:item('table:fin_summary')]);
+  pages.push({cover:{kicker:`${String(m.report_type||'initiation').toUpperCase()} · ${sector} · ${industry}`,title:doc.name||doc.ticker,sub:doc.ticker,headline:fm.title||''},
+    full:strip+byline+coverFlow});
+  // ---- the report body: every section flows on, figures sit where the text references them ----
+  let body='';
+  for(const sec of x.secs){
+    const items=[];
+    for(const b of records(sec.blocks)){
+      if(b.type==='para')items.push(text(`<p>${cite(b.text,doc)}</p>`));
+      else if(b.type==='list')items.push(text(`<ul>${(Array.isArray(b.items)?b.items:[]).map(t=>`<li>${cite(t,doc)}</li>`).join('')}</ul>`));
+      else if(b.type==='subhead')items.push(text(`<h3>${esc(b.text)}</h3>`));
+      else if(b.type==='background')items.push(text(`<div class="cv-bg"><span class="lbl">Unverified background — general knowledge, not checked against a source</span>${cite(b.text,doc)}</div>`));
+      else if(b.type==='block')items.push(item(b.ref));
+    }
+    (DEFAULT_BLOCKS[sec.key]||[]).filter(r=>!x.used.has(r)).forEach(r=>items.push(item(r)));
+    if(sec.key==='s4'&&!x.used.has('chart:football'))items.push(item('chart:football'));
+    body+=`<h2 class="a4-h2">${esc(sec.title)}</h2>`+A4.flow(items);
+  }
+  pages.push({full:body,title:'Report'});
+  // ---- appendices flow together ----
+  const app=`<h2 class="a4-h2">Appendix A — Financial model<small>${esc(m.unit||'')} · A = actual, E = Six South estimate</small></h2>${x.modelTables||'<div class="cv-note">No model tables published.</div>'}
+    <h2 class="a4-h2">Appendix B — Assumption log</h2>${tbl([{t:'Input'},{t:'Values'},{t:'Basis'},{t:'Sources'}],x.assumptions,'')}
+    <h2 class="a4-h2">Appendix C — Review record<small>sign-off ${esc(x.so.verdict||'—')} by ${esc(x.so.by||'—')}</small></h2>
+    <div class="cv-note">Round ${esc(asRecord(doc.review).round||1)} · ${x.rec.length} challenges (FATAL ${x.sevCount('FATAL')} · MATERIAL ${x.sevCount('MATERIAL')} · MINOR ${x.sevCount('MINOR')})${x.so.notes?` — ${esc(x.so.notes)}`:''}</div>
+    ${x.checklist.length?tbl([{t:'Checklist item'},{t:'Status'},{t:'Note'}],x.checklist,''):''}${x.chal}${x.qcHtml}
+    <h2 class="a4-h2">Appendix D — Sources, news and version history</h2>${x.sources||'<div class="cv-note">No sources registered.</div>'}
+    <h3>News log</h3>${x.news||'<div class="cv-note">No triaged news.</div>'}
+    ${x.hist.length?`<h3>Version history</h3>`+tbl([{t:'Version'},{t:'Date'},{t:'Type'},{t:'Rating'},{t:'Target',cls:'num'}],x.hist,''):''}
+    <h2 class="a4-h2">Disclosures</h2>${A4.DISCLOSURES}<div class="a4-disc"><p>${esc(doc.disclaimer||'')}</p></div>`;
+  pages.push({full:app,title:'Appendices'});
+  const total=pages.length;
+  const html=pages.map((p,i)=>A4.page(Object.assign({hdr,n:i+1,total},p))).join('');
+  const toolbar=`<span class="crumb"><a href="#coverage">IDX Coverage</a> › <a href="#coverage/desk/${encodeURIComponent(doc.desk||'')}">${esc(sector)}</a> › <b>${esc(doc.code||doc.ticker)}</b> · <span class="a4-pages-count">${total} pages, A4</span></span>
+    ${x.wb?`<a class="cv-btn" href="${x.wb}" download>Download model (.xlsx)</a>`:''}<button class="cv-btn" id="a4Web">Web reader</button><button class="cv-btn" id="a4Print">Print / save PDF (A4)</button>`;
+  el.innerHTML=A4.doc([html],toolbar);
+  el.querySelectorAll('section.a4').forEach((sec,i)=>{sec.dataset.title=i===0?(doc.code||doc.ticker):(pages[i].title||'Report');});
+  A4.paginate(el.querySelector('.a4-doc'));
+  document.getElementById('a4Print').addEventListener('click',()=>A4.print());
+  document.getElementById('a4Web').addEventListener('click',()=>{A4.setView('reportView','web');renderReport(el,doc.ticker,x.anchor);});
+  window.scrollTo(0,0);
 }
 
 async function summaryPanel(elId){
