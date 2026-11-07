@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "lesson",
+  "id": "lesson-lesson-0004",
+  "title": "LESSON 0004",
+  "meta": {
+    "id": "LESSON-0004"
+  },
+  "sections": [
+    {
+      "heading": "Overview",
+      "detail": null,
+      "markdown": "# LESSON-0004\nstamp: CONSOLIDATION-JUDGE-2026-11\nsource_lessons: [LESSON-0002 (retained, compressed), LESSON-0004 (new)]"
+    },
+    {
+      "heading": "context",
+      "detail": null,
+      "markdown": "MONTHLY_IC 2026-11-07. The 2026-10-03 \u2192 2026-11-06 window produced 15 kills (avg missed +1.97%, 7 avoided loss, 7 missed gain, 1 flat). Two of the month's three lower-price re-kills missed ~20% after the re-kill; one earned. All three were killed on \"even p_up = 1.0 fails the hurdle\" arithmetic at a price 16-22% below the prior kill."
+    },
+    {
+      "heading": "belief",
+      "detail": null,
+      "markdown": "A re-kill at a materially lower price, whose revised thesis fails the house hurdle even at a certainty probability, is a fresh valuation kill \u2014 the lower price has been re-underwritten and the arithmetic, not the prior reason, is dispositive."
+    },
+    {
+      "heading": "outcome",
+      "detail": null,
+      "markdown": "T-INDO-ASII-002 killed 2026-10-19 (kill level 4,000; ledger px 4,080) \u2192 +22.5% missed. T-INDO-KLBF-002 killed 2026-10-19 (entry plan 520; ledger px 630) \u2192 +19.8% missed from 630 (+45.2% from the 520 entry). Both had every stated falsification KPI intact at the kill: ASII DPS 330 > 300 and FCF coverage ~1.0x (review threshold  9.0%, price 630 > 410, DPS 20 not below 20. Counterexamples: T-INDO-TOWR-002 (-3.3%, earned) and T-GLOBAL-SMFG-003 (-5.8%, earned). TOWR's leverage review KPI had fired (net debt/EBIT 6.76x > 6.5) and its H1-26 margin compression was a print; SMFG's FY2026 print corrected recurring ROE from 10.0% to 8.6% ex ~JPY224bn one-offs."
+    },
+    {
+      "heading": "cause",
+      "detail": null,
+      "markdown": "`thesis_wrong` at the judge gate. The hurdle arithmetic was correct, but it tests the entry price, not the business. With every falsification KPI intact and no printed earnings-quality impairment, a sub-hurdle result is a price objection \u2014 fund record's own \"a price that is too high today is not a kill\" \u2014 and converting it into a KILL spends the 60-day cooldown on a name whose merits were never broken. The same arithmetic on an impaired name (TOWR leverage, SMFG recurring ROE) is a genuine thesis kill and earned."
+    },
+    {
+      "heading": "rule",
+      "detail": null,
+      "markdown": "On a re-kill at a materially lower price, a sub-hurdle result (even at p_up = 1.0) is a price objection, not a thesis failure, unless a stated KPI has fired or a printed number impairs earnings quality. PASS at a price or REVISE; KILL only with a fired KPI or printed impairment."
+    },
+    {
+      "heading": "affected_agent",
+      "detail": null,
+      "markdown": "JUDGE"
+    },
+    {
+      "heading": "evidence",
+      "detail": null,
+      "markdown": "- T-INDO-ASII-002 (2026-10-19, valuation, kill 4,000 / ledger 4,080) \u2014 counterfactual +22.5%. Judge killed on \"even p_up = 1.0 returns 8.9%/yr vs 11.2%\"; DPS_FY2026 > 300 and FCF_coverage \u2265 1.0 had not printed against the thesis. Price reached 5,000, the pre-revision base.\n- T-INDO-KLBF-002 (2026-10-19, valuation, entry 520 / ledger 630) \u2014 counterfactual +19.8% from 630. Judge killed on 3.0%/yr expected at 520; net margin 9.09% was 9bp above the 9.0% review KPI, price was above the 410 impairment kill, DPS was not below 20. Price reached 755.\n- T-INDO-TOWR-002 (2026-10-19, valuation, kill 366 / ledger 364) \u2014 counterfactual -3.3%, kill earned. Bounding case: net_debt_to_ebit 6.76x > 6.5 review KPI had fired and H1-26 margin compression was printed evidence.\n- T-GLOBAL-SMFG-003 (2026-10-19, valuation, 24.75) \u2014 counterfactual -5.8%, third kill earned. Bounding case: the FY2026 print corrected recurring ROE to 8.6% ex one-offs, a printed earnings-quality impairment; not a lower-price re-kill (prior kill 24.86).\n- Relationship to LESSON-0002: LESSON-0002 requires re-testing the first reason on a re-kill and is retained. This lesson adds the missing test: whether the *business* has been falsified, or only the entry price. The two rules together are: re-test the reason, then require a fired KPI or printed impairment before a sub-hurdle arithmetic result becomes a KILL.\n- Counterexamples respected: T-GLOBAL-QCOM-001 (2026-09-28, base_rate, 201.97) \u2014 -18.1% avoided loss; base-rate kills remain untouched. T-GLOBAL-SMFG-001/002 \u2014 first and second kills earned (-9.4%, -6.2%); this rule does not reverse them."
+    }
+  ]
+}
