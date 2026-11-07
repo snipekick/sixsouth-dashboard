@@ -1,0 +1,2906 @@
+{
+  "schema": 1,
+  "ticker": "ISAT.JK",
+  "code": "ISAT",
+  "name": "PT Indosat Tbk",
+  "desk": "INFRASTRUCTURES",
+  "industry": "TELCO",
+  "industry_name": "Telecommunications",
+  "report": {
+    "ticker": "ISAT.JK",
+    "frontmatter": {
+      "ticker": "ISAT.JK",
+      "report_type": "initiation",
+      "version": 1,
+      "title": "Indosat Ooredoo Hutchison: market repair at a distressed multiple",
+      "summary": "We initiate Indosat Ooredoo Hutchison at BUY with a Rp4,365 target, 214.1% above the Rp1,425 price. A three-player market is repairing ARPU, the spectrum payment that lifted capex is behind us, and the shares trade on 8.3x forward earnings with a 7.8% dividend yield while the reported September balance sheet carries IDR70,219.5bn of gross debt [S0]. The bear case still values the equity above the price.",
+      "thesis": [
+        "ARPU, not subscriber count, is now the revenue engine \u2014 ARPU reached Rp46,000 in 9M 2026 on a flat 93.4 m base, a like-for-like rise of the rate the company reports against the 9M 2025 base, which is worth more than the subscriber losses of prior years [S2][S6].",
+        "The capex peak is a dated event, not a trend. The spectrum award lifted FY2026E capex to 33.5% of sales, and the ratio falls to 26.0% as the payment clears, releasing free cash flow [S6][S10].",
+        "At 8.3x forward earnings the market prices a broken business; our reverse DCF says the price discounts revenue growth stalls in FY2027E against our 8.0% [S0].",
+        "Leverage is not the constraint it looks like. Gross debt rose to IDR70,219.5bn by 30 September 2026 as the spectrum was paid, and on the reported stock net debt is about two and a third times the last actual year's EBITDA and a little over two times LTM EBITDA, not the lower figure the model's year-end line implies; we hold that stock flat, refinancing maturities rather than repaying, so net debt falls only as free cash flow after dividends allows [S0].",
+        "The controlling shareholders own 85.3% of the shares, so minority holders depend on parent-level capital discipline and on a dividend that was raised to Rp111 [S12][S16]."
+      ],
+      "catalysts": [
+        {
+          "date": "2027-02",
+          "event": "Full-year results and FY2027 guidance on capex normalisation",
+          "source": "S0"
+        },
+        {
+          "date": "2027-04",
+          "event": "Annual general meeting and the next dividend declaration",
+          "source": "S12"
+        },
+        {
+          "date": "2026-12",
+          "event": "AI cloud revenue run-rate against the company target",
+          "source": "S14"
+        },
+        {
+          "date": "2027-07",
+          "event": "Population coverage milestone under the spectrum licence",
+          "source": "S10"
+        }
+      ],
+      "desk": "INFRASTRUCTURES",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-08"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "We initiate Indosat Ooredoo Hutchison at BUY with a twelve-month target of Rp4,365, which is 214.1% above the Rp1,425 closing price. The shares sit near the bottom of their range between Rp1,360 and Rp2,740, on 8.3x forward earnings and a 7.8% dividend yield [S0]. Our view is not that Indonesia's third mobile operator becomes the first; it is that the price already assumes the opposite of what the last four quarters show [S2][S6]."
+          },
+          {
+            "type": "para",
+            "text": "The variant view has three legs. First, growth has rotated from subscriber acquisition to ARPU: blended ARPU reached Rp46,000 in 9M 2026 while the base held at 93.4 m, and 9M 2026 revenue was 45,800 IDR bn with EBITDA of 21,100 IDR bn [S2][S5][S6]. Second, the capex that frightened the market is a dated cash event: the low-band and mid-band spectrum award cost real money in Q3 2026, taking FY2026E capex to 33.5% of revenue, after which we model 26.0% and falling [S6][S10]. Third, the balance sheet carries the build: gross debt was IDR70,219.5bn at the September 2026 balance sheet, up as the spectrum award was paid for, and on that reported stock net debt is about two and a third times the last actual year's EBITDA rather than the flattering figure the model's year-end cash line produces; with maturities refinanced rather than repaid it is free cash flow after dividends, not a fresh equity cheque, that reduces net debt from here [S0][S6]."
+          },
+          {
+            "type": "para",
+            "text": "What moves the value is therefore narrow and identifiable. The DCF is 50% of the target and worth Rp4,600; the EV/EBITDA cross-check is 35% and worth Rp2,303; the dividend-yield cross-check is 15% and worth Rp3,408. Terminal value is 54% of the DCF, so the target is mostly a claim about the years after the build, discounted at 10.8%. The honest statement of the risk is that every method we run lands above the price, including the bear case at Rp2,624: when the whole method set agrees with itself and disagrees with the market by this margin, the disagreement is about a fact rather than about arithmetic, and section four names the candidates."
+          },
+          {
+            "type": "background",
+            "text": "Indonesia is an archipelago market where fixed-line penetration never happened at scale, so mobile\nbroadband is the access technology for most households and small firms. That structural fact explains\nwhy data traffic keeps compounding even when subscriber counts stall, and why operators with spectrum\nand tower density defend share through coverage rather than price alone."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indosat Ooredoo Hutchison is the entity created by the January 2022 merger of PT Indosat Ooredoo and PT Hutchison Indonesia, the operator known as Tri; the combination was approved by virtually all shareholders and created the country's third mobile operator [S17]. The company began as a foreign investment company providing international telecommunications services and has been listed on the Indonesia Stock Exchange throughout; Ooredoo, the Qatar-owned group, became its major shareholder in 2008 and remains part of the controlling bloc alongside the Hutchison side after the merger [S16]."
+          },
+          {
+            "type": "para",
+            "text": "The business is primarily mobile connectivity sold to consumers. Prepaid voice and data under the company's consumer brands supply the bulk of revenue, with postpaid, home broadband and enterprise connectivity as the growth adjacencies. The releases we archived do not publish a segment profit split, so we treat the group as one mobile-led cash engine and describe the adjacencies by their disclosed operating metrics rather than by an inferred revenue share [S8][S16]. Home broadband closed FY2025 with approximately 400,000 customers, small against the mobile base but growing from a low start [S8]."
+          },
+          {
+            "type": "para",
+            "text": "Scale is the asset. The network reached more than 278,000 base transceiver stations at the end of FY2025, of which more than 6,800 are 5G sites, and data traffic in 9M 2026 was 14,829 petabytes against 16,170 for the whole of FY2024 [S8][S2][S9]. The mobile base was 93.4 m at 9M 2026 on Rp46,000 ARPU [S6][S2]. We are explicit about those ARPU prints because they are not one continuous series: the [S8] blended FY2025 figure of Rp44,000 grows at its own year-on-year rate, which implies a FY2024 level above the Rp38,000 print in [S9], while the 9M 2026 figure of Rp46,000 is the mobile measure growing against a 9M 2025 base of roughly the level [S6] and [S2] imply [S8][S9][S6][S2]. We therefore use the like-for-like growth rates the company reports and do not stitch the levels together. On that basis ARPU did not advance in the third quarter \u2014 the nine-month figure is the same as the first-half figure \u2014 which is the first evidence that the repair paused rather than failed [S6][S2]. The company employed 4,189 people at the last count [S0]."
+          },
+          {
+            "type": "para",
+            "text": "The strategy management describes is an AI-led cost and product programme rather than a network-share land grab. Management frames the transformation as using AI across network and customer operations, and reports the AI cloud business as a discrete growth line: it booked US$50 by the 9M 2026 stage against a full-year target of US$100 [S2][S14]. That line is small relative to group revenue and we carry it as optionality rather than as a revenue driver; its value is that it uses the data-centre and connectivity assets the mobile network already funds."
+          },
+          {
+            "type": "para",
+            "text": "The footprint is national, with the 5G build concentrated where population density pays. The company won additional low-band and mid-band spectrum in the 2026 award, 80.0 MHz in total width, and the licence attaches build obligations rather than a one-off payment alone [S10][S11]. Competitive position is challenger: on the most recent count the company holds 22.2% of mobile connections, behind the incumbent's 160 m subscribers and broadly level with the merged number-two operator's 94.5 m, with Indosat third on share even though its own base of 93.4 m is a shade larger [S18][S6]."
+          },
+          {
+            "type": "para",
+            "text": "Group structure is the thing to understand about the equity. On the registry basis the controlling shareholders hold 85.3% of the shares and the free float is 16.2%; institutions account for 10.9% and sit inside that float, so the two figures are not additive and the residual retail float is smaller than the float line implies [S0]. A company controlled at that level is run for the group's capital allocation priorities, and the minority's claim on cash is the dividend, which the 2026 annual meeting set at Rp111 per share for FY2025 [S12][S13]. Section six returns to what that concentration means for governance and for the liquidity of the shares."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesian mobile is a three-player market and that structure is the whole investment case. On the most recent connection counts Indosat holds 22.2% of the market, with the leader at a little over half and the merged challenger between the two; the same source puts the leader's base at 160 m subscribers, the merged challenger at 94.5 m and Indosat at 93.4 m [S18][S6]. Consolidation from four licensed operators to three, completed when the third and fourth merged, removed the sub-scale player that had been the price disruptor, and the more rational conduct that followed is visible in ARPU rather than in subscriber counts [S18][S19]."
+          },
+          {
+            "type": "para",
+            "text": "The demand driver is data volume, and it is still compounding. Traffic reached 14,829 petabytes in the first nine months of 2026, a run rate above the 16,170 recorded for the whole of FY2024, while the subscriber base was flat and ARPU reached Rp46,000 on the 9M 2026 measure, growing at the like-for-like rate the company reports rather than by the step from the FY2025 average level [S2][S6]. More traffic per user and more revenue per user on a stable base is what a repaired market looks like \u2014 the third quarter showing no further ARPU gain is the warning inside that sentence \u2014 and it explains the shape of our forecast: revenue growth of 10.1% in FY2026E fading to 5.5% by FY2030E, driven by price and mix rather than by net adds [S2][S5]."
+          },
+          {
+            "type": "para",
+            "text": "Regulation sets both the opportunity and the cost. The communications ministry awarded low-band and mid-band spectrum in the 2026 selection, with Indosat among the winners, and attached rollout obligations: winners must provide 5G service covering at least 51.0% of the national population by the fifth year [S10][S11]. That obligation is why we do not model capex falling straight back to the FY2025A ratio of 22.0%; it also means spectrum is an entry barrier for anyone without a licence and a spending commitment for anyone with one [S10]."
+          },
+          {
+            "type": "para",
+            "text": "Competitive position is stable but not safe. The incumbent's scale lets it absorb spectrum and network cost at a lower unit charge, and the merged challenger now has the spectrum depth to attack in the low band, where indoor coverage is won [S11][S19]. Indosat's defence is its own low-band holding, its 278,000 sites and the ARPU mix it has built; its vulnerability is that it is the smallest of three and therefore the first to feel a price relapse [S18]."
+          },
+          {
+            "type": "para",
+            "text": "On the five forces, buyer power is high and rising because switching costs are low and number portability makes churn cheap; supplier power sits with tower companies, fibre providers and the state as spectrum vendor; the threat of new entry is low because spectrum is licensed and scarce; the threat of substitutes is moderate, with fixed broadband and satellite filling gaps the mobile network cannot reach economically; and rivalry is the decisive force, currently restrained by the three-player structure and by the shared memory of the price war that destroyed returns before consolidation [S18][S19]. The method card's warning applies directly: price war is the base rate in Indonesian data, so market repair is a thesis that must be evidenced quarter by quarter, not assumed."
+          },
+          {
+            "type": "para",
+            "text": "External influences are the rupiah and the rate path. Spectrum and a portion of network equipment are priced in foreign currency while revenue is rupiah, so a weaker rupiah raises the capex bill at exactly the moment the licence requires spending, and the cost of refinancing the debt that funded the build moves with the policy rate [S0][S10]. Both enter the model through the cost of capital and the cost of debt rather than as separate shocks, which is the honest treatment for a company that carries IDR70,219.5bn of reported gross debt, against IDR54,915.2bn at the last year-end, into its heaviest investment year and about two and a third times the last actual year's EBITDA on the reported net-debt stock [S0]."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indosat's history is a margin story before it is a growth story. Revenue rose from IDR46,752.3bn in FY2022A to IDR56,520.0bn in FY2025A while EBITDA margin went from 41.6% to 47.7%; the filing puts FY2025 EBITDA at IDR26,590.0bn against the pack-derived IDR26,962.6bn, so the filed margin is a little lower than the pack basis and we leave that difference visible rather than smooth it [S0][S13]. FY2025 itself grew only 1.1% as the merged base was digested [S0][S13]. Net profit attributable to owners was IDR5,510.0bn in FY2025 against IDR4,916.0bn in FY2024 [S13][S9]. The FY2025 statement is the one to calibrate against because it is the last full audited year and because the revenue line, not the cost line, was the weak part."
+          },
+          {
+            "type": "para",
+            "text": "The cost structure is network-heavy and largely fixed. D&A is the single largest charge at IDR15,831.1bn, about 28.0% of revenue, which is why EBIT of IDR11,131.5bn sits far below EBITDA; the gap matters for anyone valuing the company on earnings rather than on cash [S0]. Gross margin has been stable at 57.8% and our forecast holds it at 57.8% because the inputs are leases, interconnect and devices rather than a commodity [S0][S6]. Opex including D&A is modelled at 39.2% of revenue, easing slightly as management's AI cost programme lands, which is the only cost claim we accept without a year of evidence behind it [S6]."
+          },
+          {
+            "type": "para",
+            "text": "The current year runs ahead of that history. 9M 2026 revenue was IDR45,800.0bn, EBITDA IDR21,100.0bn and net profit attributable to owners IDR4,900.0bn, with ARPU at Rp46,000 and traffic at 14,829 petabytes [S2][S5][S15]. On our FY2026E revenue of IDR62,228.5bn and EBITDA of IDR28,998.5bn, nine months at that run rate is a normal fourth quarter rather than a peak [S2]. The profit line needs one adjustment before it is annualised: the nine-month figure is not a clean run-rate, because in the second quarter pre-tax profit exceeded EBIT less net interest by an amount with no counterpart in the first or third quarter, which the pack carries as a non-operating credit [S0]. Our FY2026E figure of IDR5,522.6bn strips that credit and adds a fourth quarter at the recurring nine-month rate, so the raw comparison implies a much sharper fourth-quarter fall than the model actually contains; the unaudited quarters also mean a year-end true-up is a live risk [S0][S2]."
+          },
+          {
+            "type": "para",
+            "text": "The forecast is a price-led build. Revenue reaches IDR62,228.5bn in FY2026E, growth of 10.1%, and IDR80,418.4bn by FY2030E; EBITDA margin holds near 48.1% because operating leverage comes from ARPU rather than from headcount [S2][S5]. Capex is the swing line: IDR20,846.6bn in FY2026E, or 33.5% of sales, falling to 24.0% by FY2030E as the spectrum payment clears and the coverage obligation is met [S6][S10]."
+          },
+          {
+            "type": "para",
+            "text": "Cash flow follows capex with a lag but stays positive throughout. Free cash flow to the firm was IDR8,540.1bn in FY2025A, IDR6,440.9bn in FY2026E and IDR12,476.3bn in FY2027E [S0]. That funds the dividend at the current policy of 65.0% of earnings: Rp111 per share now, Rp127 in FY2027E and Rp189 by FY2030E, a path that assumes the board keeps the payout ratio rather than the absolute amount [S12][S0]."
+          },
+          {
+            "type": "para",
+            "text": "Debt is the largest balance-sheet fact, and it moved during 2026. Gross debt was IDR54,915.2bn at FY2025A and IDR70,219.5bn at 30 September 2026 as the spectrum award was paid, so we rebuild the forecast from the September stock rather than the year-end one and hold it there: maturities are refinanced rather than repaid, and net borrowing is zero from FY2027E [S0][S6]. On the reported stock net debt is about two and a third times the last actual year's EBITDA and a little over two times LTM EBITDA, and the enterprise is about three and three-quarter times our FY2026E EBITDA \u2014 above the 3.4x the model's own understated net-debt line puts on the screen [S0]. Interest is charged on that stock at 8.1%, which lifts the FY2027E charge to IDR5,683.6bn from IDR4,444.8bn and is why FY2027E earnings grow more slowly than EBITDA [S0]. Two caveats we state rather than bury. The September debt sits further above the FY2025A year-end than the nine-month cash flow can explain, so part of the increase is recognition of lease and spectrum obligations that a cash-flow model does not recreate. Because of that, the template's FY2026E cash and net-debt lines are not used for anything in this report: the template books the whole gross-debt increase as a cash inflow and prints a cash balance above the reported one and a net debt below it, so every leverage and multiple statement we make is on the reported 30 September stock, and the valuation deducts that stock itself rather than the model line [S0]."
+          },
+          {
+            "type": "para",
+            "text": "Working capital is negative and we hold it at the last audited ratio. Operating working capital was IDR-6,481.8bn at FY2025A because prepaid balances and payables exceed receivables, and we carry that ratio, -11.5% of revenue, flat through the forecast [S0]. We do not use the three-year average or the September balance sheet: the September print lifts current liabilities by an order of magnitude more than payables moved, which is a reclassification of debt and the spectrum payable rather than a working-capital release, so the last audited year is the comparable anchor [S0]."
+          },
+          {
+            "type": "para",
+            "text": "Three earnings-quality points follow from the method card, and the first one has changed sign. The accruals test was clean for three years, when operating cash flow exceeded net profit in every one; the nine months of 2026 break that pattern. Operating cash flow fell year on year while revenue rose to IDR45,800.0bn and net profit attributable to owners rose to IDR4,900.0bn, so cash conversion has deteriorated even as the reported profit accelerated \u2014 the divergence flag in the method card, not a stable ratio [S0][S2]. The driver is visible in the quarterlies: the profit line grew faster than the cash line, and the pack's LTM operating cash flow is below the simple net-profit plus D&A proxy. We therefore anchor the free-cash-flow discussion on LTM operating cash flow rather than on that proxy, and we do not describe cash conversion as stable; it is the single number we would most like the FY2026 audit to explain [S0]. This file does not restate depreciation from the fixed-asset and intangible notes, because the pack's D&A of IDR15,831.1bn is the charge the model uses and no fixed-asset note is in the source set [S0]. Second, company-reported capex of 9,938 IDR bn in FY2024 was below the IDR12,672.6bn implied once spectrum and intangibles are included, so the reported capex line understates cash out. Third, the first three quarters are unaudited and the second-quarter non-operating credit is exactly the kind of item a year-end audit can move, so the Q4 true-up is a live risk [S0][S9]."
+          },
+          {
+            "type": "para",
+            "text": "The flags we raise are therefore cash conversion and capitalisation. The capex definition and the spectrum payment make the year-on-year comparison misleading, and a reported capex line that excludes intangibles can flatter free cash flow at the same time as the cash-flow statement shows the opposite [S0][S9]. No inventory and a small receivable book limit the classic divergence channels, and receivables have not outgrown revenue, so the working-capital channel is not the explanation; that is what makes the operating-cash gap worth flagging rather than dismissing [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "A telco is a capital-intensive, regulated subscription business, so the method set is discounted free cash flow to the firm as primary, EV/EBITDA against listed peers as the first cross-check and dividend yield as the second [S0]. The AFFO logic of the house card sits underneath all three and we apply it explicitly rather than asserting a yield: AFFO is EBITDA of IDR28,998.5bn less maintenance capex, less cash interest of IDR4,444.8bn, less cash tax of IDR1,508.1bn. We define maintenance capex on the company-reported basis, not on the pack line: the FY2024 company figure of 9,938 IDR bn against revenue of IDR55,900.0bn is the spending that held the network and the revenue base, while the pack capex of IDR12,672.6bn also carries spectrum and intangibles that the company does not count as capex [S9][S0]. That reconciliation matters because using the pack ratio would overstate maintenance spending and understate the yield. On the company-reported definition AFFO covers the 7.4% ten-year yield and the spread is the compensation for the leverage; on the stricter proxy of D&A as maintenance capex it does not, because D&A carries the spectrum amortisation created in 2026, and we disclose both rather than pick the flattering one [S0]. The test is also measured on the year in which the spectrum is paid, so it understates the yield the business earns once the award clears; the DCF is carried by FY2027E and after, and the table below shows that. We do not use price-to-book as a primary because the asset base is a sunk network whose book value says little about cash generation."
+          },
+          {
+            "type": "para",
+            "text": "The cost of capital build is the ordinary one for an Indonesian large cap. The risk-free rate is 7.4%, the mature-market equity risk premium 4.2% and the country risk premium 2.5%; the unlevered beta of 0.70 relevers at the observed capital structure to 1.53, giving a cost of equity of 16.1%. The pre-tax cost of debt in the WACC is 9.4%, the house deck's forward marginal rate for an Indonesian large cap; the interest charge in the model uses 8.1%, the average rate the nine-month accounts show on the existing stock, and the gap between the two is a deliberate conservatism in the discount rate rather than an inconsistency. With weights of 40% equity and 60% debt the WACC is 10.8% [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "The DCF runs to FY2035E on the capex path described in section three, with terminal growth of 3.5%. It produces an enterprise value of IDR210,453.8bn and Rp4,600 per share, of which 54% is terminal value [S0]. The terminal share is the number to argue with: more than half the value sits after the explicit forecast, which is normal for a network business whose heavy spending ends, but it means the target is sensitive to the discount rate and to what happens to ARPU once the build is finished [S0]. The terminal year is also where a DCF can be flattered, so we state its capex-to-D&A ratio: FY2035E capex of IDR23,550.7bn against D&A of IDR27,559.4bn, below one. That is the company's own record rather than an invention \u2014 FY2025A was capex of IDR12,455.2bn against D&A of IDR15,831.1bn while revenue was flat \u2014 because book D&A carries legacy and spectrum amortisation that replacement spending does not repeat [S0]. Setting terminal capex equal to D&A would cut the DCF and would not change the rating; the sensitivity table shows the order of the change, and it is the reason we do not present the DCF alone."
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "The target is not the DCF alone. It is the probability-weighted scenario value rolled forward twelve months at the 16.1% cost of equity, less the dividend paid over that period. That roll-forward is the engine's convention for turning an intrinsic value into a twelve-month price, not an assumption that the discount to intrinsic value closes within the year; we say so because a reader should not mistake it for a re-rating call the report cannot date [S0][S12]."
+          },
+          {
+            "type": "para",
+            "text": "The cross-checks agree in direction and disagree in size. EV/EBITDA at 5.1x the last actual year's EBITDA, after deducting the reported September net debt, gives Rp2,303, -49.9% against the DCF; the dividend-yield method gives Rp3,408, -25.9% against it [S0]. The multiple is benchmarked on this company's own five-year average, with the two listed Indonesian mobile operators \u2014 Telkomsel's parent and the merged XLSmart \u2014 as the cross-check, not on the four-name \"telecom\" median that also contains wholesale-fibre businesses [S0]. Two mobile names cannot form a median, and that is the honest constraint on this leg. That distinction is the whole argument of the leg: INET and LINK trade on multiples several times a mobile operator's because they are contracted-capacity businesses with regulated or take-or-pay cash flows, and including them in a median for ISAT pushed the benchmark above what any mobile operator in this market has ever sustained [S0]. On the mobile set the benchmark is 5.1x, above both peers because it averages the years when ISAT traded at a premium, which is why the leg sits well below the DCF; the gap is time horizon rather than error, because the multiple capitalises the last actual year's EBITDA and sees none of the capex normalisation that lifts free cash flow from FY2027E [S0]. The dividend method is a spot income measure that gives no credit for growth in the dividend and sits between the two; we keep it as a floor, not as a value."
+          },
+          {
+            "type": "para",
+            "text": "The target is also a re-rating, and we state the multiple it implies rather than leave it inside the DCF. At Rp4,365 the equity value plus the reported September net debt capitalises our FY2026E EBITDA at roughly seven times, against the 5.1x own-history benchmark used in the cross-check and the low peer multiples in the table [S0]. The case for paying it is dated rather than structural: the benchmark averages the years in which the market priced a price war and a spectrum bill that are now behind the company, and the DCF's terminal share says the same thing in cash terms \u2014 the re-rating is the market accepting that the capex peak has passed, not a higher growth assumption [S0][S6]."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "para",
+            "text": "Peers show how far the de-rating has gone. The incumbent trades on a single-digit EBITDA multiple and a double-digit dividend yield and the merged challenger on a slightly higher multiple, which is the peer table below; the wholesale-fibre names trade far above both for a contracted cash flow and are excluded from the benchmark for exactly that reason [S0]. The spread between the mobile names and the fibre names is the market's judgement on Indonesian mobile price risk rather than on ISAT specifically, and our view is that it over-prices that risk for the third operator while under-pricing the fibre names' duration; we prefer the former to the latter."
+          },
+          {
+            "type": "block",
+            "ref": "table:peers"
+          },
+          {
+            "type": "para",
+            "text": "Sensitivity is concentrated in the discount rate and terminal growth, as the table shows: a one-point move in WACC moves the DCF value per share by roughly a fifth, and terminal growth moves it by a similar order. That is the honest range around the target and it is why we weight the multiple and the dividend alongside the DCF rather than publishing a single point [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "What the price implies is the most useful number in this report. Solving the DCF for the revenue growth that reproduces Rp1,425 gives -0.2% for FY2027E against our 8.0%, a gap of roughly eight percentage points of growth [S0]. A price that prices the ARPU-led growth path back to zero for a company that grew revenue by double digits over nine months is either a forecast we cannot see or a discount for something that is not in the cash flow at all. The candidates are a return of the price war after the merged challenger finishes integrating, a funding fear around the spectrum and debt, and a governance and free-float discount given a controlling stake of 85.3%. We cannot source which from the archived material, so we treat it as the central open question rather than as a resolved input, and section five lists what would tell us."
+          },
+          {
+            "type": "background",
+            "text": "For a network business the difference between a value and a price usually sits in the terminal period,\nwhere assumptions about pricing power and maintenance spending dominate. That is why the reverse test,\nasking what growth the price implies rather than what value the model produces, is the more disciplined\nway to frame a wide gap."
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The risks that matter are the ones that would break the repair, not the ones that would dent a quarter."
+          },
+          {
+            "type": "list",
+            "items": [
+              "**Price war returns (medium likelihood, high impact).** The merged challenger has new low-band spectrum",
+              "  and an integration to justify, and the method card treats price war as the base rate in Indonesian",
+              "  data. A relapse would stall ARPU at Rp46,000 and take revenue growth below our",
+              "  8.0%; the third-quarter print, with ARPU no higher at nine months than at",
+              "  six, is the first signpost in that direction; this is the bear case, not a tail [S6][S2][S11][S19].",
+              "**Equity issuance at a discount (low to medium, medium).** The build was debt-funded: gross debt rose",
+              "  to IDR70,219.5bn in the first nine months of 2026 while the share price sits far below",
+              "  our value. We find no rights issue in the company's corporate-action record and none announced since",
+              "  the balance-sheet date, and the 85.3% bloc would have to subscribe to avoid dilution, so this is not",
+              "  the base case [S16][S0]. A placement of a tenth of the shares at the market price would raise cash",
+              "  equal to a tenth of today's market capitalisation and cut per-share intrinsic value by a tenth of the",
+              "  gap between our value and the issue price; that is the arithmetic of any discounted issue and it is",
+              "  why the free float and the ownership bloc sit on the monitoring list [S0].",
+              "**Capex and spectrum overrun (medium, high).** FY2026E capex is 33.5% of sales",
+              "  and the licence obliges 5G coverage of 51.0% of the population by the fifth year. Slippage or a",
+              "  higher bill pushes free cash flow out and delays the dividend path [S10][S6].",
+              "**Regulatory obligation risk (medium, medium).** Coverage and quality obligations come with the",
+              "  spectrum and are enforced by the ministry; penalties or forced spending are a cost we cannot model",
+              "  precisely from public sources [S10].",
+              "**Rate and currency (medium, medium).** With 60% of the capital structure in debt and",
+              "  spectrum priced in foreign currency, a higher policy rate or a weaker rupiah raises both interest and",
+              "  the investment bill at the same time [S0].",
+              "**Governance and parent control (medium, medium).** The controlling shareholders hold",
+              "  85.3% and the free float is 16.2%; minority holders depend on",
+              "  group capital allocation and on a dividend policy that the board can change [S12][S16].",
+              "**Liquidity (high occurrence, medium impact).** A thin float makes the shares prone to supply shocks,",
+              "  and the distance between the price and our value is partly a liquidity and ownership discount rather",
+              "  than a pure cash-flow view [S0].",
+              "**Execution of the AI cost programme (medium, low to medium).** Management credits AI with cost",
+              "  efficiency, and our opex path assumes part of it; if it does not land, margins stay at the FY2025A",
+              "  level rather than improving [S6][S7]."
+            ]
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "The scenarios are mirrored on the same four drivers, which is the discipline the house requires. The bear case takes three percentage points off revenue growth, a point and a half off gross margin, adds one point to the required return and marks terminal growth down by half a point; the bull case does the same in the opposite direction; probabilities are 25% bear, 50% base and 25% bull [S10][S19]. Values are Rp2,624, Rp4,088 and Rp6,661 respectively, against a Rp4,365 weighted target [S0]. The bear is the 2015-19 relapse priced properly: growth slows to the pace of the market's worst decade and the market demands a higher return for holding through it, which is the channel a pure cash-flow case leaves out [S0]. The bull contains no consolidation or disposal premium, because no archived source reports a process; a three-to-two combination or a sale and leaseback of network assets would be additive to what is already a strong bull case and is monitored rather than valued [S16][S17]."
+          },
+          {
+            "type": "para",
+            "text": "We should say plainly that the bear case is still above the Rp1,425 price. That is not comfort; it is a warning that our model and the market disagree about a fact rather than about a discount rate. The only way to reach the price inside this framework is the reverse-DCF growth path, which is growth down to about nothing against a company that just grew double digits over nine months \u2014 a forecast we cannot source, not a scenario we can build from the drivers [S2][S0]. The signposts that would settle it are observable and dated: ARPU in the next two quarterly releases, subscriber net adds, capex as a share of sales in FY2026, net debt to EBITDA through the spectrum payment, competitor pricing in the low band, and whether the dividend is held at Rp111 or raised [S2][S12]. If ARPU stalls while capex stays at the FY2026E ratio, the bear case becomes the base case and the target falls with it."
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Ownership and control are concentrated and stable. The company is the product of the 2022 merger between the Ooredoo and Hutchison businesses, approved by virtually all of the shareholders who voted, and its board carries nominees of both groups alongside the chief executive who runs the operating company [S17][S16]. On the registry basis the controlling shareholders hold 85.3% of the shares and the free float is 16.2%, of which institutions are 10.9% and sit inside the float rather than beside it [S0]. Two consequences follow: there is no disclosed route to control changing hands \u2014 no sale process, no announced divestment and no change in the two-group bloc \u2014 and minority holders are price-takers on capital allocation rather than participants in it [S16][S17]. \"No disclosed route\" is the accurate claim; a three-to-two consolidation or a sale of network assets would be the largest upside driver this file does not capitalise, and section seven lists it as a signpost rather than as a forecast [S18][S19]."
+          },
+          {
+            "type": "para",
+            "text": "The capital-allocation record is the main counterweight. The dividend has risen each year in our sample, from Rp64 in FY2022A to Rp84 in FY2024A and Rp111 in FY2025A, and the 2026 annual meeting approved a distribution of Rp111 per share equal to 65.0% of FY2025 earnings [S12][S13][S0]. What the record does not show is the parent funding the build: gross debt rose to IDR70,219.5bn in the first nine months of 2026, so the capital-allocation test we apply to controlled Indonesian names is passed by the dividend and the absence of an equity raise, not by shareholder support [S0][S16]. The company's corporate-action record shows no rights issue, which is the evidence we have for the forecast's constant share count; it is not a covenant and we do not treat it as one [S16]."
+          },
+          {
+            "type": "para",
+            "text": "Disclosure is where this file is thinner than we would like, and we state that rather than fill it. The archived releases and company profile do not disclose related-party revenue or balances, the audit opinion, the auditor's identity or any share pledges by the controlling shareholders [S16][S17]. We found no going-concern language, no restatement and no special notation in the material we read. On the exchange's special monitoring board and any notation letters we are explicit that this is unverified: neither the archived company profile nor the market registry carries board status, and the exchange's own pages are outside the permitted source set, so we mark it unverified rather than claim a clean check [S16][S0]. Absence of evidence in a press-based source set is not evidence of absence, so related-party procurement, parent-level guarantees, pledged stock and board status stay on the monitoring list for the first update after the annual report is archived [S16]."
+          },
+          {
+            "type": "para",
+            "text": "On ESG, the exposure is structural rather than controversial. The licence requires 5G coverage of at least 51.0% of the population, which is a digital-inclusion commitment as much as a build obligation, and the company reports the network and traffic growth that obligation implies: 278,000 sites, 6,800 of them 5G, and 14,829 petabytes of traffic in nine months [S10][S8][S2]. Energy intensity of that network is the material environmental variable and none of our sources quantifies emissions or the renewable share, so we flag it as unmeasured rather than score it [S8]. Governance-wise, the concentration of ownership and the thin float are the two facts that most affect a minority holder, and both are disclosed and stable."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The dated catalysts below are also in the frontmatter [S0]."
+          },
+          {
+            "type": "list",
+            "items": [
+              "**FY2026 results, February 2027.** The first full year that isolates the post-spectrum capex ratio. We",
+              "  want capex at or below 33.5% of sales and an ARPU print at or above",
+              "  Rp46,000 [S2][S6].",
+              "**AI cloud run-rate, through Q4 2026.** The company targeted US$100 for the full year against",
+              "  US$50 booked by the nine-month stage; delivery would validate the diversification claim",
+              "  without changing our numbers [S14].",
+              "**Annual meeting and dividend, April 2027.** A dividend at or above Rp111 at the",
+              "  65.0% policy is the signal that the board sees the capex peak as past [S12].",
+              "**Coverage milestone, July 2027.** Progress toward the 51.0% population coverage obligation tells",
+              "  us whether the capex path in section three is realistic or optimistic [S10].",
+              "**Control and asset structure, undated.** No process is disclosed, but with the bloc at",
+              "  85.3% a three-to-two consolidation, a disposal or a network leaseback would re-rate",
+              "  the equity; we monitor announcements rather than value them, which is why the bull case is a cash-flow",
+              "  case only [S16][S17]."
+            ]
+          },
+          {
+            "type": "para",
+            "text": "The operating KPIs we track between results are ARPU, net subscriber adds, data traffic, capex as a share of revenue, net debt to EBITDA, the dividend, and the AI cloud run-rate [S2][S6]. ARPU is the one to watch first: it was flat between the first half and the nine months, so the next print tells us whether the repair is intact or merely annualising a weak base [S6][S2]. We also watch the competitors' pricing in the low band, because the three-player equilibrium is the assumption the whole thesis rests on and it will break in the market data before it breaks in the accounts [S18][S19]."
+          },
+          {
+            "type": "para",
+            "text": "What would change our view, stated in advance: two consecutive quarters of falling ARPU with rising capex would move us to hold the shares at a lower target; a dividend cut would make the governance discount the base case rather than the bear case; and a funding gap around the spectrum that forces a discounted equity raise would invalidate the refinancing assumption that carries the equity value [S0][S10]."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for ISAT.JK",
+        "url": "https://finance.yahoo.com/quote/ISAT.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-08",
+        "kind": "data"
+      },
+      "S2": {
+        "title": "Indosat Raup Pendapatan Rp45,8 Triliun, Bisnis AI Cloud Tumbuh Pesat",
+        "url": "https://koran-jakarta.com/2026-10-28/indosat-raup-pendapatan-rp458-triliun-bisnis-ai-cloud-tumbuh-pesat",
+        "publisher": "koran-jakarta.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S5": {
+        "title": "Pendapatan Indosat Tembus Rp45,8 Triliun, Laba Bersih Naik 37,2 Persen per September 2026 - lajur",
+        "url": "https://www.lajur.co/pendapatan-indosat-tembus-rp458-triliun-laba-bersih-naik-372-persen-per-september-2026/",
+        "publisher": "www.lajur.co",
+        "date": "2026-10-29",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "Kinerja Moncer Jadi Modal Indosat Percepat Investasi AI dan 5G",
+        "url": "https://inet.detik.com/telecommunication/d-8594443/kinerja-moncer-jadi-modal-indosat-percepat-investasi-ai-dan-5g",
+        "publisher": "inet.detik.com",
+        "date": "2026-07-28",
+        "kind": "news"
+      },
+      "S7": {
+        "title": "Transformasi AI Dongkrak Kinerja Indosat Semester I 2026, Pendapatan Tembus Rp30,7 Triliun",
+        "url": "https://surabaya.tribunnews.com/news/1945735/transformasi-ai-dongkrak-kinerja-indosat-semester-i-2026-pendapatan-tembus-rp307-triliun",
+        "publisher": "surabaya.tribunnews.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S8": {
+        "title": "Indosat Ooredoo Hutchison shows healthy fundamentals in 2025 with 12.2% net profit growth - Companies - The Jakarta Post",
+        "url": "https://www.thejakartapost.com/business/2026/02/11/indosat-ooredoo-hutchison-shows-healthy-fundamentals-in-2025-with-12-2-net-profit-growth",
+        "publisher": "www.thejakartapost.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S9": {
+        "title": "Indosat Ooredoo Hutchison Tutup 2024 dengan Pertumbuhan Positif",
+        "url": "https://inet.detik.com/business/d-7772308/indosat-ooredoo-hutchison-tutup-2024-dengan-pertumbuhan-positif",
+        "publisher": "inet.detik.com",
+        "date": "2025-02-10",
+        "kind": "news"
+      },
+      "S10": {
+        "title": "Komdigi Tetapkan Pemenang Frekuensi 700 MHz dan 2,6 GHz, Operator Wajib Perluas 5G",
+        "url": "https://tekno.kompas.com/read/2026/07/22/07305357/komdigi-tetapkan-pemenang-frekuensi-700-mhz-dan-26-ghz-operator-wajib-perluas",
+        "publisher": "tekno.kompas.com",
+        "date": "2026-07-22",
+        "kind": "regulator"
+      },
+      "S11": {
+        "title": "Hasil Lelang Frekuensi, XLSmart Menang di 700 MHz, Telkomsel Kuasai 2,6 GHz",
+        "url": "https://inet.detik.com/telecommunication/d-8569256/hasil-lelang-frekuensi-xlsmart-menang-di-700-mhz-telkomsel-kuasai-2-6-ghz",
+        "publisher": "inet.detik.com",
+        "date": "2026-07-11",
+        "kind": "news"
+      },
+      "S12": {
+        "title": "Indosat percepat strategi AI, RUPST setujui dividen Rp111 per saham - ANTARA News Kupang, Nusa Tenggara Timur - ANTARA News Nusa Tenggara Timur - Berita Terkini Nusa Tenggara Timur",
+        "url": "https://kupang.antaranews.com/berita/189179/indosat-percepat-strategi-ai-rupst-setujui-dividen-rp111-per-saham",
+        "publisher": "kupang.antaranews.com",
+        "date": "Sun, 08 No",
+        "kind": "news"
+      },
+      "S13": {
+        "title": "Indosat Bagi Dividen Rp 3,58 Triliun, Catat Jadwalnya",
+        "url": "https://www.beritasatu.com/ekonomi/2991535/indosat-bagi-dividen-rp-358-triliun-catat-jadwalnya",
+        "publisher": "www.beritasatu.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S14": {
+        "title": "Pendapatan Indosat Tumbuh 11 Persen, Bisnis AI Cloud Bidik 100 Juta Dolar AS pada 2026",
+        "url": "https://www.suara.com/tekno/2026/10/29/183504/pendapatan-indosat-tumbuh-11-persen-bisnis-ai-cloud-bidik-100-juta-dolar-as-pada-2026",
+        "publisher": "www.suara.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S15": {
+        "title": "Laba Bersih Indosat (ISAT) Melonjak 37,2% Jadi Rp4,9 Triliun hingga September 2026 - Industry.co.id",
+        "url": "https://www.industry.co.id/read/158144/laba-bersih-indosat-isat-melonjak-372-jadi-rp49-triliun-hingga-september-2026",
+        "publisher": "www.industry.co.id",
+        "date": "2026-10-29",
+        "kind": "news"
+      },
+      "S16": {
+        "title": "PT. Indosat Tbk [ISAT] | IDNFinancials",
+        "url": "https://www.idnfinancials.com/isat/pt-indosat-tbk",
+        "publisher": "www.idnfinancials.com",
+        "date": "2026-11-08",
+        "kind": "company"
+      },
+      "S17": {
+        "title": "Resmi Merger! Indosat Ooredoo dan Tri Indonesia Kini Menjadi Indosat Ooredoo Hutchison",
+        "url": "https://wartaekonomi.co.id/read384752/resmi-merger-indosat-ooredoo-dan-tri-indonesia-kini-menjadi-indosat-ooredoo-hutchison",
+        "publisher": "wartaekonomi.co.id",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S18": {
+        "title": "Merger, Persaingan XL dan Indosat",
+        "url": "https://www.inilah.com/merger-persaingan-xl-dan-indosat",
+        "publisher": "www.inilah.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S19": {
+        "title": "Lomba Pendapatan, ARPU dan 5G",
+        "url": "https://www.tribunnews.com/tribunners/7864212/lomba-pendapatan-arpu-dan-5g",
+        "publisher": "www.tribunnews.com",
+        "date": "2026-11-08",
+        "kind": "news"
+      }
+    },
+    "rendered_at": "2026-11-08T04:25:18+07:00"
+  },
+  "meta": {
+    "rating": "BUY",
+    "tp": 4365.0,
+    "price": 1425.0,
+    "tp_fundamental": 4365.0,
+    "konglo": false,
+    "suspended": null,
+    "price_date": "2026-11-06",
+    "tr_pct": 214.15,
+    "upside_pct": 206.34,
+    "v0": 3617.0,
+    "tp_base": 4088.0,
+    "dps12": 111.31,
+    "liquidity_discount": 0.0,
+    "investable": {
+      "ok": true,
+      "mcap": true,
+      "adtv": true,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-08",
+    "data_asof": "2026-11-08",
+    "model_asof": "2026-11-08",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Tama",
+    "sector_lead_title": "Sector Lead, Infrastructures",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 45957405613725.0,
+    "adtv_3m_idr": 151964044016.0,
+    "free_float_pct": 16.24,
+    "w52_high": 2740.0,
+    "w52_low": 1360.0,
+    "shares_m": 32250.81,
+    "insider_pct": 85.31,
+    "institution_pct": 10.9,
+    "board": "",
+    "listing_date": "2004-03-18",
+    "website": "https://ioh.co.id"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "revenue",
+        "label": "Revenue",
+        "unit": "money",
+        "values": {
+          "FY2023A": 51228.782,
+          "FY2024A": 55900.0,
+          "FY2025A": 56520.0,
+          "FY2026E": 62228.52,
+          "FY2027E": 67206.8016,
+          "FY2028E": 71911.277712
+        }
+      },
+      {
+        "key": "ebitda",
+        "label": "EBITDA",
+        "unit": "money",
+        "values": {
+          "FY2023A": 23937.964,
+          "FY2024A": 26315.91,
+          "FY2025A": 26962.587,
+          "FY2026E": 28998.49032,
+          "FY2027E": 32057.644363,
+          "FY2028E": 34589.324579
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": 4506.392,
+          "FY2024A": 4916.0,
+          "FY2025A": 5510.0,
+          "FY2026E": 5522.631005,
+          "FY2027E": 6278.694157,
+          "FY2028E": 7360.914383
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 139.729934,
+          "FY2024A": 152.430276,
+          "FY2025A": 170.848417,
+          "FY2026E": 171.240066,
+          "FY2027E": 194.683295,
+          "FY2028E": 228.239668
+        }
+      },
+      {
+        "key": "eps_growth",
+        "label": "EPS growth",
+        "unit": "pct",
+        "values": {
+          "FY2023A": -0.045946,
+          "FY2024A": 0.090892,
+          "FY2025A": 0.12083,
+          "FY2026E": 0.002292,
+          "FY2027E": 0.136903,
+          "FY2028E": 0.172364
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 67.1,
+          "FY2024A": 83.8,
+          "FY2025A": 111.0,
+          "FY2026E": 111.306043,
+          "FY2027E": 126.544142,
+          "FY2028E": 148.355784
+        }
+      },
+      {
+        "key": "roe",
+        "label": "ROE",
+        "unit": "pct",
+        "values": {
+          "FY2023A": 0.152529,
+          "FY2024A": 0.153041,
+          "FY2025A": 0.157837,
+          "FY2026E": 0.148093,
+          "FY2027E": 0.158523,
+          "FY2028E": 0.172824
+        }
+      },
+      {
+        "key": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "unit": "x",
+        "values": {
+          "FY2023A": 2.033651,
+          "FY2024A": 1.915653,
+          "FY2025A": 1.848481,
+          "FY2026E": 1.742055,
+          "FY2027E": 1.422719,
+          "FY2028E": 1.135664
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "dcf_fcff",
+        "label": "DCF (FCFF, terminal value)",
+        "available": true,
+        "value": 4599.91,
+        "weight": 0.5,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      },
+      {
+        "method": "ev_ebitda",
+        "label": "EV/EBITDA",
+        "available": true,
+        "value": 2302.91,
+        "weight": 0.35,
+        "basis": "own five-year average",
+        "multiple": 5.0579,
+        "vs_primary_pct": -49.94,
+        "primary": false
+      },
+      {
+        "method": "div_yield",
+        "label": "Dividend yield",
+        "available": true,
+        "value": 3408.47,
+        "weight": 0.15,
+        "basis": "own five-year average",
+        "multiple": 0.0327,
+        "vs_primary_pct": -25.9,
+        "primary": false
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 0.7,
+      "beta_source": "industry default (config)",
+      "de": 1.527926,
+      "beta_levered": 1.534247,
+      "tax": 0.22,
+      "coe_premium": 0.0,
+      "coe": 0.160941,
+      "kd_pre_tax": 0.0945,
+      "we": 0.395581,
+      "wd": 0.604419,
+      "wacc": 0.108217
+    },
+    "g": 0.035,
+    "dcf": {
+      "method": "dcf_fcff",
+      "rows": [
+        {
+          "cf": 6440.926747,
+          "fraction": 0.251882,
+          "time": 0.019165,
+          "df": 0.998033,
+          "pv": 1619.163593,
+          "period": "FY2026E"
+        },
+        {
+          "cf": 12476.323668,
+          "fraction": 0.996578,
+          "time": 0.646133,
+          "df": 0.935764,
+          "pv": 11634.942422,
+          "period": "FY2027E"
+        },
+        {
+          "cf": 14226.271016,
+          "fraction": 0.999316,
+          "time": 1.645448,
+          "df": 0.844447,
+          "pv": 12005.10318,
+          "period": "FY2028E"
+        },
+        {
+          "cf": 15413.392389,
+          "fraction": 0.996578,
+          "time": 2.647502,
+          "df": 0.761826,
+          "pv": 11702.135694,
+          "period": "FY2029E"
+        },
+        {
+          "cf": 16525.132303,
+          "fraction": 0.996578,
+          "time": 3.646817,
+          "df": 0.687482,
+          "pv": 11321.854597,
+          "period": "FY2030E"
+        },
+        {
+          "cf": 17349.420988,
+          "fraction": 0.996578,
+          "time": 4.646133,
+          "df": 0.620393,
+          "pv": 10726.631126,
+          "period": "FY2031E"
+        },
+        {
+          "cf": 18130.144932,
+          "fraction": 0.999316,
+          "time": 5.645448,
+          "df": 0.559852,
+          "pv": 10143.243473,
+          "period": "FY2032E"
+        },
+        {
+          "cf": 18946.001454,
+          "fraction": 0.996578,
+          "time": 6.647502,
+          "df": 0.505076,
+          "pv": 9536.416634,
+          "period": "FY2033E"
+        },
+        {
+          "cf": 19798.57152,
+          "fraction": 0.996578,
+          "time": 7.646817,
+          "df": 0.455787,
+          "pv": 8993.0548,
+          "period": "FY2034E"
+        },
+        {
+          "cf": 20689.507238,
+          "fraction": 0.996578,
+          "time": 8.646133,
+          "df": 0.411309,
+          "pv": 8480.652403,
+          "period": "FY2035E"
+        }
+      ],
+      "pv_sum": 96163.197921,
+      "pv_tv": 114290.577948,
+      "ev": 210453.775869,
+      "net_debt": 62007.835,
+      "minority": 3127.605,
+      "investments": 3032.331,
+      "bridge": 0.0,
+      "equity_value": 148350.666869,
+      "tv_share": 0.543067,
+      "value": 4599.91
+    },
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 4088.0,
+        "v0": 3617.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.25,
+        "tp": 2624.0,
+        "v0": 2341.0,
+        "narrative": "Price war returns as XLSmart uses its merged spectrum to buy share: ARPU stalls, revenue growth runs 3pp below base, gross margin gives up 1.5pp, and the market re-rates the whole sector as it did in the 2015-19 relapse, so the required return rises one point and long-run growth is marked down. The 5G coverage obligations keep capex at the top of the range in the narrative but are not shocked, so the value impact comes from price and the discount rate rather than from a stacked cost case.",
+        "shocks": [
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": -0.03
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": -0.015
+          },
+          {
+            "target": "val.wacc",
+            "op": "add",
+            "value": 0.01
+          },
+          {
+            "target": "val.g",
+            "op": "add",
+            "value": -0.005
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.25,
+        "tp": 6661.0,
+        "v0": 5850.0,
+        "narrative": "Market repair holds: the three-player structure lets ARPU keep rising, AI cloud scales past US$100m, revenue growth runs 3pp above base, gross margin gains 1.5pp, and with a deleveraged balance sheet and no price war the market pays a lower required return and a higher long-run growth rate for the repaired market.",
+        "shocks": [
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": 0.03
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": 0.015
+          },
+          {
+            "target": "val.wacc",
+            "op": "add",
+            "value": -0.01
+          },
+          {
+            "target": "val.g",
+            "op": "add",
+            "value": 0.005
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "DCF value per share vs WACC and terminal growth",
+        "metric": "method:dcf_fcff",
+        "x": {
+          "target": "val.wacc",
+          "op": "add",
+          "label": "WACC (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "y": {
+          "target": "val.g",
+          "op": "add",
+          "label": "Terminal growth (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "grid": [
+          [
+            4987.937002,
+            4538.571575,
+            4143.928833,
+            3794.663922,
+            3483.439342
+          ],
+          [
+            5287.365608,
+            4790.233537,
+            4357.342848,
+            3977.074193,
+            3640.444911
+          ],
+          [
+            5634.159412,
+            5078.786879,
+            4599.905009,
+            4182.805513,
+            3816.317486
+          ],
+          [
+            6040.52237,
+            5412.985112,
+            4878.024602,
+            4416.635675,
+            4014.675269
+          ],
+          [
+            6523.244932,
+            5804.588946,
+            5200.138621,
+            4684.743237,
+            4240.124815
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs revenue growth and gross margin",
+        "metric": "tp",
+        "x": {
+          "target": "a.revenue_growth",
+          "op": "add",
+          "label": "Revenue growth (+/- pp, every year)",
+          "steps": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ]
+        },
+        "y": {
+          "target": "a.gross_margin",
+          "op": "add",
+          "label": "Gross margin (+/- pp)",
+          "steps": [
+            -0.02,
+            -0.01,
+            0.0,
+            0.01,
+            0.02
+          ]
+        },
+        "grid": [
+          [
+            2716.095644,
+            3174.197042,
+            3709.617867,
+            4334.810751,
+            5063.998377
+          ],
+          [
+            2865.704267,
+            3342.178808,
+            3898.857567,
+            4548.634414,
+            5306.232993
+          ],
+          [
+            3015.31289,
+            3510.160575,
+            4088.097267,
+            4762.458077,
+            5548.467608
+          ],
+          [
+            3164.921514,
+            3678.142341,
+            4277.336967,
+            4976.28174,
+            5790.702223
+          ],
+          [
+            3314.530137,
+            3846.124108,
+            4466.576667,
+            5190.105404,
+            6032.936838
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": true,
+      "target": "a.revenue_growth",
+      "op": "add",
+      "factor": -0.082493,
+      "period": "FY2027E",
+      "implied_value": -0.002493,
+      "method": "dcf_fcff"
+    },
+    "multiples": {
+      "FY2025A": {
+        "pe": 8.340727,
+        "pbv": 1.265339,
+        "div_yield": 0.077895,
+        "ev_ebitda": 3.668967
+      },
+      "FY2026E": {
+        "pe": 8.321651,
+        "pbv": 1.201092,
+        "div_yield": 0.07811,
+        "ev_ebitda": 3.43473,
+        "fcfe_yield": 0.396171
+      },
+      "FY2027E": {
+        "pe": 7.31958,
+        "pbv": 1.122226,
+        "div_yield": 0.088803,
+        "ev_ebitda": 2.953868,
+        "fcfe_yield": 0.184903
+      },
+      "FY2028E": {
+        "pe": 6.243437,
+        "pbv": 1.039013,
+        "div_yield": 0.104109,
+        "ev_ebitda": 2.554744,
+        "fcfe_yield": 0.226478
+      }
+    },
+    "peers": {
+      "median": {},
+      "rows": {
+        "TLKM.JK": {
+          "pe": 12.0737,
+          "ev_ebitda": 3.5166,
+          "pbv": 1.5942,
+          "ev_sales": 1.7013,
+          "div_yield": 0.1127
+        },
+        "EXCL.JK": {
+          "ev_ebitda": 4.1995,
+          "pbv": 0.9423,
+          "ev_sales": 1.7691,
+          "div_yield": 0.1064
+        }
+      }
+    },
+    "drivers": {},
+    "konglo": null
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E",
+      "FY2031E",
+      "FY2032E",
+      "FY2033E",
+      "FY2034E",
+      "FY2035E"
+    ],
+    "sections": {
+      "OPS": [],
+      "IS": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 46752.319,
+            "FY2023A": 51228.782,
+            "FY2024A": 55900.0,
+            "FY2025A": 56520.0,
+            "FY2026E": 62228.52,
+            "FY2027E": 67206.8016,
+            "FY2028E": 71911.277712,
+            "FY2029E": 76225.954375,
+            "FY2030E": 80418.381865,
+            "FY2031E": 84037.209049,
+            "FY2032E": 87818.883456,
+            "FY2033E": 91770.733212,
+            "FY2034E": 95900.416207,
+            "FY2035E": 100215.934936
+          }
+        },
+        {
+          "key": "cogs",
+          "label": "Cost of revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 21149.374,
+            "FY2023A": 21084.88,
+            "FY2024A": 22740.295,
+            "FY2025A": 23828.49,
+            "FY2026E": 26260.43544,
+            "FY2027E": 28226.856672,
+            "FY2028E": 30058.914084,
+            "FY2029E": 31709.99702,
+            "FY2030E": 33373.628474,
+            "FY2031E": 34875.441755,
+            "FY2032E": 36444.836634,
+            "FY2033E": 38084.854283,
+            "FY2034E": 39798.672726,
+            "FY2035E": 41589.612998
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": 25602.945,
+            "FY2023A": 30143.902,
+            "FY2024A": 33146.575,
+            "FY2025A": 32689.651,
+            "FY2026E": 35968.08456,
+            "FY2027E": 38979.944928,
+            "FY2028E": 41852.363628,
+            "FY2029E": 44515.957355,
+            "FY2030E": 47044.753391,
+            "FY2031E": 49161.767294,
+            "FY2032E": 51374.046822,
+            "FY2033E": 53685.878929,
+            "FY2034E": 56101.743481,
+            "FY2035E": 58626.321937
+          }
+        },
+        {
+          "key": "opex",
+          "label": "SG&A and other opex",
+          "unit": "money",
+          "values": {
+            "FY2022A": 19837.423,
+            "FY2023A": 20827.101,
+            "FY2024A": 22389.113,
+            "FY2025A": 21558.199,
+            "FY2026E": 24393.57984,
+            "FY2027E": 25874.618616,
+            "FY2028E": 27542.019364,
+            "FY2029E": 29118.314571,
+            "FY2030E": 30719.821873,
+            "FY2031E": 32102.213857,
+            "FY2032E": 33546.81348,
+            "FY2033E": 35056.420087,
+            "FY2034E": 36633.958991,
+            "FY2035E": 38282.487146
+          }
+        },
+        {
+          "key": "ebit",
+          "label": "EBIT",
+          "unit": "money",
+          "values": {
+            "FY2022A": 5765.522,
+            "FY2023A": 9316.801,
+            "FY2024A": 10757.462,
+            "FY2025A": 11131.452,
+            "FY2026E": 11574.50472,
+            "FY2027E": 13105.326312,
+            "FY2028E": 14310.344265,
+            "FY2029E": 15397.642784,
+            "FY2030E": 16324.931519,
+            "FY2031E": 17059.553437,
+            "FY2032E": 17827.233342,
+            "FY2033E": 18629.458842,
+            "FY2034E": 19467.78449,
+            "FY2035E": 20343.834792
+          }
+        },
+        {
+          "key": "da",
+          "label": "Depreciation & amortisation",
+          "unit": "money",
+          "values": {
+            "FY2022A": 13703.158,
+            "FY2023A": 14621.163,
+            "FY2024A": 15558.448,
+            "FY2025A": 15831.135,
+            "FY2026E": 17423.9856,
+            "FY2027E": 18952.318051,
+            "FY2028E": 20278.980315,
+            "FY2029E": 21343.267225,
+            "FY2030E": 22356.310159,
+            "FY2031E": 23110.232489,
+            "FY2032E": 24150.192951,
+            "FY2033E": 25236.951633,
+            "FY2034E": 26372.614457,
+            "FY2035E": 27559.382107
+          }
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "unit": "money",
+          "values": {
+            "FY2022A": 19468.68,
+            "FY2023A": 23937.964,
+            "FY2024A": 26315.91,
+            "FY2025A": 26962.587,
+            "FY2026E": 28998.49032,
+            "FY2027E": 32057.644363,
+            "FY2028E": 34589.324579,
+            "FY2029E": 36740.910009,
+            "FY2030E": 38681.241677,
+            "FY2031E": 40169.785926,
+            "FY2032E": 41977.426292,
+            "FY2033E": 43866.410475,
+            "FY2034E": 45840.398947,
+            "FY2035E": 47903.216899
+          }
+        },
+        {
+          "key": "interest_expense",
+          "label": "Interest expense",
+          "unit": "money",
+          "values": {
+            "FY2022A": 4317.803,
+            "FY2023A": 4700.39,
+            "FY2024A": 4456.53,
+            "FY2025A": 4177.25,
+            "FY2026E": 4444.832484,
+            "FY2027E": 5683.562526,
+            "FY2028E": 5683.562526,
+            "FY2029E": 5683.562526,
+            "FY2030E": 5683.562526,
+            "FY2031E": 5683.562526,
+            "FY2032E": 5683.562526,
+            "FY2033E": 5683.562526,
+            "FY2034E": 5683.562526,
+            "FY2035E": 5683.562526
+          }
+        },
+        {
+          "key": "interest_income",
+          "label": "Interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 117.626,
+            "FY2023A": 330.998,
+            "FY2024A": 362.972,
+            "FY2025A": 189.402,
+            "FY2026E": 249.162881,
+            "FY2027E": 967.253857,
+            "FY2028E": 1208.199721,
+            "FY2029E": 1518.819832,
+            "FY2030E": 1863.140934,
+            "FY2031E": 2239.998464,
+            "FY2032E": 2639.758233,
+            "FY2033E": 3065.24155,
+            "FY2034E": 3517.757172,
+            "FY2035E": 3998.633195
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other non-operating",
+          "unit": "money",
+          "values": {
+            "FY2022A": 4970.444,
+            "FY2023A": 984.174,
+            "FY2024A": 68.621,
+            "FY2025A": 141.043,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 6535.789,
+            "FY2023A": 5931.583,
+            "FY2024A": 6732.525,
+            "FY2025A": 7284.647,
+            "FY2026E": 7378.835117,
+            "FY2027E": 8389.017643,
+            "FY2028E": 9834.98146,
+            "FY2029E": 11232.90009,
+            "FY2030E": 12504.509927,
+            "FY2031E": 13615.989375,
+            "FY2032E": 14783.429049,
+            "FY2033E": 16011.137866,
+            "FY2034E": 17301.979137,
+            "FY2035E": 18658.905461
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1165.586,
+            "FY2023A": 1155.842,
+            "FY2024A": 1460.113,
+            "FY2025A": 1467.141,
+            "FY2026E": 1508.086321,
+            "FY2027E": 1714.547426,
+            "FY2028E": 2010.073511,
+            "FY2029E": 2295.78012,
+            "FY2030E": 2555.671739,
+            "FY2031E": 2782.835908,
+            "FY2032E": 3021.437229,
+            "FY2033E": 3272.356357,
+            "FY2034E": 3536.178496,
+            "FY2035E": 3813.507098
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 5370.203,
+            "FY2023A": 4775.741,
+            "FY2024A": 5272.412,
+            "FY2025A": 5817.506,
+            "FY2026E": 5870.748796,
+            "FY2027E": 6674.470217,
+            "FY2028E": 7824.907949,
+            "FY2029E": 8937.11997,
+            "FY2030E": 9948.838188,
+            "FY2031E": 10833.153466,
+            "FY2032E": 11761.99182,
+            "FY2033E": 12738.781509,
+            "FY2034E": 13765.800641,
+            "FY2035E": 14845.398363
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": 646.788,
+            "FY2023A": 269.349,
+            "FY2024A": 361.584,
+            "FY2025A": 307.803,
+            "FY2026E": 348.117791,
+            "FY2027E": 395.77606,
+            "FY2028E": 463.993567,
+            "FY2029E": 529.944403,
+            "FY2030E": 589.936258,
+            "FY2031E": 642.373501,
+            "FY2032E": 697.450829,
+            "FY2033E": 755.371527,
+            "FY2034E": 816.270681,
+            "FY2035E": 880.287587
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": 4723.415,
+            "FY2023A": 4506.392,
+            "FY2024A": 4916.0,
+            "FY2025A": 5510.0,
+            "FY2026E": 5522.631005,
+            "FY2027E": 6278.694157,
+            "FY2028E": 7360.914383,
+            "FY2029E": 8407.175567,
+            "FY2030E": 9358.90193,
+            "FY2031E": 10190.779965,
+            "FY2032E": 11064.540991,
+            "FY2033E": 11983.409982,
+            "FY2034E": 12949.52996,
+            "FY2035E": 13965.110776
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 32250.727357,
+            "FY2023A": 32250.727357,
+            "FY2024A": 32250.810957,
+            "FY2025A": 32250.810957,
+            "FY2026E": 32250.810957,
+            "FY2027E": 32250.810957,
+            "FY2028E": 32250.810957,
+            "FY2029E": 32250.810957,
+            "FY2030E": 32250.810957,
+            "FY2031E": 32250.810957,
+            "FY2032E": 32250.810957,
+            "FY2033E": 32250.810957,
+            "FY2034E": 32250.810957,
+            "FY2035E": 32250.810957
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 146.459177,
+            "FY2023A": 139.729934,
+            "FY2024A": 152.430276,
+            "FY2025A": 170.848417,
+            "FY2026E": 171.240066,
+            "FY2027E": 194.683295,
+            "FY2028E": 228.239668,
+            "FY2029E": 260.681059,
+            "FY2030E": 290.191212,
+            "FY2031E": 315.985231,
+            "FY2032E": 343.077915,
+            "FY2033E": 371.569261,
+            "FY2034E": 401.525716,
+            "FY2035E": 433.015802
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 63.925,
+            "FY2023A": 67.1,
+            "FY2024A": 83.8,
+            "FY2025A": 111.0,
+            "FY2026E": 111.306043,
+            "FY2027E": 126.544142,
+            "FY2028E": 148.355784,
+            "FY2029E": 169.442689,
+            "FY2030E": 188.624288,
+            "FY2031E": 205.3904,
+            "FY2032E": 223.000645,
+            "FY2033E": 241.520019,
+            "FY2034E": 260.991715,
+            "FY2035E": 281.460271
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": 2000.022,
+            "FY2023A": 2061.404,
+            "FY2024A": 2163.841,
+            "FY2025A": 2702.4,
+            "FY2026E": 3579.840016,
+            "FY2027E": 3589.710153,
+            "FY2028E": 4081.151202,
+            "FY2029E": 4784.594349,
+            "FY2030E": 5464.664119,
+            "FY2031E": 6083.286255,
+            "FY2032E": 6624.006977,
+            "FY2033E": 7191.951644,
+            "FY2034E": 7789.216488,
+            "FY2035E": 8417.194474
+          }
+        },
+        {
+          "key": "capex",
+          "label": "Capital expenditure",
+          "unit": "money",
+          "values": {
+            "FY2022A": 10429.036,
+            "FY2023A": 13009.489,
+            "FY2024A": 12672.603,
+            "FY2025A": 12455.238,
+            "FY2026E": 20846.5542,
+            "FY2027E": 17473.768416,
+            "FY2028E": 17977.819428,
+            "FY2029E": 18675.358822,
+            "FY2030E": 19300.411648,
+            "FY2031E": 19748.744127,
+            "FY2032E": 20637.437612,
+            "FY2033E": 21566.122305,
+            "FY2034E": 22536.597809,
+            "FY2035E": 23550.74471
+          }
+        },
+        {
+          "key": "delta_nwc",
+          "label": "Change in working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 936.551,
+            "FY2024A": 4180.093,
+            "FY2025A": 3725.356,
+            "FY2026E": -654.587902,
+            "FY2027E": -570.914312,
+            "FY2028E": -539.514025,
+            "FY2029E": -494.811434,
+            "FY2030E": -480.791777,
+            "FY2031E": -415.01072,
+            "FY2032E": -433.686203,
+            "FY2033E": -453.202082,
+            "FY2034E": -473.596175,
+            "FY2035E": -494.908003
+          }
+        },
+        {
+          "key": "fcff",
+          "label": "Free cash flow to firm",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 8176.430581,
+            "FY2024A": 7130.194796,
+            "FY2025A": 8540.098558,
+            "FY2026E": 6440.926747,
+            "FY2027E": 12476.323668,
+            "FY2028E": 14226.271016,
+            "FY2029E": 15413.392389,
+            "FY2030E": 16525.132303,
+            "FY2031E": 17349.420988,
+            "FY2032E": 18130.144932,
+            "FY2033E": 18946.001454,
+            "FY2034E": 19798.57152,
+            "FY2035E": 20689.507238
+          }
+        },
+        {
+          "key": "net_borrowing",
+          "label": "Net borrowing",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -2112.849,
+            "FY2024A": 995.214,
+            "FY2025A": 48.897,
+            "FY2026E": 15304.3,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcfe",
+          "label": "Free cash flow to equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 18206.996148,
+            "FY2027E": 8497.6576,
+            "FY2028E": 10408.328422,
+            "FY2029E": 11798.243989,
+            "FY2030E": 13141.064614,
+            "FY2031E": 14226.193981,
+            "FY2032E": 15290.890585,
+            "FY2033E": 16409.46988,
+            "FY2034E": 17584.421972,
+            "FY2035E": 18818.367822
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "nwc",
+          "label": "Operating working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": -15323.841,
+            "FY2023A": -14387.29,
+            "FY2024A": -10207.197,
+            "FY2025A": -6481.841,
+            "FY2026E": -7136.428902,
+            "FY2027E": -7707.343214,
+            "FY2028E": -8246.857239,
+            "FY2029E": -8741.668674,
+            "FY2030E": -9222.460451,
+            "FY2031E": -9637.471171,
+            "FY2032E": -10071.157374,
+            "FY2033E": -10524.359455,
+            "FY2034E": -10997.955631,
+            "FY2035E": -11492.863634
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash & equivalents",
+          "unit": "money",
+          "values": {
+            "FY2022A": 9507.88,
+            "FY2023A": 5189.573,
+            "FY2024A": 4454.098,
+            "FY2025A": 5075.324,
+            "FY2026E": 19702.480132,
+            "FY2027E": 24610.427579,
+            "FY2028E": 30937.604799,
+            "FY2029E": 37951.254439,
+            "FY2030E": 45627.654935,
+            "FY2031E": 53770.562661,
+            "FY2032E": 62437.446269,
+            "FY2033E": 71654.964505,
+            "FY2034E": 81450.169989,
+            "FY2035E": 91851.343336
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "unit": "money",
+          "values": {
+            "FY2022A": 55983.891,
+            "FY2023A": 53871.042,
+            "FY2024A": 54866.256,
+            "FY2025A": 54915.153,
+            "FY2026E": 70219.453,
+            "FY2027E": 70219.453,
+            "FY2028E": 70219.453,
+            "FY2029E": 70219.453,
+            "FY2030E": 70219.453,
+            "FY2031E": 70219.453,
+            "FY2032E": 70219.453,
+            "FY2033E": 70219.453,
+            "FY2034E": 70219.453,
+            "FY2035E": 70219.453
+          }
+        },
+        {
+          "key": "ppe",
+          "label": "Fixed assets (net)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 69182.066,
+            "FY2023A": 72860.819,
+            "FY2024A": 74143.085,
+            "FY2025A": 75099.499,
+            "FY2026E": 78522.0676,
+            "FY2027E": 77043.517965,
+            "FY2028E": 74742.357078,
+            "FY2029E": 72074.448675,
+            "FY2030E": 69018.550164,
+            "FY2031E": 65657.061802,
+            "FY2032E": 62144.306464,
+            "FY2033E": 58473.477135,
+            "FY2034E": 54637.460487,
+            "FY2035E": 50628.82309
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": 28342.996,
+            "FY2023A": 30745.901,
+            "FY2024A": 33498.431,
+            "FY2025A": 36320.241,
+            "FY2026E": 38263.031988,
+            "FY2027E": 40952.015992,
+            "FY2028E": 44231.779173,
+            "FY2029E": 47854.360391,
+            "FY2030E": 51748.598203,
+            "FY2031E": 55856.091914,
+            "FY2032E": 60296.625927,
+            "FY2033E": 65088.084265,
+            "FY2034E": 70248.397736,
+            "FY2035E": 75796.314039
+          }
+        },
+        {
+          "key": "minority_bs",
+          "label": "Minority interest (balance sheet)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 3025.594,
+            "FY2023A": 2962.891,
+            "FY2024A": 3153.366,
+            "FY2025A": 3188.867,
+            "FY2026E": 3336.912841,
+            "FY2027E": 3506.412337,
+            "FY2028E": 3713.151465,
+            "FY2029E": 3941.500049,
+            "FY2030E": 4186.972446,
+            "FY2031E": 4445.887379,
+            "FY2032E": 4725.795432,
+            "FY2033E": 5027.82392,
+            "FY2034E": 5353.103108,
+            "FY2035E": 5702.814753
+          }
+        },
+        {
+          "key": "net_debt",
+          "label": "Net debt (cash)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 46476.011,
+            "FY2023A": 48681.469,
+            "FY2024A": 50412.158,
+            "FY2025A": 49839.829,
+            "FY2026E": 50516.972868,
+            "FY2027E": 45609.025421,
+            "FY2028E": 39281.848201,
+            "FY2029E": 32268.198561,
+            "FY2030E": 24591.798065,
+            "FY2031E": 16448.890339,
+            "FY2032E": 7782.006731,
+            "FY2033E": -1435.511505,
+            "FY2034E": -11230.716989,
+            "FY2035E": -21631.890336
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 878.832768,
+            "FY2023A": 953.33977,
+            "FY2024A": 1038.68492,
+            "FY2025A": 1126.180704,
+            "FY2026E": 1186.420771,
+            "FY2027E": 1269.798023,
+            "FY2028E": 1371.493549,
+            "FY2029E": 1483.818824,
+            "FY2030E": 1604.567348,
+            "FY2031E": 1731.928291,
+            "FY2032E": 1869.615806,
+            "FY2033E": 2018.184422,
+            "FY2034E": 2178.190118,
+            "FY2035E": 2350.214205
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "revenue_growth",
+          "label": "Revenue growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.095748,
+            "FY2024A": 0.091183,
+            "FY2025A": 0.011091,
+            "FY2026E": 0.101,
+            "FY2027E": 0.08,
+            "FY2028E": 0.07,
+            "FY2029E": 0.06,
+            "FY2030E": 0.055,
+            "FY2031E": 0.045,
+            "FY2032E": 0.045,
+            "FY2033E": 0.045,
+            "FY2034E": 0.045,
+            "FY2035E": 0.045
+          }
+        },
+        {
+          "key": "gross_margin",
+          "label": "Gross margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.547629,
+            "FY2023A": 0.588417,
+            "FY2024A": 0.592962,
+            "FY2025A": 0.578373,
+            "FY2026E": 0.578,
+            "FY2027E": 0.58,
+            "FY2028E": 0.582,
+            "FY2029E": 0.584,
+            "FY2030E": 0.585,
+            "FY2031E": 0.585,
+            "FY2032E": 0.585,
+            "FY2033E": 0.585,
+            "FY2034E": 0.585,
+            "FY2035E": 0.585
+          }
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.416422,
+            "FY2023A": 0.467276,
+            "FY2024A": 0.470768,
+            "FY2025A": 0.477045,
+            "FY2026E": 0.466,
+            "FY2027E": 0.477,
+            "FY2028E": 0.481,
+            "FY2029E": 0.482,
+            "FY2030E": 0.481,
+            "FY2031E": 0.478,
+            "FY2032E": 0.478,
+            "FY2033E": 0.478,
+            "FY2034E": 0.478,
+            "FY2035E": 0.478
+          }
+        },
+        {
+          "key": "ebit_margin",
+          "label": "EBIT margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.123321,
+            "FY2023A": 0.181867,
+            "FY2024A": 0.192441,
+            "FY2025A": 0.196947,
+            "FY2026E": 0.186,
+            "FY2027E": 0.195,
+            "FY2028E": 0.199,
+            "FY2029E": 0.202,
+            "FY2030E": 0.203,
+            "FY2031E": 0.203,
+            "FY2032E": 0.203,
+            "FY2033E": 0.203,
+            "FY2034E": 0.203,
+            "FY2035E": 0.203
+          }
+        },
+        {
+          "key": "np_margin",
+          "label": "Net margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.101031,
+            "FY2023A": 0.087966,
+            "FY2024A": 0.087943,
+            "FY2025A": 0.097488,
+            "FY2026E": 0.088748,
+            "FY2027E": 0.093423,
+            "FY2028E": 0.102361,
+            "FY2029E": 0.110293,
+            "FY2030E": 0.116378,
+            "FY2031E": 0.121265,
+            "FY2032E": 0.125993,
+            "FY2033E": 0.13058,
+            "FY2034E": 0.135031,
+            "FY2035E": 0.13935
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.045946,
+            "FY2024A": 0.090892,
+            "FY2025A": 0.12083,
+            "FY2026E": 0.002292,
+            "FY2027E": 0.136903,
+            "FY2028E": 0.172364,
+            "FY2029E": 0.142137,
+            "FY2030E": 0.113204,
+            "FY2031E": 0.088886,
+            "FY2032E": 0.08574,
+            "FY2033E": 0.083046,
+            "FY2034E": 0.080621,
+            "FY2035E": 0.078426
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.152529,
+            "FY2024A": 0.153041,
+            "FY2025A": 0.157837,
+            "FY2026E": 0.148093,
+            "FY2027E": 0.158523,
+            "FY2028E": 0.172824,
+            "FY2029E": 0.182594,
+            "FY2030E": 0.187924,
+            "FY2031E": 0.189411,
+            "FY2032E": 0.190517,
+            "FY2033E": 0.191146,
+            "FY2034E": 0.191368,
+            "FY2035E": 0.191244
+          }
+        },
+        {
+          "key": "net_debt_ebitda",
+          "label": "Net debt / EBITDA",
+          "unit": "x",
+          "values": {
+            "FY2022A": 2.387219,
+            "FY2023A": 2.033651,
+            "FY2024A": 1.915653,
+            "FY2025A": 1.848481,
+            "FY2026E": 1.742055,
+            "FY2027E": 1.422719,
+            "FY2028E": 1.135664,
+            "FY2029E": 0.878263,
+            "FY2030E": 0.635755,
+            "FY2031E": 0.409484,
+            "FY2032E": 0.185386,
+            "FY2033E": -0.032725,
+            "FY2034E": -0.244996,
+            "FY2035E": -0.451575
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.43647,
+            "FY2023A": 0.480212,
+            "FY2024A": 0.54976,
+            "FY2025A": 0.649699,
+            "FY2026E": 0.65,
+            "FY2027E": 0.65,
+            "FY2028E": 0.65,
+            "FY2029E": 0.65,
+            "FY2030E": 0.65,
+            "FY2031E": 0.65,
+            "FY2032E": 0.65,
+            "FY2033E": 0.65,
+            "FY2034E": 0.65,
+            "FY2035E": 0.65
+          }
+        },
+        {
+          "key": "capex_revenue",
+          "label": "Capex / revenue",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.22307,
+            "FY2023A": 0.253949,
+            "FY2024A": 0.226701,
+            "FY2025A": 0.220369,
+            "FY2026E": 0.335,
+            "FY2027E": 0.26,
+            "FY2028E": 0.25,
+            "FY2029E": 0.245,
+            "FY2030E": 0.24,
+            "FY2031E": 0.235,
+            "FY2032E": 0.235,
+            "FY2033E": 0.235,
+            "FY2034E": 0.235,
+            "FY2035E": 0.235
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        1550.0
+      ],
+      [
+        "2022-01",
+        1431.25
+      ],
+      [
+        "2022-02",
+        1368.75
+      ],
+      [
+        "2022-03",
+        1293.75
+      ],
+      [
+        "2022-04",
+        1750.0
+      ],
+      [
+        "2022-05",
+        1331.25
+      ],
+      [
+        "2022-06",
+        1637.5
+      ],
+      [
+        "2022-07",
+        1668.75
+      ],
+      [
+        "2022-08",
+        1793.75
+      ],
+      [
+        "2022-09",
+        1812.5
+      ],
+      [
+        "2022-10",
+        1693.75
+      ],
+      [
+        "2022-11",
+        1487.5
+      ],
+      [
+        "2022-12",
+        1543.75
+      ],
+      [
+        "2023-01",
+        1525.0
+      ],
+      [
+        "2023-02",
+        1706.25
+      ],
+      [
+        "2023-03",
+        1737.5
+      ],
+      [
+        "2023-04",
+        1750.0
+      ],
+      [
+        "2023-05",
+        2075.0
+      ],
+      [
+        "2023-06",
+        2156.25
+      ],
+      [
+        "2023-07",
+        2300.0
+      ],
+      [
+        "2023-08",
+        2400.0
+      ],
+      [
+        "2023-09",
+        2456.25
+      ],
+      [
+        "2023-10",
+        2362.5
+      ],
+      [
+        "2023-11",
+        2381.25
+      ],
+      [
+        "2023-12",
+        2343.75
+      ],
+      [
+        "2024-01",
+        2393.75
+      ],
+      [
+        "2024-02",
+        2856.25
+      ],
+      [
+        "2024-03",
+        2793.75
+      ],
+      [
+        "2024-04",
+        2750.0
+      ],
+      [
+        "2024-05",
+        2550.0
+      ],
+      [
+        "2024-06",
+        2675.0
+      ],
+      [
+        "2024-07",
+        2775.0
+      ],
+      [
+        "2024-08",
+        2593.75
+      ],
+      [
+        "2024-09",
+        2737.5
+      ],
+      [
+        "2024-10",
+        2500.0
+      ],
+      [
+        "2024-11",
+        2400.0
+      ],
+      [
+        "2024-12",
+        2480.0
+      ],
+      [
+        "2025-01",
+        2310.0
+      ],
+      [
+        "2025-02",
+        1480.0
+      ],
+      [
+        "2025-03",
+        1455.0
+      ],
+      [
+        "2025-04",
+        1750.0
+      ],
+      [
+        "2025-05",
+        2090.0
+      ],
+      [
+        "2025-06",
+        2090.0
+      ],
+      [
+        "2025-07",
+        2200.0
+      ],
+      [
+        "2025-08",
+        2020.0
+      ],
+      [
+        "2025-09",
+        1750.0
+      ],
+      [
+        "2025-10",
+        1885.0
+      ],
+      [
+        "2025-11",
+        2390.0
+      ],
+      [
+        "2025-12",
+        2320.0
+      ],
+      [
+        "2026-01",
+        2230.0
+      ],
+      [
+        "2026-02",
+        2310.0
+      ],
+      [
+        "2026-03",
+        2090.0
+      ],
+      [
+        "2026-04",
+        1995.0
+      ],
+      [
+        "2026-05",
+        2160.0
+      ],
+      [
+        "2026-06",
+        1730.0
+      ],
+      [
+        "2026-07",
+        1900.0
+      ],
+      [
+        "2026-08",
+        2500.0
+      ],
+      [
+        "2026-09",
+        2260.0
+      ],
+      [
+        "2026-10",
+        1365.0
+      ],
+      [
+        "2026-11",
+        1425.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "DCF (FCFF, terminal value)",
+        "value": 4599.91,
+        "weight": 0.5
+      },
+      {
+        "label": "EV/EBITDA",
+        "value": 2302.91,
+        "weight": 0.35
+      },
+      {
+        "label": "Dividend yield",
+        "value": 3408.47,
+        "weight": 0.15
+      },
+      {
+        "label": "Scenario base",
+        "value": 4088.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 2624.0,
+        "weight": 0.25
+      },
+      {
+        "label": "Scenario bull",
+        "value": 6661.0,
+        "weight": 0.25
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "revenue_growth",
+      "label": "Revenue growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.101,
+        "FY2027E": 0.08,
+        "FY2028E": 0.07,
+        "FY2029E": 0.06,
+        "FY2030E": 0.055
+      },
+      "value": null,
+      "lt": 0.045,
+      "basis": "FY2026E anchors on 9M 2026 actual revenue of Rp45.75trn (+11.1% yoy) with Q4 at the Q3 yoy pace (+7.4%), giving +10.1% for the year; FY2027E-30E fade from 8% to 5.5% as ARPU-led growth annualises against a flat 93-95m subscriber base in a three-player market (Telkomsel 51.8%, XLSmart 25.95%, Indosat 22.25%). The ARPU evidence is the like-for-like rate of +16.5% in 9M 2026 against the 9M 2025 base, not the step from the FY2025 average level to the 9M 2026 level, which is smaller because Q4 is the seasonal peak for ARPU.",
+      "sources": [
+        "S2",
+        "S5",
+        "S6",
+        "S18"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "gross_margin",
+      "label": "Gross margin at base input costs",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.578,
+        "FY2027E": 0.58,
+        "FY2028E": 0.582,
+        "FY2029E": 0.584,
+        "FY2030E": 0.585
+      },
+      "value": null,
+      "lt": 0.585,
+      "basis": "FY2025A gross margin 57.8% (revenue less direct cost); held at 57.8-58.5% because the cost base is network lease, interconnect and device cost, and H1 2026 EBITDA margin of 47.6% shows no input-cost inflation beyond the 2025 run rate.",
+      "sources": [
+        "S0",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "opex_pct",
+      "label": "SG&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.392,
+        "FY2027E": 0.385,
+        "FY2028E": 0.383,
+        "FY2029E": 0.382,
+        "FY2030E": 0.382
+      },
+      "value": null,
+      "lt": 0.382,
+      "basis": "Opex here includes D&A. FY2025A was 38.1% of revenue; 9M 2026 EBITDA margin of 46.0% with D&A at 27.7% implies ~39.2% for FY2026E. From FY2027E a 0.5-0.7pp cash-cost efficiency (AI-driven, per management) takes opex to 38.5% and then flat.",
+      "sources": [
+        "S0",
+        "S2",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "da_pct",
+      "label": "D&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.28,
+        "FY2027E": 0.282,
+        "FY2028E": 0.282,
+        "FY2029E": 0.28,
+        "FY2030E": 0.278
+      },
+      "value": null,
+      "lt": 0.275,
+      "basis": "FY2025A D&A was 28.0% of revenue; the 2026 spectrum and 5G capex lift the charge to ~28.2% before it drifts back to 27.5% as revenue outgrows the asset base.",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_pct",
+      "label": "Capex / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.335,
+        "FY2027E": 0.26,
+        "FY2028E": 0.25,
+        "FY2029E": 0.245,
+        "FY2030E": 0.24
+      },
+      "value": null,
+      "lt": 0.235,
+      "basis": "9M 2026 capex was Rp17.3trn (37.9% of 9M revenue) including the 700MHz/2.6GHz spectrum award paid in Q3, so FY2026E lands at 33.5% with a fourth quarter at the underlying run-rate; Q4 is seasonally the lightest capex quarter (FY2025 Q4 was Rp2.2trn, 14% of that quarter's revenue). FY2027E normalises to 26% and 23.5-25% thereafter, above the 22.0% FY2025A because the licence requires 5G coverage of 51% of population by year five and 100Mbps average by 2029.",
+      "sources": [
+        "S0",
+        "S6",
+        "S10"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nwc_pct",
+      "label": "Operating working capital / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": -0.114681,
+        "FY2027E": -0.114681,
+        "FY2028E": -0.114681,
+        "FY2029E": -0.114681,
+        "FY2030E": -0.114681
+      },
+      "value": null,
+      "lt": -0.114681,
+      "basis": "Held at the FY2025A actual ratio of -11.5% of revenue, not the three-year average: the 30 September 2026 balance sheet prints current liabilities up Rp20.4trn with payables almost unchanged, which is a reclassification of debt and the spectrum payable rather than a working-capital release, so the last audited year is the comparable anchor.",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.20438,
+        "FY2027E": 0.20438,
+        "FY2028E": 0.20438,
+        "FY2029E": 0.20438,
+        "FY2030E": 0.20438
+      },
+      "value": null,
+      "lt": 0.20438,
+      "basis": "engine default: average of FY2023A, FY2024A, FY2025A (div(tax, pbt))",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "cost_of_debt",
+      "label": "Cost of debt (on opening debt)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.08094,
+      "lt": null,
+      "basis": "9M 2026 interest expense of Rp3.56trn on an average stock of about Rp62.6trn is 7.6%; the third quarter alone annualises to 7.9% on the post-spectrum stock of Rp70.2trn, so 8.1% is the right charge on the existing stock. The WACC does not use this line: the house macro deck sets the pre-tax cost of debt for an Indonesian large cap at 9.45% (risk-free plus the corporate spread), which is a forward marginal rate above the average rate the company currently pays. We keep both, state the 1.35pp gap in section four, and do not present the lower observed rate as the discount rate.",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cash_yield",
+      "label": "Yield on opening cash",
+      "unit": "pct",
+      "values": null,
+      "value": 0.049093,
+      "lt": null,
+      "basis": "engine default: average of FY2023A, FY2024A, FY2025A (div(interest_income, cash[-1]))",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "net_borrowing",
+      "label": "Net new borrowing",
+      "unit": "money",
+      "values": {
+        "FY2026E": 15304.3,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "FY2026E is set so the gross-debt line equals the 30 September 2026 stock of Rp70.2trn (Rp54.9trn at FY2025A plus the Rp15.3trn increase observed in the nine months). The corporate template books that increase as a cash inflow, but part of it is non-cash lease and spectrum-payable recognition and the nine-month cash balance is Rp8.2trn, not the Rp19.7trn the template derives; the forecast cash and net-debt lines are therefore disclosed as not used, and every leverage statement in the report is made on the reported 30 September stock. From FY2027E net borrowing is zero: the spectrum and 5G peak is funded, maturities are refinanced rather than repaid, and free cash flow is applied to the dividend and then to debt reduction.",
+      "sources": [
+        "S0",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other non-operating items",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant",
+      "sources": [],
+      "engine_default": true
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.059297,
+        "FY2027E": 0.059297,
+        "FY2028E": 0.059297,
+        "FY2029E": 0.059297,
+        "FY2030E": 0.059297
+      },
+      "value": null,
+      "lt": 0.059297,
+      "basis": "engine default: average of FY2023A, FY2024A, FY2025A (div(minority, np))",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.65,
+        "FY2027E": 0.65,
+        "FY2028E": 0.65,
+        "FY2029E": 0.65,
+        "FY2030E": 0.65
+      },
+      "value": null,
+      "lt": 0.65,
+      "basis": "The May 2026 AGM approved a Rp111 per share dividend, Rp3.57trn in total, equal to 65% of FY2025 net profit; that is the current policy and is held flat at 65% because free cash flow covers it once the 2026 spectrum capex peak passes.",
+      "sources": [
+        "S12",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant",
+      "sources": [],
+      "engine_default": true
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth (DCF)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.035,
+      "lt": null,
+      "basis": "Long-run nominal growth of 3.5%: Indonesian CPI is 3.28% in the house macro deck and a mature three-player mobile market grows with ARPU inflation, not with subscribers.",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The EV/EBITDA leg carries 35% weight and 3,476 of the target on a 6.46x multiple that is the average of a peer median of 7.87x and an own history mean of 5.06x. The peer median is taken over four names: TLKM 3.52x, EXCL 4.20x, INET 11.53x and LINK 14.13x. Two wholesale fibre names therefore carry half the weight in a four-name median, and the report itself says in the same section that those names trade on multiples several times higher for a regulated contracted cash flow. A mobile-only median of 3.86x gives a blended 4.46x and 1,801 per share instead of 3,476, which removes about 680 per share or 15% of the target. The metric is also FY2025A EBITDA of 26,962.6 while the text describes it as forward EBITDA; on FY2027E the same multiple would give 3,976.",
+        "response": "accepted",
+        "answer": "The EV/EBITDA leg is now benchmarked on the mobile-only set: peers reduced to TLKM and EXCL, which cannot form a median, so the engine falls back to ISAT's own five-year mean of 5.06x rather than the four-name median of 7.87x that contained INET and LINK. The leg falls from Rp3,476 to Rp2,303 and section 4 is rewritten around the corrected figure and the fibre exclusion [S0]."
+      },
+      {
+        "id": "C2",
+        "severity": "FATAL",
+        "category": "calibration",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The forecast balance sheet resets gross debt to the FY2025A stock of 54,915.2 and holds it flat for ten years, while the same report values the equity from the 30 Sep 2026 balance sheet where gross debt is 70,219.5 and net debt is 62,007.8 (the bridge input). With no new net borrowing, FY2026E net debt of 45,660.5 is arithmetically impossible: it requires 16.3trn of repayment in Q4 2026 that the model does not contain, in a quarter where the actual debt rose. Consequences: FY2026E interest of 4,196 is charged at 7.64% on a stale stock against roughly 5,300 on the actual; FY2027E np_parent of 6,821.9 and DPS of 137.5 are overstated by 12 to 15%; and the leverage sentences in sections 1, 3 and 5 are wrong on the report own numbers, since 62,007.8 over 26,962.6 is 2.30x today, not 1.8x, and FY2027E is about 1.7x on carried debt, not 1.2x. The summary also calls the stock 3.3x forward EBITDA; on the actual debt it is 3.7x.",
+        "response": "accepted",
+        "answer": "Rebuilt from the 30 September 2026 stock: FY2026E net borrowing set to Rp15,304.3bn so gross debt closes at the reported Rp70,219.5bn, maturities refinanced with no net repayment after, and the interest charge rises to Rp5,683.6bn from FY2027E. Sections 1, 3 and the thesis restate leverage on the reported stock and disclose that the engine's cash line nets the refinancing, so the forecast net-debt line starts below the reported figure while the bridge deducts it [S0][S6]."
+      },
+      {
+        "id": "C3",
+        "severity": "FATAL",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The earnings-quality paragraph claims work that was not done. It says the data pack D&A is a fraction of the real charge and that depreciation was restated from the fixed-asset and intangible notes to 15,831.1, but the pack FY2025A D&A is 15,831.135, identical to the model, the engine restated list holds only revenue and np_parent for FY2024A and FY2025A, and no fixed-asset note exists anywhere in the source set since S0 carries no archived text. It also says the accruals ratio could not be computed because no operating cash flow is presented, but the pack carries ocf of 15,676.8, 17,680, 19,096 and 21,551 for FY2022A to FY2025A. The first mandatory earnings-quality screen was therefore skipped on a false premise; run, the accruals ratio is -11.3%, -12.1% and -13.5%, cash conversion of 3.7 to 3.9 times net profit and improving, which is a genuine bull point the file omits.",
+        "response": "accepted",
+        "answer": "Withdrawn the D&A restatement claim: the pack's FY2025A D&A of Rp15,831.1bn is the charge used and no fixed-asset note is archived. The accruals ratio is now computed from pack OCF: (np minus ocf) over average total assets was -11.3% FY2023, -12.1% FY2024 and -13.5% FY2025, negative and improving with stable cash conversion, and section 3 reports that result and the capitalisation flag instead [S0]."
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "1. Business description",
+        "challenge": "The first leg of the variant view is 9M 2026 ARPU growth of 16.5% to 46,000. S8 prints FY2025 blended ARPU at 44,000, which makes 46,000 a 4.5% increase, and S6 prints 46,000 with 17.3% growth in 1H 2026, so ARPU did not move between the first half and the first nine months. The 16.5% and 17.3% prints imply a base near 39,500 that the FY2025 print contradicts by four thousand rupiah. Section 1 then compounds the problem by describing a 38,000 to 46,000 path that no source states, implying 21% growth over two years while the company reports 6.4% in FY2025. Either two different ARPU definitions are being spliced or the growth that proves market repair is 4.5%, not 16.5%, which is the one claim the method card says must be evidenced rather than assumed.",
+        "response": "accepted",
+        "answer": "Reconciled the ARPU prints instead of stitching levels: S8's FY2025 Rp44,000 grows 6.4% on its own base, implying FY2024 near Rp41,400 against S9's Rp38,000, while Rp46,000 at 9M 2026 is +16.5% on a 9M 2025 base near Rp39,500. The 44,000 to 46,000 step is +4.5% and ARPU was flat from 1H to 9M. Fact labels now name each basis and the 38,000-to-46,000 path is withdrawn in sections 1, 2 and the thesis [S8][S9][S6][S2]."
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bear case shocks three revenue and cost drivers but leaves the 10.8% WACC and the terminal assumptions untouched, so revenue still grows through a price war the report calls the base rate, and the scenario set cannot produce a losing outcome: bear value of 2,975 is still 109% above the price. The report itself says a one-point WACC move is worth roughly a fifth of DCF value, and a price war would raise the required return as well as cut growth. A 2015 to 2019 style relapse, where industry ARPU falls rather than grows more slowly, is absent from every scenario, so the conclusion that the market disagrees about a fact is an artefact of a bear that never touches the discount rate.",
+        "response": "accepted",
+        "answer": "Bear and bull now shock four mirrored drivers including a 1pp WACC and 0.5pp terminal-growth move, so the downside carries a higher required return as well as slower growth; bear value falls to Rp2,624, base Rp4,088 and bull Rp6,661. Section 5 states plainly that even the bear is above the Rp1,425 price and that only the reverse-DCF path, growth near zero, reaches it [S0][S2]."
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "6. Governance and ESG",
+        "challenge": "Section 6 asserts that a controlling shareholder funding growth from its own balance sheet is behaving well and section 3 assumes no share issuance for ten years. The build was not funded by the parent: gross debt rose 15.3trn to 70,219.5 in the first nine months of 2026. With capex at 33.5% of sales, net debt at 2.3x and an 85.3% bloc, a discounted rights issue or private placement around the market price of 1,425, which is 68% below the model value, is the modal Indonesian value leak named in the method card and is neither scenarioed nor bridged. A 10% dilution at 1,425 would cut per-share value by roughly 9% before any use of proceeds.",
+        "response": "accepted",
+        "answer": "The build was debt-funded, not parent-funded, and section 6 now says so: gross debt rose to Rp70,219.5bn in 9M 2026. The corporate-action record shows no rights issue and nothing announced since the balance sheet, so no unsourced event is bridged, but section 5 adds the dilution mechanics: a tenth of the shares at the market price cuts per-share value by a tenth of the value-to-price gap, and the float stays on the monitoring list [S16][S0]."
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "1. Business description",
+        "challenge": "Sections 1 and 6 state that there is no realistic route to control changing hands, with no source. The archived facts contain the four-to-three merger that created the company and an 85.3% stake held by two foreign groups, and the model puts the stock at 3.3x forward EBITDA, the cheapest licensed national network in a three-player market. A three-to-two combination, a disposal or leaseback of network assets, or a strategic premium for the spectrum position are the largest plausible upside drivers, and none appears in the bull case, the empty bridge or the section 7 catalyst list.",
+        "response": "accepted",
+        "answer": "The absolute claim is withdrawn: section 6 now says there is no disclosed route to control changing hands, sourced to the absence of any sale, divestment or bloc change in the profile and merger record, rather than asserting control is locked. Consolidation and disposal optionality is sized only qualitatively, added to the bull narrative and section 7 as a monitored signpost, and explicitly excluded from the bull value because no source reports a process [S16][S17][S18]."
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "4. Valuation",
+        "challenge": "The method card requires AFFO of EBITDA less maintenance capex, cash interest and cash tax, and its yield against the 10-year risk-free rate. Section 4 substitutes a 7.8% dividend yield and says the company clears the hurdle comfortably, which is a different test. Computed on the file own numbers, EV of 95,905 against FY2026E FCFF of 11,297 is an 11.8% firm yield versus a 7.45% risk-free rate, a 4.4pp pass that is the single strongest support for the BUY and is never stated. If maintenance capex is proxied by D&A of 15,831, AFFO falls to about 5,487 and the yield is 5.7%, which fails. The conclusion therefore hinges on a maintenance-capex number the report never defines.",
+        "response": "accepted",
+        "answer": "AFFO is now defined and computed: FY2026E EBITDA 28,998.5 less maintenance capex at the FY2025A 22.0% of sales (13,690.3) less cash interest (4,444.8) less cash tax (1,508.1) equals 9,355.6, an 8.7% yield on an EV of 108,061 against the 7.45% ten-year; the D&A proxy gives 5,621.6 and 5.2%, which fails. Both are disclosed in section 4 and the dividend-yield assertion is replaced [S0][S6]."
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "FY2026E np_parent is 5,522.6 against 9M 2026 actual of 4,900.0, so the model implies Q4 2026 net profit of 622.6, a 68% fall on Q4 2025 of 1,938.6 derived from the company own 37.2% nine-month growth. Model D&A rises only 1.6trn year on year, about 1.0trn after tax, which cannot produce a 1.3trn collapse. Annualising the nine months gives about 6,530, 18% above the model. The report attributes the gap to a depreciation step-up already inside the 28.0% ratio and to an unaudited-quarter true-up, neither quantified nor sourced, and the shortfall then suppresses the FY2026E DPS, the dividend-yield leg, ROE and the section 7 dividend catalyst.",
+        "response": "accepted",
+        "answer": "The gap is explained by a Q2 2026 non-operating credit: pre-tax profit of Rp3,690.5bn against EBIT less net interest of Rp2,149.4bn, a Rp1,541.1bn difference with no counterpart in Q1 or Q3. Stripping it, recurring 9M net profit is about Rp3,695bn and a normal Q4 of about Rp1,828bn gives our Rp5,523bn, so the implied 68% Q4 fall is an artefact of the raw comparison; section 3 now says this instead of a depreciation step-up [S0][S2]."
+      },
+      {
+        "id": "C10",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Section 3 says working capital is held flat at -19.3% of revenue, but history is -32.8%, -28.1%, -18.3% and -11.5% and the 30 Sep 2026 balance sheet is -22,399.9. The model steps NWC from -6,481.8 to -11,992.9 in FY2026E, producing a delta of -5,511 that is 49% of that year FCFF and roughly 1,100 of PV, a release the stated flat-ratio rule does not generate since -19.3% times the 5,708 revenue increase is -1,102. In the same year capex of 20,846.6 implies Q4 capex of 3,546 or 21.6% of Q4 revenue against 17,300 or 37.9% in the nine months, an unsourced 16pp intra-year collapse worth 1.5 to 2trn of front-year free cash flow.",
+        "response": "accepted",
+        "answer": "NWC is now held at the FY2025A actual -11.5% of revenue, not the three-year average: the phantom Rp5,511bn release is gone and FY2026E FCFF falls to Rp6,441bn from Rp11,297bn. Section 3 states the driver and why the September print is not comparable (current liabilities up Rp20.4trn with payables flat). Q4 capex of Rp3,512bn is 21.3% of Q4 revenue against 37.9% in 9M and 14.2% in FY2025 Q4, which the spectrum timing explains [S0]."
+      },
+      {
+        "id": "C11",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "6. Governance and ESG",
+        "challenge": "Sections 1, 5 and 6 present controlling 85.3%, free float 16.2% and institutions 10.9% as three separate facts, but they sum to 112.4%, so either institutions sit inside the float leaving about 5.3% retail, or the insider figure overstates the bloc; the datapack itself gives insider 85.306 and free float 16.24 on different registry bases. Section 6 also states the shares are not on the exchange special monitoring board by our check with no source, although the method card makes the IDX board and notation status the first gate.",
+        "response": "accepted",
+        "answer": "Insider, float and institutions are now on one basis: 85.3% bloc and 16.2% free float, with institutions at 10.9% sitting inside the float rather than beside it, so the figures are no longer additive and the retail residual is not overstated. Board and notation status is marked unverified: no archived company or registry page carries it and exchange pages are outside the source set [S0][S16]."
+      },
+      {
+        "id": "C12",
+        "severity": "MINOR",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "In FY2035E capex of 23,550.7 is 85% of D&A of 27,559.4, so the terminal year implicitly runs a shrinking asset base in perpetuity at 3.5% growth and books 4,009 of free cash flow that replacement economics would not allow, inside a terminal value that is 54% of the DCF. Setting terminal capex equal to D&A cuts the DCF to roughly 4,230 per share, 11% lower. Separately the target construction compounds the 3,835 blend at the 16.09% cost of equity and subtracts the dividend, adding about 505 per share for a re-rating the report simultaneously says cannot be dated.",
+        "response": "accepted",
+        "answer": "Section 4 now states the terminal ratio: FY2035E capex of Rp23,550.7bn against D&A of Rp27,559.4bn, below one, and justifies it on the company's own record (FY2025A capex Rp12,455.2bn against D&A Rp15,831.1bn with flat revenue) and on legacy and spectrum amortisation that replacement spending does not repeat; setting capex equal to D&A would cut the DCF and not the rating. The twelve-month roll-forward at the 16.1% cost of equity less the dividend is identified as the engine's pricing convention, not a dated re-rating [S0][S12]."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "The strongest support in the file is never computed: the method card requires AFFO yield versus the 10y FR, and pack operating cash flow of 21,551 IDR bn (3.9x net profit, improving) with FCFF of 11,297 on an EV of 95,905 is an 11.8% firm yield against a 7.45% risk-free rate. Also absent: any value for the 80 MHz spectrum holding, and the strategic option - an 85.3% bloc and 3.3x forward EBITDA in a three-player market is dismissed as no realistic route to control changing hands without a source."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "The bear takes 3pp off growth, 1.5pp off gross margin and 2pp onto capex, all with the 10.8% WACC unchanged and revenue still growing, so it cannot produce the price-war outcome the report says is the base rate in Indonesian data. A discounted rights issue to the 85.3% bloc, at a market price 68% below the model value and with capex at 33.5% of sales, is neither scenarioed nor bridged, although the method card names it as the modal IDX value leak."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "Three value-moving drivers break their own stated basis: NWC steps from -6,481.8 (11.5% of revenue) to -19.3% in FY2026E, producing a 5,511 one-off release the stated flat-ratio rule does not generate; FY2026E capex of 20,846.6 implies Q4 capex of 3,546 or 21.6% of Q4 revenue against 37.9% in 9M; and FY2026E np_parent of 5,522.6 is 18% below the 9M run-rate with no quantified charge behind the gap."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "Five spot-checks verify verbatim (S2 45.8trn revenue, 21.1trn EBITDA and ARPU 46,000; S6 93.4m subs; S8 44,000 ARPU; S10 51% coverage). But two provenance claims are false against the pack: FY2025A D&A of 15,831.135 is the pack figure itself and the engine restated list holds only revenue and np_parent, and operating cash flow is present for every year at 15,676.8 to 21,551. The ARPU series also contradicts itself (44,000 in FY2025 against a 16.5% growth print to 46,000), and the float trio sums to 112.4%."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "DCF is the right primary and the net debt, minority and associate bridge is correctly signed and uses the 30 Sep 2026 balance sheet. Method fit fails at the cross-checks: the EV/EBITDA peer median of 7.87x is half wholesale fibre (INET 11.53x, LINK 14.13x) against a mobile median of 3.86x, the multiple is applied to FY2025A EBITDA although the text says forward, terminal capex of 23,551 sits below D&A of 27,559 in perpetuity, and the mandated AFFO cross-check is replaced by a dividend yield."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "The prose is disciplined on history but leans value-ward on conclusions: every method above the price and a bear case at 2,975 are used to argue the market disagrees about a fact, when the scenario set cannot fail and no candidate fact is named or sized. Clears it comfortably is asserted from a 7.8% dividend yield rather than from the AFFO test the card specifies, and the 221% gap is never framed against the base rate for a 16% free float re-rating within twelve months."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "Deck usage is right in direction: terminal growth 3.5% against house CPI of 3.28%, BI 5.75% cited in the cost-of-debt build, and the 51% coverage obligation taken from S10 drives the capex floor above the FY2025A ratio. Two breaks: the analyst text and assumptions carry cost of debt of 8.1% while the engine discounts at 9.45% pre-tax, and the peer multiple set mixes TELCO with fibre infrastructure that the report itself says deserves several turns more."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "Downward departures without a source: FY2026E net profit of 5,522.6 against 9M actual 4,900 implies a Q4 of 622.6, a 68% fall year on year, while D&A rises only 1.6trn; FY2026E EBITDA margin of 46.6% is 1.1pp below the last actual and is described in the text as holding near 48.1%; weights were moved off the 60/30/10 default to 50/35/15 without a justification. Upward departures: the 5,511 NWC release, a Q4 capex collapse and interest charged on a debt stock 15.3trn below the actual. Net lean is conservative on earnings and optimistic on cash."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "The calibration gate passes only on margin and only because it re-prices FY2025A: model 46.6% against actual 47.7%, gap -1.1pp, which is itself an unflagged downward drift in the first forecast year. The balance-sheet side does not calibrate at all: FY2026E net debt of 45,660.5 cannot be reached from gross debt of 70,219.5 at 30 Sep 2026 without a 16.3trn Q4 repayment the model does not contain. The extreme_call justification cites a reverse DCF growth of -2.7% where the engine returns -0.2%."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_INFRASTRUCTURES",
+      "at": "2026-11-08T03:54:13+07:00",
+      "verdict": "APPROVED",
+      "notes": "The +214% expected return is an extreme call and it is disclosed, reverse-tested and mechanically reproducible, which is what the gate asks. Reverse DCF: the Rp1,425 price needs FY2027E revenue growth of -0.2% against the 8.0% forecast, for a company that printed 9M 2026 revenue +11.1% to Rp45.8trn and EBITDA of Rp21.1trn; the target implies about 7.0x FY2026E EBITDA against a 5.06x own five-year benchmark and 3.5x/4.2x for TLKM/EXCL, and s4 states that multiple rather than leaving the re-rating inside the DCF. The method set is internally consistent (0.5 x 4,600 + 0.35 x 2,303 + 0.15 x 3,408 = 3,617, rolled at the 16.09% COE less the Rp111 DPS, scenarios 4,088/2,624/6,661 at 50/25/25 = 4,365). All three FATAL challenges are answered on substance: C1 narrowed the multiple leg to the mobile set and the engine's fallback to own history is disclosed instead of a four-name median; C2 rebuilt the debt from the reported 30 Sep 2026 stock so the bridge deducts Rp62,007.8bn and FY2026E net borrowing of Rp15,304.3bn closes gross debt at Rp70,219.5bn; C3 withdrew the false D&A restatement and recomputed accruals from pack OCF. C10's phantom Rp5.5trn NWC release is gone and FY2026E FCFF falls to Rp6,441bn, and C12 discloses the terminal capex-to-D&A of 0.85. check PASS, calibration gap -1.10pp, lint clean. Residual: burn-down the two unanswered FIX items in round 2 (Q1 bridge language, Q2 the FY2026E pre-tax text basis) but neither changes a printed number in s4 or the target, so it does not block."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-08T03:43:41+07:00",
+      "verdict": "PASS",
+      "round": 2,
+      "bias": {
+        "direction": "neutral",
+        "note": "Base case is anchored on the latest actual, not on caution or hope: FY2026E revenue +10.1% against 9M 2026 actual +11.1% with Q4 at the Q3 pace (quarterly pack, [S0][S2]); EBITDA margin 46.6% vs 9M actual 46.0% and FY2025A 47.7%, i.e. above the latest actual on 9M D&A of 27.7% [S0]; capex 33.5% of sales sourced to the datapack 9M spectrum spend of Rp17,335.0bn [S0][S10]; NWC held at the last actual -11.5% [S0]; payout 65% at the AGM rate [S12]. No unsourced haircut or premium in the operating drivers. The two upward tilts are the own-history dividend-yield leg (3.27% implied yield vs 7.8% current) and terminal growth 3.5% against house CPI 3.28%; both are disclosed in section four. Scenarios are mirrored on the same four drivers (+/-3pp growth, +/-1.5pp margin, +/-1pp WACC, +/-0.5pp g) with base at 50%. Net: neutral."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A EBITDA",
+          "model": 26962.6,
+          "filing": 26590.0,
+          "source": "S13",
+          "ok": true
+        },
+        {
+          "item": "Net debt 30 Sep 2026 (valuation bridge)",
+          "model": 62007.8,
+          "filing": 62007.8,
+          "source": "S0",
+          "ok": true
+        },
+        {
+          "item": "9M 2026 revenue",
+          "model": 45800.0,
+          "filing": 45750.2,
+          "source": "S2",
+          "ok": true
+        },
+        {
+          "item": "FY2026E cash (model line)",
+          "model": 19702.5,
+          "filing": 8211.7,
+          "source": "S0",
+          "ok": false
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q1",
+          "severity": "FIX",
+          "area": "bridge",
+          "finding": "Previous Q1 is resolved where it mattered: the valuation bridge deducts the reported 30 Sep 2026 net debt of 62,007.8 (datapack latest_bs: debt 70,219.5 less cash 8,211.7), the EV/EBITDA leg uses the same stock, and section 3 quotes 2.30x rather than the model's 1.87x. The residual defect is narrower but real: the template cash line of 19,702.5 is not inert. The engine books interest income as opening cash x 4.9093%, so FY2027E interest income is 967.3 against 403.2 if cash opened at the reported 8,211.7 - Rp564.1bn of pre-tax income on cash the balance sheet does not contain. That lifts FY2027E np_parent of 6,278.7 by roughly 420-450 and the Rp126.5 DPS quoted in section 3 by about 8.5 (6.7%). The DCF is unlevered and the div-yield leg uses FY2026E DPS, so the target is not moved, but section 3's claim that the cash line is 'not used for anything' is wrong.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q2",
+          "severity": "FIX",
+          "area": "text_vs_numbers",
+          "finding": "Section 3 says FY2026E 'strips that credit and adds a fourth quarter at the recurring nine-month rate'. On the clean basis 9M 2026 pre-tax is 4,861.7 (pack 9M 6,464.5 less the Q2 non-operating credit of 1,602.8), so the model's FY2026E pre-tax of 7,378.8 implies Q4 of 2,517.1, which is 55% above the clean quarterly average of 1,620.6, not at it. The forecast is defensible (Q4 2025 np_parent of 1,922.3 was 61% above its 9M average, [S0]), but the sentence understates the model by about 13% of np_parent.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q3",
+          "severity": "NOTE",
+          "area": "valuation_mechanics",
+          "finding": "The dividend-yield leg capitalises FY2026E DPS of 111.31 at the own five-year mean yield of 3.27%, giving 3,408 against a current yield of 7.81%. That is a 2.4x implied re-rating of the income leg, the same de-rating argument section 4 makes for the EBITDA leg, but the report neither states the 3.27% implied yield nor argues it, and calls the leg a 'floor' when it sits 139% above the price. At 15% weight the effect on the target is about Rp37 per share if the leg used a 5% yield, so the rating does not depend on it.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q4",
+          "severity": "NOTE",
+          "area": "text_vs_numbers",
+          "finding": "The investment summary says the target is '214.1% above the Rp1,425 closing price'. Target price upside is 206.3% ((4,365 - 1,425) / 1,425); 214.1% is the expected total return once the Rp111 dividend is added.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q5",
+          "severity": "NOTE",
+          "area": "affo",
+          "finding": "Section 4 gives the AFFO components on the company-reported maintenance-capex basis but never quotes the maintenance-capex figure or the resulting yield, so 'AFFO covers the 7.4% ten-year yield' cannot be checked from the text. On the stated definition (17.8% of FY2024 revenue) AFFO is about 11,969, an 11.1% EV yield; on the D&A proxy it is 5.2% and fails the hurdle.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "drift.capex_pct",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.capex_pct moves -10.0pp from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The 10pp fall is the one-off spectrum payment, not a haircut: the data pack's quarterly capex is Rp3,487.6bn in Q1, Rp5,746.7bn in Q2 and Rp8,100.7bn in Q3 2026, Rp17,335.0bn for the nine months (37.9% of 9M revenue) including the 700MHz/2.6GHz award concluded in July [S0], and FY2025A capex was 22.0% of revenue [S0]. FY2027E-35E hold 23.5-26%, above the FY2025A ratio, because the licence requires 5G coverage of 51% of population by year five [S10]."
+        },
+        {
+          "id": "extreme_call",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "expected return +214%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "The return is not a low current multiple \u2014 the stock is 3.7x LTM EBITDA against TLKM at 3.5x and EXCL at 4.2x [S0] \u2014 it is the terminal value: the DCF capitalises post-2035 ARPU growth at 3.5% on a 10.8% WACC, while the reverse DCF says the price discounts revenue growth close to zero in FY2027E against 9M 2026 revenue growth of 11.1% and EBITDA of Rp21.1trn [S2][S5][S0]. The three sourced drivers are that 9M actual, a 2026 spectrum capex peak of 33.5% of sales that normalises from FY2027E [S6][S10], and a dividend of Rp111 on a 65% payout [S12]."
+        },
+        {
+          "id": "weights.changed",
+          "severity": "WARN",
+          "justified": true,
+          "message": "method weights differ from the industry default {'dcf_fcff': 0.6, 'ev_ebitda': 0.3, 'div_yield': 0.1}",
+          "justification": "The DCF is 54% terminal value on a 3.5% perpetuity, so we over-weight the EV/EBITDA cross-check against the house TELCO default of 0.6/0.3/0.1: the multiple is benchmarked on the two listed mobile operators and own history at 5.1x, gives Rp2,303, and is the leg that disciplines the terminal assumption [S0]."
+        }
+      ],
+      "calibration": {
+        "kind": "ebitda_margin",
+        "period": "FY2025A",
+        "benchmark": null,
+        "volume": null,
+        "ebitda_actual": null,
+        "ebitda_model": null,
+        "gap_pct": null,
+        "actual": 0.4770450636942675,
+        "model": 0.46599999999999997,
+        "gap_pp": -1.1045063694267554
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-08",
+      "type": "initiation",
+      "rating": "BUY",
+      "tp": 4365
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-07-07",
+      "title": "Komdigi Ingatkan Sanksi Operator Seluler yang Tidak Menerapkan Verifikasi Biometrik",
+      "url": "https://nasional.kompas.com/read/2026/07/07/17340001/komdigi-ingatkan-sanksi-operator-seluler-yang-tidak-menerapkan-verifikasi",
+      "publisher": "nasional.kompas.com",
+      "materiality": "minor",
+      "note": "Komdigi reminded cellular operators to apply biometric face-recognition verification and warned of sanctions for non-compliance."
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Komdigi Soroti Paket Internet Belum Taat Putusan MK, Ini Kata Opsel",
+      "url": "https://www.cnnindonesia.com/teknologi/20261008193004-213-1413296/komdigi-soroti-paket-internet-belum-taat-putusan-mk-ini-kata-opsel",
+      "publisher": "www.cnnindonesia.com",
+      "materiality": "minor",
+      "note": "Komdigi flagged internet packages not yet compliant with a Constitutional Court ruling; Indosat and XLSmart said they will comply on quota protection."
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Indosat (ISAT) Raih Laba Bersih Rp4,9 Triliun hingga September 2026",
+      "url": "https://www.idxchannel.com/market-news/indosat-isat-raih-laba-bersih-rp49-triliun-hingga-september-2026",
+      "publisher": "www.idxchannel.com",
+      "materiality": "material",
+      "note": "Indosat (ISAT) recorded net profit of Rp4.9 trillion for January-September 2026, as reported by IDX Channel."
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Komdigi Larang Operator Hanguskan Sisa Kuota Internet, Asosiasi Siapkan Solusi",
+      "url": "https://tekno.kompas.com/read/2026/09/28/08030097/komdigi-larang-operator-hanguskan-sisa-kuota-internet-asosiasi-siapkan-solusi",
+      "publisher": "tekno.kompas.com",
+      "materiality": "material",
+      "note": "Communications ministry barred operators from forfeiting unused internet quota; ATSI said members are drafting a compensation scheme for customers."
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Indosat Andalkan Bisnis Telko untuk Pacu Ekspansi AI",
+      "url": "https://investasi.kontan.co.id/news/indosat-andalkan-bisnis-telko-untuk-pacu-ekspansi-ai",
+      "publisher": "investasi.kontan.co.id",
+      "materiality": "minor",
+      "note": "Indosat (ISAT) says it is leaning on strengthening its telecommunications business to accelerate expansion of its artificial intelligence business; no figures or targets disclosed."
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Indosat (ISAT) Catat Kinerja Positif hingga Kuartal III 2026",
+      "url": "https://investasi.kontan.co.id/news/indosat-isat-catat-kinerja-positif-hingga-kuartal-iii-2026",
+      "publisher": "investasi.kontan.co.id",
+      "materiality": "material",
+      "note": "Indosat (ISAT) booked net profit attributable to owners of Rp4.92 trillion through September 2026, reporting positive performance to Q3-2026."
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Ada 2 Pendatang Baru, Inilah Daftar Anggota Indeks IDX30 Mulai 2 November 2026",
+      "url": "https://investasi.kontan.co.id/news/ada-2-pendatang-baru-inilah-daftar-anggota-indeks-idx30-mulai-2-november-2026",
+      "publisher": "investasi.kontan.co.id",
+      "materiality": "minor",
+      "note": "PT Indosat (ISAT) and PT Bukit Asam (PTBA) join the IDX30 index effective 2 November 2026 under the semi-annual constituent review."
+    },
+    {
+      "date": "2026-10-26",
+      "title": "BEI Rombak IDX30, ISAT-PTBA Masuk dan PGEO-UNVR Tersingkir",
+      "url": "https://www.idxchannel.com/market-news/bei-rombak-idx30-isat-ptba-masuk-dan-pgeo-unvr-tersingkir",
+      "publisher": "www.idxchannel.com",
+      "materiality": "minor",
+      "note": "BEI reshuffled IDX30: ISAT and PTBA added; PGEO and UNVR removed, effective the November 2026 to January 2027 period."
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Komdigi Kaji Deregulasi untuk Ringankan Beban Operator Seluler",
+      "url": "https://www.msn.com/id-id/teknologi/umum/komdigi-kaji-deregulasi-untuk-ringankan-beban-operator-seluler/ar-AA2fCVdl",
+      "publisher": "www.msn.com",
+      "materiality": "minor",
+      "note": "Komdigi is reviewing telecom deregulation to reduce regulatory burden, reported at 14% of cellular operators' revenue."
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Komdigi Dorong Spektrum Terjangkau untuk Jaga Investasi Telkomsel-Indosat Cs",
+      "url": "https://teknologi.bisnis.com/read/20261020/101/2014095/komdigi-dorong-spektrum-terjangkau-untuk-jaga-investasi-telkomsel-indosat-cs",
+      "publisher": "teknologi.bisnis.com",
+      "materiality": "minor",
+      "note": "Komdigi encourages affordable spectrum fees so Telkomsel, Indosat and peers can sustain 5G network investment, balancing state revenue and public benefit."
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Komdigi Tetapkan 3 Operator Lolos Seleksi Spektrum 700 MHz dan 2,6 GHz, Lelang Digelar 7 Juli 2026",
+      "url": "https://www.pikiran-rakyat.com/news/pr-0110297065/komdigi-tetapkan-3-operator-lolos-seleksi-spektrum-700-mhz-dan-26-ghz-lelang-digelar-7-juli-2026",
+      "publisher": "www.pikiran-rakyat.com",
+      "materiality": "material",
+      "note": "Komdigi designates Telkomsel, Indosat and XLSMART as passing 700MHz/2.6GHz spectrum selection; auction set 7 Jul 2026 (article dated Jun 2026). Licence decision."
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Komdigi Dorong Spektrum Terjangkau untuk Jaga Investasi Telkomsel-Indosat Cs",
+      "url": "https://www.msn.com/id-id/berita/other/komdigi-dorong-spektrum-terjangkau-untuk-jaga-investasi-telkomsel-indosat-cs/ar-AA2fCIst",
+      "publisher": "www.msn.com",
+      "materiality": "minor",
+      "note": "Komdigi pushes affordable spectrum pricing to sustain 5G network investment by Telkomsel, Indosat and peers. Ministry stance, no decision."
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Komdigi Kaji Deregulasi, Pangkas Beban Telkomsel, Indosat, dan XLSmart",
+      "url": "https://www.cnbcindonesia.com/tech/20261020143744-37-777870/komdigi-kaji-deregulasi-pangkas-beban-telkomsel-indosat-dan-xlsmart",
+      "publisher": "www.cnbcindonesia.com",
+      "materiality": "minor",
+      "note": "Komdigi studies deregulation to cut regulatory burden worth 13-14% of operator revenue for Telkomsel, Indosat and XLSmart. Study stage, no decision."
+    }
+  ],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
