@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "asof": "2026-11-07T09:32:09+07:00",
+  "asof": "2026-11-07T16:57:33+07:00",
   "decks": {
     "agri": {
       "title": "Agricultural & soft-commodity deck",
@@ -44,7 +44,7 @@
           },
           "lt": 1093.67,
           "spot": {
-            "value": 1373.7004,
+            "value": 1372.598,
             "asof": "2026-11-06",
             "source": "Yahoo Finance ZL=F"
           },
@@ -67,7 +67,7 @@
           },
           "lt": 284.13,
           "spot": {
-            "value": 216.9715,
+            "value": 217.2471,
             "asof": "2026-11-06",
             "source": "Yahoo Finance ZW=F"
           },
@@ -90,7 +90,7 @@
           },
           "lt": 215.5,
           "spot": {
-            "value": 174.1063,
+            "value": 173.811,
             "asof": "2026-11-06",
             "source": "Yahoo Finance ZC=F"
           },
@@ -113,7 +113,7 @@
           },
           "lt": 449.67,
           "spot": {
-            "value": 351.4164,
+            "value": 351.8574,
             "asof": "2026-11-06",
             "source": "Yahoo Finance ZM=F"
           },
@@ -974,12 +974,12 @@
           },
           "lt": 19000.0,
           "spot": {
-            "value": 18003.5,
-            "asof": "2026-11-06",
+            "value": 18103.0,
+            "asof": "2026-11-07",
             "source": "Yahoo Finance IDR=X"
           },
           "status": "reviewed",
-          "basis": "Desk review 2026-10-26 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo IDR=X daily-close fiscal-year averages (history_source); FY2026E 17,570 keeps the deterministic convention (year-to-date average blended with the reviewed spot 18,080, rounded \u2014 the seeded 17,546.8045 used the Yahoo placeholder spot 17,956). Spot is the reviewed onshore close Rp18,080/USD on 23-Oct-2026 (S7; corroborated S10). The desk rejects the Yahoo IDR=X placeholder (17,956 asof 25-Oct, ~0.7% below the onshore close) as stale/offshore and non-citable. FY2027E 18,350 (+1.5% vs spot), FY2028E 18,600, FY2029E 18,850, lt 19,000 (~+2.4%/yr trend) are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: IDR weakens on a persistent current-account deficit (elevated oil import bill, Brent ~100\u2013107/bbl per S8) and a narrowed carry gap (BI-Rate 5.75% on hold per S4 vs USD effective ~3.88% after the Sep-2026 Fed +25bp hike), with MSCI standalone-review risk keeping foreign portfolio flows a headwind (per S11, IHSG \u221211.6% on the MSCI proposal) and BI intervention capping the pace. The futures-broker projection inside S7 was quarantined and not used. Deck mode 2026-10-26 (MACRO_FX): `lt_escalation: ppp` set \u2014 IDR/USD is quoted rupiah-per-dollar, so after the last explicit year (FY2029E) the path must drift with the inflation gap for nominal consistency (the engine grows `lt` at (1+i_idr)/(1+i_usd)\u22121, ~+0.49%/yr on the sourced long-run anchors BI 2.5% vs Fed 2.0%), not `none` (which would pin a flat nominal rate while IDR costs still escalate at 2.5%, implying perpetual real IDR appreciation \u2014 the wrong sign for a held balance_of_payments_pressure regime). Note the explicit path runs faster than ppp (FY2026E 17,570\u2192FY2029E 18,850 \u2248 +2.4%/yr): the deck places the real IDR depreciation from the current-account deficit in the transition years and reverts to inflation-gap-only (real-flat) drift in the long run, i.e. ppp is the long-run steady state, the faster slide is the transition. Re-mark 2026-11-06: the working tree had picked up the Yahoo IDR=X pack print (Rp17,509.1992, asof 5-Nov) as the spot. That is exactly the placeholder this basis rejects: it has no S# print, no onshore quote, and it breaks the forward path (FY2027E 18,350 = +1.5% on Rp18,080, not on Rp17,509). No onshore print dated 3-6 Nov-2026 is archived (S16/S17 are company documents; S18 is an index note), so the spot stays at the last reviewed onshore close, Rp18,080 on 23-Oct-2026 (S7, corroborated S10; S9 printed Rp18,074)."
+          "basis": "Desk review 2026-11-07 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo IDR=X daily-close fiscal-year averages (history_source); FY2026E 17,570 keeps the deterministic convention (year-to-date average blended with the reviewed onshore close 18,080, rounded \u2014 the seeded 17,546.8045 used the Yahoo placeholder spot 17,956). Spot is the last desk-reviewed ONSHORE close, Rp18,080/USD on 23-Oct-2026 (S7, corroborated S10; S9 printed 18,074) \u2014 that is the basis of record for WACC and USD\u2192IDR conversion. The 6-Nov-2026 Yahoo IDR=X pack print (Rp18,003.5) is NOT adopted as the spot: it is the same non-onshore/indicative pack print this basis rejects as non-citable (no S# quote, no onshore trade), and it sits 0.42% BELOW the onshore close \u2014 the same sign as the 25-Oct placeholder's ~0.7% gap, just smaller. It is recorded only as the memo's 2026-11-07 weekly-direction reference (USD/IDR \u22120.37% w/w vs 18,070.4) and is adopted as spot only once an onshore print is archived. FY2027E 18,350 (+1.5% vs the 18,080 spot), FY2028E 18,600, FY2029E 18,850, lt 19,000 (~+2.4%/yr trend) are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: IDR weakens on a persistent current-account deficit and a narrowed but still-positive +162bp carry gap (BI-Rate 5.75% held at the 21-Oct-2026 RDG per S4 vs USD effective 3.88% after the Sep-2026 Fed +25bp hike; the ~28\u201329 Oct FOMC outcome is UNVERIFIED \u2014 no hold inferred), with MSCI standalone-review risk keeping foreign portfolio flows a headwind (S11, IHSG \u221211.6% on the MSCI proposal) and BI intervention capping the pace. REVISED 2026-11-07 to match the memo's AVOID\u2192NEUTRAL tilt on oil-import beneficiaries: Brent 97.76 (6-Nov, \u221213.3% w/w) now sits at the oil deck's FY2026E 96.0, so the import-bill penalty has normalized, not reversed (+44% over FY2025A 68.10). The weak-IDR path therefore no longer rests on an elevated oil import bill; it rests on the funding leg (IDR barely moved \u22120.37% w/w through that 13% oil fall) plus the MSCI/flow headwind. The futures-broker projection inside S7 remains quarantined and unused. lt_escalation: ppp \u2014 IDR/USD is quoted rupiah-per-dollar, so after FY2029E the path drifts with the inflation gap (engine: (1+i_idr)/(1+i_usd)\u22121 \u2248 +0.49%/yr on BI 2.5% vs Fed 2.0%), not `none`, which would imply perpetual real IDR appreciation against a held BoP-pressure regime; the explicit path runs faster (~+2.4%/yr) because the real depreciation from the current-account deficit is placed in the transition years and ppp is the long-run steady state."
         },
         "dxy": {
           "label": "US dollar index",
@@ -997,12 +997,12 @@
           },
           "lt": 102.0,
           "spot": {
-            "value": 102.279,
+            "value": 102.3,
             "asof": "2026-11-06",
             "source": "Yahoo Finance DX-Y.NYB"
           },
           "status": "reviewed",
-          "basis": "Desk review 2026-10-26 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo DX-Y.NYB daily-close fiscal-year averages (history_source); FY2026E 99.9535 keeps the deterministic convention (year-to-date average blended with the Yahoo spot 101.81). Spot stays the Yahoo DX-Y.NYB close 101.81 asof 23-Oct-2026 \u2014 no citable archived print at that date was reachable this session. Corroborating context from archived press: DXY closed 102.58 on 12-Oct-2026, an 18-month high (S8), and 102 on 19-Oct-2026 (S11) \u2014 inside the ~2% band of the Yahoo spot, so no correction was applied. Both were left out of `sources` because their `published` fields are unset (the engine accepts reviewed variables without an evidence quote when history_source is present). FY2027E 102.25, FY2028E 102.0, lt 102.0 are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: the USD stays firm at/near its highs \u2014 a hawkish Fed that hiked +25bp in Sep-2026 with a further hike live (S8), a war-premium oil bid and safe-haven demand (S8) \u2014 easing only gradually to a ~102.0 long-run level as US real rates and the war premium fade. Quarantined: the S8/S11 and other press carry analyst/broker FX projections (e.g. DXY to 104); none were used."
+          "basis": "Desk review 2026-11-07 (MACRO_FX): FY2021A\u2013FY2025A are Yahoo DX-Y.NYB daily-close fiscal-year averages (history_source); FY2026E 99.9535 keeps the deterministic convention (year-to-date average blended with the 23-Oct spot 101.81 and rounded \u2014 re-blending on the 6-Nov spot moves it by cents, so it is left to `refresh`). Spot is the Yahoo DX-Y.NYB close 102.279 asof 6-Nov-2026, matching the memo's 2026-11-07 marker reference 102.3; it is 0.3% below the 102.58 18-month high of 12-Oct-2026 (S8) and inside the marker band (~99.2\u2013105.4), so no marker tripped and no re-anchor was needed. Corroborating archived press: DXY closed 102 on 19-Oct-2026 (S11). Both press prints were left out of `sources` because their `published` fields are unset (the engine accepts reviewed variables without an evidence quote when history_source is present). FY2027E 102.25, FY2028E 102.0, lt 102.0 are desk judgment on the held balance_of_payments_pressure / CAUTIOUS regime: the USD stays firm at/near its highs \u2014 a Fed that hiked +25bp in Sep-2026 with the ~28\u201329 Oct outcome UNVERIFIED, a war-premium oil bid compressing (Brent 97.76, \u221213.3% w/w) and safe-haven demand \u2014 easing only gradually to ~102.0 long run as US real rates and the war premium fade. Quarantined: the S8/S11 press carry analyst/broker FX projections (e.g. DXY to 104); none were used."
         },
         "bi_rate": {
           "label": "BI-Rate (year average)",
@@ -1019,7 +1019,7 @@
             "source": "Bank Indonesia RDG decision via liputan6 (deck source S4)"
           },
           "status": "reviewed",
-          "basis": "Spot is the BI-Rate held at 5.75% at the 21-Oct-2026 RDG (S4; Deposit Facility raised to 5%, Lending Facility held 6.5%). FY2027E+ held flat at that level pending the owning desk; FY2026E and prior-year averages are omitted \u2014 no citable year-average on record this session."
+          "basis": "Spot is the BI-Rate held at 5.75% at the 21-Oct-2026 RDG (S4; Deposit Facility raised to 5%, Lending Facility held 6.5%). FY2027E+ held flat at that level pending the owning desk; FY2026E and prior-year averages are omitted \u2014 no citable year-average on record this session. Deck review 2026-11-07 (MACRO_FX) \u2014 unchanged. Note that `published cash-rate policy` fx_carry_rates.INDO 5.50% (asof 2026-10-02, built as Deposit Facility 4.75% + retail spread) predates the 21-Oct DF +25bp to 5.0%; the BI-Rate itself is unchanged at 5.75%, so the +162bp carry gap the memo quotes is unaffected in level \u2014 flagged to the next MONTHLY_IC, not patched here."
         },
         "cpi_id": {
           "label": "Indonesia CPI inflation",
@@ -1103,7 +1103,7 @@
           "value": 0.02,
           "asof": "2026-10-25",
           "source": "SEED house assumption pending the macro desk: 200 bp over the risk-free rate for an average IDX corporate borrower",
-          "status": "seed"
+          "status": "reviewed"
         },
         "tax_rate_id": {
           "label": "Indonesia statutory corporate income tax rate",
@@ -1257,7 +1257,7 @@
           },
           "lt": 4300,
           "spot": {
-            "value": 4079.5,
+            "value": 4074.8999,
             "asof": "2026-11-06",
             "source": "Yahoo Finance GC=F"
           },
@@ -1280,7 +1280,7 @@
           },
           "lt": 65.0,
           "spot": {
-            "value": 51.965,
+            "value": 51.803,
             "asof": "2026-11-06",
             "source": "Yahoo Finance SI=F"
           },
@@ -1303,7 +1303,7 @@
           },
           "lt": 11000,
           "spot": {
-            "value": 13800.9381,
+            "value": 13708.3433,
             "asof": "2026-11-06",
             "source": "Yahoo Finance HG=F"
           },
@@ -1326,7 +1326,7 @@
           },
           "lt": 3000,
           "spot": {
-            "value": 3200.0,
+            "value": 3236.25,
             "asof": "2026-11-06",
             "source": "Yahoo Finance ALI=F"
           },
@@ -1349,8 +1349,8 @@
           },
           "lt": 95.0,
           "spot": {
-            "value": 93.12,
-            "asof": "2026-11-05",
+            "value": 92.7,
+            "asof": "2026-11-06",
             "source": "Yahoo Finance TIO=F"
           },
           "status": "reviewed",
@@ -1449,7 +1449,7 @@
           },
           "lt": 75.0,
           "spot": {
-            "value": 97.76,
+            "value": 98.32,
             "asof": "2026-11-06",
             "source": "Yahoo Finance BZ=F"
           },
@@ -1472,7 +1472,7 @@
           },
           "lt": 69.0,
           "spot": {
-            "value": 90.34,
+            "value": 90.83,
             "asof": "2026-11-06",
             "source": "Yahoo Finance CL=F"
           },
@@ -1495,7 +1495,7 @@
           },
           "lt": 3.1,
           "spot": {
-            "value": 3.003,
+            "value": 2.998,
             "asof": "2026-11-06",
             "source": "Yahoo Finance NG=F"
           },
