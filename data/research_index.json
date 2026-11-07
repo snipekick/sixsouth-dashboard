@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-07T23:31:26+07:00",
+  "asof": "2026-11-08T01:41:22+07:00",
   "counts": {
     "theses": 56,
-    "ideas": 50,
-    "stocks": 72,
+    "ideas": 52,
+    "stocks": 73,
     "dossiers": 54,
     "ic": 3,
     "daily": 54,
@@ -2006,11 +2006,31 @@
       "book": "INDO",
       "ticker": "AUTO.JK",
       "name": "Astra Otoparts",
-      "verdict": "PROMOTED",
+      "verdict": "ADVANCE",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
-      "asof": "2026-11-07",
+      "asof": "2026-11-08",
       "doc": "research_doc_idea_indo-auto"
+    },
+    {
+      "book": "INDO",
+      "ticker": "LSIP.JK",
+      "name": "PP London Sumatra Indonesia",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-08",
+      "doc": "research_doc_idea_indo-lsip"
+    },
+    {
+      "book": "INDO",
+      "ticker": "SSMS.JK",
+      "name": "Sawit Sumbermas Sarana",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-08",
+      "doc": "research_doc_idea_indo-ssms"
     },
     {
       "book": "INDO",
@@ -3668,8 +3688,8 @@
       ],
       "ideas": [
         {
-          "verdict": "PROMOTED",
-          "asof": "2026-11-07",
+          "verdict": "ADVANCE",
+          "asof": "2026-11-08",
           "doc": "research_doc_idea_indo-auto"
         }
       ],
@@ -4412,7 +4432,13 @@
           "doc": "research_doc_thesis_t-indo-lsip-001"
         }
       ],
-      "ideas": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-08",
+          "doc": "research_doc_idea_indo-lsip"
+        }
+      ],
       "dossier": null,
       "price": 1505.0,
       "price_asof": "2026-11-06",
@@ -4630,6 +4656,25 @@
       "price": 1640.0,
       "price_asof": "2026-11-06",
       "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "SSMS.JK",
+      "book": "INDO",
+      "name": "Sawit Sumbermas Sarana",
+      "sector": "PLANTATION",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-08",
+          "doc": "research_doc_idea_indo-ssms"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
       "kill": null
     },
     {
