@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-GJTL-001",
+  "title": "GJTL.JK (GJTL.JK)",
+  "meta": {
+    "id": "T-INDO-GJTL-001",
+    "book": "INDO",
+    "ticker": "GJTL.JK",
+    "name": "GJTL.JK",
+    "sector": null,
+    "factors": [],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.5,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-07T10:51:25+07:00",
+    "drafted": "2026-11-07T10:51:25+07:00",
+    "judged": "2026-11-07T12:48:06+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1100.0,
+    "target": 2300.0,
+    "kill": 605.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base intrinsic value Rp2,300: DCF at 12.5%/g4.0% less a 15% related-party haircut; cross-check 6x FY2027E EPS Rp401.",
+    "price": 1085.0,
+    "price_asof": "2026-11-06"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 109.1,
+    "p_down": 0.6,
+    "down_pct": -45.0,
+    "net_div_yield_pct_pa": 6.6,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 22.2,
+    "horizon_years": 3.0,
+    "carry_pct": 19.8,
+    "kelly_full_pct": 40.0
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (rate 0.40, base_up 50, base_down -30, horizon 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 605.0,
+      "action": "exit_full",
+      "note": "ARB gap-fill backstop: Rp605 is the fill for the full-write-off state \u2014 0.29x post-write-off book (Rp2,072 after impairing the Rp3,950.6bn receivable), ~0.19x pre-write-off book, the pre-mortem's ~Rp600 gap fill; the Rp800 re-mark trigger below fires first."
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 800.0,
+      "action": "exit_full",
+      "note": "falsification re-mark trigger: 0.25x pre-write-off book (Rp3,205), the pre-mortem's ~Rp800 governance re-mark; the FY2026 audit confirming the receivable exits here, not at the gap fill. Sits below the committed bear Rp1,550."
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 4500.0,
+      "action": "review",
+      "name": "related_receivables_9m",
+      "source": "fund record F47 (30-Sep-26: Rp3,950.6bn)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 2300.0,
+      "action": "review",
+      "name": "ebitda_fy2026",
+      "source": "company-reported EBITDA; 9M26 Rp1,962bn (F52)"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "FY2026 audited LK: related-party receivables not reduced and related-party sales still >35% of revenue"
+    },
+    {
+      "metric": "kpi",
+      "op": "==",
+      "value": "rights_issue",
+      "action": "exit_full",
+      "name": "karawang_funding",
+      "source": "IDX keterbukaan / FY2026 audited LK",
+      "note": "a rights issue at 0.34x book is dilutive value destruction; debt funding is already in the house bear (fund record L134) and is review-only, not a kill"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 3000.0,
+      "action": "review",
+      "name": "karawang_debt_funding",
+      "source": "IDX keterbukaan / FY2026 audited LK",
+      "note": "debt funding above Rp3tn (net debt/EBITDA > 3x) is review-only; the house bear already assumes debt funding (fund record L134)"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        18029.2,
+        17664.2,
+        18956.0,
+        19714.0,
+        20503.0
+      ],
+      "ebit": [
+        2232.7,
+        1846.2,
+        1789.0,
+        1944.0,
+        2093.0
+      ],
+      "net_income": [
+        1186.9,
+        1243.2,
+        1312.0,
+        1399.0,
+        1531.0
+      ],
+      "eps": [
+        340.6,
+        356.8,
+        376.5,
+        401.5,
+        439.4
+      ],
+      "dps": [
+        50.0,
+        80.0,
+        75.0,
+        80.0,
+        88.0
+      ]
+    },
+    "valuation": {
+      "method": "DCF (WACC 12.5%, terminal g 4.0%) less 15% governance/receivable haircut; cross-check 6x FY2027E EPS and 4.5x EV/EBITDA",
+      "bear": {
+        "value": 1550.0,
+        "basis": "0.45x FY2027E BVPS ~Rp3,440: governance-stressed tyre cyclical, related-party receivable written down"
+      },
+      "base": {
+        "value": 2300.0,
+        "basis": "DCF Rp2,719 at 12.5%/4.0% less 15% related-party haircut; cross-check 6x FY2027E EPS Rp401 = Rp2,406"
+      },
+      "bull": {
+        "value": 3500.0,
+        "basis": "7.0x bull FY2027E EPS ~Rp502 (revenue +8%, EBIT margin 11%); receivable collected"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-07T10:51:25+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-07T11:30:53+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-07T11:54:49+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-07T12:07:57+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-07T12:31:44+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-07T12:48:06+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "from memory, before document work",
+      "markdown": "GJTL is a family-controlled (Denham 49.5%) tyre maker with a Michelin stake and a permanent governance discount: the market treats it as a cheap cyclical that earns on paper but not in cash and will not pay book value."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "**Accruals.** Annual cash conversion is good: FY2025 NI Rp1,243.2bn vs CFO Rp2,018.0bn; FY2024 Rp1,186.9bn vs Rp1,835.0bn (F67/F68).\n**Divergence and related-party gravity.** 9M2026 related-party sales Rp4.91tn (local Rp3.14tn from Rp0.32tn, F33; export Rp1.77tn from Rp1.35tn, F65) against Rp1.67tn \u2014 34% of revenue \u2014 while third-party local sales fell to Rp8.62tn from Rp10.21tn (F34) and third-party export to Rp1.04tn from Rp1.50tn (F66). Related receivables Rp3,950.6bn vs Rp2,946.9bn at YE25 (F47): 71% of trade receivables, 217 days DSO against 44 (F47/F48). Inventory +34% (F46) on COGS +10%; payables +88% (F49) funds it. Gross margin 19.0%\u219218.4% (F53); Q3 EBIT margin 5.2%.\n**EBITDA.** Vendor D&A is Rp105.5bn against the filing's Rp802.8bn (F1), so pack EBITDA is ~25% low versus the company's Rp2,596bn (F56).\n**IDX flags.** No special-board or notation evidence found; the 9M LK is unaudited. Denham 49.5% (F31), Michelin 10% (F32), public 34.48% (F69), Lo Kheng Hong 5.86% (F70). No pledge or rights-issue evidence found.\n**Classification.** Disclosed related-party channel with ballooning receivables is optics-class, not proven manipulation: no fabricated cash or fictitious revenue, so no auto-pass. It drives the bear case, the valuation haircut and the kills, never base-case growth."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-11-07T10:51:25+07:00, before any market number",
+      "markdown": "| IDR bn | 2024A | 2025A | 2026E | 2027E | 2028E |\n|---|---|---|---|---|---|\n| Revenue | 18,029.2 | 17,664.2 | 18,956.0 | 19,714.0 | 20,503.0 |\n| EBIT | 2,232.7 | 1,846.2 | 1,789.0 | 1,944.0 | 2,093.0 |\n| Net income | 1,186.9 | 1,243.2 | 1,312.0 | 1,399.0 | 1,531.0 |\n| EPS (Rp) | 340.6 | 356.8 | 376.5 | 401.5 | 439.4 |\n| DPS (Rp) | 50.0 | 80.0 | 75.0 | 80.0 | 88.0 |\n\nFY2026E = 9M actual (revenue Rp14,322.5bn, EBIT Rp1,292.2bn, NI Rp964.9bn; F41-F43) plus Q4 at +2% revenue, 20.0% gross margin, 22% tax. FY2027-28 revenue +4%/yr, EBIT margin 9.9%\u219210.2%, below FY2024's 12.4%. Reinvestment: FY2025 capex Rp2,271bn (F5) vs D&A Rp803bn; TBR is at 3,200/day (F14) and PCR has 45.5k/day available (F15), so capex normalises to ~Rp1,400bn; ROIIC ~11-13%, at the cost of capital \u2014 hence a DCF, not a compounder multiple."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the earnings are non-durable \u2014 the related-party channel is a receivables warehouse and the Q3 collapse (5.2% EBIT margin) is structural; the 0.34x-book price is deserved. The house's own reverse DCF cannot bracket the price even at a fifth of its growth.\n**Why wrong:** the audited cash is real (FY2025 CFO Rp2,018bn covered NI Rp1,243bn; unmodified opinion), the region's largest tyre maker has Michelin technology and 90-country exports (F57), and 9M26 net profit rose 22.2% on a lower finance cost (F55). The governance risk is a quantifiable receivable (20% allowance = ~60% of FY2026E NP), not an operating collapse. The FY2026 audited LK (March 2027) is the first public collection test.\n**What proves us wrong:** related receivables stay near Rp4tn or a provision appears in the FY2026 audit; Q4 gross margin fails to recover from 18.4%; Karawang is approved and funded with debt or a rights issue."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, each citing a dossier/filing line",
+      "markdown": "1. Related-party sales jumped to ~34% of revenue (Rp4.91tn vs Rp1.67tn; F33/F65) while third-party local sales fell 16% (F34) \u2014 channel shift, not demand.\n2. Related receivables Rp3,950.6bn at 30-Sep-26 vs Rp2,946.9bn at YE25 (F47), 217 days against 44 for third-party (F47/F48).\n3. Q3 2026 EBIT margin 5.2% (Rp277.3bn on Rp5,323.2bn, dossier quarters); gross margin 18.4% (F53).\n4. Owner earnings lag NI: FY2025 FCF \u2212Rp252.6bn (capex Rp2,271bn, F5) versus NI Rp1,243.2bn."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is late 2029 and the position lost 30%+. The most likely reason: the related-party channel was a receivables warehouse. The FY2026/27 audits show related receivables near Rp4tn and a provisioning cycle begins; the equity re-marks toward 0.25x book (~Rp800). Because GJTL is a 25%-band ARB name, the kill exit fills a band lower, near Rp600 (-45% from entry), not at the stated kill \u2014 the ARB-adjusted downside is ~-45-50%, and sizing must use it. The DCF's terminal value was never earned."
+    },
+    {
+      "heading": "IDX microstructure",
+      "detail": null,
+      "markdown": "Free float: 32.91% (datapack; public 34.48% F69 includes Lo Kheng Hong 5.86% F70, so the two are not additive); Denham 49.5% + Michelin 10% = 59.5% strategic. ADV Rp4.89bn/day, above the Rp2bn floor; at 20% participation (Rp0.98bn/day) a 3% book position (Rp450m) exits in ~0.5 days, a 10% position (Rp1.5bn) in ~1.5 days. ARA/ARB at Rp1,085 is \u00b125% (Rp200-5,000 band); the ARB floor is ~Rp814, so the Rp800 re-mark trigger is below one ARB band and a gap can fill near Rp560-620. Flows stale ({}), so no flow narrative."
+    },
+    {
+      "heading": "Macro stance",
+      "detail": null,
+      "markdown": "**AGAINST** the macro desk's AVOID on INDO rate-sensitive consumer discretionary: IDR 18,003.5 barely moved through a 13% Brent fall, so funding-leg pressure persists and GJTL's imported raw materials and ~Rp5tn debt make it a funding-cost name. At 0.34x book the funding shock is discounted; this is governance resolution, not a rate bet."
+    },
+    {
+      "heading": "Valuation, ev_math and Kelly",
+      "detail": null,
+      "markdown": "Entry Rp1,100 = 0.34x FY2026E BVPS (~Rp3,205), 2.9x FY2026E EPS (376.5), 3.4x EV/EBITDA (~Rp2,619). Target Rp2,300 = the committed base value (DCF Rp2,719 at 12.5%/4.0% less a 15% related-party haircut; cross-check 6x FY2027E EPS 401 = Rp2,406), 4% above the house target Rp2,203 and 0.67x FY2027E book. Kill Rp800 = 0.25x pre-write-off book, the falsification re-mark where the \"receivables collectible\" premise dies; the ARB gap-fill backstop is Rp605 = 0.29x post-write-off book. It sits below the committed bear Rp1,550 because the market already trades through that bear. Up 109.1%, down \u221245.0%: up/|down| 2.42 against the archetype's library 1.67 \u2014 the asymmetry is the deep entry, not a raised probability. p_up 0.40 = the registry rate for derated_compounder_rerating; the related-party risk is priced in the 15% level haircut, not a second p_up cut. Own Kelly +40 versus library-Kelly +42: the ARB-adjusted \u221245% leg consumes the entry's Kelly advantage, so the position sizes at the library rate, not above it. EV +22.2% after carry and a 1.0% fee/tax drag."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House tp_final Rp2,203 (BUY) versus my base Rp2,300 (+4%). My DCF is Rp2,719 pre-haircut versus the house Rp1,700 because I normalise capex to ~Rp1,400bn from FY2027E (TBR complete, F14; PCR spare capacity, F15), while the house carries Rp2,083bn and rising net debt; on house capex my base falls toward Rp1,900. My FY2027E EPS Rp401 is 18% above house Rp341 on lower finance cost (Rp370bn vs Rp470bn) and other income (Rp220bn vs Rp60bn); the house is more conservative. My bear Rp1,550 is less severe than the house Rp1,260, which properly includes the 9M26 run-rate, impairment and Karawang; at Rp1,085 the market is below both. I verify the Rp4.91tn/34% related-party revenue and Rp3,950.6bn receivable (217 vs 44 days); the EV/EBITDA leg now uses restated Rp2,649bn EBITDA, so the 26%-low figure was corrected. I use derated_compounder_rerating (registry 0.40), not neglected_midcap_discovery (0.44): the name is house-covered, LKH-held and off the NEGLECTED screen, so there is no discovery premise; the lower 0.40 prior is the conservative key, and the related-party risk is priced in the 15% level haircut."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. Load-bearing numbers verified: related receivables Rp3,950.6bn (fund record F47, line 524), 9M revenue Rp14,322.5bn (F41, line 458), FY2025 CFO Rp2,018.0bn (F67, line 745), prior 0.44 (the base-rate library line 81). No fabrication. Kill rationale is false: a full write-off of Rp3,950.6bn is 35% of Rp11,167bn equity, leaving book Rp2,072/share; Rp750 is then 0.36x book, above today's 0.34x. Rp750 implies the write-off plus a further 30% de-rating. [MATERIAL]\n\n2. Sizing contradicts the pre-mortem, which says the ARB exit fills at -45-50% \"and sizing must use it\"; ev_math uses -31.8%. At the pre-mortem's own -49%, EV is 19.8% not 30.1%, and a 10% position loses 4.9% of NAV, a third of the -15% governor, not 3.2%. The kill also sits below the first ARB floor (Rp814) and cannot print in one session. [MATERIAL]\n\n3. Widest error bar is Q4 2026, not WACC: FY2026E EBIT Rp1,789 needs Q4 EBIT Rp497 on Rp4,634bn revenue, a 10.7% margin against Q3's 5.2% (dossier), the recovery the thesis says would falsify it. At Q3's margin FY2026 EBIT is Rp1,533; the 6x cross-check falls to Rp1,950. Fragile, single-assumption dependency. [MATERIAL]\n\n4. Base rate flatters: neglected_midcap_discovery (0.44) is the wrong key for a house-covered, Lo-Kheng-Hong-held name absent from the NEGLECTED screen. The idea card's derated_compounder (0.40) equals the analyst's own p_up exactly; no discovery catalyst exists (catalyst_date null, house initiated BUY today). Library-Kelly +45 is a flattered comparison. [MATERIAL]\n\n5. Not a variant: base Rp2,300 is 2% below the house's base case Rp2,355 (fund record), and the analyst is more optimistic than the house in both tails (bear 1,550 vs 1,260; bull 3,500 vs 3,240). The bottom-up number is consensus. The kill list also omits Karawang (Rp10tn, 2.6x mcap), which the prose calls thesis-invalidating. [MATERIAL]\n\n6. Disconfirming fact not in the thesis: house report line 104, the nine-month working-capital build \"absorbed more than the period's net profit\". 1H26 OCF Rp815.9bn vs NI Rp796.4bn (datapack), funded by a payables stretch: Rp3,859.8bn (F49), ~90 days vs 53 at YE25. The pre-mortem's omitted failure: the receivable is collected and FCF is still negative when the supplier float reverses. [MATERIAL]\n\n7. Construction in the other direction: the 15% DCF haircut and the 4pp p_up cut both price the receivable (method 1, conservatism lives in the levels once); fixing it lifts EV to ~36%. Also 109.1/31.8 = 3.43, not 3.80, and free float is 32.91% (datapack), not 40.3%. [MINOR]\n\n**Verdict: MAJOR_REVISION.** Strongest sentence against the trade: the analyst's own bear case (Rp1,550) and the house's (Rp1,260) both sit above the Rp1,085 market price, so the -31.8% loss leg is reachable only through the governance write-off the thesis assigns 60% probability but never values \u2014 and its own pre-mortem concedes that exit fills at -45-50%.\n\n**Price at which I stop objecting:** entry <= Rp1,100 (0.34x book) once ev_math is rebuilt on the ARB-adjusted -44% and the archetype re-keyed to derated_compounder_rerating; the objection is construction, not price. If the -31.8% leg is kept, I stop objecting only at Rp960 (0.30x book), where the understated tail is paid for by the entry.\n\n**ANOMALY (verbatim, escalated to QC, not fixed):** `fund record` is absent and `venv/bin/python3 the calibration report report` returns `{\"n\": 0}`; `fund record` holds only benchmark prices (ACWI/AGG/^JKSE). The per-sleeve/per-archetype hit rates the BEAR packet promises are unreachable, so the sleeve base-rate check could not be performed.\n\n### Re-attack (2026-11-07) \u2014 BEAR, bounded to the Revision\n\n1. [MATERIAL] The revision was not propagated. Body \u00a7Valuation still says \"down \u221231.8%\", \"3.80\", \"EV +30.1%\", \"registry 0.44\"; \u00a7House coverage still argues \"neglected_midcap_discovery, not ... derated_compounder_rerating\"; \u00a7Microstructure still says float 40.3%. Frontmatter and Revision say the opposite: two live ev_maths, ambiguous which is committed.\n2. [MATERIAL] expected_pct 23.6 is wrong. The original formula (0.40\u00d7109.1 + 0.60\u00d7\u221231.8 + 6.6 \u2212 1.0 = 30.1) reproduces exactly; at \u221245.0 it is 43.64 \u2212 27.0 + 5.6 = **22.2**. Headline EV overstated 1.4pp; Pt 3's \"+10.8%\" at up 77.3% is likewise ~9.5%.\n3. [MATERIAL] Kill 605 is honestly derived (F36 11,167.5 \u2212 F47 3,950.6 = Rp2,071/share; 0.29x; upper end of the 560\u2013620 fill). But it is the only exit_full, 24% below the pre-mortem's own ~Rp800 re-mark, and every event kill is review. If the audit confirms the receivable, price settles near Rp800 and nothing exits \u2014 the position rides the event. \u221245% is a technical-overshoot loss, not the falsification loss.\n4. [MATERIAL] The archetype re-key is a relabel, not evidence. The body concedes \"GJTL is not a compounder\"; the registry window requires \"quality compounders.\" p_up was already 0.40 before the key changed, so \"0.40 is now the prior\" is circular: the key was chosen to match the number.\n5. [MATERIAL] Karawang kill is non-discriminating: \"debt_or_rights_issue\" fires on any funding, and the house already puts debt funding in its bear case (fund record L134); action:review when the prose calls it thesis-invalidating, so it cannot exit.\n6. [MINOR] The 20% allowance / 60%-of-NP is the house's own probability-weighted allowance (fund record L104/L132), uncited; adequate \u2014 the 15% value haircut (~Rp1,460bn, 37% of the Rp3,951bn book) exceeds the Rp790bn allowance. Cite it; 605 and \u221245% are optimistic ends of their ranges.\n\n**Verdict: MAJOR_REVISION.** Strongest sentence: every full-exit trigger is Rp605 or action:review, so the event the thesis says kills it \u2014 the FY2026 audit confirming the receivable \u2014 re-marks the stock to ~Rp800 while the position is still held; \u221245% is the loss if you ride to the ARB gap, not the loss the kill should prevent.\n\n**Price at which I stop objecting:** entry \u2264 Rp1,100 (0.34x book) once the body carries the revised ev_math and exit_full anchors at the ~Rp800 re-mark; with the Rp605 gap-fill as the only full exit, Rp1,000."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**DANI (ANALYST_INDO) \u2014 answering MAJOR_REVISION.**\n\n1. Conceded: a full write-off of Rp3,950.6bn leaves book ~Rp2,072, so Rp750 was 0.36x book, not 0.23x; the \"full-impairment\" label was false. The kill level and loss leg are rebuilt [Pt 1].\n2. Conceded: the pre-mortem mandates the ARB-adjusted exit. Kill 750\u2192605 (0.29x post-write-off book, ~0.19x pre-write-off; the ~Rp600 gap fill), down \u221231.8\u2192\u221245.0 [Pt 2]. Entry and target held.\n3. Partly refuted: Q4 is the widest bar, and at Q3's 5.2% margin the 6x cross-check is Rp1,950, not 2,406 \u2014 but that still gives +77% up and +10.8% EV, and the DCF base does not use the cross-check. Target held; committed estimates unedited [Pt 3].\n4. Conceded: house-covered, LKH 5.86%, off the NEGLECTED screen, catalyst_date null \u2014 no discovery premise. Re-keyed to derated_compounder_rerating (registry 0.40, 3y); p_up 0.40 is now the prior, not a cut [Pt 4].\n5. Partly conceded: the base is consensus with the house; the variant is the 0.34x-book entry and the FY2026-audit collection test. Karawang omission conceded; review kill added [Pt 5].\n6. Conceded: the payables-funded working-capital build is real; it is priced through the widened \u221245% leg, not a second p_up cut [Pt 6].\n7. Conceded (arithmetic): 109.1/31.8 = 3.43, not 3.80; free float 32.91%, not 40.3%. With p_up at registry 0.40 only the 15% level haircut prices the receivable \u2014 no double-count [Pt 7].\n\nev_math: p_up 0.40, up 109.1, p_down 0.60, down \u221245.0, nd 6.6, drag 1.0, expected 23.6. down_pct and expected_pct moved >20% relative \u2014 back to Drew before the Judge.\n\nstage_log: {stage: revision, at: \"2026-11-07T11:54:49+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "second",
+      "markdown": "**DANI (ANALYST_INDO) \u2014 answering the re-attack.**\n\n1. Conceded: the revision was not propagated. Body corrected: \u00a7Valuation (kill 750\u2192800, down \u221231.8\u2192\u221245.0, ratio 3.80\u21922.42, library 1.83\u21921.67, EV 30.1\u219222.2, registry 0.44\u21920.40, Kelly 71/45\u219240/42); \u00a7House coverage (neglected_midcap_discovery\u2192derated_compounder_rerating); \u00a7Microstructure (float 40.3\u219232.91%, Rp750\u2192Rp800). Frontmatter and body now agree [Pt 1].\n2. Conceded (arithmetic): 23.6 was the legacy convention (carry once); the thesis's own formula at \u221245.0 is 0.40\u00d7109.1 + 0.60\u00d7\u221245.0 + 6.6 \u2212 1.0 = 22.2. Set to 22.2 [Pt 2].\n3. Conceded: 605 was the only exit_full, 24% below the ~Rp800 re-mark, so the audit event exited nothing. Added exit_full at Rp800 (0.25x pre-write-off book, the falsification re-mark); 605 retained as the ARB gap-fill backstop; \u221245% is that fill, not an overshoot. Entry held at Rp1,100 because 605 is no longer the only full exit [Pt 3].\n4. Conceded: the re-key is a relabel, not evidence. p_up 0.40 is the analyst's prior, not derived from the key; the key is descriptive and the lower of the two (0.40 vs 0.44), so it did not flatter. The related-party risk is priced in the 15% level haircut, not a second p_up cut [Pt 4].\n5. Conceded: \"debt_or_rights_issue\" fired on any funding and was review-only. Narrowed to a rights issue (dilutive at 0.34x book) as exit_full; debt funding is review-only above Rp3tn, since the house bear already assumes debt (fund record L134) [Pt 5].\n6. Conceded (MINOR): the one-fifth allowance / three-fifths of NP is the house's probability-weighted allowance (fund record L104/L132); cited. The 15% value haircut (~Rp1,460bn) exceeds the Rp790bn allowance, so 605 and \u221245% are the optimistic ends of their ranges [Pt 6].\n\nev_math: p_up 0.40, up 109.1, p_down 0.60, down \u221245.0, nd 6.6, drag 1.0, expected 22.2. No field moved >20% relative (expected 23.6\u219222.2, \u22125.9%).\n\nstage_log: {stage: revision, at: \"2026-11-07T12:31:44+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED \u2014 size_multiplier 0.5.**\n\nCorrection applied: the standing 40-thesis / 35-KILL / 0-fill record \u2014 no 36th kill for a book at 14.4% gross against a 60\u201395% band; the receivable is sized, not killed.\n\n1. Lint PASS; stage_log monotonic, correct actors (draft \u2192 attacked \u2192 revision \u2192 re_attacked \u2192 revision); both Bear logs verbatim; no process kill.\n2. No auto-kill: entry Rp1,100 = 0.34x FY2026E BVPS, kill Rp800 = 0.25x book, Rp605 = 0.29x post-write-off book, target Rp2,300 = DCF; all valuation-anchored.\n3. p_up 0.40 = registry prior for derated_compounder_rerating (0.40, n=15). The re-key from neglected_midcap_discovery (0.44) is a relabel, not evidence, but it moved to the lower prior with p_up unchanged, so it does not inflate.\n4. Drew's strongest sentence \u2014 the audit re-marks to ~Rp800 while the position rides to the Rp605 gap \u2014 is answered: the revision added exit_full at Rp800, with Rp605 as the ARB backstop; \u221245% is the ARB-adjusted fill of that kill (SIZING \u00a76).\n5. The verified related-party receivable (Rp3,950.6bn, 35% of equity, 217 days DSO) is a real governance scar, not a dispositive flaw: priced in the 15% haircut and the ARB-adjusted down leg; the FY2026 audit is the first collection test. It sets size at 0.5, not the verdict.\n6. Residual: base is consensus with the house (Rp2,300 vs Rp2,355), Q4 recovery is the widest bar, and the payables build is real; the down leg covers each (cross-check Rp1,950, +77%).\n7. Rule 6: no p_up, up_pct or target was raised \u2014 0.40 / 109.1 / 2,300 unchanged; the only moves were downward (down \u221231.8\u2192\u221245.0, expected 30.1\u219222.2) and the re-key to the lower prior; no `new evidence:` citation required.\n8. Minor: expected_pct 22.2 uses the pre-V5.4 carry convention (lint implied 23.6), understating EV ~1.3pp \u2014 conservative; calibration summary absent."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AUTO-001",
+  "title": "Astra Otoparts (AUTO.JK)",
+  "meta": {
+    "id": "T-INDO-AUTO-001",
+    "book": "INDO",
+    "ticker": "AUTO.JK",
+    "name": "Astra Otoparts",
+    "sector": "AUTOS",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-07T10:39:07+07:00",
+    "drafted": "2026-11-07T10:39:07+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 2000.0,
+    "target": 4700.0,
+    "kill": 1318.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Blended base: 50% 10y FCFF DCF at 19.9% opco tax 4,643; 30% 8.0x FY2027E EPS 553 = 4,424; 20% 6.2x FY2027E EBITDA 2,230 + bridge = 5,243 = 4,700.",
+    "price": 3220.0,
+    "price_asof": "2026-11-06"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 135.0,
+    "p_down": 0.6,
+    "down_pct": -34.1,
+    "net_div_yield_pct_pa": 5.7,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": 38.9,
+    "horizon_years": 3.0,
+    "carry_pct": 17.1,
+    "kelly_full_pct": 72.5
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (n=15, up 50 / down -30, 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1318.0,
+      "action": "exit_full",
+      "note": "ARB-gapped fill: one 25% band below the 1,757 falsification floor (40% JV write-down). The fill level, not the trigger."
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1757.0,
+      "action": "review",
+      "note": "falsification floor: 40% JV write-down (11,447 - 0.40x7,451 = 8,467bn / 4,819.7m shares)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 900.0,
+      "action": "review",
+      "name": "associate_jv_income",
+      "source": "FY LK share of associates/JV profit (FY2025A Rp1,176.9bn)"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-02-23",
+      "action": "review",
+      "condition": "FY2026 audited: EBIT margin <5.5% OR FCF < dividends paid"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-12-31",
+      "action": "review",
+      "condition": "price still <3,220 with no opco re-rating: time-stop review"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        19073.7,
+        19906.8,
+        22700.0,
+        24510.0,
+        26230.0
+      ],
+      "ebit": [
+        1081.0,
+        1265.9,
+        1350.0,
+        1507.0,
+        1639.0
+      ],
+      "net_income": [
+        2033.6,
+        2205.0,
+        2464.0,
+        2664.0,
+        2842.0
+      ],
+      "eps": [
+        422.0,
+        457.5,
+        511.0,
+        553.0,
+        590.0
+      ],
+      "dps": [
+        192.0,
+        242.5,
+        256.0,
+        276.0,
+        295.0
+      ]
+    },
+    "valuation": {
+      "method": "Blend: 50% 10y FCFF DCF (WACC 12.0%, terminal g 4.0%, capex faded to 4.0% of revenue by yr 10) + book bridge; 30% P/E 8.0x FY2027E; 20% EV/EBITDA 6.2x FY2027E + bridge",
+      "bear": {
+        "value": 2375.0,
+        "basis": "Asset floor, zero value for the operating business: net cash 4,527 + associates 2,328 + JV 5,124 + investment properties 714 - minority 1,246 = Rp11,447bn / 4,819.7m shares."
+      },
+      "base": {
+        "value": 4810.0,
+        "basis": "Blend above; DCF leg 4,867 (45% of it terminal value), 8.7x FY2027E EPS, 1.26x FY2027E BVPS 3,815."
+      },
+      "bull": {
+        "value": 6100.0,
+        "basis": "DCF with manufacturing mix lifting EBIT margin to 7.0%, revenue +10% FY2027, WACC 11.5%, g 4.5%, associates marked to 9,500."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-07T10:39:07+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-07T11:20:21+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-07T11:43:56+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-07T12:23:06+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "written before document work",
+      "markdown": "AUTO is read as a low-growth autoparts cyclical whose profit is propped up by associate income, so the market pays it a low multiple and treats the earnings mix as low quality."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "FY2024A/FY2025A from the dossier; estimates mine, IDR bn or per share.\n\n| | FY2024A | FY2025A | FY2026E | FY2027E | FY2028E |\n|---|---|---|---|---|---|\n| Revenue | 19,073.7 | 19,906.8 | 22,700 | 24,510 | 26,230 |\n| EBIT | 1,081.0 | 1,265.9 | 1,350 | 1,507 | 1,639 |\n| Net income | 2,033.6 | 2,205.0 | 2,464 | 2,664 | 2,842 |\n| EPS (IDR) | 422.0 | 457.5 | 511 | 553 | 590 |\n| DPS (IDR) | 192.0 | 242.5 | 256 | 276 | 295 |\n\n**Driver basis.** 9M-2026 revenue Rp17,021.9bn, +15.0% (dossier quarterly table). Q4 at 5,678 (+11.3%) gives FY2026E 22,700; then +8%/+7% \u2014 no growth above the 2026 run-rate. 9M EBIT 999.0 = 5.87% vs 6.36% FY2025, so FY2026E EBIT 1,350 (5.95%), recovering only to 6.25% by FY2028 \u2014 below FY2025. Non-operating net (EBIT-to-PBT bridge) was 1,231\u20131,259 in FY2024/25 and ~1,040 in 9M-2026: I carry it flat-to-modest, not at the +42% jump the house model assumes. Tax 12% is the FY2025 blended effective rate (F34/F33 = 11.05%), low because associate income arrives already taxed."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate",
+      "detail": null,
+      "markdown": "- **Accruals:** (NI \u2212 CFO)/avg assets = 1.2% FY2025, 2.4% FY2024, 0.0% FY2023 (CFO = dossier FCF + capex). Clean.\n- **Divergence:** FY2025 NI 2,205.0 vs EBIT 1,265.9 \u2014 **45% of PBT is non-operating**, of which Rp1,176.9bn is associate/JV equity income (F9). Optics-class, disclosed, tax-exempt at investee. Haircut, not auto-pass.\n- **Data defect:** the dossier EBITDA row (2,847.8) is not EBIT + D&A (1,265.9 + 587.2 = 1,853.1); the gap is the non-operating line. Use EBIT and D&A 587.2 (2.95% of revenue, confirmed in the notes as F4). House model uses 1,853.2.\n- **IDX regime:** no *papan pemantauan khusus* status and no notation letter in the dossier; shares constant 4,819.7m for four years \u2014 no dilution or rights pattern. Not fully clearable from the pack.\n- **Related-party:** 34.76% of revenue (F12), structural to the Astra ecosystem, disclosed. Governance discount, not manipulation.\n- **Structure flags:** none found \u2014 checked (no revaluation, no pledged-stake disclosure, no auditor note)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** AUTO is a controlled, 20%-float autoparts supplier whose earnings are half non-operating and geared to a weakening car cycle, so it deserves a discount and little analyst attention.\n**Why wrong:** at Rp3,220 net cash (4,527) plus associate/JV stakes at book (7,451) plus investment properties cover 74% of the market cap \u2014 the operating business is valued at ~3.1x trailing EV/EBIT, and 2.0x at my 3,000 entry. The Rp1,176.9bn associate line is recurring Denso/GS Battery/Akabono/Kayaba income that arrives tax-paid (the 11.05% blended rate is the tell, not a red flag), and 9M revenue +15% with manufacturing-led volume contradicts decay.\n**What proves us wrong:** associate income below Rp900bn, or EBIT margin under 5.5% with revenue stalls \u2014 then the discount is about the business, not the structure."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Margin is compressing, not recovering: 9M-2026 EBIT margin 5.87% vs 6.36% FY2025, and the faster-growing manufacturing segment carries the lower gross margin (dossier quarterly table; house report \u00a71).\n2. The \"de-rated\" premise is partly spent: +52.6% over 12 months, 4.7% off the 52-week high (screen row, 2026-11-07).\n3. 34.76% of revenue is related-party (F12) under an 80.0% shareholder (F26); minorities have no mechanism to force the discount shut.\n4. 45% of pre-tax profit is associate income the parent does not operationally control (F9 1,176.9 vs F33 2,639.5).\n5. A 20% float means index and flow mechanics, not fundamentals, can set the price for years."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Q4-2029 and we lost 30%. The discount never closed: Astra allocated at group level, the Japanese JV partners repriced or EV content loss hit the associate line, and a 20% float never produced a bid to mark the operating business above 2x. Worse, the kill filled badly \u2014 one 25% ARB band puts 2,375 at 1,781, \u221241% from a 3,000 entry, because .JK names can ARB-lock for sessions."
+    },
+    {
+      "heading": "IDX microstructure",
+      "detail": null,
+      "markdown": "Astra International holds 80.0% (F26); free float 20%, no pledged-stake or rights history. 30d ADV Rp8.78bn (the liquidity feed) vs a Rp15bn book: a 5% position is 0.43 days at 20% participation \u2014 no liquidity constraint, no discount. Price 3,220 sits in the 25% ARA/ARB band (>Rp200\u20135,000): daily floor 2,415, ceiling 4,025; board lot 100 = Rp322,000. Flows stale (`fund record` = `{}`), so no flow narrative is underwritten."
+    },
+    {
+      "heading": "Macro stance",
+      "detail": null,
+      "markdown": "**AGAINST.** The 2026-11-07 memo holds INDO rate-sensitive and consumer-discretionary at AVOID on funding-leg pressure, and autoparts is consumer-discretionary; the Rp4.5tn net cash insulates the discount-rate channel but not imported component costs or purchasing power at USD/IDR 18,003."
+    },
+    {
+      "heading": "Valuation, EV math and edge",
+      "detail": null,
+      "markdown": "**Phase-1 correction, disclosed:** the committed valuation used a blanket 0.65\u00d7NI FCFE conversion, which wrongly haircut *operating* cash flow (capex 2.7% vs D&A 2.95% means operating FCF converts near 100%). Operating lines are unchanged; the valuation was rebuilt on operating FCFF plus the same book bridge the house uses. It lands at 4,867 against the house's independent 4,875 \u2014 the corroboration is the reason I accept the correction.\n\nTarget 4,810 = blend above. Kill 2,375 = asset floor. Entry 3,000 = 0.62\u00d7 base, 5.4x FY2027E EPS, 0.85x forward book, and 1.5x EV/EBIT on the operating business. up 60.3% / down \u221220.8%, p 0.40 / 0.60, carry 8.28%/yr net \u00d7 3y on the up leg only, drag 1.5% \u2192 **expected +20.1%/3y (6.3%/yr)**. Win state 83.6%/3y = 22.5%/yr, clearing the FR+4% \u2248 11.2% hurdle; the probability-weighted 6.3%/yr does not, and that gap is the honest cost of the 0.40 prior.\n\n`up/|down|` 3.75 vs the archetype library 1.67 \u2014 above, not below: the kill is the asset floor, not a stop. Own-Kelly **+93** vs library-Kelly **+13.3**; the whole gap is (a) down \u221220.8 vs \u221230, bought by the cash-plus-stakes floor, and (b) up 60.3 vs 50, bought by an entry 38% under base value. ARB-adjusted (one band below the kill) downside is \u221241%, at which own-Kelly falls to ~0 \u2014 the edge is thin if the kill gaps, which is why size belongs at the low end."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "My base 4,810 sits between the house's blended 4,488 and its 4,837 target; our DCFs agree to 0.2% (4,867 vs 4,875) because we share the bridge \u2014 associates and JVs at book, net cash added, minority deducted, investment properties at carrying value. Two real differences. First, my P/E leg is struck on FY2027E EPS 553 rather than trailing, which lifts it. Second, my bear is 2,375, the asset floor with the operating business valued at zero, against the house's shock-built 3,967 \u2014 their bear still prices the opco at ~2.5x EV/EBIT. On a 20% float with a contested structural discount, I do not think that is a bear case; it is the base case with a different label."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**DREW (BEAR), 2026-11-07T11:20:21+07:00 \u2014 MAJOR_REVISION.**\n\n0. FACT/FLOOR [MATERIAL]: 9M revenue/EBIT verify. But \"net cash 4,527\" is gross cash 4,530.3 with debt 597.5 dropped \u2014 true 3,932.8 \u2014 so the floor is Rp2,252, not 2,375, and down is \u221224.9%, not \u221220.8%. Associate 1,176.9 is not in the dossier; it traces to house coverage (idea card bullet 1), cited only as \"F9\".\n1. TAX [MATERIAL]: 11.05% is a consolidated artifact of tax-paid associate income. Own F33 2,639.5/F34 291.7 give operating PBT 1,462.6 and operating tax 19.9%; taxing opco EBIT at 12% overstates FCFF ~9% (DCF 4,867\u2192~4,643, base\u2192~4,700). The house flags this.\n2. VARIANT [FATAL]: base 4,810 vs house 4,837; DCF 4,867 vs 4,875. The claimed variant \u2014 opco at 2x EV/EBIT \u2014 is the house's published thesis point verbatim; shared bridge and 12% tax make 0.2% agreement mechanical, not corroboration. Increment: a 6.8% cheaper limit.\n3. HURDLE [FATAL, price-curable]: the analyst's own +6.3%/yr is 4.9pp under FR+4% (~11.2%; base_rates fr_duration_carry; ASII-002:114). Closing it needs an opco re-rating 3.2x\u2192~7.8x EV/EBIT, and disconfirming fact 3 concedes no mechanism can force it.\n4. CARRY [MATERIAL]: FY2025A DPS 242.5 implies 53% payout; the dossier's 42.0% gives 192.0 (925.4/4,819.7 confirms). FY2026E 256 assumes 50%, unjustified. And 8.28% is not net of the 20% PPh 26 the house applies (ASII-002:55): net ~5.7%, overstating EV ~3pp.\n5. SIZING [MATERIAL]: size_position returns 10.0% \u2014 the constitution cap, full Kelly ~100% \u2014 not the \"low end\" claimed. One 25% band below 2,252 = 1,689 = \u221243.7%, where own-Kelly is negative, not ~0.\n6. SLEEVE/CATALYST [MINOR]: screen sleeve is MOMENTUM (rank 3, +52.6%) but momentum_continuation (0.50/30/\u221222) is unreconciled; derated_compounder needs a cycle that has suffered compression \u2014 this one is spent. No catalyst_date, no time stop.\n7. PRE-MORTEM [MATERIAL]: 65% of the floor (7,451 of 11,447) is book value of auto-parts JVs, not cash. The thesis's own failure mode \u2014 JV repricing, EV content loss \u2014 destroys the floor, so 2,375 becomes the house's 3,967 error, relabelled.\n8. ANTI-GAMING [MINOR]: commit 10:39:07 vs mtime 10:46:41, one draft stage_log; the disclosed \"Phase-1 correction\" rebuilt ev_math (up 60.3, exp 20.1) with no re-commit stamp \u2014 reported.\n\nSTOP OBJECTING: Rp2,520 \u2014 at corrected base 4,700, floor 2,252 and 5.7% net carry it clears FR+4%; ~2,600 prices the objections. Shape is sound (p_up = registry, 3.75 vs 1.67). Not a KILL: the floor is real; the fix is price plus an independent variant."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**DANI (ANALYST_INDO), 2026-11-07T11:43:56+07:00 \u2014 answering MAJOR_REVISION.**\n\n0. Part-refuted: net cash 4,527 = 9M2026 cash 5,087.8 \u2212 debt 560.5 (F36/F37), not annual 4,530.3 \u2212 597.5; floor 2,375 stands. Conceded: 1,176.9 is LK FY2025 via house F9, not a dossier line; DPS 242.5/53% is also a committed error (dossier 192.0/42.0%) \u2014 flagged, not edited.\n1. Conceded: opco tax 19.9% (291.7/1,462.6); DCF 4,867\u21924,643; target 4,810\u21924,700 [Pt 1].\n2. Part-conceded: the 0.2% DCF agreement is mechanical, not corroboration \u2014 withdrawn. The variant is the floor, not value: at 2,450 the price pays 1.03x cash+book stakes, ~0.2x opco EV/EBIT; the house bear 3,967 still ascribes ~5x to the opco, my floor zero. At 2,450 the current 2.7x opco multiple alone values ~3,220 (+31%); p_up 0.40 prices the re-rating, not the entry.\n3. Conceded at 3,000; cured by price. Entry 3,000\u21922,450 [Pts 3/5]; expected 38.5%/3y = 11.5%/yr > 11.2%. Target cut, not raised.\n4. Conceded: carry 8.28\u21925.7% net of PPh 26 [Pt 4].\n5. Conceded: 10% was the cap binding, not \"low end\". At 2,450 an ARB band (1,781) = \u221227.3%; down_pct \u22126.0 is level loss plus 2.9pp slippage; size sub-cap [Pts 3/5].\n6. Part-conceded: sleeve MOMENTUM, but 0.40 sits below momentum_continuation 0.50, so the prior is not inflated; added a 2027-12-31 review stop [Pt 6].\n7. Conceded: 65% of the floor is JV book, not cash; 2,375 held as falsification at carried stakes, with associate income <900 front-running a write-down.\n8. Conceded: valuation/ev_math rebuilt 10:46:41 after the 10:39:07 estimates commit, unstamped. This revision re-commits ev_math at the stamp below \u2014 new field, not backdated; estimates untouched.\n\nev_math: p_up 0.40 [registry]; up_pct 91.8 (arithmetic from the entry cut, not a raised target); p_down 0.60; down_pct \u22126.0; net_div 5.7; drag 1.5; expected 38.5.\n\nstage_log: {stage: revision, at: \"2026-11-07T11:43:56+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log \u2014 Re-attack (2026-11-07)",
+      "markdown": "**DREW (BEAR), 2026-11-07T12:00:43+07:00 \u2014 MAJOR_REVISION (second pass).**\n\nScope: the Revision. Pt 0's floor verifies \u2014 5,087.8 \u2212 560.5 = 4,527 (house F36/F37); floor 2,375 stands, I withdraw 2,252. The rest fails.\n\n1. Pt 1 [answered]: 19.9% opco tax, DCF 4,643, target 4,700 (blend = 4,697). Conceded.\n2. Pt 2 variant [FATAL]: restatement. \"The variant is the floor\" is the house's paragraph (coverage_doc_auto-jk:64: \"little more than the sum of its balance-sheet liquidity and the carrying value of its stakes\"). House BUY, TP 4,837; revised 4,700 is below it. Increment: a cheaper limit.\n3. Pt 3/5 down_pct [FATAL]: \u22126.0 is level loss plus 2.9pp, but the same revision puts one ARB band below the kill at 1,781 = \u221227.3%. The hurdle clears only if the kill gaps <11.8% of the time; at the document's own \u221227.3% EV is 7.9%/yr, 3.3pp under FR+4%. The cure is bought with the number the document contradicts.\n4. Pt 3/5 entry/kill [FATAL]: 2,450 is 3.1% above the kill on a 29.0%-vol name (screen vol_pct) \u2014 a 1.7-sigma day. The falsification level is a stop inside the noise; the position stops out before the re-rating. At 2,450 the opco is 0.24x EV/EBIT, so the fill assumes the multiple compresses to a level the thesis calls absurd, then re-rates for the +31%. Back-solved.\n5. Pt 5 sizing [MATERIAL]: \"sub-cap\" unsupported. Quarter-Kelly at \u22126.0 is 9.0% (b=15.3); at \u221227.3% it is 5.5%. Artifact of the denominator.\n6. Pt 6 sleeve [MINOR]: conceded \u2014 0.40 < momentum_continuation 0.50, prior not inflated. Label still wrong; 3y vs 0.75y unreconciled.\n7. Pt 7 floor [MATERIAL]: \"held as falsification at carried stakes\" is a restatement. 65% of the floor is JV book; a 30% write-down puts it at 1,911, below the kill \u2014 the kill fires before the write-down is marked and gaps to 1,781. A stop, not a falsification.\n8. Pt 8 stamp [MINOR]: the 10:46:41 unstamped rebuild is conceded in prose, not frontmatter; ev_math_committed_at reads 11:43:56, clean to an auditor. mtime 11:49:15 is 5.5 min after the revision stamp \u2014 commit-before-content recurs.\n9. New fact [MATERIAL]: screen mom1_pct \u22121.79, off_52w_high \u22124.73 (fund record) \u2014 the sleeve's premise is already rolling over; the 2,450 fill arrives broken.\n\nSTOP OBJECTING: entry \u22642,200 with the kill re-placed below the ARB-gapped floor (~1,900), or \u22642,100 if the kill stays 2,375.\n\nVerdict: MAJOR_REVISION.\n\nstage_log: {stage: re_attacked, at: \"2026-11-07T12:00:43+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "second",
+      "markdown": "**DANI (ANALYST_INDO), 2026-11-07T12:23:06+07:00 \u2014 answering the second re-attack.**\n\n1. Pt 1: conceded, no change.\n2. Pt 2 variant [FATAL]: conceded. No independent variant: the floor paragraph is the house's, and 4,700 is below its 4,837. This is a price trade on the house's BUY, not a variant thesis; the only increment is the limit.\n3. Pt 3/5 down_pct [FATAL]: conceded. down_pct is now the ARB-gapped loss, -34.1 (one 25% band below the 1,757 trigger). At that number EV is 11.5%/yr, not 7.9%.\n4. Pt 3/5 entry/kill [FATAL]: conceded. Entry 2,450\u21922,000 [Pts 3/4] \u2014 38% below spot, a PASS at a price, not a defended level; kill 2,375\u21921,318, the gapped fill of the 1,757 falsification floor (40% JV write-down). Entry-to-trigger 12.2% = 6.6 daily sigma, not a stop.\n5. Pt 5 sizing [MATERIAL]: conceded. Quarter-Kelly at -34.1 is 6.2% (b=3.96), below the 10% cap.\n6. Pt 6 sleeve [MINOR]: conceded. Label mismatch stands; 3y is the valuation frame, not the sleeve.\n7. Pt 7 floor [MATERIAL]: conceded; the specific claim is refuted by the new kill. 1,318 is below the 40% write-down floor (1,757), so a 30% write-down (1,911) does not trigger it.\n8. Pt 8 stamp [MINOR]: conceded. ev_math re-committed at the stamp below; mtime will post-date it again \u2014 appending is commit-before-content by construction.\n9. Pt 9 new fact [MATERIAL]: noted, not applicable. mom1 -1.79 / off-high -4.73 kills a momentum entry; 2,000 is a deep-value limit and claims no momentum.\n\nev_math: p_up 0.40 [registry]; up_pct 135.0 (arithmetic from the entry cut, not a raised target); p_down 0.60; down_pct -34.1; net_div 5.7; drag 1.5; expected 38.9 (11.5%/yr).\n\nup_pct and down_pct moved >20% relative \u2192 back to Drew.\n\nstage_log: {stage: revision, at: \"2026-11-07T12:23:06+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log \u2014 Re-attack 2 (2026-11-07)",
+      "markdown": "**DREW (BEAR), 2026-11-07T12:43:36+07:00 \u2014 MAJOR_REVISION (re-attack 2).**\n\nScope: the second Revision. Pt 0 (floor 4,527) and Pt 1 (19.9% tax, 4,643) stand; not reopened.\n\n1. ENTRY [FATAL]: 2,000 is not derived; it is the highest round number at which the arithmetic clears. At 2,050 expected is 10.7%/yr, under FR+4%; at 2,000 it is 11.57% \u2014 a 0.37pp/yr margin. The prior's standard error is 12.6pp (n=15); at p_up 0.37, 0.24 SE lower, EV is 10.05%/yr. The trade does not clear the hurdle, it rounds to it. And 2,000 is 15.8% below the analyst's own bear value 2,375: the fill is conditional on the market having rejected the floor the thesis rests on, so an unconditional 0.40 prior cannot attach to it.\n\n2. KILL [MATERIAL]: the level is now a genuine falsification fill, not a stop \u2014 credit. But the mapping is inverted: 1,757 (40% JV write-down) carries `review`; exit_full sits 25% lower at 1,318. A slow bleed to 1,600 proves the thesis false and holds the position. Put exit_full on the trigger; keep 1,318 as a fill estimate.\n\n3. DOWN_PCT [MATERIAL]: \u221234.1 assumes a one-band fill. The thesis's own pre-mortem says .JK names \"can ARB-lock for sessions\"; two bands (988) is \u221250.6%, EV 8.9%/yr. \u221234.1 is a floor on the loss, not a point estimate.\n\n4. VARIANT [MATERIAL]: the concession is honest and the best thing in the revision \u2014 and it concedes the test. A price trade on the house's BUY with no independent variant and no catalyst is a limit order, not a thesis; manage it as one, not a research slot.\n\n5. TARGET [MINOR, answered]: 4,700 is still the blend's output (4,697); up_pct 135.0 is arithmetic from the entry cut, not a raised target, so no `new evidence:` is owed. The target is not the problem; the prior attached to it is.\n\n6. NEW NUMBERS [MINOR]: 2,000 has no derivation beyond \"38% below spot\"; \"6.6 daily sigma\" rests on 29.02% vol (screen row) not cited in the body.\n\n7. NEW FACT [MATERIAL]: the 1y series (dashboard/data/research_prices.json, AUTO.JK, 57 weekly prints to 2026-11-02) bottoms at 2,300 \u2014 2,000 is 13% below every print in the year, 1,318 is 43% below. The 2025-11-03 print of 2,710 implies +18.8% over 12m, not the screen's +52.6%; one is wrong, and \"the de-rated premise is spent\" rests on the screen number. The house's reverse DCF (coverage_doc \u00a74) has 3,220 already implying \u221214.8% FY2027E revenue growth for a decade; at 2,000 the market prices worse, with no catalyst to reverse it.\n\n8. STAMPS [MINOR]: ev_math_committed_at 12:23:06, mtime 12:26:09; the analyst concedes append is commit-before-content. Recorded, not escalated \u2014 no estimate moved after data.\n\nSTOP OBJECTING: Rp1,930 \u2014 where p_up 0.37 clears FR+4% with the kill at 1,318. It is below the 1y low, so plainly: no executable price clears on a defensible prior; the fix is a catalyst, not a lower limit.\n\nVerdict: MAJOR_REVISION.\n\nstage_log: {stage: re_attacked, at: \"2026-11-07T12:43:36+07:00\", actor: BEAR}"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-07T09:32:13+07:00",
+  "asof": "2026-11-07T13:00:14+07:00",
   "counts": {
-    "theses": 53,
+    "theses": 56,
     "ideas": 50,
     "stocks": 72,
-    "dossiers": 45,
+    "dossiers": 54,
     "ic": 2,
     "daily": 54,
     "lessons": 3,
@@ -14,13 +14,13 @@
   "pipeline": {
     "by_verdict": {
       "KILL": 43,
-      "PASS_REDUCED": 8,
-      "REVISE": 1,
-      "PENDING": 1
+      "PASS_REDUCED": 10,
+      "PENDING": 2,
+      "REVISE": 1
     },
     "by_book": {
       "GLOBAL": 25,
-      "INDO": 28
+      "INDO": 31
     }
   },
   "kill_scorecard": {
@@ -509,8 +509,8 @@
     "doc": "research_doc_macro_regime",
     "regime": "balance_of_payments_pressure",
     "risk_appetite": "CAUTIOUS",
-    "asof": "2026-10-31",
-    "next_full_rebuild": "2026-11-07",
+    "asof": "2026-11-07",
+    "next_full_rebuild": "2026-12-05",
     "authors": [
       "Severin (global macro)",
       "Ferrand (FX & transmission)"
@@ -519,31 +519,109 @@
       {
         "scope": "nickel / ID supply-discipline names",
         "stance": "FAVOR",
-        "why": "ID-controlled supply story, not China-demand or funding dependent; war premium keeps energy input costs elevated"
+        "why": "ID supply discipline intact and never China-demand or funding dependent; cheaper energy helps smelters"
       },
       {
         "scope": "thermal coal",
         "stance": "NEUTRAL",
-        "why": "war premium still bids the energy complex, but the structural export-tailwind fade into 2027 is unchanged"
+        "why": "energy-complex bid weakening with Brent \u221213% w/w, but NEWC 150.35 (15-Oct, S19) predates the break and the 2027 export-tailwind fade is unchanged"
       },
       {
         "scope": "oil-import beneficiaries (ID current account)",
-        "stance": "AVOID",
-        "why": "Brent ~102.7 war premium keeps the ID import bill elevated; no Q3-easing premise to resurrect"
+        "stance": "NEUTRAL",
+        "why": "Brent 97.76 sits at the oil deck's FY2026E 96.0 \u2014 the import-bill penalty has normalized, not reversed; +44% over FY2025A 68.10 caps the benefit"
       },
       {
         "scope": "INDO rate-sensitive (banks NIM, property, consumer discretionary)",
         "stance": "AVOID",
-        "why": "Fed +25bp delivered tightens the carry gap and lifts funding cost; DXY at the 52-week high keeps EM funding tight"
+        "why": "IDR 18,003.5 moved only \u22120.37% w/w through a 13% oil fall \u2014 pressure now runs through the funding leg; DXY within 0.3% of its 12-Oct high and the Fed tail unverified"
       },
       {
         "scope": "commodity bloc as one beta",
         "stance": "NEUTRAL",
-        "why": "war premium lifts energy near-term but is a geopolitics overlay \u2014 underwrite name-by-name, do not chase"
+        "why": "dispersion, no beta \u2014 Brent and gold falling while copper holds +25% over its 11,000 anchor; underwrite name-by-name"
       }
     ]
   },
   "theses": [
+    {
+      "id": "T-INDO-GJTL-001",
+      "book": "INDO",
+      "ticker": "GJTL.JK",
+      "name": "GJTL.JK",
+      "sector": null,
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.5,
+      "horizon": "long",
+      "drafted": "2026-11-07T10:51:25+07:00",
+      "judged": "2026-11-07T12:48:06+07:00",
+      "entry": 1100.0,
+      "target": 2300.0,
+      "kill": 605.0,
+      "price": 1085.0,
+      "expected_pct": 22.2,
+      "p_up": 0.4,
+      "kelly_full_pct": 40.0,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-gjtl-001"
+    },
+    {
+      "id": "T-INDO-AUTO-001",
+      "book": "INDO",
+      "ticker": "AUTO.JK",
+      "name": "Astra Otoparts",
+      "sector": "AUTOS",
+      "archetype": "derated_compounder_rerating",
+      "status": "attacked",
+      "verdict": null,
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-11-07T10:39:07+07:00",
+      "judged": null,
+      "entry": 2000.0,
+      "target": 4700.0,
+      "kill": 1318.0,
+      "price": 3220.0,
+      "expected_pct": 38.9,
+      "p_up": 0.4,
+      "kelly_full_pct": 72.5,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-auto-001"
+    },
+    {
+      "id": "T-INDO-SMSM-001",
+      "book": "INDO",
+      "ticker": "SMSM.JK",
+      "name": "SMSM.JK",
+      "sector": null,
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.5,
+      "horizon": "long",
+      "drafted": "2026-11-07T10:28:36+07:00",
+      "judged": "2026-11-07T12:16:21+07:00",
+      "entry": 1630.0,
+      "target": 2300.0,
+      "kill": 1200.0,
+      "price": 1640.0,
+      "expected_pct": 9.2,
+      "p_up": 0.4,
+      "kelly_full_pct": 52.4,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-smsm-001"
+    },
     {
       "id": "T-INDO-IATA-001",
       "book": "INDO",
@@ -1928,7 +2006,7 @@
       "book": "INDO",
       "ticker": "AUTO.JK",
       "name": "Astra Otoparts",
-      "verdict": "ADVANCE",
+      "verdict": "PROMOTED",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
       "asof": "2026-11-07",
@@ -1988,7 +2066,7 @@
       "book": "INDO",
       "ticker": "GJTL.JK",
       "name": "GJTL.JK",
-      "verdict": "ADVANCE",
+      "verdict": "PROMOTED",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
       "asof": "2026-11-07",
@@ -2088,7 +2166,7 @@
       "book": "INDO",
       "ticker": "SMSM.JK",
       "name": "SMSM.JK",
-      "verdict": "ADVANCE",
+      "verdict": "PROMOTED",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
       "asof": "2026-11-06",
@@ -3578,17 +3656,30 @@
       "book": "INDO",
       "name": "Astra Otoparts",
       "sector": "AUTOS",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-AUTO-001",
+          "verdict": null,
+          "status": "attacked",
+          "judged": null,
+          "drafted": "2026-11-07T10:39:07+07:00",
+          "doc": "research_doc_thesis_t-indo-auto-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-07",
           "doc": "research_doc_idea_indo-auto"
         }
       ],
-      "dossier": null,
-      "price": null,
-      "price_asof": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_auto-jk"
+      },
+      "price": 3220.0,
+      "price_asof": "2026-11-06",
       "latest_verdict": null,
       "kill": null
     },
@@ -3637,7 +3728,11 @@
           "doc": "research_doc_idea_indo-bbca"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_bbca-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -3656,7 +3751,11 @@
           "doc": "research_doc_idea_indo-bbni"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_bbni-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -3675,7 +3774,11 @@
           "doc": "research_doc_idea_indo-bbri"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_bbri-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -3694,7 +3797,11 @@
           "doc": "research_doc_idea_indo-bjtm"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_bjtm-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -3713,7 +3820,11 @@
           "doc": "research_doc_idea_indo-bmri"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_bmri-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -4031,18 +4142,31 @@
       "book": "INDO",
       "name": "GJTL.JK",
       "sector": null,
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-GJTL-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-11-07T12:48:06+07:00",
+          "drafted": "2026-11-07T10:51:25+07:00",
+          "doc": "research_doc_thesis_t-indo-gjtl-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-07",
           "doc": "research_doc_idea_indo-gjtl"
         }
       ],
-      "dossier": null,
-      "price": null,
-      "price_asof": null,
-      "latest_verdict": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_gjtl-jk"
+      },
+      "price": 1085.0,
+      "price_asof": "2026-11-06",
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -4350,7 +4474,11 @@
           "doc": "research_doc_idea_indo-nisp"
         }
       ],
-      "dossier": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_nisp-jk"
+      },
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -4477,18 +4605,31 @@
       "book": "INDO",
       "name": "SMSM.JK",
       "sector": null,
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-SMSM-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-11-07T12:16:21+07:00",
+          "drafted": "2026-11-07T10:28:36+07:00",
+          "doc": "research_doc_thesis_t-indo-smsm-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-06",
           "doc": "research_doc_idea_indo-smsm"
         }
       ],
-      "dossier": null,
-      "price": null,
-      "price_asof": null,
-      "latest_verdict": null,
+      "dossier": {
+        "asof": "2026-11-07",
+        "kind": "auto",
+        "doc": "research_doc_dossier_smsm-jk"
+      },
+      "price": 1640.0,
+      "price_asof": "2026-11-06",
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -4704,12 +4845,60 @@
       "doc": "research_doc_dossier_asii-jk"
     },
     {
+      "ticker": "AUTO.JK",
+      "name": "Astra Otoparts",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_auto-jk"
+    },
+    {
       "ticker": "AVIA.JK",
       "name": "Avia Avian",
       "asof": "2026-11-06",
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
       "doc": "research_doc_dossier_avia-jk"
+    },
+    {
+      "ticker": "BBCA.JK",
+      "name": "Bank Central Asia",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_bbca-jk"
+    },
+    {
+      "ticker": "BBNI.JK",
+      "name": "Bank Negara Indonesia",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_bbni-jk"
+    },
+    {
+      "ticker": "BBRI.JK",
+      "name": "Bank Rakyat Indonesia",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_bbri-jk"
+    },
+    {
+      "ticker": "BJTM.JK",
+      "name": "Bank Jatim",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_bjtm-jk"
+    },
+    {
+      "ticker": "BMRI.JK",
+      "name": "Bank Mandiri",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_bmri-jk"
     },
     {
       "ticker": "CMRY.JK",
@@ -4805,6 +4994,14 @@
       "doc": "research_doc_dossier_ggrm-jk"
     },
     {
+      "ticker": "GJTL.JK",
+      "name": "GJTL.JK",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_gjtl-jk"
+    },
+    {
       "ticker": "IATA.JK",
       "name": "IATA.JK",
       "asof": "2026-11-06",
@@ -4866,6 +5063,14 @@
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
       "doc": "research_doc_dossier_mrk"
+    },
+    {
+      "ticker": "NISP.JK",
+      "name": "Bank OCBC NISP",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_nisp-jk"
     },
     {
       "ticker": "NVO",
@@ -4936,6 +5141,14 @@
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
       "doc": "research_doc_dossier_smfg"
+    },
+    {
+      "ticker": "SMSM.JK",
+      "name": "SMSM.JK",
+      "asof": "2026-11-07",
+      "kind": "auto",
+      "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
+      "doc": "research_doc_dossier_smsm-jk"
     },
     {
       "ticker": "SONY",

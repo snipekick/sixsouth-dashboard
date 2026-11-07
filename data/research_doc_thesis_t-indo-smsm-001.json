@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-SMSM-001",
+  "title": "SMSM.JK (SMSM.JK)",
+  "meta": {
+    "id": "T-INDO-SMSM-001",
+    "book": "INDO",
+    "ticker": "SMSM.JK",
+    "name": "SMSM.JK",
+    "sector": null,
+    "factors": [],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.5,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-07T10:28:36+07:00",
+    "drafted": "2026-11-07T10:28:36+07:00",
+    "judged": "2026-11-07T12:16:21+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1630.0,
+    "target": 2300.0,
+    "kill": 1200.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Revised base DCF Rp2,300 (11.1x FY2026E EPS) after the FY2026 WC drag \u2014 see Revision; re-rate as the aftermarket annuity is recognised.",
+    "price": 1640.0,
+    "price_asof": "2026-11-06"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 41.1,
+    "p_down": 0.6,
+    "down_pct": -26.4,
+    "net_div_yield_pct_pa": 8.0,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 9.2,
+    "horizon_years": 3.0,
+    "carry_pct": 24.0,
+    "kelly_full_pct": 52.4
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library \u2014 derated_compounder_rerating",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1600.0,
+      "action": "review",
+      "note": "bear-DCF falsification level \u2014 review the thesis"
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1200.0,
+      "action": "exit_full",
+      "note": "ARB-adjusted exit fill (~25% below the 1,600 falsification level)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 15.0,
+      "action": "review",
+      "name": "ROE",
+      "source": "FY audited LK"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 45.0,
+      "action": "review",
+      "name": "payout_ratio",
+      "source": "FY audited LK"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        5165.0,
+        5338.8,
+        5663.0,
+        6003.0,
+        6333.0
+      ],
+      "ebit": [
+        1374.9,
+        1502.2,
+        1592.0,
+        1699.0,
+        1805.0
+      ],
+      "net_income": [
+        1024.2,
+        1124.7,
+        1194.0,
+        1274.0,
+        1354.0
+      ],
+      "eps": [
+        177.8,
+        195.3,
+        207.4,
+        221.2,
+        235.1
+      ],
+      "dps": [
+        135.0,
+        140.0,
+        145.0,
+        155.0,
+        164.0
+      ]
+    },
+    "valuation": {
+      "method": "DCF (COE 12.5%, terminal g 4.5%, net cash added); cross-check FY2027E P/E",
+      "bear": {
+        "value": 1690.0,
+        "basis": "growth 2%, EBIT margin 25%, COE 13.5%, g 4% \u2014 ~10x bear-case EPS"
+      },
+      "base": {
+        "value": 2370.0,
+        "basis": "growth 6%, EBIT margin held 28.1%, COE 12.5%, g 4.5% \u2014 11.4x FY2026E EPS"
+      },
+      "bull": {
+        "value": 3550.0,
+        "basis": "growth 8.5%, EBIT margin 29.5%, COE 11.5%, g 5% \u2014 17x FY2026E EPS"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-07T10:28:36+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-07T11:10:53+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-07T11:34:51+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-07T12:16:21+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "IDR bn. FY2026E\u201328E build off 9M-2026 actuals (revenue Rp4,182.8bn, +6.7% yoy; EBIT Rp1,172.3bn, +8.0%; attributable profit Rp874.1bn, +6.6%) rolled to a normal Q4, then 6.0%/5.5% growth with the FY2025 EBIT margin (28.1%) held \u2014 the most-probable path, no haircut. Payout 70% (FY2025 71.7%), EPS on 5,758.7m shares. Net cash Rp907bn (cash 1,080.1 \u2212 debt 173.0). FY2025 FCF Rp918.5bn on NI Rp1,124.7bn (cash conversion ~100%), so the DCF runs on FCFE = NI \u2212 ~Rp145bn capex/WC drag.\n\n| IDR bn | 2024A | 2025A | 2026E | 2027E | 2028E |\n|---|---|---|---|---|---|\n| Revenue | 5,165.0 | 5,338.8 | 5,663 | 6,003 | 6,333 |\n| EBIT | 1,374.9 | 1,502.2 | 1,592 | 1,699 | 1,805 |\n| Net income | 1,024.2 | 1,124.7 | 1,194 | 1,274 | 1,354 |\n| EPS (IDR) | 177.8 | 195.3 | 207.4 | 221.2 | 235.1 |\n| DPS (IDR) | 135.0 | 140.0 | 145 | 155 | 164 |\n\nValuation (own numbers, pre-market): FCFE at a 12.5% COE (11\u201313% band, top-half for small-cap liquidity), terminal g 4.5%, net cash added \u2192 base Rp2,370 (11.4x FY2026E EPS); bear Rp1,690; bull Rp3,550. See `model.valuation`."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: a low-growth, family-controlled auto-parts supplier with thin float and thin coverage \u2014 priced as a cyclical at a high-single-digit P/E and a fat yield, with the replacement-parts annuity and 30% ROE treated as an artifact of the cycle."
+    },
+    {
+      "heading": "Earnings-quality gate",
+      "detail": null,
+      "markdown": "- **Accruals ratio (NI\u2212CFO)/avg assets:** FY2023 \u22123.8%, FY2024 \u22122.6%, FY2025 +0.0% \u2014 cash-backed. The 9M-2026 filing breaks the run: CFO Rp590.6bn against group profit Rp958.3bn (62% conversion), a ~38% accruals gap. Optics-class.\n- **Cash conversion (CFO/NI):** 118%, 112%, 100% (FY23\u201325); 62% in 9M-26.\n- **Divergence:** inventories Rp1,610.3bn vs Rp1,250.3bn (+28.8%); third-party receivables Rp1,304.8bn vs Rp1,173.3bn (+11.2%) while revenue grew 6.74% \u2014 1.66x revenue growth, the card's trigger. Optics-class.\n- **IDX regime:** main board; no special notation surfaced; FY audited, Q1\u2013Q3 unaudited.\n- **Related-party:** purchases 8.48% of consolidated COGS (8.07% prior); related-party sales Rp58.7bn. Disclosed, stable, not arm's-length-verifiable. Optics-class.\n- **Structure:** no pledge, rights-issue or auditor-tier signal in the pack; controller 50.54% [F59].\n- **Classification:** no manipulation-class flag. Two optics-class flags (working-capital build, related-party) \u2192 haircut in the pre-mortem, not a pass."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** SMSM is a low-float, family-controlled, no-growth auto-parts cyclical. At Rp1,640 it pays 7.6x FY2026E and a 9.5% gross yield; the reverse DCF implies revenue contracting ~6.3%/yr from FY2027 \u2014 the market is applying close to double the house cost of capital, or pricing a melting ice cube.\n\n**Why wrong:** 85% of revenue is recurring aftermarket [F53], exported to 125+ countries [F52]; filters are consumables tied to the vehicle parc, not new-car sales. 9M-2026 revenue +6.7% and profit +6.7%, domestic +16.2% [F74/F75/F81]; ROE ~29.5%; net cash; 72% payout with 21 consecutive years of increases [F88]. The discount is liquidity and control, not a demonstrated earnings decline. A 9.5% yield on a net-cash, 29%-ROE business is the mispricing.\n\n**What proves us wrong:** 2027 H1 overseas growth below domestic for two quarters (restocking reversal), gross margin below the recent band for a full year, a related-party purchase-ratio step-up, or a payout cut toward the 45% policy floor [F18]."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, each citing a dossier/filing line",
+      "markdown": "1. The working-capital build is real: inventories +28.8% and third-party receivables +11.2% (1.66x revenue growth) while 9M CFO fell to Rp590.6bn against Rp958.3bn profit [F29/F41/F96/F27/F25] \u2014 earnings quality is deteriorating even as the P&L grows.\n2. Growth is thin and margin-assisted: revenue CAGR FY2022\u201325 is ~2.9% (4,894.2\u21925,338.8) and the FY2025 EBIT margin of 28.1% is 5.6pp above FY2022's 22.5% \u2014 the base case holds a peak margin [dossier income statement / derived ratios].\n3. Exports are 62% of revenue but grew only +1.64% in 9M-26 versus domestic +16.21% off a weak base [F97/F81/F82] \u2014 the recovery is domestic and base-effect-driven, not broad.\n4. Control and float: PT Adrindo Intiperkasa holds 50.54% [F59]; free float 40.95% and ADTV Rp6.1bn \u2014 a controlled, mid-liquidity name can stay discounted for years (the house de-rating base rate).\n5. Related-party purchases of 8.48% of COGS [F32] are disclosed and stable, but a controlled issuer's minority has limited ability to verify arm's-length pricing."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and this position lost 30%. The most likely reason is the value trap: the 40.95% float and 50.54% controller kept the discount in place while the working-capital build (inventories +29%, receivables 1.66x revenue) absorbed the cash the dividend needs, forcing a payout cut toward the 45% policy floor \u2014 and the \"cheap\" 7.6x turned out to be the market correctly pricing a low-float, low-growth, related-party-exposed name. Secondary: the export restocking reversed in 2027 H1 (overseas was already +1.6%) and the 28.1% EBIT margin mean-reverted. A kill exit at Rp1,200 fills lower under the 25% ARB band."
+    },
+    {
+      "heading": "IDX microstructure",
+      "detail": null,
+      "markdown": "Free float 40.95%; controller PT Adrindo Intiperkasa 50.54% at 30-Sep-2026 [F59]; no pledge, HSC listing or special notation found. Real liquidity: 30d ADV Rp6.08bn (house 3m Rp5.69bn); a 10%-NAV position (Rp1.5bn) is ~25% of ADV and exits in ~1.2 days at 20% participation \u2014 inside the 7-day limit. At Rp1,640 the ARA/ARB band is 25% (Rp1,230 / Rp2,050 next session); tick Rp5; board lots of 100. Limit entry Rp1,630, max chase 3% \u2192 Rp1,679. Flows stale (`fund record` `{}`); no flow narrative underwritten."
+    },
+    {
+      "heading": "Macro stance",
+      "detail": null,
+      "markdown": "**AGAINST** the memo's INDO rate-sensitive / consumer-discretionary AVOID tilt: funding-leg pressure (IDR 18,003.5 through a 13% oil fall) is a real headwind for domestic demand and the discount rate, but SMSM is 62% export/dollar-linked with net cash, so transmission is muted; I mark AGAINST honestly and do not size above the cap."
+    },
+    {
+      "heading": "Valuation and ev_math",
+      "detail": null,
+      "markdown": "Entry Rp1,630 is a valuation level: ~7.9x FY2026E EPS and an 8.0% net dividend yield. Target Rp2,370 is the base DCF. Kill Rp1,200 (~5.8x FY2026E, below every auto-parts trough) is where the market would be pricing terminal impairment \u2014 a fundamental falsification, not a stop; ROE <15% and payout <40% are the KPI kills. up 45.4%, down \u221226.4%, ratio 1.72 vs the archetype's library 1.67. p_up held at the 0.40 registry prior \u2014 no deviation, the bear is a live near-market scenario. Own Kelly 19.5% vs library 13.3%; the gap is the entry discount to intrinsic value, itemised. Dividends credit the up leg only (8.0%/yr \u00d7 3 years); fee/tax drag 1.0% (0.15 buy + 0.25 sell + 0.10 final tax + 2\u00d725bp slippage); EV +10.9%."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "My FY2026E/27E EPS of 207.4/221.2 matches the house model's 209.7/221.2 within 1%; the divergence is valuation, not earnings. The house blends DCF 3,089 (50%), P/E 2,041 (30%) and EV/EBITDA 1,806 (20%) to a Rp2,668 base and ~Rp2,700 target on an 11.85% WACC, 4% terminal g and a ten-year explicit forecast. I use a 12.5% COE and a three-year explicit horizon, so my base of Rp2,370 is ~11% below the house. My bear (Rp1,690) is far below the house bear (Rp2,355): the house's mirrored shocks still leave every scenario above the market price, while I let the de-rated multiple persist and the EBIT margin fall to 25% \u2014 I think the house understates the de-rating risk that is the actual reason the stock is at 7.6x. My target is ~12% below house; I do not underwrite the house's 49% terminal-value share."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**BEAR \u2014 DREW \u2014 2026-11-07.** Fact-check: 9M revenue 4,182.8 / EBIT 1,172.3 / NI 874.1 are the sums of the 2026-03/06/09 quarters (dossier lines 52-54); net cash 907 = 1,080.1 \u2212 173.0 (lines 32-33); payout 71.7% (line 45); shares 5,758.7m (line 35). No fabricated load-bearing input found.\n\n**1. [FATAL] The cash bridge is the trade.** 9M-26 CFO Rp590.6bn is 20.7% below 9M-25's Rp744.4bn (F27: \"590,593 744,414\") while profit rose 6.6%. The Rp2,370 base implies FCFE ~Rp994bn (NI 1,194 less ~200 capex, zero WC drag). Applying FY2025's own Q4 reversal (1,124 less 744 = 380) gives FCFE ~765, DCF ~Rp1,861, and EV -1.6% at the thesis's own p/down. Fragile \u2014 single-assumption dependency: the 45% upside is a WC normalisation the filing contradicts.\n\n**2. [MATERIAL] Stale cheapness.** \"7.6x and 9.5% gross\" are the house's FY2026E multiples at Rp1,595 (fund record: PE 7.6045, yield 9.468%, price 1595), not 1,640. At 1,640: 7.82x and 9.21% (7.91x/8.84% on the thesis's own EPS/DPS).\n\n**3. [MATERIAL] Overstated pessimism.** -6.3% is the house engine's solve at 1,595 inside a 10-year model with a 49% TV share (coverage_doc reverse_dcf -0.063349). On the thesis's own three-year DCF, 1,640 implies roughly zero perpetual growth; zero-growth value is ~Rp1,540-1,615, today's price. The market prices no growth, not a melting ice cube; the 45% is the growth premium.\n\n**4. [MATERIAL] Growth.** 6% base vs a 2.9% FY22-25 CAGR and overseas +1.6% (the thesis's own fact 3). At 3% the DCF is ~Rp2,130.\n\n**5. [MATERIAL] ARB gap.** The method card says assume a kill fills 15-35% below the level; a 1,020 fill (-37.4%) makes Kelly -25%. down_pct is not ARB-adjusted, so the size is not either.\n\n**6. [MATERIAL] Kills below the falsifiers.** Payout <40% is under the 45% policy floor the thesis itself names (F18); price 1,200 is 29% below its own bear DCF 1,690, so -26.4% is a sentiment tail, not the falsification level. Conservative direction, but it does not describe the risk.\n\n**7. [MATERIAL] Base rate/sleeve.** derated_compounder_rerating (0.40, n=15) is defensible, but its note mandates the multiple-survival test with market-share data \u2014 never run. The sleeve is COVERAGE (idea card), no base rate exists, and fund record is absent, so no sleeve hit rate is checkable.\n\n**8. [MATERIAL] Pre-mortem gap.** The house report names the channel: a weaker rupiah makes imported competing parts cheaper and compresses the domestic margin (fund record:144). The thesis calls transmission \"muted\" on export/net-cash grounds and ignores the 38% domestic leg.\n\n**9. [MINOR] The idea card's three sharpest questions \u2014 missing survival test, mischaracterised reverse DCF, no scenario to price \u2014 are unanswered.**\n\n**Stop objecting:** Rp1,450 (7.0x FY2026E, 10.0% gross), where my cash- and growth-haircut target (~Rp1,860) still clears ~4% EV; at 1,630 the honest EV is ~0.\n\n**Verdict: MAJOR_REVISION.** The FATAL is in the payoff construction, not the franchise; it clears at Rp1,450 or a ~Rp1,860 target.\n\n**Anomaly (verbatim):** fund record brief renders house coverage with unresolved template variables (`{{fact.F53}}`, `{{val.rating}}`); `fund record` does not exist; no SMSM.JK row exists in any of the 64 `market-data snapshot` files.\n\nstage_log: {stage: attacked, at: 2026-11-07T11:10:53+07:00, actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**1 [FATAL] \u2014 partly conceded, magnitude refuted.** Base assumed zero WC drag; wrong. But the Bear makes a one-time FY2026 absorption permanent. Q4-25 CFO 379.6 (1,124.0\u2212744.4) on Q4-25 NI 305.1 = 124%: seasonal collection, not reversal; inventories are a stock, not a flow. FY2026E FCFE 783, FY2027-28E ~1,020/1,090 \u2192 DCF Rp2,300, not 1,861. Target 2,370\u21922,300.\n\n**2 [MATERIAL] \u2014 conceded.** 7.6x/9.5% were the house's at 1,595; at 1,640 7.82x/9.21%, at entry 1,630 7.86x/8.90%. No level change.\n\n**3 [MATERIAL] \u2014 conceded.** \u22126.3% is the house engine's solve; on my three-year DCF 1,640 implies ~zero perpetual growth. Market prices no growth, not a melting ice cube. p_up unchanged.\n\n**4 [MATERIAL] \u2014 refuted.** 2.9% is the FY2022-25 trough-to-trough CAGR; 9M-26 revenue +6.7%, FY2026E +6.1%, model already tapers to 5.5% by FY2028. 3% is the backward rate. Export +1.6% carried in the pre-mortem.\n\n**5 [MATERIAL] \u2014 conceded, already priced.** 1,200 is the ARB-adjusted exit fill (~25% below the ~1,600 falsification level); down_pct \u221226.4% is the fill loss, not the level loss. Now labelled.\n\n**6 [MATERIAL] \u2014 conceded.** Falsification is the bear DCF ~1,600, not 1,200. Added price20% relative.\n\nstage_log: {stage: revision, at: 2026-11-07T11:34:51+07:00, actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED \u2014 size_multiplier 0.5.**\n\nCorrection applied: 40 theses / 35 KILL / 5 PASS_REDUCED / 0 fills is over-killing, not over-buying \u2014 a kill spends a real cooldown on a screened name, and cash is itself a holding. SMSM is not broken: 9M-26 revenue and profit +6.7%, ROE 29.5%, net cash Rp907bn, 8.0% net yield at entry; the revised Rp2,300 target is consistent with the revised FCFE path. Half size.\n\n1. Lint PASS (word-count WARN only). Chain draft 10:28:36 \u2192 attacked 11:10:53 \u2192 revision 11:34:51, monotonic, correct actors, Bear log verbatim. The attacked stamp was inline only; I mirrored it into frontmatter \u2014 a transcription gap, not a gamed chain.\n2. Rule 6: nothing raised. p_up held at the 0.40 registry prior; target 2,370\u21922,300, up 45.4\u219241.1, EV 10.9\u21929.2. No new-evidence citation owed; the Q4-25 CFO rebuttal (124% conversion) cites F27 plus dossier FCF/capex and supports the cut.\n3. (a) p_up equals the registry prior. (b) All sixteen load-bearing [F..] facts exist verbatim in fund record. (c) The thesis survives Drew's strongest sentence: the FY2026 WC drag is conceded and the target cut; 2027-28 recovery is the residual, and 0.40 prices 60% failure.\n4. No 6a defect: payoff 41.1/26.4 = 1.56 > 1.3 (library 1.67); target and kill are DCF-derived (2,300; review 1,600 below bear 1,690; exit 1,200 = \u221225% ARB), not back-solved; p_up unshaded.\n5. Real scar: FY2026 FCFE ~35% below NI and the multiple-survival test unrun \u2192 half size. INDO is 85.6% cash / 14.4% gross / 3 names against a 60\u201395% band; a starter beats another kill.\n6. Housekeeping: model.valuation.base and the Valuation prose still show 2,370/45.4%; frontmatter 2,300/41.1% governs."
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# WEEKLY_DEEP Session Journal \u2014 2026-11-07 (Sat)\n\nSession launched 2026-11-07T10:00:32+07:00. **Three INDO deep-dives opened from the COVERAGE ADVANCE backlog; two survived to PASS_REDUCED 0.5 (SMSM, GJTL) and one (AUTO) is left mid-chain after two re-attacks.** Macro = FULL calendar rebuild (regime held, one tilt moved, FX co-signed, deck updated and validated). Post-mortem queue drained (one case, no lesson, closed). No ingestion (empty inbox). GLOBAL 0 deep-dives. Sizing and final journal written under time pressure \u2014 the two judged theses are **judged/unsized** (see Carried forward).\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d` (standing). Governor **NONE** both books; `kill_actions_due` []; `pending_orders` one JPFA.JK buy ticket (untouched); `postmortem_queue` one ERAA review case.\n- GLOBAL: NAV **$1,012,651.28**, 100% cash, 0 holdings. INDO: NAV **IDR 15,181,068,662**, 85.6% cash, 3 holdings, gross **14.42%**, dd \u22121.69%. Both books below the 60\u201395% band (standing IC matter).\n- Live: ERAA (4.21% NAV, \u22126.97%), PTBA (+1.71%), MEDC (\u22126.29%). Judged-unticketed: AVIA (awaiting PM sizing), AKRA, NVO-002, TINS\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-07T06:31:44.236294+07:00",
       "book": "INDO",
@@ -918,11 +923,6 @@
       "kind": "other"
     },
     "body": "## Step 1 \u2014 State slice & queue inventory\nQC WARN (1 flag, ops lane, not session-actionable): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d. Both books 100% cash, dd 0.0, governor NONE, n_names 0, pending_orders [], kill_actions_due [], reviews none. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n\nCONSTRUCTION QUEUE (runbook step 1): (a) parked drafts (status draft/attacked, no verdict): NONE \u2014 all 32 theses are judged (30) or killed (2). (b) ADVANCE idea cards promoted but never constructed: NONE \u2014 the 14 cards are WATCH 8 / DISCARD 4 / PROMOTED 2, and both PROMOTED (ERAA, MEDC) already have constructed theses. So the (a)/(b) queue is EMPTY.\n\n## Step 2 \u2014 Construction chains\nNone advanced (queue empty). No analyst/Bear/Judge spawns.\n\n## Step 3 \u2014 Risk & sizing (one outstanding PASS with a satisfied re-stage condition)\nT-INDO-ERAA-001 is a judged PASS_REDUCED 0.5x whose ticket was DEFERRED (2026-09-26) on a DEGRADED adv/mcap feed, with the explicit re-stage condition 'refresh-adv + universe refresh then size_position', and was handed to 'the next WEEKLY_DEEP/CONSTRUCT (PM)' by the 2026-10-06 IDX_PREOPEN journal. OPS\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-07 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops lane; standing since 09-26, ops confirmed 10-05 there is no authoritative index-level source \u2014 deliberately not stamped on a guess). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 \u2014 ops lane, not session-actionable.\n- Macro regime (frontmatter 2026-10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Read frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`LLY`/`SMFG` (3 WATCH) + `BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`DMAS`/`TAPG`/`TINS` (4 WATCH) + `ERAA`/`MEDC` PROMOTED + `ELSA`/`PTBA` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/ holds only README + two helper scripts\u2026",
     "persona": ""
   }
 ]
