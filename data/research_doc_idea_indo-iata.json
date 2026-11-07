@@ -8,15 +8,15 @@
     "ticker": "IATA.JK",
     "name": "IATA.JK",
     "verdict": "ADVANCE",
-    "regime": "NEUTRAL",
+    "regime": "UNASSESSED",
     "sleeve": "COVERAGE",
-    "asof": "2026-11-06"
+    "asof": "2026-11-07"
   },
   "sections": [
     {
       "heading": "Overview",
       "detail": null,
-      "markdown": "# IATA.JK \u2014 house coverage rates it BUY (IDEATION re-stamp 2026-11-06)\n\nSignal: coverage v3 carries a BUY with a Rp94 target against Rp72 (2026-11-04), +30.6% expected total return; base 95.8, bear 10.9 (\u221284.9%), bull 173.1. Why now: the primary leg is a DCF-to-end-of-life at Rp106.5 (70% weight, no terminal value) \u2014 the target is valuation-anchored, and the coal-life assumption is the one thing that can be checked against reserves.\n\n**Regime: NEUTRAL.** Thermal coal is NEUTRAL at the desk: war premium still bids the energy complex, but the structural export-tailwind fade into 2027 is unchanged and named. That fade is precisely the bear case, so the stance carries no extra allowance \u2014 underwrite name-by-name.\n\nArchetype: `commodity_capex_turnaround` (not `dividend_income_anchor`: the model expects **no dividend in the next 12 months**, so there is no yield to anchor on) \u00b7 method card: VAL_COMMODITY_CYCLICAL.\n\n**Fast-disqualify checks.** (1) EV at the registry prior (0.42/+75/\u221235) = **+11.2%** \u2014 positive. (2) Target clears: DCF leg +48%, blended +33%, against a ~20%/yr annualised base-rate up-leg. (3) Sources: FY2026 reporting cited in the model [F54/F58/F65] and IDX filings, reachable.\n\n**Questions for the deep-dive.** Cash USD1.45m against current liabilities USD77.35m \u2014 how is the wall refinanced, and at what dilution, before any coal price matters? Is the FY2026E 3.65 Mt volume anchor real, given it is derived from a 9M revenue figure divided by the model's own ASP? What happens to the life DCF if the export tailwind fades on the desk's 2027 schedule?"
+      "markdown": "# IATA.JK \u2014 house coverage rates it BUY\n\nSignal: the South Research division published coverage (v4) with a 12-month target of Rp113.0 against Rp72.0 (expected total return 57.1%). Why now: the rating crossed the BUY band on the engine's probability-weighted target.\n\nArchetype guess: dividend_income_anchor \u00b7 method card: per fund record routing for Coal producers.\n\nSharpest questions for a thesis:\n- The sole load-bearing change is attributed to \"the reviewed onshore print of 23 October [S7, corroborated S10]\". S7 is the Okezone 26 June 2024 reserves article: greps for \"kurs\", \"USD/IDR\", \"exchange\" and \"23 Oktober\" r\n- The report says \"the only driver of that move is the discount rate\" for the 6 November (93.924) to 7 November (93.469) change. Model history shows the assumptions are byte-identical apart from created_at; the two changed\n- The deck's reviewed HBA III spot is 45.53 (Kepmen 401, 15 Oct 2026), 25% above the 2025 average of 36.50 [F27] and 36% above the company's own 2026 estimate of 32-35 [F47/F48]. The model's FY2026E ASP of 20.82 at 62% rea\n\nRegime stance vs the macro desk is UNASSESSED: IDEATION/CONSTRUCT sets WITH / NEUTRAL / AGAINST before any deep-dive. Fast-disqualify checks and the thesis itself follow the full analyst -> Bear -> Judge law."
     }
   ]
 }
