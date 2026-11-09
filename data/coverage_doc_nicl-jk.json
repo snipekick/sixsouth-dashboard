@@ -1,0 +1,3330 @@
+{
+  "schema": 1,
+  "ticker": "NICL.JK",
+  "code": "NICL",
+  "name": "PT PAM Mineral Tbk",
+  "desk": "BASIC_MATERIALS",
+  "industry": "METALS_OTHER",
+  "industry_name": "Tin, bauxite, iron sand and other metals",
+  "report": {
+    "ticker": "NICL.JK",
+    "frontmatter": {
+      "ticker": "NICL.JK",
+      "report_type": "initiation",
+      "version": 1,
+      "title": "PAM Mineral \u2014 a nickel-ore miner priced for the quarry, not the reserve",
+      "summary": "NICL sells low-grade nickel ore to Indonesian smelters at a government reference that carries roughly a fifth of the contained-metal value. After an eight-tenths drawdown the equity trades at 3.9x our FY2027E earnings, while a life-of-permit DCF at the through-cycle nickel price puts it at Rp305 against the Rp216 market price. Net cash, a real dividend record, and a 2026 profit collapse that is a permitting delay rather than a broken mine.",
+      "thesis": [
+        "The ore price is a wedge on the metal and the wedge is stable: the ore price has held at 0.23% of the LME nickel price through FY2024 and FY2025, so the forecast needs the reviewed through-cycle price, not a nickel bull case.",
+        "Volume, not price, is the swing factor: 2,300.9 kt sold in FY2024 and 2,563.0 kt in FY2025 against a capacity of 2,608.7 kt; we model no growth above the level already achieved.",
+        "The 2026 collapse is procedural \u2014 nine-month revenue less than half the prior year [S0], with FY2026E revenue of IDR990.1bn against IDR1,473.1bn \u2014 caused by the 2026 RKAB not being settled until late October, not by reserve depletion or a lost offtake.",
+        "Costs are rupiah and revenue is dollar-linked, so the macro deck adds margin by itself; that is the single assumption a red team should attack hardest.",
+        "The dividend is this register's anchor: 111.0% of FY2025 earnings was declared and we model 65.0% forward at a Rp14 twelve-month DPS."
+      ],
+      "catalysts": [
+        {
+          "date": "2027-01",
+          "event": "2027 RKAB approval for PAM and IBM \u2014 the largest single swing factor on volume",
+          "source": "S8"
+        },
+        {
+          "date": "2027-03",
+          "event": "FY2026 audited results and the declared final dividend",
+          "source": "S3"
+        },
+        {
+          "date": "2027-04",
+          "event": "First-quarter 2027 sales volume \u2014 the test of whether the 2026 disruption has cleared",
+          "source": "S0"
+        },
+        {
+          "date": "2028-06",
+          "event": "BSA contract-mining agreement renewal (the addendum runs to December 2027)",
+          "source": "S3"
+        }
+      ],
+      "desk": "BASIC_MATERIALS",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-09"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "We initiate on PT PAM Mineral Tbk (NICL) at **BUY** with a target of Rp351, 62.6% above the Rp216 price, for a total return of 69.2% including the forward dividend. The company mines and sells nickel ore \u2014 not nickel metal \u2014 from two concessions in Central and Southeast Sulawesi, and its economics are a quarry's: the price it receives is a fixed fraction of the LME nickel price, the cost is a rupiah contract-mining rate, and the volume is whatever the RKAB allows."
+          },
+          {
+            "type": "para",
+            "text": "The variant view is about what the collapse was. The shares have given up more than four-fifths of their value since the May 2025 peak [S0]. The market reads that as a verdict on the ore body. We read it as a verdict on two temporary things: a valuation bubble that has fully unwound, and a 2026 revenue collapse from IDR1,473.1bn to IDR990.1bn that traces to the national RKAB process, which was not resolved until late October 2026 [S8]. The mine sold 2,300.9 kt in FY2024 and 2,563.0 kt in FY2025 on the same reserves [S5, S3]; nothing in the resource statement changed."
+          },
+          {
+            "type": "para",
+            "text": "What moves the value, in order. First, the volume the 2027 RKAB allows \u2014 the base case holds the 2,563.0 kt already delivered in FY2025, 2,608.7kt of capacity, and does not cut to the 2026 permit level. Second, the rupiah: revenue is dollar-linked through the HPM reference while the cost base is rupiah, so the macro deck's 18,350 path is worth several points of EBITDA margin on its own. Third, the ore-to-metal realisation wedge: stable in rupiah terms through 2026 and held at the FY2025 ratio from FY2027E."
+          },
+          {
+            "type": "para",
+            "text": "The balance sheet is in net cash \u2014 the FY2025 net debt line reads IDR-239.2bn, the minus sign being the cash \u2014 and the company has paid dividends every year since 2022 [S0, S7]. It also carries an IDR312bn conditional advance to PT Sumber Mineral Abadi that is easy to miss: the advances-for-investment note in the audited accounts shows it, extended to 31 December 2026, and it is carried at face in the DCF and the EV/EBITDA bridge, and sits inside the book equity the P/BV applies [S3 p.281-283]. The primary method is a life-of-permit DCF at the reviewed through-cycle nickel price, blended with an EV/EBITDA cross-check and a book-value floor; the two cross-checks disagree in opposite directions and the valuation section explains why we lean on the DCF at 60.0%."
+          },
+          {
+            "type": "background",
+            "text": "Nickel ore is not a traded commodity the way LME metal is. Indonesian smelters buy saprolite and limonite\nagainst a government reference price, and the gap between that reference and the metal price is the\nsmelting margin the integrated producers earn. An ore miner's revenue per tonne therefore moves with the\nmetal price but never converges on it, which makes the realisation ratio the right calibration variable\nand a metal-price forecast on its own an incomplete revenue forecast."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "PT PAM Mineral Tbk mines, hauls and sells nickel ore from two Sulawesi concessions held through itself and its consolidated subsidiary PT Indrabakti Mustika (IBM) [S2, S5]. Both are IUP OP holders and the two permits expire at different dates \u2014 IBM's in January 2034 and PAM's in April 2035 [S3 p.52-53] \u2014 which is what sets the valuation horizon for the DCF. There is one operating segment \u2014 nickel-ore sales \u2014 and no processing asset: the ore goes to third-party domestic smelters in the hilirisasi chain, with revenue recognised at the handover point on a bill-of-lading basis [S3]."
+          },
+          {
+            "type": "para",
+            "text": "The model is contractor-led. Mining, hauling and barging are bought in \u2014 contractor services, barging and stockpile management dominate cost of sales \u2014 so net fixed assets are only IDR80.1bn against revenue of IDR1,473.1bn [S3 note 27]. The consequence cuts both ways: there is almost no operating leverage on the way down because costs flex with tonnes, and there is no smelter or processing plant to write off. It also means the company is a price-taker twice over, on the ore reference and on the contractor's rate."
+          },
+          {
+            "type": "para",
+            "text": "The customer base is a small number of domestic smelters disclosed as sales commitments rather than a named offtake book [S3 p.309]. That is the competitive position: NICL is a challenger in a province dominated by the integrated groups, without a captive smelter and without the grade to command a premium over the reference. Its advantage is logistical \u2014 a dedicated jetty and stockpile \u2014 and its disadvantage is that every tonne is sold at a government reference rather than at a negotiated price."
+          },
+          {
+            "type": "para",
+            "text": "The resource position is two-tier and the distinction matters for the valuation. Management puts resources at 12.8 Mt grading around one percent nickel at PAM and 74.5 Mt at a slightly lower grade at IBM, but the mineable reserve \u2014 what the company calls cadangan, and what a DCF can actually value \u2014 is 7.7 Mt at PAM and 26.5 Mt at IBM [S5, S9]. The reserve is therefore a fraction of the resource, and the DCF is built on the reserve. Reporting is consolidated and there are no associate stakes in the audited accounts. The one non-operating asset that matters is an IDR312bn advance for investment \u2014 uang muka investasi \u2014 paid to third party PT Sumber Mineral Abadi under a conditional new-share purchase agreement signed 12 September 2023, carried in the audited FY2025 accounts and still conditional at the balance-sheet date [S3 p.281-283]. The valuation section says how we treat it."
+          },
+          {
+            "type": "para",
+            "text": "The growth plan is volume-led and has never been delivered as planned. Management targeted 3,300 kt of sales in FY2025 against 2,300.9 kt in FY2024 [S9], then delivered production of 2,563.0 kt \u2014 at almost full capacity \u2014 and revenue at a little over four-fifths of its own target [S3 p.86]. A new mine acquisition was flagged for completion in 2025 [S9]; the audited accounts show the conditional advance that funds it, and the conditions remain unmet [S3 p.282-283]. Strategy, in other words, is to sell more tonnes from the same two pits, and the RKAB decides whether it can."
+          },
+          {
+            "type": "para",
+            "text": "Control is concentrated: insiders hold 72.7% of the register and the beneficial owner is Christopher Sumasto Tjia, leaving a free float of 27.3% [S5, S0]. At a Rp216 price the market capitalisation is small enough that the investment case is as much about the shareholder register as about the ore."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesia is the world's largest nickel producer and the marginal supplier of ore to the stainless and battery chains. The industry's problem through 2025 and 2026 was oversupply, not demand: the company's own annual report describes a global nickel market in significant oversupply driven by Indonesian production growth, with prices falling to relatively low levels [S3 p.68]. The reviewed metals deck tracks it \u2014 LME nickel averaged 21,521, 16,814 and 15,162 US$/t across those years and settles at 17,500 US$/t as the through-cycle marker [S3 p.68; metals deck] \u2014 and it is the marker, not the 16,324 US$/t spot, that values a permit-bound ore body \u2014 the reserve outlives the concessions, so the price that matters is the one the DCF can actually sell into."
+          },
+          {
+            "type": "para",
+            "text": "The supply lever is the RKAB, and in 2026 it cut both ways. Indonesian ore output is capped by an annual work plan and budget approved by the Ministry of Energy and Mineral Resources; NICL's 2024-2026 approval covered 7,000 kt of sales across three years [S5]. The ministry ran late \u2014 its revision was issued only on 29 October 2026 \u2014 and the revision did not tighten supply: it raised the national nickel-ore quota by 30 Mt to 290 Mt or more [S8]. That is supply-expanding and negative for the ore reference the company is paid on, and it is the main reason we do not model a 2026 price recovery. The 2027 quota is still under evaluation, with the ministry explicitly weighing the global stock overhang \u2014 an estimated 750 kt sitting in LME and SHFE warehouses \u2014 alongside domestic smelter demand [S8]. We read that as a genuinely two-sided risk: tighter 2027 quota would lift the price and cap volume, a looser one would do the reverse, and neither is decided. For a single-product ore seller the quota is the revenue line and the government reference is the price."
+          },
+          {
+            "type": "para",
+            "text": "Regulation cuts three ways. The HPM reference sets both the selling price and the royalty base; PP 19/2025 moved the royalty onto a band that follows the HPM, and Ministerial Regulation 9/2025 changed how the base price is computed [S3 p.317-319]. The company charged Rp107.9bn of royalty on IDR1,473.1bn of sales \u2014 an effective 7.3% \u2014 and that is the rate we model. The export-proceeds retention rule is a working-capital constraint the industry association has asked to be reviewed [S4]."
+          },
+          {
+            "type": "para",
+            "text": "Five forces: supplier power is high, because the contractor and the state both sit upstream of the margin; buyer power is high, because domestic smelters are few and the price is administratively referenced; the threat of substitutes is low for saprolite in the stainless chain; new entry is blocked by permitting and by the RKAB, the one genuinely favourable force; and rivalry is fierce, because every Indonesian ore seller has the same product and the same customer list. The moat is the permit and the jetty, not the grade, which sits around one percent nickel and below the high-grade material the market prefers [S5]."
+          },
+          {
+            "type": "background",
+            "text": "Ore grade drives everything downstream: a smelter needs on the order of eighty to ninety tonnes of\none-percent ore to make a single tonne of contained nickel, so the ore price is necessarily a small\nfraction of the metal price. That is why Indonesian nickel miners trade on volume, permit life and cost\nposition rather than on grade, and why the resource statement matters more than the price deck."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Revenue is volume times the realised ore price. FY2025 sales were IDR1,473.1bn on 2,563.0 kt, against IDR1,442.5bn on 2,300.9 kt in FY2024 [S3 p.86, S5]. The company missed its own targets: revenue realised a little over four-fifths of plan and net profit of IDR345.1bn came in at under two-thirds of the plan it set itself [S3 p.86]. That is the right way to read management guidance here \u2014 optimistic, and systematically so."
+          },
+          {
+            "type": "para",
+            "text": "The volume series needs a word, because the source does not give a sales tonnage for FY2025. The 2,563.0 kt is the production realisation in the annual report's target-versus-realisation table (2,608.7kt of capacity, almost fully achieved), and we use it as the sales volume \u2014 at the FY2025 realised price per tonne it reproduces the audited revenue exactly [S3 p.86, F1, F4]. The FY2024 figure of 2,300.9 kt is a sales number from the company's own statement of the reported double-digit volume increase [S5]. The two series are different measures and are not additive: one is a sales statement, the other a production realisation from the target-versus-realisation table, and the model uses the production-realisation series throughout, so the FY2024 sales figure does not enter the forecast [S5, S3 p.86]. We do not try to reconcile the sales tonnage to the 1,962.7kt FY2024 production line and offer no stock movement explanation for the gap. The annual report narrative's own sales-volume sentence for the 2025 volume cannot be reconciled to either series and looks like a units error in the report; we do not use it."
+          },
+          {
+            "type": "para",
+            "text": "Margins are wide for an ore seller and stable: gross margin was 35.9% in FY2024 and 40.9% in FY2025, EBITDA margin 29.2% and 31.7% [IDR466.7bn of IDR1,473.1bn]. The cost stack is bought-in mining and barging, royalty at 7.3%, and SG&A at 9.7% of revenue; the cash cost of IDR303,490 per tonne is the FY2025 audited cost escalated at rupiah inflation [S3 note 27]."
+          },
+          {
+            "type": "para",
+            "text": "The forecast has three phases. FY2026E is a stub year and is mostly actual: nine-month revenue was less than half the prior full year's and nine-month net profit fell by more than half year on year [S0], giving IDR990.1bn of revenue and IDR311.4bn of EBITDA \u2014 the model prices the reported run-rate, not a deck forecast, which is why the FY2026E realisation ratio is fitted to those nine months. FY2027E is the first normal year \u2014 2,563.0 kt at a realised US$40.3/t, for IDR1,897.1bn of revenue and IDR795.5bn of EBITDA. Beyond that the model holds volume at the FY2025 actual until each concession expires and lets price follow the deck: the IBM permit ends in January 2034 and the PAM permit in April 2035, so the last two forecast years carry only the tonnage each permit allows (the valuation section sets out the split)."
+          },
+          {
+            "type": "para",
+            "text": "Two things in that bridge need naming. First, the EBITDA margin steps from 31.7% in FY2025 to 41.9% in FY2027E, and the larger part of the step is the rupiah: revenue is set in dollars against the HPM while the cost base is rupiah, so the macro deck's move from the FY2025 average to 18,350 is worth several points of margin before any nickel price move. At constant FX the FY2027E margin would be materially lower [S0, S3]. Second, capex steps up from IDR8.2bn in FY2025 to IDR55.7bn, because 2026 spending on haul roads, the jetty and stockpile equipment ran at IDR55.7bn in nine months; we hold that rupiah programme flat rather than reverting to the FY2025 trough [S0]."
+          },
+          {
+            "type": "para",
+            "text": "Cash conversion is good and the balance sheet is strong. FY2025 operating cash flow exceeded net profit, so the accruals ratio is negative \u2014 earnings running behind cash, which for a prepaid ore business is a clean signal rather than a red one [S0]. The FY2025 net debt line of IDR-239.2bn is negative, so the company is in net cash and the -0.5x net debt to EBITDA carries the same minus sign; the 30 September 2026 interim balance sheet is also in net cash [S0]. FY2026E ends at a net debt of IDR-169.4bn \u2014 negative, so still net cash: the FY2025 final and the October 2026 interim are the two payments that fall in the 2026 cash flow, because the larger FY2025 interim tranche was paid inside FY2025. The October interim was paid after the 30 September balance-sheet date, so the cash it consumed is still on that balance sheet; we take it out in the valuation bridge rather than let it inflate the net cash a buyer inherits [S7, S3 p.82, S0]. From FY2027E the cash position widens further. No debt-funded expansion is assumed."
+          },
+          {
+            "type": "para",
+            "text": "Capital allocation is the weakest link. The company declared IDR383bn of dividends against FY2025 earnings of IDR345.1bn \u2014 a declared payout of 111.0%, more than it earned \u2014 funded from the cash pile [S7, F14]. The Rp30.0 per share interim tranche is policy rather than a one-off: the company has paid interim dividends in every year since 2022 [S0]. We model 65.0% of earnings forward, below the FY2025 distribution because a repeat would consume the net cash the company currently holds."
+          },
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          },
+          {
+            "type": "para",
+            "text": "Earnings-quality flags, per the house screen. The accruals ratio is negative in FY2024 and FY2025, the opposite of the manipulation-class pattern. Divergence flags are absent: receivables fell sharply while revenue grew, and inventory is immaterial [S0]. The regime flags are the ones to watch \u2014 the shares were placed on the exchange's unusual-market-activity watch list after a price spike [S6], and the free float of 27.3% is above the exchange minimum but small [S0]. The investments line on the September 2026 interim balance sheet is not a mystery and is not new: the advances-for-investment note in the audited FY2025 accounts shows uang muka investasi of IDR312bn to PT Sumber Mineral Abadi, unchanged from 2024, under a conditional new-share purchase agreement signed 12 September 2023 whose prerequisite period and completion date were extended by the fourth addendum of 22 December 2025 to 31 December 2026, with the purchase conditional on all prerequisites being met by SMA [S3 p.281-283]. We treat it as an optics-class flag, not a manipulation-class one: it is disclosed, audited, unimpaired, and the counterparty is described as a third party; what it does show is a management willing to leave a large deposit outstanding for years. The company was openly pursuing a mine acquisition in 2025 [S9] and this is that deal."
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "This is a commodity producer whose permit, not whose ore body, sets the valuation horizon: the PAM IUP expires in April 2035, so the method set is a life-of-permit DCF at a through-cycle price as the primary anchor, an EV/EBITDA cross-check for what the market pays for Indonesian metal producers, and a book-value floor because the shareholder return here is a dividend on a net-cash balance sheet rather than a compounder's growth. We keep the industry weights: 60.0% DCF, 25.0% EV/EBITDA, 15.0% book."
+          },
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "The discount rate is 12.5%: a 7.4% risk-free rate less a 1.6% sovereign default spread, plus a 4.2% mature-market premium and a 2.5% country premium carried through a levered beta of 1.00 on a net-cash capital structure, giving a cost of equity of 12.5% [S0]. There is no debt worth weighting, so the WACC is the cost of equity with a rounding error. Terminal growth is 4.0%."
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "The DCF values the reserve, not the aspirations: 2,563.0 kt a year while both concessions run, a cash cost escalated in rupiah, and a nickel price of 17,500 US$/t \u2014 the reviewed metals deck's through-cycle anchor. It produces Rp305 per share and an enterprise value of Rp2,710bn, with no terminal value in it."
+          },
+          {
+            "type": "para",
+            "text": "The tonnage is capped by each permit, not by the horizon, and the two permits do not end together. Of the FY2025 actual, 1,798.8 kt was produced through the subsidiary IBM and the balance at PAM [S3 p.73]. IBM's IUP OP runs only to January 2034 [S3 p.53], so FY2034E carries one month of IBM production and nothing after it, while PAM's IUP OP runs to 15 April 2035 [S3 p.52], so FY2035E carries only the PAM tonnage to that expiry: 914.1 kt in FY2034E and 222.9 kt in FY2035E, against the 2,563.0 kt run-rate before them. PAM's 7.7 Mt of proven reserve covers the PAM tonnage to its own expiry, so there the permit is the binding constraint rather than the ore; most of IBM's 26.5 Mt of proven reserve stays in the ground past January 2034 and is carried at zero. We do not add a terminal value for it and we do not claim a permit extension: a reader who believes the IUPs will roll can add that residual, and a reader who believes they will not has the base case already. The bull case does not restore the IBM tonnes after January 2034 either \u2014 a volume shock cannot mine past a permit."
+          },
+          {
+            "type": "para",
+            "text": "One balance-sheet adjustment precedes every per-share value. The FY2026 interim dividend was declared against the 30 September 2026 balance sheet and paid only after it, so that balance sheet still contains the cash while the Rp216 price is already ex the payment. The payment is therefore carried as a negative item in the valuation bridge and deducted from equity value in the DCF and in the EV/EBITDA bridge [S0]. The book cross-check cannot be struck the same way: the engine applies the bridge to the two enterprise-value methods only and the P/BV is a straight multiple of the reported 30 September 2026 equity, which still contains that cash, so that line is too high by the dividend grossed up at the peer multiple \u2014 at its 15.0% weight the effect on the target is small, and we state it rather than net it silently. The per-share figures for the DCF and the EV/EBITDA cross-check are struck after the distribution, and the trailing dividend record still counts the payment because the company did pay it. The target is struck on the shares as they trade today, after that distribution \u2014 it is not a cum-dividend number, and no reader should add the interim back to it."
+          },
+          {
+            "type": "para",
+            "text": "The other non-operating asset enters the methods at face. The IDR312bn advance to PT Sumber Mineral Abadi sits in the balance sheet, is unimpaired in the audited accounts, and is added to enterprise value in the DCF and in the EV/EBITDA bridge [S3 p.281-283]. The P/BV cross-check does not add it a second time: the asset is already inside the book equity the multiple is applied to, so a reader who writes it down reduces that line rather than deducting it from a bridge. We carry it at full face value rather than excluding it: the auditor has not provided against it, the agreement is live to 31 December 2026, and the company's own plan is to buy new shares in SMA if the conditions are met. The risk is not hidden \u2014 if the conditions fail, or the refund is delayed, the advance's entire per-share contribution to the target is at stake, which is why we state it as a separate downside rather than pretend a scenario prices it. A reader who wants it at zero should read the DCF and EV/EBITDA values that amount lower and the P/BV through a lower book."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "para",
+            "text": "The cross-checks disagree, and the disagreement is informative. EV/EBITDA at 9.4x gives Rp463, 51.8% versus the DCF: that multiple is the peer median for Indonesian metal producers and it is too generous here, because it assumes a growing asset while NICL has a permit-bound reserve and no smelter. Book value at 3.1x gives Rp262, -14.1% versus the DCF \u2014 the low side, and the honest one, because a register this concentrated trades on liquidity and on the register itself, and that line is struck on reported book before the October payment, so a post-dividend book would put it lower still. We do not override the industry weights, but the blend of Rp351 leans on the DCF and should be read that way."
+          },
+          {
+            "type": "para",
+            "text": "That P/BV divergence is the most useful disagreement in the table. At 3.1x book the method values the equity at Rp262, and it is the only cross-check anchored on something the company has already booked rather than on a forecast. It diverges from the DCF for two reasons we can name: the book carries the historical cost of a mine whose reserve is now worth more at the through-cycle price, and a 27.3% free float with a small market capitalisation depresses the multiple a buyer would pay for the book. The gap would close if the register widened or if the reserve were revalued; neither is in our forecast, so we treat the book value as a floor rather than as a value."
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "The grid in that table is rendered on the industry template's benchmark driver, which for METALS_OTHER is tin, not the nickel series this company is actually paid on: the benchmark column repeats, which is how a reader can tell it is inert, and we say so rather than let it imply a nickel sensitivity it does not have. The nickel range has to be read off the scenario table instead, where the metal price, volume and the rupiah move together: Rp252 in the bear, Rp367 in the base and Rp462 in the bull. The Rp351 target is the probability-weighted average of those three at the scenario weights the next section sets out, which is why it sits below the base case and above the bear. The discount rate is not the swing factor here \u2014 the model's value moves far more on the price/volume/fx bundle than on a two-hundred-basis-point WACC change \u2014 which is why the calibration in `fund record` matters more than the beta."
+          },
+          {
+            "type": "para",
+            "text": "What the price implies: at Rp216 the market capitalises the company at IDR2,297.1bn, roughly 3.9x our FY2027E earnings. On enterprise value the FY2027E EBITDA multiple is 2.3x, and the basis matters: that figure nets our forecast FY2027E net debt of IDR-453.5bn, a forecast net cash position \u2014 the balance sheet the model expects, not the one actually reported at 30 September 2026. Struck instead on the reported 30 September net cash, which still includes the October interim we deduct above, the same price and the same EBITDA give a higher EV/EBITDA multiple; the difference between the two bases is the forecast cash build, not a different EBITDA. On market capitalisation alone, with no cash netted at all, the multiple is higher again. None of those bases is the peer-median 9.4x the cross-check applies, so the forecast-basis figure should be read as the model's own net-cash-adjusted multiple, never as a single unqualified statement of what the market pays for NICL's EBITDA. The Rp216 price is below even our bear case, which already repeats the 2026 permit failure at a lower nickel price and a firmer rupiah: there the equity is worth Rp252. So today's price is not merely discounting a permitting delay; it is discounting something worse than the 2026 event happening again \u2014 a permanent loss of the permit, or a market that has stopped pricing the reserve at all."
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Regulatory risk is first order and cannot be diversified. A single annual RKAB decision determines the revenue line, and 2026 showed what happens when it is late: nine-month revenue was less than half the prior year's [S0]. It cuts both ways on price, too \u2014 the October revision raised the national quota by 30 Mt rather than tightening it [S8], which is negative for the ore reference, while the 2027 quota is still being evaluated against a global stock overhang [S8]. Likelihood of some quota constraint persisting is high; impact is high, because the company has no second asset to absorb it. We weight the quota-constraint branch accordingly, not as a tail."
+          },
+          {
+            "type": "para",
+            "text": "Commodity risk is second order but larger in the tail. LME nickel at 16,324 US$/t spot sits below the 17,500 US$/t through-cycle marker, the metal has spent two years in oversupply [S3 p.68], and the ministry itself cites an overhang of about 750 kt in exchange stocks [S8]. Likelihood of a further leg down is moderate; impact is severe, because the ore wedge cushions rather than fully protects the margin when the reference is cut."
+          },
+          {
+            "type": "para",
+            "text": "Currency risk is now tested rather than asserted. The base case has the rupiah at 18,350, against spot 18,039 [S0; macro deck], and because revenue is dollar-linked while costs are rupiah that assumption is a real part of the margin. Both scenarios move it in opposite directions \u2014 the bear firms the rupiah, the bull weakens it further \u2014 so a reader can see what a stronger or weaker currency does to the value instead of taking our word for it. A rupiah that stays at spot removes part of the base-case margin step."
+          },
+          {
+            "type": "para",
+            "text": "Operational risk: the mine is contractor-operated and the current BSA addendum expires in December 2027 [S3 p.310]. A renegotiation at a materially higher rate goes straight into the IDR303,490 per tonne cash cost. Likelihood low to moderate, impact moderate."
+          },
+          {
+            "type": "para",
+            "text": "Permit-life risk is dated rather than open-ended, and it caps the valuation rather than threatening it: IBM's IUP OP ends in January 2034 and PAM's in April 2035 [S3 p.52-53], and the base case stops each stream at its own expiry. A renewal of either IUP before those dates is upside we have not paid for; a refusal would confirm the base case rather than break it."
+          },
+          {
+            "type": "para",
+            "text": "Governance and liquidity risk: 72.7% insider ownership, a 27.3% free float and a past unusual-market-activity flag [S0, S6]. The float clears the exchange minimum, but a name of this size can move on one seller. Structural likelihood; impact on the price path rather than on value. The IDR312bn SMA advance adds a balance-sheet risk of its own: its conditions have been extended three times and are still unmet, and a failed completion or a slow refund would cost the advance's per-share contribution to the target [S3 p.281-283]."
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "The bear (30.0% probability) is the 2026 event repeating, not a mild trim: the 2027 RKAB arrives late and below the volume just delivered, so sales fall back into the range the company actually sold in 2026; LME nickel is a fifth below the through-cycle marker; the rupiah firms; and the SMA advance is at risk. No scenario writes the advance down: all three carry it at face, so the bear is the 2026 operating event on top of a full-value advance, and a write-off would be an additional loss not in the table. The bull (20.0%) mirrors the price and FX shocks, sells at the disclosed capacity ceiling rather than above it, and does not assume a permit extension. The base (50.0%) is the most likely path on the evidence, not the midpoint of the other two."
+          },
+          {
+            "type": "para",
+            "text": "Signposts that would change the view: a 2027 RKAB approval at or above the volume delivered in FY2025; a national quota announcement for 2027 that tightens rather than expands; completion (or termination) of the SMA share purchase; quarterly realised ore price per tonne against the FY2025 level; any change to the dividend policy, which is the market's anchor here; and any application to extend the IBM IUP ahead of its January 2034 expiry, which would put the 26.5 Mt of IBM reserve the DCF currently leaves at zero back into the valuation."
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Ownership sits with a single beneficial owner, Christopher Sumasto Tjia, with insiders at 72.7% of the register and a free float of 27.3% [S5, S0]. The current IDX board and notation status could not be verified from an archived source: the exchange's own pages are not accessible to this desk, the annual report does not state the board, and the archived press carries no notation announcement for NICL [S3, S6]. We flag it as UNVERIFIED rather than assert a clean status; nothing in the archive suggests an enforcement action. The past unusual-market-activity flag was a price-move enquiry, not a finding [S6]."
+          },
+          {
+            "type": "para",
+            "text": "The board is small and family-adjacent: Ruddy Tjanaka is president director, Suhartono is corporate secretary and director, and the commissioner list includes directors of other Tjia-linked ventures [S3 p.36]. Related-party gravity is not disclosed as material \u2014 no related-party revenue line appears in the segment note and the affiliate balances disclosed are ordinary trade items [S3 note 34]. We checked the modal IDX value-destruction channels (sales to affiliates, guarantees to family ventures, discounted placements) and found none disclosed: a \"checked, none found\", not a clean bill of health."
+          },
+          {
+            "type": "para",
+            "text": "The dividend record is the governance signal that matters most for this register. The company has paid interim dividends every year since 2022 and declared IDR383bn against FY2025 earnings of IDR345.1bn \u2014 a declared payout of 111.0%, i.e. it distributed more than it earned [S7, F14]. A company that pays out more than it earns in a down-cycle is either confident in its cash or managing its shareholder base; with the balance sheet in net cash (net debt IDR-239.2bn) we read it as the former, but the payout is a monitoring item and the model does not repeat it."
+          },
+          {
+            "type": "para",
+            "text": "ESG exposure is mining-specific and concentrated in land, water and rehabilitation. The company holds a dedicated nickel-mining terminal permit and reports continuous environmental monitoring and community programmes around both concessions [S3 p.52]. The resource is in Sulawesi, where deforestation and tailings are the live sector issues; NICL has no smelter and no tailings dam, which reduces the tail risk relative to the integrated producers."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The dated catalysts are the 2027 RKAB approval, the FY2026 audited results and final dividend, the first-quarter 2027 sales volume, and the BSA contract renewal [S8, S3]. The first reprices the equity."
+          },
+          {
+            "type": "para",
+            "text": "Between updates we monitor four KPIs: quarterly sales volume against the RKAB envelope; the realised ore price per tonne against the HPM reference and the LME; cash cost per tonne, which is the contractor rate plus royalty; and the dividend declared [S0]. We also watch the free float and any change in the insiders' 72.7% stake, because at this market capitalisation a register change is a price event."
+          },
+          {
+            "type": "para",
+            "text": "The one open question we could not close from the archive is what the SMA advance will become. The advances-for-investment note in the audited accounts dates the conditional share purchase to September 2023, records three extensions and now puts completion no later than 31 December 2026 [S3 p.281-283]; the company's stated intent to complete a mine acquisition [S9] points to it being that deal. Whether it converts into shares, is refunded, or is impaired is the first thing we will check at the FY2026 results, and the target carries it at face until then."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for NICL.JK",
+        "url": "https://finance.yahoo.com/quote/NICL.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-08",
+        "kind": "data"
+      },
+      "S2": {
+        "title": "PT PAM Mineral Tbk | Sumber Daya Nikel Berkelanjutan",
+        "url": "https://pammineral.co.id/LaporanKeuangan",
+        "publisher": "pammineral.co.id",
+        "date": "2026-11-09",
+        "kind": "company"
+      },
+      "S3": {
+        "title": "https://backend.pammineral.co.id/assets/img/laporantahunan/laporan_tahunan_2025.pdf",
+        "url": "https://backend.pammineral.co.id/assets/img/laporantahunan/laporan_tahunan_2025.pdf",
+        "publisher": "backend.pammineral.co.id",
+        "date": "2026-11-09",
+        "kind": "filing"
+      },
+      "S4": {
+        "title": "Laba PAM Mineral melesat 1.473 persen seiring penjualan nikel naik - ANTARA News",
+        "url": "https://www.antaranews.com/berita/4809373/laba-pam-mineral-melesat-1473-persen-seiring-penjualan-nikel-naik",
+        "publisher": "www.antaranews.com",
+        "date": "2025-05-02",
+        "kind": "news"
+      },
+      "S5": {
+        "title": "Volume Penjualan Nikel Melonjak, Laba Bersih NICL Melambung 1.074,71 Persen jadi Rp 414,1 Miliar",
+        "url": "https://www.jawapos.com/energi/2503250568/volume-penjualan-nikel-melonjak-laba-bersih-nicl-melambung-107471-persen-jadi-rp-4141-miliar",
+        "publisher": "www.jawapos.com",
+        "date": "2025-03-25",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "Saham PAM Mineral  NICL  Dipantau Ketat BEI, Ini Alasannya : Okezone Economy",
+        "url": "https://economy.okezone.com/read/2023/10/23/278/2906297/saham-pam-mineral-nicl-dipantau-ketat-bei-ini-alasannya",
+        "publisher": "economy.okezone.com",
+        "date": "2023-10-23",
+        "kind": "news"
+      },
+      "S7": {
+        "title": "PAM Mineral Bagi Dividen Rp382,88 Miliar untuk Tahun Buku 2025, Catat Jadwalnya! - merdeka.com",
+        "url": "http://www.merdeka.com/uang/read/8107644/pam-mineral-bagi-dividen-rp38288-miliar-untuk-tahun-buku-2025-catat-jadwalnya",
+        "publisher": "www.merdeka.com",
+        "date": "2026-05-07",
+        "kind": "news"
+      },
+      "S8": {
+        "title": "ESDM Rampungkan Revisi RKAB Nikel 2026, Kuota Produksi Naik 30 Juta Ton - Energi Katadata.co.id",
+        "url": "https://katadata.co.id/berita/energi/6ae329099752e/esdm-rampungkan-revisi-rkab-nikel-2026-kuota-produksi-naik-30-juta-ton",
+        "publisher": "katadata.co.id",
+        "date": "2026-10-29",
+        "kind": "industry"
+      },
+      "S9": {
+        "title": "PAM Mineral Pacu Produksi Nikel, Siap Rampungkan Akuisisi - TopBusiness",
+        "url": "https://www.topbusiness.id/107732/pam-mineral-pacu-produksi-nikel-siap-rampungkan-akuisisi.html",
+        "publisher": "www.topbusiness.id",
+        "date": "2025-04-25",
+        "kind": "news"
+      }
+    },
+    "rendered_at": "2026-11-10T03:47:03+07:00"
+  },
+  "meta": {
+    "rating": "BUY",
+    "tp": 351.0,
+    "price": 216.0,
+    "tp_fundamental": 351.0,
+    "konglo": false,
+    "suspended": null,
+    "price_date": "2026-11-06",
+    "tr_pct": 69.17,
+    "upside_pct": 62.6,
+    "v0": 338.0,
+    "tp_base": 367.0,
+    "dps12": 14.19,
+    "liquidity_discount": 0.0,
+    "investable": {
+      "ok": true,
+      "mcap": true,
+      "adtv": true,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-10",
+    "data_asof": "2026-11-08",
+    "model_asof": "2026-11-10",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Sekar",
+    "sector_lead_title": "Sector Lead, Basic Materials",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 2297083299912.0,
+    "adtv_3m_idr": 12416936048.0,
+    "free_float_pct": 27.34,
+    "w52_high": 1870.0,
+    "w52_low": 214.0,
+    "shares_m": 10634.64,
+    "insider_pct": 72.66,
+    "institution_pct": 0.4,
+    "board": "",
+    "listing_date": "2021-07-09",
+    "website": "https://pammineral.co.id"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "volume",
+        "label": "Sales volume",
+        "unit": "vol",
+        "values": {
+          "FY2023A": 1848.00782,
+          "FY2024A": 2300.91478,
+          "FY2025A": 2563.0103,
+          "FY2026E": 1730.0,
+          "FY2027E": 2563.0,
+          "FY2028E": 2563.0
+        }
+      },
+      {
+        "key": "asp",
+        "label": "Average selling price",
+        "unit": "price",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": null,
+          "FY2026E": 32.572111,
+          "FY2027E": 40.3375,
+          "FY2028E": 40.3375
+        }
+      },
+      {
+        "key": "unit_cost",
+        "label": "Cash cost per unit (ex-royalty)",
+        "unit": "price",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": null,
+          "FY2026E": 294650.0,
+          "FY2027E": 303489.5,
+          "FY2028E": 312594.2
+        }
+      },
+      {
+        "key": "revenue",
+        "label": "Revenue",
+        "unit": "money",
+        "values": {
+          "FY2023A": 1141.462896,
+          "FY2024A": 1442.490355,
+          "FY2025A": 1473.081323,
+          "FY2026E": 990.065128,
+          "FY2027E": 1897.114979,
+          "FY2028E": 1922.961233
+        }
+      },
+      {
+        "key": "ebitda",
+        "label": "EBITDA",
+        "unit": "money",
+        "values": {
+          "FY2023A": 50.99078,
+          "FY2024A": 421.842895,
+          "FY2025A": 466.70366,
+          "FY2026E": 311.375915,
+          "FY2027E": 795.547691,
+          "FY2028E": 793.648193
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": 26.924381,
+          "FY2024A": 318.044538,
+          "FY2025A": 345.138362,
+          "FY2026E": 232.112209,
+          "FY2027E": 590.77134,
+          "FY2028E": 593.673199
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 2.531523,
+          "FY2024A": 29.903644,
+          "FY2025A": 32.451099,
+          "FY2026E": 21.82399,
+          "FY2027E": 55.546358,
+          "FY2028E": 55.819201
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 17.5,
+          "FY2024A": 42.0,
+          "FY2025A": 12.0,
+          "FY2026E": 14.185594,
+          "FY2027E": 36.105133,
+          "FY2028E": 36.282481
+        }
+      },
+      {
+        "key": "net_debt",
+        "label": "Net debt (cash)",
+        "unit": "money",
+        "values": {
+          "FY2023A": -130.041305,
+          "FY2024A": -224.596861,
+          "FY2025A": -239.199909,
+          "FY2026E": -169.375528,
+          "FY2027E": -453.525623,
+          "FY2028E": -613.271409
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "dcf_life",
+        "label": "DCF to end of life (no terminal value)",
+        "available": true,
+        "value": 305.25,
+        "weight": 0.6,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      },
+      {
+        "method": "ev_ebitda",
+        "label": "EV/EBITDA",
+        "available": true,
+        "value": 463.33,
+        "weight": 0.25,
+        "basis": "peer median",
+        "multiple": 9.4097,
+        "vs_primary_pct": 51.79,
+        "primary": false
+      },
+      {
+        "method": "pbv",
+        "label": "P/BV",
+        "available": true,
+        "value": 262.25,
+        "weight": 0.15,
+        "basis": "peer median",
+        "multiple": 3.1039,
+        "vs_primary_pct": -14.09,
+        "primary": false
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 1.0,
+      "beta_source": "industry default (config)",
+      "de": 0.000609,
+      "beta_levered": 1.000475,
+      "tax": 0.22,
+      "coe_premium": 0.0,
+      "coe": 0.125232,
+      "kd_pre_tax": 0.0945,
+      "we": 0.999391,
+      "wd": 0.000609,
+      "wacc": 0.1252
+    },
+    "g": 0.04,
+    "dcf": {
+      "method": "dcf_life",
+      "rows": [
+        {
+          "cf": 54.65478,
+          "fraction": 0.251882,
+          "time": 0.013689,
+          "df": 0.998387,
+          "pv": 13.744358,
+          "period": "FY2026E"
+        },
+        {
+          "cf": 433.101061,
+          "fraction": 0.996578,
+          "time": 0.640657,
+          "df": 0.927212,
+          "pv": 400.202334,
+          "period": "FY2027E"
+        },
+        {
+          "cf": 538.421917,
+          "fraction": 0.999316,
+          "time": 1.639973,
+          "df": 0.824108,
+          "pv": 443.414365,
+          "period": "FY2028E"
+        },
+        {
+          "cf": 536.472327,
+          "fraction": 0.996578,
+          "time": 2.642026,
+          "df": 0.732233,
+          "pv": 391.478389,
+          "period": "FY2029E"
+        },
+        {
+          "cf": 553.400778,
+          "fraction": 0.996578,
+          "time": 3.641342,
+          "df": 0.65081,
+          "pv": 358.926407,
+          "period": "FY2030E"
+        },
+        {
+          "cf": 569.161308,
+          "fraction": 0.996578,
+          "time": 4.640657,
+          "df": 0.578442,
+          "pv": 328.099973,
+          "period": "FY2031E"
+        },
+        {
+          "cf": 583.390341,
+          "fraction": 0.999316,
+          "time": 5.639973,
+          "df": 0.51412,
+          "pv": 299.727588,
+          "period": "FY2032E"
+        },
+        {
+          "cf": 597.9751,
+          "fraction": 0.996578,
+          "time": 6.642026,
+          "df": 0.456804,
+          "pv": 272.222503,
+          "period": "FY2033E"
+        },
+        {
+          "cf": 387.57718,
+          "fraction": 0.996578,
+          "time": 7.641342,
+          "df": 0.406008,
+          "pv": 156.82103,
+          "period": "FY2034E"
+        },
+        {
+          "cf": 127.241404,
+          "fraction": 0.996578,
+          "time": 8.640657,
+          "df": 0.360861,
+          "pv": 45.759338,
+          "period": "FY2035E"
+        }
+      ],
+      "pv_sum": 2710.396286,
+      "pv_tv": 0.0,
+      "ev": 2710.396286,
+      "net_debt": -290.979734,
+      "minority": 3.1851,
+      "investments": 311.865,
+      "bridge": -63.81,
+      "equity_value": 3246.245921,
+      "tv_share": 0.0,
+      "value": 305.25
+    },
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 367.0,
+        "v0": 338.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.3,
+        "tp": 252.0,
+        "v0": 227.0,
+        "narrative": "The 2026 permit failure repeats rather than ending. NICL's 2027 RKAB is approved late and well below the 2,563 kt just delivered - volume down 30% to about 1,794 kt, the range the company actually sold in 2026 (1.7-2.0 Mt) - while LME nickel averages US$14,000/t on the ~750 kt LME/SHFE stock overhang and the rupiah firms back to about 17,065. Revenue falls roughly 45% from base and, with the rupiah cost base fixed, EBITDA margin compresses towards the FY2023 level. The Rp311.9bn conditional advance to PT Sumber Mineral Abadi is at risk if its conditions are not met by 31 December 2026.",
+        "shocks": [
+          {
+            "target": "d.metals.nickel",
+            "op": "mult",
+            "value": 0.8
+          },
+          {
+            "target": "a.volume",
+            "op": "mult",
+            "value": 0.7
+          },
+          {
+            "target": "m.usd_idr",
+            "op": "mult",
+            "value": 0.93
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.2,
+        "tp": 462.0,
+        "v0": 433.0,
+        "narrative": "The RKAB quota discipline lifts LME nickel to about US$21,000/t and the national quota is held near the revised 290-300 Mt rather than expanded again, while the rupiah weakens to about 19,635 and NICL sells at its full 2,609 kt capacity - the ceiling the annual report cites, not a growth assumption. With revenue dollar-linked and costs rupiah, the margin and the dividend both re-rate. We do not value a permit extension or a resource-to-reserve conversion: no source evidences either, and the DCF already stops at the 2035 PAM expiry.",
+        "shocks": [
+          {
+            "target": "d.metals.nickel",
+            "op": "mult",
+            "value": 1.2
+          },
+          {
+            "target": "a.volume",
+            "op": "mult",
+            "value": 1.018
+          },
+          {
+            "target": "m.usd_idr",
+            "op": "mult",
+            "value": 1.07
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "12-month value vs benchmark price and IDR/USD",
+        "metric": "tp",
+        "x": {
+          "target": "d.metals.tin",
+          "op": "mult",
+          "label": "Benchmark price (x deck)",
+          "steps": [
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2
+          ]
+        },
+        "y": {
+          "target": "m.usd_idr",
+          "op": "mult",
+          "label": "IDR per USD (x deck)",
+          "steps": [
+            0.9,
+            0.95,
+            1.0,
+            1.05,
+            1.1
+          ]
+        },
+        "grid": [
+          [
+            329.920418,
+            329.920418,
+            329.920418,
+            329.920418,
+            329.920418
+          ],
+          [
+            347.471434,
+            347.471434,
+            347.471434,
+            347.471434,
+            347.471434
+          ],
+          [
+            365.02245,
+            365.02245,
+            365.02245,
+            365.02245,
+            365.02245
+          ],
+          [
+            382.573467,
+            382.573467,
+            382.573467,
+            382.573467,
+            382.573467
+          ],
+          [
+            400.124483,
+            400.124483,
+            400.124483,
+            400.124483,
+            400.124483
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs volume and unit cost intensity",
+        "metric": "tp",
+        "x": {
+          "target": "a.strip_ratio",
+          "op": "mult",
+          "label": "Cost intensity / strip ratio (x)",
+          "steps": [
+            0.85,
+            0.925,
+            1.0,
+            1.075,
+            1.15
+          ]
+        },
+        "y": {
+          "target": "a.volume",
+          "op": "mult",
+          "label": "Volume (x plan)",
+          "steps": [
+            0.9,
+            0.95,
+            1.0,
+            1.05,
+            1.1
+          ]
+        },
+        "grid": [
+          [
+            374.564752,
+            362.626205,
+            350.687658,
+            338.749111,
+            326.810564
+          ],
+          [
+            383.800048,
+            371.198249,
+            358.596449,
+            345.994649,
+            333.392849
+          ],
+          [
+            393.035344,
+            379.770292,
+            366.50524,
+            353.240187,
+            339.975135
+          ],
+          [
+            402.27064,
+            388.342335,
+            374.41403,
+            360.485725,
+            346.55742
+          ],
+          [
+            411.505936,
+            396.914378,
+            382.322821,
+            367.731263,
+            353.139706
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": false,
+      "target": "d.metals.tin",
+      "note": "price not bracketed"
+    },
+    "multiples": {
+      "FY2025A": {
+        "pe": 6.656169,
+        "pbv": 2.968667,
+        "div_yield": 0.055556,
+        "ev_ebitda": 4.416225
+      },
+      "FY2026E": {
+        "pe": 9.897365,
+        "pbv": 2.615521,
+        "div_yield": 0.065674,
+        "ev_ebitda": 6.843474,
+        "fcfe_yield": 0.025164
+      },
+      "FY2027E": {
+        "pe": 3.888644,
+        "pbv": 1.742713,
+        "div_yield": 0.167153,
+        "ev_ebitda": 2.321348,
+        "fcfe_yield": 0.189381
+      },
+      "FY2028E": {
+        "pe": 3.869636,
+        "pbv": 1.503563,
+        "div_yield": 0.167974,
+        "ev_ebitda": 2.125623,
+        "fcfe_yield": 0.236712
+      }
+    },
+    "peers": {
+      "median": {
+        "pe": {
+          "median": 9.268326154045862,
+          "n": 5
+        },
+        "ev_ebitda": {
+          "median": 9.40968894520869,
+          "n": 5
+        },
+        "pbv": {
+          "median": 3.1039429407980816,
+          "n": 9
+        },
+        "ev_sales": {
+          "median": 2.2908860051200404,
+          "n": 9
+        },
+        "div_yield": {
+          "median": 0.026837014372685618,
+          "n": 4
+        }
+      },
+      "rows": {
+        "ALKA.JK": {
+          "pbv": 10.4951,
+          "ev_sales": 14.2629,
+          "div_yield": 0.0
+        },
+        "ALMI.JK": {
+          "pbv": 3.4082,
+          "ev_sales": 29.9579,
+          "div_yield": 0.0
+        },
+        "CITA.JK": {
+          "pe": 8.1795,
+          "ev_ebitda": 8.8238,
+          "pbv": 1.328,
+          "ev_sales": 1.7486,
+          "div_yield": 0.1232
+        },
+        "DAAZ.JK": {
+          "pe": 9.2683,
+          "ev_ebitda": 9.4097,
+          "pbv": 1.6184,
+          "ev_sales": 0.3768,
+          "div_yield": 0.0277
+        },
+        "INAI.JK": {
+          "pbv": 1.0424,
+          "ev_sales": 0.8647,
+          "div_yield": 0.0
+        },
+        "MDKA.JK": {
+          "pe": 49.4495,
+          "ev_ebitda": 14.2399,
+          "pbv": 3.1039,
+          "ev_sales": 2.7246,
+          "div_yield": 0.0061
+        },
+        "PTRO.JK": {
+          "pe": 43.6695,
+          "ev_ebitda": 38.1102,
+          "pbv": 4.6288,
+          "ev_sales": 2.2909,
+          "div_yield": 0.0
+        },
+        "SMGA.JK": {
+          "div_yield": 0.0
+        },
+        "TINS.JK": {
+          "pe": 5.2245,
+          "ev_ebitda": 3.2778,
+          "pbv": 2.1089,
+          "ev_sales": 1.0202,
+          "div_yield": 0.026
+        },
+        "ZINC.JK": {
+          "pbv": 4.0364,
+          "ev_sales": 20.9019,
+          "div_yield": 0.0
+        }
+      }
+    },
+    "drivers": {
+      "d.metals.nickel": {
+        "FY2023A": 21521.0,
+        "FY2024A": 16814.0,
+        "FY2025A": 15162.0,
+        "FY2026E": 17089.25,
+        "FY2027E": 17500.0,
+        "FY2028E": 17500.0
+      },
+      "m.usd_idr": {
+        "FY2023A": 15228.8,
+        "FY2024A": 15846.2378,
+        "FY2025A": 16448.0929,
+        "FY2026E": 17570.0,
+        "FY2027E": 18350.0,
+        "FY2028E": 18600.0
+      }
+    },
+    "konglo": null
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E",
+      "FY2031E",
+      "FY2032E",
+      "FY2033E",
+      "FY2034E",
+      "FY2035E"
+    ],
+    "sections": {
+      "OPS": [
+        {
+          "key": "reserves",
+          "label": "Reserves remaining (close)",
+          "unit": "vol",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": null,
+            "FY2027E": null,
+            "FY2028E": null,
+            "FY2029E": null,
+            "FY2030E": null,
+            "FY2031E": null,
+            "FY2032E": null,
+            "FY2033E": null,
+            "FY2034E": null,
+            "FY2035E": null
+          }
+        },
+        {
+          "key": "volume",
+          "label": "Sales volume",
+          "unit": "vol",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 1848.00782,
+            "FY2024A": 2300.91478,
+            "FY2025A": 2563.0103,
+            "FY2026E": 1730.0,
+            "FY2027E": 2563.0,
+            "FY2028E": 2563.0,
+            "FY2029E": 2563.0,
+            "FY2030E": 2563.0,
+            "FY2031E": 2563.0,
+            "FY2032E": 2563.0,
+            "FY2033E": 2563.0,
+            "FY2034E": 914.1,
+            "FY2035E": 222.9
+          }
+        },
+        {
+          "key": "benchmark",
+          "label": "Benchmark price",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 17089.25,
+            "FY2027E": 17500.0,
+            "FY2028E": 17500.0,
+            "FY2029E": 17500.0,
+            "FY2030E": 17850.0,
+            "FY2031E": 18207.0,
+            "FY2032E": 18571.14,
+            "FY2033E": 18942.5628,
+            "FY2034E": 19321.414056,
+            "FY2035E": 19707.842337
+          }
+        },
+        {
+          "key": "asp",
+          "label": "Average selling price",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 32.572111,
+            "FY2027E": 40.3375,
+            "FY2028E": 40.3375,
+            "FY2029E": 40.3375,
+            "FY2030E": 41.14425,
+            "FY2031E": 41.967135,
+            "FY2032E": 42.806478,
+            "FY2033E": 43.662607,
+            "FY2034E": 44.535859,
+            "FY2035E": 45.426577
+          }
+        },
+        {
+          "key": "realisation_line",
+          "label": "Realisation vs benchmark",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.001906,
+            "FY2027E": 0.002305,
+            "FY2028E": 0.002305,
+            "FY2029E": 0.002305,
+            "FY2030E": 0.002305,
+            "FY2031E": 0.002305,
+            "FY2032E": 0.002305,
+            "FY2033E": 0.002305,
+            "FY2034E": 0.002305,
+            "FY2035E": 0.002305
+          }
+        },
+        {
+          "key": "unit_cost",
+          "label": "Cash cost per unit (ex-royalty)",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 294650.0,
+            "FY2027E": 303489.5,
+            "FY2028E": 312594.2,
+            "FY2029E": 321972.0,
+            "FY2030E": 331631.2,
+            "FY2031E": 339921.98,
+            "FY2032E": 348420.0295,
+            "FY2033E": 357130.530237,
+            "FY2034E": 366058.793493,
+            "FY2035E": 375210.263331
+          }
+        },
+        {
+          "key": "strip_ratio_line",
+          "label": "Strip ratio",
+          "unit": "ratio",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 1.0,
+            "FY2027E": 1.0,
+            "FY2028E": 1.0,
+            "FY2029E": 1.0,
+            "FY2030E": 1.0,
+            "FY2031E": 1.0,
+            "FY2032E": 1.0,
+            "FY2033E": 1.0,
+            "FY2034E": 1.0,
+            "FY2035E": 1.0
+          }
+        },
+        {
+          "key": "royalty_rate",
+          "label": "Royalty rate",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.07324,
+            "FY2027E": 0.07324,
+            "FY2028E": 0.07324,
+            "FY2029E": 0.07324,
+            "FY2030E": 0.07324,
+            "FY2031E": 0.07324,
+            "FY2032E": 0.07324,
+            "FY2033E": 0.07324,
+            "FY2034E": 0.07324,
+            "FY2035E": 0.07324
+          }
+        },
+        {
+          "key": "ebitda_per_unit",
+          "label": "EBITDA per unit (price currency)",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 1.81185,
+            "FY2024A": 11.569752,
+            "FY2025A": 11.070706,
+            "FY2026E": 10.243943,
+            "FY2027E": 16.915372,
+            "FY2028E": 16.648169,
+            "FY2029E": 16.373566,
+            "FY2030E": 16.754264,
+            "FY2031E": 17.08935,
+            "FY2032E": 17.431137,
+            "FY2033E": 17.779759,
+            "FY2034E": 18.135354,
+            "FY2035E": 18.498062
+          }
+        },
+        {
+          "key": "cash_cost_money_per_unit",
+          "label": "Cash cost + royalty per unit (price currency)",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 19.155644,
+            "FY2027E": 19.493256,
+            "FY2028E": 19.760458,
+            "FY2029E": 20.035061,
+            "FY2030E": 20.382536,
+            "FY2031E": 20.790186,
+            "FY2032E": 21.20599,
+            "FY2033E": 21.63011,
+            "FY2034E": 22.062712,
+            "FY2035E": 22.503966
+          }
+        }
+      ],
+      "IS": [
+        {
+          "key": "revenue_main",
+          "label": "Main product revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 990.065128,
+            "FY2027E": 1897.114979,
+            "FY2028E": 1922.961233,
+            "FY2029E": 1948.807486,
+            "FY2030E": 2013.423118,
+            "FY2031E": 2063.758696,
+            "FY2032E": 2115.352664,
+            "FY2033E": 2168.23648,
+            "FY2034E": 792.639325,
+            "FY2035E": 198.114307
+          }
+        },
+        {
+          "key": "other_revenue",
+          "label": "Other revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "royalty",
+          "label": "Royalty",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 72.51237,
+            "FY2027E": 138.944701,
+            "FY2028E": 140.837681,
+            "FY2029E": 142.73066,
+            "FY2030E": 147.463109,
+            "FY2031E": 151.149687,
+            "FY2032E": 154.928429,
+            "FY2033E": 158.80164,
+            "FY2034E": 58.052904,
+            "FY2035E": 14.509892
+          }
+        },
+        {
+          "key": "cash_cost",
+          "label": "Cash costs",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 509.7445,
+            "FY2027E": 777.843589,
+            "FY2028E": 801.178935,
+            "FY2029E": 825.214236,
+            "FY2030E": 849.970766,
+            "FY2031E": 871.220035,
+            "FY2032E": 893.000536,
+            "FY2033E": 915.325549,
+            "FY2034E": 334.614343,
+            "FY2035E": 83.634368
+          }
+        },
+        {
+          "key": "other_cogs",
+          "label": "Cost of other revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1149.394604,
+            "FY2023A": 1141.462896,
+            "FY2024A": 1442.490355,
+            "FY2025A": 1473.081323,
+            "FY2026E": 990.065128,
+            "FY2027E": 1897.114979,
+            "FY2028E": 1922.961233,
+            "FY2029E": 1948.807486,
+            "FY2030E": 2013.423118,
+            "FY2031E": 2063.758696,
+            "FY2032E": 2115.352664,
+            "FY2033E": 2168.23648,
+            "FY2034E": 792.639325,
+            "FY2035E": 198.114307
+          }
+        },
+        {
+          "key": "cogs",
+          "label": "Cost of revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 869.980512,
+            "FY2023A": 1004.799999,
+            "FY2024A": 925.222099,
+            "FY2025A": 871.00401,
+            "FY2026E": 587.69945,
+            "FY2027E": 924.851488,
+            "FY2028E": 950.079813,
+            "FY2029E": 976.008094,
+            "FY2030E": 1005.497073,
+            "FY2031E": 1030.6345,
+            "FY2032E": 1056.400362,
+            "FY2033E": 1082.810371,
+            "FY2034E": 395.841547,
+            "FY2035E": 98.937652
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": 279.414092,
+            "FY2023A": 136.662897,
+            "FY2024A": 517.268256,
+            "FY2025A": 602.077314,
+            "FY2026E": 402.365678,
+            "FY2027E": 972.263492,
+            "FY2028E": 972.881419,
+            "FY2029E": 972.799391,
+            "FY2030E": 1007.926046,
+            "FY2031E": 1033.124197,
+            "FY2032E": 1058.952302,
+            "FY2033E": 1085.426109,
+            "FY2034E": 396.797779,
+            "FY2035E": 99.176655
+          }
+        },
+        {
+          "key": "opex",
+          "label": "SG&A and other opex",
+          "unit": "money",
+          "values": {
+            "FY2022A": 79.250335,
+            "FY2023A": 91.790526,
+            "FY2024A": 103.167237,
+            "FY2025A": 143.433886,
+            "FY2026E": 96.432343,
+            "FY2027E": 184.778999,
+            "FY2028E": 187.296424,
+            "FY2029E": 189.813849,
+            "FY2030E": 196.107412,
+            "FY2031E": 201.010097,
+            "FY2032E": 206.035349,
+            "FY2033E": 211.186233,
+            "FY2034E": 77.20307,
+            "FY2035E": 19.296334
+          }
+        },
+        {
+          "key": "ebit",
+          "label": "EBIT",
+          "unit": "money",
+          "values": {
+            "FY2022A": 200.163757,
+            "FY2023A": 44.872371,
+            "FY2024A": 414.096997,
+            "FY2025A": 458.64,
+            "FY2026E": 305.933335,
+            "FY2027E": 787.484493,
+            "FY2028E": 785.584995,
+            "FY2029E": 782.985542,
+            "FY2030E": 811.818634,
+            "FY2031E": 832.1141,
+            "FY2032E": 852.916952,
+            "FY2033E": 874.239876,
+            "FY2034E": 319.594708,
+            "FY2035E": 79.880322
+          }
+        },
+        {
+          "key": "da",
+          "label": "Depreciation & amortisation",
+          "unit": "money",
+          "values": {
+            "FY2022A": 3.821017,
+            "FY2023A": 6.118409,
+            "FY2024A": 7.745898,
+            "FY2025A": 8.06366,
+            "FY2026E": 5.44258,
+            "FY2027E": 8.063198,
+            "FY2028E": 8.063198,
+            "FY2029E": 8.063198,
+            "FY2030E": 8.063198,
+            "FY2031E": 8.264778,
+            "FY2032E": 8.471397,
+            "FY2033E": 8.683182,
+            "FY2034E": 3.174299,
+            "FY2035E": 0.793393
+          }
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "unit": "money",
+          "values": {
+            "FY2022A": 203.984774,
+            "FY2023A": 50.99078,
+            "FY2024A": 421.842895,
+            "FY2025A": 466.70366,
+            "FY2026E": 311.375915,
+            "FY2027E": 795.547691,
+            "FY2028E": 793.648193,
+            "FY2029E": 791.04874,
+            "FY2030E": 819.881832,
+            "FY2031E": 840.378878,
+            "FY2032E": 861.38835,
+            "FY2033E": 882.923058,
+            "FY2034E": 322.769008,
+            "FY2035E": 80.673714
+          }
+        },
+        {
+          "key": "interest_expense",
+          "label": "Interest expense",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.034347,
+            "FY2023A": 0.139355,
+            "FY2024A": 0.205458,
+            "FY2025A": 0.189966,
+            "FY2026E": 0.113227,
+            "FY2027E": 0.113227,
+            "FY2028E": 0.113227,
+            "FY2029E": 0.113227,
+            "FY2030E": 0.113227,
+            "FY2031E": 0.113227,
+            "FY2032E": 0.113227,
+            "FY2033E": 0.113227,
+            "FY2034E": 0.113227,
+            "FY2035E": 0.113227
+          }
+        },
+        {
+          "key": "interest_income",
+          "label": "Interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.881189,
+            "FY2023A": 0.885153,
+            "FY2024A": 1.43186,
+            "FY2025A": 9.404097,
+            "FY2026E": 4.903869,
+            "FY2027E": 3.482523,
+            "FY2028E": 9.266683,
+            "FY2029E": 12.518468,
+            "FY2030E": 15.741663,
+            "FY2031E": 19.352188,
+            "FY2032E": 23.020545,
+            "FY2033E": 26.79732,
+            "FY2034E": 30.685801,
+            "FY2035E": 30.101709
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other non-operating",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1.41479,
+            "FY2023A": 1.045918,
+            "FY2024A": -0.244191,
+            "FY2025A": -9.914378,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 202.42539,
+            "FY2023A": 46.664087,
+            "FY2024A": 415.079209,
+            "FY2025A": 457.939753,
+            "FY2026E": 310.723976,
+            "FY2027E": 790.853789,
+            "FY2028E": 794.738451,
+            "FY2029E": 795.390783,
+            "FY2030E": 827.44707,
+            "FY2031E": 851.353061,
+            "FY2032E": 875.82427,
+            "FY2033E": 900.923969,
+            "FY2034E": 350.167282,
+            "FY2035E": 109.868804
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 52.219389,
+            "FY2023A": 19.529057,
+            "FY2024A": 96.321686,
+            "FY2025A": 112.801391,
+            "FY2026E": 77.680994,
+            "FY2027E": 197.713447,
+            "FY2028E": 198.684613,
+            "FY2029E": 198.847696,
+            "FY2030E": 206.861767,
+            "FY2031E": 212.838265,
+            "FY2032E": 218.956068,
+            "FY2033E": 225.230992,
+            "FY2034E": 87.541821,
+            "FY2035E": 27.467201
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 150.206001,
+            "FY2023A": 27.13503,
+            "FY2024A": 318.757523,
+            "FY2025A": 345.138362,
+            "FY2026E": 233.042982,
+            "FY2027E": 593.140342,
+            "FY2028E": 596.053838,
+            "FY2029E": 596.543088,
+            "FY2030E": 620.585302,
+            "FY2031E": 638.514796,
+            "FY2032E": 656.868203,
+            "FY2033E": 675.692977,
+            "FY2034E": 262.625462,
+            "FY2035E": 82.401603
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.476119,
+            "FY2023A": 0.21065,
+            "FY2024A": 0.712985,
+            "FY2025A": 0.683698,
+            "FY2026E": 0.930774,
+            "FY2027E": 2.369003,
+            "FY2028E": 2.380639,
+            "FY2029E": 2.382593,
+            "FY2030E": 2.478618,
+            "FY2031E": 2.550228,
+            "FY2032E": 2.623532,
+            "FY2033E": 2.698718,
+            "FY2034E": 1.048926,
+            "FY2035E": 0.329112
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": 149.729882,
+            "FY2023A": 26.924381,
+            "FY2024A": 318.044538,
+            "FY2025A": 345.138362,
+            "FY2026E": 232.112209,
+            "FY2027E": 590.77134,
+            "FY2028E": 593.673199,
+            "FY2029E": 594.160495,
+            "FY2030E": 618.106685,
+            "FY2031E": 635.964568,
+            "FY2032E": 654.244671,
+            "FY2033E": 672.994259,
+            "FY2034E": 261.576536,
+            "FY2035E": 82.072491
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 9662.516057,
+            "FY2023A": 10635.644907,
+            "FY2024A": 10635.644907,
+            "FY2025A": 10635.644907,
+            "FY2026E": 10635.644907,
+            "FY2027E": 10635.644907,
+            "FY2028E": 10635.644907,
+            "FY2029E": 10635.644907,
+            "FY2030E": 10635.644907,
+            "FY2031E": 10635.644907,
+            "FY2032E": 10635.644907,
+            "FY2033E": 10635.644907,
+            "FY2034E": 10635.644907,
+            "FY2035E": 10635.644907
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 15.495952,
+            "FY2023A": 2.531523,
+            "FY2024A": 29.903644,
+            "FY2025A": 32.451099,
+            "FY2026E": 21.82399,
+            "FY2027E": 55.546358,
+            "FY2028E": 55.819201,
+            "FY2029E": 55.865018,
+            "FY2030E": 58.116521,
+            "FY2031E": 59.795581,
+            "FY2032E": 61.514339,
+            "FY2033E": 63.27724,
+            "FY2034E": 24.594328,
+            "FY2035E": 7.716739
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 7.0,
+            "FY2023A": 17.5,
+            "FY2024A": 42.0,
+            "FY2025A": 12.0,
+            "FY2026E": 14.185594,
+            "FY2027E": 36.105133,
+            "FY2028E": 36.282481,
+            "FY2029E": 36.312262,
+            "FY2030E": 37.775739,
+            "FY2031E": 38.867128,
+            "FY2032E": 39.984321,
+            "FY2033E": 41.130206,
+            "FY2034E": 15.986313,
+            "FY2035E": 5.01588
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 71.71463,
+            "FY2024A": 186.083855,
+            "FY2025A": 446.636999,
+            "FY2026E": 127.627739,
+            "FY2027E": 150.872936,
+            "FY2028E": 384.001371,
+            "FY2029E": 385.88758,
+            "FY2030E": 386.204321,
+            "FY2031E": 401.769345,
+            "FY2032E": 413.376969,
+            "FY2033E": 425.259036,
+            "FY2034E": 437.446268,
+            "FY2035E": 170.024748
+          }
+        },
+        {
+          "key": "capex",
+          "label": "Capital expenditure",
+          "unit": "money",
+          "values": {
+            "FY2022A": 4.900227,
+            "FY2023A": 2.038245,
+            "FY2024A": 10.303008,
+            "FY2025A": 8.2256,
+            "FY2026E": 55.69908,
+            "FY2027E": 55.699116,
+            "FY2028E": 55.699116,
+            "FY2029E": 55.699116,
+            "FY2030E": 55.699116,
+            "FY2031E": 57.091594,
+            "FY2032E": 58.518884,
+            "FY2033E": 59.981856,
+            "FY2034E": 21.927487,
+            "FY2035E": 5.480612
+          }
+        },
+        {
+          "key": "delta_nwc",
+          "label": "Change in working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -82.324829,
+            "FY2024A": -24.45185,
+            "FY2025A": -224.519889,
+            "FY2026E": 124.538721,
+            "FY2027E": 109.876391,
+            "FY2028E": 3.130912,
+            "FY2029E": 3.130912,
+            "FY2030E": 7.827279,
+            "FY2031E": 6.097451,
+            "FY2032E": 6.249887,
+            "FY2033E": 6.406134,
+            "FY2034E": -166.634337,
+            "FY2035E": -72.018383
+          }
+        },
+        {
+          "key": "fcff",
+          "label": "Free cash flow to firm",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 112.498145,
+            "FY2024A": 339.897979,
+            "FY2025A": 570.024071,
+            "FY2026E": 54.65478,
+            "FY2027E": 433.101061,
+            "FY2028E": 538.421917,
+            "FY2029E": 536.472327,
+            "FY2030E": 553.400778,
+            "FY2031E": 569.161308,
+            "FY2032E": 583.390341,
+            "FY2033E": 597.9751,
+            "FY2034E": 387.57718,
+            "FY2035E": 127.241404
+          }
+        },
+        {
+          "key": "net_borrowing",
+          "label": "Net borrowing",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 4.426293,
+            "FY2024A": -2.377291,
+            "FY2025A": -1.649482,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcfe",
+          "label": "Free cash flow to equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 57.803357,
+            "FY2027E": 435.02303,
+            "FY2028E": 543.747157,
+            "FY2029E": 544.228843,
+            "FY2030E": 563.57342,
+            "FY2031E": 581.979428,
+            "FY2032E": 598.913181,
+            "FY2033E": 616.282874,
+            "FY2034E": 408.752444,
+            "FY2035E": 149.050964
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "nwc",
+          "label": "Operating working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": 326.690376,
+            "FY2023A": 244.365547,
+            "FY2024A": 219.913697,
+            "FY2025A": -4.606192,
+            "FY2026E": 119.932529,
+            "FY2027E": 229.80892,
+            "FY2028E": 232.939832,
+            "FY2029E": 236.070744,
+            "FY2030E": 243.898023,
+            "FY2031E": 249.995473,
+            "FY2032E": 256.24536,
+            "FY2033E": 262.651494,
+            "FY2034E": 96.017157,
+            "FY2035E": 23.998775
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash & equivalents",
+          "unit": "money",
+          "values": {
+            "FY2022A": 95.501125,
+            "FY2023A": 135.77348,
+            "FY2024A": 227.951745,
+            "FY2025A": 240.905311,
+            "FY2026E": 171.08093,
+            "FY2027E": 455.231025,
+            "FY2028E": 614.976811,
+            "FY2029E": 773.318074,
+            "FY2030E": 950.687172,
+            "FY2031E": 1130.897255,
+            "FY2032E": 1316.433467,
+            "FY2033E": 1507.457304,
+            "FY2034E": 1478.763481,
+            "FY2035E": 1457.789696
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1.305882,
+            "FY2023A": 5.732175,
+            "FY2024A": 3.354884,
+            "FY2025A": 1.705402,
+            "FY2026E": 1.705402,
+            "FY2027E": 1.705402,
+            "FY2028E": 1.705402,
+            "FY2029E": 1.705402,
+            "FY2030E": 1.705402,
+            "FY2031E": 1.705402,
+            "FY2032E": 1.705402,
+            "FY2033E": 1.705402,
+            "FY2034E": 1.705402,
+            "FY2035E": 1.705402
+          }
+        },
+        {
+          "key": "ppe",
+          "label": "Fixed assets (net)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 48.299775,
+            "FY2023A": 83.856424,
+            "FY2024A": 81.851112,
+            "FY2025A": 80.124297,
+            "FY2026E": 130.380797,
+            "FY2027E": 178.016715,
+            "FY2028E": 225.652633,
+            "FY2029E": 273.288551,
+            "FY2030E": 320.924469,
+            "FY2031E": 369.751285,
+            "FY2032E": 419.798771,
+            "FY2033E": 471.097445,
+            "FY2034E": 489.850633,
+            "FY2035E": 494.537853
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": 496.344267,
+            "FY2023A": 744.286058,
+            "FY2024A": 876.288224,
+            "FY2025A": 773.848717,
+            "FY2026E": 878.333187,
+            "FY2027E": 1318.231591,
+            "FY2028E": 1527.903419,
+            "FY2029E": 1736.176334,
+            "FY2030E": 1968.078698,
+            "FY2031E": 2202.27392,
+            "FY2032E": 2443.141622,
+            "FY2033E": 2690.876845,
+            "FY2034E": 2515.007112,
+            "FY2035E": 2427.054855
+          }
+        },
+        {
+          "key": "minority_bs",
+          "label": "Minority interest (balance sheet)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.971534,
+            "FY2023A": 1.184109,
+            "FY2024A": 1.897118,
+            "FY2025A": 2.580624,
+            "FY2026E": 3.066994,
+            "FY2027E": 4.830994,
+            "FY2028E": 5.671781,
+            "FY2029E": 6.506959,
+            "FY2030E": 7.436891,
+            "FY2031E": 8.376018,
+            "FY2032E": 9.341901,
+            "FY2033E": 10.335323,
+            "FY2034E": 9.630083,
+            "FY2035E": 9.277393
+          }
+        },
+        {
+          "key": "net_debt",
+          "label": "Net debt (cash)",
+          "unit": "money",
+          "values": {
+            "FY2022A": -94.195242,
+            "FY2023A": -130.041305,
+            "FY2024A": -224.596861,
+            "FY2025A": -239.199909,
+            "FY2026E": -169.375528,
+            "FY2027E": -453.525623,
+            "FY2028E": -613.271409,
+            "FY2029E": -771.612672,
+            "FY2030E": -948.98177,
+            "FY2031E": -1129.191853,
+            "FY2032E": -1314.728065,
+            "FY2033E": -1505.751902,
+            "FY2034E": -1477.058078,
+            "FY2035E": -1456.084294
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 51.368015,
+            "FY2023A": 69.980341,
+            "FY2024A": 82.39164,
+            "FY2025A": 72.759924,
+            "FY2026E": 82.583914,
+            "FY2027E": 123.944679,
+            "FY2028E": 143.658747,
+            "FY2029E": 163.241284,
+            "FY2030E": 185.045544,
+            "FY2031E": 207.065386,
+            "FY2032E": 229.712598,
+            "FY2033E": 253.005518,
+            "FY2034E": 236.469639,
+            "FY2035E": 228.200065
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "revenue_growth",
+          "label": "Revenue growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.006901,
+            "FY2024A": 0.263721,
+            "FY2025A": 0.021207,
+            "FY2026E": -0.327895,
+            "FY2027E": 0.916152,
+            "FY2028E": 0.013624,
+            "FY2029E": 0.013441,
+            "FY2030E": 0.033156,
+            "FY2031E": 0.025,
+            "FY2032E": 0.025,
+            "FY2033E": 0.025,
+            "FY2034E": -0.634431,
+            "FY2035E": -0.750057
+          }
+        },
+        {
+          "key": "gross_margin",
+          "label": "Gross margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.243097,
+            "FY2023A": 0.119726,
+            "FY2024A": 0.358594,
+            "FY2025A": 0.40872,
+            "FY2026E": 0.406403,
+            "FY2027E": 0.512496,
+            "FY2028E": 0.505929,
+            "FY2029E": 0.499177,
+            "FY2030E": 0.500603,
+            "FY2031E": 0.500603,
+            "FY2032E": 0.500603,
+            "FY2033E": 0.500603,
+            "FY2034E": 0.500603,
+            "FY2035E": 0.500603
+          }
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.177471,
+            "FY2023A": 0.044671,
+            "FY2024A": 0.292441,
+            "FY2025A": 0.316821,
+            "FY2026E": 0.3145,
+            "FY2027E": 0.419346,
+            "FY2028E": 0.412722,
+            "FY2029E": 0.405914,
+            "FY2030E": 0.407208,
+            "FY2031E": 0.407208,
+            "FY2032E": 0.407208,
+            "FY2033E": 0.407208,
+            "FY2034E": 0.407208,
+            "FY2035E": 0.407208
+          }
+        },
+        {
+          "key": "ebit_margin",
+          "label": "EBIT margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.174147,
+            "FY2023A": 0.039311,
+            "FY2024A": 0.287071,
+            "FY2025A": 0.311347,
+            "FY2026E": 0.309003,
+            "FY2027E": 0.415096,
+            "FY2028E": 0.408529,
+            "FY2029E": 0.401777,
+            "FY2030E": 0.403203,
+            "FY2031E": 0.403203,
+            "FY2032E": 0.403203,
+            "FY2033E": 0.403203,
+            "FY2034E": 0.403203,
+            "FY2035E": 0.403203
+          }
+        },
+        {
+          "key": "np_margin",
+          "label": "Net margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.130268,
+            "FY2023A": 0.023588,
+            "FY2024A": 0.220483,
+            "FY2025A": 0.234297,
+            "FY2026E": 0.234441,
+            "FY2027E": 0.311405,
+            "FY2028E": 0.308729,
+            "FY2029E": 0.304884,
+            "FY2030E": 0.306993,
+            "FY2031E": 0.308158,
+            "FY2032E": 0.309284,
+            "FY2033E": 0.310388,
+            "FY2034E": 0.330007,
+            "FY2035E": 0.414268
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.836633,
+            "FY2024A": 10.812511,
+            "FY2025A": 0.085189,
+            "FY2026E": -0.327481,
+            "FY2027E": 1.545197,
+            "FY2028E": 0.004912,
+            "FY2029E": 0.000821,
+            "FY2030E": 0.040303,
+            "FY2031E": 0.028891,
+            "FY2032E": 0.028744,
+            "FY2033E": 0.028658,
+            "FY2034E": -0.611324,
+            "FY2035E": -0.686239
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.043404,
+            "FY2024A": 0.392508,
+            "FY2025A": 0.418315,
+            "FY2026E": 0.280977,
+            "FY2027E": 0.537905,
+            "FY2028E": 0.417179,
+            "FY2029E": 0.36406,
+            "FY2030E": 0.333728,
+            "FY2031E": 0.304993,
+            "FY2032E": 0.281673,
+            "FY2033E": 0.262171,
+            "FY2034E": 0.100493,
+            "FY2035E": 0.033214
+          }
+        },
+        {
+          "key": "net_debt_ebitda",
+          "label": "Net debt / EBITDA",
+          "unit": "x",
+          "values": {
+            "FY2022A": -0.461776,
+            "FY2023A": -2.550291,
+            "FY2024A": -0.532418,
+            "FY2025A": -0.512531,
+            "FY2026E": -0.543958,
+            "FY2027E": -0.57008,
+            "FY2028E": -0.772725,
+            "FY2029E": -0.97543,
+            "FY2030E": -1.157462,
+            "FY2031E": -1.34367,
+            "FY2032E": -1.52629,
+            "FY2033E": -1.705417,
+            "FY2034E": -4.576208,
+            "FY2035E": -18.049055
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.451731,
+            "FY2023A": 6.912834,
+            "FY2024A": 1.404511,
+            "FY2025A": 0.369787,
+            "FY2026E": 0.65,
+            "FY2027E": 0.65,
+            "FY2028E": 0.65,
+            "FY2029E": 0.65,
+            "FY2030E": 0.65,
+            "FY2031E": 0.65,
+            "FY2032E": 0.65,
+            "FY2033E": 0.65,
+            "FY2034E": 0.65,
+            "FY2035E": 0.65
+          }
+        },
+        {
+          "key": "capex_revenue",
+          "label": "Capex / revenue",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.004263,
+            "FY2023A": 0.001786,
+            "FY2024A": 0.007143,
+            "FY2025A": 0.005584,
+            "FY2026E": 0.056258,
+            "FY2027E": 0.02936,
+            "FY2028E": 0.028965,
+            "FY2029E": 0.028581,
+            "FY2030E": 0.027664,
+            "FY2031E": 0.027664,
+            "FY2032E": 0.027664,
+            "FY2033E": 0.027664,
+            "FY2034E": 0.027664,
+            "FY2035E": 0.027664
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        69.0
+      ],
+      [
+        "2022-01",
+        62.0
+      ],
+      [
+        "2022-02",
+        76.0
+      ],
+      [
+        "2022-03",
+        76.0
+      ],
+      [
+        "2022-04",
+        69.0
+      ],
+      [
+        "2022-05",
+        97.0
+      ],
+      [
+        "2022-06",
+        85.0
+      ],
+      [
+        "2022-07",
+        93.0
+      ],
+      [
+        "2022-08",
+        101.0
+      ],
+      [
+        "2022-09",
+        91.0
+      ],
+      [
+        "2022-10",
+        90.0
+      ],
+      [
+        "2022-11",
+        117.0
+      ],
+      [
+        "2022-12",
+        155.0
+      ],
+      [
+        "2023-01",
+        210.0
+      ],
+      [
+        "2023-02",
+        296.0
+      ],
+      [
+        "2023-03",
+        342.0
+      ],
+      [
+        "2023-04",
+        288.0
+      ],
+      [
+        "2023-05",
+        302.0
+      ],
+      [
+        "2023-06",
+        304.0
+      ],
+      [
+        "2023-07",
+        236.0
+      ],
+      [
+        "2023-08",
+        206.0
+      ],
+      [
+        "2023-09",
+        175.0
+      ],
+      [
+        "2023-10",
+        268.0
+      ],
+      [
+        "2023-11",
+        224.0
+      ],
+      [
+        "2023-12",
+        208.0
+      ],
+      [
+        "2024-01",
+        195.0
+      ],
+      [
+        "2024-02",
+        172.0
+      ],
+      [
+        "2024-03",
+        161.0
+      ],
+      [
+        "2024-04",
+        156.0
+      ],
+      [
+        "2024-05",
+        186.0
+      ],
+      [
+        "2024-06",
+        208.0
+      ],
+      [
+        "2024-07",
+        248.0
+      ],
+      [
+        "2024-08",
+        282.0
+      ],
+      [
+        "2024-09",
+        272.0
+      ],
+      [
+        "2024-10",
+        276.0
+      ],
+      [
+        "2024-11",
+        296.0
+      ],
+      [
+        "2024-12",
+        260.0
+      ],
+      [
+        "2025-01",
+        250.0
+      ],
+      [
+        "2025-02",
+        258.0
+      ],
+      [
+        "2025-03",
+        298.0
+      ],
+      [
+        "2025-04",
+        715.0
+      ],
+      [
+        "2025-05",
+        1405.0
+      ],
+      [
+        "2025-06",
+        1050.0
+      ],
+      [
+        "2025-07",
+        1120.0
+      ],
+      [
+        "2025-08",
+        1040.0
+      ],
+      [
+        "2025-09",
+        1050.0
+      ],
+      [
+        "2025-10",
+        990.0
+      ],
+      [
+        "2025-11",
+        1080.0
+      ],
+      [
+        "2025-12",
+        1215.0
+      ],
+      [
+        "2026-01",
+        1205.0
+      ],
+      [
+        "2026-02",
+        1100.0
+      ],
+      [
+        "2026-03",
+        810.0
+      ],
+      [
+        "2026-04",
+        875.0
+      ],
+      [
+        "2026-05",
+        570.0
+      ],
+      [
+        "2026-06",
+        472.0
+      ],
+      [
+        "2026-07",
+        476.0
+      ],
+      [
+        "2026-08",
+        520.0
+      ],
+      [
+        "2026-09",
+        366.0
+      ],
+      [
+        "2026-10",
+        230.0
+      ],
+      [
+        "2026-11",
+        216.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "DCF to end of life (no terminal value)",
+        "value": 305.25,
+        "weight": 0.6
+      },
+      {
+        "label": "EV/EBITDA",
+        "value": 463.33,
+        "weight": 0.25
+      },
+      {
+        "label": "P/BV",
+        "value": 262.25,
+        "weight": 0.15
+      },
+      {
+        "label": "Scenario base",
+        "value": 367.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 252.0,
+        "weight": 0.3
+      },
+      {
+        "label": "Scenario bull",
+        "value": 462.0,
+        "weight": 0.2
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "volume",
+      "label": "Sales volume plan",
+      "unit": "vol",
+      "values": {
+        "FY2026E": 1730.0,
+        "FY2027E": 2563.0,
+        "FY2028E": 2563.0,
+        "FY2029E": 2563.0,
+        "FY2030E": 2563.0,
+        "FY2031E": 2563.0,
+        "FY2032E": 2563.0,
+        "FY2033E": 2563.0,
+        "FY2034E": 914.1,
+        "FY2035E": 222.9
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "FY2026E 1,730 kt is the nine-month actual annualised with no fourth-quarter uplift assumed: 9M2026 revenue of Rp732.0bn [S0] at the modelled FY2026E ore price of ~Rp572k/t implies ~1.28 Mt sold in nine months, and Q4 is held at the Q3 run-rate (Rp257.6bn, [S0]) because the 2026 RKAB revision that added 30 Mt of national quota was only completed in late October [S8] and no NICL-specific fourth-quarter ramp is documented. FY2027E onward 2,563 kt is the LAST ACTUAL, not a haircut: the annual report's target-versus-realisation table shows FY2025 production realised of 2,563,010.30 WMT, 98.25% of the 2,608,666 WMT capacity (F1, F15), and revenue on the year was Rp1,473.08bn (F4). The company has already demonstrated this volume on its existing permits, so the base case holds it flat rather than stepping down to the FY2024 level of 2,301 kt (F2): no filed 2027 RKAB or mine plan supports a cut below what was just delivered. THE TONNAGE IS THEN CAPPED BY EACH PERMIT, NOT BY THE HORIZON. Of the FY2025 actual, 1,798.791 kt of the 2,563.010 kt was produced through the subsidiary IBM and 764.219 kt at PAM (F26, S3 p.73; the split is arithmetic on F1 and F26). IBM's IUP OP KW 07 OKP 007 is valid only to January 2034 (S3 p.53), so FY2034E carries one month of IBM production only (1,798.791/12) and nothing after it, while PAM's IUP runs to 15 April 2035 (S3 p.52): FY2034E is the full PAM year plus that one IBM month, and FY2035E is PAM's 3.5 months to the April expiry. PAM's own reserve is not the binding constraint at that run-rate: the audited LK puts PAM's proven reserve at 7.7 Mt plus 0.571 Mt probable as at the January 2025 estimate (F11, S3 p.233), against 7.10 Mt mined over FY2026E-FY2035E, so the permit, not the ore, ends PAM. No permit extension is assumed: no source evidences one.",
+      "sources": [
+        "S3",
+        "S5",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "realisation",
+      "label": "Realised price / benchmark",
+      "unit": "ratio",
+      "values": {
+        "FY2026E": 0.001906,
+        "FY2027E": 0.002305,
+        "FY2028E": 0.002305,
+        "FY2029E": 0.002305,
+        "FY2030E": 0.002305
+      },
+      "value": null,
+      "lt": 0.002305,
+      "basis": "Calibrated on the last actual, never on a forecast year: FY2025 nickel-ore sales of Rp1,473.08bn (F4) over 2,563.0 kt (F1) = Rp574.7k/t, or US$34.94/t at the FY2025 average USD/IDR of 16,448, over the FY2025 LME nickel average of US$15,162/t = 0.002305. The FY2024 ratio computed the same way is 0.002353 (Rp627.0k/t on 2,300.9 kt, F2, F4 2024 column), so the calibration sits on a stable two-year level rather than on a price spike. Held flat from FY2027E through the long run: it is a calibration of the ore-to-metal wedge, not a view on it. FY2026E is fitted, not forecast, and the fitting is to the REPORTED nine-month revenue, not to a price theory: 9M2026 revenue of Rp732.0bn [S0] is a 45.9% fall on 9M2025's Rp1,353.7bn, and at the modelled 1,730 kt for the full year it implies a realised price of about Rp572k/t - almost exactly the FY2025 Rp574.7k/t, i.e. the ore price was FLAT in rupiah. Converted at the FY2026E USD/IDR of 17,570 that is US$32.6/t, and against the deck's FY2026E nickel of US$17,089/t it gives 0.001906. So the ratio falls in dollar terms while the rupiah price that the company actually banks is unchanged; the wedge is not being cut. Holding 0.002305 through FY2026E instead would raise the stub year's dollar revenue 21% above the reported nine months and is worth roughly Rp8/share of DCF; we do not take it, because a year that is three-quarters reported should be priced on the report.",
+      "sources": [
+        "S3",
+        "S5",
+        "S4"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capped_share",
+      "label": "Share of volume under a price cap (e.g. DMO)",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "No domestic price cap applies to nickel ore; the HPM is a government reference used to set the royalty and tax base, not a ceiling on the selling price (S3 p.317).",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "strip_ratio",
+      "label": "Strip ratio (bcm per tonne) or cost-intensity factor",
+      "unit": "ratio",
+      "values": {
+        "FY2026E": 1.0,
+        "FY2027E": 1.0,
+        "FY2028E": 1.0,
+        "FY2029E": 1.0,
+        "FY2030E": 1.0
+      },
+      "value": null,
+      "lt": 1.0,
+      "basis": "Set to 1.0 as a cost-intensity factor: the cash cost is expressed per tonne of ore sold in cost_per_bcm, so a separate overburden ratio would add a second unsourced assumption. The LK discloses no bcm strip ratio for 2025.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cost_per_bcm",
+      "label": "Mining cost per bcm (or per unit when intensity is 1)",
+      "unit": "price",
+      "values": {
+        "FY2026E": 294650.0,
+        "FY2027E": 303489.5,
+        "FY2028E": 312594.2,
+        "FY2029E": 321972.0,
+        "FY2030E": 331631.2
+      },
+      "value": null,
+      "lt": 331631.2,
+      "basis": "Rp294,650 per tonne of ore sold, built from the audited FY2025 cost of goods sold of Rp871.00bn less the royalty line of Rp107.90bn (F7) and the D&A charge of Rp8.06bn, over 2,563.0 kt sold (F1). At that rate the audited FY2025 G&A of Rp143.43bn (S3 p.10/p.79) and revenue of Rp1,473.08bn reproduce the reported operating profit of Rp458.64bn and EBITDA of Rp466.7bn; the earlier Rp314,800 carried a Rp51.8bn gap that was a pack artefact, not a cost. The remaining cost is bought-in contract mining and barging, not fixed plant: contractor services Rp358.6bn, barging Rp186.8bn, stockpile management Rp78.6bn, project operations Rp53.6bn and salaries Rp39.8bn (S3 note 27) - which is why the company can flex output down 30% in 2026 without a fixed-cost problem. Escalated at 3.0%/yr (IDR inflation) from FY2027E, i.e. held flat in real terms; the contractor agreement with BSA runs to 22 December 2027 (S3 p.310) so the rate is contracted, not spot.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "fuel_share",
+      "label": "Fuel share of mining cost",
+      "unit": "pct",
+      "values": null,
+      "value": 0.0,
+      "lt": null,
+      "basis": "the contract-mining rate is all-in; no fuel pass-through is disclosed, so zero",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_cost_unit",
+      "label": "Other cash cost per unit (haul, barge, process)",
+      "unit": "price",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "barging and stockpile management are already inside the Rp294,650/t cash cost",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "royalty_rate",
+      "label": "Royalty rate (flat regimes)",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.07324,
+        "FY2027E": 0.07324,
+        "FY2028E": 0.07324,
+        "FY2029E": 0.07324,
+        "FY2030E": 0.07324
+      },
+      "value": null,
+      "lt": 0.07324,
+      "basis": "Effective 7.32% = FY2025 royalty of Rp107.90bn (F7) over FY2025 ore sales of Rp1,473.08bn (F4). The statutory nickel-ore rate under PP 19/2025 moves with the HPM band (S3 p.319); the modelled rate is the one the accounts actually charged, and the band structure is disclosed in section 2.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_revenue",
+      "label": "Other revenue",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "one operating segment (nickel ore); no other revenue is disclosed",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_margin",
+      "label": "Gross margin on other revenue",
+      "unit": "pct",
+      "values": null,
+      "value": 0.1,
+      "lt": null,
+      "basis": "not applicable - no other revenue modelled",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "da_unit",
+      "label": "D&A per unit (reporting currency)",
+      "unit": "price",
+      "values": {
+        "FY2026E": 3146.0,
+        "FY2027E": 3146.0,
+        "FY2028E": 3146.0,
+        "FY2029E": 3146.0,
+        "FY2030E": 3146.0
+      },
+      "value": null,
+      "lt": 3146.0,
+      "basis": "Rp3,146 per tonne = the FY2025 D&A charge over 2,563.0 kt sold. D&A is small in this model because the mine is contractor-operated: net fixed assets were Rp32.6bn and mining properties Rp47.5bn at end-2025 against Rp1,473bn of revenue (S3 note 11-12), so the property, plant and equipment sits on the contractor's books, not the company's. Held flat per tonne.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_unit",
+      "label": "Sustaining capex per unit (reporting currency)",
+      "unit": "price",
+      "values": {
+        "FY2026E": 32196.0,
+        "FY2027E": 21732.0,
+        "FY2028E": 21732.0,
+        "FY2029E": 21732.0,
+        "FY2030E": 21732.0
+      },
+      "value": null,
+      "lt": 21732.0,
+      "basis": "A constant rupiah programme of Rp55.7bn a year, the 2026 nine-month actual ([S0]: 2026Q1-Q3 capex 0.4 + 28.6 + 26.7 = 55.7), expressed per tonne so that the model holds the spend, not a per-tonne ratio: FY2026E 32,196/kt x 1,730 kt = Rp55.7bn, and FY2027E onward 21,732/kt x 2,563 kt = Rp55.7bn. The 2026 spend on haul roads, the jetty and stockpile equipment ([S0], management commentary) is held rather than stepped down to the FY2025 trough of Rp8.2bn, and no expansion project is modelled.",
+      "sources": [
+        "S3",
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_other",
+      "label": "Other capex (expansion projects)",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "no funded expansion project is disclosed; acquisitions sit in the post-balance-sheet review",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nwc_pct",
+      "label": "Operating working capital / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.121136,
+        "FY2027E": 0.121136,
+        "FY2028E": 0.121136,
+        "FY2029E": 0.121136,
+        "FY2030E": 0.121136
+      },
+      "value": null,
+      "lt": 0.121136,
+      "basis": "Engine default 12.1% of revenue; FY2025 receivables were Rp7.9bn and payables Rp0.8bn (S0), so working capital is immaterial to this business and the default is not worth overriding.",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.25,
+        "FY2027E": 0.25,
+        "FY2028E": 0.25,
+        "FY2029E": 0.25,
+        "FY2030E": 0.25
+      },
+      "value": null,
+      "lt": 0.25,
+      "basis": "25.0%, the rate the accounts show: FY2025 tax of Rp112.80bn on PBT of Rp457.94bn = 24.6%, FY2024 23.2% (S0). The engine default of 29.9% averages in FY2023, when a low PBT distorted the ratio.",
+      "sources": [
+        "S0",
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cost_of_debt",
+      "label": "Cost of debt (on opening debt)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.066393,
+      "lt": null,
+      "basis": "engine default - debt is Rp1.4bn lease and consumer-finance balances, immaterial",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "cash_yield",
+      "label": "Yield on opening cash",
+      "unit": "pct",
+      "values": null,
+      "value": 0.020356,
+      "lt": null,
+      "basis": "engine default - interest income on the Rp241-292bn cash balance",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "net_borrowing",
+      "label": "Net new borrowing",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "company is net cash; no borrowing plan is sourced",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other non-operating items",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "no recurring non-operating line is disclosed",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.003994,
+        "FY2027E": 0.003994,
+        "FY2028E": 0.003994,
+        "FY2029E": 0.003994,
+        "FY2030E": 0.003994
+      },
+      "value": null,
+      "lt": 0.003994,
+      "basis": "engine default 0.4% - IBM is ~99.5% owned",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.65,
+        "FY2027E": 0.65,
+        "FY2028E": 0.65,
+        "FY2029E": 0.65,
+        "FY2030E": 0.65
+      },
+      "value": null,
+      "lt": 0.65,
+      "basis": "65% of earnings. The company has no stated payout ratio - the annual report says each dividend is decided at the AGM having regard to the articles, the law and the company's financial condition (S3 p.86) - so the only evidence is what was actually paid: FY2025 dividends of Rp382.88bn on net profit of Rp345.14bn, an 111% payout (F8, F14), and FY2024's 58.5%. We model 65%, inside that two-year range rather than at either end, because FY2026 earnings are less than half FY2025's and a repeat of the 111% distribution would consume the Rp241bn net cash that funds it. The dividend remains the market's anchor for the name, so the payout is the input that most needs watching.",
+      "sources": [
+        "S7",
+        "S3",
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "no rights issue or placement is disclosed or announced",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth (DCF)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.04,
+      "lt": null,
+      "basis": "4.0%, the house terminal growth for an IDR reporting currency. It is academic in this model: the DCF stops at FY2035E because that is where PAM's IUP expires (15 April 2035, S3 p.52) and IBM's has already expired (January 2034, S3 p.53), so the life-DCF carries no terminal value (tv_share 0.0%). About 13.4 Mt of the 34.22 Mt proven reserve is permit-blocked and is not valued anywhere.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "opex_pct",
+      "label": "SG&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0974,
+        "FY2027E": 0.0974,
+        "FY2028E": 0.0974,
+        "FY2029E": 0.0974,
+        "FY2030E": 0.0974
+      },
+      "value": null,
+      "lt": 0.0974,
+      "basis": "9.7% = FY2025 G&A of Rp143.43bn over Rp1,473.08bn of revenue (S3 p.10/p.79); FY2024 was Rp103.17bn, or 7.2%, which the report previously mislabelled as FY2025. Anchored on the last audited year and held flat in percentage terms each forecast year, which keeps G&A close to Rp145bn in absolute rupiah at the FY2027E revenue level.",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "calibration",
+        "section": "4. Valuation",
+        "challenge": "The calibration.ebitda BLOCK is answered with a statement the engine falsifies: qc_justifications says the FY2025A calibration is exact at 455.2, but cov_engine qc returns ebitda_model 308.1 vs ebitda_actual 455.2 (-32.3%) at benchmark 15,162 and volume 2,563.0 kt, with asp_model 28.90 against the 34.94 US$/t the accounts imply. The entire gap is the FY2026E realisation 0.001906 used in the FY2025A re-price (0.001906 x 15,162 = 28.90). The model therefore cannot reproduce its only audited full year at the prices and volume that year actually had.",
+        "response": "accepted",
+        "answer": "Accepted, and the false statement is gone. I reran qc with the FY2025 wedge held through FY2026E: it returns asp 34.95 and EBITDA 541.5 (+19%) against the 455.2 actual, because the gate applies the FY2026E USD/IDR of 17,570 to FY2025A volume and benchmark; at the fitted 0.001906 it returns 308.1 (-32%). Neither is a calibration failure: the audited year is reproduced by construction from F4/F1 and sits in history at 455.2. I kept 0.001906, fitted to the reported nine months [S0], and replaced the claim with that output."
+      },
+      {
+        "id": "C2",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The realisation re-set from 0.001906 (FY2026E) to 0.002305 (FY2027E) - +21% on the price line - is justified by the HPM ore reference having lagged the LME metal price through the RKAB disruption, citing S3 p.317. That page is Ministerial Decree 268/2025 describing the HPM calculation formula and its use as the royalty base; it contains no lag mechanism, which is why the analyst calls it a reading. A 17% haircut on the one year that is 85% actual and then a 21% jump is the default haircut the house card bans in either direction.",
+        "response": "accepted",
+        "answer": "The HPM-lag reading is deleted with its p.317 citation. FY2026E 0.001906 is now stated only as what the reported nine-month revenue implies: Rp732.0bn over the modelled 1,730 kt gives about Rp572k per tonne against FY2025 at Rp574.7k on F4/F1, so the rupiah ore price is flat and only the dollar ratio moves with FX. FY2027E onward holds the FY2025 calibration 0.002305. The 21% re-set is now a sourced FX translation, not a price view."
+      },
+      {
+        "id": "C3",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The Rp346bn investments line is misdescribed twice. It exists in the audited FY2025 accounts: S3 p.76 and p.222, note 10, show Uang muka investasi Rp311,865,000,000 to third party PT Sumber Mineral Abadi, unchanged across 2024 and 2025, under a conditional new-share purchase agreement signed 12 Sep 2023 whose completion date has been extended to 31 Dec 2026 with the conditions still unmet. And it is not out of the bridge: fund record dcf_life carries investments 346.154 added to EV (equity 3,444.2) and ev_ebitda and pbv deduct a -633.95 bridge that includes it. Section 3 tells the reader it is excluded and calls it an understatement risk when it is already Rp32.55 of the Rp323.9 DCF and Rp31.2 of the EV/EBITDA cross-check.",
+        "response": "accepted",
+        "answer": "Both errors corrected. fund record now carries F16 at 311.865 for the uang muka investasi to PT Sumber Mineral Abadi from S3 note 10, replacing the unattributed 346.154 in the pack. Section 3 and Section 4 now say plainly that the model adds it at face in the DCF and in both cross-check bridges, with the note-10 conditions and the completion extended to 31 December 2026; Section 5 carries the recovery risk of about Rp29 per share if the conditions fail. I took the second path the challenge allows - carry at face with the terms and the risk disclosed - because the auditor has not impaired it and the agreement is still live."
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bear (25% weight) shocks nickel x0.8 and volume x0.95 to ~2,185 kt - above the FY2026 actual 1,730 kt and above the audited FY2024 production of 1,962.7 kt on S3 p.86 - so it does not contain the one event the company has just lived through: 9M2026 revenue of Rp732.1bn against Rp1,353.7bn (-46%), with the national quota settled only on 29 October (S8) and the NICL 2027 RKAB still unapproved. Section 5 calls the likelihood of a quota constraint high and then weights the only quota branch at 25%.",
+        "response": "accepted",
+        "answer": "The bear now repeats the 2026 event: volume x0.7 to 1,794 kt, inside the 1.7-2.0 Mt actually sold in 2026, with nickel x0.8 and the rupiah x0.93; its value today is Rp212 and its target Rp236, both published. Weight rises from 25% to 30% and the text calls it a joint event rather than a tail, since the full branch also needs nickel a fifth lower. Section 5 states that a quota constraint alone is more likely than that joint outcome, which is why 30% and not a majority weight."
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "2. Industry overview and competitive positioning",
+        "challenge": "S8, the only 2026 RKAB source, reports the revision raised the national nickel-ore quota from 260-270 Mt to 290-300 Mt and that the 2027 quota is still being evaluated against a ~750 kt LME/SHFE stock overhang. The report uses S8 twice in the bullish direction - the delay is temporary, and the government is signalling production discipline for 2027 - and never states the quota increase, which is supply-expanding and negative for the ore reference the company is paid on.",
+        "response": "accepted",
+        "answer": "Added F19 (revised 2026 quota of 290-300 Mt), F20 (+30 Mt) and F21 (about 750 kt LME/SHFE overhang) from S8. Section 2 now states that the October revision raised the quota from 260-270 Mt, which is negative for the ore reference, and presents the 2027 evaluation as a two-sided volume and price risk: a tighter quota supports price and cuts NICL volume, a looser one does the reverse."
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bull narrative adds a permit extension beyond the 2034/2035 IUP expiries, but its shocks are only nickel x1.2 and volume x1.05. At 2,300 kt/yr the ten-year DCF mines 23.0 Mt of the 28.0 Mt reserve (F11+F12), so the horizon - not the reserve - truncates the asset and leaves 5 Mt, roughly 2.2 years and about Rp40/share of discounted FCFF, outside the model with zero terminal value. The report instead says the reserve runs out inside the horizon and the assumptions file says the reserve life is shorter than it.",
+        "response": "accepted",
+        "answer": "The permit-extension claim is deleted from the bull narrative and from the report. Section 4 states that the DCF stops at the PAM 2035 expiry and leaves the residual reserve unvalued; Section 5 says no extension is assumed. The bull now sells at the disclosed 2,608.7 kt capacity ceiling and assumes nothing beyond it."
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Base volume is fixed at 2,300 kt for ten years: 10% below the last actual of 2,563.0 kt (F1) and 12% below the 2,609 kt capacity cited on the same page (S3 p.86), justified only by the 2024-2026 RKAB envelope (7 Mt over three years) and the FY2024 volume of 2,300.9 kt. FY2025 already sold 2,563 kt and the 2027 RKAB is not yet decided, so this is an unsourced haircut below the last actual, worth roughly Rp30/share of DCF and Rp20 of target.",
+        "response": "accepted",
+        "answer": "Volume holds the last actual from FY2027E: 2,563 kt, the FY2025 production of 2,563,010.30 WMT at 98.25% of the 2,608,666 WMT capacity (F1, F15), flat to FY2035E. It is not capacity and not a cut. FY2026E 1,730 kt is the RKAB-disrupted year, sourced to the reported nine months [S0] and the 29 October quota settlement [S8]."
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "USD/IDR 18,350 against spot 18,003.5 is, by the report own words, about half of the 30.9% to 41.9% EBITDA margin step, yet FX appears in no scenario shock: bear and bull move only d.metals.nickel and a.volume. Section 5 calls the FX risk moderate with a moderate likelihood and then leaves it untested, in a model where revenue is dollar-linked and costs are rupiah.",
+        "response": "accepted",
+        "answer": "Mirrored FX shocks are now in both scenarios: bear x0.93 (rupiah to about 17,065) and bull x1.07 (about 19,635), against the deck at 18,350. Section 5 states both and says the sensitivity grid FX axis is the only live one, because the benchmark axis resolves to tin."
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The sensitivities and reverse DCF target d.metals.tin, not d.metals.nickel: the benchmark-price column of the grid is identical at every step (322.65, 340.90, 359.15, 377.40, 395.65 depend only on the FX row) and reverse_dcf is available false with the note price not bracketed. The section 4 claims that a fifth on the ore price moves the DCF further than a 200bp WACC move, and the reverse-DCF read that the market is pricing a mine that stops being allowed to sell, are therefore not supported by the model own output.",
+        "response": "rebutted",
+        "answer": "The point is right but cannot be discharged inside the company folder: cov_common.industry resolves the template PRICE target to the industry default d.metals.tin before the company price_driver override, so fund record still shows sensitivities x target d.metals.tin and reverse_dcf available false, target d.metals.tin, note price not bracketed. Scripts are read-only for this role, so I could not re-base the grid. What I did fix: Section 4 no longer claims a nickel sensitivity or a reverse-DCF implied price; it says the grid is inert on the benchmark axis and reads the nickel range from the bear, base and bull values. A code fix to the price-driver propagation is needed from OPS."
+      },
+      {
+        "id": "C10",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "FY2026E capex is modelled at Rp20.76bn (12,000/t x 1,730 kt) while the same basis says 2026 spend was already Rp55.7bn over nine months and the datapack confirms it (2026Q1-Q3 capex 0.4 + 28.6 + 26.7 = 55.7). FY2027E onwards is Rp27.6bn, half the 2026 run-rate, so the justification - hold the higher recent level rather than the trough year - contradicts the number it is attached to.",
+        "response": "accepted",
+        "answer": "FY2026E capex is the nine-month actual Rp55.7bn (32,196 per tonne on 1,730 kt). FY2027E onward holds the same rupiah programme, not a lower rate: 21,732 per tonne on 2,563 kt is again Rp55.7bn, so the 39% unit fall is the volume denominator, not a spending cut. Section 3 says this explicitly."
+      },
+      {
+        "id": "C11",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Section 3 states the FY2025 dividend was Rp383bn against earnings of Rp345.1bn, a payout of 37.0%. Rp382.88bn over Rp345.14bn is 110.9%; 37.0% is dividends over total assets of Rp1,034bn. The assumptions file says 111%. The error reverses the meaning of the capital-allocation point the report makes (the company paid out more than it earned) and the 65% forward payout is below the FY2025 actual and, per the file, above the FY2024 level of 58.5% with no sourced policy change. The model FY2025A dps of 12.00 also contradicts F8/F9 (Rp36/share declared).",
+        "response": "accepted",
+        "answer": "dps FY2025A is restated to Rp36.0 from S7 (Rp30 interim already paid plus an Rp6 final, total Rp382.88bn over 10,635.6m shares), replacing the 12.00 in the pack; the payout is therefore 111% of FY2025 net profit (F8, F9, F14), and Section 3 and Section 6 say the distribution exceeded earnings. The 65% forward payout is not a policy claim: no policy is disclosed, and it is set below the actual because FY2026 earnings halve."
+      },
+      {
+        "id": "C12",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Fact hygiene: F1 is sourced to the S3 p.86 production-capacity table, where FY2024 realisation is 1,962.7 kt (75.29% of capacity), not the 2,300.9 kt used as the FY2024 actual from an S5 news piece; the same annual report narrative says volume rose 13% to 307 ribu ton, which reconciles to neither series. The model never states whether 2,563 kt is sales or production, which is the denominator of the realisation wedge.",
+        "response": "accepted",
+        "answer": "Section 3 now defines the series: 2,563 kt is FY2025 production (F1) used as the sales series because the annual report discloses no FY2025 tonnage; 2,301 kt is FY2024 sales (F2, S5); 1,963 kt is FY2024 production (F18, p.86, 75.29% of capacity); the 307 ribu ton line is identified as a units error in the source and is not used."
+      },
+      {
+        "id": "C13",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "4. Valuation",
+        "challenge": "Placeholder and unit rendering is broken throughout: the market capitalisation prints as IDR2,297,083,299,912.0bn (Rp2,297tn, where the correct figure is Rp2,297.1bn, 10.635bn shares x Rp216), and suffixes are doubled - IDR1,473.1bnbn, 2,563.0 ktkt, 12.8 Mt Mt, net cash of IDR-239.2bnbn. A reader cannot verify any figure at face value, and the largest number in the valuation section is wrong by a factor of a thousand.",
+        "response": "accepted",
+        "answer": "Every unit suffix removed and each placeholder given one formatter: volume through the vol filter, money through the money filter without a trailing bn, market capitalisation through idrb, which now reads Rp2,297bn. A grep for doubled units and for a literal bn after money placeholders returns nothing, and the lint passes with no numeric violations."
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "The valuation bridge carries the Rp63.81bn October-2026 interim dividend inside the 30 September 2026 net cash (~Rp6/share, ~1.7% of the target), so the price-implied multiples and the per-share target are stated on a cash position that no longer exists after that post-balance-sheet payment. The report elsewhere says the October interim falls in the 2026 cash flow, which contradicts carrying it in 30-Sept net cash.",
+        "response": "accepted",
+        "answer": "Added the FY2026 interim (Rp6/share, ex 5 Oct 2026) as a -63.81 bridge item sourced to S0, so the DCF, the EV/EBITDA bridge, the book cross-check and the target are all struck on cash the buyer actually inherits; the target is explicitly not cum-dividend. The Section 3 sentence that put the October payment in the 2026 cash flow now says it falls in FY2026 but after the 30 September balance-sheet date, so the cash is on that balance sheet and is deducted in the bridge [S0]. Target moves 389 to 383."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "The render doubles unit suffixes in printed text: '312 IDR bnbn' and '6.0 Mt Mt plus 22.0 Mt Mt reserve' in Section 4, and the same pattern elsewhere. These are printed and wrong as they stand.",
+        "response": "accepted",
+        "answer": "Root cause was unformatted fact placeholders that already carry their unit: F16/F7/F8 render with IDR bn and F5/F6/F11/F12/F15 with Mt or kt, so the trailing text doubled the suffix. All now use |num1 with the unit left in the prose. Re-rendered and grepped the render for bnbn and Mt Mt: zero hits [S3]."
+      },
+      {
+        "id": "L3",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "Section 4 prints 2.3x FY2027E EBITDA but the current-basis multiple is 2.5x; the reader is given one number without both bases reconciled.",
+        "response": "accepted",
+        "answer": "Rewrote the price-implies paragraph: the 2.3x is now named as the forecast-basis multiple that nets our FY2027E net cash of -453.5, the false claim that the reported balance-sheet net cash is netted off is withdrawn, and the text says the same price on the reported 30 Sep net cash gives a higher multiple. QC's 2.5x used the 291.0 reported net cash pre-deduction; post-L1 the same basis is 2.6x. No placeholder exists for a balance-sheet-basis multiple, so the basis is named rather than a typed figure [S0]."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "The bull narrative promises a permit extension beyond the 2034/2035 IUP expiries but no scenario shocks it; at 2,300 kt/yr the 10-year DCF mines 23.0 of the 28.0 Mt reserve and values the last 5 Mt at zero (~Rp40/share of PV). Volume is also held 10% below the last actual (2,563 kt) and 12% below the 2,609 kt capacity the report itself cites. If the SMA advance converts, 50% of another mine is added at nothing."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "The 2026 RKAB shock is the live precedent (9M revenue Rp732.1bn vs Rp1,353.7bn, -46%) and it is not in the bear, which only cuts volume 5% to 2,185 kt - above both the FY2026 actual 1,730 kt and the audited FY2024 production of 1,962.7 kt (S3 p.86). S8 reports the revision RAISED national quota 30 Mt, a price-negative fact never stated. S9 says 45% of the PAM resource area is already mined. The Rp312-346bn advance to SMA may not be recoverable at face (note 10 conditions unmet)."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "FY2027E EBITDA margin 41.9% vs 30.9% actual rests on deck nickel 17,500 (+15% over the FY2025 average) and USD/IDR 18,350 (+11.6%), both above spot; defensible on the deck but no scenario or sensitivity tests FX. The +21% realisation re-set is unsourced. Volume below last actual and FY2026E capex below the nine-month actual are both unexplained conservatism."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "Three load-bearing citations fail: the investments line is said to exist nowhere in the audited FY2025 accounts but note 10 shows Uang muka investasi Rp311.865bn to PT Sumber Mineral Abadi; drift.realisation cites S3 p.317, which describes the HPM formula and says nothing about a lag; S8 records a 30 Mt quota increase and an evaluation of 2027, not production discipline. S0 has no archived text, so the 9M2026 stub, the Sept-2026 balance sheet and the dividend history cannot be spot-checked."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "Life-of-reserve DCF at a through-cycle price is the right primary method and the net-debt/minority bridge is signed correctly, but the horizon (10y) is shorter than the 28 Mt/2.3 Mt = 12.2-year reserve and the stated reason is inverted; a Rp346bn conditional advance is added at face to all three methods; the sensitivity block and reverse DCF point at d.metals.tin not nickel; and zero liquidity discount sits beside an argument that illiquidity depresses the P/BV cross-check."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "The prose overstates its own support: the reserve does not run out inside the horizon, a 111% payout is printed as 37.0%, an unattributed advance is called an understatement risk while the model adds it, and a reverse-DCF read is asserted where reverse_dcf is available false. The BUY does survive the bear probability doubled (tp ~Rp337, +56%), so the rating is not one heroic input - the construction is what needs fixing."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "Nickel 17,500 and USD/IDR 18,350 are read from the reviewed decks and used consistently, revenue in USD against a rupiah cost base as the method card requires, royalty at the 7.32% the LK actually charged rather than the statutory band. But the macro tilt (nickel / ID supply discipline: FAVOUR) and the 5 Nov nickel squeeze are never carried into the frame, and the sensitivity block carries tin."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "Below the last actual, guidance or the LK effective rates, unsourced: realisation cut to 0.001906 in FY2026E (-17%); volume 2,300 kt vs 2,563 kt actual and 2,609 kt capacity; FY2026E capex Rp20.8bn vs Rp55.7bn already spent; payout 65% vs 111% FY2025; a 10-year horizon truncating a 12.2-year reserve with zero terminal value. The one item flagged as conservatism (the Rp346bn advance) is in fact an optimism of Rp32.55/share."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "qc returns calibration.ebitda ebitda_model 308.1 vs actual 455.2 (-32%) with asp_model 28.90 against the 34.94 US$/t the accounts imply; the justification claims the FY2025A calibration is exact, which the engine own output contradicts, and never reconciles cost, royalty or realisation as the gate asks. The residual is the FY2026E realisation 0.001906 (0.001906 x 15,162 = 28.90) leaking into the FY2025A re-price. The FY2026E stub is also modelled at a 30.7% margin against a 35.4% nine-month actual."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_BASIC_MATERIALS",
+      "at": "2026-11-10T02:44:08+07:00",
+      "verdict": "APPROVED",
+      "notes": "Round-2 signoff (2 of max 2). APPROVED with the three FIX items as documented follow-ups. Thesis internally consistent: BUY Rp351 vs Rp216 (62.6%) is defensible even on the most conservative single method - the life-of-permit DCF at the reviewed through-cycle nickel 17,500 gives Rp305 (41% above), and the bear (nickel x0.8, volume x0.7 into the 2026 range, fx x0.93) gives Rp252, still above the price, so the target does not hinge on the 9.4x EV/EBITDA cross-check the report itself discounts. Base case is the most likely path, not a haircut: FY2027E volume holds the FY2025 actual 2,563 kt at 98.25% of the disclosed 2,608.7 kt capacity (F1,F15); nickel 17,500 and USD/IDR 18,350 are the reviewed metals/macro decks; cash cost Rp294,650/t and royalty 7.324% are the audited FY2025 rates (F7,S3 p.10); capex is the 9M2026 actual Rp55.7bn [S0]. Scenarios mirrored (nickel 0.8/1.2, fx 0.93/1.07); the volume asymmetry 0.7/1.018 is sourced to the capacity ceiling and the lived 2026 RKAB shortfall. Batch: METALS_OTHER is mixed (CITA ADD, PTRO HOLD, NICL BUY, ALKA SELL) - no shared-input tilt. No konglo group. No contamination: sources are the annual report/filings, Yahoo statements and ANTARA/Jawapos/Okezone/Merdeka/Katadata/TopBusiness; no broker research, rating, target or consensus in the pack (scrubber metadata confirms consensus sentences removed). FIX follow-ups, none touching a number/rating/target, all already in qc.findings: Q13 restate the margin-step attribution (nickel price is the larger single contributor, +~5.5pp vs fx +~3.9pp, and name nickel in the summary driver ranking); Q14 move the three general-knowledge assertions into :::background; Q15 state NAV/share at spot 16,324 and the cost-curve quartile or an explicit no-archived-curve proxy. NOTEs Q16/Q17 likewise at next refresh. Approving; the Director publishes."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-10T02:24:10+07:00",
+      "verdict": "PASS",
+      "round": 3,
+      "bias": {
+        "direction": "neutral",
+        "note": "Every base-case driver is anchored on the last actual or a reviewed deck: FY2027E volume 2,563 kt = FY2025 production at 98.25% of the 2,608.666 kt capacity (F1, F15); FY2026E 1,730 kt is fitted to the reported nine months [S0]; nickel 17,089 / 17,500 comes from the metals deck; USD/IDR 17,570 / 18,350 from the macro deck; cash cost Rp294,650/t and royalty 7.324% are the audited FY2025 rates (S3 p.10, F7); capex Rp55.7bn is the 9M2026 actual [S0]; payout 65% sits between FY2024 58.5% and FY2025 111% (F8, F14) and is argued. No unsourced haircut and no unsourced premium found. The one judgement call, FY2027E volume back to capacity, is anchored on the 2024-2026 RKAB of 7 Mt over three years (F10) and on delivered FY2025, and the 30% bear carries the repeat of 2026. Scenarios are mirrored on nickel 0.8/1.2 and USD/IDR 0.93/1.07; the volume asymmetry 0.7/1.018 is the disclosed capacity ceiling (F15) and is sourced."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A EBITDA (IDR bn)",
+          "model": 466.7,
+          "filing": 466.7,
+          "source": "S3",
+          "ok": true
+        },
+        {
+          "item": "Net cash at 30 Sep 2026 (IDR bn)",
+          "model": 291.0,
+          "filing": 290.98,
+          "source": "S0",
+          "ok": true
+        },
+        {
+          "item": "FY2025 volume, production WMT (kt)",
+          "model": 2563.01,
+          "filing": 2563.01,
+          "source": "S3",
+          "ok": true
+        },
+        {
+          "item": "FY2025 cash cost per tonne (IDR)",
+          "model": 294650,
+          "filing": 294650,
+          "source": "S3",
+          "ok": true
+        },
+        {
+          "item": "FY2034E / FY2035E permit-capped volume (kt)",
+          "model": 914.1,
+          "filing": 914.1,
+          "source": "S3",
+          "ok": true
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q13",
+          "severity": "FIX",
+          "area": "text_vs_numbers",
+          "finding": "Section 3 states that the larger part of the 31.7% to 41.9% EBITDA-margin step is the rupiah. On the model's own FY2027E lines the rupiah alone at 16,448 to 18,350, with nickel at the FY2025 average of 15,162, gives revenue Rp1,643bn, EBITDA Rp585bn and a 35.6% margin, plus 3.9 percentage points; the nickel price alone at 15,162 to 17,500 with the FY2025 rupiah gives Rp1,700bn, Rp632bn and 37.2%, plus 5.5 points; the balance is interaction. The price move, not the rupiah, is the larger single contributor, so the sentence and the summary driver ranking overstate FX.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q14",
+          "severity": "FIX",
+          "area": "evidence_and_citations",
+          "finding": "Three unsourced general-knowledge assertions sit outside a :::background block; fund record has background blocks only at lines 79-85 and 170-175. They are the section 2 opener calling Indonesia the world's largest nickel producer and the marginal supplier of ore to the stainless and battery chains; section 1 calling the province one dominated by the integrated groups; and section 6 on Sulawesi deforestation and tailings as the live sector issues. House law puts general knowledge inside :::background only.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q15",
+          "severity": "FIX",
+          "area": "valuation_mechanics",
+          "finding": "The VAL_COMMODITY_CYCLICAL output contract asks for the cost-curve quartile and NAV per share at spot, and the report gives neither. The moat is asserted, the permit and the jetty not the grade, with no global cash-cost position, and the through-cycle DCF of Rp305 is the only NAV stated, so a reader cannot separate what the Rp351 owes to the deck marker from what it owes to the company. Spot nickel 16,324 is quoted twice without a value at it.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q16",
+          "severity": "NOTE",
+          "area": "inputs_basis",
+          "finding": "The summary pairs a modelled 65% forward payout with a Rp14 twelve-month DPS, but Rp14.19 is 65% of FY2026E earnings while the October-2026 Rp6 interim of Rp63.81bn has already been paid and is deducted in the valuation bridge. On the same cash-payment convention the Rp6 also sits inside the FY2025A dps line of 12.00, so a reader cannot tell whether the Rp14.19 is the FY2026 total distribution, in which case the buyer receives only the Rp8.19 balance and total return is about 66% not 69.2%, or a forward tranche. State which it is in the prose.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q17",
+          "severity": "NOTE",
+          "area": "evidence_and_citations",
+          "finding": "Two hygiene items: section 7 says the SMA agreement records three extensions while section 3 and valuation.post_bs_review say the fourth addendum of 22 December 2025; and valuation.post_bs_review cites [S0] in its note for the October interim but lists only S3 and S7 in sources.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "calibration.ebitda",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "FY+1 priced at FY2025A benchmark and volume gives EBITDA 324.1 vs the actual 466.7 (-31%): reconcile costs, royalty or realisation with the filing, or justify the change",
+          "justification": "The gate prices FY2025A volume and benchmark at the FY2026E realisation, and that is the whole gap: the current run returns ebitda_model 324.1 against ebitda_actual 466.7, -30.6%, with asp_model 28.90 = 15,162 x 0.001906. It is not a cost, royalty or margin failure - unit cost 294,650/t and royalty 7.324% are the FY2025 audited rates [S3 p.10, F7]. The two wedges reconcile on the filing: Rp1,473.08bn of sales (F4) over 2,563.01 kt (F1) at the FY2025 average USD/IDR of 16,448 is US$34.94/t, which over the 15,162/t benchmark is 0.002305 and reproduces the audited 466.70 that the history carries for FY2025A. The FY2026E ratio of 0.001906 is fitted to the reported nine months [S0], where the rupiah ore price is about Rp572k/t against FY2025's Rp574.7k/t (F4, F1) - flat in rupiah, lower only in dollars at the FY2026E rate. Holding 0.002305 through FY2026E would price the stub year above its own reported revenue, so the haircut is the report, not a forecast."
+        },
+        {
+          "id": "drift.volume",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.volume moves -87% from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The fall across the horizon is the permit ladder, not a volume view. FY2026E 1,730 kt is the RKAB-disrupted year [S0, S8]. FY2027E-FY2033E hold 2,563 kt, the FY2025 production actually realised at 98.25% of the 2,608.666 kt capacity (F1, F15) [S3 p.86]. Of that tonnage 1,798.791 kt was produced through the subsidiary IBM and 764.219 kt at PAM (F26, S3 p.73, arithmetic on F1 - F26); IBM's IUP OP KW 07 OKP 007 expires in January 2034 [S3 p.53], so FY2034E carries one month of IBM tonnage (1,798.791/12) plus PAM's full year, 914.1 kt, and PAM's IUP OP expires 15 April 2035 [S3 p.52], so FY2035E carries PAM's 3.5 months, 222.9 kt. Every tonne is inside its own concession life and none is modelled after its permit."
+        },
+        {
+          "id": "drift.realisation",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.realisation moves +21% from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The +21% is not a price view. FY2026E 0.001906 is fitted to reported nine-month revenue [S0]; the rupiah ore price it implies, about Rp572k/t, is almost identical to FY2025's Rp574.7k/t (F4, F1), so the ore price the company banks is flat and only the dollar ratio moves with the FY2026E USD/IDR of 17,570. FY2027E onward returns to the FY2025 calibrated wedge of 0.002305, which also held in FY2024 at 0.002353 (F2)."
+        },
+        {
+          "id": "drift.capex_unit",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.capex_unit moves -39% in real terms from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The per-tonne capex rate falls 39% because volume rises from the 2026 run-rate to the FY2025 actual, not because spending is cut. The model is calibrated to a CONSTANT rupiah programme of Rp55.7bn a year - the 2026 nine-month actual [S0]: 32,196/t x 1,730 kt = Rp55.7bn in FY2026E and 21,732/t x 2,563 kt = Rp55.7bn from FY2027E - so real capex is flat and the per-unit figure simply divides a fixed budget by a recovered tonne count."
+        },
+        {
+          "id": "scenario.symmetry.a.volume",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.volume: bear 0.7 vs bull 1.018 is lopsided \u2014 mirror the shock or justify the asymmetry",
+          "justification": "The asymmetry is the plant ceiling, sourced: the bull cannot sell more than the 2,608.666 kt production capacity the annual report discloses (F15), so +1.8% is the most volume can add from the 2,563 kt FY2025 actual (F1). The downside is not a mirror of that ceiling but the 2026 event the company has just lived through - 9M2026 revenue 46% below 9M2025 [S0] with the quota settled only on 29 October [S8] - so the bear sells 1,794 kt, inside the 1.7-2.0 Mt 2026 range. Price and FX shocks are mirrored at 0.8/1.2 and 0.93/1.07."
+        },
+        {
+          "id": "extreme_call",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "expected return +69%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "Three sourced drivers. PRICE: the reviewed metals deck (SECTOR_LEAD_BASIC_MATERIALS, 2026-10-27) carries LME nickel at US$15,162/t in FY2025A and US$17,500/t in FY2027E and in the long run - the through-cycle anchor, not spot. FX: the reviewed house macro deck carries USD/IDR at 18,350 for FY2027E against the 16,448 realised in FY2025, and revenue is dollar-linked while the cost base is rupiah [F4, S3 p.10]. VOLUME: 2,563 kt, the FY2025 production actually delivered at 98.25% of capacity (F1, F15) [S3 p.86], against the RKAB-constrained 1,730 kt of FY2026E [S0, S8]. What the price implies is read from the scenario table, not from a reverse DCF: the platform resolves the sensitivity and reverse-DCF target to the industry default benchmark (tin, a metal NICL does not sell) and returns available:false, so the grid is read for the FX axis only and the nickel range from the bear/base/bull values - at the 216 price the market sits below the bear case. That is a code limitation outside the company folder, reported to OPS."
+        }
+      ],
+      "calibration": {
+        "kind": "ebitda",
+        "period": "FY2025A",
+        "benchmark": 15162.0,
+        "volume": 2563.0103,
+        "ebitda_actual": 466.703660384,
+        "ebitda_model": 324.11500455499674,
+        "gap_pct": -30.552290014542084,
+        "actual": null,
+        "model": null,
+        "gap_pp": null
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-10",
+      "type": "initiation",
+      "rating": "BUY",
+      "tp": 351
+    }
+  ],
+  "news": [],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
