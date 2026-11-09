@@ -12,6 +12,11 @@
   },
   {
     "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-11-09 (Mon)\n\nSession 2026-11-09T11:00:37+07:00 \u2192 2026-11-09T11:16:14+07:00. **A short, honest session: 2 new cards, both DISCARD, 0 ADVANCE, 0 WATCH. GLOBAL ABBV DISCARD; INDO LPPF DISCARD. Three existing cards re-stamped (LLY WATCH, QCOM WATCH, ELSA DISCARD). Nothing clears the fast-disqualify sniff test in either book today.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `reviews_open` **[]**; `kill_monitoring_suspended` **[]**. Nothing carried to the next trading session on the review/kill front.\n- GLOBAL 100% cash / 0 names (NAV $1,012,651.28, DD 0.0%, week_trades 0/10). INDO 80.7% cash / 4 names (NAV IDR 15,170,998,422; gross 19.27%, DD \u22121.76%, week_trades 1/10; MEDC \u22127.75%, ERAA \u22125.90%, PTBA +2.05% since entry).\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper scripts, **no ticker exports** \u2192 step 2 skipped.\n\n## Screen sweep\n- **GLOBAL:** 79 names, 12 MOMENTUM, 0 WASHOUT, 0 NEGLECTED, prices live, `fetch_failures` []. Rows **ABBV LLY SAP SONY\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# WEEKLY_DEEP Session Journal \u2014 2026-11-07 (Sat)\n\nSession launched 2026-11-07T10:00:32+07:00. **Three INDO deep-dives opened from the COVERAGE ADVANCE backlog; two survived to PASS_REDUCED 0.5 (SMSM, GJTL) and one (AUTO) is left mid-chain after two re-attacks.** Macro = FULL calendar rebuild (regime held, one tilt moved, FX co-signed, deck updated and validated). Post-mortem queue drained (one case, no lesson, closed). No ingestion (empty inbox). GLOBAL 0 deep-dives. Sizing and final journal written under time pressure \u2014 the two judged theses are **judged/unsized** (see Carried forward).\n\n## State at entry\n- QC **WARN, 1 flag** \u2014 `published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d` (standing). Governor **NONE** both books; `kill_actions_due` []; `pending_orders` one JPFA.JK buy ticket (untouched); `postmortem_queue` one ERAA review case.\n- GLOBAL: NAV **$1,012,651.28**, 100% cash, 0 holdings. INDO: NAV **IDR 15,181,068,662**, 85.6% cash, 3 holdings, gross **14.42%**, dd \u22121.69%. Both books below the 60\u201395% band (standing IC matter).\n- Live: ERAA (4.21% NAV, \u22126.97%), PTBA (+1.71%), MEDC (\u22126.29%). Judged-unticketed: AVIA (awaiting PM sizing), AKRA, NVO-002, TINS\u2026",
     "persona": ""
   },
@@ -912,17 +917,6 @@
       "kind": "risk_veto"
     },
     "body": "Order `ORD-20261007131050-ERAA.JK-e360` VETOed and removed by risk_check: dossier missing, malformed, incomplete, or > 60d stale \u2014 frozen for new risk",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-07T08:45:58.409064+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN: triggers reviewed, no action (all three categories pass)",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "other"
-    },
-    "body": "08:45 WIB pre-open. QC=WARN (MARKET_PARAM_STALE jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d, first_seen 2026-08-31) \u2014 not CRITICAL, trading permitted. (a) Kill exits: kill_actions_due empty, kill_confirm empty, INDO all-cash n_names=0 \u2014 no fired kill to reconcile, no missing ticket. (b) Governor de-gross: INDO state NONE, dd 0.0, degross_since null \u2014 no deterministic sells emitted, no mix to choose. (c) Entries: sole judged_unticketed INDO name T-INDO-ERAA-001 (judged, PASS_REDUCED 0.5x, risk-checked CLEAR_WITH_NOTES) carries sizing.pm_pct=0.0 / script_pct=0.0 \u2014 size_position fail-closed on liquidity_cap 0.0 (fund record lacks ERAA key, fund record empty, feed DEGRADED). PM decision is explicit DEFER: 'Place nothing today', re-stage after refresh-adv + universe refresh re-run size_position. pm_pct 0.0 => no quantity, no ticket. Spot 600 is not the trade; entry is a 560 limit with max_chase 0 gated on the 2026-10-31 Q3 print, so deferral costs only ~0.16% dividend carry, never the entry price. No orders created, risk_check not required. GLOBAL-book judged_unticketed names (T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001) are out of scope for this South/INDO session.",
     "persona": ""
   }
 ]
