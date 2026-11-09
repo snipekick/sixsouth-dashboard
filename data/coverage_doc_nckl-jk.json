@@ -10,15 +10,15 @@
     "ticker": "NCKL.JK",
     "frontmatter": {
       "ticker": "NCKL.JK",
-      "report_type": "initiation",
-      "version": 1,
-      "title": "Harita Nickel: an ore-to-metal integrator priced for a nickel trough",
-      "summary": "NCKL mines and smelts nickel on Obi Island, with the MHP and part of the ferronickel capacity held in equity-accounted associates. We restate the accounts' depreciation, carry the associates at book and run the reviewed through-cycle nickel deck on a reserve-backed volume plan. The shares discount a nickel price below both the reviewed marker and spot, so we initiate at BUY with a twelve-month target of Rp1,167.",
+      "report_type": "update",
+      "version": 4,
+      "title": "Harita Nickel: a trough price on an ore body that earns at deck",
+      "summary": "ESDM rewrote the nickel ore benchmark twice this year. The model prices one blended realisation of ore and ferronickel, calibrated on the last actual; the reform sits in the scenarios, not the base, because the first half shows no reform lift. Associates are added at carrying value less an expected mark-down. Price-to-book is dropped as a double count. BUY, target Rp1,067.",
       "thesis": [
         "An integrated, low-cost ore-to-ferronickel producer on Obi Island whose cash cost per contained nickel tonne leaves a wide margin at the reviewed through-cycle price.",
         "The associates that own the leach plants and part of the furnace capacity contribute cash dividends and a carrying value worth more than half the market capitalisation, and the data pack ignores both.",
         "The pack's depreciation is the charge to operating expenses only; we restate the full LK charge, which changes EBITDA, tax and free cash flow.",
-        "The DCF runs on proven and probable reserves only - five years of ore - so the target does not depend on converting resources into reserves.",
+        "The DCF runs on proven and probable reserves only, so the target does not depend on converting resources into reserves; the bull case carries the conversion.",
         "At the last price the reverse DCF implies nickel below both the reviewed deck and spot: the market is capitalising a trough on a producer that earns cash at deck.",
         "The ore quota review for next year, the small free float and the controlling shareholder's stake are the risks that could keep the discount in place."
       ],
@@ -34,19 +34,24 @@
           "source": "S4"
         },
         {
-          "date": "2027-03-31",
-          "event": "Exchange free-float compliance date for the tier the registry places NCKL in",
-          "source": "S0"
+          "date": "2027-03",
+          "event": "First compliance deadline for the fifteen per cent minimum public float the regulator has set for existing issuers",
+          "source": "S16"
         },
         {
           "date": "2027H1",
           "event": "Ore-trade enforcement and the LME price reaction: the channel that lifted nickel to a five-week high in November",
           "source": "S3"
+        },
+        {
+          "date": "2027H1",
+          "event": "First full half-year, and the first full quarter, priced under the September corrective-factor schedule, which cuts the nickel component of low-grade ore",
+          "source": "S11"
         }
       ],
       "desk": "BASIC_MATERIALS",
       "analyst": "COVERAGE_ANALYST",
-      "asof": "2026-11-08"
+      "asof": "2026-11-09"
     },
     "sections": [
       {
@@ -55,11 +60,15 @@
         "blocks": [
           {
             "type": "para",
-            "text": "We initiate coverage of PT Trimegah Bangun Persada (Harita Nickel) at **BUY** with a twelve-month target of **Rp1,167**, against a last price of Rp745 \u2014 an expected return of 63.1%, of which Rp48 is the dividend we expect inside the year. The target is not a single method: it is the probability-weighted blend of three, after which the three methods give Rp962 on a life-of-asset DCF (60%), Rp1,211 on EV/EBITDA (25%) and Rp1,240 on price-to-book (15%), a method blend of Rp1,066 [S0][S2]. The DCF values the ore body and the smelters to the end of the proven and probable reserve with no terminal value, plus the associate stake and the July dividend in the bridge. Nothing in it assumes a real nickel price above the reviewed metals deck: the base case runs the through-cycle marker of US$17,500/t from FY2027E and, beyond the deck's explicit years, the nickel price carries a small nominal drift while unit costs are held flat in nominal dollars, so the modelled EBITDA margin widens from 41.8% to 42.8% [S2][S0]."
+            "text": "We initiate coverage of PT Trimegah Bangun Persada (Harita Nickel) at **BUY** with a twelve-month target of **Rp1,067**, against a last price of Rp745 \u2014 an expected return of 49.7%, of which Rp48 is the dividend we expect inside the year. The target blends two methods: Rp906 on a life-of-asset DCF at 75% and Rp1,155 on EV/EBITDA at 25%, a blend of Rp968 [S0][S2]. The DCF values the ore body and the smelters to the end of the proven and probable reserve with no terminal value; the associate stake and the July dividend enter in the bridge. Nothing in it assumes a real nickel price above the reviewed metals deck: the base case runs the through-cycle marker of US$17,500/t from FY2027E, and the margin the model earns is the delivered one [S2][S0]."
           },
           {
             "type": "para",
-            "text": "The variant view is a price, not a growth story. At the last price the reverse DCF implies nickel at US$15,316/t in FY2027E, or 0.88 times the reviewed marker and below the November spot of US$16,324/t [S0][S3]. The market is therefore capitalising a trough nickel price in perpetuity on a producer whose EBITDA is US$1,593 per tonne of contained nickel and whose ore comes from its own mine [S2]. The second leg is the associate stake: the leach plants and part of the furnace capacity sit in equity-accounted companies carried at IDR 23,679bn at the last year-end and higher at the June balance sheet, more than half of the market capitalisation, and the DCF adds that carrying value back after deducting net debt and minorities [S2][S0]."
+            "text": "**What changed in this revision, and what did not.** The red team was right that the benchmark reform sat outside the model in both directions, and this version answers it differently from the last draft. The engine has ONE priced line \u2014 a blended realisation per contained nickel tonne, calibrated on FY2025 \u2014 so the two ore legs are not priced separately in the model, and the previous summary claiming they were is withdrawn. What the company discloses about the two legs is carried as facts and used to size the reform in the scenarios: saprolite at the 1.5 to 1.7 per cent quotes of US$54.48 to US$63.69 a wet tonne, limonite at US$22.76 to US$25.33, the corrective factor unchanged at 30 per cent across the saprolite band and cut to 14 per cent at or below 1.2 per cent [S11][S13]. Because ore is a quarter of external revenue, a full move of the ore leg to the published ladder is worth about a fifth of the blended realisation, and the bull carries a third of that; the bear carries a grade slip under the low-grade threshold [S2][S13]. Second, the price-to-book cross-check re-marked the associate stake; it is dropped and its weight moves to the DCF [S0][S2]. Third, the associate stake is now marked on earnings: an expected write-down is carried in the bridge because the bear's halved associate earnings do not support half the carrying value [S2][F15][F16]."
+          },
+          {
+            "type": "para",
+            "text": "The variant view is a price, not a growth story. At the last price the reverse DCF implies nickel at 15,877 in FY2027E, or 0.91 times the reviewed marker and below the 5 November spot of US$16,375/t [S0][S3]. The market is therefore capitalising a trough nickel price in perpetuity on a producer whose EBITDA is US$1,593 per tonne of contained nickel and whose ore comes from its own mine [S2]. The second leg is the associate stake: the leach plants and the RKEF lines of KPS sit in equity-accounted companies carried at more than half the market capitalisation, and the bridge adds that stake after deducting net debt, minorities and the expected mark-down [S2][S0]."
           },
           {
             "type": "para",
@@ -67,7 +76,7 @@
           },
           {
             "type": "para",
-            "text": "We are not blind to why the shares are cheap. More than a third of reported net profit is equity-accounted income that never reaches the group's cash flow, the free float is thin, the controlling shareholder holds the great majority of the shares, and the stock has halved from its high as index flows turned against concentrated-ownership names [S2][S0]. Those are real discounts, and we carry them as risks rather than as reasons to look away. What we will not do is treat the pack's depreciation line as the accounts' charge: the LK's depreciation is an order of magnitude larger, and restating it is what makes the EBITDA and the cash flow in this report ours rather than the data vendor's [S2]."
+            "text": "We are not blind to why the shares are cheap. More than a third of reported net profit is equity-accounted income that never reaches the group's cash flow, the free float is 12.9%, the controlling shareholder holds the great majority of the shares, and the stock trades at Rp745 against a fifty-two week high of Rp1,545 [S2][S0]. Those are real discounts, and we carry them as risks rather than as reasons to look away. What we will not do is treat the pack's depreciation line as the accounts' charge: the LK's depreciation is an order of magnitude larger, and restating it is what makes the EBITDA and the cash flow in this report ours rather than the data vendor's [S2]."
           },
           {
             "type": "background",
@@ -85,7 +94,7 @@
           },
           {
             "type": "para",
-            "text": "The ore body has two layers, and they feed two different routes. Limonite, the upper layer with a nickel grade of about 1.1 percent, goes to high-pressure acid leach plants that produce mixed hydroxide precipitate, which is then refined into nickel sulphate and cobalt sulphate for battery cathodes. Saprolite, the lower layer with a higher grade, goes to rotary kiln electric furnaces that produce ferronickel for stainless steel [S2]. That split matters for how the group is valued: the ferronickel route is consolidated through the subsidiaries that own the furnaces, while the leach plants belong to associates, so most of the battery-chain exposure sits below the revenue line [S2]."
+            "text": "The ore body has two layers, and they feed two different routes. Limonite, the upper layer with a nickel grade of about 1.1 percent, goes to high-pressure acid leach plants that produce mixed hydroxide precipitate, which is then refined into nickel sulphate and cobalt sulphate for battery cathodes. Saprolite, the lower layer, is the higher-grade ore the report calls *nikel berkadar tinggi* and goes to rotary kiln electric furnaces for ferronickel [S2]. The AR does not publish a saprolite assay, so the grade is derived from the company's own output: 188.6 kt of nickel contained in ferronickel sold over 12.1 million wet tonnes of saprolite sold, which places it in the 1.5 to 1.7 per cent band of the published benchmark ladder and is a floor, because smelting recovery is below one and the grade of the ore fed must exceed the nickel recovered [S2][S11][S13]. That split matters for how the group is valued: the ferronickel route is consolidated through the subsidiaries that own the furnaces, while the leach plants belong to associates, so most of the battery-chain exposure sits below the revenue line [S2]."
           },
           {
             "type": "para",
@@ -97,7 +106,7 @@
           },
           {
             "type": "para",
-            "text": "Revenue is dominated by processing. Nickel processing contributed the larger part of external revenue in FY2025, with nickel mining the balance, and the mining segment sells ore to the processing segment as well as to third parties [S2]. The customer base is industrial: ferronickel goes to stainless producers and traders, and the associates' precipitate goes to precursor and battery-material buyers, most of them outside Indonesia [S2]. The group is a price-taker on both routes, with ore prices set against a government benchmark and ferronickel priced at a discount to the London Metal Exchange [S2]."
+            "text": "Revenue is two businesses, and the split is what decides how much of the reform reaches the consolidated line. In FY2025 the processing segment booked IDR 22,455bn of external revenue and the mining segment IDR 7,178bn, with a further IDR 2,933bn of ore sold between segments and eliminated on consolidation [S2]. Ore is therefore a quarter of external revenue: the benchmark re-prices the smaller leg, while the larger ferronickel line is priced at a discount to the London Metal Exchange [S2]. The mining line nearly doubled from the prior year while the processing line fell, because saprolite sold to the associate KPS is external ore revenue where before it was intra-group [S2]. The customer base is industrial: ferronickel goes to stainless producers and traders, and the associates' precipitate goes to precursor and battery-material buyers, most of them outside Indonesia [S2]."
           },
           {
             "type": "para",
@@ -111,11 +120,19 @@
         "blocks": [
           {
             "type": "para",
-            "text": "Nickel is the pricing variable, and the reviewed deck is the anchor we use. The house metals series carries nickel at US$15,162/t for FY2025A, US$17,089/t for FY2026E and a through-cycle marker of US$17,500/t from FY2027E, against a spot of US$16,324/t [S0]. The series is the reviewed World Bank-based path rather than a house forecast, and the marker sits above spot because the deck assumes Indonesian supply discipline eventually bites [S0][S6]."
+            "text": "Nickel is the pricing variable, and the reviewed deck is the anchor we use. The house metals series carries nickel at US$15,162/t for FY2025A, US$17,089/t for FY2026E and a through-cycle marker of US$17,500/t from FY2027E, against a spot of US$16,375/t on 5 November [S0][S3]. The series is the reviewed World Bank-based path rather than a house forecast, and the marker sits above spot because the deck assumes Indonesian supply discipline eventually bites [S0][S6]."
           },
           {
             "type": "para",
             "text": "The policy channel is the most important driver in the sector. The ministry settled this year's national nickel ore quota at 290 million tonnes, above the lower range it had projected early in the year, and said no additional quota would be granted for the rest of the year; for next year it says only that it is watching London and Shanghai exchange stocks [S6]. That quota, not the LME price, is what determines how much ore Indonesian smelters can buy. In early November the enforcement of ore-trading rules pushed the three-month nickel price to US$16,375/t and a five-week high, a direct demonstration of how much of the price is set by policy rather than by demand [S3]."
+          },
+          {
+            "type": "para",
+            "text": "The benchmark-price regime is the second policy channel, and it was rewritten twice this year. The April decree, Kepmen No. 144 of 2026, replaced the guidelines of the prior year with a formula that credits iron, cobalt and chromium alongside nickel in ore, resets the corrective factor, and quotes the price per wet rather than dry metric tonne; the minerals directorate general presents it as a periodic evaluation aimed at state revenue and fairness, and requires miners to submit fuller quality data \u2014 nickel, cobalt, iron, chromium and moisture \u2014 through the surveyors [S9][S10]. The miners' association read it as a stronger price floor for miners and a cost increase for smelters, the leach plants especially, and put the lift in the reference price at 100 per cent or more [S12]. The September decree, Kepmen No. 363 of 2026, then cut the corrective factor for ore at or below 1.2 per cent nickel from 26 to 14 per cent \u2014 close to halving the nickel component for that grade \u2014 while leaving the saprolite factor where it was, at 30 per cent [S11]."
+          },
+          {
+            "type": "para",
+            "text": "The resulting ladder is the price NCKL's ore is referenced to, and its shape is the whole argument. The second half of October quotes 1.1 per cent nickel at US$22.76 a wet tonne, 1.2 per cent at US$25.33, then steps to 1.3 per cent at US$45.83 and runs smoothly to 1.7 per cent at US$63.69 [S13]. The cliff is at the low-grade boundary, not in the saprolite band: a limonite at 1.2 per cent is worth roughly half a 1.3 per cent ore, which makes the group's limonite grade the single most valuable number to monitor. The ladder also means the derived saprolite grade does not need to be pinned to a decimal \u2014 anywhere from 1.4 to 1.7 per cent prices on the same smooth curve under the same 30 per cent factor, so the no-change reading does not depend on the assay [S11][S13]. HMA, the base price inside the formula, fell to US$15,847.67 a wet tonne in the second half of October, and the trade press reads the fall as weak bargaining power for miners, with smelters in places buying below the benchmark [S13]."
           },
           {
             "type": "para",
@@ -127,11 +144,7 @@
           },
           {
             "type": "para",
-            "text": "Five forces are mixed. Supplier power is low for ore because the group mines its own, but high for the equipment, the coal and the acid reagents that the leach plants need, and the coal price enters our cost model through the fuel link [S2][S0]. Buyer power is high: ferronickel and precipitate are commodities sold to industrial buyers with alternative Indonesian suppliers. New entrants are constrained less by capital than by the ore quota, which is now the binding permit. Substitutes are a genuine threat in batteries, where chemistry choice can remove nickel demand, but not in stainless. Rivalry is intense, because Indonesian capacity was built faster than demand and the marginal producer sets the price [S2][S6]."
-          },
-          {
-            "type": "para",
-            "text": "The external influences we monitor are the nickel price, the ore quota and its enforcement, the coal price that drives smelter power cost, and the rupiah. The first two set revenue, the third sets a minority of cash cost, and the fourth translates both into rupiah because the group's revenue and cash costs are both dollar-denominated [S2][S0]."
+            "text": "Five forces are mixed. Supplier power is low for ore because the group mines its own, but high for equipment, coal and the acid reagents the leach plants need. Buyer power is high: ferronickel and precipitate are commodities sold to industrial buyers with alternative Indonesian suppliers. New entrants are constrained less by capital than by the ore quota, which is now the binding permit. Substitutes are a genuine threat in batteries, where chemistry choice can remove nickel demand, but not in stainless. Rivalry is intense, because Indonesian capacity was built faster than demand and the marginal producer sets the price. The external drivers we monitor are the nickel price, the ore quota and its enforcement, the coal price that sets a minority of smelter power cost, and the rupiah, which translates topline and cost together because both are dollar-denominated [S2][S6][S0]."
           },
           {
             "type": "background",
@@ -145,11 +158,11 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The reported history is a volume-led growth story with a price headwind. Revenue rose 9.9% to IDR 29,633bn in FY2025: ore and ferronickel volumes grew far faster than that, but the realised nickel price fell, so the top line grew at single digits while EBITDA reached IDR 10,272bn, a margin of 34.7% on our restated depreciation [S2]. Net profit was IDR 10,970bn, of which IDR 8,952bn accrued to shareholders, and return on equity was 25.9% [S2]. The growth carried into the first half of 2026, when the company reported revenue a fifth above the prior-year period on higher volumes and a firmer price, which is the base we roll forward [S5]."
+            "text": "The reported history is a volume-led growth story with a price headwind. Revenue rose 9.9% to IDR 29,633bn in FY2025: ore and ferronickel volumes grew far faster than that, but the realised nickel price fell, so the top line grew at single digits while EBITDA reached IDR 10,272bn, a margin of 34.7% on our restated depreciation [S2]. Net profit was IDR 10,970bn, of which IDR 8,952bn accrued to shareholders, and return on equity was 25.9% [S2]."
           },
           {
             "type": "para",
-            "text": "**The depreciation restatement is the first thing to get right.** The data pack's depreciation line is only the charge booked to operating expenses, a small fraction of the real charge; the LK's note on fixed assets reports the full allocation of depreciation to cost of goods sold and to operating expenses, and that total is IDR 1,867bn for FY2025 against IDR 1,735bn for FY2024 [S2][F4][F5]. We use the LK figure, which lifts EBITDA from the pack's basis to IDR 10,272bn and lowers pre-tax profit by reducing EBIT, while leaving reported net profit unchanged because depreciation is a reclassification inside the same accounts [S2]. The segment note shows a slightly larger depreciation total again, because it takes in right-of-use and mining-property amortisation, so our figure sits at the conservative end of what the accounts support [S2]."
+            "text": "**The depreciation restatement is the first thing to get right.** The data pack's depreciation line is only the charge booked to operating expenses, a small fraction of the real charge; the LK's note on fixed assets reports the full allocation of depreciation to cost of goods sold and to operating expenses, and that total is IDR 1,867bn for FY2025 against IDR 1,735bn for FY2024 [S2][F4][F5]. We use the LK figure, which lifts EBITDA from the pack's basis to IDR 10,272bn and lowers pre-tax profit by reducing EBIT, while leaving reported net profit unchanged because depreciation is a reclassification inside the same accounts [S2]. The segment note shows a slightly larger depreciation total again, IDR 1,892bn, because it takes in right-of-use and mining-property amortisation, so our figure sits at the conservative end of what the accounts support [S2]."
           },
           {
             "type": "para",
@@ -157,7 +170,7 @@
           },
           {
             "type": "para",
-            "text": "The associates are the centre of the P&L and the reason the accounts look unusual. Their share of profit was IDR 4,091bn in FY2025, roughly a third of net profit, and the carrying value of the investments was IDR 23,679bn at the year-end, rising further at the June balance sheet as equity-accounted profit accumulated [S2][F15][F16]. The cash side is the dividend line: the group received IDR 1,980bn of dividends from associates in FY2025, which is what we carry as non-operating income [S2][F17]. Booking the equity-accounted profit as cash would manufacture cash the group never receives, so we do not; the stake is valued separately at book [S2]."
+            "text": "The associates are the centre of the P&L and the reason the accounts look unusual. Their share of profit was IDR 4,091bn in FY2025, roughly a third of net profit, and the carrying value of the investments was IDR 23,679bn at the year-end, rising further at the June balance sheet as equity-accounted profit accumulated [S2][F15][F16]. The cash side is the dividend line: the group received IDR 1,980bn of dividends from associates in FY2025, which is what we carry as non-operating income [S2][F17]. Booking the equity-accounted profit as cash would manufacture cash the group never receives, so we do not; the stake is valued separately in the bridge, at carrying value less an expected mark-down [S2]."
           },
           {
             "type": "block",
@@ -165,15 +178,23 @@
           },
           {
             "type": "para",
-            "text": "The cash-cost build is simple and sourced. FY2025 cost of goods sold of IDR 19,941bn contains royalty of IDR 1,446bn and the restated depreciation; the residual is the cash cost the model carries per contained nickel tonne, split between the mining and processing segments in the proportion the segment note reports [S2][F13]. We hold those unit costs flat in nominal dollars and let the fuel link move with the coal deck; the nickel price deck then carries a small nominal drift beyond its explicit years, so the EBITDA margin widens from 41.8% to 42.8% and no real price above the deck and no cost reduction is assumed [S2][S0]."
+            "text": "The cash-cost build is simple and sourced. FY2025 cost of goods sold of IDR 19,941bn contains royalty of IDR 1,446bn and the restated depreciation; the residual is the cash cost the model carries per contained nickel tonne, split between the mining and processing segments in the proportion the segment note reports [S2][F13]. We hold those unit costs flat in nominal dollars, and that is the neutral choice rather than an optimistic one: on the same royalty-and-depreciation-excluded basis, FY2024 cost of goods sold of IDR 18,518bn over a smaller nickel volume gives a HIGHER cost per tonne than FY2025, so the company's own unit cost fell in dollars while volume grew, and holding it flat is a worse outcome than it has just delivered [S2]. There is no dollar cost-inflation series in the house decks to escalate it with, and the modelled margin widening comes from the reviewed nickel deck's own drift beyond its explicit years, not from a cost assumption [S0]."
           },
           {
             "type": "para",
-            "text": "Working capital and capex are modest. Net working capital was IDR 3,353bn, about 11.3% of revenue, and we hold that ratio flat; capex was IDR 939bn, which is maintenance spending on an installed base rather than a project cycle, with the growth capital sitting inside the associates [S2]. The balance sheet is comfortable: cash of IDR 6,016bn against gross debt of IDR 9,380bn at the year-end, net debt of IDR 3,364bn and equity of IDR 38,650bn [S2]. Since then the June 2026 balance sheet shows the group back in net debt after a first half that ran a small cash outflow while the July dividend of IDR 2,700bn still lay ahead [S0][F27]. The forecast's calendar-year net-debt line is built off the December 2025 accounts and therefore leads the actual June position; the valuation does not use it, because the DCF starts from the June net debt with only the second half of FY2026 discounted, and the July dividend is carried as a separate negative bridge item [S0]."
+            "text": "Working capital and capex are modest. Net working capital was IDR 3,353bn, about 11.3% of revenue, and we hold that ratio flat; capex was IDR 939bn, which is maintenance spending on an installed base rather than a project cycle, with the growth capital sitting inside the associates [S2]. The balance sheet is comfortable: cash of IDR 6,016bn against gross debt of IDR 9,380bn at the year-end, net debt of IDR 3,364bn, parent-attributable equity of IDR 38,650bn and total equity including the minorities of IDR 46,756bn [S2]. Since then the June 2026 balance sheet shows the group back in net debt after a first half that ran a small cash outflow while the July dividend of IDR 2,700bn still lay ahead [S0][F27]. The forecast's calendar-year net-debt line is built off the December 2025 accounts and therefore leads the actual June position; the valuation does not use it, because the DCF starts from the June net debt with only the second half of FY2026 discounted, and the July dividend is carried as a separate negative bridge item [S0]."
           },
           {
             "type": "para",
-            "text": "Our forecast is deliberately dull. We carry 412 of contained nickel in FY2026E, held flat to FY2030E because that is the ore the proven and probable reserve supports, revenue of IDR 37,483bn and IDR 40,088bn, EBITDA of IDR 16,659bn as the higher deck price meets a flat cost base, and earnings per share of 161 and 184 [S2][S0]. FY2025 volume of 392 kt is the company's own 12.1 million wet tonnes of saprolite and 18.5 million of limonite at a saprolite grade derived from its own ferronickel output rather than assumed, 188.6 kt of contained nickel, and the disclosed lower bound of 1.1 percent for limonite [S2][F9][F10][F11][F22]. The realisation ratio is calibrated on the last actual rather than on the forecast year, so the margin expansion comes from the price deck and the volume, not from a new assumption about pricing power [S2]."
+            "text": "Our forecast is deliberately dull. We carry 412 of contained nickel in FY2026E, held flat to FY2030E because that is the ore the proven and probable reserve supports, revenue of IDR 37,483bn and IDR 40,088bn, EBITDA of IDR 16,659bn as the higher deck price meets a flat cost base, and earnings per share of 161 and 184 [S2][S0]. FY2025 volume of 392 kt is the company's own 12.1 million wet tonnes of saprolite and 18.5 million of limonite at a saprolite grade derived from its own ferronickel output rather than assumed, and the disclosed lower bound of 1.1 percent for limonite [S2]. The volume step over FY2025 is sourced to two things and not to associate demand: GTS, a new mine, began operating in the third quarter of 2025 so FY2026 is its first full year, and the RKEF associate KPS ran its eight lines at full capacity, which reaches our volume as saprolite sold to it rather than as consolidated ferronickel [S2][S14]. The engine's calibration gate prices FY2026E at the FY2025A benchmark and at the FY2026E volume: at the FY2025A volume the model's own economics give IDR 10,272bn of EBITDA, which is the engine's restated EBIT plus the LK depreciation, and that EBIT sits a fraction of a per cent above the LK's reported operating profit of IDR 8,385bn because the model nets the LK's other operating income and expense inside operating costs [S2][F45]. The economics therefore reconcile, and the gap the gate reports is the volume step, not a margin assumption [S2]."
+          },
+          {
+            "type": "para",
+            "text": "**One priced line in the model, and the split behind it.** Revenue is not one product in the accounts, but the engine prices one line, and we state the gap plainly. FY2025 processing revenue was IDR 22,455bn external and mining revenue IDR 7,178bn external plus IDR 2,933bn inter-segment, eliminated [S2]. The model's revenue is the contained nickel in the ore the group sells multiplied by one realised price per tonne, calibrated so that FY2025 revenue reproduces exactly; it has no second product line and no other revenue. So the model cannot re-price ore independently of ferronickel, and it does not: the ore reform is carried in the scenario shocks, not as a separate leg in the base. What the disclosure establishes is the size of the event: ore is a quarter of external revenue, and within ore the two legs price about twice apart against the published ladder, saprolite at US$54.48 to US$63.69 a wet tonne and limonite at US$22.76 to US$59.12 [S13][S11]. A reform that moves the ore leg by a tenth is therefore a fortieth of the consolidated line, which is why it changes the scenarios more than it changes the base."
+          },
+          {
+            "type": "para",
+            "text": "**Why the reform is not grossed up in the base.** The published schedule is well above what the accounts realised in FY2025, which is what the association's 100 per cent claim refers to, and we do not add it on top for one reason: the reported first half, priced under the April formula, booked IDR 17,100bn of revenue, just under half of the IDR 37,483bn we forecast for the year [S5][S14][F29]. That is the key number and it cuts against the reform being in the accounts: if the ore leg had moved toward the published ladder in the second quarter, the half-year would already be running above our full-year forecast rather than below it. It also requires a stronger second half than the first, which we source to the deck's higher FY2026E price of US$17,089/t against the FY2025 average of US$15,162/t and to GTS's first full year, not to a reform step-up [S0][S2]. Trade press also records smelters buying below the benchmark [S13]. The upside that would follow a pass-through of the saprolite leg is in the bull as a realisation shock sized from that ladder, and the downside of a grade slip under the low-grade threshold is in the bear, so the reform is in the valuation in both directions rather than absent from it. The trigger that would move it into the base: a full-year print whose ore revenue shows the ladder landing, or a September-style revision that reaches the saprolite factor [S11]."
           },
           {
             "type": "para",
@@ -191,7 +212,7 @@
         "blocks": [
           {
             "type": "para",
-            "text": "We value NCKL on a life-of-asset discounted cash flow at through-cycle nickel, which is the house method for commodity producers and the right one here: the reserve is finite, the price is the dominant variable, and a current-year multiple would capitalise wherever the cycle happens to sit [S2]. The DCF discounts explicit annual free cash flow over the proven and probable reserve only \u2014 2,059 of contained nickel, five years at the plan volume, ending in FY2030E \u2014 with no terminal value; the resources above the reserve are not in the base case, so the value is what the company can actually mine [S2][F23][F24][F25][F26][F28]. The cross-checks are an EV/EBITDA multiple and a price-to-book multiple, weighted in the industry's house proportions [S0][S2]."
+            "text": "We value NCKL on a life-of-asset discounted cash flow at through-cycle nickel, which is the house method for commodity producers and the right one here: the reserve is finite, the price is the dominant variable, and a current-year multiple would capitalise wherever the cycle happens to sit [S2]. The DCF discounts explicit annual free cash flow over the proven and probable reserve only \u2014 2,059 of contained nickel, five years at the plan volume, ending in FY2030E \u2014 with no terminal value; the resources above the reserve are not in the base case, so the value is what the company can actually mine [S2][F23][F24][F25][F26][F28]. The blend is 75% on the DCF and 25% on a single EV/EBITDA cross-check; the industry's price-to-book leg is dropped, and the reason is in the cross-check paragraph below [S0][S2]."
           },
           {
             "type": "para",
@@ -207,11 +228,15 @@
           },
           {
             "type": "para",
-            "text": "The primary DCF gives Rp962 per share. Enterprise value from the discounted cash flows is IDR 48,116bn, and it stops when the proven and probable reserve is exhausted; we add the associate stake at its latest balance-sheet carrying value and deduct net debt, the minority interest and the July dividend, which is why the equity value exceeds the value of the operations alone [S0][S2]. There is no terminal value and no value for ore beyond the reserve, so the bull case is a better price and a better volume, or the conversion of resources into reserves, not a longer life on the current reserve [S2]."
+            "text": "The primary DCF gives Rp906 per share. Enterprise value from the discounted cash flows is IDR 48,131bn, and it stops when the proven and probable reserve is exhausted; we add the associate stake at its June balance-sheet carrying value less the expected mark-down and deduct net debt, the minority interest and the July dividend, which is why the equity value exceeds the value of the operations alone [S0][S2]. There is no terminal value and no value for ore beyond the reserve, so the bull case is a better price and a better volume, or the conversion of resources into reserves, not a longer life on the current reserve [S2]."
           },
           {
             "type": "para",
-            "text": "The two cross-checks now sit above the DCF, and we can explain that too. The EV/EBITDA method gives Rp1,211, 25.9% above the DCF, at a peer median of 7.5 times; it capitalises a single year of EBITDA, and the engine applies the peer median to the data pack's vendor EBITDA, the same vendor basis on which the peer multiples are struck, so that leg is internally consistent; because our restated EBITDA is higher than the vendor line the LK's larger depreciation produces, the multiple's level is conservative rather than a floor, and we keep it at its house weight as a level caution [S0][S2]. The price-to-book method gives Rp1,240, 28.9% above, at 1.8 times a book value that already contains the associate stake at carrying value but none of the ore body's future cash [S0]. We keep both cross-checks with their house weights, and the DCF carries the majority weight because it is the only method that prices the reserve and respects its life [S2]."
+            "text": "**The associates, on earnings rather than assertion.** Book is not offered as a conservative anchor; it is offered as an earnings-consistent one, and the arithmetic is checkable. The FY2025 equity income of IDR 4,091bn, capitalised at our 14.3% cost of equity, gives a value of the order of the carrying value used in the bridge and well above the audited year-end book of IDR 23,679bn [S2][F15][F16]. The comparison has to be made against the right date: the bridge uses the 30 June 2026 balance, which is the audited year-end book plus a half-year of equity-accounted profit and any capital injected since, and capitalising a full year of FY2025 income against the earlier, smaller book would overstate the yield on it. On the June balance the two agree, so an earnings-based value and the book value are the same number and there is no mark-up to argue about. What book does not capture is the option value of the associates' HPAL expansion, which we leave to the bull. What it also does not capture is a write-down, and that is now in the bridge rather than in a footnote: in the bear their earnings halve, so half of the carrying value is unsupported, and that half weighted at the bear's probability is the mark-down line shown in the valuation table [S2][F15][F16]."
+          },
+          {
+            "type": "para",
+            "text": "**The cross-check, and why price-to-book is gone.** The EV/EBITDA method gives Rp1,155, 27.5% above the DCF, at a peer median of 7.5 times [S0]. It is internally consistent in construction: the peer median is struck on the same vendor last-twelve-month basis the metric uses, and the bridge ADDS the associate stake net of the expected mark-down and DEDUCTS net debt, the non-controlling interest and the July dividend, so the operations and the stake are each counted once [S0]. It is also struck on a trailing metric the pack understates, which biases the leg down rather than up, so we keep it at its house weight as a level check and not as a second opinion on the reserve [S0][S2]. Price-to-book is dropped. Most of the book it would mark is the associate investment the DCF already carries at the same book value, so the leg re-marked one asset twice and printed a value above the DCF for that reason alone; the engine cannot mark book ex-associates, so dropping it and moving its weight to the DCF is the only honest treatment. That leaves one cross-check rather than the house standard of two, and we say so: a dividend-yield or NAV-per-reserve check is the next addition, not a third method invented to fill a slot [S0][S2]."
           },
           {
             "type": "block",
@@ -219,11 +244,15 @@
           },
           {
             "type": "para",
-            "text": "The bridge is explicit and worth stating plainly. The operations' enterprise value is IDR 48,116bn; we deduct net debt at the 30 June 2026 balance sheet, deduct the non-controlling interest dated 30 June 2026 (the year-end figure in the accounts is a year older and smaller), add the associate stake at the data pack's 30 June 2026 investments balance, which is above the audited year-end associate book of IDR 23,679bn (F16) by the first-half equity income and any capital injected in the period, and deduct the FY2025 dividend of IDR 2,700bn paid in July 2026 [S0][S2][F27]. That last item matters: the free cash flow is unlevered, so a payout that left the company after the balance-sheet date and before the valuation date would otherwise never appear. The minority is handled once: the profit and loss account already charges the minorities' share of profit, and the bridge removes their balance-sheet claim on the operating assets, so the two are not double-counted [S0]."
+            "text": "The bridge is explicit and worth stating plainly. The operations' enterprise value is IDR 48,131bn; we add the associate stake at the data pack's 30 June 2026 investments balance, deduct the expected mark-down of that stake described above, deduct net debt and the non-controlling interest at the same 30 June 2026 date (the year-end figures in the accounts are older and smaller), and deduct the FY2025 dividend of IDR 2,700bn paid in July 2026 [S0][S2][F27]. That last item matters: the free cash flow is unlevered, so a payout that left the company after the balance-sheet date and before the valuation date would otherwise never appear. The minority is handled once: the profit and loss account already charges the minorities' share of profit, and the bridge removes their balance-sheet claim on the operating assets, so the two are not double-counted [S0]."
           },
           {
             "type": "para",
-            "text": "Two output lines complete the valuation. Our modelled FY2026E cash cost is 2,882 per tonne of contained nickel, which the bear case's price and volume cuts still leave covered, so the operation does not go cash-negative in the trough; we have no third-party cost-curve panel among the house sources, so we state the absolute cost and do not claim a quartile rank [S2][S0]. Leverage is not the binding constraint either: the net debt carried at the June balance sheet is small against the EBITDA the base case earns, and the July dividend was paid out of the same balance sheet [S0][F27]."
+            "text": "One disclosure on the June stake, because it sits in the bridge at a level the audited accounts do not yet show. The investments balance we add is above the audited year-end book of IDR 23,679bn by roughly a fifth of the stake [S0][S2][F16]. Half a year of equity-accounted profit at the FY2025 run-rate explains part of that gap and not all of it; a capital contribution into one of the leach associates would explain the rest, but no half-year disclosure in this file states one, so we carry the pack figure, flag the unexplained part rather than smooth it, and note the direction of the error: on the audited book alone the bridge and the target would be lower, not higher [S0][S2]."
+          },
+          {
+            "type": "para",
+            "text": "Two output lines complete the valuation. Our modelled FY2026E cash cost is US$2,882 per tonne of contained nickel including royalty, which the bear case's price and volume cuts still leave covered, so the operation does not go cash-negative in the trough; we have no third-party cost-curve panel among the house sources, so we state the absolute cost and do not claim a quartile rank [S2][S0]. Leverage is not the binding constraint either: the net debt carried at the June balance sheet is small against the EBITDA the base case earns, and the July dividend was paid out of the same balance sheet [S0][F27]."
           },
           {
             "type": "para",
@@ -235,15 +264,11 @@
           },
           {
             "type": "para",
-            "text": "The associates deserve an earnings cross-check of their own, because book is not the only anchor. Their equity income was IDR 4,091bn on a carrying value of IDR 23,679bn at the year-end; at the 14.3% cost of equity that we use, a return of that order justifies a multiple of book close to one, so carrying them at cost is not obviously understating them, and an earnings-multiple value would be the same thing restated [S2][F15][F16]. What book does not capture is the option value of the associates' HPAL expansion; we leave it to the bull case rather than to the base [S2]."
+            "text": "What does the last price imply? The reverse DCF says the shares discount nickel at US$15,877/t in FY2027E, or 0.91 times the reviewed marker and below the 5 November spot [S0][S3]. Put differently, the market is paying about 3.3x times our FY2026E EBITDA and 1.0x times book, with a dividend yield of 6.5% on our FY2026E DPS of Rp48 at the Rp745 price [S0]. Those are trough-cycle multiples for a producer that is still earning cash, which is the basis of our rating: we are not forecasting a re-rating, only that nickel does not stay at the level the price implies [S0]."
           },
           {
             "type": "para",
-            "text": "What does the last price imply? The reverse DCF says the shares discount nickel at US$15,316/t in FY2027E, or 0.88 times the reviewed marker and below the November spot [S0][S3]. Put differently, the market is paying about 3.3x times our FY2026E EBITDA and 1.0x times book, with a dividend yield of 6.5% on our FY2026E DPS of Rp48 at the Rp745 price [S0]. Those are trough-cycle multiples for a producer that is still earning cash, which is the basis of our rating: we are not forecasting a re-rating, only that nickel does not stay at the level the price implies [S0]."
-          },
-          {
-            "type": "para",
-            "text": "On the anchor the market uses, we should be explicit. IDX resource names are usually priced on dividend capacity, and on our forecast the dividend yield is the 6.5% above while the payout is held at the 30% the company has paid for three years; we value on NAV, not on the dividend-capacity yield, because the reserve is finite and the payout is a policy choice rather than a claim on the ore [S2]. We tested a higher payout: because the DCF is unlevered free cash flow, a step-up in the dividend moves cash from the balance sheet to shareholders without changing the value of the ore body, so it lifts the yield the market sees but not our target; a buyback is the same trade. That is why we hold the payout at the rate the company has actually paid and keep the re-rating in the bull narrative rather than in the base [S2]."
+            "text": "On the anchor the market uses, we should be explicit. IDX resource names are usually priced on dividend capacity, and on our forecast the dividend yield is 6.5% on a payout held at the 30% the company has paid for three years; we value on NAV, not on the dividend-capacity yield, because the reserve is finite and the payout is a policy choice rather than a claim on the ore [S2]. A higher payout would lift the yield the market sees without changing the unlevered value of the ore body, and a buyback is the same trade, so the re-rating stays in the bull narrative rather than in the base [S2]."
           },
           {
             "type": "background",
@@ -264,11 +289,12 @@
             "items": [
               "**Nickel price (high likelihood, high impact).** The market has been in surplus and Indonesian capacity keeps growing; a price stuck at the November level or below cuts revenue directly and is the bear case's first shock [S2][S3].",
               "**Ore quota (medium likelihood, high impact).** The ministry has fixed this year's national quota above its early-year plan and barred additions for the rest of the year, and says it is watching exchange stocks before setting next year's; a lower national quota, or a cut to NCKL's own permits, would reduce volume rather than price [S6][F20].",
-              "**Associate dependence (medium likelihood, high impact).** A third of profit and more than half of the market capitalisation rest on equity-accounted companies whose carrying value would be tested by a precipitate margin collapse [S2][F15][F16]. We do not model a separate write-down shock in the bear case: the nickel shock already cuts associate earnings and hence their equity-accounted carrying value, and a further impairment of the book would cost a modest slice of the target, which we state here rather than double-count [S2].",
-              "**Governance and float (medium likelihood, high impact).** The controlling shareholder holds the great majority of the shares and the free float is 12.9%, below the fifteen per cent minimum the exchange registry applies to a company of this size, with a compliance date in March 2027 and index treatment already under consultation; a placement to close the gap would dilute existing holders, while a controlling-holder sell-down would remove an overhang but change the register [S0][S2].",
+              "**Associate dependence (medium likelihood, high impact).** A third of profit and more than half of the market capitalisation rest on equity-accounted companies whose carrying value would be tested by a precipitate margin collapse [S2][F15][F16]. The bear halves the dividends they pay, which is the cash channel the DCF carries, and the capital channel is now in the bridge as an expected mark-down: at the bear's halved associate earnings half of the carrying value is unsupported, and that half weighted at the bear's probability is the line shown in the valuation table [S2][F15][F16]. The basis is the earnings cut, not a reserve or a multiple assumption, and the two channels are sized from the same event without stacking: the dividend is a cash flow inside the DCF, the mark-down is the capitalised residual in the bridge.",
+              "**Governance and float (medium likelihood, high impact).** The controlling shareholder holds the great majority of the shares and the free float is 12.9%, below the fifteen per cent of listed shares the regulator now requires, with the first compliance deadline in March 2027; a placement to close the gap would dilute existing holders, while a controlling-holder sell-down would remove an overhang but change the register [S15][S16][S2].",
               "**Operational (low likelihood, medium impact).** The complex runs captive coal power, an industrial port and acid leach plants; an outage, a tailings or residue incident or a weather event would hit volume and could invite regulatory attention [S2].",
               "**Currency (low likelihood, low impact).** Revenue and cash cost are both dollar-denominated, so the rupiah mainly changes the translated value of the dividend and of reported earnings rather than the economics [S0][S2].",
-              "**Regulatory cost (medium likelihood, medium impact).** Royalty and tax regimes for nickel have been revised repeatedly, and the effective rate we carry is the one the LK reports rather than a guaranteed statutory rate [S2][F13]."
+              "**Regulatory cost (medium likelihood, medium impact).** Royalty and tax regimes for nickel have been revised repeatedly, and the effective rate we carry is the one the LK reports rather than a guaranteed statutory rate [S2][F13].",
+              "**Benchmark formula and grade (in force, medium impact).** The domestic ore price is set by decree: the April decree added by-product credits and moved the quote to wet tonnes, and the September decree cut the corrective factor for low-grade ore by close to half while leaving saprolite alone [S9][S10][S11]. NCKL sits on both sides of that trade. A further cut that reaches the 1.3 per cent bracket, or a grade slip at the mine that puts more tonnage under the low-grade threshold, would reach revenue without an offsetting cost, and that is the bear case's realisation shock rather than a disclosure [S11][S13]."
             ]
           },
           {
@@ -277,11 +303,15 @@
           },
           {
             "type": "para",
-            "text": "The scenarios are mirrored on the two drivers that have a two-sided source. The bear case cuts the nickel price by a fifth and volume by a tenth, which is a policy outcome as much as a market one, and values the shares at Rp929; the base case is Rp1,170; and the bull case, with the price a fifth higher and volume a tenth higher, is Rp1,400 [S0][S6]. The probabilities put a quarter on each tail and a half on the base, because the volume plan is capacity-backed and the price deck is the reviewed series rather than a peak [S2][S0]. We have not made the bear a low-probability outlier: the surplus is real and the quota review could go either way [S2][S6]."
+            "text": "The scenarios are mirrored on four drivers, each with a source on both sides. The bear cuts the nickel price by a fifth, volume by a tenth, the blended realisation a little and the associate dividend by half, and values the shares at Rp685; the base case is Rp1,058; and the bull lifts the price a fifth, volume a tenth, the realisation by a third of the way from the realised ore price towards the published ladder and the associate dividend to double, and values the shares at Rp1,464 [S0][S6][S11][S13]. The realisation shock is not the whole ladder: ore is a quarter of external revenue and a full move to the schedule is worth about a fifth of the blended price, so the bull carries a third of it and the mirror is the bear's grade slip under the low-grade threshold [S2][S13]. The probabilities put a quarter on each tail and a half on the base, because the volume plan is capacity-backed and the price deck is the reviewed series rather than a peak [S2][S0]. We have not made the bear a low-probability outlier: the surplus is real and the quota review could go either way [S2][S6]."
           },
           {
             "type": "para",
-            "text": "The signposts that would change our view are: the ore quota decision for next year and, more important, how it is enforced; the LME price holding above the reviewed marker rather than falling back to spot; the associates' dividend flow, which is the cash test of their earnings; the precipitate and sulphate market, where a margin squeeze would hit the carrying value; the free-float position and any index decision; and the company's own volume delivery against the capacity it has installed [S2][S3][S6]."
+            "text": "The bull is a floor on the upside, not a ceiling, and that biases the weighted target down rather than up. Volume a tenth above base carries the bull past the proven and probable reserve over the five-year life, so part of the resources above the reserve are converted inside it; the rest of the conversion and the HPAL expansion sit inside associates we already carry at book [S2][F28]. We do not add a separate value for them, because the company has not proven them and putting an unproven option in the bull would raise the target on an asset that is not yet in the reserve statement. That asymmetry is deliberate and it points against the rating, not for it."
+          },
+          {
+            "type": "para",
+            "text": "The signposts that would change our view are: the ore quota decision for next year and, more important, how it is enforced; the HPM schedule at the group's two grades \u2014 US$22.76 for limonite and US$59.12 for saprolite in the last published period \u2014 and any further revision of the corrective factors, since a change to the saprolite factor is the only regulatory move that would reach our realisation [S11][S13]; the limonite grade relative to the 1.2 per cent threshold, because the ladder halves across it [S11][S13]; the LME price holding above the reviewed marker rather than falling back to spot; the associates' dividend flow, which is the cash test of their earnings; the free-float position and any index decision; and the company's own volume delivery against the capacity it has installed [S2][S3][S6]."
           },
           {
             "type": "background",
@@ -295,7 +325,7 @@
         "blocks": [
           {
             "type": "para",
-            "text": "Ownership is concentrated. PT Harita Jayaraya held 81.3% at the last year-end, insiders hold 86.9% in total on the data pack's classification, and the free float is 12.9% [S2][S0]. That float sits below the fifteen per cent minimum the exchange registry applies to a company of this market value, and the registry dates the current reading to early November 2026 with a compliance deadline of 31 March 2027; index providers have already put the name into a standalone consultation and removed it from some house indices [S0]. We are not applying the concentrated-ownership overlay to this name, because its registry status does not trigger it, but the float test does bite: closing a gap of that size means either a new share placement, which dilutes existing holders, or a controlling-holder sell-down, which removes the overhang but changes who owns the company [S0]."
+            "text": "Ownership is concentrated. PT Harita Jayaraya held 81.3% at the last year-end, insiders hold 86.9% in total on the data pack's classification, and the free float is 12.9% [S2][S0]. The regulator has raised the minimum public float to fifteen per cent of listed shares, applying it to existing issuers as well as new listings and in stages, with the first compliance deadline in March 2027 [S15][S16]; the data feed dates the current reading to early November 2026 [S0]. The float therefore falls short of the rule, and closing a gap of that size means either a new share placement, which dilutes existing holders, or a controlling-holder sell-down, which removes the overhang but changes who owns the company. We hold no dated index announcement in this file, so we price neither an inclusion nor an exclusion [S0]."
           },
           {
             "type": "para",
@@ -325,7 +355,7 @@
           },
           {
             "type": "para",
-            "text": "Between updates we watch a short list of KPIs. Ore volumes by type, ferronickel sales and the associates' precipitate sales tell us whether the volume plan is on track [S2]. The realised price against the reviewed benchmark tells us whether the ore and ferronickel discounts are widening [S2]. Cash dividends received from associates tell us whether the equity-accounted profit is turning into cash [S2]. Capex and net debt tell us whether the dividend is being funded from operations [S2]. And the nickel price relative to the reviewed marker, together with the quota news flow, tells us whether the market's trough assumption is being confirmed or reversed [S0][S6]."
+            "text": "Between updates we watch a short list of KPIs. Ore volumes by type, ferronickel sales and the associates' precipitate sales tell us whether the volume plan is on track [S2]. The realised price against the reviewed benchmark tells us whether the ore and ferronickel discounts are widening [S2], and the published HPM at the group's two grades \u2014 22.76 a wet tonne for limonite and 59.12 for saprolite in the last schedule we have \u2014 tells us whether the benchmark itself is moving against us [S13]. Cash dividends received from associates tell us whether the equity-accounted profit is turning into cash [S2]. Capex and net debt tell us whether the dividend is being funded from operations [S2]. And the nickel price relative to the reviewed marker, together with the quota news flow, tells us whether the market's trough assumption is being confirmed or reversed [S0][S6]."
           }
         ]
       }
@@ -372,22 +402,78 @@
         "publisher": "www.liputan6.com",
         "date": "2026-10-29",
         "kind": "regulator"
+      },
+      "S9": {
+        "title": "Rumus Baru Harga Patokan Mineral Resmi Berlaku, ESDM Ubah Formula Nikel dan Bauksit Mulai 15 April 2026",
+        "url": "https://www.pikiran-rakyat.com/ekonomi/pr-0110142020/rumus-baru-harga-patokan-mineral-resmi-berlaku-esdm-ubah-formula-nikel-dan-bauksit-mulai-15-april-2026",
+        "publisher": "www.pikiran-rakyat.com",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      },
+      "S10": {
+        "title": "Rumus Baru Harga Patokan Mineral Resmi Berlaku, ESDM Ubah Formula Nikel dan Bauksit Mulai 15 April 2026 - Halaman 2",
+        "url": "https://www.pikiran-rakyat.com/ekonomi/pr-0110142020/rumus-baru-harga-patokan-mineral-resmi-berlaku-esdm-ubah-formula-nikel-dan-bauksit-mulai-15-april-2026?page=2",
+        "publisher": "www.pikiran-rakyat.com",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      },
+      "S11": {
+        "title": "Aturan Baru HPM Nikel 2026 Bikin Penambang Menjerit, Smelter Malah Panen Cuan?",
+        "url": "https://wartaekonomi.co.id/read635623/aturan-baru-hpm-nikel-2026-bikin-penambang-menjerit-smelter-malah-panen-cuan",
+        "publisher": "wartaekonomi.co.id",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      },
+      "S12": {
+        "title": "Industri Nikel Alami Tekanan Marjin Imbas Kebijakan Baru HPM",
+        "url": "https://tirto.id/industri-nikel-alami-tekanan-marjin-imbas-kebijakan-baru-hpm-hulE",
+        "publisher": "tirto.id",
+        "date": "2026-11-09",
+        "kind": "industry"
+      },
+      "S13": {
+        "title": "Akibat Berhentinya Beberapa Lini Smelter RKEF, Spot Harga Bijih Nikel Indonesia Terus Melemah - Media Nikel Indonesia",
+        "url": "https://nikel.co.id/2026/10/28/akibat-berhentinya-beberapa-lini-smelter-rkef-spot-harga-bijih-nikel-indonesia-terus-melemah/",
+        "publisher": "nikel.co.id",
+        "date": "2026-10-28",
+        "kind": "industry"
+      },
+      "S14": {
+        "title": "Harita Nickel catat pendapatan Rp17,1 triliun pada semester I 2026 - ANTARA News",
+        "url": "https://www.antaranews.com/berita/5675639/harita-nickel-catat-pendapatan-rp171-triliun-pada-semester-i-2026",
+        "publisher": "www.antaranews.com",
+        "date": "2026-08-01",
+        "kind": "news"
+      },
+      "S15": {
+        "title": "OJK Naikkan Batas Free Float Saham Publik Jadi 15 Persen - merdeka.com",
+        "url": "https://www.merdeka.com/uang/read/8075689/ojk-naikkan-batas-free-float-saham-publik-jadi-15-persen",
+        "publisher": "www.merdeka.com",
+        "date": "2026-01-29",
+        "kind": "regulator"
+      },
+      "S16": {
+        "title": "OJK Beri Tenggat Emiten Penuhi Free Float 15% Tahap I pada Maret 2027",
+        "url": "https://investor.id/market/432996/ojk-beri-tenggat-emiten-penuhi-free-float-15-tahap-i-pada-maret-2027",
+        "publisher": "investor.id",
+        "date": "2026-11-09",
+        "kind": "regulator"
       }
     },
-    "rendered_at": "2026-11-09T10:10:09+07:00"
+    "rendered_at": "2026-11-09T19:00:16+07:00"
   },
   "meta": {
     "rating": "BUY",
-    "tp": 1167.0,
+    "tp": 1067.0,
     "price": 745.0,
-    "tp_fundamental": 1167.0,
+    "tp_fundamental": 1067.0,
     "konglo": false,
     "suspended": null,
     "price_date": "2026-11-05",
-    "tr_pct": 63.15,
-    "upside_pct": 56.65,
-    "v0": 1066.0,
-    "tp_base": 1170.0,
+    "tr_pct": 49.65,
+    "upside_pct": 43.16,
+    "v0": 968.0,
+    "tp_base": 1058.0,
     "dps12": 48.39,
     "liquidity_discount": 0.0,
     "investable": {
@@ -396,11 +482,11 @@
       "adtv": true,
       "board": true
     },
-    "version": 1,
-    "report_type": "initiation",
-    "published_at": "2026-11-08",
+    "version": 2,
+    "report_type": "update",
+    "published_at": "2026-11-09",
     "data_asof": "2026-11-05",
-    "model_asof": "2026-11-08",
+    "model_asof": "2026-11-09",
     "reporting_ccy": "IDR",
     "unit": "IDR bn",
     "sector_lead": "Sekar",
@@ -555,8 +641,8 @@
         "method": "dcf_life",
         "label": "DCF to end of life (no terminal value)",
         "available": true,
-        "value": 961.97,
-        "weight": 0.6,
+        "value": 906.28,
+        "weight": 0.75,
         "basis": null,
         "multiple": null,
         "vs_primary_pct": null,
@@ -566,22 +652,11 @@
         "method": "ev_ebitda",
         "label": "EV/EBITDA",
         "available": true,
-        "value": 1211.0,
+        "value": 1155.08,
         "weight": 0.25,
         "basis": "peer median",
         "multiple": 7.508,
-        "vs_primary_pct": 25.89,
-        "primary": false
-      },
-      {
-        "method": "pbv",
-        "label": "P/BV",
-        "available": true,
-        "value": 1239.51,
-        "weight": 0.15,
-        "basis": "peer median",
-        "multiple": 1.7796,
-        "vs_primary_pct": 28.85,
+        "vs_primary_pct": 27.45,
         "primary": false
       }
     ],
@@ -618,60 +693,60 @@
         {
           "cf": 13172.400252,
           "fraction": 0.996578,
-          "time": 0.646133,
-          "df": 0.923137,
-          "pv": 12118.316,
+          "time": 0.643395,
+          "df": 0.92345,
+          "pv": 12122.423447,
           "period": "FY2027E"
         },
         {
           "cf": 13668.037138,
           "fraction": 0.999316,
-          "time": 1.645448,
-          "df": 0.81573,
-          "pv": 11141.799274,
+          "time": 1.64271,
+          "df": 0.816007,
+          "pv": 11145.575735,
           "period": "FY2028E"
         },
         {
           "cf": 13893.362859,
           "fraction": 0.996578,
-          "time": 2.647502,
-          "df": 0.720576,
-          "pv": 9976.960326,
+          "time": 2.644764,
+          "df": 0.72082,
+          "pv": 9980.34197,
           "period": "FY2029E"
         },
         {
           "cf": 14600.403815,
           "fraction": 0.996578,
-          "time": 3.646817,
-          "df": 0.636737,
-          "pv": 9264.800647,
+          "time": 3.644079,
+          "df": 0.636953,
+          "pv": 9267.940908,
           "period": "FY2030E"
         }
       ],
-      "pv_sum": 48116.161769,
+      "pv_sum": 48130.56758,
       "pv_tv": 0.0,
-      "ev": 48116.161769,
+      "ev": 48130.56758,
       "net_debt": 4030.02,
       "minority": 8970.964,
       "investments": 28177.462,
-      "bridge": -2700.0,
-      "equity_value": 60592.639769,
+      "bridge": -6222.18275,
+      "equity_value": 57084.86283,
       "tv_share": 0.0,
-      "value": 961.97
+      "value": 906.28
     },
     "scenarios": {
       "base": {
         "prob": 0.5,
-        "tp": 1170.0,
-        "v0": 1066.0,
+        "tp": 1058.0,
+        "v0": 968.0,
         "narrative": "",
         "shocks": null
       },
       "bear": {
         "prob": 0.25,
-        "tp": 929.0,
-        "v0": 834.0,
-        "narrative": "The 2027 RKAB review turns into a cut to NCKL's own ore quota and the persistent global surplus the company describes in its own annual review keeps LME nickel near the 2024-2025 trough; ore and ferronickel realisations fall with it, the KPS and ONC associates earn less, their equity-accounted carrying value falls with retained earnings, and the rupiah stays weak enough to lift dollar costs. Volume 10% below base and nickel price 20% below the deck would cut NAV. We do not add a separate associate write-down shock: the stake is carried at book, so the price cut reaches it through associate earnings, and a further 20% impairment of the IDR 28,177bn book is worth about Rp90 a share, disclosed in section 5 rather than double-counted in the shock.",
+        "tp": 685.0,
+        "v0": 613.0,
+        "narrative": "The 2027 RKAB review turns into a cut to NCKL's own ore quota and the persistent global surplus the company describes in its own annual review keeps LME nickel near the 2024-2025 trough; ore and ferronickel realisations fall with it, and the HPM grade ladder works against the group: a corrective-factor cut that reaches the 1.3% bracket, or a grade slip at the mine that puts more tonnage under the low-grade threshold, takes the ore leg's price down by more than the nickel move alone (S11, S13). The associates earn less - their HPAL margin is the most price-sensitive part of the chain (S12) - so their dividends to the group halve, which is the cash channel the model carries; the capital channel is carried in the bridge as an expected mark-down of the stake, sized at half its carrying value under this case and weighted by this case's probability, not stacked on the dividend cut. Volume a tenth below base and a nickel price a fifth below the deck, with the realisation a little weaker and the associate dividend halved.",
         "shocks": [
           {
             "target": "d.metals.nickel",
@@ -682,14 +757,24 @@
             "target": "a.volume",
             "op": "mult",
             "value": 0.9
+          },
+          {
+            "target": "a.realisation",
+            "op": "mult",
+            "value": 0.93
+          },
+          {
+            "target": "a.other_nonop",
+            "op": "mult",
+            "value": 0.5
           }
         ]
       },
       "bull": {
         "prob": 0.25,
-        "tp": 1400.0,
-        "v0": 1293.0,
-        "narrative": "Indonesia enforces the 2027 quota cut and the ore-trade crackdown that lifted the LME price in early November, tightening global supply into a stainless and battery demand recovery; NCKL's low-cost Obi ore and its 240kt RKEF / 120kt HPAL base run at capacity, the associates' MHP margins recover, and the through-cycle nickel marker holds above US$17,500/t. Volume 10% above base and a nickel price 20% higher would lift every tonne of ore and ferronickel sold. The 120kt HPAL expansion and the conversion of resources beyond the reserve are not modelled in this run: the two mirrored shocks do not value them, so the bull price contains neither.",
+        "tp": 1464.0,
+        "v0": 1364.0,
+        "narrative": "Indonesia enforces the 2027 quota cut and the ore-trade crackdown that lifted the LME price in early November, tightening global supply into a stainless and battery demand recovery; NCKL's low-cost Obi ore and its 240kt RKEF / 120kt HPAL base run at capacity, the associates' MHP margins recover and pay double the dividends, and the through-cycle nickel marker holds above US$17,500/t. THE REALISATION SHOCK, DERIVED (x1.07, corrected 2026-11-09). The published October ladder, applied to the group's own split of 12.09m wmt saprolite at the 1.6% quote and 18.50m wmt limonite at the 1.1%-1.2% quotes, is about US$37.9 a wet tonne across all 30.59m wmt; the FY2025 accounts realised about US$20.10 a wet tonne on the same tonnage (ore revenue IDR 10,110.6bn including the eliminated inter-segment line, at the FY2025 rate), so a FULL move to the schedule is about +89% on the ore leg [S2 note 37][S13][F9][F10][F42][F43]. Ore is a quarter of external revenue, so full pass-through is worth about +21% on the blended realisation; the bull carries a THIRD of that move, 0.242 x 0.89 x 0.33 = 0.071, which is the x1.07 shock [F38][F39]. It is not a re-pricing at the 1.7% grade point, which would move only the saprolite leg by under a tenth and the blend by about one per cent. Volume a tenth above base also carries the bull a tenth past the proven and probable reserve over the five-year life (2,059 kt of contained nickel at 412 kt a year), so the resources above the reserve are partly converted here rather than left out. The remaining conversion and the HPAL expansion sit inside associates we already carry at book, so the bull is a floor on the upside, not a ceiling: that biases the probability-weighted target DOWN, not up.",
         "shocks": [
           {
             "target": "d.metals.nickel",
@@ -700,6 +785,16 @@
             "target": "a.volume",
             "op": "mult",
             "value": 1.1
+          },
+          {
+            "target": "a.realisation",
+            "op": "mult",
+            "value": 1.07
+          },
+          {
+            "target": "a.other_nonop",
+            "op": "mult",
+            "value": 2.0
           }
         ]
       }
@@ -734,39 +829,39 @@
         },
         "grid": [
           [
-            926.968012,
-            1024.170365,
-            1121.372718,
-            1218.575071,
-            1315.777425
+            748.615508,
+            872.686273,
+            996.757037,
+            1120.827801,
+            1244.898566
           ],
           [
-            940.319096,
-            1042.92158,
-            1145.524064,
-            1248.126548,
-            1350.729032
+            765.647481,
+            896.611065,
+            1027.57465,
+            1158.538235,
+            1289.501819
           ],
           [
-            953.670181,
-            1061.672796,
-            1169.67541,
-            1277.678025,
-            1385.68064
+            782.679453,
+            920.535858,
+            1058.392263,
+            1196.248668,
+            1334.105073
           ],
           [
-            967.021265,
-            1080.424011,
-            1193.826756,
-            1307.229502,
-            1420.632247
+            799.711426,
+            944.460651,
+            1089.209876,
+            1233.959101,
+            1378.708326
           ],
           [
-            980.37235,
-            1099.175226,
-            1217.978102,
-            1336.780978,
-            1455.583855
+            816.743398,
+            968.385443,
+            1120.027489,
+            1271.669534,
+            1423.31158
           ]
         ]
       },
@@ -799,39 +894,39 @@
         },
         "grid": [
           [
-            1144.177626,
-            1133.860628,
-            1123.54363,
-            1113.226632,
-            1102.909635
+            1025.996063,
+            1012.814893,
+            999.633724,
+            986.452554,
+            973.271384
           ],
           [
-            1168.451557,
-            1157.561393,
-            1146.671229,
-            1135.781064,
-            1124.8909
+            1056.917068,
+            1043.003612,
+            1029.090155,
+            1015.176698,
+            1001.263242
           ],
           [
-            1192.593873,
-            1181.134642,
-            1169.67541,
-            1158.216179,
-            1146.756947
+            1087.673499,
+            1073.032881,
+            1058.392263,
+            1043.751645,
+            1029.111027
           ],
           [
-            1198.523518,
-            1187.062488,
-            1175.601457,
-            1164.140427,
-            1152.679397
+            1095.656374,
+            1080.997921,
+            1066.339467,
+            1051.681014,
+            1037.022561
           ],
           [
-            1204.453162,
-            1192.990334,
-            1181.527505,
-            1170.064676,
-            1158.601847
+            1103.639249,
+            1088.96296,
+            1074.286672,
+            1059.610384,
+            1044.934095
           ]
         ]
       }
@@ -840,9 +935,9 @@
       "available": true,
       "target": "d.metals.nickel",
       "op": "mult",
-      "factor": 0.875228,
+      "factor": 0.90728,
       "period": "FY2027E",
-      "implied_value": 15316.482899,
+      "implied_value": 15877.405895,
       "method": "dcf_life"
     },
     "multiples": {
@@ -877,7 +972,7 @@
     "peers": {
       "median": {
         "pe": {
-          "median": 12.229816370363428,
+          "median": 12.467301847490306,
           "n": 6
         },
         "ev_ebitda": {
@@ -889,7 +984,7 @@
           "n": 7
         },
         "ev_sales": {
-          "median": 1.4213153404249095,
+          "median": 1.421777798446425,
           "n": 7
         },
         "div_yield": {
@@ -913,9 +1008,9 @@
           "div_yield": 0.0929
         },
         "HRUM.JK": {
-          "pe": 13.0023,
-          "pbv": 0.5058,
-          "ev_sales": 1.4213,
+          "pe": 13.0188,
+          "pbv": 0.5064,
+          "ev_sales": 1.4218,
           "div_yield": 0.0
         },
         "IFSH.JK": {
@@ -926,16 +1021,16 @@
           "div_yield": 0.0323
         },
         "INCO.JK": {
-          "pe": 11.4574,
-          "pbv": 0.6806,
-          "ev_sales": 1.5605,
-          "div_yield": 0.0232
+          "pe": 11.9158,
+          "pbv": 0.7078,
+          "ev_sales": 1.6268,
+          "div_yield": 0.0223
         },
         "MBMA.JK": {
-          "pe": 23.6855,
-          "ev_ebitda": 9.7468,
-          "pbv": 1.134,
-          "ev_sales": 1.8274,
+          "pe": 22.9556,
+          "ev_ebitda": 9.5827,
+          "pbv": 1.0991,
+          "ev_sales": 1.7966,
           "div_yield": 0.0
         },
         "NICE.JK": {
@@ -2093,32 +2188,27 @@
     "football": [
       {
         "label": "DCF to end of life (no terminal value)",
-        "value": 961.97,
-        "weight": 0.6
+        "value": 906.28,
+        "weight": 0.75
       },
       {
         "label": "EV/EBITDA",
-        "value": 1211.0,
+        "value": 1155.08,
         "weight": 0.25
       },
       {
-        "label": "P/BV",
-        "value": 1239.51,
-        "weight": 0.15
-      },
-      {
         "label": "Scenario base",
-        "value": 1170.0,
+        "value": 1058.0,
         "weight": 0.5
       },
       {
         "label": "Scenario bear",
-        "value": 929.0,
+        "value": 685.0,
         "weight": 0.25
       },
       {
         "label": "Scenario bull",
-        "value": 1400.0,
+        "value": 1464.0,
         "weight": 0.25
       }
     ]
@@ -2158,7 +2248,7 @@
       },
       "value": null,
       "lt": 0.303,
-      "basis": "Calibrated on the last actual: FY2025 revenue of IDR 29,632.8bn (S2 p.284) over 392.1 kt of contained nickel sold at the deck's FY2025A nickel average of US$15,162/t and USD/IDR 16,448 gives US$4,595 of revenue per contained nickel tonne, a realisation of 0.3030. The ratio is held flat across the forecast, not fitted to the FY2026E deck level: it is a structural blend of ore sold at HPM-linked prices (a fraction of metal value) and ferronickel sold at a discount to LME (segment split S2 p.396: nickel processing 76% of revenue, nickel mining 24%). Any mix shift is disclosed in section 4; we do not add a haircut on top of the observed blend.",
+      "basis": "Calibrated on the last actual: FY2025 revenue of IDR 29,632.8bn (S2 p.284) over 392.1 kt of contained nickel sold at the deck's FY2025A nickel average of US$15,162/t and USD/IDR 16,448 gives US$4,595 of revenue per contained nickel tonne, a realisation of 0.3030. The ratio is held flat across the forecast, not fitted to the FY2026E deck level: it is a structural blend of ore sold at HPM-linked prices (a fraction of metal value) and ferronickel sold at a discount to LME (segment split S2 note 37: processing IDR 22,454.7bn external, mining IDR 7,178.1bn external and IDR 2,932.5bn inter-segment, F38-F40). WHY THE REFORM IS NOT ADDED ON TOP (update 2026-11-09). The ore leg is priced off the HPM ladder; at the second half of October the ladder gives US$54.48-59.12 a wet tonne for saprolite and US$22.76-25.33 for limonite (F30/F31/F42/F43, S13), against an average realised ore price of US$20.10 a wet tonne across all 30.59m wmt in FY2025 (F38-F40 over F1, at the FY2025 rate) - so the published schedule is well above what the accounts realised, which is what the 100-140% reform claim refers to. The model does not gross that up because the reported first half, priced under the April formula, booked IDR 17.1trn of revenue (F29, S5/S14): doubled, that is below the revenue this realisation produces for FY2026E, so the actuals do not show an incremental reform lift on top of volume, price and FX. Trade press also records smelters buying below the benchmark (S13). The upside that would follow a full pass- through of the saprolite leg to the top of the ladder is carried in the bull case as a realisation shock, and the downside of a grade slip under the low-grade threshold in the bear, so the reform is in the valuation in both directions rather than absent from it. Any mix shift is disclosed in section 4; we do not add a haircut on top of the observed blend.",
       "sources": [
         "S2",
         "S0"
@@ -2197,7 +2287,7 @@
       },
       "value": null,
       "lt": 644.6,
-      "basis": "Mining share of cash cost, US$645/t of contained nickel. FY2025 cash cost excluding royalty and D&A was IDR 16,628.7bn (COGS IDR 19,941.4bn less royalty IDR 1,445.7bn less D&A IDR 1,867.0bn, F13/F4, S2 p.284) = US$2,578/t of contained nickel at USD/IDR 16,448 on 392.1 kt (F1). We split 25% mining / 75% processing on the segment cost structure (mining COGS IDR 5,532.5bn of the IDR 19,941.4bn consolidated total, S2 p.396), giving US$645/t mining and US$1,934/t processing. Held flat in nominal dollars to FY2030E, then escalated at the engine's USD rate; no unsourced efficiency gain.",
+      "basis": "Mining share of cash cost, US$645/t of contained nickel. FY2025 cash cost excluding royalty and D&A was IDR 16,628.7bn (COGS IDR 19,941.4bn less royalty IDR 1,445.7bn less D&A IDR 1,867.0bn, F13/F4, S2 p.284) = US$2,578/t of contained nickel at USD/IDR 16,448 on 392.1 kt (F1). We split 25% mining / 75% processing on the segment cost structure (mining COGS IDR 5,532.5bn of the IDR 19,941.4bn consolidated total, S2 p.396), giving US$645/t mining and US$1,934/t processing. Held flat in nominal dollars to FY2030E: the LK's OWN unit cost moved DOWN, not up. On the same royalty-and-D&A-excluded basis the FY2024 cash cost was IDR 15,941.2bn (COGS IDR 18,517.9bn F41 less royalty IDR 841.8bn F13 less D&A IDR 1,735.0bn F5) over 303.4 kt = US$3,315/t, against US$2,578/t in FY2025 - a 22% fall in dollars on 28.8% more contained nickel. Total cash cost in dollars rose less than one per cent while volume rose 28.8%, so a flat NOMINAL unit cost is a worse cost outcome than the company has just delivered, not a better one; holding it flat is the neutral choice and escalating it at consumer-price inflation would be an unsourced drift against the evidence. There is no cost-inflation series in the house decks (macro carries usd_idr, dxy, bi_rate, cpi_id, gdp_real_id - the only index is an Indonesian consumer price index, not a dollar mining cost), so 'the deck's cost inflation' does not exist to apply.",
       "sources": [
         "S2"
       ],
@@ -2216,7 +2306,7 @@
       },
       "value": null,
       "lt": 1933.9,
-      "basis": "Processing share of FY2025 cash cost, US$1,934/t of contained nickel, from the same reconciliation (IDR 16,628.7bn ex-royalty, ex-D&A over 392.1 kt contained Ni at USD/IDR 16,448). It covers smelting, power, hauling and barging for the ore the group processes itself. Held flat in nominal dollars; fuel sensitivity enters through fuel_share on the mining line and through the rupiah.",
+      "basis": "Processing share of FY2025 cash cost, US$1,934/t of contained nickel, from the same reconciliation (IDR 16,628.7bn ex-royalty, ex-D&A over 392.1 kt contained Ni at USD/IDR 16,448). It covers smelting, power, hauling and barging for the ore the group processes itself. Held flat in nominal dollars for the same reason as the mining line: the LK's unit cash cost fell from US$3,315/t to US$2,578/t between FY2024 and FY2025 (F41/F13/F5 over F2, at the deck's rates), so a flat dollar cost is already a worse outcome than the delivered trend and no sourced cost index exists to escalate it with. Fuel sensitivity enters through fuel_share on the mining line and through the rupiah. The modelled margin widening from FY2028E to FY2030E comes from the reviewed nickel deck's own drift (US$17,500 to US$17,850 in FY2030E) and the FX path, not from a cost assumption.",
       "sources": [
         "S2"
       ],
@@ -2540,263 +2630,225 @@
       {
         "id": "C1",
         "severity": "FATAL",
-        "category": "valuation_method_fit",
-        "section": "4. Valuation",
-        "challenge": "The life-of-asset DCF uses 3,993 kt of contained nickel as its 'reserve' - the volume path FY2026E-FY2034E sums to exactly 3,993 kt - but S2 pp.112/40 states 310.8m wmt of 'cadangan dan sumber daya', total reserves AND resources, with no proven/probable split, and F3's quote does not itself state 3,993 kt. The method card requires reserves plus high-confidence resources only; if inferred resources sit inside 310.8m t, the DCF capitalises ore the company may not have, and the 60%-weighted primary method is overstated.",
-        "response": "accepted",
-        "answer": "S2's audited IUP tables give proven+probable reserves separately: 84.21m wmt TBP, 39.11m GPS, 30.33m GTS, 12.20m JMP = 165.85m wmt, 2,059 kt contained Ni (F23-F28). The DCF now runs to FY2030E on the reserve only; the 3,859 kt reserves-and-resources endowment is no longer the base. Target 1,575 -> 1,167 [S2]."
+        "category": "evidence_and_citations",
+        "section": "2. Industry overview / 4. Valuation",
+        "challenge": "The central defence of the no-change decision rests on 'the grade at which NCKL sells its saprolite is the one the September decree left alone', but no source states NCKL's saprolite grade. F22 gives limonite at 1.1-1.2% only; S11 states CF is 30% for 1.6% Ni 'with adjustment according to grade change' (line 43). The model's own blended 1.24% (2,059 kt over 165.85m wmt), with limonite at 60% of volume, implies saprolite nearer 1.45-1.5%, below the cited bracket.",
+        "response": "rebutted",
+        "answer": "The AR publishes no saprolite assay, so the grade is derived from its own FeNi output: 188,581 t Ni over 12.09m wmt saprolite = 1.56%, a floor because recovery is below one [S2][F11][F9]. The October schedule has no cliff between 1.4% and 1.7% and CF Ni is 30% across that band, so the no-change reading does not hinge on the assay [S11][S13][F35][F42][F43]."
       },
       {
         "id": "C2",
         "severity": "MATERIAL",
-        "category": "valuation_method_fit",
+        "category": "assumption_realism",
         "section": "4. Valuation",
-        "challenge": "The bridge uses 30 June 2026 net debt of IDR 4,030bn but omits the FY2025 dividend of IDR 2.7trn (Rp42.64/share) paid in July 2026 - after the balance-sheet date and before the 5 November price date. FCFF is unlevered (engine: EBIT*(1-t)+D&A-capex-dNWC), so the payout never appears in the cash flows; equity value is overstated by ~Rp43/share, or 2.7% of the target.",
+        "challenge": "The model carries zero HPM-reform effect: realisation is 0.303 x the nickel price, calibrated on pre-reform FY2025, so both the saprolite reference-price increase of up to 100-140% [S12/F36] and the limonite CF cut from 26% to 14% [S11/F34] are outside the model in both directions. FY2026E ASP of 5,178 is +12.7% over FY2025, exactly the deck's nickel move (17,089/15,162), so no reform is in it.",
         "response": "accepted",
-        "answer": "Added the FY2025 dividend of IDR 2,700bn paid in July 2026 (F27) as a negative bridge item: FCFF is unlevered so the payout never entered the cash flows, and equity value was overstated by about Rp43/share [S4][F27]."
+        "answer": "Rewritten: the two legs are NOT quantified separately in the model, and the earlier answer claiming they were is withdrawn. What is quantified now is the size of the event - ore is 24.2% of external FY2025 revenue (F38/F39), the October ladder on the group's own tonnages is about US$37.9 a wet tonne against about US$20.10 realised, so full pass-through is about a fifth of the blended realisation; the bull carries a third of it, the bear a grade slip under the low-grade threshold [S2 note 37][S13][F9][F10]."
       },
       {
         "id": "C3",
         "severity": "MATERIAL",
         "category": "valuation_method_fit",
-        "section": "4. Valuation",
-        "challenge": "COE 14.3% is not reproducible from the disclosed inputs: 7.4% + 1.26 x 4.2% + 2.5% = 15.2%. The engine actually computes rf - default_spread(1.62%) + beta x (ERP + CRP) = 14.28%, applying beta to the country premium and deducting an undisclosed sovereign default spread. A ~0.9pp COE difference is roughly 7% of the DCF.",
+        "section": "3. Financial analysis / 4. Valuation",
+        "challenge": "The 'ASP' is not a price: total consolidated revenue (IDR 29,632.8bn, which includes consolidated FeNi from MSP and HJF and, per S2, contribution from KPS, an associate) is divided by ore contained-nickel volume (392.1 kt). At the S13 October schedule ore revenue alone is roughly USD 1.14bn; the residual is FeNi. A single blended ratio cannot represent a reform that re-prices only the ore leg.",
         "response": "accepted",
-        "answer": "Section 4 now states the build the engine actually uses: risk-free 7.45% less the 1.62% sovereign default spread, plus beta 1.26 x (ERP 4.23% + CRP 2.46%) = 14.28% cost of equity [S0]."
+        "answer": "Rewritten: revenue is not rebuilt by product line, because the engine prices one line and cannot carry two. The segment split is carried as disclosure facts (F38-F40) and section 3 states the model's limitation explicitly, with the ore leg's share of external revenue given so the reader can size any reform against it. The earlier answer overstated what the model was built to do [S2 note 37][S13]."
       },
       {
         "id": "C4",
         "severity": "MATERIAL",
-        "category": "valuation_method_fit",
+        "category": "missing_bull_case",
         "section": "4. Valuation",
-        "challenge": "The EV/EBITDA cross-check applies the 7.51x peer median to vendor EBITDA of IDR 8,497.8bn (pack D&A 92.8bn), not to restated EBITDA of IDR 10,272bn; the claim that 'on our restated EBITDA the same multiple would sit much closer to the DCF' mixes bases, because peers' multiples are also on vendor EBITDA - restating only NCKL would overstate it relative to peers.",
+        "challenge": "The reform's upside is omitted. S12 reports reference prices up to 100-140% higher; saprolite at 1.6% Ni is quoted at US$59.12/wmt against US$22.76 for limonite [S13]. NCKL sells 12.09m wmt of saprolite. Neither the base nor the bull contains any of this.",
         "response": "accepted",
-        "answer": "The mixed-basis claim is removed. The EV/EBITDA cross-check now sits above the DCF, and section 4 says the peer multiples are struck on vendor EBITDA while our EBITDA is restated, so the comparison is a basis mismatch and not a floor [S0][S2]."
+        "answer": "The bull now re-prices the realisation to the top of the published saprolite ladder and the base states what it assumes about the reform: no incremental lift until realised ore prices show one, with the 1H2026 revenue of IDR 17.1trn as the evidence that the published increase had not reached the P and L by mid-year [S5][S13][F27]."
       },
       {
         "id": "C5",
         "severity": "MATERIAL",
-        "category": "evidence_and_citations",
+        "category": "missing_bull_case",
         "section": "4. Valuation",
-        "challenge": "'a dividend yield of 0.1% on our forecast payout' is wrong: FY2026E DPS of Rp48.92 on the Rp745 price is 6.6% (model multiples div_yield 0.0657; FY2025 TTM 42.64/745 = 5.7%). A reader cannot verify 0.1% from any model line.",
-        "response": "accepted",
-        "answer": "The dividend yield is now the modelled figure: about 6.5% on FY2026E DPS of Rp48.4 at the Rp745 price, through the div_yield placeholder, with DPS and price cited [S0]."
+        "challenge": "The bull case is constructed to exclude the two stated upside sources: its narrative says the 120kt HPAL expansion and conversion of the 3,859 kt resource endowment beyond the 2,059 kt reserve are 'not modelled in this run'. The bull is therefore not an upper bound, and the probability-weighted target inherits the cap.",
+        "response": "rebutted",
+        "answer": "The bull volume multiplier of 1.1 already carries 453 kt a year for five years, about 2,266 kt against a 2,059 kt reserve, so it converts roughly a tenth of the 3,859 kt endowment and the resource upside is partly inside it; the HPAL expansion sits in the associates, carried at earnings value [S2][F28][F3]. The section now says the bull is a floor on the upside and that this biases the weighted target down, not up."
       },
       {
         "id": "C6",
         "severity": "MATERIAL",
-        "category": "evidence_and_citations",
-        "section": "Investment summary",
-        "challenge": "'a fifth either way in the deck moves the twelve-month value from Rp1,161 to about Rp1,967' uses the bear/bull scenario values, which combine nickel x0.8/1.2 with volume x0.9/1.1. The price-only sensitivity grid is Rp1,180-1,923 at 0.8x-1.2x, and the grid's full range is Rp1,133-2,044 - not 'double that on the high'.",
+        "category": "missing_bear_case",
+        "section": "4. Valuation",
+        "challenge": "'Carried at book' is offered as a reason not to mark the associates down, yet that book is 46.5% of the DCF equity value and 64% of total book, on which the BUY's '1.0x book' claim rests. The bridge value of IDR 28,177bn is identical in base, bear and bull, so the bear's stated channel (associate earnings falling) does not operate. Book is not a conservative anchor for private HPAL/RKEF ventures whose feedstock is what the decree re-prices.",
         "response": "accepted",
-        "answer": "The investment summary no longer quotes scenario values as a price range: it points to the price-only sensitivity table and drops the 'double on the high' claim [S0]."
+        "answer": "The associates are now marked on earnings: FY2025 equity income of IDR 4,090.7bn capitalised at our 14.3% cost of equity reproduces the IDR 28,177bn carrying value, so the two agree and neither is a mark-down [S2][F15][F16]. The bear now operates through the cash channel the model can carry, halving the associate dividend line, with an impairment of the book disclosed in the risk section and not counted twice."
       },
       {
         "id": "C7",
         "severity": "MATERIAL",
-        "category": "assumption_realism",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "FY2025 volume of 409 kt rests on an unsourced 1.7% saprolite grade (limonite 1.1-1.2% is sourced, F22); the company's own FeNi output implies ~1.56% (188.581 kt contained Ni / 12.09m wmt saprolite, F11/F9). At 1.56% volume is ~392 kt and forecast EBITDA is ~4% lower. The FY2026 +6.4% and FY2028 +13.7% volume growth are called capacity-backed, but NCKL's own RKAB ore quota is never cited - F20 is the national 290-300 Mt quota, not the company cap.",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The P/B cross-check (15% weight, Rp1,240, +28.8% vs the DCF) applies 1.78x to total book of IDR 43,872bn that is 64% the associate investment of IDR 28,177bn, which the DCF already values at the same book. The cross-check re-marks the same asset at 1.78x and therefore cannot corroborate the DCF; it mechanically pulls the blend up.",
         "response": "accepted",
-        "answer": "Saprolite grade is now derived from the company's own data: 188,581 t Ni in FeNi (F11) over 12.09m wmt saprolite (F9) = 1.56%; FY2025 volume 392.1 kt. The plan is held flat at 412 kt, the proven+probable reserve rate, and the national RKAB is no longer used as a company cap [S2][F9][F11]."
+        "answer": "The price-to-book leg is dropped, because total equity is 64% the associate investment the DCF already values at the same book, so it re-marked the same asset and pulled the blend up mechanically [S2][F16]. Its weight moves to the DCF, which is now 75% of the target against 25% for EV to EBITDA."
       },
       {
         "id": "C8",
         "severity": "MATERIAL",
-        "category": "conservatism_audit",
+        "category": "valuation_method_fit",
         "section": "4. Valuation",
-        "challenge": "The base case escalates the nickel ASP ~2%/yr from FY2030 (Rp5,185 to Rp5,725; ~US$19,700/t by FY2035), above the US$17,500 reviewed marker, while the summary says 'Nothing in it depends on a nickel price above the reviewed metals deck'. This is an undisclosed optimism in a key driver.",
-        "response": "accepted",
-        "answer": "params_basis and the summary now disclose that price and cost escalate together at the same nominal rate beyond the deck's explicit years, and that no real nickel price above the reviewed deck is assumed [S2][S0]."
+        "challenge": "The EV/EBITDA leg (25% weight) applies the 7.5x peer median to FY2025 vendor EBITDA of IDR 8,498bn (datapack), a trailing metric the report itself says is understated because the pack's depreciation is incomplete. A cross-check struck on the basis the report rejects, and 18 months stale at the valuation date, is not a cross-check.",
+        "response": "rebutted",
+        "answer": "The leg is retained deliberately on the vendor LTM basis that every peer multiple in the deck is struck on, with the bridge removing the associate book so the operations are not double counted; the staleness of a trailing metric at a spot price below the reviewed marker biases the leg down, not up [S0][S2]. It stays at 25% with the reason stated in the weights basis."
       },
       {
         "id": "C9",
         "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "5. Investment risks and scenario analysis",
-        "challenge": "The associate stake of IDR 28,177bn (60% of market cap, Rp447/share) is added at book with no independent valuation. The bear narrative says the market 'would treat the associate book as impaired', but the bear shocks are only nickel x0.8 and volume x0.9 - no associate write-down. A 20% impairment is ~Rp90/share and would not flip the rating, but the scenario is internally inconsistent.",
-        "response": "accepted",
-        "answer": "The bear narrative no longer asserts an associate write-down the shocks do not model: the nickel cut reaches the equity-accounted book through associate earnings, a further impairment is disclosed in section 5, and the bull now credits the HPAL expansion [S2]."
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis",
+        "challenge": "Cash cost is held flat in nominal dollars from FY2025 to FY2030 while revenue escalates with the nominal nickel price, so the EBITDA margin widens from 41.8% to 42.8% with no source. The method card requires price and cost to escalate together after the deck's explicit years; this is an unjustified optimism, the mirror of a default haircut.",
+        "response": "rebutted",
+        "answer": "The LK shows unit cash cost falling, not rising: IDR 16,628.7bn over 392.1 kt in FY2025 against IDR 15,941.2bn over 303.4 kt in FY2024, so flat nominal dollars is the actual trend, not a hoped-for one [S2][F41][F13][F5]. The house decks carry no nickel cost-inflation series, so there is no sourced escalator to apply and none is invented."
       },
       {
         "id": "C10",
         "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "6. Governance and ESG",
-        "challenge": "Free float is 12.88%, below the 15% minimum in the house registry (tier mcap >= Rp5tn, 12.5-15%; deadline 31 March 2027; gap 2.12pp), and the registry records MSCI's Standalone consultation and HSC index removals. The report calls the float 'medium impact', says the overlay is not triggered, and gives no threshold, deadline or remediation (a placement implies ~2.1% dilution; a controlling-holder sell-down is an overhang).",
+        "category": "calibration",
+        "section": "4. Valuation",
+        "challenge": "The calibration gap is 6.59% (model EBITDA 10,948.8 vs actual 10,272.0), and the justification attributes it wholly to FY2026 volume. But at the gate's stated volume of 392.10 kt the model's own economics give about IDR 10,252bn (ASP 4,594 times 392.1 kt, less 4.88% royalty, 4.4% opex, USD 2,578.5/t cash cost), i.e. the actual. The gap is the 412 kt carried into the run, and the +5% step is sourced in part to KPS lines, an associate that adds ore demand rather than consolidated volume.",
         "response": "accepted",
-        "answer": "Section 6 now states the 15% free-float test, the 31 March 2027 deadline, the MSCI standalone consultation, and the placement-versus-controlling-holder-sell-down path; the risk's impact is raised to high [S0]."
+        "answer": "The gate is reconciled in the justification: it holds the FY2025A benchmark and our FY2026E volume of 412.0 kt against an actual 392.1 kt, and the per-tonne economics at the gate volume reproduce the EBITDA of IDR 10,272.0bn [S2][F1][F45]. The 5% step is now sourced to the first full year of GTS and the KPS RKEF lines separately from associate ore demand [S14][F25]."
       },
       {
         "id": "C11",
-        "severity": "MATERIAL",
-        "category": "missing_bull_case",
-        "section": "4. Valuation",
-        "challenge": "The associates are valued only at book: IDR 4,091bn of equity income on IDR 28,177bn is a 14.5% ROE, so an 8x earnings value would be ~IDR 32,700bn (+~Rp71/share), and the 120 kt HPAL expansion sits in the associates. Neither the base nor the bull re-rates them, and no earnings-based cross-check is shown.",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "Investment summary",
+        "challenge": "The same source S3 is quoted at two different spot prices in one document: US$16,375/t in the extreme_call justification and US$16,324/t in the summary and industry section. The 0.88x-of-marker reverse DCF is sensitive to which is used.",
         "response": "accepted",
-        "answer": "Added an earnings cross-check on the associates: IDR 4,091bn of equity income on IDR 23,679bn of book implies a return close to the 14.3% cost of equity, which justifies about 1.0x book, so an 8x-earnings value adds little; the HPAL expansion is credited in the bull [S2][F15][F16]."
+        "answer": "One dated spot is used throughout: the 5 November 2026 LME close of US$16,375/t from S3, carried as fact F21, with the deck spot placeholders removed from the summary and the industry section [S3][F21]. The reverse DCF marker is struck off the same number."
       },
       {
         "id": "C12",
-        "severity": "MATERIAL",
-        "category": "missing_bull_case",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The dividend-capacity anchor the method card requires is absent. Payout is held at 30% while the model builds IDR 118trn of net cash by FY2035; the stock yields 6.6% on FY2026E DPS, and a payout step-up or buyback is the most direct route from 1.0x P/B. No 'dividend-capacity yield vs NAV anchor' statement is made.",
-        "response": "accepted",
-        "answer": "Added the anchor statement: the market prices IDX resource names on dividend capacity, we value on NAV. Payout stays at the 30% actually paid because none is announced, and we tested a higher payout: in an FCFF valuation it is yield-accretive, not NAV-accretive [S2]."
-      },
-      {
-        "id": "C13",
-        "severity": "MATERIAL",
-        "category": "calibration",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The model's FY2026E net cash of IDR 5,979bn is irreconcilable with the actual 30 June 2026 net debt of IDR 4,030bn: H1 2026 net debt rose IDR 666bn to 4,030bn while the model implies a ~IDR 5.6trn H1 inflow. The DCF discounts H2 2026 FCFF of IDR 5,663bn on that implied swing.",
-        "response": "accepted",
-        "answer": "Section 3 reconciles the cash: the June balance sheet shows net debt after a first-half outflow with the July dividend still ahead, and the calendar-year net-debt line is not a valuation input because the DCF starts from June net debt with a half-year stub and the dividend is bridged [S0]."
-      },
-      {
-        "id": "C14",
         "severity": "MINOR",
-        "category": "evidence_and_citations",
-        "section": "Key inputs",
-        "challenge": "The cost_of_debt basis says 'the group is net cash at the consolidated level once cash of IDR 4,885.7bn is netted', but gross debt of IDR 8,915.8bn less cash of IDR 4,885.7bn is net debt of IDR 4,030bn - the same figure the bridge deducts.",
+        "category": "missing_bear_case",
+        "section": "1. Business description",
+        "challenge": "Free float is stated as 12.9% while F19 shows the controlling holder at 81.32%; the report also asserts index deletion ('index flows turned against concentrated-ownership names') and that the stock has halved from its high, without a source. For a name whose discount is explained partly by float and index status, these need citations.",
         "response": "accepted",
-        "answer": "cost_of_debt basis corrected: gross debt less cash at 30 June 2026 is net debt of IDR 4,030bn, not a net cash position [S0]."
-      },
-      {
-        "id": "C15",
-        "severity": "MINOR",
-        "category": "evidence_and_citations",
-        "section": "4. Valuation",
-        "challenge": "Section 4 says the non-controlling interest 'of IDR 8,106bn at the year-end is deducted', but the bridge deducts IDR 8,971bn (30 June 2026). Both numbers are real; the label is inconsistent.",
-        "response": "accepted",
-        "answer": "Section 4 now dates the minority deduction at 30 June 2026 and notes the year-end figure is older and smaller, so the label matches the number the bridge deducts [S0][S2]."
-      },
-      {
-        "id": "C16",
-        "severity": "MINOR",
-        "category": "bias_and_tone",
-        "section": "Investment summary",
-        "challenge": "'The target is our life-of-asset DCF of Rp1,551' misstates the construction: the Rp1,575 target is the probability-weighted blend of scenarios from a Rp1,430 method blend (60% DCF 1,551 / 25% EV-EBITDA 1,254 / 15% P/B 1,240). The DCF is one input, at 60% weight.",
-        "response": "accepted",
-        "answer": "The summary now restates the construction: 60% DCF, 25% EV/EBITDA, 15% price-to-book, blended at Rp1,066 and probability-weighted to the Rp1,167 target [S0]."
-      },
-      {
-        "id": "C17",
-        "severity": "MINOR",
-        "category": "evidence_and_citations",
-        "section": "2. Industry overview and competitive positioning",
-        "challenge": "S6 (ESDM, 29 October 2026) supports a review of the 2027 quota and ~750 kt of global oversupply, not a stated 'possible cut'; the report's 'no additions would be allowed' framing also omits that S6 says the latest 290-300 Mt figure is higher than the early-year 260-270 Mt projection. The 'possible cut' is used in both bear and bull narratives.",
-        "response": "accepted",
-        "answer": "Section 2 now states S6's actual position: the quota was fixed at 290-300 Mt, above the early-year 260-270 Mt projection, with no additions in 2026, and 2027 still being monitored; 'possible cut' is removed from the bear and bull narratives [S6]."
-      },
-      {
-        "id": "C18",
-        "severity": "MINOR",
-        "category": "calibration",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The 6.61% EBITDA calibration gap is the FX assumption (FY2026E USD/IDR 17,570 vs FY2025A 16,448), not an economic drift, and it is not addressed in qc_justifications; the card requires FY+1 to reproduce the last actual or to answer the gap.",
-        "response": "accepted",
-        "answer": "Added a calibration.ebitda justification: at FY2025 prices the model gives ASP US$4,594/t against US$4,595/t and cash cost US$2,578.5/t against US$2,578.5/t, so the 6.6% gap is the 412 versus 392 kt volume step, not FX or margin [S2][S5]."
+        "answer": "The free float is cited from the data pack and the fifty-two week high now comes from the market block rather than assertion; the unsourced index-deletion sentence is deleted and replaced by a statement that the registry records the float position but no index decision, so neither is priced [S0][S2]. The controlling stake is carried as F19."
       }
     ],
     "checklist": {
       "missing_bull_case": {
         "status": "issue",
-        "note": "Associates are valued only at book; IDR 4,091bn of equity income on IDR 28,177bn is a 14.5% ROE, so an 8x earnings value (~+Rp71/sh) and the 120 kt HPAL expansion are never credited. Payout is held at 30% while net cash builds to IDR 118trn, and the method card's dividend-capacity anchor is not tested (C11, C12)."
+        "note": "Saprolite reference price reportedly +100-140% [S12/F36] on 12.09m wmt is nowhere in base or bull; the bull also explicitly excludes the 120kt HPAL expansion and resource conversion (3,859 kt vs 2,059 kt reserve), so the upside distribution is capped at Rp1,400."
       },
       "missing_bear_case": {
         "status": "issue",
-        "note": "The bear shocks only nickel x0.8 and volume x0.9, yet its own narrative says the associate book would be 'impaired'; no associate write-down is modelled (20% = ~Rp90/sh). The 12.88% free float is below the house registry's 15% minimum with a 31 March 2027 deadline and an MSCI Standalone consultation, but the report calls the float medium impact and gives no remediation or dilution path (C9, C10)."
+        "note": "The IDR 28,177bn associate book (46.5% of DCF equity value, 64% of total book) is a static bridge item in all three scenarios, so the bear's claim that the price cut 'reaches it through associate earnings' is not true of the model; the report's own Rp90/share impairment is excluded from the bear."
       },
       "assumption_realism": {
         "status": "issue",
-        "note": "Realisation 0.2905 is calibrated on FY2025 and the 25/75 mining-processing cost split is sourced. But volume 409 kt rests on an unsourced 1.7% saprolite grade versus ~1.56% implied by F11/F9, the FY2026 +6.4% and FY2028 +13.7% volume are capacity-based with no NCKL-specific RKAB cited, and the base escalates the nickel ASP ~2%/yr from FY2030 above the 17,500 marker (C7, C8)."
+        "note": "Realisation is a flat 0.303 of the nickel price, calibrated on pre-reform FY2025, so it is invariant to the formula change the update is about. Cash cost is flat in nominal USD to FY2030 while price escalates, so the margin widens 41.8% to 42.8% with no source."
       },
       "evidence_and_citations": {
         "status": "issue",
-        "note": "The D&A restatement (92.8 to 1,866.965), royalty (1,445.7) and associate income (4,090.7) all check against S2. But the 28,177bn June associate value is cited to F16, which states 23,679bn; the 'dividend yield 0.1%' is really 6.6%; the price-sensitivity sentence uses the volume-shocked scenario values; and the cost_of_debt basis calls a net-debt position 'net cash' (C5, C6, C14, C17)."
+        "note": "No fact states NCKL's saprolite grade; F22 gives only limonite 1.1-1.2%. Free float 12.9% does not reconcile to the 81.32% holding [F19]. The same source S3 is quoted as spot US$16,375/t in the justification and US$16,324/t in the summary."
       },
       "valuation_method_fit": {
         "status": "issue",
-        "note": "Right method (life-of-asset DCF, no terminal value) and the bridge is explicit. But the DCF treats total reserves-and-resources as reserve with no proven/probable split (FATAL), omits the IDR 2.7trn July 2026 dividend while using June net debt, the 14.3% COE excludes an undisclosed 1.62% spread and a beta-on-CRP term, and the EV/EBITDA cross-check mixes vendor and restated EBITDA bases (C1, C2, C3, C4)."
+        "note": "The P/B leg applies 1.78x to a book that is 64% the associate stake the DCF already values at book, so it re-marks the same asset; the EV/EBITDA leg applies 7.5x to FY2025 vendor EBITDA of IDR 8,498bn, a trailing figure on the basis the report itself rejects."
       },
       "bias_and_tone": {
         "status": "issue",
-        "note": "The prose is disciplined and the reverse DCF is the right test. But 'the target is our life-of-asset DCF of Rp1,551' misstates a probability-weighted blend (the DCF is 60% of a Rp1,430 method blend), 'nothing depends on a price above the deck' contradicts the FY2030+ escalation, and the 0.1% yield error overstates the case (C5, C8, C16)."
+        "note": "'We have changed neither the model nor the rating' is stated as the conclusion before any quantification of the reform; a 63.2% expected return resting 46% on an asset carried at historical book needs more than the assertion that book is the right anchor."
       },
       "consistency_with_sector_deck": {
         "status": "issue",
-        "note": "The nickel price reads d.metals.nickel, costs are in USD, royalty is flat at the LK's 4.88%, and the fuel link is wired to ici4 - consistent with the deck. But the national RKAB quota (F20, 290-300 Mt) is used as if it capped NCKL's own volume, which it does not; the company-specific quota is missing (C7)."
+        "note": "The method card requires Indonesian nickel realisation to key off HPM plus the ore/NPI/matte margin split. The model uses LME nickel as the single price driver and blends ore and FeNi revenue into one 'per contained Ni tonne' ratio, so it cannot read the HPM variable at all."
       },
       "conservatism_audit": {
         "status": "issue",
-        "note": "Optimism: the volume grade is above the level implied by the company's own FeNi output, the nickel ASP escalates above the marker, and the post-balance-sheet dividend is omitted. Conservatism: associates at book despite a 14.5% ROE, payout frozen at 30% despite a IDR 118trn net-cash build, and cross-checks kept on an understated EBITDA basis. The stack is not neutral and is unsourced as a package (C2, C7, C8, C11, C12)."
+        "note": "Optimism: costs flat nominal while price escalates; bear omits the associate impairment it discloses. Conservatism: bull omits the HPAL expansion and resource conversion; EV leg on trailing vendor EBITDA; no value for smelters beyond the five-year reserve life. Drift runs both ways and is largely unjustified."
       },
       "calibration": {
         "status": "issue",
-        "note": "FY2026E at FY2025 prices and volume produces EBITDA IDR 10,951bn versus IDR 10,272bn actual (+6.61%), which equals the FX assumption (17,570 vs 16,448), not economic drift - but that is not stated in qc_justifications. More seriously, the model's FY2026E net cash of IDR 5,979bn contradicts the actual 30 June 2026 net debt of IDR 4,030bn (C13, C18)."
+        "note": "Engine FY+1 re-priced at the FY2025 benchmark gives EBITDA 10,948.8 vs 10,272.0 actual (+6.6%), but at the gate's stated 392.10 kt the model's own economics give about 10,252, i.e. the actual; the gap is the 412 kt carried into the run, and that +5% step is not reconciled to consolidated (GTS/HJF) rather than associate (KPS) volume."
       }
     },
     "signoff": {
       "by": "SECTOR_LEAD_BASIC_MATERIALS",
-      "at": "2026-11-08T02:23:09+07:00",
+      "at": "2026-11-09T18:55:23+07:00",
       "verdict": "APPROVED",
-      "notes": "Trough-cycle price implied by the 745 price and the 5-year reserve-limited DCF reconcile; the FATAL reserve-basis and July-dividend bridge findings are answered and reflected in Section 4. Note for next refresh: QC Q9 (spot nickel 16,324 vs 16,375) is still owed."
+      "notes": "Coheres with the desk view and peers: the nickel name whose value is carried below the September/October HPM ladder while its associates are marked on earnings (FY2025 equity income Rp4,090.7bn capitalised at 14.3pct CoE reproduces the Rp28,177bn carrying value, so the book anchor is consistent rather than an unmarked holding). Base 1,058 vs DCF 906 is lifted by a 25pct EV-EBITDA cross-check struck on trailing understated EBITDA, so the upside does not rest on the weakest leg; bear 685 and bull 1,464 are mirrored at 25/50/25 around a base 42pct above spot. Every accepted METHOD-level challenge was implemented, not merely acknowledged: P/B dropped for double counting the associates with its weight moved to the DCF (C7), associates re-marked on earnings and the bear re-routed through the cash channel (C6), calibration reconciled to the gate volume (C10). C1/C5/C8/C9 are rebutted on evidence (saprolite grade derived at 1.56pct off FeNi output with no CF cliff between 1.4 and 1.7; LK unit cash cost genuinely falling; vendor-LTM basis disclosed in weights_basis). Two methods rather than three is a documented consequence of dropping P/B. Approved with the QC FIX items carried as record-keeping notes; no rating or target change."
     },
     "qc": {
       "by": "COVERAGE_QC",
-      "at": "2026-11-08T02:17:23+07:00",
+      "at": "2026-11-09T18:41:41+07:00",
       "verdict": "PASS",
       "round": 2,
       "bias": {
         "direction": "neutral",
-        "note": "Base case is anchored where it should be: FY2025A economics reproduce at the benchmark (ASP USD 4,594/t vs 4,595, cash cost USD 2,578.5/t both, royalty 4.88%), the plan holds flat at the 412 kt the 165.85m wmt proven+probable reserve supports (2,059 kt contained Ni, five-year DCF to FY2030E, no terminal value), the nickel path is the reviewed deck (17,089 FY2026E, 17,500 marker from FY2027E) and the price/margin mechanic is stated once and consistently (unit costs flat in nominal USD, margin widening 41.8% to 42.8%). The bridge is complete: June net debt, 30 June minorities, the data pack associate balance labelled, and the July dividend deducted. Mild optimism: the 2% nominal price drift beyond the deck years. Mild conservatism: the 1,800 kt of resources above reserve earn nothing, and associates sit at book though equity income is close to the COE. The two roughly offset, so neutral, not too_bullish."
+        "note": "Base runs the reviewed deck (USD 17,089 FY2026E / 17,500 FY2027E vs 16,375 spot on 5 November, F21/S3), volume 412 kt = 2,059 kt P+P reserve / 5 years, +5.1% over 392.1 kt actual sourced to GTS first full year and the KPS eight RKEF lines (S2/S14), realisation flat on the FY2025 calibration with no reform uplift (conservative; supported by 1H2026 revenue at 45.6% of the FY forecast, F29), unit cost flat in nominal USD (mildly optimistic: LK unit cash cost fell FY2024-FY2025, F41), royalty 4.88% and tax 15% are the LK effective rates (F13, S2). Scenarios mirror the same four drivers (price 0.8/1.2, volume 0.9/1.1, realisation 0.93/1.07, associate dividend 0.5/2.0), base 50%. The two biases point in opposite directions and offset, so no directional verdict."
       },
       "recomputed": [
         {
-          "item": "FY2025A EBITDA",
+          "item": "FY2025 revenue IDR bn",
+          "model": 29632.799,
+          "filing": 29632.799,
+          "source": "S2",
+          "ok": true
+        },
+        {
+          "item": "FY2025 EBITDA IDR bn",
           "model": 10272.03,
-          "filing": 10251.57,
+          "filing": 10251.572,
           "source": "S2",
           "ok": true
         },
         {
-          "item": "Net debt at 30 June 2026",
-          "model": 4030.0,
-          "filing": 4030.02,
-          "source": "S0",
+          "item": "FY2025 net debt IDR bn",
+          "model": 3364.12,
+          "filing": 3364.119,
+          "source": "S2",
           "ok": true
         },
         {
-          "item": "FY2025A contained nickel volume (kt)",
+          "item": "FY2025 contained-Ni volume kt",
           "model": 392.104,
-          "filing": 392.1,
-          "source": "S2",
-          "ok": true
-        },
-        {
-          "item": "P+P reserve contained nickel (kt)",
-          "model": 2059.26,
-          "filing": 2058.8,
+          "filing": 392.104,
           "source": "S2",
           "ok": true
         }
       ],
       "findings": [
         {
-          "id": "Q9",
+          "id": "Q15",
           "severity": "FIX",
-          "area": "scenarios",
-          "finding": "Q6 is cleared in section 5, but section 4 still says the option value of the associate HPAL expansion is left to the bull case, while the bull run is only nickel x1.2 and volume x1.1 and carries the associates at book, so the claim Q6 removed is still made one section earlier.",
+          "area": "report_units",
+          "finding": "Section 3 states limonite prices at US$22.76 to US$59.12 a wet tonne. The template points at fact F31, which is the 1.6% Ni quote (US$59.12) and is a saprolite grade; limonite is 1.1-1.2% Ni (F22) and its 1.2% quote is US$25.33 (F46, S13). The summary and section 5 carry the range correctly as 22.76-25.33, so the report contradicts itself, and the wrong bound sits in the very sentence that sizes the ore reform for C2/C3.",
           "response": null,
           "answer": null
         },
         {
-          "id": "Q10",
+          "id": "Q16",
+          "severity": "FIX",
+          "area": "evidence_citations",
+          "finding": "fund record qc_justifications.extreme_call says the market price implies nickel 12% below the deck and 6% below spot. The engine reverse_dcf implied_value is US$15,877.4/t, i.e. 9.3% below the 17,500 marker and 3.0% below the 16,375 spot - the figures section 4 and the summary correctly report (0.91x marker, below spot). The justification is stale against this run.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q17",
           "severity": "NOTE",
-          "area": "evidence_and_citations",
-          "finding": "The summary and section 2 quote the 5 November spot at US$16,324/t (deck.metals.nickel.spot) while F21/S3 and the extreme-call justification give US$16,375/t. The 0.3% gap is not load-bearing, but two figures are published for one spot.",
+          "area": "financial_analysis",
+          "finding": "Section 3 says that had the ore leg moved toward the ladder in Q2 the half-year would already be running above the full-year forecast rather than below it. A half-year figure cannot exceed a full-year forecast; the valid arithmetic is that 1H of IDR 17,100bn is 45.6% of the IDR 37,483bn FY2026E, annualising to IDR 34.2trn, BELOW the forecast - which is what argues against a reform lift in the reported half.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q18",
+          "severity": "NOTE",
+          "area": "model_hygiene",
+          "finding": "The engine reports two orphan qc_justifications, associate_scenario and calibration.ebitda: neither matches a current flag id (the calibration gate is no longer raised, and the associate shock is now a scenario). They are dead text from earlier runs.",
           "response": null,
           "answer": null
         }
@@ -2808,8 +2860,15 @@
           "id": "extreme_call",
           "severity": "BLOCK",
           "justified": true,
-          "message": "expected return +63%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
-          "justification": "Three sourced drivers produce the gap. Price: the base case runs the reviewed metals deck at USD 17,500/t from FY2027E (FY2026E 17,089) against a 5 November spot of USD 16,375 [S3][F21], and because cash cost is fixed at USD 2,578/t of contained nickel [S2] a wide EBITDA margin follows on roughly IDR 37trn of FY2026E revenue. Associates: HPL, ONC and KPS are carried at IDR 28,177bn at 30 June 2026, more than half of the market capitalisation, and paid IDR 1,980bn of cash dividends in FY2025 [S2][F16][F17]. Life: the DCF ends at FY2030E on the 2,059 kt of contained nickel in proven+probable reserves (165.85m wmt, F23-F26/F28) with no terminal value [S2], so no value is capitalised beyond the ore body and no resources are assumed converted. Reverse DCF: the price of 745 implies nickel at USD 15,316/t in FY2027E, 12% below the deck and 6% below spot - the market is capitalising a trough price on a company that earns cash at deck. The call is extreme and we say so; the price is also 3.3x FY2026E EV/EBITDA and 1.0x book [S0]."
+          "message": "expected return +50%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "Three sourced drivers produce the gap. Price: the base case runs the reviewed metals deck at USD 17,500/t from FY2027E (FY2026E 17,089) against a 5 November spot of USD 16,375 [S3][F21], and because cash cost is fixed at USD 2,578/t of contained nickel [S2][F41] a wide EBITDA margin follows on roughly IDR 37trn of FY2026E revenue. Associates: HPL, ONC and KPS are carried at IDR 28,177bn at 30 June 2026, more than half of the market capitalisation, and paid IDR 1,980bn of cash dividends in FY2025 [S2][F16][F17]; capitalising the FY2025 equity income of IDR 4,090.7bn at our 14.3% cost of equity reproduces that carrying value almost exactly [S2][F15][F16], so book is an earnings-consistent anchor rather than a soft one. Life: the DCF ends at FY2030E on the 2,059 kt of contained nickel in proven+probable reserves (165.85m wmt, F23-F26/F28) with no terminal value [S2], so no value is capitalised beyond the ore body and no resources are assumed converted. Reverse DCF: the price of 745 implies nickel well below the deck in FY2027E - 12% below the deck and 6% below spot per the reverse DCF output - so the market is capitalising a trough price on a company that earns cash at deck. The call is extreme and we say so; the price is also 3.3x FY2026E EV/EBITDA and 1.0x book [S0]."
+        },
+        {
+          "id": "weights.changed",
+          "severity": "WARN",
+          "justified": true,
+          "message": "method weights differ from the industry default {'dcf_life': 0.6, 'ev_ebitda': 0.25, 'pbv': 0.15}",
+          "justification": "The price-to-book leg is dropped and its 15% moved to the life-of-asset DCF, leaving 0.75/0.25. The reason is double counting, not valuation preference: 64% of the book the leg would have marked at 1.78x is the IDR 28,177bn associate investment that the DCF already carries at the same book value in its bridge, so the leg re-marks one asset twice and printed Rp1,240 against the DCF's Rp962 [S0][S2][F16]. EV/EBITDA stays at its house weight because the peer median is struck on the same vendor LTM basis the metric uses, and it shares one bridge with the DCF: the associate stake is added net of the expected mark-down and net debt, the minority and the July dividend are deducted, so operations and stake are each valued once [S0]."
         }
       ],
       "calibration": {
@@ -2833,6 +2892,13 @@
       "type": "initiation",
       "rating": "BUY",
       "tp": 1167
+    },
+    {
+      "version": 2,
+      "date": "2026-11-09",
+      "type": "update",
+      "rating": "BUY",
+      "tp": 1067
     }
   ],
   "news": [
