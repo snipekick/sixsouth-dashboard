@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "asof": "2026-11-10T01:16:32+07:00",
+  "asof": "2026-11-10T01:19:17+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 146,
-    "in_progress": 20,
-    "parked": 178,
+    "published": 147,
+    "in_progress": 18,
+    "parked": 179,
     "stale": 0,
     "not_rated": 2
   },
   "ratings": {
-    "BUY": 54,
+    "BUY": 55,
     "ADD": 10,
     "HOLD": 24,
     "REDUCE": 19,
@@ -81,7 +81,7 @@
         "PERSONAL_HOUSEHOLD"
       ],
       "universe": 135,
-      "published": 35
+      "published": 36
     },
     {
       "desk": "CONSUMER_CYCLICALS",
@@ -469,7 +469,7 @@
       "desk": "CONSUMER_NON_CYCLICALS",
       "template": "commodity_producer",
       "universe": 36,
-      "published": 11,
+      "published": 12,
       "workbook": "models/PLANTATIONS.xlsx",
       "methods": {
         "dcf_fcff": 0.6,
@@ -1912,22 +1912,22 @@
       "name": "PT Austindo Nusantara Jaya Tbk",
       "desk": "CONSUMER_NON_CYCLICALS",
       "industry": "PLANTATIONS",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "BUY",
+      "tp": 2919,
       "price": 1350.0,
-      "tr_pct": null,
+      "tr_pct": 120.43,
       "mcap_idr": 4528136250000.0,
       "adtv_idr": 115960246.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": false,
+      "last_update": "2026-11-10",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": false,
+      "suspended": false
     },
     {
       "ticker": "ANTM.JK",
@@ -3269,7 +3269,7 @@
       "name": "PT Bank Mestika Dharma Tbk",
       "desk": "FINANCIALS",
       "industry": "BANKS",
-      "stage": "revision",
+      "stage": "qc",
       "published": false,
       "stale": false,
       "rating": null,
@@ -17690,7 +17690,7 @@
       "name": "PT Palma Serasih Tbk",
       "desk": "CONSUMER_NON_CYCLICALS",
       "industry": "PLANTATIONS",
-      "stage": "signoff",
+      "stage": "parked",
       "published": false,
       "stale": false,
       "rating": null,
