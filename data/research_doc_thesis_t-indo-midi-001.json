@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-MIDI-001",
+  "title": "MIDI.JK (MIDI.JK)",
+  "meta": {
+    "id": "T-INDO-MIDI-001",
+    "book": "INDO",
+    "ticker": "MIDI.JK",
+    "name": "MIDI.JK",
+    "sector": null,
+    "factors": [],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-09T14:02:35+07:00",
+    "drafted": "2026-11-09T14:02:35+07:00",
+    "judged": "2026-11-09T15:04:55+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 226.0,
+    "target": 268.0,
+    "kill": null,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base-case DCF-blend value Rp267 rounded to the Rp2 tick: 60% DCF at WACC 11.5%/g 3.1%/terminal ROIIC 14% + 25% 9.1x FY2027E EPS + 15% 4.5x FY2027E EBITDA. Entry 226 = 0.85x base, the float/governance discount.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 18.6,
+    "p_down": 0.6,
+    "down_pct": -31.0,
+    "net_div_yield_pct_pa": 5.4,
+    "fee_tax_drag_pct": 1.5,
+    "expected_pct": -6.2,
+    "horizon_years": 3.0,
+    "carry_pct": 16.2,
+    "kelly_full_pct": -57.1
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (n=15, up 50 / down -30, 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 4.2,
+      "action": "review",
+      "name": "ebit_margin_lk",
+      "source": "FY LK profit from operations / net revenue (FY2025A 4.69%, 9M26 5.44%)"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "FY2026 audited LK EBIT margin <4.5% OR gross margin <25.5% OR net store adds <150"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        19888.1,
+        20642.2,
+        22500.0,
+        24345.0,
+        26171.0
+      ],
+      "ebit": [
+        719.2,
+        968.0,
+        1073.0,
+        1186.0,
+        1301.0
+      ],
+      "net_income": [
+        546.4,
+        792.4,
+        815.0,
+        936.0,
+        1034.0
+      ],
+      "eps": [
+        16.34,
+        23.7,
+        24.4,
+        28.0,
+        30.9
+      ],
+      "dps": [
+        7.35,
+        11.85,
+        12.2,
+        14.0,
+        15.5
+      ]
+    },
+    "valuation": {
+      "method": "60% FCFF DCF (5 explicit years FY2026-30, terminal from FY2031; WACC 11.5%, terminal g 3.1%, terminal ROIIC 14%) + 25% P/E 9.1x FY2027E + 15% EV/EBITDA 4.5x FY2027E",
+      "bear": {
+        "value": 156.0,
+        "basis": "Growth -3pp, gross margin -150bp, capex cut to 4.6% as openings slow, WACC 12.0%, g 2.1%; implied exit 3.5x EBITDA."
+      },
+      "base": {
+        "value": 267.0,
+        "basis": "DCF Rp266 + 9.1x FY2027E EPS Rp28.0 = Rp255 + 4.5x FY2027E EBITDA Rp2,257 = Rp293, weighted 60/25/15; implied exit 4.1x vs 4.3x entry."
+      },
+      "bull": {
+        "value": 440.0,
+        "basis": "Growth +2pp, gross margin +100bp, WACC 11.5%, g 4.1%; implied exit 5.7x EBITDA."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-09T14:02:35+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "phase2",
+      "at": "2026-11-09T14:17:13+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-09T14:51:52+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-09T14:57:32+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-09T15:04:55+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "written before document work",
+      "markdown": "MIDI is read as the third minimarket chain: a 77%-parent-controlled, 14%-float, low-margin rollup whose 2023 rights issue diluted holders, whose Lawson foray lost money, and whose growth is capex-hungry. The market reads the 2023-24 de-rating as structural."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed before any market number",
+      "markdown": "| IDR bn | FY2024A | FY2025A | FY2026E | FY2027E | FY2028E |\n|---|---|---|---|---|---|\n| Revenue | 19,888.1 | 20,642.2 | 22,500 | 24,345 | 26,171 |\n| EBIT (LK) | 719.2 | 968.0 | 1,073 | 1,186 | 1,301 |\n| Net income | 546.4 | 792.4 | 815 | 936 | 1,034 |\n| EPS (IDR) | 16.34 | 23.70 | 24.4 | 28.0 | 30.9 |\n| DPS (IDR) | 7.35 | 11.85 | 12.2 | 14.0 | 15.5 |\n\n**Revenue.** 9M26 Rp16,676.3bn, +9.17% (F34/F17); Q4-26 at +8.5% gives FY2026E +9.0%. The 200-store plan (F9) sits on 2,627 stores (F8), but Q1 added 40 (F8); growth tapers to +6.2% by FY2030E.\n\n**Margin.** Gross margin was 26.14% FY2025 and 26.17% 9M26; I hold it flat \u2014 food grows fastest (+11.58%, F19), fresh food flat, so higher-margin blocks are not gaining. Opex (S&D + G&A \u2212 other income) was 20.74% in 9M26 (F35/F36/F37), but Q4-25 alone ran 24.0% (gross profit 1,449.1 less EBIT 160.4 on revenue 5,367.2), so I do not annualise nine months: FY2026E 21.4%, then \u221210bp a year. EBIT is Rp1,073bn (4.77%), not the ~5.4% the nine-month run-rate implies.\n\n**Below EBIT.** D&A 4.4% (FY2025 4.56%), net interest \u221235/\u221230/\u221225, tax 19% (FY2025 17.7%, normalised), EPS on 33,435.3m shares, DPS at the 50% payout (F14/F16). FY2025 net carries a Q4-25 non-operating gain (PBT Rp246.5bn vs EBIT Rp160.4bn), so FY2026E net growth is +2.9% headline, ~+13% clean.\n\n**Owner earnings and returns.** FY2025 CFO Rp1,657.2bn (F45) less cash capex Rp1,141.9bn = FCF Rp515.3bn; NI\u2212CFO over assets \u22129.5%: accruals clean. Maintenance capex is D&A Rp941.7bn (F3), growth Rp200.2bn; the segment note's Rp1,493.6bn (F29) is gross, including Rp363.9bn non-cash ROU (F28). Reinvestment is 6.66% capex less 4.4% D&A = 2.26% of sales against a 3.8% NOPAT margin, a ~59% rate; at 15% ROIIC that funds 8.9% growth. The Rp7.5bn-per-store reading overstates new-store capex: D&A per store of Rp364m implies a ~Rp2.5-3bn asset.\n\n**Fade and terminal.** Excess returns fade by year 10. Terminal g 3.1% is CPI (3.28% FY2027E deck) with no real growth; terminal ROIIC 14%, above the 11.5% WACC on outside-Java density but below the 20%+ the 2023-25 recovery printed, which the Lawson exit flattered. Implied exit is 4.1x EBITDA vs 4.3x entry and a 5.37x peer median \u2014 no multiple expansion.\n\n**Valuation.** DCF Rp266 (WACC 11.5%, g 3.1%) at 60%, 9.1x FY2027E EPS 28.0 = Rp255 at 25%, 4.5x FY2027E EBITDA 2,257 (below the 5.37x median) = Rp293 at 15%: base Rp267. Sensitivity: \u00b150bp EBIT margin \u00b1Rp35; WACC 11-12% Rp312-272; g 2.1-4.1% \u00b1Rp30. Terminal value is 74% of EV, above the house's 53.6%."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate",
+      "detail": null,
+      "markdown": "Accruals clean. **Other income** Rp230.8bn (F38) is 24% of LK EBIT Rp968.0bn (F1), recurring but non-operating; a 50% haircut costs ~Rp30/share. **Related party:** Rp203.9bn of distribution to PT Trimitra Trans Persada is 49.67% of the line (F49/F50), purchases 1.59% (F51/F52), management fee Rp5.3bn (F53) \u2014 disclosed, but a governance discount is warranted. **IDX regime:** no pemantauan khusus; shares constant since the July 2023 rights issue (F55). **Leases:** PSAK 73 liabilities Rp680.8bn (F32) treated as debt, ROU additions in capex. **Data defect:** the dossier's EBIT Rp763.8bn excludes net other income; LK profit from operations is Rp968.0bn (F1); I use LK basis."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the 2023 rights issue (4,611.8m shares, Rp1,233bn net, F55/F57) funded a capex-hungry rollout; Lawson proved it does not travel; with retail sales at 1.3% (F24), MIDI cannot earn its cost of capital, and 77.09% parent control (F22) leaves minorities without a remedy.\n**Why wrong:** the operating record contradicts saturation. 9M26 revenue +9.17% and EBIT +18.4% (F34/F40) lifted the EBIT margin to 5.44% from 5.02%, with the loss-maker gone and negative working capital part-funding the rollout. The de-rating is a dilution and sentiment hangover, not a unit-economics failure; ROIIC is mid-teens versus 11.5% WACC.\n**What proves us wrong:** FY2026 EBIT margin fails to hold 4.5%, gross margin falls below 25.5%, or net store adds drop under 150 with revenue growth under 6%."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Other income Rp230.8bn (F38) is 24% of LK EBIT Rp968.0bn (F1); strip it and the FY2025 operating margin is 3.6%, not 4.7%.\n2. Q4-25 EBIT was Rp160.4bn on Rp5,367.2bn revenue, a 3.0% margin (datapack 2025Q4; 9M26 in F40); a repeat leaves FY2026 EBIT near Rp1,070bn.\n3. Real retail sales grew 1.3% yoy in August 2026 (F24) against MIDI's +9.17% (F17): the gap is share gain and price, not industry growth.\n4. Distribution bought from PT Trimitra Trans Persada was Rp203.9bn, 49.67% of the line (F49/F50); affiliate pricing can take margin minorities cannot control.\n5. Capex was Rp1,493.6bn gross in FY2025 (F29), ~Rp1,500bn planned for 2026 (F10), 6.66% of sales; my FY2026E FCF of Rp393bn does not cover the Rp408bn dividend \u2014 the payout is not self-funded that year."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029; the position lost 30%. The likely reason is a structural de-rating: Kopdes Merah Putih and Alfamart/Indomaret density capped same-store sales, MIDI kept opening stores into a 1-2% market, capex stayed above 6% of sales, FCF never covered the dividend, the board cut the payout, and the multiple stayed at 4x EBITDA. The second is governance: affiliate distribution pricing took the margin the minority underwrote. The third is accounting: the Rp230bn other income was not operating and faded, taking ~2pp off the margin."
+    },
+    {
+      "heading": "IDX microstructure, macro stance and levels",
+      "detail": null,
+      "markdown": "Free float is 14.24% against the exchange's 15% minimum due 2027-03-31; AMRT holds 77.09%, institutions 4.1%, and MSCI's Standalone consultation runs to mid-2027; the name is not HSC-listed. Three-month ADTV is Rp2.22bn, no zero-volume days; a Rp10bn position is ~23 sessions at 20% participation; the 25% ARB band at Rp248 means a kill exit can gap toward Rp153. Macro stance NEUTRAL: staples minimarkets are not the AVOID rate-sensitive discretionary sleeve, but 1.3% retail-sales growth and rupiah pressure leave no consumption tailwind. Levels: entry Rp226 (0.85x base 267, the float/governance discount), target Rp268 (base value, tick-rounded), kill Rp204 (the 4.0% FY2027 EBIT-margin case). At Rp248 the EV is negative; own it only at 226. Kelly at p 0.40, b 2.96: own 19.8% full / 5.0% quarter; library b 1.67: 4.0% / 1.0%."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "The v2 model answers the card's three questions: capex is 6.66% (Rp1,500bn), the FY2026E EBITDA margin is 9.17% with a \u22128bp calibration gap, and the terminal exit is 4.6x EBITDA against a 5.37x peer median. On the operating lines we agree: the model's FY2026E EBIT is Rp1,075bn, mine Rp1,073bn. The gap is valuation: the house runs ten explicit years to FY2035 and terminal ROIIC near double the 11.5% WACC, producing Rp344 and a Rp343 target; I fade by year five at terminal ROIIC 14%, producing Rp267 and a Rp268 target. The report calls terminal ROIC its most aggressive call. I will not underwrite double-WACC returns a decade out for a replicable format facing the Kopdes rollout. That, not near-term cash flow, is the disagreement."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. [FATAL] Payoff mis-set before probability: at 226, target 268 + 16.2 carry \u2212 1.5 drag = 33.3% / 3y = 10.06%/yr \u2014 under the 10.44% hurdle at p_up 1.0. Rp272 was needed; your base is 267.\n2. [FATAL] Sub-hurdle at every executable price. EV 6.6%/3y = 2.15%/yr. With target 268 and kill 204, 34.7% needs entry Rp177 \u2014 below your own kill. At 204: 17.5%; at 248: \u22122.4%.\n3. [FATAL] The down leg is a stop, not a scenario: \u22129.7% uses the kill while upside uses base 267, not the 440 bull. Your bear is 156 (\u221231%); the archetype base_down is \u221230%. On that leg EV at 226 is \u22126.2%.\n4. [FATAL] 5.44% 9M26 margin does not reconcile. Dossier quarters total 834.4 on 16,676.3 = 5.00%. 5.44% (907) implies 9M26 other income 72.8 vs ~163 in 9M25 \u2014 a 55% fall in the line you capitalise at 231 in perpetuity. If 73 holds, FY2026E EBIT ~1,000 (4.4%) and the 4.2% kill nearly trips.\n5. [MATERIAL] 226 = 0.85 \u00d7 267, tick-rounded, not derived from tape or valuation. The float/governance premium is the 1% COE add (coc.coe_premium); 0.85 charges it twice. At 248 EV is \u22122.4%: the trade is the multiplier.\n6. [MATERIAL] 14% terminal ROIIC is unsourced and outside the house sensitivity surface (lowest print 287). The claimed 248\u2192267 mispricing (7.7%) is inside your own \u00b1Rp35 band: a haircut, not an edge. The house at 343 is more bullish: the variant is fade length, not information.\n7. [MATERIAL] 14.24% float against a 15% minimum due 2027-03-31 is uncited. If true, ~254m shares (~Rp63bn, ~28 ADTV sessions) must clear above your entry in five months; catalyst_date is null; 226, a 9% placement discount, does not quantify it.\n8. [MATERIAL] Kill 204 is a price stop: \u22129.7% in a 0.74-beta, 25%-ARB name fires before the 4.2% KPI can falsify anything. ARB gap fills realise \u221225/\u221235%, which down_pct ignores. Keep the KPI, drop the price exit.\n9. [MINOR] b 2.96 \u2260 18.6/9.7 = 1.92; it reproduces the Rp293 EBITDA cross-check, not the committed 268. At b 1.92 Kelly is 8.7% full / 2.2% quarter, not 19.8/5.0 \u2014 2.3x overstated.\n10. [MINOR] Integrity: draft\u2192phase2 in 14m38s for a 57-fact DCF; priors recite document facts (77.09%, 14.24%, 2023 rights issue); p_up equals the registry 0.40 exactly, while that entry requires an intact competitive position that falling revenue/store and flat LFL contradict. Flagged for QC.\n\n**Verdict: MAJOR_REVISION.** Strongest sentence: at the committed Rp226 the thesis returns 10.06%/yr even if it is certain to work, so the payoff, not the probability, already fails the hurdle \u2014 and on an honest 30% down leg the expected value is negative.\n**Stop objecting:** none on the committed structure \u2014 at the kill (204) EV is still 17.5% against 34.7%. Rp223 is the entry at which a certain win clears 10.44%/yr; the fix is a higher target or an honest down leg, not a lower price.\n\nDREW (BEAR), 2026-11-09T14:51:52+07:00"
+    },
+    {
+      "heading": "Revision",
+      "detail": "Drew MAJOR_REVISION",
+      "markdown": "1. Conceded. 18.6+16.2\u22121.5 = 33.3%/3y = 10.06%/yr at p_up 1.0, below 10.44%. Rp272 clears; base is 267. No new evidence, so I cannot raise the target.\n2. Conceded. 6.6% (2.15%/yr) and 17.5% at 204 are sub-hurdle; Rp177 only worked because the old kill doubled as the down leg.\n3. Conceded. \u22129.7% is the stop, not my bear. On 156 (\u221231.0%) at 226: 0.40\u00d7(18.6+16.2)+0.60\u00d7(\u221231.0)\u22121.5 = \u22126.2%/3y, \u22122.1%/yr vs 10.44%; ev_math restated.\n4. Unresolved. Dossier quarters give 834.4/16,676.3 = 5.00%; 5.44% implies the 72.8 vs ~163 other-income fall, but no 9M26 other-income line is in my packet. I cannot verify Rp231bn is recurring; the thesis is unproven on this line.\n5. Conceded. 226=0.85\u00d7267 double-counts the float discount already in the +1% COE premium and is not tape- or valuation-derived.\n6. Conceded. 14% terminal ROIIC is unsourced and outside the engine grid (lowest 287); the 248\u2192267 move is inside my \u00b1Rp35 band, so it is not edge.\n7. Conceded. Float 14.24% is sourced in the house model (S25) but uncited here, and the ~254m-share (~Rp63bn, ~28 ADTV sessions) overhang is not quantified in a 226 entry.\n8. Conceded. 204 is a price stop; the 25% ARB can gap fills to \u221225/\u221235%. I have dropped the price exit and kept the 4.2% KPI and date tests.\n9. Conceded. b reproduced Rp293, not 268. At honest b 0.60 own-Kelly is negative (f=\u22120.60): zero size.\n10. Accepted, flagged to QC. Priors recite document facts; p_up 0.40 is the registry anchor, not evidence, and is generous given falling revenue/store. I do not defend it.\n\n**Recommendation: KILL.** At 204: 0.40\u00d7(31.4+16.2)+0.60\u00d7(\u221223.5)\u22121.5 = +3.4%/3y (1.1%/yr). The hurdle needs ~Rp155, the bear itself. No entry above the kill clears 10.44% on an honest down leg; point 4 is unproven and the payoff fails even at certainty. No defensible rebuild here."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**KILL \u2014 valuation.** ALDRICH (JUDGE), 2026-11-09T15:04:55+07:00. Correction applied: 35 KILL / 5 PASS_REDUCED / 0 fills, 12/28 kills left gains \u2014 I return mis-specified arithmetic, but I kill where business value cannot fund an enterable price.\n\nChain verified: lint PASS (two warnings: payoff 1.02, 2,327 words); stamps monotonic 14:02\u219214:17\u219214:51\u219214:57\u219215:04, actors correct, Bear log verbatim; model untouched; nothing raised, so no `new evidence:` is owed.\n\n1. Drew point 1 verified: 18.6+16.2\u22121.5 = 33.3%/3y = 10.06%/yr at p_up 1.0, under 10.44%. Breakeven is Rp269.2 against a Rp267 base: the thesis fails at certainty.\n2. Point 3 verified: at 156 (\u221231.0%) EV is \u22126.2%/3y = \u22122.1%/yr; at \u221220% it is +0.8%/3y. The down leg is now honestly booked.\n3. Point 4 checked against the dossier: 9M26 quarters sum 834.4/16,676.3 = 5.00%, not 5.44%; the committed 1,073 needs Q4-26 EBIT 238.6, +49% on Q4-25's 160.4. The capitalised 231 other income is unproven \u2014 load-bearing, and it only lowers the payoff I kill on.\n4. ESSA reconciled: there the level set was rebuildable (horizon, carry, exit) and EV cleared at entry. Here any rebuild must raise the target above the model's own base \u2014 barred absent new evidence \u2014 or cut p_up and worsen EV. The base value is a ceiling, not an anchoring objection. Business value (267 against a 248 tape, inside the analyst's \u00b1Rp35 band) cannot fund a position at any price I can enter: valuation.\n5. Point 10 accepted: p_up 0.40 is an anchor, not evidence; here it would have to attach conditionally. Not itself dispositive.\n\nSession: 1 chain judged, KILL; no name here was passable had it been built correctly."
+    }
+  ]
+}

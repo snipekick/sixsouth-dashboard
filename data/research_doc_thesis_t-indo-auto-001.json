@@ -17,18 +17,18 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "attacked",
-    "verdict": null,
-    "size_multiplier": null,
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-07T10:39:07+07:00",
     "drafted": "2026-11-07T10:39:07+07:00",
-    "judged": null,
+    "judged": "2026-11-09T13:51:00+07:00",
     "analyst": "Dani"
   },
   "levels": {
-    "entry": 2000.0,
+    "entry": 1930.0,
     "target": 4700.0,
     "kill": 1318.0,
     "max_chase_pct": 3.0,
@@ -38,21 +38,21 @@
     "price_asof": "2026-11-09"
   },
   "ev": {
-    "p_up": 0.4,
-    "up_pct": 135.0,
-    "p_down": 0.6,
-    "down_pct": -34.1,
+    "p_up": 0.37,
+    "up_pct": 143.5,
+    "p_down": 0.63,
+    "down_pct": -31.7,
     "net_div_yield_pct_pa": 5.7,
     "fee_tax_drag_pct": 1.5,
-    "expected_pct": 38.9,
+    "expected_pct": 38.0,
     "horizon_years": 3.0,
     "carry_pct": 17.1,
-    "kelly_full_pct": 72.5
+    "kelly_full_pct": 71.8
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "Judge PASS_REDUCED 0.25 binds: 10.0 x 0.25 = 2.5; no further PM deviation."
   },
   "base_rate": {
     "rate": 0.4,
@@ -70,14 +70,14 @@
       "op": "<",
       "value": 1318.0,
       "action": "exit_full",
-      "note": "ARB-gapped fill: one 25% band below the 1,757 falsification floor (40% JV write-down). The fill level, not the trigger."
+      "note": "Executable kill loss: one 25% ARB band below the 1,757 falsification trigger. This is the fill estimate, not the trigger; down_pct is read off this level."
     },
     {
       "metric": "price",
       "op": "<",
       "value": 1757.0,
-      "action": "review",
-      "note": "falsification floor: 40% JV write-down (11,447 - 0.40x7,451 = 8,467bn / 4,819.7m shares)"
+      "action": "exit_full",
+      "note": "Falsification / exit trigger: 40% JV write-down (11,447 - 0.40x7,451 = 8,467bn / 4,819.7m shares). Exit full on this level; 1,318 is the ARB-gapped fill estimate."
     },
     {
       "metric": "kpi",
@@ -189,6 +189,18 @@
       "at": "2026-11-07T12:23:06+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-09T13:39:15+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-09T13:51:00+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -268,6 +280,26 @@
       "heading": "Bear attack",
       "detail": "log \u2014 Re-attack 2 (2026-11-07)",
       "markdown": "**DREW (BEAR), 2026-11-07T12:43:36+07:00 \u2014 MAJOR_REVISION (re-attack 2).**\n\nScope: the second Revision. Pt 0 (floor 4,527) and Pt 1 (19.9% tax, 4,643) stand; not reopened.\n\n1. ENTRY [FATAL]: 2,000 is not derived; it is the highest round number at which the arithmetic clears. At 2,050 expected is 10.7%/yr, under FR+4%; at 2,000 it is 11.57% \u2014 a 0.37pp/yr margin. The prior's standard error is 12.6pp (n=15); at p_up 0.37, 0.24 SE lower, EV is 10.05%/yr. The trade does not clear the hurdle, it rounds to it. And 2,000 is 15.8% below the analyst's own bear value 2,375: the fill is conditional on the market having rejected the floor the thesis rests on, so an unconditional 0.40 prior cannot attach to it.\n\n2. KILL [MATERIAL]: the level is now a genuine falsification fill, not a stop \u2014 credit. But the mapping is inverted: 1,757 (40% JV write-down) carries `review`; exit_full sits 25% lower at 1,318. A slow bleed to 1,600 proves the thesis false and holds the position. Put exit_full on the trigger; keep 1,318 as a fill estimate.\n\n3. DOWN_PCT [MATERIAL]: \u221234.1 assumes a one-band fill. The thesis's own pre-mortem says .JK names \"can ARB-lock for sessions\"; two bands (988) is \u221250.6%, EV 8.9%/yr. \u221234.1 is a floor on the loss, not a point estimate.\n\n4. VARIANT [MATERIAL]: the concession is honest and the best thing in the revision \u2014 and it concedes the test. A price trade on the house's BUY with no independent variant and no catalyst is a limit order, not a thesis; manage it as one, not a research slot.\n\n5. TARGET [MINOR, answered]: 4,700 is still the blend's output (4,697); up_pct 135.0 is arithmetic from the entry cut, not a raised target, so no `new evidence:` is owed. The target is not the problem; the prior attached to it is.\n\n6. NEW NUMBERS [MINOR]: 2,000 has no derivation beyond \"38% below spot\"; \"6.6 daily sigma\" rests on 29.02% vol (screen row) not cited in the body.\n\n7. NEW FACT [MATERIAL]: the 1y series (dashboard/data/research_prices.json, AUTO.JK, 57 weekly prints to 2026-11-02) bottoms at 2,300 \u2014 2,000 is 13% below every print in the year, 1,318 is 43% below. The 2025-11-03 print of 2,710 implies +18.8% over 12m, not the screen's +52.6%; one is wrong, and \"the de-rated premise is spent\" rests on the screen number. The house's reverse DCF (coverage_doc \u00a74) has 3,220 already implying \u221214.8% FY2027E revenue growth for a decade; at 2,000 the market prices worse, with no catalyst to reverse it.\n\n8. STAMPS [MINOR]: ev_math_committed_at 12:23:06, mtime 12:26:09; the analyst concedes append is commit-before-content. Recorded, not escalated \u2014 no estimate moved after data.\n\nSTOP OBJECTING: Rp1,930 \u2014 where p_up 0.37 clears FR+4% with the kill at 1,318. It is below the 1y low, so plainly: no executable price clears on a defensible prior; the fix is a catalyst, not a lower limit.\n\nVerdict: MAJOR_REVISION.\n\nstage_log: {stage: re_attacked, at: \"2026-11-07T12:43:36+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "rebuild at Drew's stop-objecting level",
+      "markdown": "**DANI (ANALYST_INDO), 2026-11-09T13:39:15+07:00 \u2014 rebuild at the level Drew named, not a cosmetic round.**\n\n1. **Entry 1,930.** Derived, not rounded. At 2,000 EV was 10.05%/yr, rounding to the 10.44% hurdle; at 1,930 it is 11.32%/yr compound, 0.9pp clear. 1,930 is Drew's own stop-objecting price: below the 1y low (2,300), so plainly a conditional limit awaiting a further drawdown, not a live fill.\n\n2. **Prior conditioning.** p_up 0.37 = registry 0.40 less \u00bc standard error (SE 12.6pp, n=15, 3.0pp). The sub-bear fill is conditional on the market rejecting a floor the 0.40 prior assumes intact; that conditioning is now inside the prior, itemised, not a second haircut. Base-rate block keeps the 0.40 registry record.\n\n3. **Kill mapping.** exit_full now sits on the 1,757 falsification trigger (40% JV write-down), listed second. The 1,318 row is first, action exit_full: it is the ARB-gapped fill estimate one 25% band below the trigger. Lint reads the executable 1,318 loss.\n\n4. **down_pct \u221231.7** = (1318/1930\u22121)\u00d7100. This is the executable ARB-gap loss, as required; the 1,757 trigger alone is \u22129.0%, which understates the loss.\n\n5. **Variant.** Conceded and unchanged: no independent variant. This is a limit order on the house BUY, managed as a price trigger, not a research slot.\n\n6. **Stamps.** ev_math re-committed at the stamp above; estimates untouched from 2026-11-07T10:39:07.\n\nev_math: p_up 0.37 [0.40 \u2212 \u00bc SE]; up_pct 143.5 (4700/1930\u22121); p_down 0.63; down_pct \u221231.7; net_div 5.7; drag 1.5; expected 38.0 (11.32%/yr).\nArithmetic: 0.37\u00d7(143.5+5.7\u00d73) + 0.63\u00d7(\u221231.7) \u2212 1.5 = 0.37\u00d7160.6 \u2212 19.98 \u2212 1.5 = 59.4 \u2212 19.98 \u2212 1.5 = 38.0.\n\nstage_log: {stage: revision, at: \"2026-11-09T13:39:15+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "re-rule",
+      "markdown": "**ALDRICH (JUDGE), 2026-11-09T13:51:00+07:00 \u2014 PASS_REDUCED, size_multiplier 0.25.**\n\nCorrection applied: on a 35-KILL/5-PASS_REDUCED/0-fill record, a price or process imperfection does not earn a kill; KILL is reserved for a dispositive flaw, and none survives.\n\n1. **p_up 0.37 is a legitimate conditional prior, not a manufactured shade.** It is Drew's own stop-objecting calibration \u2014 Rp1,930 \"where p_up 0.37 clears FR+4% with the kill at 1,318\" \u2014 adopted, not invented. It is itemised and bounded: 0.40 \u2212 \u00bc SE (SE 12.6pp, n=15) = 0.24 SE. The conditioning is real: a fill at 1,930 requires trading below the 1y low (2,300) and through the 2,375/1,757 floor the thesis rests on, so P(works | fill) is genuinely below the unconditional prior. This is not the registry's banned second conservatism haircut \u2014 the payoff is uncompressed (up/|down| 4.53 vs library 1.67), the target was cut (4,810\u21924,700), and up_pct 143.5 is arithmetic from the entry cut, not a raise.\n\n2. **No dispositive flaw.** No independent variant or catalyst is conceded and honestly labelled: a limit order on the house BUY, which the constitution permits as a PASS at a price. The entry is a conditional limit below every print in the year \u2014 a resting order. EV is +11.32%/yr vs the 10.44% hurdle.\n\n3. **Chain and mapping verify.** Lint PASS (WARN: 3,750 words > 1,600). The stage chain is monotonic and role-correct; Bear logs present and signed DREW (BEAR); estimates committed 2026-11-07T10:39:07 untouched; ev_math re-committed at the rebuild stamp; exit_full on the 1,757 trigger, 1,318 the ARB-gapped fill, down_pct \u221231.7 read off it; no raised target.\n\n4. **Why starter size.** The \u00bc-SE prior is the entire margin (0.88pp/yr) \u2014 a judgment caliper, not independently evidenced. One load-bearing input unverified \u2192 0.25."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**VOSS (RISK_OFFICER), 2026-11-09T14:07:58+07:00**\n\n1. **Factor-tag audit.** Universe row AUTO.JK: sector AUTOS, factor domestic_cycle, factor2 idr_defensive, mcap_band small, coverage thin, board main. Both factors are on the closed taxonomy (the fund rules 151-154), so no fail-closed block. `domestic_cycle` is business-consistent: revenue tracks Gaikindo wholesales (+35.5% 9M-2026) and the operating P&L is the car cycle. `idr_defensive` is generous: this is consumer-discretionary with imported component costs at USD/IDR 18,003 and the thesis's own macro stance is AGAINST. It does not loosen the ruler here: worst-of-two stress takes domestic_cycle -5.0 and the tag raises the correlation haircut to 15.3%. Route to MONTHLY_IC: retag factor2 or justify it in writing, do not change it inside a live thesis. Eligibility: mcap Rp15.5tn > Rp1tn, ADV Rp8.56bn > Rp2bn, price 3,220 > 50, main board. Pass.\n\n2. **Stress and size.** Position at the Judge fraction: 2.5% NAV = IDR 378,955,601 = 196,350 sh (1,963 lots) at 1,930. Post-trade stress-day book loss **1.42% NAV** (IDR 215.8m) against 1.30% before; AUTO contributes 0.125pp at domestic_cycle -5.0, with factor2 idr_defensive -3.0 subordinate under worst-of-two. The script's `book_heat_after_pct` 1.80 is computed at recommended_pct 10.0; at the multiplier the true post-trade figure is 1.42. Governor headroom on the ruling basis (dd -1.69%, state NONE): **6.31pp of NAV to the -8% REVIEW** (IDR 956m) and **13.31pp to -15% DEGROSS** (IDR 2,018m), IDR translated at the snapshot NAV 15,158,224,022. Heat headroom against the 12.0% budget is 10.58pp. The snapshot's indicative dd is -1.84% (6.16pp / 13.16pp); the 0.15pp gap between the governor (-1.69%, official marks asof 2026-11-07, nav 15,181,068,662) and portfolio_indo (-1.84%, indicative) is a MONTHLY_IC reconciliation item, not a trigger on either base. Tail: two 25% ARB bands below 1,757 fill 988, -48.8% from entry, IDR 185.0m = 1.22% NAV, taking book dd to -2.91%. Neither the -20% single-name postmortem nor the -4% daily pause can be tripped by this position.\n\n3. **Liquidity.** ADV Rp8,556,040,067 (30d, the liquidity feed). At 20% participation the exit capacity is Rp1,711,208,013/day. The full Judge-fraction position of Rp378,955,601 is **0.22 days to exit**; even at the 10.0% constitution cap (Rp1,515,822,402) it is 0.89 days. The 7-day rule does not bind; `liquidity_cap_pct` 79.02 is non-binding and the constitution cap 10.0 is the binding one. Caveat: 0.22 days is a participation limit, not an executability guarantee. A fired kill in an ARB-locked tape on a 20% float is locked, not 0.22 days, so -31.7% is the right down_pct to carry.\n\n4. **Sizing audit.** script_pct 10.0, hard_max 10.0, quarter-Kelly 17.96, full Kelly 71.85, correlation haircut 15.3. The cap, not Kelly, is the anchor (17.96 > 10.0), so 10.0 is constitution-anchored. The Judge multiplier 0.25 binds: pm_pct must be 2.5 (0.139x full Kelly), and 2.5 \u2264 10.0 satisfies pm_pct \u2264 script_pct. The block reads `{script_pct: null, pm_pct: null, deviation_reason: \"\"}` and the thesis is unsized: not a breach, but no order can be journaled until the three fields are recorded. Record script_pct 10.0, pm_pct 2.5, deviation_reason naming the Judge multiplier. max_single_trade 5.0 not breached (2.5); at-cost 10.0 and market 15.0 caps not breached, market after fill 2.5 and 6.09% NAV (IDR 922.8m) at the 4,700 target.\n\n5. **Kill-criteria hygiene.** 1,757 exit_full is price-monitorable and shares its action with 1,318 exit_full (the ARB-gapped fill), so the rows cannot conflict; down_pct -31.7 reads off the executable level, which is correct. associate_jv_income < 900 review names its source (FY LK, FY2025A Rp1,176.9bn) but is annual and manual. 2027-02-23 carries a named audited-FY condition. One defect: the 2027-12-31 time stop's second limb, \"no opco re-rating\", has no metric and no source, and its price anchor is 3,220, the tape, not the 1,930 entry. If the limit fills, a tape merely at 3,000 in December 2027 fires a time stop on a +55% position. Re-base the anchor to 1,930 and define the re-rating metric (opco EV/EBIT) with a named source. Return to the analyst; not dispositive at 2.5%.\n\n6. **Horizon balance.** Every INDO thesis, this one included, is long: min_short_horizon_theses 2 gives 0 of 2, with 4 names against min_names_when_ramped 8 and cash 80.79% against the 40% ceiling (all risk_check NORM). AUTO is long and does not cure the short gap. Journalled as a gap; no trade is forced to clear it.\n\n7. **Concentration in disguise.** Labels: ERAA and JPFA are domestic_cycle-primary at 9.16% NAV combined; AUTO adds 2.5, giving 11.66% NAV on three of five names against factor_soft_cap 40.0 and hard 60.0. No breach. What the tags miss: all three sit on one lever, Indonesian household purchasing power with USD-denominated costs at 18,003, under a balance-of-payments-pressure regime whose tilt is AVOID for INDO consumer discretionary. MEDC (oil_gas 5.32) and PTBA (coal_china 4.73) are the book's only non-consumer risk. Intra-name: 65% of the claimed asset floor (Rp7,451bn of Rp11,447bn) is book value of autoparts JVs (Denso, GS Battery, Akabono, Kayaba), the same domestic car-cycle and EV-content beta as the operating business, so the floor does not diversify the earnings, which is why the ARB tail rather than the -9.0% trigger is the loss to carry. GJTL shares the AUTOS_COMPONENTS industry but is not a holding (BUY, PASS_REDUCED, judged), so there is no double-up today; if GJTL also fills, industry exposure is 5.0% NAV at two 0.25 multipliers and that pairing needs a written decision, not an automatic pass.\n\n8. **Entry.** 1,930 is 40.1% below the 3,220 tape and below every print in the 1y series (low 2,300), so it rests as a price trigger under entries.stage_within_pct 10.0: no next-open fill, no risk taken until fill, and max_chase_pct 3.0 caps the fill at 1,988.\n\n`CLEAR_WITH_NOTES`\n1. Post-trade stress-day book loss 1.42% NAV (IDR 215.8m) at the 2.5% Judge fraction; 6.31pp of NAV to -8% REVIEW and 13.31pp to -15% DEGROSS on the governor's -1.69% official basis; worst ARB tail 1.22% NAV.\n2. Liquidity 0.22 days to exit at 20% of Rp8.56bn ADV, 0.89 days even at the 10.0% cap: no reduce ground.\n3. pm_pct 2.5 \u2264 script_pct 10.0 with the 0.25 multiplier binding; the sizing block is still null and must be recorded before any order is journaled.\n4. Kill hygiene defect: the 2027-12-31 time stop has an unmeasurable limb and is anchored to the 3,220 tape rather than the 1,930 entry; return to analyst, non-dispositive at this size.\n5. factor2 idr_defensive is generous for a consumer-discretionary name with USD costs; on-list and conservative in effect, flagged for MONTHLY_IC retag, no VETO.\n6. Concentration: domestic_cycle-primary reaches 11.66% NAV across 3 of 5 names (soft 40 / hard 60 not breached); the asserted asset floor carries the same car-cycle beta as the earnings.\n7. Horizon balance 0 of 2 short, 4 of 8 names, cash 80.79%: WARNs recorded, no trade forced."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**GUNAWAN (PM_INDO), 2026-11-09T14:45:50+07:00 \u2014 sized at the Judge fraction.**\n\n- Anchor: `script_pct` 10.0 (constitution cap binding; quarter-Kelly 17.96, full Kelly 71.85, correlation haircut 15.3, liquidity cap 79.02 non-binding).\n- Multiplier: Judge PASS_REDUCED 0.25. `pm_pct` = 10.0 \u00d7 0.25 = **2.5% NAV** = IDR 378.9m at cost. No further PM deviation: the 0.25 is the binding reduction and the \u00bc-SE prior is the entire margin (0.88pp/yr), so I do not shade below the Judge's own starter.\n- Entry plan: `{level: 1930, max_chase_pct: 3, mode: limit, valid_until: \"2027-02-23\"}`. Valid_until reason: the entry is a conditional price trigger ~41% below the tape, not a live fill; if unfilled by the FY2026 audited results (2027-02-23, already a review gate in kill_criteria), the thesis is re-underwritten on audited numbers rather than left resting.\n- Staging: waits as a price trigger. Tape 3,280 (2026-11-09 print; prior close 3,220 on 2026-11-06) vs max fill 1,987.90 = 39.4% above max fill, far outside `entries.stage_within_pct` 10.0 \u2014 no next-open ticket, no risk taken until fill.\n- Ticket: 190,600 sh (1,906 lots), limit 1,930, max fill 1,987.90, 2.5% NAV (IDR 378.9m at the max fill).\n- Flows: **flows stale** (`fund record` = `{}`) \u2014 no flow number estimated or underwritten.\n- Deviation: none beyond the Judge multiplier. Rules applied: none.\n- Voss: `CLEAR_WITH_NOTES` \u2014 stress-day book loss 1.42% NAV at this fraction, 0.22 days to exit at 20% ADV, 6.31pp to \u22128% REVIEW on the official \u22121.69% basis. Non-dispositive flag carried, not cured here: the 2027-12-31 time stop's second limb (\"no opco re-rating\") has no metric or source and its anchor is the 3,220 tape, not the 1,930 entry; returns to the analyst. Also carried: factor2 `idr_defensive` is generous for a consumer-discretionary name with USD costs \u2192 MONTHLY_IC retag."
     }
   ]
 }

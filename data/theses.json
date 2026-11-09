@@ -521,21 +521,21 @@
   },
   {
     "meta": {
-      "id": "T-INDO-AVIA-001",
+      "id": "T-INDO-AUTO-001",
       "book": "INDO",
-      "ticker": "AVIA.JK",
+      "ticker": "AUTO.JK",
       "horizon": "long",
       "status": "judged",
       "verdict": "PASS_REDUCED",
       "archetype": "derated_compounder_rerating",
       "catalyst_date": null,
-      "last_reviewed": "2026-11-06 14:06:44+07:00"
+      "last_reviewed": null
     },
     "analyst": "Dani",
     "attacked_by": "Drew",
     "judged_by": "Aldrich",
     "excerpt": {
-      "variant_perception": "**Market believes:** 304 pays 9.4x FY2026E, 5.3x EV/EBITDA, 7.9%; a reverse DCF implies \u22122.1% revenue a year to FY2035E.\n\n**Why wrong:** GM 44.2% held a 37% Brent rise (pass-through ~92% oil, ~90% FX); 9M volume +3.5% (F21); 150 centres, 227kt, 76% utilisation (F22, F1, F6); FY2027E 7.0% is volume, not 15.9% price.\n\n**What proves us wrong:** GM 20%.\n3. **Half-conceded.** 7.4x exit gone; 386.4 implies 6.5x FY2029E EBIT from 5.9x \u2014 under the DCF's 8.3x terminal, but 0.5x expansion (6.0x held gives 362).\n4. Held, now priced: the float discount sits in an entry 1.1% *below* the tape.\n5. Down leg \u221215.28\u2192\u221216.83; at the archetype's \u221230% EV is +1.8%, not +0.3%. p_up held 0.40.\n6. Conceded: 12x one year capitalises no volume doubling. Volume trigger tightened <0% \u2192 <3.5%.\n7. Added: margin 23.4\u219222.3\u219221.5% (l.45\u201347), ROE on equity 9,914\u21929,537 (l.34), MSCI Standalone 2027-06-30 (l.38).\n8. Accepted; gross margin stays the only arm's-length test, at the 42% kill.\n9. No change.\n10. Tape 304: up +27.1%, down \u221217.8%, carry 7.77% \u2192 **+8.5%**, own-Kelly +3.8%. At 300.6: **+9.7%**, own-Kelly +27%, library +13%, symmetry 2.87. **Trade, limit \u2264301; do not chase 304.**",
+      "variant_perception": "**Market believes:** AUTO is a controlled, 20%-float autoparts supplier whose earnings are half non-operating and geared to a weakening car cycle, so it deserves a discount and little analyst attention.\n**Why wrong:** at Rp3,220 net cash (4,527) plus associate/JV stakes at book (7,451) plus investment properties cover 74% of the market cap \u2014 the operating business is valued at ~3.1x trailing EV/EBIT, and 2.0x at my 3,000 entry. The Rp1,176.9bn associate line is recurring Denso/GS Battery/Akabono/Kayaba income that arrives tax-paid (the 11.05% blended rate is the tell, not a red flag), and 9M revenue +15% with manufacturing-led volume contradicts decay.\n**What proves us wrong:** associate income below Rp900bn, or EBIT margin under 5.5% with revenue stalls \u2014 then the discount is about the business, not the structure.",
       "kill_criteria": ""
     }
   },
@@ -701,6 +701,26 @@
   },
   {
     "meta": {
+      "id": "T-INDO-IATA-001",
+      "book": "INDO",
+      "ticker": "IATA.JK",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "commodity_capex_turnaround",
+      "catalyst_date": null,
+      "last_reviewed": null
+    },
+    "analyst": "Dani",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** Rp72 vs Rp90 NAV (20% discount); only refi.\n**Why wrong:** EV-zero at p_up 0.81; 0.42 fair at Rp174; 20% gap =6.5 Mt; rollback/discounted rights = bear.",
+      "kill_criteria": "**1. Re-basing \u2014 conceded.** The Bear's arithmetic holds. Cutting p_up 0.42\u21920.30 while leaving the target at Rp90 made Rp27 EV-zero at Rp27.2 \u2014 +0.6% over the horizon against 11.5% CoE. Point 6 of the prior revision already conceded that Note-13's USD18.66m (~Rp11.34/share at IDR19,000) is controller-funded debt added, not netted. Netting it takes base NAV from Rp90 to Rp79. Re-based: up_pct 79/27\u22121 = 192.6, down_pct 1/27\u22121 = \u221296.3, p_up 0.30, drag 2.0 \u2192 0.30(192.6) + 0.70(\u221296.3) \u2212 2.0 = **\u221211.6%**. The target cut is bought by attack point 1; no new evidence. The entry is negative-EV on the thesis's own numbers.\n\n**2. Constitution \u2014 conceded, dispositive.** With target 79 the EV-zero price is Rp23.9. Every price that clears is \u2264Rp23.9; min_price_idr 50 makes all of them unbuyable (at the Rp50 floor, expected \u221253.2%). The off-CSV/UNTAGGED buy VETO is fail-closed and uncurable by price; missing ADV and special-board-vs-main_board_only are independent bars. No buyable price clears.\n\n**3. Gaming \u2014 agreed clean.** stage_log is ordered; no retro-edit. This revision moves only target and expected downward, both bought by point 1, so no flagged new evidence is required.\n\n**Conclusion: KILL.** No buyable price clears and the universe bars are dispositive. Watchlist gate unchanged."
+    }
+  },
+  {
+    "meta": {
       "id": "T-INDO-JPFA-001",
       "book": "INDO",
       "ticker": "JPFA.JK",
@@ -837,6 +857,26 @@
     "excerpt": {
       "variant_perception": "**Market believes:** MEDC's upside is capped \u2014 a mature/declining upstream, a capital-hungry power buildout,\nand high-cost consolidated production mean it mostly pays a covered dividend rather than re-rate on the\ncommodity cycle.\n**Why wrong:** As an upstream producer it is a *long* Brent war-premium (realized prices rise with ~104),\nnot an oil-import loser; gas-weighted (72%) production sells into a structurally short domestic market at\noil-indexed prices, half under fixed-price contracts; E&P gross margin is 55% and lifting cost $8.3/boe \u2014\nbottom-quartile cost curve, not high-cost; reserve replacement is >1.0 (2P 564 vs 493 mmboe); and Medco\nPower's contracted revenue (a 1,011 MW IPP base, past peak capex) is a volatility-reducing floor that\nunderwrites the through-cycle NAV \u2014 the market anchors it to dividend capacity (base-up) and misprices the\ncapex-cycle turnaround (base-up to through-cycle NAV). FY25 net profit of only $100.9M (dragged by $128.8M\nimpairments + $355M one-off acquisition) reads as weakness but cash generation (OCF $906M) is intact.\n**What proves us wrong:** a 2P statement showing reserve replacement =3, observable, current, each citing a filing line)\n1. Reserve replacement ratio 1.0)** [AR2025 p.75]; watch Block A\n   (5.2 mboepd, -24% y/y) vs Block B (+49%) and Corridor 24% add.\n2. Through-cycle Brent breakeven where upstream FCF turns negative lands at/below the present war-premium\n   band \u2192 high-cost producer, no margin of safety. **Derived breakeven \u2248\u2026",
       "kill_criteria": "- **Gross debt FY2025: US$3,646M** (2024: $3,300M) [AR2025 p.26/p.28]; cash $569.1M + restricted $59.8M\n  [AR2025 p.74]. **Net debt \u2248 US$3.0B**; **net debt-to-EBITDA \u2248 2.0x (management views)** (2024: 1.8x),\n  \"within our targeted\" range [AR2025 p.26]. Net Debt/Equity 1.28x [AR2025 p.74].\n- **Through-cycle Brent where upstream FCF turns negative: \u2248 US$45/bbl (analyst estimate, derived \u2014 not a\n  filed line).** Constructed from filed figures: at realized $66.6 oil / $6.8 gas the E&P segment gross\n  margin is 55% and lifting cost $8.3/boe; OCF \u2265 2x organic capex. Sustained Brent far below the ~$66.6\n  realized level \u2014 roughly halving O&G realisations \u2014 would be required to push upstream FCF negative,\n  implying a ~$45 Brent through-cycle breakeven, comfortably below the ~104 Brent war-premium macro frame\n  and the $74\u201385 range the prior idea card tested. Method stated; treat as the falsification input, not a\n  guarantee. Management confirms low-price resilience: \"sustained low oil prices \u2192 cost optimisation,\n  reductions in production costs and adjustments to capex/exploration\" [AR2025 p.113]."
+    }
+  },
+  {
+    "meta": {
+      "id": "T-INDO-MIDI-001",
+      "book": "INDO",
+      "ticker": "MIDI.JK",
+      "horizon": "long",
+      "status": "judged",
+      "verdict": "KILL",
+      "archetype": "derated_compounder_rerating",
+      "catalyst_date": null,
+      "last_reviewed": "2026-11-09T14:57:32+07:00"
+    },
+    "analyst": "Dani",
+    "attacked_by": "Drew",
+    "judged_by": "Aldrich",
+    "excerpt": {
+      "variant_perception": "**Market believes:** the 2023 rights issue (4,611.8m shares, Rp1,233bn net, F55/F57) funded a capex-hungry rollout; Lawson proved it does not travel; with retail sales at 1.3% (F24), MIDI cannot earn its cost of capital, and 77.09% parent control (F22) leaves minorities without a remedy.\n**Why wrong:** the operating record contradicts saturation. 9M26 revenue +9.17% and EBIT +18.4% (F34/F40) lifted the EBIT margin to 5.44% from 5.02%, with the loss-maker gone and negative working capital part-funding the rollout. The de-rating is a dilution and sentiment hangover, not a unit-economics failure; ROIIC is mid-teens versus 11.5% WACC.\n**What proves us wrong:** FY2026 EBIT margin fails to hold 4.5%, gross margin falls below 25.5%, or net store adds drop under 150 with revenue growth under 6%.",
+      "kill_criteria": ""
     }
   },
   {

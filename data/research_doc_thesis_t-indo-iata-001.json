@@ -14,37 +14,37 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "commodity_capex_turnaround",
-    "status": "attacked",
-    "verdict": null,
+    "status": "judged",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-06T13:21:02+07:00",
     "drafted": "2026-11-06T13:21:02+07:00",
-    "judged": null,
+    "judged": "2026-11-09T13:49:51+07:00",
     "analyst": "Dani"
   },
   "levels": {
     "entry": 27.0,
-    "target": 90.0,
+    "target": 79.0,
     "kill": 1.0,
     "max_chase_pct": 3.0,
     "entry_mode": "limit",
-    "target_rationale": "Base NAV/share.",
+    "target_rationale": "Netted base NAV/share: Rp90 less ~Rp11 Note-13/share treated as debt.",
     "price": 74.0,
     "price_asof": "2026-11-09"
   },
   "ev": {
     "p_up": 0.3,
-    "up_pct": 233.3,
+    "up_pct": 192.6,
     "p_down": 0.7,
     "down_pct": -96.3,
     "net_div_yield_pct_pa": 0.0,
     "fee_tax_drag_pct": 2.0,
-    "expected_pct": 0.6,
+    "expected_pct": -11.6,
     "horizon_years": 3.0,
     "carry_pct": 0.0,
-    "kelly_full_pct": 0.3
+    "kelly_full_pct": -6.2
   },
   "sizing": {
     "script_pct": null,
@@ -180,6 +180,18 @@
       "at": "2026-11-06T14:41:29+07:00",
       "actor": "Drew",
       "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-09T13:38:54+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-09T13:49:51+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -244,6 +256,16 @@
       "heading": "Bear re-attack",
       "detail": null,
       "markdown": "**1. p_up 0.30 \u2014 bought, not drift.** Points 4 (0.42 drawn on survivors) and 5 (at-fill p_up 0.30) each name it; arithmetic reconciles: 0.30\u00d7233.3 \u2212 0.70\u00d796.3 \u2212 2.0 = +0.6. But the levels were not re-based: at p_up 0.30 Rp27 is EV-zero (Rp27.2), earning ~0.2%/yr against 11.5% CoE. Revision point 6 concedes Rp90 is an upper bound: its ~Rp11/share Note-13 asset is really debt; netting it gives ~Rp79, up_pct 192.6, expected **\u221211.6%**. The probability moved; the target should have.\n\n**2. KILL \u2014 the constitution decides, not EV.** Dispositive: off-CSV/UNTAGGED buy VETO (the risk checker:396), fail-closed at order time, uncurable by price. Corollary: min_price_idr 50 (the fund rules:64) makes every +EV entry (\u2264Rp27) unbuyable; special board vs main_board_only and missing ADV are independent bars.\n\n**3. Gaming \u2014 clean.** stage_log ordered (13:21:02/13:53:03/14:07:03); estimates_committed_at precedes revision; model and levels unchanged; both ev_math moves bought by points 4/5; no retro-edit detectable.\n\n**Verdict: KILL_RECOMMENDED.** The revision cut the probability but not the price, and its own Rp11/share concession turns the retained Rp90 target into \u221211.6% expected \u2014 dead on its own numbers before the constitution speaks."
+    },
+    {
+      "heading": "Revision",
+      "detail": "Bear KILL_RECOMMENDED",
+      "markdown": "**1. Re-basing \u2014 conceded.** The Bear's arithmetic holds. Cutting p_up 0.42\u21920.30 while leaving the target at Rp90 made Rp27 EV-zero at Rp27.2 \u2014 +0.6% over the horizon against 11.5% CoE. Point 6 of the prior revision already conceded that Note-13's USD18.66m (~Rp11.34/share at IDR19,000) is controller-funded debt added, not netted. Netting it takes base NAV from Rp90 to Rp79. Re-based: up_pct 79/27\u22121 = 192.6, down_pct 1/27\u22121 = \u221296.3, p_up 0.30, drag 2.0 \u2192 0.30(192.6) + 0.70(\u221296.3) \u2212 2.0 = **\u221211.6%**. The target cut is bought by attack point 1; no new evidence. The entry is negative-EV on the thesis's own numbers.\n\n**2. Constitution \u2014 conceded, dispositive.** With target 79 the EV-zero price is Rp23.9. Every price that clears is \u2264Rp23.9; min_price_idr 50 makes all of them unbuyable (at the Rp50 floor, expected \u221253.2%). The off-CSV/UNTAGGED buy VETO is fail-closed and uncurable by price; missing ADV and special-board-vs-main_board_only are independent bars. No buyable price clears.\n\n**3. Gaming \u2014 agreed clean.** stage_log is ordered; no retro-edit. This revision moves only target and expected downward, both bought by point 1, so no flagged new evidence is required.\n\n**Conclusion: KILL.** No buyable price clears and the universe bars are dispositive. Watchlist gate unchanged."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "re-rule",
+      "markdown": "**KILL** \u2014 reason_tag: liquidity.\n\nStanding correction: 35K/5PR, 0 fills; 12/28 kills left gains. I re-tested for a price objection: this is not one.\n\n1. **Untradeable \u2014 dispositive, price-uncurable.** IATA.JK is absent from the INDO universe, so factor is UNTAGGED and the buy is a fail-closed VETO. It is special board vs `main_board_only: true`, ADV is missing (second VETO), and every +EV price (\u2264Rp23.9 at target Rp79) is below `min_price_idr` 50. Universe bars, not levels; no entry cures them.\n\n2. **Negative EV at honest levels; LESSON-0004 inapplicable.** At the re-based target (Rp79, an upper bound) and p_up 0.30, expected is \u221211.6% against the FR+4% = 10.44%/yr hurdle. The EV-zero price Rp23.9 and hurdle price ~Rp21.7 both sit below the Rp50 floor: no buyable price clears. A first kill, not a sub-hurdle re-kill; EV is negative, and the 9M2026 print impairs earnings quality (profit 0.97 after FX/finance costs; inventory NRV risk).\n\n3. **Bear's strongest sentence stands; no variant.** The revision concedes the Rp27 fill prints only in the failed state (p_up at fill 0.30), and Rp72 is a crash-wait. It also concedes 6.5 Mt rests on a tonnage-less KPP contract, 7.0 Mt is a 7.85 Mt request against 2.0 approved, and 25 years is expiry-plus-extension: unpermitted, fragile_estimates.\n\n4. **Process clean.** Lint PASS (one WARN: 1832 > 1600 words). stage_log monotonic and role-correct (last revision 2026-11-09T13:38:54); Bear log in the Bear's voice; estimates_committed_at precedes all market data; no retro-edit. Target fell 90\u219279 and p_up 0.42\u21920.30 \u2014 no raise, no new-evidence flag owed.\n\n5. **Not a 6a defect.** Zero size rests on independent universe bars and negative EV at honest levels, not a back-solved band; even rebuilt it is unbuyable until those bars clear.\n\nSession: 1 chain, 0 PASS; not passable until the universe bars clear.\n\nALDRICH (JUDGE), 2026-11-09T13:49:51+07:00"
     }
   ]
 }

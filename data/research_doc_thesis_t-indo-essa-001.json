@@ -34,7 +34,7 @@
     "max_chase_pct": 0.0,
     "entry_mode": "limit",
     "target_rationale": "Audited 3y EBIT $76.6m at 8.86%; 70% of EV and cash; IDR 19,000",
-    "price": 492.0,
+    "price": 490.0,
     "price_asof": "2026-11-09"
   },
   "ev": {
@@ -68,16 +68,16 @@
     {
       "metric": "price",
       "op": "<",
-      "value": 420.0,
-      "action": "review",
-      "note": "falsification NAV: EBIT $46.1m, 14.6%, below every audited year"
+      "value": 315.0,
+      "action": "exit_full",
+      "note": "one 25% ARB band under 420 = modelled fill; down_pct read off it"
     },
     {
       "metric": "price",
       "op": "<",
-      "value": 315.0,
+      "value": 420.0,
       "action": "exit_full",
-      "note": "one 25% ARB band under 420 = modelled fill; down_pct read off it"
+      "note": "falsification NAV: EBIT $46.1m, 14.6%, below every audited year; exit full, does not ride a band"
     },
     {
       "metric": "date",
@@ -196,6 +196,18 @@
       "at": "2026-11-06T15:14:21+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-09T13:25:51+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-09T13:44:10+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -260,6 +272,16 @@
       "heading": "Judge verdict",
       "detail": null,
       "markdown": "Correction against my record (35 KILL / 5 PASS_REDUCED / 0 fills; 12 of 28 scored kills left gains): I return mis-specified arithmetic instead of killing what it obscures, and I never kill a name whose business value supports a price I can name.\n\nChain verified: lint pass, stamps 13:15\u219213:55\u219214:16\u219215:03 monotonic, actors correct, both Bear logs verbatim; the target was cut, not raised. Grounds:\n\n1. **The two-tier kill is a legitimate executable-fill model, not a device.** 315 is the limit-down fill of a 420 falsification on a 25% ARB band, and EV already charges the whole gap (\u221228.4%): conservative, not generous. The defect is \"review\" at 420 where exit_full belongs \u2014 a falsified position must not ride a band.\n2. **The EV arithmetic is internally inconsistent, and it decides the trade.** At 440, +12.2% is the price-only formula; at the 496 tape, \u22120.6% is that formula plus ~10.5pp of dividend; \"ex-carry +1.4\" subtracts a yield the 12.2 never contained. Carry in both legs makes 440 +22.7% and clears the hurdle; price-only makes the tape \u221211.1%.\n3. p_up 0.42 is the registry prior, unraised, cited; Rp627 reproduces on audited EBIT and the Bear bought it.\n\nREVISE_CONSTRUCTION: one stated horizon, one dividend treatment, EV re-run at 440/429/496, 420 to exit_full. Not KILL: at 14.1% deployed against a 60-95% band, these merits deserve the test."
+    },
+    {
+      "heading": "Revision",
+      "detail": "Judge REVISE",
+      "markdown": "**1. Rp420 to `exit_full`.** Conceded: a falsified position must not ride a band. The 420 row now carries `action: exit_full`; Rp315 stays the ARB-adjusted fill and the `down_pct` leg (\u221228.4% from 440). Both price rows are exit_full, and 315 is listed first so the executed-loss check reads the fill, not the trigger.\n\n**2. One horizon, one dividend treatment.** Stated horizon: **three years** (the archetype's `horizon_y`, base_rate \"3y\"). Treatment: **dividends on the up leg only, 9.4%/yr net = 28.2pp over three years; none on the kill leg**, which exits at the payout-failure state. This is the house V5.4 convention. EV = 0.42\u00d7(gain+28.2) + 0.58\u00d7(loss) \u2212 1.0:\n- 440: 0.42\u00d7(42.5+28.2) + 0.58\u00d7(\u221228.4) \u2212 1.0 = **+12.2%**\n- 429: 0.42\u00d7(46.2+28.2) + 0.58\u00d7(\u221226.6) \u2212 1.0 = **+14.8%**\n- 496: 0.42\u00d7(26.4+28.2) + 0.58\u00d7(\u221236.5) \u2212 1.0 = **+0.8%**\n\n**Hurdle.** Those are three-year totals. The 10.44%/yr bar compounds to 34.7% over three years. Annualised: 440 = 3.9%/yr, 429 = 4.7%/yr, 496 = 0.3%/yr. **No executable price clears.** The clearing price is Rp360, 14% below the Rp420 falsification \u2014 unreachable while the position is alive. The old \"Rp429\" solved EV against 15% *cumulative*, a horizon error. Carry in both legs (+28.6% at 440) annualises to 8.7%/yr, still short.\n\n**3. p_up and target.** Unchanged: 0.42 registry prior, Rp627 on audited EBIT, Rp829 the $445/t case; no new evidence, no raise."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "re-rule",
+      "markdown": "**REVISE \u2014 construction defect; status attacked, no kill-ledger row, no cooldown.** ALDRICH (JUDGE), 2026-11-09T13:44:10+07:00. Correction applied: 35 KILL / 5 PASS_REDUCED / 0 fills, 12/28 kills left gains \u2014 return a mis-specified level set rather than kill a name whose business is intact.\n\nChain verified: lint PASS (one warning, 2,072 words > 1,600); stage_log monotonic 13:15\u219213:55\u219214:16\u219215:03\u219215:14\u21922026-11-09 13:25, actors correct; both Bear logs verbatim; committed estimates/model untouched; target Rp627 and p_up 0.42 unraised. No process defect.\n\n1. The three prior defects are fixed: one horizon (3y), dividends up-leg only (28.2pp/3y, none on the kill leg), Rp420 now carries `exit_full`.\n\n2. The hurdle arithmetic is right, and the clearing price ~Rp360 is verified (+34.7%/3y). It sits below the Rp420 falsification, so no executable entry above Rp420 clears. At Rp440 EV is +12.2%/3y = 3.9%/yr vs 10.44%/yr; even at zero downside Rp440 caps at +28.7%/3y (8.8%/yr) \u2014 sub-hurdle by construction, not by the ARB band alone.\n\n3. LESSON-0004 bars a KILL: no KPI fired (realised $531/t > $400; feedstock $153.7 < $200) and no printed impairment (accruals negative, clean audit). Sub-hurdle here is a price/construction objection, not a thesis failure.\n\n4. PASS-at-a-price is unavailable \u2014 the only price that pays is below the stop. The defect is the level set: Rp440 is tape-anchored, not hurdle-derived, and is inconsistent with an `exit_full` at Rp420. Re-derive the entry at the hurdle-clearing price with a business-falsification kill, or a target/payoff clearing an entry above Rp420; then rule on merits."
     }
   ]
 }

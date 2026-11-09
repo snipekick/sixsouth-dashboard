@@ -17,9 +17,9 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "judged",
-    "verdict": "PASS_REDUCED",
-    "size_multiplier": 0.25,
+    "status": "attacked",
+    "verdict": "REVISE",
+    "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-06T13:17:57+07:00",
@@ -28,31 +28,31 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": 300.6,
+    "entry": 268.0,
     "target": 386.4,
     "kill": 250.0,
-    "max_chase_pct": 0.0,
+    "max_chase_pct": 0.5,
     "entry_mode": "limit",
     "target_rationale": "12x FY2026E EPS = COE-band DCF midpoint (348 at 13.5% to 426.34 at 11.5%).",
-    "price": 304.0,
+    "price": 306.0,
     "price_asof": "2026-11-09"
   },
   "ev": {
     "p_up": 0.4,
-    "up_pct": 28.54,
+    "up_pct": 44.18,
     "p_down": 0.6,
-    "down_pct": -16.83,
+    "down_pct": -6.72,
     "net_div_yield_pct_pa": 7.85,
     "fee_tax_drag_pct": 1.0,
-    "expected_pct": 9.7,
+    "expected_pct": 22.06,
     "horizon_years": 3.0,
     "carry_pct": 23.55,
-    "kelly_full_pct": 106.9
+    "kelly_full_pct": 428.2
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "Judge PASS_REDUCED 0.25 applied: 10.00 x 0.25 = 2.50; no further deviation from the script anchor."
   },
   "base_rate": {
     "rate": 0.4,
@@ -186,11 +186,7 @@
     }
   ],
   "kill_outcome": null,
-  "entry_status": {
-    "state": "not staged",
-    "asof": "2026-11-09T08:45:12+07:00",
-    "why": "the portfolio manager has not sized it yet"
-  },
+  "entry_status": null,
   "sections": [
     {
       "heading": "Priors disclosure",
@@ -246,6 +242,26 @@
       "heading": "Judge verdict",
       "detail": null,
       "markdown": "ALDRICH (JUDGE), 2026-11-06T15:19:32+07:00. Correction against the 35-KILL/40-thesis, 0-fill record: a rebuilt thesis is not killed for a sub-hurdle *price* \u2014 it is passed at the price that pays. ASII-002's test (EV vs FR+4%) applied without the reflex.\n\n**PASS_REDUCED \u2014 size_multiplier 0.25 \u2014 at a price: entry \u2264 Rp270.** Lint PASS; stage chain monotonic and role-correct (draft 13:17:57 \u2192 attacked 13:51:54 \u2192 revision 14:06:44); Bear log verbatim; no unflagged raise \u2014 every revision line is a cut.\n\n1. **Target is valuation-derived.** 386.4 = 12\u00d7 FY2026E EPS 32.20, 0.2% under the COE-band DCF midpoint (348/426.34) and 6.4% below the house 413; a three-year target struck on FY2026E EPS credits no growth. Not a multiple fitted to a price: fatal 2 does not survive.\n2. **Kill is falsification.** 250 sits 12.1% below the bear DCF 284.28, 13.2% under the 288 low, 17.8% under the tape; noise cannot file it. Fatal 1 cured.\n3. **p_up 0.40 is the registry prior**, unshaded; payoff 28.54/16.83 = 1.70, so no 6a pattern.\n4. **The hurdle is the one real finding \u2014 and it is a price finding.** At 300.6 expected return is +9.7%/3y (3.1%/yr, lint convention) or +23.9%/3y (7.4%/yr, house carry convention) against FR+4% = 10.44%/yr. Probability-weighted value, 0.4\u00d7386.4 + 0.6\u00d7250 = Rp304.6, equals the tape: no edge at 304. The entry formula clears 15%/yr only in the win state. Rp270 clears the hurdle (10.6%/yr) and is the fill level; 300.6 is not.\n5. **Residual \u2192 size.** Forced March-2027 placement on a 13.29% float; flows stale. Load-bearing, unverified. 0.25.\n\n*Session close: one chain judged, 1 PASS_REDUCED / 0 KILL; AVIA was passable once rebuilt \u2014 target and kill now survive Drew \u2014 at a starter size and the hurdle-clearing price.*"
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**VOSS (RISK_OFFICER), 2026-11-09T13:08:11+07:00** \u2014 T-INDO-AVIA-001, AVIA.JK, book INDO. Layer 1 anchor (`the sizing engine size --book INDO`): recommended_pct 10.00, hard_max_pct 10.00, liquidity_cap_pct 69.79, book_heat_after_pct 1.80, book_heat_budget 12.0. Judge size_multiplier 0.25 \u2192 PM size 2.50% NAV.\n\n1. **Factor-tag audit \u2014 PASS (on-list).** Universe row: `AVIA.JK,MATERIALS,Avia Avian,domestic_cycle,idr_defensive,mid,thin,main`. Both tags are in the closed `factor_taxonomy` (the fund rules l.151\u2013154); neither untagged nor off-list, so the fail-closed VETO does not apply. Business check: `domestic_cycle` is accurate \u2014 volume is property/renovation-linked and flat (9M2026 +3.5%, F21) against price-led revenue. `idr_defensive` is the weaker of the two: net cash and an IDR revenue base support it, but demand is consumer-discretionary/property-linked and the macro desk flags INDO consumer-discretionary as AVOID (firm brief, 2026-11-07), so the label overstates insulation. Stays buyable; route `idr_defensive` to MONTHLY_IC for re-tag review \u2014 do not retag mid-thesis.\n\n2. **Stress / size.** Post-trade stress-day book loss = **1.80% NAV** (book_heat_after_pct; conservative because the script computes it at the 10.00% constitution-capped size \u2014 at the 2.50% PM size the incremental heat is 2.50 \u00d7 5.0% = 0.125pp, \u22481.43% book heat). Headroom as two numbers: **6.2pp to the \u22128% REVIEW governor** and **13.2pp to the \u221215% DEGROSS governor**. Both wide; heat budget 12.0% is not engaged.\n\n3. **Liquidity.** FULL intended position at Judge-fraction size = 2.50% \u00d7 NAV 15,158.2m = **Rp379.0m**. Against 3m ADTV Rp5.99bn (thesis Microstructure), days-to-exit at 20% participation = 379.0 / (0.20 \u00d7 5,990) = **0.32 days** (10.00% script size: 1.26 days). The 7-day cap is 22x away and script liquidity_cap_pct 69.79% is non-binding. Gap caveat: a kill exit can fill 1\u20132 ARB bands (Rp187.5/140.6), which worsens the realised loss but not days-to-exit.\n\n4. **Sizing audit.** Script: Kelly full 100.0% / quarter 25.0%, correlation haircut 15.3%; all exceed the 10.00% constitution cap, so the cap is the Layer-1 binding constraint. Judge 0.25 \u2192 **pm_pct 2.50% \u2264 script_pct 10.00%** \u2713 and \u2264 hard_max 10.00% \u2713. The 0.25 fraction **does bind** \u2014 it is the operative 10.00 \u2192 2.50 step; liquidity (69.79%) and the heat budget (12.0%) do not bind below it. Process gap: the thesis `sizing:` block is still `{script_pct: null, pm_pct: null}` \u2014 PM must record `{script_pct: 10.00, pm_pct: 2.50, deviation_reason: \"Judge PASS_REDUCED 0.25\"}` before order entry. **Price flag:** frontmatter `entry_plan.level` is 300.6, but the Judge verdict (l.137, l.142) requires entry **\u2264 Rp270**; the ticket must be a limit \u2264270 and the entry_plan line needs analyst correction \u2014 300.6 is not a fill level.\n\n5. **Kill-criteria hygiene \u2014 PASS.** All four are machine-monitorable: price ` 2029-12-31` (re-underwrite). No vague or unsourced criterion. `catalyst_date: null` is acceptable for a long-horizon compounder; the 2029 date kill is the time stop.\n\n6. **Horizon balance.** Book is not ramped (4 names < min_names_when_ramped 8; gross 19.21% < ramp_deployment_end 60%), so the min-2-short / min-2-long norm is advisory, not active. AVIA adds a long-horizon thesis; the short bucket cannot be counted from this packet. If the book later holds <2 short-horizon theses it is a WARN to journal at MONTHLY_IC \u2014 not grounds to force a catalyst trade, and none is forced here.\n\n7. **Concentration in disguise.** Existing same-factor load is 9.0% NAV (script: `domestic_cycle`/`idr_defensive`); +2.50% AVIA = **11.5% NAV** (MV check: ERAA 4.36% + JPFA 4.80% + AVIA 2.50% = 11.66%), far under the 40% soft / 60% hard factor caps. The real shared bet is IDR domestic demand / consumer purchasing power across AVIA (paint), ERAA (retail) and JPFA (protein) \u2014 one BI-rate/IDR policy lever, not three independent bets. MEDC (5.32% NAV, oil) is a partial natural hedge, not stacking: higher Brent helps MEDC and squeezes AVIA's oil-derivative feedstock margin. PTBA (coal_china) is uncorrelated. No shared large customer or counterparty is evident.\n\n**Output contract: CLEAR_WITH_NOTES**\n1. Both tags are on the closed taxonomy and business-consistent; no fail-closed VETO. `idr_defensive` flagged to MONTHLY_IC as the weaker label.\n2. Stress-day book loss 1.80% NAV, with 6.2pp / 13.2pp headroom to the \u22128% REVIEW / \u221215% DEGROSS governors.\n3. 0.32 days-to-exit on the 2.50% position at 20% ADV; the 7-day cap and 69.79% liquidity cap are non-binding.\n4. pm_pct 2.50% \u2264 script_pct 10.00% and the 0.25 fraction binds; sizing block must be populated, and the entry limit must be \u2264Rp270 per the Judge, not the stale 300.6 in frontmatter.\n5. Kill criteria are all machine-monitorable; horizon gap is advisory only; disguised domestic-demand concentration is 11.5% NAV, well inside the factor caps."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**GUNAWAN (PM_INDO), 2026-11-09T13:18:45+07:00** \u2014 T-INDO-AVIA-001, AVIA.JK, book INDO.\n\n- **Anchor.** `the sizing engine size --book INDO`: Kelly full 100.0 / quarter 25.0; correlation haircut 15.3%; liquidity cap 69.79%; binding constraint constitution cap 10.00%; `recommended_pct` 10.00, `hard_max_pct` 10.00; book heat after 1.80% vs 12.0% budget.\n- **Judge multiplier.** PASS_REDUCED size_multiplier 0.25 applied: 10.00 \u00d7 0.25 = **pm_pct 2.50% NAV**, \u2264 script_pct 10.00 (downward only). No further deviation \u2014 2.50 is the Judge's number, not a discretionary shade.\n- **Entry plan.** `level 268, max_chase 0.5%, limit, valid_until 2026-12-31`. Chose 268 (not 270) so the **maximum fill 268 \u00d7 1.005 = Rp269.34** clears the Judge's \u2264Rp270 hurdle with margin; tick-legal (Rp2 tick). Level is where the Judge's price finding, not the tape, says buy. Horizon: year-end, the next dated checkpoint before the March-2027 float/placement deadline; re-underwrite or let expire if unfilled.\n- **Staging.** Last close **306** (prev 304), 13.3% above the Rp269.34 max fill \u2014 beyond `entries.stage_within_pct` 10%. The thesis **waits as a price trigger**; `the entry stager` tickets nothing at the next open and re-stages only when the market comes within range. No order typed, no shares taken today.\n- **Flows.** Flows stale (fund record empty) \u2014 no flow number estimated; the float/placement residual is why the size is a starter, not a full position.\n- **Deviation.** None from the script anchor; deviation_reason records the Judge 0.25 only."
+    },
+    {
+      "heading": "EV rebase to the Judge's entry",
+      "detail": null,
+      "markdown": "Reconciliation note (Dani, 2026-11-09T13:49:11+07:00), post-judge at the actual entry 268.\n\nAt 268: up = (386.4/268 \u2212 1)\u00d7100 = 44.18%; down = (250/268 \u2212 1)\u00d7100 = \u22126.72%. Under V5.4 (dividends on the up leg only, drag on both): 0.40\u00d7(44.18 + 7.85\u00d73) + 0.60\u00d7(\u22126.72) \u2212 1.0 = 22.06% over three years = 6.9%/yr \u2014 below the 10.44%/yr FR+4% hurdle. The Judge's \"Rp270 clears the hurdle (10.6%/yr)\" reproduces only under the legacy both-leg-carry convention: 0.40\u00d7(43.11+23.55) + 0.60\u00d7(\u22127.41+23.55) \u2212 1 = 35.35%/3y = 10.6%/yr. The V5.4 owner ruling (2026-11-05) deprecates that convention, so the PASS_REDUCED price basis needs a Judge re-rule before any fill. Verdict unchanged."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "hurdle re-rule",
+      "markdown": "ALDRICH (JUDGE), 2026-11-09T13:58:03+07:00. Correction against the 35-KILL/0-fill record: an entry that cannot pay is a construction defect, not a business verdict.\n\n**REVISE (construction) \u2014 the PASS_REDUCED at \u2264Rp270 is withdrawn; PM sizing 0.25, pm_pct 2.50%, level 268 and max fill 269.34 are void until re-judged.** Lint PASS; stage chain monotonic; Bear log intact.\n\n1. **V5.4 basis conceded.** At 268, V5.4 gives 22.06%/3y = 6.9%/yr against FR+4% 10.44%. My 10.6%/yr used both-leg carry, deprecated 2026-11-05; `the sizing engine` prices the same legs. The price finding was right in kind, wrong in number.\n2. **The level set cannot clear above the kill.** At kill 250 the clearing entry is **Rp241** \u2014 below the kill, so the exit rule fires on the way in. At 268 a lower kill worsens it: 200 gives 3.5%/yr; the up leg is capped at +44% plus carry.\n3. **Construction, not thesis failure (LESSON-0004).** No KPI has fired (gross margin, volume), no earnings-quality impairment, EV at honest levels positive. The defect is geometry: a 3-year EV window carrying a target on FY2026E EPS (386.4 = 12x, a ~12-month level), a kill below the bear DCF rather than from business falsification, and a hurdle applied to the pair.\n4. **Instruction.** Resolve the horizon/target/EV-window mismatch and re-derive the kill from business falsification. Coherent paths: value the target at the horizon end (12x FY2028E EPS 37.52 \u2248 450, at which 255 clears 11.3%/yr above kill 250), or set a falsification kill \u2264220 (clearing entry \u2248227). Both are derived, never back-solved to the hurdle. Re-run `ev_math` under V5.4 and re-lint. If none clears, the honest result is a resting price trigger in numbers, not a fill.\n5. **Held.** p_up 0.40 registry, unshaded; payoff ratio 1.70; kill 250 a clean falsification for now; the float/placement residual still sizes a starter."
     }
   ]
 }

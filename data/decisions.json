@@ -11,8 +11,35 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-11-09T13:19:07.777687+07:00",
+      "book": "INDO",
+      "title": "AVIA sized at Judge 0.25; limit 268 waits as price trigger",
+      "thesis": "T-INDO-AVIA-001",
+      "kind": "sizing"
+    },
+    "body": "2026-11-09T13:19:02+07:00. Judge PASS_REDUCED size_multiplier 0.25 at entry  max fill 269.34, inside the Judge hurdle with tick-legal margin; valid_until 2026-12-31 (next dated checkpoint before the March-2027 float/placement deadline). Last price 306, 13.3% above max fill, beyond entries.stage_within_pct 10% -> thesis waits as a price trigger, no fill today. Ticket: 1,406,900 sh, limit 268, est Rp378,934,446 = 2.50% NAV. Flows stale (fund record empty) - no flow estimate; float/placement residual is the reason for starter size. 306 is not a buy price; 270 is.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-09T14:46:51.832978+07:00",
+      "book": "INDO",
+      "title": "AUTO sized at Judge 0.25: 2.5% NAV, 1,930 limit waits as price trigger",
+      "thesis": "T-INDO-AUTO-001",
+      "kind": "sizing"
+    },
+    "body": "Judge PASS_REDUCED 0.25 applied to script anchor 10.0 (constitution cap binding; quarter-Kelly 17.96) gives pm_pct 2.5% NAV = IDR 378.9m, no further deviation. Entry plan level 1,930, max_chase 3, mode limit, max fill 1,987.90, valid_until 2027-02-23: re-underwrite on FY2026 audited if unfilled. Tape 3,280 (2026-11-09 print; prior close 3,220) is 39.4% above max fill, beyond stage_within_pct 10.0, so the thesis waits as a conditional price trigger; no next-open ticket and no risk taken until fill. Ticket 190,600 sh (1,906 lots) at limit 1,930. Flows stale (fund record {}), no flow number estimated or used. Rules applied: none. Voss CLEAR_WITH_NOTES: stress-day 1.42% NAV, 0.22 days to exit at 20% ADV, 6.31pp to -8% REVIEW; his non-dispositive 2027-12-31 time-stop flag (no re-rating metric/source, anchored to the 3,220 tape not the 1,930 entry) and the idr_defensive factor2 retag are carried to the analyst and MONTHLY_IC.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-11-09 (Mon)\n\nSession 2026-11-09T11:00:37+07:00 \u2192 2026-11-09T11:16:14+07:00. **A short, honest session: 2 new cards, both DISCARD, 0 ADVANCE, 0 WATCH. GLOBAL ABBV DISCARD; INDO LPPF DISCARD. Three existing cards re-stamped (LLY WATCH, QCOM WATCH, ELSA DISCARD). Nothing clears the fast-disqualify sniff test in either book today.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `reviews_open` **[]**; `kill_monitoring_suspended` **[]**. Nothing carried to the next trading session on the review/kill front.\n- GLOBAL 100% cash / 0 names (NAV $1,012,651.28, DD 0.0%, week_trades 0/10). INDO 80.7% cash / 4 names (NAV IDR 15,170,998,422; gross 19.27%, DD \u22121.76%, week_trades 1/10; MEDC \u22127.75%, ERAA \u22125.90%, PTBA +2.05% since entry).\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper scripts, **no ticker exports** \u2192 step 2 skipped.\n\n## Screen sweep\n- **GLOBAL:** 79 names, 12 MOMENTUM, 0 WASHOUT, 0 NEGLECTED, prices live, `fetch_failures` []. Rows **ABBV LLY SAP SONY\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-11-09 (Mon)\n\nSession launched 2026-11-09T13:00:23+07:00 WIB. **Queue worked in runbook order: three judged buy verdicts awaiting sizing, three revise items, and one ADVANCE card.** Outcome: **one thesis sized (AUTO, 2.5% NAV, waits as a deep trigger), two killed (IATA liquidity, MIDI valuation), two re-ruled REVISE (ESSA, AVIA), and two left unsized by a fail-closed universe VETO (GJTL, SMSM).** Nothing staged here \u2014 the next pre-open prelude stages the AUTO ticket. GLOBAL: no ADVANCE cards, no chain, 0 names / 100% cash. Journal written 2026-11-09T15:08 WIB.\n\n## Queue and outcome (one line per thesis)\n\n| thesis | queue | stage reached | verdict | ticket |\n|---|---|---|---|---|\n| T-INDO-AUTO-001 | (c) attacked since 11-07 | rebuilt at Drew's stop-objecting 1,930 \u2192 Voss \u2192 PM | **PASS_REDUCED 0.25** | sized 2.5% NAV; staged by pre-open |\n| T-INDO-AVIA-001 | (a) awaiting PM sizing | PM sized \u2192 lint rebase \u2192 V5.4 hurdle check \u2192 Judge re-rule | **REVISE** (PASS_REDUCED withdrawn) | none \u2014 sizing void |\n| T-INDO-GJTL-001 | (a) awaiting PM sizing | Voss only | PASS_REDUCED 0.50 (unchanged) | none \u2014 universe VETO |\n| T-INDO-SMSM-001 | (a) awaiting PM\u2026",
     "persona": ""
   },
   {
@@ -884,39 +911,6 @@
       "kind": "pass"
     },
     "body": "20:00 WIB, North Book. QC WARN (carried): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 IDX-only param, no GLOBAL impact. Both books all-cash (GLOBAL nav 1,009,427 USD; INDO nav 15.21bn IDR), governor NONE both books -> no de-gross. No kills due: kill_actions_due empty, kill_monitoring_suspended empty, 0 live positions -> nothing to verify, no fail-closed breach. Entries: judged_unticketed has 3, all resolve to zero \u2014 (1) T-GLOBAL-NVO-002 verdict PASS_REDUCED is NO_TRADE stamped 0x, pm_pct 0.0, no ticket; (2) T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly nothing to propose. No tickets created -> risk_check --orders not re-run. No new escalation (ERAA dossier blocker already escalated 2026-10-07).",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-07T13:13:37.601196+07:00",
-      "book": "INDO",
-      "title": "T-INDO-ERAA-001 re-size: ticket VETOed (missing dossier), no ticket",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "sizing"
-    },
-    "body": "Sizing decision unchanged: pm_pct 5.0% at-cost (Judge PASS_REDUCED 0.5x x script 10.0 = 5.0, capped by Voss hard_max 5.0%), LIMIT 560 max_chase 0, qty 1,358,100.\n\nSTAGING FAILED: the ops handoff staged ORD-20261007131050-ERAA.JK-e360 and fund record --orders VETOed and DELETED it: 'dossier missing, malformed, incomplete, or > 60d stale - frozen for new risk'. ERAA has no dossier in data/dossiers/ (only DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN). The gate is _dossier_frozen (fund record learning_triggers.dossier_freeze_days 60, enforcement fund record) - standing fail-closed law; VETO is absolute.\n\nOutcome: NO ticket. The re-stage blocker moved from the adv/mcap feed (resolved OPS 2026-10-05) to the ABSENT DOSSIER. Re-stage requires a valid data/dossiers/ERAA.md (complete, kind!=stub, ticker match, <=60d), built by the IDEATION ingestion path or an ops/analyst dossier build - CONSTRUCT sources nothing. pm_pct 5.0 remains the anchor. Escalated to HUMAN_ATTENTION.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-07T13:09:37.550941+07:00",
-      "book": "INDO",
-      "title": "T-INDO-ERAA-001 re-size: feed resolved, stage 1,358,100 @ 560 limit",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "sizing"
-    },
-    "body": "Re-staged after the adv/mcap feed gap resolved (OPS 2026-10-05): fund record now carries ERAA.JK (ADV IDR 76.9B/day) and fund record records are non-empty incl. ERAA.JK (~IDR 9.34T). The prior DEFER (2026-09-26) rested on fund record failing closed (recommended_pct 0.0) \u2014 that anchor is now live.\n\nScript output (authoritative): recommended_pct 10.0, liquidity_cap_pct 707.71, constitution_cap_pct 10.0, hard_max_pct 10.0; binding constraint = constitution_cap (10.0% NAV). Liquidity is NOT the bind: 20% of ADV 76.9B/day = IDR 15.38B/day, a 760M ticket exits in ~0.05 day.\n\nCeiling: Judge PASS_REDUCED 0.5x applied to script recommended_pct 10.0 -> 5.0; Voss independent hard_max 5.0% at-cost NAV (10% cap x 0.5x). pm_pct = min(0.5 x 10.0, 5.0) = min(5.0, 5.0) = 5.0. Downward deviation from the raw script recommendation (10.0 -> 5.0) is the Judge fraction + Voss ceiling, both binding; no further PM deviation.\n\nSuggested-vs-chosen: script 10.0% vs pm 5.0%. Ticket at the 560 ENTRY LIMIT (cost basis, not spot ~600): qty = floor(5.0% x 15,211,594,336 / 560) = 1,358,178 -> board-lot(100) rounded DOWN = 1,358,100. Cost IDR 760,536,000 = 4.9997% at-cost NAV (<=10% cap); at-market (x600) 5.36%\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-07 13:11:01.947899+07:00",
-      "book": "INDO",
-      "title": "VETO ERAA.JK buy 1358100.0",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `ORD-20261007131050-ERAA.JK-e360` VETOed and removed by risk_check: dossier missing, malformed, incomplete, or > 60d stale \u2014 frozen for new risk",
     "persona": ""
   }
 ]
