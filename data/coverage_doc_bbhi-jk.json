@@ -1,0 +1,2817 @@
+{
+  "schema": 1,
+  "ticker": "BBHI.JK",
+  "code": "BBHI",
+  "name": "PT Allo Bank Indonesia Tbk",
+  "desk": "FINANCIALS",
+  "industry": "BANKS",
+  "industry_name": "Banks",
+  "report": {
+    "ticker": "BBHI.JK",
+    "frontmatter": {
+      "ticker": "BBHI.JK",
+      "report_type": "initiation",
+      "version": 2,
+      "title": "Allo Bank: a digital franchise priced for a return it does not earn",
+      "summary": "Allo Bank has a large customer base and a 74.0% CAR, but earns a mid-single-digit ROE against a 12.5% cost of equity while a deliberate exit from expensive time deposits has left the LDR at 180.4%. The warranted multiple is built on the model's own terminal ROE. SELL: fundamental value is Rp179 and the conglomerate lens reaches only Rp418.",
+      "thesis": [
+        "The market pays 3.6x our fundamental value today (Rp169) for a bank whose sustainable ROE (8.34%) sits below its 12.5% cost of equity; the warranted P/BV is 0.5x against the traded multiple.",
+        "Funding is the binding constraint: deposits fell 28.8% yoy to IDR5,240.0bn at August 2026 as time deposits fell 41.4% while giro rose 208.4% and savings 26.4%, leaving an LDR of 180.4% [S13].",
+        "Credit cost runs at the current run-rate annualised: the 9M2026 impairment charge rose 65.2% yoy to IDR454.1bn [S5][S13] and profit fell -11.0% to IDR338.1bn [S5].",
+        "The dividend is real but small: a 50.0% payout on FY2025 earnings [S4][S9], and the IDR300.0bn buyback [S8] is a capital return, not an earnings fix.",
+        "Fundamental value is Rp179; the group-premium lens lifts the twelve-month target to Rp418, still below the Rp600 price."
+      ],
+      "catalysts": [
+        {
+          "date": "2026-12-02",
+          "event": "Buyback window closes ({{fact.F40|money}} maximum)",
+          "source": "S8"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "First free-float step: {{fact.F45|pctv}} must be met",
+          "source": "S16"
+        },
+        {
+          "date": "2027-04-30",
+          "event": "MSCI consultation feedback closes (Standalone proposal)",
+          "source": "S15"
+        },
+        {
+          "date": "2027-02",
+          "event": "FY2026 audited results and dividend declaration",
+          "source": "S4"
+        },
+        {
+          "date": "2027-04",
+          "event": "Annual RUPST and FY2026 dividend payment",
+          "source": "S4"
+        }
+      ],
+      "desk": "FINANCIALS",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-09"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "**SELL, target Rp418 (-28.5% total return).** Allo Bank is the listed digital arm of Chairul Tanjung's Mega Corpora group, built on the Allo Pay, Allo Prime, AlloGrow and PayLater products and a retail customer base of more than 14,000,000 [S6]. It is profitable and extremely well capitalised, with a CAR of 74.0% at end-2025 [S6]. It is also a bank that earned a 7.9% ROE in FY2025 [S6], below the 12.5% cost of equity, and whose deposit base was deliberately repriced down by 28.8% yoy to IDR5,240.0bn by August 2026 while loans grew 32.0%, leaving an LDR of 180.4% [S13]."
+          },
+          {
+            "type": "para",
+            "text": "Our fundamental value is Rp179 per share, a fraction of the Rp600 price. The gap is not a modelling artefact: the warranted P/BV at the 8.34% sustainable ROE, 4.0% terminal growth and the 12.5% COE is 0.5x, against a traded multiple well above book. The price embeds a franchise that earns its cost of capital and keeps compounding its loan book; the accounts show a franchise that is growing loans faster than it funds them and provisioning at a rate that consumes most of its pre-provision profit."
+          },
+          {
+            "type": "para",
+            "text": "The house conglomerate lens applies (BBHI sits in the Mega Corpora / CT Corp group), and it matters here: the market pays 3.6x our fundamental value today, and the lens assumes only part of that premium closes within twelve months. That produces the Rp418 target rather than the Rp179 fundamental value. The lens is a statement about how fast a conglomerate premium mean-reverts, not a reason to own the equity."
+          },
+          {
+            "type": "para",
+            "text": "What moves the value: the credit-cost path (each point of cost of credit is worth a large slice of book value at a sub-COE marginal return), the deposit rebuild (an LDR far above normal keeps funding costs and liquidity risk high), and NIM, which is unusually wide [S6][S7] precisely because the bank is funded by equity rather than deposits. The single biggest analytical correction in this version is the sustainable ROE: it is now the model's own terminal-year return rather than a higher number the model never reaches (see the valuation section)."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Allo Bank is a digital-only bank offering payments (Allo Pay, QRIS), savings and deposits (Allo Prime, AlloGrow), PayLater and instant cash to retail and wholesale customers [S9]. It was formerly Bank Harda Internasional and was renamed in 2021 after the Mega Corpora acquisition [S0]. The controlling shareholder is PT Mega Corpora, which the data pack identifies as the parent; the bank is headquartered at Menara Bank Mega in Jakarta [S0]. The data pack puts insider ownership at 90.5% and free float at 11.8% [S0], so the shares are tightly held and the traded float is thin. Those two pack fields cannot both be exact because they overlap; the governance section uses the exchange-registry free float."
+          },
+          {
+            "type": "para",
+            "text": "The economics are those of a consumer lender wrapped in a deposit franchise: net interest income was IDR1,450.4bn in FY2025 on loans of IDR9,141.0bn and deposits of IDR9,519.0bn [S6], with non-interest income of IDR543.0bn [S6]. The reported income statement splits differently from the data pack: the filing shows net interest income of IDR1,441.0bn and fee-based income of IDR543.0bn, while the engine's pack history carries IDR1,450.4bn of net interest income and IDR518.4bn of non-interest income. We quote the filing's figures here and calibrate the forecast to them; the pack split is carried only because the bank template sources its history from the pack."
+          },
+          {
+            "type": "para",
+            "text": "Loans are short-duration consumer receivables, so the book turns quickly and the impairment charge is large relative to the NPL ratio. The bank reports a customer base of more than 14,000,000 [S6] and a small workforce by bank standards of 551 [S0]; it has no meaningful branch network. The average customer balance is therefore small and the franchise depends on transaction frequency rather than on relationship depth."
+          },
+          {
+            "type": "para",
+            "text": "The strategy stated by management is to deepen the ecosystem rather than chase deposit rates: the digital strategy head has said the bank focuses on granular daily-transaction funding instead of a rate war [S3]. That is the right strategy for a bank with an equity-funded balance sheet, but the 2026 accounts show that the transactional deposits it attracted did not replace the expensive time deposits that left. The franchise is therefore caught between a sticky retail customer base and a funding mix that is still being rebuilt."
+          },
+          {
+            "type": "para",
+            "text": "Management's other lever is capital. With a CAR of 74.0% [S6] the bank can fund loan growth from equity for years, which is why it has not needed a rights issue; the cost is a low ROE because equity is large relative to the earning assets it supports. The FY2025 payout of 50.0% [S4] and the IDR300.0bn buyback [S8] show that management is willing to return capital rather than deploy all of it, which is rational at a sub-cost-of-equity return but makes the equity a slow-compounding asset."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesian banking-system credit kept growing at 13.3% in September 2026 [S10], while deposit growth has lagged, so the system is competing harder for funds. Digital banks are a small but fast-growing slice: six listed digital banks reported a polarised third quarter, with Superbank, SeaBank, Bank Jago and Krom growing profit while Allo Bank and Neo Commerce shrank [S3]. The common thread among the winners is ecosystem-driven CASA and NII growth [S3]; Allo has the ecosystem but its funding mix moved the wrong way in 2026."
+          },
+          {
+            "type": "para",
+            "text": "Allo competes with SeaBank (Shopee), Bank Jago (GoTo), Superbank (Grab/Emtek), Krom and the incumbent banks' digital apps. Its distribution advantage is the parent group's customer base, and the bank sits inside the Mega Corpora group whose banking arm is Bank Mega [S0]. That is a real advantage in customer acquisition, but it is not by itself a funding moat: depositors can move to whichever app pays more, and in 2026 the bank chose to let expensive time deposits go rather than match the market. The move is visible in the mix: deposits fell 28.8% yoy to IDR5,240.0bn at August 2026, but time deposits fell 41.4% while giro rose 208.4% and savings 26.4% [S13]. NIM rose to 10.9% in 1H2026 [S7]. That is the signature of managed repricing, not a customer run: the bank cut the price it pays on wholesale-like deposits and kept the transactional balances."
+          },
+          {
+            "type": "para",
+            "text": "The strategic question is whether the CASA it retained is durable. CASA is cheap but it is also the first money to leave when a competitor raises rates or when the ecosystem's promotions stop [S13]. The bear case is therefore not that depositors panic; it is that the deliberate repricing outruns the bank's ability to replace the balances, so it ends up funding loans with wholesale money at a spread that is worse than the time deposits it gave up."
+          },
+          {
+            "type": "para",
+            "text": "The five forces are unfavourable at this point in the cycle: intense rivalry for deposits, low switching costs for savers, growing buyer power as rate transparency improves, and a regulatory environment that is supportive of digital banking but strict on provisioning and consumer protection. The paylater segment is growing fast \u2014 bank paylater receivables kept growing to September 2026 [S11] \u2014 but it is also where credit costs are highest. The competitive position is therefore strongest on acquisition and weakest on funding, which is the reverse of what a bank needs to earn its cost of capital."
+          },
+          {
+            "type": "background",
+            "text": "Digital banks in Indonesia are licensed as conventional banks and compete for the same depositors as incumbents, without a branch cost base but also without a sticky deposit franchise. Most have needed several years and repeated capital injections to reach profitability, and the ones that have re-rated did so on low-cost CASA and fee income, not on loan growth alone. The listed digital banks sit inside larger consumer or technology groups, which is a distribution advantage but also a related-party and governance exposure."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "**History.** FY2025 net profit was IDR574.0bn, up on the year, on operating income of IDR1,983.0bn [S6]. Net interest income was IDR1,441.0bn, fee-based income IDR543.0bn and NIM 10.1% [S6]. Loans ended the year at IDR9,141.0bn and deposits at IDR9,519.0bn [S6], a comfortable LDR at the time. Equity was IDR7,509.0bn and CAR 74.0% [S6]. The filing's own line split is the one we use in the forecast: NII IDR1,441.0bn plus fee-based income IDR543.0bn gives the reported operating income of IDR1,983.0bn, whereas the engine's pack history carries IDR518.4bn of non-interest income. The difference is small relative to operating income but it is not zero, and the FY2026E non-interest income line is anchored to the filing's level rather than to the pack's."
+          },
+          {
+            "type": "para",
+            "text": "The FY2024 comparative is not restated in the archived releases; the article gives the growth rates, not the prior-year line items [S6]. That is a data limitation, and it is why the facts set carries the FY2025 filing figures and the 2026 interim disclosures rather than a full two-year restatement. The engine's FY2024 history is the pack's, and the forecasts are calibrated from the filing's FY2025 base."
+          },
+          {
+            "type": "para",
+            "text": "**2026 is the turn.** 9M2026 net profit fell -11.0% yoy to IDR338.1bn [S5]. NII rose 16.1% to IDR1,210.0bn [S5], but the impairment charge jumped 65.2% to IDR454.1bn [S5] and fee and administration income fell -36.7% to IDR30.0bn [S5]. By August, loans were IDR9,460.0bn (32.0% yoy) while deposits were IDR5,240.0bn (28.8% lower yoy), time deposits IDR3,750.0bn and LDR 180.4% [S13]. Gross NPL was 1.7% [S7], stable, but the annualised impairment rate is far above it because the book is short-duration and unsecured. Company guidance circulated during the year pointed to a FY2026 ROE of 6.3% [S8]; that is a forecast, not a reported actual, and the ROE we carry is built from the run-rate the nine-month accounts show, net profit of IDR338.1bn [S5] on the book value at the interim balance-sheet date."
+          },
+          {
+            "type": "para",
+            "text": "**Non-interest income, line by line.** The January-August 2026 disclosure separates the two components: fee and administration income of IDR27.0bn, up 529.4% yoy, and other operating income of IDR302.7bn, up 37.7% yoy [S13]. At 9M2026 the fee line is IDR30.0bn [S5], so essentially all of the non-fee line is carried by other operating income, and it is growing rather than shrinking. FY2025 non-interest income on the filing was IDR543.0bn [S6]. A normal fourth quarter at the January-August monthly run-rate gives roughly the filing's FY2025 level, which is why we model FY2026E non-interest income of IDR544.3bn on the pack's IDR518.4bn base \u2014 positive growth, not the negative growth in the prior draft."
+          },
+          {
+            "type": "para",
+            "text": "**Forecast.** We model FY2026E loans of IDR9,598.0bn (up on the year, reflecting a normal fourth quarter after a flat third) and deposits of IDR5,330.6bn, an LDR of 180.1% [S6][S7][S13]. FY2026E net profit is IDR465.1bn, EPS Rp21 and ROE 6.1%; book value per share is Rp355, and the model's estimated CAR stays at 80.1%. From FY2027E we grow loans at a mid-teens rate and rebuild deposits faster to bring the LDR down, while NIM drifts down over the forecast years as funding costs normalise. Cost-to-income is 45.0% in FY2026E and credit cost 6.4%, falling through FY2030E but staying high because the mix is unsecured consumer credit."
+          },
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          },
+          {
+            "type": "para",
+            "text": "**Earnings quality.** The accruals screen is not meaningful for a bank; the relevant test is provisioning versus write-offs. Here the flag is the opposite of under-provisioning: impairment at a double-digit multiple of the stated gross NPL ratio means the bank is charging the P&L well ahead of the stated NPL, which is prudent but also tells us the paylater book has a high natural loss rate. The second flag is capital allocation: a 50.0% dividend [S4] plus a IDR300.0bn buyback [S8] in the same year, while the deposit base is shrinking, returns capital the bank may need for liquidity rather than capital. The third is the reliance on non-interest income lines that are volatile: fee income fell -36.7% in 9M2026 even as other operating income grew [S5][S13], so the fee line is not a stable earnings base."
+          },
+          {
+            "type": "para",
+            "text": "**The deposit decline is repricing, not a run.** The mix makes the diagnosis clear. Time deposits fell 41.4% to IDR3,750.0bn while giro rose 208.4% to IDR479.1bn and savings rose 26.4% to IDR1,010.0bn [S13]. If savers were leaving the bank, CASA would not grow; if they were leaving for higher rates, the bank would not have raised NIM. NIM rose to 10.9% in 1H2026 [S7]. What happened is that Allo stopped paying up for expensive time deposits and kept the transactional balances. The risk is execution, not panic: the bank now has to rebuild the deposit base from a smaller, cheaper base while its loans keep growing."
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "We value Allo Bank on the house bank method set: justified P/BV as the primary (50%), residual income (30%) and dividend discount (20%). The COE build uses the reviewed macro deck: the long-dated SUN yield of 7.4% less the Indonesian default spread of 1.6%, plus beta 0.90 times the total equity premium of 4.2% mature plus 2.5% country risk, plus a company premium of 0.6%, giving a COE of 12.5% [S0]. No USD rate is imported; the valuation is in IDR at IDR rates."
+          },
+          {
+            "type": "para",
+            "text": "The beta is the reviewed BANKS config default because the coverage universe has no BANKS regression set; a peer's beta is not a measurement of this bank, and importing ARTO's higher beta would capture a different business model rather than this one's risk. What the house bank card does require is that COE be pinned to the sovereign yield plus an IDR equity risk premium inside the card's stated band. The engine's CAPM alone sits below the card's floor, at the ten-year yield plus the lower bound of that band. We therefore add a 0.6% company premium, sourced to the thin free float, the HSC listing and the stretched LDR [S13][S16][S19], taking COE to 12.5%. That is a method-consistent correction, not a default haircut. The sensitivity table shows the effect of moving COE in either direction."
+          },
+          {
+            "type": "para",
+            "text": "The justified P/BV at the 8.34% sustainable ROE, 4.0% terminal growth and a 12.5% COE is 0.5x, worth Rp171. The sustainable ROE is the model's own FY2035E return, not a higher number the franchise never reaches; the earlier draft's sustainable ROE was above every year the model projects and its arithmetic did not close. Residual income gives Rp136, -20.5% versus the primary, and the DDM gives Rp167 (-2.3%) [S0]. The divergence is informative: residual income is the most punitive because it charges the bank for every year it earns below COE while its equity base grows, while the DDM is close to the primary because a payout of 50.0% is valuable even at a sub-COE return. The justified multiple leans on a terminal ROE the model only reaches at the end of the explicit window; it is the least conservative of the three, not the most."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "The reverse solver is not a useful bracketing tool on this name. The Rp179 fundamental value is a discounted output of the model, not a figure read back from the price; it is the Rp600 price that is the outlier, and holding it would require a return on equity and growth combination the franchise has never delivered. The price is a multiple question \u2014 what is a large-customer digital franchise worth if it never earns its cost of capital \u2014 not a near-term earnings question [S3][S9]."
+          },
+          {
+            "type": "para",
+            "text": "**The conglomerate lens.** BBHI is a konglo name: the market price of Rp600 is 3.6x our fundamental value today of Rp169, and it is still above the twelve-month fundamental value of Rp179. The lens assumes 40.0% of the log gap closes in twelve months for the base case, 80.0% for bear and -5.0% for bull [S0]. That lifts the twelve-month target to Rp418. We explain the lens rather than hide it: the premium is a scarcity and group-affiliation premium on a 11.8% free float [S0], not evidence about intrinsic value. It narrows the expected loss; it does not make the equity cheap."
+          },
+          {
+            "type": "para",
+            "text": "**The group-funding lever.** The most plausible upside for this name is the one the konglo structure supplies: the controlling group also owns a large bank, and cheap related-party deposits could close the LDR gap without a rate war. The public releases archived for this session do not disclose related-party deposit balances, so we do not put a number in the base case; instead, the bull scenario is the group-funding test, because it rebuilds deposits faster than loans and lets NIM hold. If the group places deposits at below-market rates, the bull case is too conservative; if it does not, the base case stands. That is the fork the reader should watch."
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "**Downside risks.** Funding and liquidity (high likelihood, high impact): the LDR is 180.4% and deposits fell 28.8% yoy [S13]; a further outflow would force wholesale funding and compress NIM. Credit (high, high): impairment is already IDR454.1bn in 9M2026, up 65.2% yoy [S5], and a weaker consumer would push cost of credit above our base. Regulatory (medium, medium): OJK provisioning and consumer-protection rules could raise the loss content of the paylater book [S10]. Governance (medium, medium): the group controls the bank with a thin float, and the former president director has been named a suspect by the KPK in an EDC procurement case [S17]; no charge against the company, but it is an overhang. Valuation (high, high): at a large premium to book for a sub-COE ROE, multiple compression is the main risk to holders."
+          },
+          {
+            "type": "para",
+            "text": "**Index and ownership events.** Two events directly attack the premium the lens assumes it keeps. First, MSCI opened a consultation on 15 October 2026 to reclassify Indonesia from Emerging to Standalone; the consultation runs to 30 April 2027 and MSCI will decide on or before 30 June 2027, and its freeze on Indonesian index increases remains in place until further notice [S15]. Second, BBHI is on the exchange's HSC list as of 22 October 2026 [S19], and HSC names were excluded from the IHSG calculation from 2 November 2026 [S20]. The stock is therefore already outside the main domestic benchmark and exposed to a further index event if the Standalone proposal proceeds."
+          },
+          {
+            "type": "para",
+            "text": "**Why the base compression is 40.0%.** The base compression is the konglo deck's central assumption plus the two live adjustments the registry encodes for this name: the HSC listing and the free-float deadline, which together add 10.0% to the compression. A lower share would ignore that the index events are dated and already announced; a higher share would assume the MSCI Standalone proposal is adopted in the base case, which it is not \u2014 it is a consultation with a decision date. A compression halfway between the base and bear settings (40.0% and 80.0%) would value the equity between Rp383 and Rp231."
+          },
+          {
+            "type": "para",
+            "text": "**The conglomerate lens in the scenarios.** The bear, base and bull prices in the table are the fundamental scenario values after the konglo compression: bear Rp231, base Rp383 and bull Rp677 [S0]. The asymmetry is deliberate and sourced: the bull case does clear the current price, but it is the minority case, and the probability-weighted target of Rp418 sits below the Rp600 price. The distribution is skewed against the buyer, not by construction but because the base case's terminal ROE stays below COE."
+          },
+          {
+            "type": "para",
+            "text": "**Bear** (25.0%, value Rp124): the managed repricing outruns the CASA base, time deposits keep leaving, credit cost rises further, NIM falls and growth slows. **Base** (50.0%, Rp169): the deposit base stabilises, credit cost normalises slowly and the bank earns a mid-single-digit ROE. **Bull** (25.0%, Rp254): CASA compounds, deposits rebuild faster than we model, credit costs fall and the bank approaches its cost of equity by the end of the decade. The shocks are mirrored around the same four drivers."
+          },
+          {
+            "type": "para",
+            "text": "Signposts that would change the view: two consecutive quarters of deposit growth with a falling LDR; impairment falling below the current level; a group deposit placement disclosed at below-market rates; and a disclosed plan to use the 74.0% CAR for something other than more consumer lending."
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "block",
+            "ref": "table:konglo"
+          },
+          {
+            "type": "para",
+            "text": "Allo Bank is controlled by PT Mega Corpora, with insider ownership of 90.5% and a free float of 11.8% in the data pack [S0]. The two fields overlap, so the insider figure cannot be read as an exact control percentage alongside the float; the float is the number the index rules use. The free float is below the exchange minimum: the rule requires 12.5% by 31 March 2027 and 15.0% by 31 March 2028 for issuers of this size [S16], a gap of +0.7pp now with 4.6 months to the first deadline. The controller can close it by selling down or the bank can issue new shares; either way it adds supply inside the forecast window, in a stock that trades about Rp6,211,808,246 a day against a market value of Rp12,676,268,485,200 [S0]. Daily turnover is a very small fraction of the company's value and of the float."
+          },
+          {
+            "type": "para",
+            "text": "The dividend record is short \u2014 the FY2025 payout was only the second in the bank's history [S4][S9] \u2014 and the FY2025 payout was 50.0% of profit [S4], with the rest retained. The separate IDR300.0bn buyback runs to 2 December 2026 [S8]."
+          },
+          {
+            "type": "para",
+            "text": "Governance issues to monitor: the KPK investigation into the former president director over an EDC machine procurement [S17] (the company is not charged, but the case touches procurement controls); related-party exposure to the wider CT Corp group, which the public releases archived this session do not quantify \u2014 the related-party deposit and placement balances are not disclosed in the press releases we hold, so we treat them as undisclosed rather than nil; and the combination of a thin float with a controlling shareholder, which limits minority influence. We did not find pledged controlling shares in the sources reviewed; that is an absence of evidence, not a clean bill of health. Auditor and opinion were not available in the archived sources and are carried as a monitoring item."
+          },
+          {
+            "type": "para",
+            "text": "On ESG, the material exposure is consumer credit conduct: paylater and instant cash to a mass retail base, with provisioning rules that are strict and consumer-protection enforcement that is increasing [S10]. The bank's PPATK financial-integrity rating is disclosed in the FY2025 release and is strong [S6]; that is a compliance positive, not a valuation driver."
+          },
+          {
+            "type": "background",
+            "text": "Indonesian conglomerate-controlled banks often carry a group premium because the market expects ecosystem synergies and, in some cases, an eventual group restructuring. That premium can persist for years, which is why the konglo lens closes only part of it within a year, but it is not a fundamental cash-flow claim. Concentrated-ownership stocks have also been the focus of exchange and index-provider rule changes, which can turn a scarcity premium into a supply overhang quickly."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "**2 December 2026** \u2014 buyback window closes; the realised amount and average price tell us how much support the price has had [S8].",
+              "**February 2027** \u2014 FY2026 audited results: the key numbers are the Q4 impairment charge, the year-end deposit balance and the FY2026 dividend [S4].",
+              "**31 March 2027** \u2014 first free-float step; a controller sell-down or new issue would be the visible mechanism [S16].",
+              "**30 April 2027 / 30 June 2027** \u2014 MSCI consultation feedback closes and the decision is due; a Standalone outcome would remove another index support [S15].",
+              "**Quarterly** \u2014 LDR (currently 180.4% [S13]), cost of credit versus the current run-rate, CASA growth, and the NPL/special-mention split [S7].",
+              "**Policy** \u2014 the BI-Rate at the spot level [macro deck]; a cut would help deposit competition but also compress asset yields on a floating book."
+            ]
+          },
+          {
+            "type": "para",
+            "text": "We monitor the deposit franchise above all: if the CASA growth seen in 2026 (giro up 208.4%, savings up 26.4% [S13]) continues and time deposits stabilise, the funding constraint eases and the base case improves. Until then the equity is a leveraged bet on a credit cycle it has not yet been through, funded by a deposit base that is smaller and cheaper but not yet proven sticky."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for BBHI.JK",
+        "url": "https://finance.yahoo.com/quote/BBHI.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-09",
+        "kind": "data"
+      },
+      "S3": {
+        "title": "Rapor Bank Digital Q3 2026: 4 Bank Melesat, 2 Susut Tertekan Beban",
+        "url": "https://keuangan.kontan.co.id/news/rapor-bank-digital-q3-2026-4-bank-melesat-2-susut-tertekan-beban",
+        "publisher": "keuangan.kontan.co.id",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S4": {
+        "title": "Allo Bank Tebar Dividen Rp 286 Miliar, 50% Laba Bersih",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8547168/allo-bank-tebar-dividen-rp-286-miliar-50-laba-bersih",
+        "publisher": "finance.detik.com",
+        "date": "2026-06-25",
+        "kind": "news"
+      },
+      "S5": {
+        "title": "Laba Bersih Allo Bank Turun 11% hingga September 2026",
+        "url": "https://keuangan.kontan.co.id/news/laba-bersih-allo-bank-turun-11-hingga-september-2026",
+        "publisher": "keuangan.kontan.co.id",
+        "date": "2026-10-30",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "Allo Bank (BBHI) Raup Laba Rp 574 Miliar, Naik 23%!",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8371248/allo-bank-bbhi-raup-laba-rp-574-miliar-naik-23",
+        "publisher": "finance.detik.com",
+        "date": "2026-02-24",
+        "kind": "news"
+      },
+      "S7": {
+        "title": "Allo Bank Cetak Laba Bersih Rp 130 Miliar di Kuartal II-2026, Naik 14%",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8599204/allo-bank-cetak-laba-bersih-rp-130-miliar-di-kuartal-ii-2026-naik-14",
+        "publisher": "finance.detik.com",
+        "date": "2026-07-31",
+        "kind": "news"
+      },
+      "S8": {
+        "title": "Sejumlah Bank Swasta Siapkan Buyback Saham, Ini Daftarnya",
+        "url": "https://keuangan.kontan.co.id/news/sejumlah-bank-swasta-siapkan-buyback-saham-ini-daftarnya",
+        "publisher": "keuangan.kontan.co.id",
+        "date": "2026-09-11",
+        "kind": "news"
+      },
+      "S9": {
+        "title": "Allo Bank bagikan dividen tunai Rp286,97 miliar - ANTARA News",
+        "url": "https://www.antaranews.com/berita/5623431/allo-bank-bagikan-dividen-tunai-rp28697-miliar",
+        "publisher": "www.antaranews.com",
+        "date": "2026-06-25",
+        "kind": "news"
+      },
+      "S10": {
+        "title": "OJK: Kredit Perbankan Tumbuh 13 persen pada September 2026",
+        "url": "https://money.kompas.com/read/2026/11/05/152741626/ojk-kredit-perbankan-tumbuh-13-persen-pada-september-2026",
+        "publisher": "money.kompas.com",
+        "date": "2026-11-05",
+        "kind": "news"
+      },
+      "S11": {
+        "title": "Bisnis Paylater Perbankan Tumbuh 26,68%, Ini Kinerja Allo Bank dan BCA",
+        "url": "https://keuangan.kontan.co.id/news/bisnis-paylater-perbankan-tumbuh-2668-ini-kinerja-allo-bank-dan-bca",
+        "publisher": "keuangan.kontan.co.id",
+        "date": "2026-11-08",
+        "kind": "news"
+      },
+      "S13": {
+        "title": "Allo Bank Makin Tertekan, Laba Turun 4% dan DPK Ambles 29%",
+        "url": "https://wartaekonomi.co.id/read637813/allo-bank-makin-tertekan-laba-turun-4-dan-dpk-ambles-29",
+        "publisher": "wartaekonomi.co.id",
+        "date": "2026-11-09",
+        "kind": "news"
+      },
+      "S15": {
+        "title": "MSCI consultation on reclassifying Indonesia to Standalone Market status",
+        "url": "https://www.msci.com/downloads/documents/press-releases/media-room/Indonesia_PR_Oct_26.pdf",
+        "publisher": "www.msci.com",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      },
+      "S16": {
+        "title": "IDX puts the 15% free-float rule into force, with deadlines",
+        "url": "https://www.idxchannel.com/market-news/bei-resmi-berlakukan-aturan-free-float-jadi-15-persen-ini-tenggat-waktunya",
+        "publisher": "www.idxchannel.com",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      },
+      "S17": {
+        "title": "KPK periksa 10 saksi terkait kasus mesin EDC BRI",
+        "url": "https://kalteng.antaranews.com/berita/783341/kpk-periksa-10-saksi-terkait-kasus-mesin-edc-bri",
+        "publisher": "kalteng.antaranews.com",
+        "date": "Mon, 09 No",
+        "kind": "news"
+      },
+      "S19": {
+        "title": "IDX high-shareholding-concentration (HSC) list, 82 issuers as of 22 Oct 2026",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8723936/saham-hsc-tambah-lagi-ini-daftar-lengkapnya/amp",
+        "publisher": "finance.detik.com",
+        "date": "2026-10-26",
+        "kind": "regulator"
+      },
+      "S20": {
+        "title": "HSC list 82 issuers; HSC excluded from IHSG",
+        "url": "https://www.fortuneidn.com/market/daftar-saham-hsc-terbaru-film-masuk-lagi-tfsco-ditambahkan-d7w02-00-lflgw-vpm0fv",
+        "publisher": "www.fortuneidn.com",
+        "date": "2026-11-09",
+        "kind": "regulator"
+      }
+    },
+    "rendered_at": "2026-11-10T00:56:05+07:00"
+  },
+  "meta": {
+    "rating": "SELL",
+    "tp": 418.0,
+    "price": 600.0,
+    "tp_fundamental": 179.0,
+    "konglo": true,
+    "suspended": null,
+    "price_date": "2026-11-09",
+    "tr_pct": -28.47,
+    "upside_pct": -30.26,
+    "v0": 160.0,
+    "tp_base": 169.0,
+    "dps12": 10.75,
+    "liquidity_discount": 0.0,
+    "investable": {
+      "ok": true,
+      "mcap": true,
+      "adtv": true,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-10",
+    "data_asof": "2026-11-09",
+    "model_asof": "2026-11-10",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Hendra",
+    "sector_lead_title": "Sector Lead, Financials",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 12676268485200.0,
+    "adtv_3m_idr": 6211808246.0,
+    "free_float_pct": 11.85,
+    "w52_high": 1535.0,
+    "w52_low": 580.0,
+    "shares_m": 21127.11,
+    "insider_pct": 90.51,
+    "institution_pct": 0.02,
+    "board": "",
+    "listing_date": "2015-08-12",
+    "website": "https://www.allobank.com"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "loans",
+        "label": "Gross loans",
+        "unit": "money",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": 9141.0,
+          "FY2026E": 9598.05,
+          "FY2027E": 11037.7575,
+          "FY2028E": 12693.421125
+        }
+      },
+      {
+        "key": "nii",
+        "label": "Net interest income",
+        "unit": "money",
+        "values": {
+          "FY2023A": 1047.09929,
+          "FY2024A": 1125.462306,
+          "FY2025A": 1450.400681,
+          "FY2026E": 1633.789575,
+          "FY2027E": 1668.923331,
+          "FY2028E": 1792.288987
+        }
+      },
+      {
+        "key": "ppop",
+        "label": "Pre-provision operating profit",
+        "unit": "money",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": null,
+          "FY2026E": 1197.957776,
+          "FY2027E": 1263.799063,
+          "FY2028E": 1383.491776
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": 444.566134,
+          "FY2024A": 467.105739,
+          "FY2025A": 574.0,
+          "FY2026E": 465.051783,
+          "FY2027E": 501.130433,
+          "FY2028E": 558.877475
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 20.458393,
+          "FY2024A": 21.495639,
+          "FY2025A": 26.525118,
+          "FY2026E": 21.490512,
+          "FY2027E": 23.157742,
+          "FY2028E": 25.826291
+        }
+      },
+      {
+        "key": "bvps",
+        "label": "Book value per share",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 316.842827,
+          "FY2024A": 334.360366,
+          "FY2025A": 346.998458,
+          "FY2026E": 355.208969,
+          "FY2027E": 367.621456,
+          "FY2028E": 381.868876
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 0.0,
+          "FY2024A": 10.74,
+          "FY2025A": 13.28,
+          "FY2026E": 10.745256,
+          "FY2027E": 11.578871,
+          "FY2028E": 12.913146
+        }
+      },
+      {
+        "key": "roe",
+        "label": "ROE",
+        "unit": "pct",
+        "values": {
+          "FY2023A": 0.06687,
+          "FY2024A": 0.066018,
+          "FY2025A": 0.0777,
+          "FY2026E": 0.061208,
+          "FY2027E": 0.064075,
+          "FY2028E": 0.068917
+        }
+      },
+      {
+        "key": "nim_line",
+        "label": "NIM (on average earning assets)",
+        "unit": "pct",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": null,
+          "FY2026E": 0.114,
+          "FY2027E": 0.111,
+          "FY2028E": 0.108
+        }
+      },
+      {
+        "key": "credit_cost_line",
+        "label": "Credit cost",
+        "unit": "pct",
+        "values": {
+          "FY2023A": null,
+          "FY2024A": null,
+          "FY2025A": null,
+          "FY2026E": 0.064,
+          "FY2027E": 0.06,
+          "FY2028E": 0.056
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "justified_pbv",
+        "label": "Justified P/BV",
+        "available": true,
+        "value": 171.08,
+        "weight": 0.5,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      },
+      {
+        "method": "residual_income",
+        "label": "Residual income",
+        "available": true,
+        "value": 135.97,
+        "weight": 0.3,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": -20.52,
+        "primary": false
+      },
+      {
+        "method": "ddm",
+        "label": "Dividend discount",
+        "available": true,
+        "value": 167.11,
+        "weight": 0.2,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": -2.32,
+        "primary": false
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 0.9,
+      "beta_source": "industry default (config)",
+      "de": 0.0,
+      "beta_levered": 0.9,
+      "tax": 0.22,
+      "coe_premium": 0.006,
+      "coe": 0.12451,
+      "kd_pre_tax": 0.0945,
+      "we": 1.0,
+      "wd": 0.0,
+      "wacc": 0.12451
+    },
+    "g": 0.04,
+    "dcf": null,
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 169.0,
+        "v0": 160.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.25,
+        "tp": 124.0,
+        "v0": 117.0,
+        "narrative": "The managed repricing goes wrong. Time deposits keep leaving for higher-paying competitors faster than CASA replaces them, so what started as a deliberate cut in expensive funding turns into a funding shortfall: the LDR stays near 180% and the bank has to fund marginal loans with wholesale money at a spread that eats the margin. The paylater and instant-cash book seasons: credit cost goes to 7.2% as unemployment and purchasing power bite, impairment keeps outrunning profit, and loan growth slows to 10% because the bank cannot fund more. NIM falls to 10.8% and the payout is cut to 40% to defend capital.",
+        "shocks": [
+          {
+            "target": "a.credit_cost",
+            "op": "add",
+            "value": 0.008
+          },
+          {
+            "target": "a.nim",
+            "op": "add",
+            "value": -0.006
+          },
+          {
+            "target": "a.loan_growth",
+            "op": "add",
+            "value": -0.05
+          },
+          {
+            "target": "a.payout",
+            "op": "add",
+            "value": -0.1
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.25,
+        "tp": 254.0,
+        "v0": 240.0,
+        "narrative": "The deposit franchise turns. CASA keeps compounding from the 15m customers, deposits rebuild faster than we model, the LDR falls towards 120% and funding costs drop with it. Credit costs peak in 2026 and fall to 5.2% as the book seasons, NIM holds above 11.5%, loan growth stays near 20% and the bank earns close to its cost of equity by the end of the decade. With capital still at 70%+ CAR the parent raises the payout to 60%.",
+        "shocks": [
+          {
+            "target": "a.credit_cost",
+            "op": "add",
+            "value": -0.008
+          },
+          {
+            "target": "a.nim",
+            "op": "add",
+            "value": 0.006
+          },
+          {
+            "target": "a.loan_growth",
+            "op": "add",
+            "value": 0.05
+          },
+          {
+            "target": "a.payout",
+            "op": "add",
+            "value": 0.1
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "12-month value vs NIM and credit cost",
+        "metric": "tp",
+        "x": {
+          "target": "a.nim",
+          "op": "add",
+          "label": "NIM (+/- pp)",
+          "steps": [
+            -0.006,
+            -0.003,
+            0.0,
+            0.003,
+            0.006
+          ]
+        },
+        "y": {
+          "target": "a.credit_cost",
+          "op": "add",
+          "label": "Credit cost (+/- pp)",
+          "steps": [
+            -0.006,
+            -0.003,
+            0.0,
+            0.003,
+            0.006
+          ]
+        },
+        "grid": [
+          [
+            172.133197,
+            177.0616,
+            181.990003,
+            186.918406,
+            191.846809
+          ],
+          [
+            165.587154,
+            170.515557,
+            175.44396,
+            180.372362,
+            185.300765
+          ],
+          [
+            159.04111,
+            163.969513,
+            168.897916,
+            173.826319,
+            178.754722
+          ],
+          [
+            152.495066,
+            157.423469,
+            162.351872,
+            167.280275,
+            172.208678
+          ],
+          [
+            145.949022,
+            150.877425,
+            155.805828,
+            160.734231,
+            165.662634
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs cost of equity and terminal growth",
+        "metric": "tp",
+        "x": {
+          "target": "val.coe",
+          "op": "add",
+          "label": "Cost of equity (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "y": {
+          "target": "val.g",
+          "op": "add",
+          "label": "Terminal growth (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "grid": [
+          [
+            203.855525,
+            191.059147,
+            179.588427,
+            169.241899,
+            159.856741
+          ],
+          [
+            199.412163,
+            186.259575,
+            174.541756,
+            164.029428,
+            154.539487
+          ],
+          [
+            194.372456,
+            180.85636,
+            168.897916,
+            158.234623,
+            148.65962
+          ],
+          [
+            188.607716,
+            174.727978,
+            162.544248,
+            151.754124,
+            142.122859
+          ],
+          [
+            181.949357,
+            167.717941,
+            155.337854,
+            144.45857,
+            134.812607
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": false,
+      "target": "a.credit_cost",
+      "note": "price not bracketed"
+    },
+    "multiples": {
+      "FY2025A": {
+        "pe": 22.620069,
+        "pbv": 1.729114,
+        "div_yield": 0.022133
+      },
+      "FY2026E": {
+        "pe": 27.919298,
+        "pbv": 1.689147,
+        "div_yield": 0.017909
+      },
+      "FY2027E": {
+        "pe": 25.909261,
+        "pbv": 1.632114,
+        "div_yield": 0.019298
+      },
+      "FY2028E": {
+        "pe": 23.232139,
+        "pbv": 1.57122,
+        "div_yield": 0.021522
+      }
+    },
+    "peers": {
+      "median": {
+        "pe": {
+          "median": 11.189873916522936,
+          "n": 39
+        },
+        "pbv": {
+          "median": 0.6551578101557866,
+          "n": 47
+        },
+        "ev_sales": {
+          "median": 1.9305870808618744,
+          "n": 38
+        },
+        "div_yield": {
+          "median": 0.05968360234776229,
+          "n": 18
+        }
+      },
+      "rows": {
+        "AGRO.JK": {
+          "pbv": 0.3907,
+          "ev_sales": 0.1265,
+          "div_yield": 0.0
+        },
+        "AGRS.JK": {
+          "pe": 11.1692,
+          "pbv": 0.4311,
+          "ev_sales": 8.0605,
+          "div_yield": 0.0
+        },
+        "AMAR.JK": {
+          "pe": 11.1899,
+          "pbv": 0.9803,
+          "ev_sales": 1.3075,
+          "div_yield": 0.0614
+        },
+        "ARTO.JK": {
+          "pe": 19.0271,
+          "pbv": 0.7811,
+          "ev_sales": 1.0538,
+          "div_yield": 0.0
+        },
+        "BABP.JK": {
+          "pe": 11.3947,
+          "pbv": 0.2463,
+          "div_yield": 0.0
+        },
+        "BACA.JK": {
+          "pe": 14.2539,
+          "pbv": 0.2637,
+          "div_yield": 0.0
+        },
+        "BANK.JK": {
+          "pe": 34.311,
+          "pbv": 0.7209,
+          "div_yield": 0.0
+        },
+        "BBCA.JK": {
+          "pe": 10.6066,
+          "pbv": 2.2213,
+          "ev_sales": 4.4498,
+          "div_yield": 0.0743
+        },
+        "BBKP.JK": {
+          "pe": 96.9065,
+          "pbv": 0.7898,
+          "ev_sales": 16.2824,
+          "div_yield": 0.0
+        },
+        "BBMD.JK": {
+          "pe": 25.561,
+          "pbv": 1.5273,
+          "ev_sales": 7.4548,
+          "div_yield": 0.011
+        },
+        "BBNI.JK": {
+          "pe": 5.8826,
+          "pbv": 0.7287,
+          "ev_sales": 0.3957,
+          "div_yield": 0.1052
+        },
+        "BBRI.JK": {
+          "pe": 7.2081,
+          "pbv": 1.2685,
+          "ev_sales": 2.3507,
+          "div_yield": 0.1277
+        },
+        "BBSI.JK": {
+          "pe": 62.7459,
+          "pbv": 3.0386,
+          "ev_sales": 3.3846,
+          "div_yield": 0.0
+        },
+        "BBTN.JK": {
+          "pe": 3.6878,
+          "pbv": 0.3438,
+          "ev_sales": 2.2092,
+          "div_yield": 0.0
+        },
+        "BBYB.JK": {
+          "pe": 3.935,
+          "pbv": 0.4603,
+          "div_yield": 0.0
+        },
+        "BCIC.JK": {
+          "pbv": 0.4504,
+          "ev_sales": 0.1711,
+          "div_yield": 0.0
+        },
+        "BDMN.JK": {
+          "pe": 11.7655,
+          "pbv": 0.8601,
+          "ev_sales": 2.3193,
+          "div_yield": 0.0297
+        },
+        "BEKS.JK": {
+          "pe": 17.315,
+          "pbv": 0.7001,
+          "ev_sales": 0.1088,
+          "div_yield": 0.0
+        },
+        "BGTG.JK": {
+          "pe": 8.7453,
+          "pbv": 0.5257,
+          "ev_sales": 1.9981,
+          "div_yield": 0.0
+        },
+        "BINA.JK": {
+          "pbv": 7.4036,
+          "ev_sales": 26.7753,
+          "div_yield": 0.0
+        },
+        "BJBR.JK": {
+          "pe": 5.1601,
+          "pbv": 0.4489,
+          "ev_sales": 1.4659,
+          "div_yield": 0.1205
+        },
+        "BJTM.JK": {
+          "pe": 3.2741,
+          "pbv": 0.5494,
+          "ev_sales": 0.6456,
+          "div_yield": 0.1151
+        },
+        "BKSW.JK": {
+          "pbv": 0.3072,
+          "ev_sales": 0.3284,
+          "div_yield": 0.0
+        },
+        "BMAS.JK": {
+          "pbv": 1.1299,
+          "ev_sales": 17.4366,
+          "div_yield": 0.0
+        },
+        "BMRI.JK": {
+          "pe": 5.2565,
+          "pbv": 1.1459,
+          "ev_sales": 2.1137,
+          "div_yield": 0.1504
+        },
+        "BNBA.JK": {
+          "pe": 80.4649,
+          "pbv": 0.7159,
+          "ev_sales": 2.8574,
+          "div_yield": 0.0
+        },
+        "BNGA.JK": {
+          "pe": 6.1622,
+          "pbv": 0.6552,
+          "ev_sales": 1.1783,
+          "div_yield": 0.1082
+        },
+        "BNII.JK": {
+          "pe": 7.6458,
+          "pbv": 0.3902,
+          "ev_sales": 1.5375,
+          "div_yield": 0.0467
+        },
+        "BNLI.JK": {
+          "pe": 15.2535,
+          "pbv": 1.0758,
+          "ev_sales": 3.5315,
+          "div_yield": 0.0254
+        },
+        "BRIS.JK": {
+          "pe": 6.8881,
+          "pbv": 1.0213,
+          "ev_sales": 0.3441,
+          "div_yield": 0.029
+        },
+        "BSIM.JK": {
+          "pe": 56.0511,
+          "pbv": 1.7563,
+          "ev_sales": 0.5567,
+          "div_yield": 0.0
+        },
+        "BSWD.JK": {
+          "pbv": 8.0261,
+          "div_yield": 0.0
+        },
+        "BTPN.JK": {
+          "pe": 28.4632,
+          "pbv": 0.5306,
+          "ev_sales": 3.3024,
+          "div_yield": 0.0039
+        },
+        "BTPS.JK": {
+          "pe": 6.2001,
+          "pbv": 0.7403,
+          "ev_sales": 1.0875,
+          "div_yield": 0.084
+        },
+        "BVIC.JK": {
+          "pe": 12.8153,
+          "pbv": 0.303,
+          "ev_sales": 3.1014,
+          "div_yield": 0.0
+        },
+        "DNAR.JK": {
+          "pe": 7.9096,
+          "pbv": 0.4262,
+          "ev_sales": 1.5768,
+          "div_yield": 0.0
+        },
+        "INPC.JK": {
+          "pbv": 0.5921,
+          "div_yield": 0.0
+        },
+        "MASB.JK": {
+          "pe": 14.1656,
+          "pbv": 0.7287,
+          "div_yield": 0.0
+        },
+        "MAYA.JK": {
+          "pe": 55.9618,
+          "pbv": 0.2208,
+          "div_yield": 0.0
+        },
+        "MCOR.JK": {
+          "pe": 7.4917,
+          "pbv": 0.2934,
+          "ev_sales": 0.2598,
+          "div_yield": 0.0
+        },
+        "MEGA.JK": {
+          "pe": 15.2945,
+          "pbv": 1.9886,
+          "ev_sales": 6.4122,
+          "div_yield": 0.0441
+        },
+        "NISP.JK": {
+          "pe": 5.0111,
+          "pbv": 0.5679,
+          "ev_sales": 0.6717,
+          "div_yield": 0.0391
+        },
+        "NOBU.JK": {
+          "pe": 4.1868,
+          "pbv": 0.6,
+          "div_yield": 0.0
+        },
+        "PNBN.JK": {
+          "pe": 6.2583,
+          "pbv": 0.3216,
+          "ev_sales": 1.8631,
+          "div_yield": 0.0579
+        },
+        "PNBS.JK": {
+          "pe": 27.0746,
+          "pbv": 0.4583,
+          "ev_sales": 1.7011,
+          "div_yield": 0.0
+        },
+        "SDRA.JK": {
+          "pbv": 0.2139,
+          "ev_sales": 3.0068,
+          "div_yield": 0.0
+        },
+        "SUPA.JK": {
+          "pe": 32.3545,
+          "pbv": 1.3039,
+          "ev_sales": 4.3581,
+          "div_yield": 0.0
+        }
+      }
+    },
+    "drivers": {},
+    "konglo": {
+      "direction": "premium",
+      "premium_ratio": 3.5505,
+      "premium_kept": 2.3372,
+      "v_fundamental": 168.99,
+      "tp_fundamental": 179.0,
+      "tp": 418.0,
+      "scenarios": {
+        "bear": {
+          "prob": 0.25,
+          "compress": 0.8,
+          "premium_kept": 1.2884,
+          "tp": 231.0
+        },
+        "base": {
+          "prob": 0.5,
+          "compress": 0.4,
+          "premium_kept": 2.1388,
+          "tp": 383.0
+        },
+        "bull": {
+          "prob": 0.25,
+          "compress": -0.05,
+          "premium_kept": 3.7827,
+          "tp": 677.0
+        }
+      },
+      "adjustments": [
+        {
+          "key": "hsc",
+          "value": 0.05,
+          "why": "on the exchange's HSC list (as of 2026-10-22): out of the IHSG, the LQ45/IDX30/IDX80 and the MSCI indexes [konglo deck S3]"
+        },
+        {
+          "key": "ff_deadline",
+          "value": 0.05,
+          "why": "free float 11.85% must reach 12.5% by 2027-03-31 \u2014 controller sell-down or new shares inside the window [konglo deck S25]"
+        }
+      ],
+      "groups": [
+        {
+          "name": "CT Corp (Chairul Tanjung)",
+          "controller": "Chairul Tanjung",
+          "role": null,
+          "note": null,
+          "sources": [
+            "S12"
+          ]
+        }
+      ],
+      "hsc": {
+        "listed": true,
+        "asof": "2026-10-22",
+        "source": "S3"
+      },
+      "free_float": {
+        "free_float_pct": 11.85,
+        "compliant": false,
+        "tier": "mcap >= Rp5tn, free float below 12.5%",
+        "next_step_pct": 12.5,
+        "next_step_by": "2027-03-31",
+        "final_by": "2028-03-31",
+        "gap_pct": 0.65
+      },
+      "index_deletions": [],
+      "enforcement": [],
+      "events": [],
+      "registry_asof": "2026-10-27",
+      "construction": "target = fundamental 12-month value (probability-weighted business scenarios, after the liquidity discount) x the probability-weighted share of today's premium kept, (price / fundamental value today)^(1 - c) over the regime scenarios; c = share of the log gap that closes within 12 months"
+    }
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E",
+      "FY2031E",
+      "FY2032E",
+      "FY2033E",
+      "FY2034E",
+      "FY2035E"
+    ],
+    "sections": {
+      "OPS": [],
+      "IS": [
+        {
+          "key": "nii",
+          "label": "Net interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 632.685879,
+            "FY2023A": 1047.09929,
+            "FY2024A": 1125.462306,
+            "FY2025A": 1450.400681,
+            "FY2026E": 1633.789575,
+            "FY2027E": 1668.923331,
+            "FY2028E": 1792.288987,
+            "FY2029E": 1963.761102,
+            "FY2030E": 2146.710264,
+            "FY2031E": 2301.660379,
+            "FY2032E": 2504.306564,
+            "FY2033E": 2754.73722,
+            "FY2034E": 3030.210942,
+            "FY2035E": 3333.232037
+          }
+        },
+        {
+          "key": "noii",
+          "label": "Non-interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 128.444991,
+            "FY2023A": 104.309284,
+            "FY2024A": 314.434454,
+            "FY2025A": 518.395688,
+            "FY2026E": 544.315473,
+            "FY2027E": 587.86071,
+            "FY2028E": 634.889567,
+            "FY2029E": 679.331837,
+            "FY2030E": 720.091747,
+            "FY2031E": 756.096334,
+            "FY2032E": 793.901151,
+            "FY2033E": 833.596209,
+            "FY2034E": 875.276019,
+            "FY2035E": 919.03982
+          }
+        },
+        {
+          "key": "toi",
+          "label": "Total operating income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 761.13087,
+            "FY2023A": 1151.408573,
+            "FY2024A": 1439.89676,
+            "FY2025A": 1968.796369,
+            "FY2026E": 2178.105048,
+            "FY2027E": 2256.784041,
+            "FY2028E": 2427.178554,
+            "FY2029E": 2643.092939,
+            "FY2030E": 2866.802011,
+            "FY2031E": 3057.756713,
+            "FY2032E": 3298.207715,
+            "FY2033E": 3588.333429,
+            "FY2034E": 3905.486962,
+            "FY2035E": 4252.271857
+          }
+        },
+        {
+          "key": "opex",
+          "label": "Operating expenses",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 980.147271,
+            "FY2027E": 992.984978,
+            "FY2028E": 1043.686778,
+            "FY2029E": 1110.099034,
+            "FY2030E": 1204.056844,
+            "FY2031E": 1284.257819,
+            "FY2032E": 1385.24724,
+            "FY2033E": 1507.10004,
+            "FY2034E": 1640.304524,
+            "FY2035E": 1785.95418
+          }
+        },
+        {
+          "key": "ppop",
+          "label": "Pre-provision operating profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 1197.957776,
+            "FY2027E": 1263.799063,
+            "FY2028E": 1383.491776,
+            "FY2029E": 1532.993905,
+            "FY2030E": 1662.745166,
+            "FY2031E": 1773.498893,
+            "FY2032E": 1912.960475,
+            "FY2033E": 2081.233389,
+            "FY2034E": 2265.182438,
+            "FY2035E": 2466.317677
+          }
+        },
+        {
+          "key": "provisions",
+          "label": "Loan-loss provisions",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 599.6496,
+            "FY2027E": 619.074225,
+            "FY2028E": 664.473002,
+            "FY2029E": 719.843912,
+            "FY2030E": 801.376295,
+            "FY2031E": 892.800914,
+            "FY2032E": 982.081005,
+            "FY2033E": 1080.289106,
+            "FY2034E": 1188.318017,
+            "FY2035E": 1307.149818
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other items",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 352.311928,
+            "FY2023A": 575.274274,
+            "FY2024A": 598.949408,
+            "FY2025A": 737.018416,
+            "FY2026E": 598.308176,
+            "FY2027E": 644.724838,
+            "FY2028E": 719.018775,
+            "FY2029E": 813.149993,
+            "FY2030E": 861.368872,
+            "FY2031E": 880.697979,
+            "FY2032E": 930.879469,
+            "FY2033E": 1000.944283,
+            "FY2034E": 1076.864421,
+            "FY2035E": 1159.167859
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 82.282517,
+            "FY2023A": 130.70814,
+            "FY2024A": 131.843669,
+            "FY2025A": 162.756853,
+            "FY2026E": 133.256394,
+            "FY2027E": 143.594405,
+            "FY2028E": 160.1413,
+            "FY2029E": 181.106393,
+            "FY2030E": 191.845798,
+            "FY2031E": 196.150815,
+            "FY2032E": 207.327337,
+            "FY2033E": 222.932313,
+            "FY2034E": 239.841398,
+            "FY2035E": 258.172184
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 270.029411,
+            "FY2023A": 444.566134,
+            "FY2024A": 467.105739,
+            "FY2025A": 574.261563,
+            "FY2026E": 465.051783,
+            "FY2027E": 501.130433,
+            "FY2028E": 558.877475,
+            "FY2029E": 632.0436,
+            "FY2030E": 669.523074,
+            "FY2031E": 684.547164,
+            "FY2032E": 723.552132,
+            "FY2033E": 778.01197,
+            "FY2034E": 837.023023,
+            "FY2035E": 900.995675
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 0.0,
+            "FY2025A": 0.0,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": 270.029411,
+            "FY2023A": 444.566134,
+            "FY2024A": 467.105739,
+            "FY2025A": 574.0,
+            "FY2026E": 465.051783,
+            "FY2027E": 501.130433,
+            "FY2028E": 558.877475,
+            "FY2029E": 632.0436,
+            "FY2030E": 669.523074,
+            "FY2031E": 684.547164,
+            "FY2032E": 723.552132,
+            "FY2033E": 778.01197,
+            "FY2034E": 837.023023,
+            "FY2035E": 900.995675
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 21730.256442,
+            "FY2023A": 21730.256442,
+            "FY2024A": 21730.256442,
+            "FY2025A": 21639.865642,
+            "FY2026E": 21639.865642,
+            "FY2027E": 21639.865642,
+            "FY2028E": 21639.865642,
+            "FY2029E": 21639.865642,
+            "FY2030E": 21639.865642,
+            "FY2031E": 21639.865642,
+            "FY2032E": 21639.865642,
+            "FY2033E": 21639.865642,
+            "FY2034E": 21639.865642,
+            "FY2035E": 21639.865642
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 12.426425,
+            "FY2023A": 20.458393,
+            "FY2024A": 21.495639,
+            "FY2025A": 26.525118,
+            "FY2026E": 21.490512,
+            "FY2027E": 23.157742,
+            "FY2028E": 25.826291,
+            "FY2029E": 29.207372,
+            "FY2030E": 30.939336,
+            "FY2031E": 31.633614,
+            "FY2032E": 33.436073,
+            "FY2033E": 35.952717,
+            "FY2034E": 38.679677,
+            "FY2035E": 41.635918
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 10.74,
+            "FY2025A": 13.28,
+            "FY2026E": 10.745256,
+            "FY2027E": 11.578871,
+            "FY2028E": 12.913146,
+            "FY2029E": 14.603686,
+            "FY2030E": 15.469668,
+            "FY2031E": 15.816807,
+            "FY2032E": 16.718037,
+            "FY2033E": 17.976359,
+            "FY2034E": 19.339839,
+            "FY2035E": 20.817959
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": 286.97,
+            "FY2026E": 287.377416,
+            "FY2027E": 232.525891,
+            "FY2028E": 250.565216,
+            "FY2029E": 279.438738,
+            "FY2030E": 316.0218,
+            "FY2031E": 334.761537,
+            "FY2032E": 342.273582,
+            "FY2033E": 361.776066,
+            "FY2034E": 389.005985,
+            "FY2035E": 418.511512
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "loans",
+          "label": "Gross loans",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": 9141.0,
+            "FY2026E": 9598.05,
+            "FY2027E": 11037.7575,
+            "FY2028E": 12693.421125,
+            "FY2029E": 14470.500083,
+            "FY2030E": 16351.665093,
+            "FY2031E": 17986.831603,
+            "FY2032E": 19785.514763,
+            "FY2033E": 21764.066239,
+            "FY2034E": 23940.472863,
+            "FY2035E": 26334.520149
+          }
+        },
+        {
+          "key": "deposits",
+          "label": "Customer deposits",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": 9519.0,
+            "FY2026E": 5330.64,
+            "FY2027E": 6823.2192,
+            "FY2028E": 8870.18496,
+            "FY2029E": 11353.836749,
+            "FY2030E": 14192.295936,
+            "FY2031E": 16321.140326,
+            "FY2032E": 18769.311375,
+            "FY2033E": 21584.708082,
+            "FY2034E": 24822.414294,
+            "FY2035E": 28545.776438
+          }
+        },
+        {
+          "key": "earning_assets",
+          "label": "Earning assets",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": 14265.9,
+            "FY2026E": 14397.075,
+            "FY2027E": 15673.61565,
+            "FY2028E": 17516.921152,
+            "FY2029E": 19535.175111,
+            "FY2030E": 21747.714574,
+            "FY2031E": 23382.881083,
+            "FY2032E": 25721.169192,
+            "FY2033E": 28293.286111,
+            "FY2034E": 31122.614722,
+            "FY2035E": 34234.876194
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": 6411.268937,
+            "FY2023A": 6885.075878,
+            "FY2024A": 7265.736493,
+            "FY2025A": 7509.0,
+            "FY2026E": 7686.674367,
+            "FY2027E": 7955.278908,
+            "FY2028E": 8263.591167,
+            "FY2029E": 8616.196029,
+            "FY2030E": 8969.697303,
+            "FY2031E": 9319.48293,
+            "FY2032E": 9700.76148,
+            "FY2033E": 10116.997385,
+            "FY2034E": 10565.014423,
+            "FY2035E": 11047.498586
+          }
+        },
+        {
+          "key": "total_assets",
+          "label": "Total assets",
+          "unit": "money",
+          "values": {
+            "FY2022A": 11058.956403,
+            "FY2023A": 12750.434573,
+            "FY2024A": 13984.013771,
+            "FY2025A": 18470.073478,
+            "FY2026E": 19393.577152,
+            "FY2027E": 22302.613724,
+            "FY2028E": 25648.005783,
+            "FY2029E": 29238.726593,
+            "FY2030E": 33039.76105,
+            "FY2031E": 36343.737155,
+            "FY2032E": 39978.11087,
+            "FY2033E": 43975.921957,
+            "FY2034E": 48373.514153,
+            "FY2035E": 53210.865568
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 295.038807,
+            "FY2023A": 316.842827,
+            "FY2024A": 334.360366,
+            "FY2025A": 346.998458,
+            "FY2026E": 355.208969,
+            "FY2027E": 367.621456,
+            "FY2028E": 381.868876,
+            "FY2029E": 398.163102,
+            "FY2030E": 414.498752,
+            "FY2031E": 430.662698,
+            "FY2032E": 448.281964,
+            "FY2033E": 467.516645,
+            "FY2034E": 488.219964,
+            "FY2035E": 510.516043
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "ldr",
+          "label": "Loan-to-deposit ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": 0.96029,
+            "FY2026E": 1.800544,
+            "FY2027E": 1.617676,
+            "FY2028E": 1.431021,
+            "FY2029E": 1.274503,
+            "FY2030E": 1.152151,
+            "FY2031E": 1.102057,
+            "FY2032E": 1.054142,
+            "FY2033E": 1.00831,
+            "FY2034E": 0.96447,
+            "FY2035E": 0.922536
+          }
+        },
+        {
+          "key": "nim_line",
+          "label": "NIM (on average earning assets)",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.114,
+            "FY2027E": 0.111,
+            "FY2028E": 0.108,
+            "FY2029E": 0.106,
+            "FY2030E": 0.104,
+            "FY2031E": 0.102,
+            "FY2032E": 0.102,
+            "FY2033E": 0.102,
+            "FY2034E": 0.102,
+            "FY2035E": 0.102
+          }
+        },
+        {
+          "key": "cti_line",
+          "label": "Cost-to-income",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.45,
+            "FY2027E": 0.44,
+            "FY2028E": 0.43,
+            "FY2029E": 0.42,
+            "FY2030E": 0.42,
+            "FY2031E": 0.42,
+            "FY2032E": 0.42,
+            "FY2033E": 0.42,
+            "FY2034E": 0.42,
+            "FY2035E": 0.42
+          }
+        },
+        {
+          "key": "credit_cost_line",
+          "label": "Credit cost",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.064,
+            "FY2027E": 0.06,
+            "FY2028E": 0.056,
+            "FY2029E": 0.053,
+            "FY2030E": 0.052,
+            "FY2031E": 0.052,
+            "FY2032E": 0.052,
+            "FY2033E": 0.052,
+            "FY2034E": 0.052,
+            "FY2035E": 0.052
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.06687,
+            "FY2024A": 0.066018,
+            "FY2025A": 0.0777,
+            "FY2026E": 0.061208,
+            "FY2027E": 0.064075,
+            "FY2028E": 0.068917,
+            "FY2029E": 0.074888,
+            "FY2030E": 0.076143,
+            "FY2031E": 0.074858,
+            "FY2032E": 0.076082,
+            "FY2033E": 0.078517,
+            "FY2034E": 0.080942,
+            "FY2035E": 0.083377
+          }
+        },
+        {
+          "key": "roa",
+          "label": "ROA",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.037344,
+            "FY2024A": 0.034944,
+            "FY2025A": 0.035389,
+            "FY2026E": 0.024565,
+            "FY2027E": 0.024037,
+            "FY2028E": 0.023311,
+            "FY2029E": 0.023031,
+            "FY2030E": 0.021501,
+            "FY2031E": 0.019732,
+            "FY2032E": 0.018961,
+            "FY2033E": 0.018534,
+            "FY2034E": 0.018127,
+            "FY2035E": 0.017739
+          }
+        },
+        {
+          "key": "car_est",
+          "label": "Capital ratio (estimate: equity / RWA)",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.800858,
+            "FY2027E": 0.720733,
+            "FY2028E": 0.651014,
+            "FY2029E": 0.595432,
+            "FY2030E": 0.548549,
+            "FY2031E": 0.518128,
+            "FY2032E": 0.490296,
+            "FY2033E": 0.464849,
+            "FY2034E": 0.441303,
+            "FY2035E": 0.419506
+          }
+        },
+        {
+          "key": "loan_growth_line",
+          "label": "Loan growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.05,
+            "FY2027E": 0.15,
+            "FY2028E": 0.15,
+            "FY2029E": 0.14,
+            "FY2030E": 0.13,
+            "FY2031E": 0.1,
+            "FY2032E": 0.1,
+            "FY2033E": 0.1,
+            "FY2034E": 0.1,
+            "FY2035E": 0.1
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.646362,
+            "FY2024A": 0.0507,
+            "FY2025A": 0.233977,
+            "FY2026E": -0.189805,
+            "FY2027E": 0.07758,
+            "FY2028E": 0.115234,
+            "FY2029E": 0.130916,
+            "FY2030E": 0.059299,
+            "FY2031E": 0.02244,
+            "FY2032E": 0.056979,
+            "FY2033E": 0.075267,
+            "FY2034E": 0.075849,
+            "FY2035E": 0.076429
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 0.499636,
+            "FY2025A": 0.500658,
+            "FY2026E": 0.5,
+            "FY2027E": 0.5,
+            "FY2028E": 0.5,
+            "FY2029E": 0.5,
+            "FY2030E": 0.5,
+            "FY2031E": 0.5,
+            "FY2032E": 0.5,
+            "FY2033E": 0.5,
+            "FY2034E": 0.5,
+            "FY2035E": 0.5
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        3957.8184
+      ],
+      [
+        "2022-01",
+        5600.0
+      ],
+      [
+        "2022-02",
+        5450.0
+      ],
+      [
+        "2022-03",
+        5775.0
+      ],
+      [
+        "2022-04",
+        6500.0
+      ],
+      [
+        "2022-05",
+        4400.0
+      ],
+      [
+        "2022-06",
+        3800.0
+      ],
+      [
+        "2022-07",
+        3530.0
+      ],
+      [
+        "2022-08",
+        3360.0
+      ],
+      [
+        "2022-09",
+        2110.0
+      ],
+      [
+        "2022-10",
+        2300.0
+      ],
+      [
+        "2022-11",
+        2060.0
+      ],
+      [
+        "2022-12",
+        1765.0
+      ],
+      [
+        "2023-01",
+        1775.0
+      ],
+      [
+        "2023-02",
+        1600.0
+      ],
+      [
+        "2023-03",
+        1505.0
+      ],
+      [
+        "2023-04",
+        1280.0
+      ],
+      [
+        "2023-05",
+        1020.0
+      ],
+      [
+        "2023-06",
+        1740.0
+      ],
+      [
+        "2023-07",
+        1810.0
+      ],
+      [
+        "2023-08",
+        1630.0
+      ],
+      [
+        "2023-09",
+        1520.0
+      ],
+      [
+        "2023-10",
+        1195.0
+      ],
+      [
+        "2023-11",
+        1445.0
+      ],
+      [
+        "2023-12",
+        1290.0
+      ],
+      [
+        "2024-01",
+        1200.0
+      ],
+      [
+        "2024-02",
+        1130.0
+      ],
+      [
+        "2024-03",
+        1165.0
+      ],
+      [
+        "2024-04",
+        1010.0
+      ],
+      [
+        "2024-05",
+        930.0
+      ],
+      [
+        "2024-06",
+        770.0
+      ],
+      [
+        "2024-07",
+        925.0
+      ],
+      [
+        "2024-08",
+        980.0
+      ],
+      [
+        "2024-09",
+        995.0
+      ],
+      [
+        "2024-10",
+        980.0
+      ],
+      [
+        "2024-11",
+        855.0
+      ],
+      [
+        "2024-12",
+        700.0
+      ],
+      [
+        "2025-01",
+        665.0
+      ],
+      [
+        "2025-02",
+        665.0
+      ],
+      [
+        "2025-03",
+        670.0
+      ],
+      [
+        "2025-04",
+        735.0
+      ],
+      [
+        "2025-05",
+        740.0
+      ],
+      [
+        "2025-06",
+        785.0
+      ],
+      [
+        "2025-07",
+        1305.0
+      ],
+      [
+        "2025-08",
+        1570.0
+      ],
+      [
+        "2025-09",
+        1485.0
+      ],
+      [
+        "2025-10",
+        1495.0
+      ],
+      [
+        "2025-11",
+        1500.0
+      ],
+      [
+        "2025-12",
+        1490.0
+      ],
+      [
+        "2026-01",
+        1475.0
+      ],
+      [
+        "2026-02",
+        1425.0
+      ],
+      [
+        "2026-03",
+        1335.0
+      ],
+      [
+        "2026-04",
+        1280.0
+      ],
+      [
+        "2026-05",
+        995.0
+      ],
+      [
+        "2026-06",
+        995.0
+      ],
+      [
+        "2026-07",
+        945.0
+      ],
+      [
+        "2026-08",
+        900.0
+      ],
+      [
+        "2026-09",
+        835.0
+      ],
+      [
+        "2026-10",
+        600.0
+      ],
+      [
+        "2026-11",
+        600.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "Justified P/BV",
+        "value": 171.08,
+        "weight": 0.5
+      },
+      {
+        "label": "Residual income",
+        "value": 135.97,
+        "weight": 0.3
+      },
+      {
+        "label": "Dividend discount",
+        "value": 167.11,
+        "weight": 0.2
+      },
+      {
+        "label": "Scenario base",
+        "value": 169.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 124.0,
+        "weight": 0.25
+      },
+      {
+        "label": "Scenario bull",
+        "value": 254.0,
+        "weight": 0.25
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "loan_growth",
+      "label": "Loan growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.05,
+        "FY2027E": 0.15,
+        "FY2028E": 0.15,
+        "FY2029E": 0.14,
+        "FY2030E": 0.13
+      },
+      "value": null,
+      "lt": 0.1,
+      "basis": "Loans were Rp9,547bn at 30 June 2026, +28% yoy [S7], and Rp9,460bn at 31 August, +32.0% yoy [S13], so the franchise is still compounding a consumer book at close to a third a year. December 2025 was Rp9,141bn [S6], which makes the first eight months of 2026 roughly +3.5% YTD; we model FY2026E at +5.0%, i.e. a normal seasonally stronger fourth quarter, not a repeat of the 22% H2 2025 step-up. From FY2027E we slow to 15%: the 9M2026 impairment charge rose 65.2% yoy [S5] and the deposit base is not growing with the book, so growth has to be funded from equity and wholesale money and cannot stay at 30%+ without a capital and liquidity price. 15% is still more than double the 13.26% system growth OJK reported for September 2026 [S10].",
+      "sources": [
+        "S5",
+        "S6",
+        "S7",
+        "S10",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "deposit_growth",
+      "label": "Deposit growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": -0.44,
+        "FY2027E": 0.28,
+        "FY2028E": 0.3,
+        "FY2029E": 0.28,
+        "FY2030E": 0.25
+      },
+      "value": null,
+      "lt": 0.15,
+      "basis": "Customer deposits fell from Rp9,519bn at December 2025 [S6] to Rp5,826bn at June 2026 [S7] and Rp5,240bn at August, -28.8% yoy, with time deposits down 41.4% to Rp3,750bn while giro more than tripled to Rp479bn and savings rose 26.4% to Rp1,010bn [S13]. The bank let the expensive time-deposit book run off and kept the transactional balances, so FY2026E is -44% (year-end stock around Rp5.3trn). From FY2027E deposits must rebuild to close a 180.4% LDR [S13]; we model +28-30% for three years, faster than loan growth, then +25% and 15% in the long run. That still leaves LDR above 110% at the end of the explicit window, funded by the Rp7.0trn equity base and wholesale lines, which is the model the bank is actually running.",
+      "sources": [
+        "S6",
+        "S7",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "ea_loans",
+      "label": "Earning assets / loans",
+      "unit": "x",
+      "values": {
+        "FY2025A": 1.73,
+        "FY2026E": 1.5,
+        "FY2027E": 1.42,
+        "FY2028E": 1.38,
+        "FY2029E": 1.35,
+        "FY2030E": 1.33
+      },
+      "value": null,
+      "lt": 1.3,
+      "basis": "Calibrated to reproduce the company's own NII, not taken from a reported subtotal. FY2025 NII of Rp1,441bn at the reported 10.1% NIM implies average earning assets of about Rp14.3trn, or 1.73x average loans of Rp8.3trn [S6]. The 2026 calibration uses the interim NII path: 9M2026 NII of Rp1,210bn [S5] with Q2-2026 NII of Rp393bn [S7] implies about Rp790bn in 1H2026, which annualised at the 10.9% 1H NIM [S7] is average earning assets near Rp14.5trn against average loans of about Rp9.4trn [S13], about 1.5x. The ratio falls because total assets shrank from Rp18.5trn at December 2025 to Rp15.0trn at September 2026 [S0] as cash and securities were run down to fund loans; we hold 1.50x in FY2026E and taper to 1.30x as the securities book stops shrinking.",
+      "sources": [
+        "S0",
+        "S6",
+        "S7",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nim",
+      "label": "Net interest margin",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.114,
+        "FY2027E": 0.111,
+        "FY2028E": 0.108,
+        "FY2029E": 0.106,
+        "FY2030E": 0.104
+      },
+      "value": null,
+      "lt": 0.102,
+      "basis": "On the company's reported basis NIM was 10.1% in FY2025 [S6], rose to 10.9% in 1H2026 [S7] and drove NII up 16.1% yoy in 9M2026 even as assets shrank [S5], because the 41% run-off of expensive time deposits [S13] and the Rp7trn equity base cut the cost of funds. We model FY2026E at 11.4% on average earning assets: 9M2026 NII of Rp1,210bn annualises to roughly Rp1.6trn against about Rp14trn of earning assets. From FY2027E the margin gives back 20-30bp a year to 10.4% by FY2030E as deposits are rebuilt at market rates and competition for granular funding stays intense; the BI-Rate path is flat at 5.75% [macro deck], so the deposit beta, not the policy rate, is the driver.",
+      "sources": [
+        "S5",
+        "S6",
+        "S7",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "noii_growth",
+      "label": "Non-interest income growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.05,
+        "FY2027E": 0.08,
+        "FY2028E": 0.08,
+        "FY2029E": 0.07,
+        "FY2030E": 0.06
+      },
+      "value": null,
+      "lt": 0.05,
+      "basis": "Built line by line, not from a net figure. FY2025 non-interest income was Rp543bn on the filing [S6]. In 8M2026 fee and administration income was Rp27.03bn (+529.4% yoy) and other operating income Rp302.68bn (+37.7% yoy), together Rp329.71bn against Rp224.95bn in 8M2025 [S13]; 9M2026 fee income was Rp30.03bn [S5], so the non-fee line carries essentially all of the build and it is growing, not shrinking. A normal fourth quarter at the 8M2026 monthly run-rate (about Rp41bn a month) gives roughly Rp540bn for FY2026E, flat on the filing's FY2025 and about +5% on the Rp518bn the engine carries in its pack history. We therefore model FY2026E at +5% and +8% thereafter as transaction and QRIS volumes rebuild; the long run is 5%. The -3% in the prior draft was not supported by the component disclosures and is withdrawn.",
+      "sources": [
+        "S5",
+        "S6",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cti",
+      "label": "Cost-to-income",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.45,
+        "FY2027E": 0.44,
+        "FY2028E": 0.43,
+        "FY2029E": 0.42,
+        "FY2030E": 0.42
+      },
+      "value": null,
+      "lt": 0.42,
+      "basis": "Derived from the published results: 9M2026 total operating income of Rp1,607bn (NII Rp1,223.5bn plus non-interest income Rp383.9bn) less the Rp454bn impairment charge leaves pre-tax profit of Rp434bn [S5], so operating expenses were about Rp719bn and the cost-to-income ratio 44.7%. The archived FY2025 release states the operating income but not the cost line, so we do not claim a FY2025 comparative ratio; the 9M2026 figure is the anchor. We model 45.0% in FY2026E, then 44.0% and 43.0% as the transaction base scales and marketing per customer falls, holding 42.0% in the long run. The platform does not need branches, but it does need continuous cashback and acquisition spend to keep 15m customers transacting, so we do not model a step-change in efficiency.",
+      "sources": [
+        "S5",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "credit_cost",
+      "label": "Credit cost",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.064,
+        "FY2027E": 0.06,
+        "FY2028E": 0.056,
+        "FY2029E": 0.053,
+        "FY2030E": 0.052
+      },
+      "value": null,
+      "lt": 0.052,
+      "basis": "The impairment charge was Rp454.11bn in 9M2026, up 65.2% yoy [S5], and Rp394.28bn in the first eight months [S13]. Against average loans of about Rp9.4trn that is roughly 6.4% annualised, and it is the number we start from: FY2026E 6.4%. This is a consumer and paylater book with short-duration receivables, so the charge runs well above the 1.73% gross NPL ratio [S7] even though the ratio itself is stable. From FY2027E we normalise to 6.0% and then 5.2% by FY2030E, still above a conventional bank because the mix is unsecured; the long run is 5.2%. We do not assume the 9M level is a permanent feature of a maturing book, and we do not assume it collapses.",
+      "sources": [
+        "S5",
+        "S7",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other items",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant at zero; no separately disclosed non-operating item is large enough to forecast [S6]",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.222722,
+        "FY2027E": 0.222722,
+        "FY2028E": 0.222722,
+        "FY2029E": 0.222722,
+        "FY2030E": 0.222722
+      },
+      "value": null,
+      "lt": 0.222722,
+      "basis": "engine default: average of FY2023A-FY2025A; FY2025 tax of Rp162.8bn on Rp737.0bn pre-tax profit is 22.1% [S0]",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default zero; Allo Bank has no minority interests in the consolidated accounts [S0]",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.5,
+        "FY2027E": 0.5,
+        "FY2028E": 0.5,
+        "FY2029E": 0.5,
+        "FY2030E": 0.5
+      },
+      "value": null,
+      "lt": 0.5,
+      "basis": "The FY2025 dividend was Rp286.97bn, exactly 50% of net profit, the second dividend in the bank's history [S4][S9]. We hold 50%: the parent, PT Mega Corpora, needs no capital at a 74.0% CAR [S6], and the separate Rp300bn buyback running from 3 September to 2 December 2026 [S8] is a second return of capital on top of the cash dividend, so total distribution is already above half of FY2026 earnings. Retained earnings still fund 15% loan growth from a 70%+ CAR.",
+      "sources": [
+        "S4",
+        "S6",
+        "S8",
+        "S9"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant; the 2.8% reduction to 21,127m shares by September 2026 already reflects the buyback executed so far, and the remaining programme is capped at Rp300bn [S8][S0]",
+      "sources": [
+        "S0",
+        "S8"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "rwa_density",
+      "label": "RWA / loans",
+      "unit": "ratio",
+      "values": null,
+      "value": 1.0,
+      "lt": null,
+      "basis": "Equity of Rp7,038bn at September 2026 [S0] against a 74.0% CAR at December 2025 [S6] implies risk-weighted assets of about Rp9.5trn, or 1.00x gross loans of Rp9.46trn at August 2026 [S13]. The consumer and paylater book carries close to a 100% risk weight, so we use 1.00x. The model's implied CAR then falls slowly from the low 70s as loans outgrow retained earnings, which is consistent with the capital headroom the bank actually has.",
+      "sources": [
+        "S0",
+        "S6",
+        "S13"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth",
+      "unit": "pct",
+      "values": null,
+      "value": 0.04,
+      "lt": null,
+      "basis": "House terminal growth for IDR, 4.0%. It is below the 10-year SUN yield of 7.45% used in the COE build and below nominal GDP, and it is deliberately lower than the 10% long-run loan growth we model: a bank that retains half its earnings at the model's 8.34% terminal ROE grows book value about 4.2% a year, so a 4.0% perpetuity does not outrun the capital it can retain after the payout [S0][S6].",
+      "sources": [
+        "S0",
+        "S6"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "Investment summary",
+        "challenge": "The summary and S4 say the primary justified P/BV (50% weight) was run at a 0.1% sustainable ROE and 0.0% terminal growth. fund record has roe_sustainable 0.095 and g 0.04, and at 0.1%/0.0% the warranted P/BV is 0.008x (about Rp3), not 0.70x/Rp233. Root cause: fund record _RATE_KEY does not match val.methods.justified_pbv.roe_sustainable or val.g, so the 0.095 and 0.04 fractions print as 0.1% and 0.0%.",
+        "response": "accepted",
+        "answer": "Root cause confirmed. The report now calls the keys with formats that render the fractions: pct2 on val.methods.justified_pbv.roe_sustainable and pct on val.g, so the summary and section 4 print 8.34% and 4.0%. The 0.1%/0.0% came from pctv on val.g and methods roe_sustainable, which fund record _RATE_KEY/_default_fmt do not guard - a script defect I cannot fix here; TCID.JK carries the same pattern. [S6][S8]"
+      },
+      {
+        "id": "C2",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "4. Valuation",
+        "challenge": "roe_sustainable 9.5% exceeds the model's own FY2035E ROE of 8.15% and the FY2025 actual 7.77%, so the justified P/BV is built on a return the model never reaches. The basis claim that 9.5% is the model's own terminal-year return is false, and its arithmetic (NII about 15% of equity less opex 7% and credit cost 8%) reconciles to about 0%, not 9.5%. At 8.15% the justified P/BV falls to 0.53x and the method value from 233 to 176, cutting v0 by roughly 14%.",
+        "response": "accepted",
+        "answer": "The 9.5% is withdrawn. roe_sustainable is now the model FY2035E ROE of 8.34%, rebuilt from the terminal lines: NII Rp3,333bn plus NOII Rp919bn on average equity Rp10,806bn, opex Rp1,786bn, provisions Rp1,307bn, 22% tax. The basis shows the arithmetic and states the bank still earns below COE. [S6][S8]"
+      },
+      {
+        "id": "C3",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "COE 11.85% (config beta 0.9, coe_premium 0.0) is 60bp below BBCA (12.45%, same 0.9 beta but a +0.6% premium) and 348bp below ARTO (15.33%, beta 1.33), the closest digital peer. A name with an 11.85% float, HSC status and a 180.4% LDR should not price risk below Indonesia's largest bank; at 15.33% the justified P/BV falls from 0.70x to 0.49x and the value from 233 to about 162.",
+        "response": "accepted",
+        "answer": "Beta stays 0.90 because it is the reviewed BANKS config default and coverage/universe/betas.json has no BANKS regression set, so the ARTO beta of 1.33 is not a measurement of this unsecured consumer book. Added a sourced 60bp company premium lifting COE to 12.45%, the bank card 10-year SUN plus 5.0% ERP floor, reflecting the 11.85% float, HSC status and 180.4% LDR. The COE sensitivity table shows a further +/-1pp. [S13][S16][S19]"
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "S5 omits the two index events that directly attack the premium the lens assumes it keeps: MSCI opened a consultation on 2026-10-15 to move Indonesia to Standalone (feedback to 2027-04-30, decision by 2027-06-30) and BBHI is on the exchange's HSC list, already out of the IHSG and the LQ45/IDX30/IDX80 [registry S3/S4]. The 40% base compression is asserted without weighing them.",
+        "response": "accepted",
+        "answer": "Section 5 now carries the MSCI Standalone consultation (opened 2026-10-15, feedback to 2027-04-30, decision by 2027-06-30) [S15], the BBHI HSC membership and exclusion from the IHSG and LQ45/IDX30/IDX80 [S19][S20], and explains the 40% base as the deck central compression plus the 5% HSC and 5% free-float adjustments [S16]; it also shows the equity value at the 80% bear setting."
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "S4 says Rp600 is a 2.9x premium to our fundamental value of Rp218, but 600/218 is 2.75x; the 2.93x is price over value today (konglo.v_fundamental Rp204.48), not over the 12-month Rp218. A reader cannot reproduce the Rp445 target from the sentence as written.",
+        "response": "accepted",
+        "answer": "Both denominators are now labelled in section 4: the premium is price over the value today, and the target is separately the 12-month fundamental value, so a reader can reproduce the ratio from the stated line instead of mixing the two. [S0]"
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "6. Governance and ESG",
+        "challenge": "S6 says only that free float is below the index free-float threshold shown in the lens table [S0], with no threshold, no date and no mechanism, and S0 contains no threshold. The registry is specific: 11.85% against a 15% minimum, non-compliant, 12.5% required by 2027-03-31 (4.7 months) and 15% by 2028-03-31, which means a controller sell-down or a new-share issue inside the forecast window.",
+        "response": "accepted",
+        "answer": "Section 6 now states the 12.5% step by 2027-03-31 and the 15.0% step by 2028-03-31 from the exchange rule [S16], the current gap of 0.65pp, 4.7 months to the first deadline, and that it implies a controller sell-down or new shares inside the forecast window; section 5 carries the index consequence. [S19][S20]"
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The base year is not restated to the LK. FY2025 NOII is carried at 518.4 from the Yahoo pack against the Rp543bn reported in S6, and TOI at 1,968.8 against Rp1,983bn, while S3 quotes the pack numbers under a S6 citation. The NOII history also does not reconcile with 2026: S13 shows 8M26 other operating income +37.68% to Rp302.68bn and fee income +529% to Rp27.03bn, yet the model runs NOII -3%.",
+        "response": "accepted",
+        "answer": "Section 3 quotes the filing FY2025 NII, fee-based and operating income beside the pack split, so the 518.4 and 1,968.8 carries are disclosed rather than hidden [S6]. FY2024 is not restated because the release gives growth rates, not comparatives, and nii/noii sit outside the engine RESTATABLE set - a template limitation flagged for OPS. FY2026E NOII is now anchored to the 8M components. [S13]"
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "noii_growth of -3% for FY2026E has no supporting source. The implied Q4 NOII of about Rp119bn is below the 9M average while the 8M disclosure shows both components growing [S13], and 9M26 fee income is only Rp30.03bn of the Rp384bn build, so the direction of the line is not established. This understates the base and hides the fee volatility the report itself flags.",
+        "response": "accepted",
+        "answer": "Rebuilt line by line: fee Rp27.03bn (+529.4%) plus other operating Rp302.68bn (+37.7%) is Rp329.71bn in 8M2026 against Rp224.95bn, with 9M fee at Rp30.03bn, implying about Rp540bn FY2026E - flat on FY2025 and +5% on the pack. FY2026E growth is set to +5% and the unsupported -3% is withdrawn. [S5][S6][S13]"
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "6. Governance and ESG",
+        "challenge": "S6 prints a three-month ADTV of IDR6,211,808,246.0bn. The model value is Rp6,211,808,246, that is Rp6.2bn a day, about 0.05% of a Rp12.8trn market cap, so the sentence overstates liquidity a billion-fold. Separately, insider 90.5% plus free float 11.85% sums to 102.4%, so at least one pack field is wrong.",
+        "response": "accepted",
+        "answer": "Replaced idrbn, which does not divide absolute-IDR mkt fields, with num0 plus the Rp prefix, so ADTV prints as Rp6.2bn a day against a Rp12.8trn market cap and is described as a very small fraction of it; insider and free float are now flagged as overlapping pack fields rather than added. The idrbn non-division is flagged as a script defect for OPS. [S0]"
+      },
+      {
+        "id": "C10",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "4. Valuation",
+        "challenge": "The konglo section never asks the obvious upside for THIS name: the controlling group also owns Bank Mega and Trans Retail, so cheap related-party deposits or an intragroup funding line could close the 180.4% LDR without a rate war. Related-party exposure is dismissed as unquantifiable, leaving both the bull (Rp300) and the bear missing the group's actual lever, which is a konglo checklist item.",
+        "response": "accepted",
+        "answer": "Related-party deposits and placements are not disclosed in the material available, so the report now says undisclosed rather than nil [S6][S13]. The bull scenario is rewritten as the group-funding test - Mega Corpora and Bank Mega balances closing the LDR - and section 4 states that lever explicitly. It is not quantified because no sourced figure exists."
+      },
+      {
+        "id": "C11",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "2. Industry overview and competitive positioning",
+        "challenge": "S2 attributes the Trans Retail, Bank Mega and media ecosystem to S9, an ANTARA dividend article, and S5 grounds the KPK overhang in that 2025 sidebar headline rather than the primary report. Credit where due: the Digital Strategy Head Destya Pradityo quote on granular funding over a rate war is genuinely in S3.",
+        "response": "accepted",
+        "answer": "Section 2 now cites S0 for the Mega Corpora and Bank Mega ownership and Menara Bank Mega, and S17, the primary KPK release, for the overhang; the wider Trans Retail and media ecosystem line moved into a background block with no figures. [S0][S17]"
+      },
+      {
+        "id": "C12",
+        "severity": "MINOR",
+        "category": "bias_and_tone",
+        "section": "1. Business description",
+        "challenge": "S1 and S2 treat the deposit fall as savers leaving and the bear narrative calls it a run, but S13 shows the decline was almost entirely time deposits (-41.4%) while giro rose 208% and savings 26%, and NIM rose to 10.9% [S7]. That is the signature of a deliberate cut in expensive funding, which the analyst's own assumption notes state. The report cannot both claim a run and model a managed LDR.",
+        "response": "accepted",
+        "answer": "Section 3 now states the deposit fall was managed repricing - time deposits -41.4%, giro +208.4%, savings +26.4%, NIM 10.9% - and the bear narrative is rewritten as a repricing that goes wrong, not a customer run. [S13][S7]"
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Investment summary / 3. Financial analysis and forecasts",
+        "challenge": "The rendered investment summary and section 1 print the 14m customer base as IDR14,000,000bn (F14 is a count of 14,000,000) and section 3 prints the modelled FY2026E CAR as 0.8% when car_est is 0.8008. QC Q1 and Q2 are unanswered and both errors sit on the first screen of the report.",
+        "response": "accepted",
+        "answer": "Both first-screen defects are fixed: F14 now renders through num0 as 14,000,000 customers with the S9 citation replaced by S6, and car_est renders through pct so FY2026E CAR prints 80.1% rather than 0.8%; Q1 and Q2 are answered below with the same changes recorded."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Investment summary / 4. Valuation",
+        "challenge": "QC Q3 and Q5 are unanswered. The summary and section 4 still say a 6.3% annualised ROE in 1H2026 [S8], but S8 gives a FY2026 forecast (6.31% to 6.41%) and 9M2026 NP is already Rp338.1bn, so a stale forecast is presented as an actual. Section 4 still reads that the fundamental value of Rp179 is what the price implies, which reverses the relationship between the model output and the price.",
+        "response": "accepted",
+        "answer": "Q3 and Q5 answered. F41 is now labelled a FY2026 forecast and kept out of the actual-performance chain, with section 3 carrying the nine-month actual of Rp338.1bn [S5]; the reverse-solver sentence now states that tp_fundamental is the discounted value and that the price is the outlier requiring a path never delivered."
+      },
+      {
+        "id": "L3",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Key inputs / 3. Financial analysis and forecasts",
+        "challenge": "QC Q4 is unanswered. The ea_loans basis still claims 1H2026 NII of Rp1.06trn at 10.9%, but S7 Q2-2026 NII is Rp393bn and S5 9M2026 NII is Rp1,210bn, so 1H2026 is about Rp790bn; Rp1.06trn would imply 2.07x earning assets to loans, not the 1.5x modelled.",
+        "response": "accepted",
+        "answer": "Q4 answered: the ea_loans basis now derives 1H2026 NII of about Rp790bn from 9M Rp1,210bn [S5] less Q2 Rp393bn [S7], annualised at the 10.9% NIM to average earning assets near Rp14.5trn against average loans about Rp9.4trn [S13], so the 1.5x driver can be rebuilt from the cited lines."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "No group-funding bull. The controlling CT Corp/Mega Corpora group also owns Bank Mega and Trans Retail, so cheap related-party deposits or an intragroup line could close the 180.4% LDR [S13] without a rate war; related-party exposure is written off as unquantifiable. The 74% CAR redeployment is asserted in the summary but never built into a bull driver."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "S5 omits the two index events that destroy exactly the scarcity premium the lens assumes it keeps: MSCI opened a consultation on 2026-10-15 to move Indonesia to Standalone (decision by 2027-06-30) and BBHI is on the HSC list, already out of the IHSG and LQ45/IDX30/IDX80 [registry S3/S4]. The 12.5% free float deadline (2027-03-31, 4.7 months) and its dilution/sell-down mechanics are also absent."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "roe_sustainable 9.5% is above the model's own FY2035E ROE (8.15%) and the FY2025 actual (7.77%) [S6]; the stated build (NII about 15% of equity less opex 7% and credit 8%) arithmetically gives about 0%. COE 11.85% also sits below BBCA (12.45%) and ARTO (15.33%). NOII base year 518.4 is below the reported 543 [S6]."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "ADTV renders as IDR6,211,808,246.0bn when the value is Rp6.2bn a day (a billion-fold unit error); S3 history (NII 1,450.4, TOI 1,968.8) is cited to S6, which says 1,441 and 1,983; the free-float threshold is cited to S0, which contains no threshold; the KPK overhang rests on a 2025 sidebar headline. Positive: the S2 strategy quote is genuinely in S3."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "The primary method (50% weight) is stated at a 0.1% sustainable ROE and 0.0% terminal growth; the model runs 9.5% and 4.0%, and those stated inputs would give about 0.01x, not 0.70x/Rp233. S4 also calls 2.9x a premium to Rp218 when 600/218 is 2.75x. The lens ratio itself is right: it is price over value today (Rp204.5)."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "The deposit fall is called a run in the bear narrative while NIM rose to 10.9% [S7] and giro/savings grew [S13], which is the pattern of deliberate de-risking; conversely 9.5% sustainable ROE is the most generous input in the model. The conclusion is robust: doubling the bear probability still gives a target near Rp385, about -36%."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "The report never reads the reviewed macro deck (BI rate 5.75%, USD/IDR 18,350 FY2027E, INDO banks AVOID on NIM) although deposit competition and NIM are its central driver. Its COE inputs also diverge from the covered BANKS peers (BBCA 12.45%, ARTO 15.33% versus 11.85%) with no explanation."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "FY2025 NOII is carried at 518.4 from the Yahoo pack against Rp543bn reported [S6], and TOI at 1,968.8 against Rp1,983bn, a 24.6bn base-year haircut never restated from the LK; noii_growth -3% is unsourced. By contrast the 6.4% credit cost [S5] and the -44% deposit path [S13] are properly sourced and I accept them."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "ROE FY2026E 5.89% against FY2025A 7.77%, gap -1.88pp. The impairment leg (+65.2% to Rp454.11bn [S5]) is sourced and the implied Q4 net profit is normal, but the NOII -3% leg rests on an unreconciled base. The only BLOCK flag (drift.cti) is justified and the 44.7% CIR evidence in S13 supports it."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_FINANCIALS",
+      "at": "2026-11-10T00:36:13+07:00",
+      "verdict": "APPROVED",
+      "notes": "Approved. QC PASS, judge PASS, check PASS (facts + lint), no blocking engine flags; the round-1 sign-off blockers (render rate bug, unjustified 9.5% sustainable ROE, 11.85% COE, MSCI/HSC disclosure) are resolved and accepted. The three carried FIX items do not move the SELL or the Rp418 target: Q3 is a ~2.4% share-count mismatch between the model (21.64bn) and the market-implied count (21.13bn) inside the justified P/BV, not rating-changing; Q2 is a disclosure gap (the ~28-30% three-year deposit rebuild is the largest positive base-case driver and should be stated in sections 3-5); Q1 is a sign error in the drift.cti basis (42.0% is below the 44.7% actual, not above) with figures that need deriving from S5. Group check: MEGA.JK reads the same CT Corp HSC regime, neither report marks the other inside a SOTP, and the konglo overlay (3.55x premium, 40% of the log gap closed) is applied visibly on top of a Rp179 fundamental. Carry Q1-Q3 to the next revision."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-10T00:24:15+07:00",
+      "verdict": "PASS",
+      "round": 1,
+      "bias": {
+        "direction": "neutral",
+        "note": "FY2026E drivers sit on the 2026 actual run-rate, not a haircut: NIM 11.4% vs 10.9% 1H [S7], credit cost 6.4% vs ~6.5% annualised 9M impairment [S5], CTI 45.0% vs 44.7% 9M [S5], loans +5.0% vs +3.5% YTD to August [S6][S13], and FY2026E NP Rp465bn implies Q4 2026 of ~Rp127bn against Q3's ~Rp104bn, i.e. above the recent run-rate. Terminal ROE 8.34% is the model's own FY2035E return and sits above the 7.77% FY2025 actual, so the terminal multiple is not a haircut; opex grows 6.9% a year against 7.7% revenue, a real-terms cost path consistent with the card. The one aggressive driver is the +28-30% three-year deposit rebuild (Q2), which is offset by the conservative CTI path; net direction is balanced. Scenarios mirror the same four drivers (+/-0.008 credit cost, -/+6bp NIM, -/+5pp loan growth, -/+10pp payout) at 25/50/25. Konglo lens verified end to end: 179.03 x premium kept 2.337 = 418; scenario math (3.5504^c on a 169.0 value today) reproduces 231/383/677 and the 25/50/25 weights give 418."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A net profit",
+          "model": 574.0,
+          "filing": 574.0,
+          "source": "S6",
+          "ok": true
+        },
+        {
+          "item": "FY2025A loan book",
+          "model": 9141.0,
+          "filing": 9141.0,
+          "source": "S6",
+          "ok": true
+        },
+        {
+          "item": "Aug-2026 loan book vs FY2026E (implied Q4 +1.5%)",
+          "model": 9598.0,
+          "filing": 9460.0,
+          "source": "S13",
+          "ok": true
+        },
+        {
+          "item": "9M2026 NII and impairment",
+          "model": 1210.0,
+          "filing": 1210.0,
+          "source": "S5",
+          "ok": true
+        },
+        {
+          "item": "BV0 30-Sep-2026 (roll-forward residual 3.1%, inside 5%)",
+          "model": 7038.1,
+          "filing": 7260.2,
+          "source": "S0",
+          "ok": true
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q1",
+          "severity": "FIX",
+          "area": "assumption_basis",
+          "finding": "The drift.cti justification says \"we stop at 42.0%, well above the 44.7% actually being paid\", but 42.0% is below 44.7%; the same sentence also cites S5 for \"TOI Rp1,607bn carrying Rp719bn of opex (44.7% CIR)\", figures S5 does not print (S5 gives NII Rp1,210bn, impairment Rp454.11bn and operating profit Rp434.05bn, from which the opex/TOI split must be derived). The drift itself is defensible (opex +6.9%/yr vs revenue +7.7%/yr), but the basis as written is self-contradictory.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q2",
+          "severity": "FIX",
+          "area": "assumption_basis",
+          "finding": "The deposit_growth basis says the +28-30% three-year rebuild \"still leaves LDR above 110% at the end of the explicit window\", but the model's LDR is 92.3% in FY2035 (110% is only FY2031). The 28-30% deposit CAGR is the largest positive driver in the base case and is not surfaced in the report: \u00a73 says only \"rebuild deposits faster to bring the LDR down\" and \u00a75 describes the base as \"the deposit base stabilises\", while the model has deposits compounding ~29% for three years against 15% loan growth.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q3",
+          "severity": "FIX",
+          "area": "text_vs_numbers",
+          "finding": "The justified P/BV is struck on BV0 Rp7,038bn over the market-implied 21.13bn shares (BVPS Rp333), while the model's share line is 21.64bn and \u00a73 prints FY2026E BVPS Rp355 (and Rp325 on BV0). So 0.51x x Rp355 = Rp181, not the Rp171 stated in \u00a74, and a reader cannot reproduce the primary method's value.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q4",
+          "severity": "NOTE",
+          "area": "evidence_and_citations",
+          "finding": "\u00a71 cites [S6] for \"net interest income of IDR1,450.4bn\"; S6 prints Rp1,441bn. IDR1,450.4bn is the pack number, disclosed later in the same paragraph, but the leading citation is wrong.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q5",
+          "severity": "NOTE",
+          "area": "evidence_and_citations",
+          "finding": "roe_sustainable_basis still describes 6.31% as \"annualised for 1H2026 [S8]\"; S8 is a FY2026 company forecast (6.31% rising to 6.41%), the same mislabel already cleared for the report as Q3/L2.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q6",
+          "severity": "NOTE",
+          "area": "bridge",
+          "finding": "post_bs_review says the Rp300bn buyback \"does not change value per share\". Buying back at Rp600 against a Rp179 fundamental value is value-destructive per remaining share, and the unspent part of the programme (to 2 Dec 2026) is not quantified; it is disclosed in \u00a73/\u00a76/\u00a77 but not in the bridge.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "drift.cti",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.cti moves -3.0pp from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The 3pp improvement from 45.0% to 42.0% is not a default haircut: it is the scale effect the 2026 accounts already show, with 9M2026 total operating income of Rp1,607bn carrying Rp719bn of opex (44.7% CIR) with the deposit book 28.8% smaller year-on-year while loans grew 32.0% [S5][S13], so the opex base was carried by a re-mixed, not a shrunken, balance sheet. As loans compound at 15% and the 15m-customer base is monetised, the fixed technology and brand spend is spread over a larger revenue pool; we stop at 42.0%, well above the 44.7% actually being paid, so the drift is smaller than the operating leverage the company is already delivering."
+        },
+        {
+          "id": "konglo.overlay",
+          "severity": "WARN",
+          "justified": false,
+          "message": "konglo lens: price is 3.55x fundamental value (premium); the base case closes 40% of the log gap in 12 months (hsc, ff_deadline); target 418 vs fundamental 12-month value 179 \u2014 explain it in \u00a74 and \u00a76",
+          "justification": null
+        }
+      ],
+      "calibration": {
+        "kind": "roe",
+        "period": "FY2025A",
+        "benchmark": null,
+        "volume": null,
+        "ebitda_actual": null,
+        "ebitda_model": null,
+        "gap_pct": null,
+        "actual": 0.07770020132163358,
+        "model": 0.061208442784776794,
+        "gap_pp": -1.6491758536856784
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-10",
+      "type": "initiation",
+      "rating": "SELL",
+      "tp": 418
+    }
+  ],
+  "news": [],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
