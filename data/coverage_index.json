@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-11-11T04:04:00+07:00",
+  "asof": "2026-11-11T04:06:25+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 170,
-    "in_progress": 7,
+    "published": 171,
+    "in_progress": 6,
     "parked": 201,
     "stale": 0,
     "not_rated": 2
@@ -14,7 +14,7 @@
     "BUY": 63,
     "ADD": 10,
     "HOLD": 28,
-    "REDUCE": 20,
+    "REDUCE": 21,
     "SELL": 47,
     "NOT RATED": 2
   },
@@ -81,7 +81,7 @@
         "PERSONAL_HOUSEHOLD"
       ],
       "universe": 135,
-      "published": 43
+      "published": 44
     },
     {
       "desk": "CONSUMER_CYCLICALS",
@@ -497,7 +497,7 @@
       "desk": "CONSUMER_NON_CYCLICALS",
       "template": "corporate",
       "universe": 15,
-      "published": 3,
+      "published": 4,
       "workbook": "models/STAPLES_RETAIL.xlsx",
       "methods": {
         "dcf_fcff": 0.6,
@@ -5155,22 +5155,22 @@
       "name": "PT Segar Kumala Indonesia Tbk",
       "desk": "CONSUMER_NON_CYCLICALS",
       "industry": "STAPLES_RETAIL",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "REDUCE",
+      "tp": 356,
       "price": 456.0,
-      "tr_pct": null,
+      "tr_pct": -16.98,
       "mcap_idr": 912000000000.0,
       "adtv_idr": 171705953.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": false,
+      "last_update": "2026-11-11",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": false,
+      "suspended": false
     },
     {
       "ticker": "BUDI.JK",
@@ -13895,7 +13895,7 @@
       "name": "PT Bank China Construction Bank Indonesia Tbk",
       "desk": "FINANCIALS",
       "industry": "BANKS",
-      "stage": "signoff",
+      "stage": "revision",
       "published": false,
       "stale": false,
       "rating": null,
