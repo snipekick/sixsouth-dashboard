@@ -1,0 +1,2753 @@
+{
+  "schema": 1,
+  "ticker": "MTFN.JK",
+  "code": "MTFN",
+  "name": "PT Capitalinc Investment Tbk",
+  "desk": "ENERGY",
+  "industry": "OIL_GAS_DOWNSTREAM",
+  "industry_name": "Gas & fuel distribution, refining and marketing",
+  "report": {
+    "ticker": "MTFN.JK",
+    "frontmatter": {
+      "ticker": "MTFN.JK",
+      "report_type": "initiation",
+      "version": 2,
+      "title": "Capitalinc Investment: a gas trader priced for a divestment that is not signed",
+      "summary": "Capitalinc Investment is a negative-equity gas trader. Its only operating subsidiary sells Kangean gas and CNG under contracts running to 2030, with no contracted growth. The shares price a divestment that is not signed. We initiate SELL: the DCF produces no positive equity value and the liquidity-discounted target is a fraction of the price. Management, not the auditor, states the group going-concern doubt; the qualification covers only the held-for-sale entities' disclosure. Liquidity is nil.",
+      "thesis": [
+        "The group is a single-asset story: IKD, the gas and CNG distributor, is the only entity generating revenue; the upstream assets are held for sale, not sold [S6 p.14, S7 p.4].",
+        "The FY2025 margin recovery was oil-linked and is already reversing: H1-2026 gross profit was IDR7.1bn on revenue of IDR300.6bn, and our FY2026E gross margin is 2.7% [S6 p.63, S7 p.6].",
+        "The balance sheet is the binding constraint: parent equity is IDR-529.5bn, the working-capital deficit is IDR352.2bn and the accumulated deficit is IDR5,360.0bn. Management states a group-level going-concern material uncertainty; the auditor's going-concern opinion on the group is unmodified, and the qualified opinion is confined to the inadequate disclosure of the going-concern uncertainty at the three held-for-sale entities [S6 p.23, S7 p.5].",
+        "At Rp13 the market capitalisation is IDR413.9bn and the reverse DCF implies about 9.8% revenue growth a year; the contracts support flat volumes to 2030 [S6 p.161].",
+        "There is no traded liquidity: three-month ADTV is IDR0.0bn and the stock repeatedly goes untraded; the target is a fundamental value, not an executable exit [S0]."
+      ],
+      "catalysts": [
+        {
+          "date": "2026-11-30",
+          "event": "Q3-2026 interim LK: gross margin, operating cash flow and going-concern disclosure",
+          "source": "S7"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "FY2026 audited accounts: audit opinion and going-concern conclusion",
+          "source": "S6"
+        },
+        {
+          "date": "2030-02-28",
+          "event": "IKD-Dharma Perkasa Gemilang GSPA expiry; renewal terms",
+          "source": "S6"
+        },
+        {
+          "date": "2026-12-31",
+          "event": "Divestment of CBRB, KEP and GSAL: signing and liability deconsolidation",
+          "source": "S11"
+        }
+      ],
+      "desk": "ENERGY",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-10"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Capitalinc Investment (MTFN) is a negative-equity gas trader whose only commercially operating subsidiary, PT Indogas Kriya Dwiguna (IKD), sells Kangean gas and CNG to industrial customers under contracts that run to February 2030 [S6 p.14, p.161]. The equity is a claim on those contracts, not on the upstream assets: the CBRB, KEP and GSAL divestment is still an intention, and the liabilities attached to the held-for-sale entities remain consolidated [S7 p.4, S11 p.8]."
+          },
+          {
+            "type": "para",
+            "text": "We initiate SELL with a Rp0.60 target, -95.4% from the Rp13 price. The DCF itself values the operating equity at Rp0: the discounted cash flows do not cover the liability overhang, so the base scenario carries Rp0. The probability-weighted scenario value is Rp0.85 before the 30.0% liquidity discount; the printed target and the expected return are computed on the same unrounded number [S0]. The market is not paying for the operating business. At Rp13 the market capitalisation is IDR413.9bn, and the reverse DCF says that price requires about 9.8% revenue growth a year [S0]. The contracts support flat volumes; the growth has to come from a new contract or a divestment that is not signed [S6 p.161, S7 p.4]."
+          },
+          {
+            "type": "para",
+            "text": "The variant view is simple. The market treats the divestment as if it were completed and the liability relief as if it were banked. We treat both as unsigned, and we now charge them in the equity bridge rather than only discussing them. The held-for-sale entities carry liabilities of IDR210.3bn against assets of IDR4.1bn [S7 p.4, F32, F35]; because the DCF values only IKD, that net liability is a claim on the same equity and is deducted at full weight. The release of the same amount on completion is credited at a judged probability inside the bridge, not assumed away. The net deduction is what drives the DCF equity value below zero, so the base value is floored at nil while the shares trade at Rp13; the qualification over the held-for-sale going-concern disclosure stays in the audit report until a transaction closes [S6 p.23, S7 p.4]. If the sale signs and deconsolidates, the equity is worth more than our base case; that is the bull case, and it is weighted, not free."
+          },
+          {
+            "type": "para",
+            "text": "What moves the value: the Brent path through the oil-linked gas purchase cost, the gross margin, the 2030 contract renewal, and the divestment terms. The balance sheet is the binding constraint; the operating business is small relative to the liabilities [S6 p.23, S7 p.5]."
+          },
+          {
+            "type": "para",
+            "text": "The valuation is deliberately DCF-only. The EV/EBITDA leg has no reproducible peer: the only covered OIL_GAS_DOWNSTREAM name is a positive-equity gas-infrastructure builder, and MTFN's EBITDA is smaller than the uncertainty in its own balance sheet [S0, S6]. The dividend-yield leg is zero because no payout is permitted while the company is in capital deficiency [S6 p.23]. The valuation section still shows an EV/EBITDA sanity range and explains why it diverges."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "PT Capitalinc Investment Tbk is an Indonesia-listed holding company (IDX: MTFN). The consolidated reporting entity is the company and its subsidiaries, principally PT Indogas Kriya Dwiguna (IKD), the primary operating entity [S6 p.2]. The corporate structure has two business pillars: energy downstream \u2014 natural gas trading, gas distribution and CNG services, conducted principally through IKD \u2014 and diversification and logistics \u2014 non-energy commodity trading and supporting logistics services [S6 p.13]. Only IKD currently operates commercially and generates revenue for the group; the other entities are pre-commercial or held for sale [S6 p.14]."
+          },
+          {
+            "type": "para",
+            "text": "IKD was established in 2005 and acquired by the company in 2017. It is almost wholly owned and operates CNG facilities at Wunut, Sidoarjo, East Java. Gas is sourced from Kangean Energy Indonesia Ltd under a long-term supply agreement, and IKD sells gas and CNG to industrial customers [S6 p.14]. The operating footprint is therefore a single East Java gas-trading and CNG-distribution business, not a national network. The company reports 6.0 employees at the listed parent, with operations run through IKD [S0]."
+          },
+          {
+            "type": "para",
+            "text": "The revenue base is gas sales. Local natural gas sales were IDR403.3bn in FY2025, the large majority of group revenue [S6 p.21, F12]. The balance is CNG and logistics-related revenue. The company does not disclose volumes or unit prices by segment, so the model uses a revenue-growth series rather than a volume-times-price build; the cost link to Brent is calibrated on the observed margin [S6 p.21, S7 p.6]."
+          },
+          {
+            "type": "para",
+            "text": "The contract book is the business. IKD has a gas sale and purchase agreement with PT Dharma Perkasa Gemilang signed in November 2024, with delivery from January 2025 to February 2030 and a committed daily range of 1,500 MMBtu/day\u20135,000 MMBtu/day MMBtu [S6 p.161, F22, F23]. A smaller legacy contract supplies PT Sun Power Ceramic from the Terang Sirasun Batur field, with a daily quantity of 1.0 MMSCFD and a maximum of 1.1 MMSCFD [S6 p.162, F33, F34]. Gas is purchased mainly from Kangean Energy Indonesia, with PT Pertamina Gas as the second supplier; purchases from Kangean are far above the disclosure threshold and dominate cost of revenue [S6 p.155]. Customer concentration is also high: the largest customer and Dharma Perkasa Gemilang each exceed the disclosure threshold [S6 p.155]. These contracts are the revenue moat and the concentration risk at the same time."
+          },
+          {
+            "type": "para",
+            "text": "Management's stated priorities are to complete the upstream asset divestiture, sustain the margin improvement at IKD, accelerate receivables collection and explore new energy and logistics investments [S6 p.10, S11 p.7-8]. The divestment covers CBRB, KEP and GSAL; management frames it as a way to cut the group's burden and strengthen the capital structure [S11 p.8]. No binding sale agreement, price or completion date is disclosed in the sources we reviewed [S7 p.4, S11 p.8]."
+          },
+          {
+            "type": "para",
+            "text": "The company is not a national leader in gas distribution. It is a niche industrial gas and CNG supplier in East Java, competing with larger gas distributors and alternative fuels; the annual report flags increasing competition as a market risk [S6 p.175]. We found no published market-share data, so we do not claim one. The competitive position rests on the Kangean supply relationship, the Wunut CNG facilities and the contracted customer book, not on scale or brand [S6 p.14, p.161]."
+          },
+          {
+            "type": "para",
+            "text": "Ownership is dispersed. The largest shareholder is Express Profitables Investment Ltd at 21.1%; the public holds 54.5%; several holders above the disclosure threshold together hold a blocking minority [S6 p.18, F18, F19]. There is no single majority shareholder. The market data show insider ownership of 45.6% and a free float of 50.0% [S0]. We do not treat MTFN as a konglo name: control is not concentrated in one family, and the free float is majority [S6 p.18]."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesia's natural gas downstream is a contract business. Gas is produced from PSCs and sold to distributors, industrial users and power generators under bilateral agreements; distributors such as IKD buy from producers and resell to customers, adding transport, CNG compression and logistics [S6 p.14, p.155]. The economics are a spread between the purchase price and the selling price, not a resource rent. IKD's cost of revenue is gas purchases, and its gross margin is the spread after transport and compression [S6 p.155]."
+          },
+          {
+            "type": "background",
+            "text": "CNG is used where pipelines do not reach: gas is compressed at a mother station, trucked to customers and decompressed on site. In Indonesia, industrial clusters such as ceramics, glass and food processing are the main CNG customers. The business is infrastructure-light relative to pipelines but contract-heavy: supply security and customer take-or-pay terms matter more than plant size. We use this only as context; the company's contracts are the evidence."
+          },
+          {
+            "type": "para",
+            "text": "The industry's size and growth are not disclosed in the sources we reviewed. We therefore do not put a market-size number in the report. The demand drivers are visible: industrial activity in East Java, the relative price of gas versus diesel and electricity, and the availability of pipeline or CNG logistics [S6 p.38-39]. The supply drivers are the Kangean field and the Pertamina Gas network [S6 p.155]. The regulatory drivers are ESDM gas pricing and downstream licensing, PSC/KKS terms for upstream assets, and BEI/OJK listing rules [S6 p.39]. The company's annual report identifies commodity price, liquidity, foreign exchange, regulatory and legal, and ESG/energy-transition risks as the principal exposures [S6 p.38-39]."
+          },
+          {
+            "type": "para",
+            "text": "The oil link is the key industry transmission channel, and it is inferred rather than quoted: neither the Dharma Perkasa gas sale agreement nor the Kangean supply summary in the annual report discloses a price formula or an indexation clause [S6 p.161-162]. The company's own risk note instead describes mitigation through long-term fixed and semi-fixed price contracts [S6 p.38]. What the accounts show is a cost squeeze without a matching revenue gain: in H1-2026 revenue rose to IDR300.6bn while gross profit fell to IDR7.1bn, so the increase in cost of revenue outran the increase in sales [S7 p.6, F13, F14]. We therefore calibrate the link on that observed margin move and apply it to cost of revenue only; the shock is a cost-squeeze proxy of the observed size, and the possibility that the movement was volume or customer mix is the main reason the link is a damper and not a one-for-one indexation. When Brent rises, the cost of revenue rises faster than revenue, and the gross margin compresses; when Brent falls, the margin recovers. The FY2026 margin squeeze is the cleanest evidence: H1-2026 revenue rose while gross profit fell to IDR7.1bn on revenue of IDR300.6bn, a much lower margin than FY2025 [S7 p.6, F13, F14]. That is why the model links 15.0% of COGS to Brent with 50.0% pass-through, calibrated on the observed H1-2026 cost/revenue move rather than asserted [S6 p.161, S7 p.6]."
+          },
+          {
+            "type": "para",
+            "text": "Competition is local and price-based. IKD is a niche supplier; larger distributors have more supply sources and more customer reach, and the annual report says increasing competition could reduce market share [S6 p.175]. We assess the five forces as follows. Supplier power is high: Kangean is the dominant supplier and the purchase relationship is the lifeline [S6 p.155]. Buyer power is high: the largest customers exceed the disclosure threshold and can switch or renegotiate [S6 p.155]. New entrants face licensing, supply-contract and CNG-infrastructure barriers, so entry is moderate. Substitutes are real: diesel, LPG, electricity and LNG can replace gas in some industrial applications. Rivalry is moderate but rising, because gas distributors compete for the same industrial clusters [S6 p.175]. The net effect is a thin, contract-dependent spread with limited pricing power."
+          },
+          {
+            "type": "para",
+            "text": "The moat is the contract book, not the asset base. The Kangean supply agreement and the Dharma GSPA to 2030 give IKD a protected revenue stream and a known cost link [S6 p.161]. The Wunut CNG facilities are the physical bottleneck that makes the service valuable [S6 p.14]. But the moat is narrow: one supplier, a handful of customers, and a contract that expires in 2030 with no disclosed renewal [S6 p.161]. The company does not own the gas resource; it owns the distribution relationship [S6 p.14]."
+          },
+          {
+            "type": "para",
+            "text": "External influences are Brent, the IDR/USD rate, Indonesian gas policy and the energy transition. Brent is the cost driver; the rupiah matters because IKD's purchases are USD-denominated and FX losses are recurring [S6 p.39, S7 p.6]. Gas policy affects pricing and contract terms; the energy transition affects long-run demand for gas and CNG. These are captured in the scenario shocks and the risk section, not in a market-size forecast [S6 p.38-39]."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The five-year record is a story of a thin spread and a broken balance sheet. Revenue moved from IDR420.8bn in FY2022 to IDR486.2bn, IDR531.1bn and IDR519.4bn in FY2025; gross margin moved from 1.4% to 5.6% as procurement was renegotiated and CNG routes were optimised [S6 p.63, S5]. EBITDA was negative in FY2022, FY2023 and FY2024 and turned slightly positive in FY2025 at IDR5.1bn [S0, S6 p.63]. Net profit has been negative every year; FY2025 was IDR-31.8bn [S0, S6 p.63]. The FY2025 improvement is real at the gross-profit line but not enough to cover G&A, FX losses and impairments."
+          },
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          },
+          {
+            "type": "para",
+            "text": "The revenue build is deliberately simple. FY2026E revenue is IDR601.0bn, up 15.7%, because H1-2026 revenue was IDR300.6bn and we hold the second half at the first-half run-rate; no seasonality or volume guidance is disclosed [S7 p.6, F13]. FY2027E to FY2030E revenue is flat at IDR601.0bn: IKD's gas sales contracts run to February 2030 at 1,500 MMBtu/day\u20135,000 MMBtu/day MMBtu a day, and management discloses no contracted volume growth [S6 p.161, F22, F23]. The additional gas quota and new customers management is applying for are not contracted, so they stay in the bull case [S11 p.8]. Terminal growth is zero for the same reason: the 2030 renewal is not secured [S6 p.161]."
+          },
+          {
+            "type": "para",
+            "text": "Margins are the swing factor. The base gross margin is 5.6%, the FY2025 actual at the FY2025 Brent base, not a forecast-year spike [S6 p.63, F1-F3]. The model then re-prices 15.0% of COGS off Brent with 50.0% pass-through, which produces a FY2026E gross margin of 2.7% as Brent rises to the deck's FY2026 level, and a recovery to 4.7% as Brent mean-reverts [S6 p.161, S7 p.6, fund record]. The H1-2026 reported margin is the calibration check: revenue rose, gross profit fell, and the cost/revenue ratio moved by the amount the link implies [S7 p.6, F13, F14]. We do not assume a margin expansion beyond the FY2025 actual; the recovery is the oil link unwinding, not a new cost programme."
+          },
+          {
+            "type": "para",
+            "text": "Operating costs start at the H1-2026 run-rate and fade back to the FY2025 actual. G&A of IDR7.1bn plus marketing of IDR0.8bn on H1-2026 revenue is 3.0% for FY2026E, but the FY2025 actual was IDR 24.2bn of SG&amp;A on IDR519.4bn of revenue, with marketing at IDR7.7bn for the full year [S7 p.6, S6 p.63, F15, F16, F29]. No source explains the collapse in the marketing line in one half-year as permanent, and one point of SG&A is about the whole FY2025 EBITDA, so we fade the ratio back to the FY2025 level by FY2030E (4.7%) and hold it there. The earlier draft held the favourable half-year for ten years without a source; that drift is reversed here. D&A is 0.1% of revenue, the FY2025 actual; capex is 0.1% of revenue, also the FY2025 actual [S6 p.138, F7, F9]. The company is asset-light; there is no material contracted capex [S6 p.23]. Interest expense is immaterial; the cost of debt is 13.5% on opening debt, and cash earns 3.0% [S6 p.63, F31]."
+          },
+          {
+            "type": "para",
+            "text": "Cash flow is where the accounting has to be read carefully. The model's FY2025A FCFF of IDR38.9bn is derived from the balance-sheet movement in working capital and is not the audited number: the summary cash flow statement, presented by the direct method, shows FY2025 operating cash flow of negative IDR-18.7bn even as revenue fell [S6 p.39, F36]. The difference sits in the movement of other and related-party liabilities that the model's working-capital definition nets in; the audited cash flow is the number to trust. Because the DCF runs from FY2026E forward and the forecast holds working capital flat in absolute terms, the historical discrepancy does not enter the valuation, but it does mean the historical FCFF line overstates cash generation and should not be read as a cash-conversion trend. FY2026E FCFF is IDR-1.8bn as the margin compresses, and turns positive at IDR2.7bn as Brent falls [S0]. We hold operating working capital at IDR-361.6bn in absolute terms rather than applying the FY2025 ratio to a higher revenue base, because that would book a one-off cash release the cash flow does not show [S6 p.63, F20]. The negative working-capital position is structural: trade payables and other liabilities exceed receivables and cash, and it has persisted since at least FY2022 [S0, S6 p.4]."
+          },
+          {
+            "type": "para",
+            "text": "The balance sheet is the reason the equity is a call option, not a going concern in the ordinary sense. At FY2025 the group had cash of IDR9.7bn and debt of IDR0.5bn, so net cash at the operating level [S0, S6 p.63]. But parent equity was IDR-529.5bn, the working-capital deficit was IDR352.2bn, and the accumulated deficit was IDR5,360.0bn [S6 p.23, F20, F21]. At H1-2026 total assets were IDR386.6bn against total liabilities of IDR951.5bn; the parent entity is in capital deficiency [S7 p.4-5, F27, F28]. KAP Heliantono & Rekan qualified its opinion solely because the consolidated accounts do not adequately disclose the nature and potential effects of the going-concern uncertainty at CBRB, KEP and GSAL; the firm states that the qualification is specific to those three discontinued entities, does not affect its opinion on the group as a whole, and that its going-concern opinion on the Group is not modified [S6 p.2, p.23]. The group-level material uncertainty is management's own: the going-concern note records the funding difficulty, the working-capital deficit and the accumulated losses, and states that these conditions \"indicate a material uncertainty that may cast significant doubt on the Group's ability to continue as a going concern\" [S6 p.23]. The forecast does not keep cash positive: the modelled cash balance is IDR-5.1bn in FY2026E and falls to IDR-209.2bn by FY2035E even with the modest other-loan lines we assume (IDR5.0bn in FY2026E, tapering to zero). Those lines are far smaller than the cumulative operating deficit, so the deficit is unfunded in the base case and depends on new equity, a new facility or the divestment; none is committed, and we do not capitalise a rescue that has not been arranged [S6 p.63, S7 p.5]."
+          },
+          {
+            "type": "para",
+            "text": "Capital allocation is defensive. The company paid no dividend in FY2025 and states it will not while it remains in capital deficiency [S6 p.23]. There is no buyback and no material capex; the share count is unchanged at 31,842 shares m million shares, and no rights issue is announced [S6 p.16, F10]. The historical rights issues are disclosed, but none is pending [S6 p.20]. The priority is liquidity and the divestment, not growth investment [S6 p.10, S11 p.8]."
+          },
+          {
+            "type": "para",
+            "text": "Earnings-quality flags. The accruals ratio is not the main warning here: the group is loss-making and the FY2025 net loss is smaller than the operating cash burn, so the accruals signal is noisy; the cash-conversion trend is the relevant test, and it is negative [S6 p.63]. The specific flags are: a qualified audit opinion on the held-for-sale going-concern disclosure, alongside a group-level material-uncertainty statement from management; a negative working-capital position that flatters FCFF; recurring FX losses (IDR10.6bn in H1-2026 alone); impairments; related-party exposures on terms that may differ from third-party terms; and high supplier and customer concentration [S6 p.2, p.23, p.89, p.155, S7 p.6, F17]. On the IDX regime screen, MTFN is on the special monitoring board, has been suspended from trading in the past, and has received a delisting warning; it is not on the November 2026 delisting list, so the listing survives for now [S2, S6 p.16, S8, S9]. On the house screen this is an unexplained regime flag: the special-monitoring designation and the delisting warning are sourced to a 2024 article and the FY2025 filing, and we have no 2026 BEI announcement stating the reason for the designation, so we cannot explain it [S2, S6 p.16]. The house card treats special monitoring as manipulation-class until explained, and we apply that here: we give the listing no benefit in the valuation and rely on the liquidity discount and the nil base value. What we can source is the current position: MTFN is not on the November 2026 delisting list, so the listing survives [S8, S9]. We found no fabricated cash or fictitious revenue in the sources reviewed. The related-party balance is quantified rather than merely flagged: gross other receivables from related parties of IDR581.4bn at 30 June 2026 against IDR868.8bn of gross other receivables, with IDR542.2bn provided against, leaving IDR326.6bn net \u2014 most of the IDR386.6bn asset base and, on the gross figure, more than the group's FY2025 revenue of IDR519.4bn [S7 p.70, F37-F40]. That balance is the counterpart of the negative working capital the FCFF line relies on."
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "We value MTFN on free cash flow to the firm. The business is a contracted spread with a finite contract life, the balance sheet is negative-equity, and there is no reproducible peer multiple; a DCF is the only method that prices the contracts, the cost link and the liability overhang together [S6 p.161, S7 p.4]. The DCF carries 100% weight. The EV/EBITDA cross-check is shown but not used in the target; the dividend-yield leg is zero because there is no dividend [S6 p.23]."
+          },
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "The cost of equity is 11.2% and the WACC is 11.2%. The build takes the risk-free rate of 7.4% and deducts the sovereign default spread of 1.6%, then adds a levered beta of 0.80 times the sum of a mature-market ERP of 4.2% and an Indonesia country risk premium of 2.5%, with a terminal tax rate of 22.0% [S0, fund record]. In arithmetic, 7.4% \u2212 1.6% + 0.80 \u00d7 (4.2% + 2.5%) = 11.2% cost of equity, which the 99.9% equity weight carries into the WACC. The default spread is deducted because the rupiah risk-free rate is a government yield that already contains Indonesia's sovereign credit risk; charging the country risk premium on top of it without netting the default spread out would count the same risk twice. The debt weight is 0.1% because debt is IDR0.5bn; the WACC is effectively the cost of equity [S0]. We did not add a separate size premium: the cash flows are contracted, and the illiquidity is dealt with explicitly through the liquidity discount, so a size premium would double-count the same risk. A reviewer could reasonably add one; that would lower the target further, not raise it."
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "The DCF produces no positive equity value: the engine floors a negative discounted value at Rp0 a share, so the base scenario carries Rp0, with an enterprise value of IDR-17.3bn and a terminal-value share of 89.1%. The explicit forecast runs to FY2035E; terminal growth is zero because the 2030 contract renewal is not secured and no volume growth is contracted [S6 p.161]. The terminal-value share is low relative to a typical DCF because the explicit period is long and the post-2030 cash flows are flat, not growing. The equity value includes net cash and the minority interest, and the bridge is no longer empty. Two sourced items sit in it. First, the net liabilities of the held-for-sale entities are deducted at full weight: liabilities of IDR210.3bn less assets of IDR4.1bn, because the DCF values IKD's cash flows only and those liabilities remain consolidated until a sale completes [S7 p.4, F32, F35, S11 p.8]. Second, the release of exactly that net liability on completion is credited at a judged completion probability; a nominal-price sale transfers the assets and liabilities together, which is why the divestment is worth roughly the net liability rather than the enterprise value of the disposed entities. The two items carry the liabilities at full weight and the relief at partial weight, so the base case charges the claim in full and the bull case keeps only the weighted benefit. The divestment is therefore quantified rather than described, and the same weighted bridge applies in all three scenarios while the operating shocks are mirrored [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "para",
+            "text": "The cross-check diverges, and the divergence is the point. At the current price the EV/EBITDA is 76.8x on FY2025A, 115.0x on FY2027E and 138.3x on FY2028E [S0]. A multiple that high is not an operating-business multiple; it is a price for the divestment/liability release, or for growth the contracts do not support. The DCF value implies a far lower multiple on the same EBITDA. We do not use the market multiple to anchor the target because the market is pricing an event, not the cash flows. P/BV is meaningless with negative equity [S0, S6 p.23]."
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "The sensitivity table shows what matters. Value is most sensitive to the gross margin and the Brent path, because the spread is thin; a one-point margin move is larger than the entire FY2025 EBITDA [S0, S6 p.63]. WACC and terminal growth matter less because the terminal value is a small share of the total. The scenario table mirrors the shocks: Brent is multiplied up in the bear case and down in the bull case by the same proportion, and the gross margin is shocked by the same amount in each direction [S0]. We do not stack a volume decline into the bear case without a source; the customer concentration is the reason volume risk exists, but the base case holds the contracted range [S6 p.155, p.161]."
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "The reverse DCF is the cleanest statement of the mispricing, and it needs its workings shown. The engine solves for the constant addition to annual revenue growth, applied in every forecast year from the FY2026E base of IDR601.0bn through FY2035E, that makes the DCF equal the market price on the published margin of 5.6% at base input costs, the faded SG&A path, a 10.0% cash tax rate, the modelled WACC of 11.2% and zero terminal growth. That factor is 9.8% a year, compounding, which is what the price implies; the figure is an annual growth rate for the whole explicit period, not a one-year step, and it is the reason the earlier one-year reading looked too small. The contract book supports flat volumes to 2030 [S6 p.161, F22, F23], so the growth has to come from a contract that has not been announced or a divestment that has not been signed. The market is either capitalising a new contract that has not been announced or a divestment that has not been signed [S11 p.8]. We put both in the bull case. The base case value is Rp0, the bear case is Rp0 and the bull case is Rp3 [S0]. The probability-weighted scenario value is Rp0.85; after the 30.0% liquidity discount the target is Rp0.60, and the -95.4% expected return is computed on that same unrounded number, not on a rounded rupiah figure. The discount is not a valuation input; it is a recognition that the shares have IDR0.0bn three-month ADTV and repeatedly go untraded [S0]. A fundamental value that cannot be executed is not a return an investor can capture."
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The downside risks are unusually concentrated, and several are correlated."
+          },
+          {
+            "type": "para",
+            "text": "Regulatory and listing risk (likelihood high, impact critical). MTFN is on the special monitoring board and has received a delisting warning; trading has been suspended in the past [S2, S6 p.16]. It is not on the November 2026 delisting list, so the immediate delisting risk has receded, but the special-monitoring status remains a gate on entry and exit [S8, S9]. We have no 2026 BEI announcement giving the reason for the designation; under the house card that makes it an unexplained regime flag, screened as manipulation-class, and it is one reason the base operating value is floored at nil rather than left as a small positive number. A delisting or a prolonged suspension would make the liquidity discount insufficient."
+          },
+          {
+            "type": "para",
+            "text": "Liquidity and funding risk (likelihood high, impact critical). The group has a working-capital deficit of IDR352.2bn, a capital deficiency, and a qualified audit opinion on the held-for-sale going-concern disclosure alongside a group-level material-uncertainty statement [S6 p.2, p.23, S7 p.5]. The forecast cash balance turns negative in FY2026E at IDR-5.1bn and the cumulative deficit is unfunded: the other-loan lines we model are not a committed facility and do not cover it [S6 p.63]. A supplier demanding faster payment or a customer delaying receivables would tighten the constraint quickly."
+          },
+          {
+            "type": "para",
+            "text": "Commodity and margin risk (likelihood high, impact high). The base case already has a margin compression in FY2026E; a higher Brent path or a slower pass-through takes the margin lower [S7 p.6]. The bear case shocks Brent up and the margin down [S0]. The company does not hedge the oil link in a disclosed programme [S6 p.38]."
+          },
+          {
+            "type": "para",
+            "text": "Customer concentration risk (likelihood medium, impact high). The largest customer and Dharma Perkasa Gemilang each exceed the disclosure threshold, and the Dharma contract is the backbone of the 2030 book [S6 p.155, p.161]. The loss of one customer would impair revenue and the contract-renewal case."
+          },
+          {
+            "type": "para",
+            "text": "Supplier concentration risk (likelihood low-to-medium, impact critical). Kangean is the dominant gas supplier; a supply interruption, price renegotiation or field issue would hit IKD directly [S6 p.155]. The long-term supply agreement mitigates price risk but does not eliminate volume or counterparty risk [S6 p.14]."
+          },
+          {
+            "type": "para",
+            "text": "FX risk (likelihood high, impact medium). IKD's purchases are USD-denominated, and FX losses are recurring: IDR10.6bn in H1-2026 and a larger loss in FY2025 [S6 p.39, S7 p.6, F17]. The model carries a normalized other non-operating charge of IDR-18.0bn a year, set inside the observed range between the FY2025 loss and the annualised H1-2026 loss rather than below both [S6 p.63, S7 p.6, F17]. The charge is deliberately not linked to the macro deck's USD/IDR path: it is a non-cash translation loss that sits below EBIT, it does not enter FCFF, and linking it to a forecast rate would put a macro view into an earnings line the valuation does not use. The operating cost itself is modelled in rupiah at the contracted purchase terms [S6 p.161], so FX is excluded from the forecast cash flow by construction, not by oversight; the exposure to the rupiah is stated here and in the currency risk note [S6 p.39]."
+          },
+          {
+            "type": "para",
+            "text": "Financing and dilution risk (likelihood medium, impact medium). The company has issued equity four times historically, including a private placement and a rights issue, and states it is exploring additional funding sources and strategic equity partnerships [S6 p.20, p.23]. No issuance is announced and the share count of 31,842 shares m million is unchanged [S6 p.16, F10], so the base case holds it; but a placement sized to the working-capital deficit would dilute the per-share value if the equity were positive. On our numbers the base and bear equity values are already nil, so dilution cannot lower the published target below zero; its real effect would be to cap the bull case, which is why we do not weight it as a separate downside."
+          },
+          {
+            "type": "para",
+            "text": "Governance and related-party risk (likelihood medium, impact high). The annual report discloses related-party transactions and states that terms may differ from third-party terms [S6 p.89]. The H1-2026 note quantifies the exposure: related-party other receivables of IDR581.4bn gross, IDR542.2bn provided against and IDR326.6bn net, most of the IDR386.6bn asset base and the counterpart of the negative working capital the model relies on [S7 p.70, F37-F40]. The auditor's qualified opinion is a structure flag, not a confirmed manipulation-class finding [S6 p.2, p.23]."
+          },
+          {
+            "type": "para",
+            "text": "Contract-expiry risk (likelihood medium, impact high). The Dharma GSPA expires in February 2030, and no renewal is disclosed [S6 p.161]. The terminal value assumes no growth beyond the contract; a renewal at worse terms would lower the value, and a renewal at better terms would raise it."
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "The scenarios are mirrored on three drivers. The base case (probability 50.0%) holds the contracted volumes, the FY2025 gross margin at the deck's Brent path, and the probability-weighted bridge; it values the equity at Rp0. The bear case cuts revenue growth by the same amount the bull case adds, standing for a Kangean supply interruption or a take-or-pay shortfall that removes contracted volume, and for the payable float that funds the negative working capital tightening [S6 p.155, p.161, S7 p.5]. The bear case (probability 25.0%) shocks Brent up and the gross margin down, assumes the customers cut volumes and the divestment fails, and values the equity at Rp0. The bull case (probability 25.0%) shocks Brent down and the gross margin up, assumes the additional gas quota and new customers are won and the divestment completes, and values the equity at Rp3 [S0, S11 p.8]. The bull case is honest: if the divestment deconsolidates the held-for-sale liabilities and the new contracts add volume, the equity is worth more than the base case. We do not put that in the base case because no contract or sale agreement is signed [S7 p.4, S11 p.8]."
+          },
+          {
+            "type": "para",
+            "text": "Signposts that would change the view: a signed divestment with liability deconsolidation; a new gas sales contract with disclosed volumes and terms; a 2030 renewal; a sustained gross-margin recovery above the FY2025 level; an equity injection or debt restructuring that cures the capital deficiency; or a delisting/suspension announcement [S6 p.161, S7 p.4, S11 p.8, S2]. On the downside, a qualified opinion repeat, a supplier payment dispute or a customer loss would confirm the bear case."
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Ownership is dispersed but not independent. The largest holder is Express Profitables Investment Ltd at 21.1%; the public holds 54.5%; several holders above the disclosure threshold together hold a blocking minority [S6 p.18, F18, F19]. The market data show insider ownership of 45.6% and a free float of 50.0% [S0]. There is no single majority shareholder, so control depends on the board and management rather than a dominant family. The president director is Rizal Fadjar Bamahry [S11 p.7]. We did not find a shareholder agreement or a pledge disclosure in the archived annual report; we treat pledges as unverified, not absent [S6 p.18]."
+          },
+          {
+            "type": "para",
+            "text": "Related-party dealings are the main governance flag, and they are now quantified. The annual report discloses related-party transactions and states that terms may not be the same as third-party terms [S6 p.89]. At 30 June 2026, gross other receivables from related parties were IDR581.4bn of IDR868.8bn total gross other receivables, with an allowance of IDR542.2bn leaving IDR326.6bn net \u2014 most of the IDR386.6bn asset base and, on the gross figure, more than FY2025 revenue of IDR519.4bn [S7 p.70, F37-F40]. The other loans that fund the forecast are not a committed bank facility, which increases the governance sensitivity [S6 p.63]."
+          },
+          {
+            "type": "para",
+            "text": "Auditor and opinion. KAP Heliantono & Rekan (a Parker Russell affiliate) issued a qualified opinion on the FY2025 consolidated accounts. The basis is narrow and specific: the accounts do not adequately disclose the nature and potential effects of the going-concern uncertainty of CBRB, KEP and GSAL, and the firm states that the qualification does not affect its opinion on the group as a whole and that its going-concern opinion on the Group is not modified [S6 p.23]. The group-level material uncertainty is management's own statement in the going-concern note, arising from the working-capital deficit and the accumulated deficit; the auditor's report does not modify the group going-concern opinion, and its adverse finding is confined to the held-for-sale disclosure [S6 p.2, p.23]. A qualified opinion is a structure flag: it raises the cost of capital and the risk of a delayed or restated filing, but it is not by itself evidence of fabricated cash or revenue. We classify it as optics/structure-class, not manipulation-class. The FY2025 accounts were published late, which is consistent with the filing-risk flag [S5, S6]."
+          },
+          {
+            "type": "para",
+            "text": "Dividend record and capital allocation. The company paid no dividend in FY2025 and states it will not while it remains in capital deficiency with a significant accumulated loss [S6 p.23]. The dividend placeholder is Rp0 for the trailing period [S0]. There is no buyback and no material capex; the share count is unchanged at 31,842 shares m million shares [S6 p.16, F10]. The historical rights issues are disclosed, but none is pending [S6 p.20]. Capital allocation is therefore defensive: preserve liquidity and complete the divestment [S6 p.10, S11 p.8]."
+          },
+          {
+            "type": "para",
+            "text": "Board and controls. The board is small and management-led; the annual report does not disclose a controlling shareholder above the thresholds [S6 p.18]. We did not find evidence of a formal evaluation of related-party terms by an independent committee in the archived text; that is a gap. The company's internal control disclosure is generic. The red team should test whether the audit committee reviewed the Kangean supply terms and the divestment process [S6 p.89, S11 p.7-8]."
+          },
+          {
+            "type": "para",
+            "text": "ESG. The company's main ESG exposure is the energy transition: gas and CNG are transition fuels, and demand could be affected by electrification and renewable policy [S6 p.39]. The annual report says GHG monitoring began in 2025 and sets a carbon-intensity reduction target; it also cites POJK 51/GRI 2021 sustainability reporting [S6 p.39]. Health and safety risk is operational (gas compression and transport); the report says there were no material incidents in FY2025 [S6 p.39]. Governance is the weaker ESG pillar: qualified audit, related-party opacity and a special-monitoring-board listing [S6 p.2, p.89, S2]. We do not treat MTFN as a konglo name; the governance discount is already in the WACC and the liquidity discount [S6 p.18]."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The dated catalysts are the quarterly filings, the FY2026 audit and the 2030 contract. The Q3-2026 interim LK (due by the end of November 2026) is the first test of whether the H1-2026 margin compression persisted and whether operating cash flow improved [S7 p.6]. The FY2026 audited accounts (due by the end of March 2027) will show whether the auditor repeats the qualification on the held-for-sale disclosure and keeps the group-level material-uncertainty paragraph [S6 p.2, p.23]. The Dharma GSPA expires in February 2030; any renewal or replacement contract is the long-term value catalyst [S6 p.161]. The divestment of CBRB, KEP and GSAL has no disclosed date; we monitor announcements for a signing, a price and liability deconsolidation [S11 p.8, S7 p.4]."
+          },
+          {
+            "type": "para",
+            "text": "The KPIs we watch between updates: gross margin and gross profit (the spread); revenue and contract volumes (the 1,500 MMBtu/day\u20135,000 MMBtu/day MMBtu range); Brent and the IDR/USD rate (the cost link and FX); operating cash flow and the working-capital deficit (IDR352.2bn); cash and other-loan funding; the audit opinion and going-concern language; customer and supplier concentration; and the special-monitoring-board/delisting status [S6 p.155, p.161, S7 p.6, S2, S8, S9]."
+          },
+          {
+            "type": "para",
+            "text": "The monitoring calendar is simple. Monthly: BEI announcements on suspension, delisting and the special monitoring board; Brent and IDR prints. Quarterly: LK revenue, gross margin, operating cash flow, cash and debt. Annually: audit opinion, related-party note and the divestment progress. The signposts that would change the rating are a signed divestment with liability relief, a new contracted volume, a 2030 renewal, or a capital injection that cures the deficiency [S6 p.161, S7 p.4, S11 p.8]. Absent those, the stock is a fundamental SELL with no executable liquidity."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for MTFN.JK",
+        "url": "https://finance.yahoo.com/quote/MTFN.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-08",
+        "kind": "data"
+      },
+      "S2": {
+        "title": "Berpotensi Delisting, Berikut Para Pemegang Saham MTFN",
+        "url": "https://emitennews.com/news/berpotensi-delisting-berikut-para-pemegang-saham-mtfn",
+        "publisher": "emitennews.com",
+        "date": "2026-11-10",
+        "kind": "news"
+      },
+      "S5": {
+        "title": "Efisiensi Logistik Gas Berbuah Manis, Laba Kotor Capitalinc (MTFN) Melonjak 131%",
+        "url": "https://r.jina.ai/https://pasardana.id/news/2026/11/7/efisiensi-logistik-gas-berbuah-manis-laba-kotor-capitalinc-mtfn-melonjak-131",
+        "publisher": "r.jina.ai",
+        "date": "2026-11-10",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "Capitalinc Investment Annual Report FY2025",
+        "url": "https://www.capitalinc-investment.com/upload/gms/MTFN_AR_FY2025_web.pdf",
+        "publisher": "www.capitalinc-investment.com",
+        "date": "2026-11-10",
+        "kind": "filing"
+      },
+      "S7": {
+        "title": "Capitalinc Investment LK TW2 2026 (H1 2026)",
+        "url": "https://www.capitalinc-investment.com/upload/financial_statement/website_LK_TW2_2026.pdf",
+        "publisher": "www.capitalinc-investment.com",
+        "date": "2026-11-10",
+        "kind": "filing"
+      },
+      "S8": {
+        "title": "BEI Delisting 18 Saham Per 10 November 2026, Ini Daftarnya",
+        "url": "https://money.kompas.com/read/2026/11/04/110555526/bei-delisting-18-saham-per-10-november-2026-ini-daftarnya",
+        "publisher": "money.kompas.com",
+        "date": "2026-11-04",
+        "kind": "news"
+      },
+      "S11": {
+        "title": "Capitalinc Public Expose 2025 resume",
+        "url": "https://www.capitalinc-investment.com/upload/public_expose/web_resume_pubex2025.pdf",
+        "publisher": "www.capitalinc-investment.com",
+        "date": "2026-11-10",
+        "kind": "company"
+      }
+    },
+    "rendered_at": "2026-11-10T08:07:06+07:00"
+  },
+  "meta": {
+    "rating": "SELL",
+    "tp": 1.0,
+    "price": 13.0,
+    "tp_fundamental": 1.0,
+    "konglo": false,
+    "suspended": null,
+    "price_date": "2026-11-06",
+    "tr_pct": -95.42,
+    "upside_pct": -95.42,
+    "v0": 0.0,
+    "tp_base": 0.0,
+    "dps12": 0.0,
+    "liquidity_discount": 0.3,
+    "investable": {
+      "ok": false,
+      "mcap": false,
+      "adtv": false,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-10",
+    "data_asof": "2026-11-08",
+    "model_asof": "2026-11-10",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Bayu",
+    "sector_lead_title": "Sector Lead, Energy",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 413947077076.0,
+    "adtv_3m_idr": 0.0,
+    "free_float_pct": 49.95,
+    "w52_high": 50.0,
+    "w52_low": 12.0,
+    "shares_m": 31842.08,
+    "insider_pct": 45.55,
+    "institution_pct": 0.0,
+    "board": "",
+    "listing_date": "",
+    "website": "https://www.capitalinc-investment.com"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "revenue",
+        "label": "Revenue",
+        "unit": "money",
+        "values": {
+          "FY2023A": 486.210228,
+          "FY2024A": 531.108386,
+          "FY2025A": 519.429105,
+          "FY2026E": 600.979474,
+          "FY2027E": 600.979474,
+          "FY2028E": 600.979474
+        }
+      },
+      {
+        "key": "ebitda",
+        "label": "EBITDA",
+        "unit": "money",
+        "values": {
+          "FY2023A": -27.342185,
+          "FY2024A": -26.666113,
+          "FY2025A": 5.14801,
+          "FY2026E": -1.348579,
+          "FY2027E": 3.74502,
+          "FY2028E": 3.239295
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": -29.526427,
+          "FY2024A": -86.585416,
+          "FY2025A": -31.462796,
+          "FY2026E": -19.388852,
+          "FY2027E": -15.452846,
+          "FY2028E": -16.735553
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": -0.927277,
+          "FY2024A": -2.719213,
+          "FY2025A": -0.988088,
+          "FY2026E": -0.608907,
+          "FY2027E": -0.485296,
+          "FY2028E": -0.52558
+        }
+      },
+      {
+        "key": "eps_growth",
+        "label": "EPS growth",
+        "unit": "pct",
+        "values": {
+          "FY2023A": -0.912653,
+          "FY2024A": 1.932472,
+          "FY2025A": -0.636627,
+          "FY2026E": -0.383753,
+          "FY2027E": -0.203004,
+          "FY2028E": 0.083008
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 0.0,
+          "FY2024A": 0.0,
+          "FY2025A": 0.0,
+          "FY2026E": 0.0,
+          "FY2027E": 0.0,
+          "FY2028E": 0.0
+        }
+      },
+      {
+        "key": "roe",
+        "label": "ROE",
+        "unit": "pct",
+        "values": {
+          "FY2023A": 0.076918,
+          "FY2024A": 0.195147,
+          "FY2025A": 0.061702,
+          "FY2026E": 0.035957,
+          "FY2027E": 0.027761,
+          "FY2028E": 0.02922
+        }
+      },
+      {
+        "key": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "unit": "x",
+        "values": {
+          "FY2023A": 0.331566,
+          "FY2024A": 0.486165,
+          "FY2025A": -1.781732,
+          "FY2026E": -7.851839,
+          "FY2027E": 7.054736,
+          "FY2028E": 13.443385
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "dcf_fcff",
+        "label": "DCF (FCFF, terminal value)",
+        "available": true,
+        "value": 0.0,
+        "weight": 1.0,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 0.8,
+      "beta_source": "industry default (config)",
+      "de": 0.001089,
+      "beta_levered": 0.80068,
+      "tax": 0.22,
+      "coe_premium": 0.0,
+      "coe": 0.111865,
+      "kd_pre_tax": 0.0945,
+      "we": 0.998912,
+      "wd": 0.001088,
+      "wacc": 0.111824
+    },
+    "g": 0.0,
+    "dcf": {
+      "method": "dcf_fcff",
+      "rows": [
+        {
+          "cf": -1.801293,
+          "fraction": 0.503765,
+          "time": 0.0,
+          "df": 1.0,
+          "pv": -0.907428,
+          "period": "FY2026E"
+        },
+        {
+          "cf": 2.737086,
+          "fraction": 0.996578,
+          "time": 0.640657,
+          "df": 0.934344,
+          "pv": 2.548627,
+          "period": "FY2027E"
+        },
+        {
+          "cf": 2.281933,
+          "fraction": 0.999316,
+          "time": 1.639973,
+          "df": 0.840431,
+          "pv": 1.916495,
+          "period": "FY2028E"
+        },
+        {
+          "cf": 1.243034,
+          "fraction": 0.996578,
+          "time": 2.642026,
+          "df": 0.755739,
+          "pv": 0.936194,
+          "period": "FY2029E"
+        },
+        {
+          "cf": -0.077021,
+          "fraction": 0.996578,
+          "time": 3.641342,
+          "df": 0.679778,
+          "pv": -0.052178,
+          "period": "FY2030E"
+        },
+        {
+          "cf": -0.937361,
+          "fraction": 0.996578,
+          "time": 4.640657,
+          "df": 0.611452,
+          "pv": -0.57119,
+          "period": "FY2031E"
+        },
+        {
+          "cf": -1.814908,
+          "fraction": 0.999316,
+          "time": 5.639973,
+          "df": 0.549994,
+          "pv": -0.997506,
+          "period": "FY2032E"
+        },
+        {
+          "cf": -2.710006,
+          "fraction": 0.996578,
+          "time": 6.642026,
+          "df": 0.49457,
+          "pv": -1.3357,
+          "period": "FY2033E"
+        },
+        {
+          "cf": -3.623006,
+          "fraction": 0.996578,
+          "time": 7.641342,
+          "df": 0.44486,
+          "pv": -1.606213,
+          "period": "FY2034E"
+        },
+        {
+          "cf": -4.554265,
+          "fraction": 0.996578,
+          "time": 8.640657,
+          "df": 0.400146,
+          "pv": -1.816134,
+          "period": "FY2035E"
+        }
+      ],
+      "pv_sum": -1.885033,
+      "pv_tv": -15.458335,
+      "ev": -17.343368,
+      "net_debt": -5.560584,
+      "minority": -9.6295,
+      "investments": 0.0,
+      "bridge": -154.65825,
+      "equity_value": -156.811534,
+      "tv_share": 0.891311,
+      "value": 0.0
+    },
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 0.0,
+        "v0": 0.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.25,
+        "tp": 0.0,
+        "v0": 0.0,
+        "narrative": "Brent stays 20% above the deck path, so the oil-linked portion of IKD's gas purchase cost rises while industrial selling prices reprice with a lag, taking one further point off the gross margin [S6 p.161, S7 p.6]. Revenue growth is cut by the same amount the bull case adds: a Kangean supply interruption or a take-or-pay shortfall at the Dharma Perkasa customers removes part of the contracted volume before the 2030 expiry, and the payable float that funds the negative working capital tightens [S6 p.155, p.161, S7 p.5]. The held-for-sale entities cannot be divested; their net liabilities stay consolidated and the bridge carries them at full weight [S7 p.4, F32]. FX losses continue.",
+        "shocks": [
+          {
+            "target": "d.oil.brent",
+            "op": "mult",
+            "value": 1.2
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": -0.01
+          },
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": -0.02
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.25,
+        "tp": 3.0,
+        "v0": 3.0,
+        "narrative": "Brent falls 20% below the deck path, cutting the oil-linked gas purchase cost, and the procurement renegotiation holds a further point of gross margin [S5, S6 p.161]. IKD wins part of the additional gas quota and new industrial customers management is applying for [S11 p.8]: revenue growth is lifted by the mirror of the bear cut, a small slice of the headroom inside the contracted 1,500-5,000 MMBtu/day range rather than the full multiple [S6 p.161, F22, F23]. The CBRB, KEP and GSAL divestment entering the bridge at its judged probability is only one input to this case, not the case itself: the operating uplift is modelled here and the divestment release is weighted across all three scenarios [S7 p.4, S11 p.8].",
+        "shocks": [
+          {
+            "target": "d.oil.brent",
+            "op": "mult",
+            "value": 0.8
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": 0.01
+          },
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": 0.02
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "DCF value per share vs WACC and terminal growth",
+        "metric": "method:dcf_fcff",
+        "x": {
+          "target": "val.wacc",
+          "op": "add",
+          "label": "WACC (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "y": {
+          "target": "val.g",
+          "op": "add",
+          "label": "Terminal growth (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs revenue growth and gross margin",
+        "metric": "tp",
+        "x": {
+          "target": "a.revenue_growth",
+          "op": "add",
+          "label": "Revenue growth (+/- pp, every year)",
+          "steps": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ]
+        },
+        "y": {
+          "target": "a.gross_margin",
+          "op": "add",
+          "label": "Gross margin (+/- pp)",
+          "steps": [
+            -0.02,
+            -0.01,
+            0.0,
+            0.01,
+            0.02
+          ]
+        },
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.253683
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.658084
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.277803,
+            5.062485
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": true,
+      "target": "a.revenue_growth",
+      "op": "add",
+      "factor": 0.098281,
+      "period": "FY2027E",
+      "implied_value": 0.098281,
+      "method": "dcf_fcff"
+    },
+    "multiples": {
+      "FY2025A": {
+        "div_yield": 0.0,
+        "ev_ebitda": 76.756888
+      },
+      "FY2026E": {
+        "div_yield": 0.0,
+        "fcfe_yield": -0.03566
+      },
+      "FY2027E": {
+        "div_yield": 0.0,
+        "ev_ebitda": 115.016133,
+        "fcfe_yield": -0.030997
+      },
+      "FY2028E": {
+        "div_yield": 0.0,
+        "ev_ebitda": 138.259925,
+        "fcfe_yield": -0.036543
+      }
+    },
+    "peers": {
+      "median": {},
+      "rows": {
+        "RAJA.JK": {
+          "pe": 11.2829,
+          "ev_ebitda": 10.7132,
+          "pbv": 2.014,
+          "ev_sales": 1.9643,
+          "div_yield": 0.0332
+        }
+      }
+    },
+    "drivers": {
+      "d.oil.brent": {
+        "FY2023A": 82.1904,
+        "FY2024A": 79.8213,
+        "FY2025A": 68.1015,
+        "FY2026E": 96.0,
+        "FY2027E": 84.0,
+        "FY2028E": 80.0
+      }
+    },
+    "konglo": null
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E",
+      "FY2031E",
+      "FY2032E",
+      "FY2033E",
+      "FY2034E",
+      "FY2035E"
+    ],
+    "sections": {
+      "OPS": [],
+      "IS": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 420.758765,
+            "FY2023A": 486.210228,
+            "FY2024A": 531.108386,
+            "FY2025A": 519.429105,
+            "FY2026E": 600.979474,
+            "FY2027E": 600.979474,
+            "FY2028E": 600.979474,
+            "FY2029E": 600.979474,
+            "FY2030E": 600.979474,
+            "FY2031E": 600.979474,
+            "FY2032E": 600.979474,
+            "FY2033E": 600.979474,
+            "FY2034E": 600.979474,
+            "FY2035E": 600.979474
+          }
+        },
+        {
+          "key": "cogs",
+          "label": "Cost of revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 415.048182,
+            "FY2023A": 473.347426,
+            "FY2024A": 518.597148,
+            "FY2025A": 490.461755,
+            "FY2026E": 584.755414,
+            "FY2027E": 577.257897,
+            "FY2028E": 574.758724,
+            "FY2029E": 573.509138,
+            "FY2030E": 572.571949,
+            "FY2031E": 573.527882,
+            "FY2032E": 574.502934,
+            "FY2033E": 575.497487,
+            "FY2034E": 576.511932,
+            "FY2035E": 577.546665
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": 5.710583,
+            "FY2023A": 12.862802,
+            "FY2024A": 12.511238,
+            "FY2025A": 28.96735,
+            "FY2026E": 16.22406,
+            "FY2027E": 23.721578,
+            "FY2028E": 26.22075,
+            "FY2029E": 27.470336,
+            "FY2030E": 28.407526,
+            "FY2031E": 27.451592,
+            "FY2032E": 26.47654,
+            "FY2033E": 25.481987,
+            "FY2034E": 24.467543,
+            "FY2035E": 23.43281
+          }
+        },
+        {
+          "key": "opex",
+          "label": "SG&A and other opex",
+          "unit": "money",
+          "values": {
+            "FY2022A": 301.747224,
+            "FY2023A": 40.592325,
+            "FY2024A": 39.991662,
+            "FY2025A": 24.215562,
+            "FY2026E": 18.029384,
+            "FY2027E": 20.433302,
+            "FY2028E": 23.4382,
+            "FY2029E": 25.842117,
+            "FY2030E": 28.246035,
+            "FY2031E": 28.246035,
+            "FY2032E": 28.246035,
+            "FY2033E": 28.246035,
+            "FY2034E": 28.246035,
+            "FY2035E": 28.246035
+          }
+        },
+        {
+          "key": "ebit",
+          "label": "EBIT",
+          "unit": "money",
+          "values": {
+            "FY2022A": -296.036641,
+            "FY2023A": -27.729523,
+            "FY2024A": -27.480424,
+            "FY2025A": 4.751788,
+            "FY2026E": -1.805324,
+            "FY2027E": 3.288275,
+            "FY2028E": 2.78255,
+            "FY2029E": 1.628219,
+            "FY2030E": 0.16149,
+            "FY2031E": -0.794443,
+            "FY2032E": -1.769495,
+            "FY2033E": -2.764048,
+            "FY2034E": -3.778492,
+            "FY2035E": -4.813225
+          }
+        },
+        {
+          "key": "da",
+          "label": "Depreciation & amortisation",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.754594,
+            "FY2023A": 0.387337,
+            "FY2024A": 0.814311,
+            "FY2025A": 0.396222,
+            "FY2026E": 0.456744,
+            "FY2027E": 0.456744,
+            "FY2028E": 0.456744,
+            "FY2029E": 0.456744,
+            "FY2030E": 0.456744,
+            "FY2031E": 0.456744,
+            "FY2032E": 0.456744,
+            "FY2033E": 0.456744,
+            "FY2034E": 0.456744,
+            "FY2035E": 0.456744
+          }
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "unit": "money",
+          "values": {
+            "FY2022A": -295.282047,
+            "FY2023A": -27.342185,
+            "FY2024A": -26.666113,
+            "FY2025A": 5.14801,
+            "FY2026E": -1.348579,
+            "FY2027E": 3.74502,
+            "FY2028E": 3.239295,
+            "FY2029E": 2.084963,
+            "FY2030E": 0.618235,
+            "FY2031E": -0.337699,
+            "FY2032E": -1.312751,
+            "FY2033E": -2.307304,
+            "FY2034E": -3.321748,
+            "FY2035E": -4.356481
+          }
+        },
+        {
+          "key": "interest_expense",
+          "label": "Interest expense",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.055913,
+            "FY2023A": 0.159479,
+            "FY2024A": 0.159479,
+            "FY2025A": 0.086612,
+            "FY2026E": 0.070131,
+            "FY2027E": 0.745131,
+            "FY2028E": 1.150131,
+            "FY2029E": 1.420131,
+            "FY2030E": 1.690131,
+            "FY2031E": 1.960131,
+            "FY2032E": 1.960131,
+            "FY2033E": 1.960131,
+            "FY2034E": 1.960131,
+            "FY2035E": 1.960131
+          }
+        },
+        {
+          "key": "interest_income",
+          "label": "Interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.290756,
+            "FY2027E": -0.15208,
+            "FY2028E": -0.537019,
+            "FY2029E": -0.990828,
+            "FY2030E": -1.500981,
+            "FY2031E": -2.078541,
+            "FY2032E": -2.783705,
+            "FY2033E": -3.553113,
+            "FY2034E": -4.389624,
+            "FY2035E": -5.296201
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other non-operating",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": -18.0,
+            "FY2027E": -18.0,
+            "FY2028E": -18.0,
+            "FY2029E": -18.0,
+            "FY2030E": -18.0,
+            "FY2031E": -18.45,
+            "FY2032E": -18.91125,
+            "FY2033E": -19.384031,
+            "FY2034E": -19.868632,
+            "FY2035E": -20.365348
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": -338.544922,
+            "FY2023A": -27.382119,
+            "FY2024A": -44.815183,
+            "FY2025A": -31.651162,
+            "FY2026E": -19.584699,
+            "FY2027E": -15.608935,
+            "FY2028E": -16.904599,
+            "FY2029E": -18.78274,
+            "FY2030E": -21.029621,
+            "FY2031E": -23.283114,
+            "FY2032E": -25.424581,
+            "FY2033E": -27.661323,
+            "FY2034E": -29.996879,
+            "FY2035E": -32.434905
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": -0.476125,
+            "FY2023A": 2.340453,
+            "FY2024A": 42.062343,
+            "FY2025A": -0.530676,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": -338.984794,
+            "FY2023A": -29.611806,
+            "FY2024A": -87.563496,
+            "FY2025A": -31.781345,
+            "FY2026E": -19.584699,
+            "FY2027E": -15.608935,
+            "FY2028E": -16.904599,
+            "FY2029E": -18.78274,
+            "FY2030E": -21.029621,
+            "FY2031E": -23.283114,
+            "FY2032E": -25.424581,
+            "FY2033E": -27.661323,
+            "FY2034E": -29.996879,
+            "FY2035E": -32.434905
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": -0.947897,
+            "FY2023A": -0.085379,
+            "FY2024A": -0.97808,
+            "FY2025A": -0.318549,
+            "FY2026E": -0.195847,
+            "FY2027E": -0.156089,
+            "FY2028E": -0.169046,
+            "FY2029E": -0.187827,
+            "FY2030E": -0.210296,
+            "FY2031E": -0.232831,
+            "FY2032E": -0.254246,
+            "FY2033E": -0.276613,
+            "FY2034E": -0.299969,
+            "FY2035E": -0.324349
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": -338.036897,
+            "FY2023A": -29.526427,
+            "FY2024A": -86.585416,
+            "FY2025A": -31.462796,
+            "FY2026E": -19.388852,
+            "FY2027E": -15.452846,
+            "FY2028E": -16.735553,
+            "FY2029E": -18.594913,
+            "FY2030E": -20.819325,
+            "FY2031E": -23.050283,
+            "FY2032E": -25.170335,
+            "FY2033E": -27.38471,
+            "FY2034E": -29.69691,
+            "FY2035E": -32.110556
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 31842.082852,
+            "FY2023A": 31842.082852,
+            "FY2024A": 31842.082852,
+            "FY2025A": 31842.082852,
+            "FY2026E": 31842.082852,
+            "FY2027E": 31842.082852,
+            "FY2028E": 31842.082852,
+            "FY2029E": 31842.082852,
+            "FY2030E": 31842.082852,
+            "FY2031E": 31842.082852,
+            "FY2032E": 31842.082852,
+            "FY2033E": 31842.082852,
+            "FY2034E": 31842.082852,
+            "FY2035E": 31842.082852
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": -10.616042,
+            "FY2023A": -0.927277,
+            "FY2024A": -2.719213,
+            "FY2025A": -0.988088,
+            "FY2026E": -0.608907,
+            "FY2027E": -0.485296,
+            "FY2028E": -0.52558,
+            "FY2029E": -0.583973,
+            "FY2030E": -0.653831,
+            "FY2031E": -0.723894,
+            "FY2032E": -0.790474,
+            "FY2033E": -0.860016,
+            "FY2034E": -0.932631,
+            "FY2035E": -1.008431
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 0.0,
+            "FY2025A": 0.0,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "capex",
+          "label": "Capital expenditure",
+          "unit": "money",
+          "values": {
+            "FY2022A": 0.037629,
+            "FY2023A": 0.177976,
+            "FY2024A": 0.114458,
+            "FY2025A": 0.5858,
+            "FY2026E": 0.679107,
+            "FY2027E": 0.679107,
+            "FY2028E": 0.679107,
+            "FY2029E": 0.679107,
+            "FY2030E": 0.679107,
+            "FY2031E": 0.679107,
+            "FY2032E": 0.679107,
+            "FY2033E": 0.679107,
+            "FY2034E": 0.679107,
+            "FY2035E": 0.679107
+          }
+        },
+        {
+          "key": "delta_nwc",
+          "label": "Change in working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -26.066075,
+            "FY2024A": -56.133271,
+            "FY2025A": -34.463694,
+            "FY2026E": -0.045861,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcff",
+          "label": "Free cash flow to firm",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -3.824232,
+            "FY2024A": 3.560302,
+            "FY2025A": 38.946233,
+            "FY2026E": -1.801293,
+            "FY2027E": 2.737086,
+            "FY2028E": 2.281933,
+            "FY2029E": 1.243034,
+            "FY2030E": -0.077021,
+            "FY2031E": -0.937361,
+            "FY2032E": -1.814908,
+            "FY2033E": -2.710006,
+            "FY2034E": -3.623006,
+            "FY2035E": -4.554265
+          }
+        },
+        {
+          "key": "net_borrowing",
+          "label": "Net borrowing",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.0251,
+            "FY2024A": -0.378871,
+            "FY2025A": -0.295272,
+            "FY2026E": 5.0,
+            "FY2027E": 3.0,
+            "FY2028E": 2.0,
+            "FY2029E": 2.0,
+            "FY2030E": 2.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcfe",
+          "label": "Free cash flow to equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": -14.761201,
+            "FY2027E": -12.831298,
+            "FY2028E": -15.126962,
+            "FY2029E": -17.005102,
+            "FY2030E": -19.251984,
+            "FY2031E": -23.505477,
+            "FY2032E": -25.646943,
+            "FY2033E": -27.883686,
+            "FY2034E": -30.219241,
+            "FY2035E": -32.657267
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "nwc",
+          "label": "Operating working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": -244.900448,
+            "FY2023A": -270.966524,
+            "FY2024A": -327.099795,
+            "FY2025A": -361.563489,
+            "FY2026E": -361.60935,
+            "FY2027E": -361.60935,
+            "FY2028E": -361.60935,
+            "FY2029E": -361.60935,
+            "FY2030E": -361.60935,
+            "FY2031E": -361.60935,
+            "FY2032E": -361.60935,
+            "FY2033E": -361.60935,
+            "FY2034E": -361.60935,
+            "FY2035E": -361.60935
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash & equivalents",
+          "unit": "money",
+          "values": {
+            "FY2022A": 16.344198,
+            "FY2023A": 10.259371,
+            "FY2024A": 13.778886,
+            "FY2025A": 9.69186,
+            "FY2026E": -5.069341,
+            "FY2027E": -17.900639,
+            "FY2028E": -33.027601,
+            "FY2029E": -50.032703,
+            "FY2030E": -69.284687,
+            "FY2031E": -92.790163,
+            "FY2032E": -118.437106,
+            "FY2033E": -146.320792,
+            "FY2034E": -176.540034,
+            "FY2035E": -209.197301
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1.16853,
+            "FY2023A": 1.19363,
+            "FY2024A": 0.814759,
+            "FY2025A": 0.519487,
+            "FY2026E": 5.519487,
+            "FY2027E": 8.519487,
+            "FY2028E": 10.519487,
+            "FY2029E": 12.519487,
+            "FY2030E": 14.519487,
+            "FY2031E": 14.519487,
+            "FY2032E": 14.519487,
+            "FY2033E": 14.519487,
+            "FY2034E": 14.519487,
+            "FY2035E": 14.519487
+          }
+        },
+        {
+          "key": "ppe",
+          "label": "Fixed assets (net)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 8.699408,
+            "FY2023A": 4.962931,
+            "FY2024A": 4.189133,
+            "FY2025A": 2.394178,
+            "FY2026E": 2.616541,
+            "FY2027E": 2.838903,
+            "FY2028E": 3.061266,
+            "FY2029E": 3.283628,
+            "FY2030E": 3.50599,
+            "FY2031E": 3.728353,
+            "FY2032E": 3.950715,
+            "FY2033E": 4.173078,
+            "FY2034E": 4.39544,
+            "FY2035E": 4.617802
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": -370.657561,
+            "FY2023A": -397.081079,
+            "FY2024A": -490.303845,
+            "FY2025A": -529.530162,
+            "FY2026E": -548.919014,
+            "FY2027E": -564.37186,
+            "FY2028E": -581.107413,
+            "FY2029E": -599.702326,
+            "FY2030E": -620.521651,
+            "FY2031E": -643.571934,
+            "FY2032E": -668.742269,
+            "FY2033E": -696.126979,
+            "FY2034E": -725.823889,
+            "FY2035E": -757.934445
+          }
+        },
+        {
+          "key": "minority_bs",
+          "label": "Minority interest (balance sheet)",
+          "unit": "money",
+          "values": {
+            "FY2022A": -7.73287,
+            "FY2023A": -7.818248,
+            "FY2024A": -8.796329,
+            "FY2025A": -9.193459,
+            "FY2026E": -9.389306,
+            "FY2027E": -9.545395,
+            "FY2028E": -9.714441,
+            "FY2029E": -9.902268,
+            "FY2030E": -10.112565,
+            "FY2031E": -10.345396,
+            "FY2032E": -10.599642,
+            "FY2033E": -10.876255,
+            "FY2034E": -11.176224,
+            "FY2035E": -11.500573
+          }
+        },
+        {
+          "key": "net_debt",
+          "label": "Net debt (cash)",
+          "unit": "money",
+          "values": {
+            "FY2022A": -15.175668,
+            "FY2023A": -9.065741,
+            "FY2024A": -12.964127,
+            "FY2025A": -9.172373,
+            "FY2026E": 10.588828,
+            "FY2027E": 26.420126,
+            "FY2028E": 43.547087,
+            "FY2029E": 62.55219,
+            "FY2030E": 83.804174,
+            "FY2031E": 107.30965,
+            "FY2032E": 132.956593,
+            "FY2033E": 160.840279,
+            "FY2034E": 191.05952,
+            "FY2035E": 223.716788
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": -11.640494,
+            "FY2023A": -12.470324,
+            "FY2024A": -15.397983,
+            "FY2025A": -16.629885,
+            "FY2026E": -17.238791,
+            "FY2027E": -17.724087,
+            "FY2028E": -18.249667,
+            "FY2029E": -18.83364,
+            "FY2030E": -19.487471,
+            "FY2031E": -20.211364,
+            "FY2032E": -21.001838,
+            "FY2033E": -21.861854,
+            "FY2034E": -22.794485,
+            "FY2035E": -23.802917
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "revenue_growth",
+          "label": "Revenue growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.155556,
+            "FY2024A": 0.092343,
+            "FY2025A": -0.02199,
+            "FY2026E": 0.157,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "gross_margin",
+          "label": "Gross margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.013572,
+            "FY2023A": 0.026455,
+            "FY2024A": 0.023557,
+            "FY2025A": 0.055768,
+            "FY2026E": 0.026996,
+            "FY2027E": 0.039472,
+            "FY2028E": 0.04363,
+            "FY2029E": 0.045709,
+            "FY2030E": 0.047269,
+            "FY2031E": 0.045678,
+            "FY2032E": 0.044056,
+            "FY2033E": 0.042401,
+            "FY2034E": 0.040713,
+            "FY2035E": 0.038991
+          }
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.701785,
+            "FY2023A": -0.056235,
+            "FY2024A": -0.050208,
+            "FY2025A": 0.009911,
+            "FY2026E": -0.002244,
+            "FY2027E": 0.006232,
+            "FY2028E": 0.00539,
+            "FY2029E": 0.003469,
+            "FY2030E": 0.001029,
+            "FY2031E": -0.000562,
+            "FY2032E": -0.002184,
+            "FY2033E": -0.003839,
+            "FY2034E": -0.005527,
+            "FY2035E": -0.007249
+          }
+        },
+        {
+          "key": "ebit_margin",
+          "label": "EBIT margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.703578,
+            "FY2023A": -0.057032,
+            "FY2024A": -0.051742,
+            "FY2025A": 0.009148,
+            "FY2026E": -0.003004,
+            "FY2027E": 0.005472,
+            "FY2028E": 0.00463,
+            "FY2029E": 0.002709,
+            "FY2030E": 0.000269,
+            "FY2031E": -0.001322,
+            "FY2032E": -0.002944,
+            "FY2033E": -0.004599,
+            "FY2034E": -0.006287,
+            "FY2035E": -0.008009
+          }
+        },
+        {
+          "key": "np_margin",
+          "label": "Net margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.803398,
+            "FY2023A": -0.060728,
+            "FY2024A": -0.163028,
+            "FY2025A": -0.060572,
+            "FY2026E": -0.032262,
+            "FY2027E": -0.025713,
+            "FY2028E": -0.027847,
+            "FY2029E": -0.030941,
+            "FY2030E": -0.034642,
+            "FY2031E": -0.038355,
+            "FY2032E": -0.041882,
+            "FY2033E": -0.045567,
+            "FY2034E": -0.049414,
+            "FY2035E": -0.05343
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.912653,
+            "FY2024A": 1.932472,
+            "FY2025A": -0.636627,
+            "FY2026E": -0.383753,
+            "FY2027E": -0.203004,
+            "FY2028E": 0.083008,
+            "FY2029E": 0.111102,
+            "FY2030E": 0.119625,
+            "FY2031E": 0.107158,
+            "FY2032E": 0.091975,
+            "FY2033E": 0.087976,
+            "FY2034E": 0.084434,
+            "FY2035E": 0.081276
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.076918,
+            "FY2024A": 0.195147,
+            "FY2025A": 0.061702,
+            "FY2026E": 0.035957,
+            "FY2027E": 0.027761,
+            "FY2028E": 0.02922,
+            "FY2029E": 0.031495,
+            "FY2030E": 0.034124,
+            "FY2031E": 0.036469,
+            "FY2032E": 0.03836,
+            "FY2033E": 0.040128,
+            "FY2034E": 0.041769,
+            "FY2035E": 0.043283
+          }
+        },
+        {
+          "key": "net_debt_ebitda",
+          "label": "Net debt / EBITDA",
+          "unit": "x",
+          "values": {
+            "FY2022A": 0.051394,
+            "FY2023A": 0.331566,
+            "FY2024A": 0.486165,
+            "FY2025A": -1.781732,
+            "FY2026E": -7.851839,
+            "FY2027E": 7.054736,
+            "FY2028E": 13.443385,
+            "FY2029E": 30.001581,
+            "FY2030E": 135.553939,
+            "FY2031E": -317.767579,
+            "FY2032E": -101.28092,
+            "FY2033E": -69.70919,
+            "FY2034E": -57.517765,
+            "FY2035E": -51.352636
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.0,
+            "FY2023A": -0.0,
+            "FY2024A": -0.0,
+            "FY2025A": -0.0,
+            "FY2026E": -0.0,
+            "FY2027E": -0.0,
+            "FY2028E": -0.0,
+            "FY2029E": -0.0,
+            "FY2030E": -0.0,
+            "FY2031E": -0.0,
+            "FY2032E": -0.0,
+            "FY2033E": -0.0,
+            "FY2034E": -0.0,
+            "FY2035E": -0.0
+          }
+        },
+        {
+          "key": "capex_revenue",
+          "label": "Capex / revenue",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 8.9e-05,
+            "FY2023A": 0.000366,
+            "FY2024A": 0.000216,
+            "FY2025A": 0.001128,
+            "FY2026E": 0.00113,
+            "FY2027E": 0.00113,
+            "FY2028E": 0.00113,
+            "FY2029E": 0.00113,
+            "FY2030E": 0.00113,
+            "FY2031E": 0.00113,
+            "FY2032E": 0.00113,
+            "FY2033E": 0.00113,
+            "FY2034E": 0.00113,
+            "FY2035E": 0.00113
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        50.0
+      ],
+      [
+        "2022-01",
+        50.0
+      ],
+      [
+        "2022-02",
+        50.0
+      ],
+      [
+        "2022-03",
+        50.0
+      ],
+      [
+        "2022-04",
+        50.0
+      ],
+      [
+        "2022-05",
+        50.0
+      ],
+      [
+        "2022-06",
+        50.0
+      ],
+      [
+        "2022-07",
+        50.0
+      ],
+      [
+        "2022-08",
+        50.0
+      ],
+      [
+        "2022-09",
+        50.0
+      ],
+      [
+        "2022-10",
+        50.0
+      ],
+      [
+        "2022-11",
+        50.0
+      ],
+      [
+        "2022-12",
+        50.0
+      ],
+      [
+        "2023-01",
+        50.0
+      ],
+      [
+        "2023-02",
+        50.0
+      ],
+      [
+        "2023-03",
+        50.0
+      ],
+      [
+        "2023-04",
+        50.0
+      ],
+      [
+        "2023-05",
+        50.0
+      ],
+      [
+        "2023-06",
+        50.0
+      ],
+      [
+        "2023-07",
+        50.0
+      ],
+      [
+        "2023-08",
+        50.0
+      ],
+      [
+        "2023-09",
+        50.0
+      ],
+      [
+        "2023-10",
+        50.0
+      ],
+      [
+        "2023-11",
+        50.0
+      ],
+      [
+        "2023-12",
+        50.0
+      ],
+      [
+        "2024-01",
+        50.0
+      ],
+      [
+        "2024-02",
+        50.0
+      ],
+      [
+        "2024-03",
+        50.0
+      ],
+      [
+        "2024-04",
+        50.0
+      ],
+      [
+        "2024-05",
+        50.0
+      ],
+      [
+        "2024-06",
+        50.0
+      ],
+      [
+        "2024-07",
+        50.0
+      ],
+      [
+        "2024-08",
+        41.0
+      ],
+      [
+        "2024-09",
+        7.0
+      ],
+      [
+        "2024-10",
+        5.0
+      ],
+      [
+        "2024-11",
+        5.0
+      ],
+      [
+        "2024-12",
+        5.0
+      ],
+      [
+        "2025-01",
+        7.0
+      ],
+      [
+        "2025-02",
+        5.0
+      ],
+      [
+        "2025-03",
+        6.0
+      ],
+      [
+        "2025-04",
+        5.0
+      ],
+      [
+        "2025-05",
+        5.0
+      ],
+      [
+        "2025-06",
+        3.0
+      ],
+      [
+        "2025-07",
+        5.0
+      ],
+      [
+        "2025-08",
+        16.0
+      ],
+      [
+        "2025-09",
+        26.0
+      ],
+      [
+        "2025-10",
+        12.0
+      ],
+      [
+        "2025-11",
+        16.0
+      ],
+      [
+        "2025-12",
+        19.0
+      ],
+      [
+        "2026-01",
+        28.0
+      ],
+      [
+        "2026-02",
+        33.0
+      ],
+      [
+        "2026-03",
+        24.0
+      ],
+      [
+        "2026-04",
+        22.0
+      ],
+      [
+        "2026-05",
+        17.0
+      ],
+      [
+        "2026-06",
+        13.0
+      ],
+      [
+        "2026-07",
+        13.0
+      ],
+      [
+        "2026-08",
+        13.0
+      ],
+      [
+        "2026-09",
+        13.0
+      ],
+      [
+        "2026-10",
+        13.0
+      ],
+      [
+        "2026-11",
+        13.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "DCF (FCFF, terminal value)",
+        "value": 0.0,
+        "weight": 1.0
+      },
+      {
+        "label": "Scenario base",
+        "value": 0.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 0.0,
+        "weight": 0.25
+      },
+      {
+        "label": "Scenario bull",
+        "value": 3.0,
+        "weight": 0.25
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "revenue_growth",
+      "label": "Revenue growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.157,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "FY2026E +15.7%: H1-2026 revenue was IDR 300.6bn, +15.4% on H1-2025 [S7 p.6, F13], and H2 is held at the H1 run-rate (2 x 300.6 + 519.4) because no seasonality or volume guidance is disclosed. FY2027E-FY2030E 0%: IKD is the only revenue-generating entity, its gas sales contracts run to February 2030 with daily volumes of 1,500-5,000 MMBtu and no contracted growth [S6 p.161, F22, F23]; management is applying for additional gas quota and new customers but discloses no volumes or dates [S11 p.8], so those stay in the bull case. Terminal 0% because no volume growth is contracted and the 2030 renewal is not secured.",
+      "sources": [
+        "S6",
+        "S7",
+        "S11"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "gross_margin",
+      "label": "Gross margin at base input costs",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.056,
+        "FY2027E": 0.056,
+        "FY2028E": 0.056,
+        "FY2029E": 0.056,
+        "FY2030E": 0.056
+      },
+      "value": null,
+      "lt": 0.056,
+      "basis": "FY2026E-FY2030E 5.6%: this is the FY2025 actual gross margin (IDR 28.97bn on IDR 519.43bn) [S6 p.63, F1-F3], achieved after the procurement renegotiation and CNG route optimisation [S5]; it is the margin at the FY2025 Brent base of USD68.1. No default expansion or contraction is assumed: the model then applies the oil link, which reproduces the H1-2026 reported margin of 2.4% at the deck's FY2026 Brent of USD96 [S7 p.6, F14] and recovers as Brent falls to USD84 in FY2027 and USD75 long-run. The 5.6% base is the company's own latest full-year economics, not a forecast-year spike.",
+      "sources": [
+        "S6",
+        "S5",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link1_share",
+      "label": "Cost link 1: share of COGS exposed",
+      "unit": "pct",
+      "values": null,
+      "value": 0.15,
+      "lt": null,
+      "basis": "15% of COGS is treated as oil-linked, with half of that passed into selling prices. The calibration is observed, not assumed: H1-2026 revenue rose 15.4% while COGS rose 18.7%, lifting the cost/revenue ratio by 2.7 points as Brent averaged roughly 40% above FY2025 [S7 p.6, F13, F14, fund record]. That implies a pass-through-adjusted exposure of about 7% of COGS (15% x 50%), consistent with a long-term gas supply agreement that is only partially indexed and industrial sales contracts that reprice with a lag [S6 p.14, S6 p.161]. It is not a haircut: the remaining 85% of COGS is contract-priced gas and logistics.",
+      "sources": [
+        "S6",
+        "S7",
+        "S5"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link1_pass",
+      "label": "Cost link 1: pass-through to prices",
+      "unit": "pct",
+      "values": null,
+      "value": 0.5,
+      "lt": null,
+      "basis": "50%: the observed H1-2026 cost/revenue ratio move requires about half of the 15% oil-linked cost to be recovered in selling prices; the gas sales agreements set prices in the agreement and do not disclose an automatic indexation clause [S6 p.161-162], so full pass-through is not evidenced.",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "opex_pct",
+      "label": "SG&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.03,
+        "FY2027E": 0.034,
+        "FY2028E": 0.039,
+        "FY2029E": 0.043,
+        "FY2030E": 0.047
+      },
+      "value": null,
+      "lt": 0.047,
+      "basis": "FY2026E 3.0% in FY2026E, fading back to 4.7% by FY2030E: H1-2026 G&A of IDR 7.11bn plus marketing of IDR 0.80bn is IDR 7.91bn on IDR 300.6bn of revenue, 2.6% [S7 p.6, F15, F16], and the FY2026 run-rate annualises to about 3.0% after a small H2 step-up. The FY2025 actual was 4.7% (G&A of IDR 16.56bn plus marketing of IDR 7.66bn on IDR 519.4bn) [S6 p.63, F29, F30]. The H1-2026 marketing line of IDR 0.80bn is 83% below H1-2025 and no source explains it as a permanent structural change, so we do not hold one favourable half-year for ten years: opex fades linearly back to the FY2025 actual by FY2030E and is held there in the long run. The fade is a deliberate reversal of an unsourced drift, not a haircut below the last actual.",
+      "sources": [
+        "S7",
+        "S5",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "da_pct",
+      "label": "D&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.00076,
+        "FY2027E": 0.00076,
+        "FY2028E": 0.00076,
+        "FY2029E": 0.00076,
+        "FY2030E": 0.00076
+      },
+      "value": null,
+      "lt": 0.00076,
+      "basis": "FY2025 D&A was IDR 0.396bn (IDR 207.4m in cost of revenue plus IDR 188.8m in G&A) on revenue of IDR 519.4bn, 0.076% [S6 p.138, F7, F1]. The company is an asset-light gas trader and CNG distributor; the 0.076% actual is held.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_pct",
+      "label": "Capex / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.00113,
+        "FY2027E": 0.00113,
+        "FY2028E": 0.00113,
+        "FY2029E": 0.00113,
+        "FY2030E": 0.00113
+      },
+      "value": null,
+      "lt": 0.00113,
+      "basis": "FY2025 capex was IDR 0.586bn (IDR 79.2m of fixed assets plus IDR 506.6m of fixed-asset advances) on revenue of IDR 519.4bn, 0.113% [S6 p.63, F9, F1]. The AR states no material contracted capex at 31 December 2025 [S6 p.23], and IKD's facilities are already built; the FY2025 ratio is held.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nwc_pct",
+      "label": "Operating working capital / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": -0.6017,
+        "FY2027E": -0.6017,
+        "FY2028E": -0.6017,
+        "FY2029E": -0.6017,
+        "FY2030E": -0.6017
+      },
+      "value": null,
+      "lt": -0.6017,
+      "basis": "-60.2%: FY2025 operating working capital was negative IDR 361.6bn [S0, S6 p.4]; expressed against FY2026E revenue of IDR 601.0bn that is -60.2%. The absolute level is held flat rather than the FY2025 ratio of -69.6%, because applying -69.6% to a revenue step-up would book a roughly IDR 57bn one-off cash release that the cash flow does not show: FY2025 operating cash flow was negative IDR 18.7bn even as revenue fell [S6 p.63]. The negative position is structural (trade payables of IDR 419.8bn and other liabilities of IDR 277.7bn exceed receivables and cash) and has persisted since at least FY2022 [S0]; holding the level is the neutral choice, not a haircut.",
+      "sources": [
+        "S0",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.1,
+        "FY2027E": 0.1,
+        "FY2028E": 0.1,
+        "FY2029E": 0.1,
+        "FY2030E": 0.1
+      },
+      "value": null,
+      "lt": 0.1,
+      "basis": "10%: the group is loss-making with an accumulated deficit of IDR 5.36 trillion [S6 p.23, F21] and paid IDR 4.53bn of cash tax in FY2025 on receipts rather than profit [S6 p.63]. A 10% rate on positive EBIT approximates the cash tax drag while tax losses remain available; it is not the statutory 22% because no material profit is expected to be taxed.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cost_of_debt",
+      "label": "Cost of debt (on opening debt)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.135,
+      "lt": null,
+      "basis": "13.5%: FY2025 financial expenses of IDR 86.6m on opening interest-bearing debt of IDR 0.81bn [S6 p.63, F31, S0]; the absolute debt is immaterial to value, but the observed rate is used rather than a default.",
+      "sources": [
+        "S6",
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cash_yield",
+      "label": "Yield on opening cash",
+      "unit": "pct",
+      "values": null,
+      "value": 0.03,
+      "lt": null,
+      "basis": "3.0%: FY2025 interest received was IDR 379.7m on opening cash of IDR 13.8bn, 2.8% [S6 p.63]; the rate is rounded to 3.0% for the forecast. Cash is small (IDR 6.0bn at 30 June 2026), so the line is immaterial to value.",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "net_borrowing",
+      "label": "Net new borrowing",
+      "unit": "money",
+      "values": {
+        "FY2026E": 5.0,
+        "FY2027E": 3.0,
+        "FY2028E": 2.0,
+        "FY2029E": 2.0,
+        "FY2030E": 2.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "Modest related-party/other-loan funding, not a bank programme: FY2025 received IDR 15.1bn of \"other loans\" and the group has no committed bank facility [S6 p.63]. The forecast operating cash flow is negative in FY2026E, so IDR 5.0bn is assumed in FY2026E, tapering to IDR 2.0bn a year as the margin recovers, and zero long-run. These lines are far smaller than the cumulative operating deficit, so the forecast cash balance still turns negative in FY2026E and is not rescued here: funding the gap depends on new equity, a new facility or the divestment, none of which is committed (negative equity of IDR 555.3bn at 30 June 2026) [S7 p.5, S6 p.23]. We do not assume a rescue that has not been arranged.",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other non-operating items",
+      "unit": "money",
+      "values": {
+        "FY2026E": -18.0,
+        "FY2027E": -18.0,
+        "FY2028E": -18.0,
+        "FY2029E": -18.0,
+        "FY2030E": -18.0
+      },
+      "value": null,
+      "lt": -18.0,
+      "basis": "-IDR 18.0bn a year: FY2025 booked a foreign-exchange loss of IDR 15.3bn and H1-2026 a further IDR 10.6bn of FX loss in six months [S6 p.63, S7 p.6, F17], so the observed annualised run-rate is between IDR 15.3bn and IDR 21.2bn. We set the recurring charge at IDR 18.0bn, inside that observed range, rather than below both readings: the FX loss is structural (38.7% of shares held offshore, US-dollar receivables and payables) [S6 p.18]. The FY2025 asset impairment of IDR 13.7bn is non-recurring and excluded [S6 p.63]. The charge is non-cash for FCFF (it sits below EBIT and above net profit only), so it moves earnings and the FY2026E reconciliation to the H1-2026 actual, not the DCF cash flow.",
+      "sources": [
+        "S6",
+        "S7",
+        "F17"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.01,
+        "FY2027E": 0.01,
+        "FY2028E": 0.01,
+        "FY2029E": 0.01,
+        "FY2030E": 0.01
+      },
+      "value": null,
+      "lt": 0.01,
+      "basis": "1.0%: IKD is 99.00% owned and is the only operating subsidiary [S6 p.14]; FY2025 minority loss was IDR 0.32bn against a net loss of IDR 31.78bn, about 1% [S0].",
+      "sources": [
+        "S6",
+        "S0"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "Zero: the company did not pay a dividend in 2025 and states it will not while it remains in capital deficiency with a significant accumulated loss [S6 p.23, F11]. No payout is assumed in any forecast year.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "Zero: 31,842,082,852 shares were unchanged through 2025, no corporate action was taken in 2025 and no rights issue is announced [S6 p.16, F10]. The four historical rights issues are disclosed but none is pending [S6 p.20].",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth (DCF)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.0,
+      "lt": null,
+      "basis": "0%: no volume growth is contracted, IKD's gas sales agreements expire in February 2030 [S6 p.161] and no renewal is disclosed; the company states no material capex commitments [S6 p.23]. With revenue already flat in FY2027E-FY2030E, positive terminal growth would add value the contracts do not support. The house 4% default is not used because it would assume real growth beyond the contracted book.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The equity bridge is empty while the base case explicitly keeps the held-for-sale entities consolidated. Their liabilities are IDR210.283bn against IDR4.072bn of assets [S7 p.4, F32], so net liabilities of about IDR206.2bn are a claim on the same equity the DCF values at IDR69.6bn. Deducting them gives -IDR136.6bn, i.e. Rp0, not Rp2. As written the base case takes the liability relief out of the assets but also out of the bridge.",
+        "response": "accepted",
+        "answer": "Added the held-for-sale net liabilities to valuation.bridge at full weight: IDR210.283bn of liabilities (F32) less IDR4.072bn of assets (F35), a net IDR206.211bn deduction, and rebuilt all three scenarios. Base equity turns negative and floors at nil, so the target falls to Rp1 and the return to -95%. The bridge item cites S7 p.4 and is explained in 4. Valuation."
+      },
+      {
+        "id": "C2",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "4. Valuation",
+        "challenge": "The divestment, the largest single value event, is never quantified. A nominal-price sale of a group with IDR210.3bn of liabilities and IDR4.07bn of assets adds about Rp6.5/share - about three times the base value of Rp2.19 - and management calls completion the single most material step in strengthening the group [S6 p.7]. The report gives it one sentence and no arithmetic, and the bull case contains no divestment value at all.",
+        "response": "accepted",
+        "answer": "Quantified the divestment as the mirror of the liability item: the release of the same IDR206.2bn net liability on completion, entered in the bridge at a judged 25% probability (S11 p.8, no signed agreement). It is now described arithmetically in 4. Valuation and the probability-weighted bridge is carried by the scenario table through every case."
+      },
+      {
+        "id": "C3",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bull scenario promises the additional gas quota and new customers but its only shocks are Brent x0.8 and gross margin +1pt. The contracted range is 1,500-5,000 MMBtu/day [F22, F23] and FY2025 Dharma sales of IDR85bn correspond to roughly the 1,500 minimum, so the contract permits about 3.3x that customer's volume. That is the largest legitimately modelled upside and it is not tested.",
+        "response": "accepted",
+        "answer": "Added a revenue-growth shock to the bull (+2pp a year, a small slice of the contracted 1,500-5,000 MMBtu/day headroom) and removed the unmodelled quota/customer claim as a free option. Bull target rises to Rp3; base and bear are unchanged."
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "No scenario contains any share issuance, although the company has issued equity at least four times (1995, 1997, 2010 private placement, 2014 rights issue) [S6 p.20], has parent equity of -IDR555.3bn and a IDR352.2bn working-capital deficit, and states it is exploring additional funding sources and strategic equity partnerships [S6 p.23]. The base case holds 31.84bn shares for ten years, which is the most favourable possible financing outcome.",
+        "response": "accepted",
+        "answer": "No issuance is announced and the share count is unchanged (S6 p.16, F10), so the base holds it; 5. Risks now carries an explicit dilution paragraph sizing it to the funding gap and stating that it cannot lower a target already floored at nil, but would cap the bull case."
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bear case has no payable-float or supply shock. Current liabilities are IDR739.9bn against current assets of IDR364.8bn, including trade payables of IDR434.0bn, and Kangean Energy supplies 83% of purchases (IDR433.0bn) with Pertamina Gas another 10% [S6 p.155]. A supplier accelerating payment or a Kangean interruption destroys an equity whose modelled value is IDR54.4bn of EV. The risk is described in section 5 but is not in any scenario.",
+        "response": "accepted",
+        "answer": "Added a mirrored bear revenue shock of -2pp a year standing for a Kangean supply interruption or take-or-pay shortfall, and wrote the payable-float tightening into the bear narrative (S6 p.155, p.161, S7 p.5). The shock is mirrored by the bull cut so the scenario set stays symmetric."
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Opex is set at 3.0% of revenue against a FY2025 actual of 4.7%. The whole reduction comes from marketing expense falling from IDR4.62bn in H1-2025 to IDR0.80bn in H1-2026, an 83% drop in one half-year, explained only by customers shifting to long-term contracts with no source, and then held for ten years. One point of opex is about IDR6bn a year, which at an 11.2% WACC is most of the IDR54.4bn EV and more than the base value per share.",
+        "response": "accepted",
+        "answer": "Opex no longer holds the H1-2026 level for ten years: it starts at 3.0% and fades back to the FY2025 actual of 4.7% by FY2030E, with the reasoning in the basis (S6 p.63, F29, F30) and the value impact stated in 3. Financials. No source supported the marketing collapse as permanent."
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The model shows FY2025A FCFF of +IDR38.9bn and the text calls it an artefact of a negative working-capital position releasing cash, but the audited summary cash flow statement shows operating cash flow of -IDR18.7bn for FY2025 and -IDR0.4bn for FY2024 [S6 p.5, p.39]. The model's FY2025A delta_nwc of +IDR34.5bn has the opposite sign to the audited movement; the IDR57.6bn discrepancy is larger than the entire enterprise value.",
+        "response": "accepted",
+        "answer": "The FY2025 FCFF line is a balance-sheet-derived figure, not cash: the audited direct-method operating cash flow was -IDR18.7bn (S6 p.39, new fact F36). 3. Financials now says so, drops the cash-conversion claim, and states that the forecast holds working capital flat in absolute terms, so the discrepancy does not enter the FY2027E-onward DCF."
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "2. Industry overview and competitive positioning",
+        "challenge": "The single largest value driver is the Brent link (15% of COGS, 50% pass-through, plus the +/-20% scenario shocks), justified by the Indonesian PSC convention. The company's own risk disclosure says its mitigation is long-term fixed/semi-fixed pricing contracts [S6 p.38] and the GSA note discloses no indexation clause [S6 p.161-162], while the H1-2026 cost/revenue move could equally be volume or mix. The mechanism the whole scenario set relies on is asserted, not evidenced.",
+        "response": "accepted",
+        "answer": "No price formula or indexation clause is disclosed in either agreement (S6 p.161-162), so the link is now labelled inferred and calibrated on the observed H1-2026 cost/revenue move (F13, F14), applied to cost of revenue only. The residual volume/mix ambiguity is stated in 2. Industry."
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The reverse DCF says Rp13 requires about 6.4% revenue growth a year. Applying 6.35% to the model's own margin, opex and 10% tax structure gives roughly Rp3-5 a share, not Rp13; reaching the IDR408bn market enterprise value needs a growth rate of about 20%. The headline mispricing number is not reproducible from the model.",
+        "response": "accepted",
+        "answer": "Workings now shown: the factor is a constant addition to revenue growth in every forecast year from the FY2026E base through FY2035E, compounding, at the published margin, faded opex, 10% tax, modelled WACC and zero terminal growth. The published figure stands because it is annual, not a one-year step."
+      },
+      {
+        "id": "C10",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "other_nonop is normalised at -IDR8.0bn a year, below both the FY2025 actual FX loss of -IDR15.3bn and the H1-2026 FX loss of -IDR10.6bn in six months, with no source for the level. Relatedly, FY2026E net loss is -IDR9.5bn while H1-2026 actual was -IDR12.5bn [S7 p.6], which implicitly assumes a profitable second half that nothing supports.",
+        "response": "accepted",
+        "answer": "Other non-operating items reset from -IDR8.0bn to -IDR18.0bn a year, inside the observed range between the FY2025 FX loss and the annualised H1-2026 loss (S6 p.63, S7 p.6, F17). This also reconciles FY2026E net profit to the H1-2026 actual rather than assuming a profitable second half."
+      },
+      {
+        "id": "C11",
+        "severity": "MATERIAL",
+        "category": "consistency_with_sector_deck",
+        "section": "4. Valuation",
+        "challenge": "The oil deck's usd_idr FY2027E of 18,350 (spot 18,039) is not used anywhere in the model, even though the report says IKD's purchases are USD-denominated, 38.7% of shares are held offshore and FX losses are structural. params cost_ccy is IDR while the cost is described as USD. The recurring FX charge is a fixed -IDR8bn with no link to the macro path.",
+        "response": "accepted",
+        "answer": "Stated explicitly that FX is excluded from the forecast and why: the charge sits below EBIT, does not enter FCFF, and the operating cost is modelled in rupiah at contracted purchase terms (S6 p.161). Linking it to the deck USD/IDR path would put a macro view into a line the valuation does not use."
+      },
+      {
+        "id": "C12",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Revenue is frozen at IDR601bn from FY2027E, the level generated in H1-2026 when Brent averaged near USD96, while costs revert to the deck's FY2027E USD84. With link1_pass at 0.5, a material part of the selling price that rose with the purchase cost should also fall when Brent reverts; freezing revenue against falling cost books a permanent margin gain.",
+        "response": "rebutted",
+        "answer": "Pass-through is applied as a damper on the cost sensitivity, not as extra revenue: the revenue line is a growth series because no volume or price is disclosed (S6 p.21). The result is no permanent margin gain - FY2027E gross margin is below the FY2025A actual, because the higher Brent level is carried in cost in perpetuity while revenue gets no uplift."
+      },
+      {
+        "id": "C13",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Special-monitoring-board status and the delisting warning are sourced to a 20 February 2024 article [S2]; no current IDX board status or notation letter (B/E/L/M/S) is cited, and the FY2025 accounts were published about ten months after year-end. The house earnings-quality card treats special monitoring as manipulation-class until explained; the report classifies it as optics-class without the explanation.",
+        "response": "accepted",
+        "answer": "Reclassified as the house card requires: no 2026 BEI announcement gives the reason for the special-monitoring designation, so it is an unexplained regime flag screened as manipulation-class, given no benefit in the valuation. Current status sourced to the November 2026 delisting lists showing MTFN absent (S8, S9)."
+      },
+      {
+        "id": "C14",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "Investment summary",
+        "challenge": "The summary renders the market capitalisation as IDR413,947,077,076.0bn when it is IDR413.9bn; FY2025A EV/EBITDA is stated as 76.8x against 79.3x computed on EV of IDR408.4bn and EBITDA of IDR5.15bn; and S10 is a January 2016 article listed as a source but never cited.",
+        "response": "accepted",
+        "answer": "Market capitalisation and ADTV now render through the raw-IDR formatter as IDR413.9bn and not IDR413,947,076,076.0bn; the EV/EBITDA multiples remain engine-computed placeholders, which reconcile on the market EV including the bridge; the January 2016 article S10 is removed from the registry as unused."
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Investment summary",
+        "challenge": "The audit opinion is misstated in the summary, s7 and qc_justifications.extreme_call. The report says the auditor qualified the accounts and flagged material going-concern doubt for the group; S6 p.23 states the group going-concern opinion is NOT modified, and the qualification is the inadequate disclosure of the going-concern uncertainty of the three held-for-sale entities CBRB, KEP and GSAL. The central caution of a SELL predicated on a going-concern equity therefore rests on something the filing contradicts. QC Q1 is open with no answer.",
+        "response": "accepted",
+        "answer": "Restated the qualification basis exactly per S6 p.23: it is the inadequate disclosure of the going-concern uncertainty of CBRB, KEP and GSAL only. Management group-level material uncertainty is now separated from the auditor unmodified group going-concern opinion in the summary, s3, s5, s6 and extreme_call [S6 p.23, S7 p.5]."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "The headline valuation is not reproducible from the engine and the prose contradicts it on liquidity. The engine DCF is Rp0 (floored from -Rp4.92) and the base scenario is Rp0, but the summary and s4 say our DCF values the equity at Rp1; the printed Rp1 target at Rp13 gives -92.3%, not the published -95.4%, which uses the unrounded Rp0.596. s3 also says cash stays positive on IDR5.0bn of other-loan funding while the model shows cash of -IDR5.07bn in FY2026E and an unfunded cumulative deficit of about -IDR209bn by FY2035E. Q2 and Q5 are open.",
+        "response": "accepted",
+        "answer": "s4 now prints the floored DCF at Rp0 and the base scenario at Rp0 separately from the probability-weighted Rp0.85 and the Rp0.60 target. The printed target and the -95.4% return use one unrounded number. s3 states the cash balance turns negative and the deficit is unfunded [S0, S6 p.63]."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "The divestment is never valued. The disposal group carries IDR210.3bn of liabilities against IDR4.07bn of assets [S7 p.4, F32] - a nominal-price sale is worth about Rp6.5/share, three times the base value - and management calls it the single most material step [S6 p.7]. The bull case shocks only Brent and margin. Nor is the 1,500-5,000 MMBtu/day contracted headroom (FY2025 Dharma sales of IDR85bn sit near the 1,500 minimum) tested in the bull."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "No dilution in any scenario despite four historical rights issues, parent equity of -IDR555.3bn, a IDR352.2bn working-capital deficit and management stating it is exploring additional funding and strategic equity partnerships [S6 p.23]. No payable-float or supplier shock either, although the -IDR375bn working capital (current liabilities IDR739.9bn against assets IDR364.8bn) is seven times the DCF EV and Kangean is 83% of purchases [S6 p.155]. The bear moves only Brent and gross margin."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "Gross margin 5.6% is the FY2025 actual and properly sourced. Opex at 3.0% is not: it rests on marketing expense falling from IDR4.62bn in H1-2025 to IDR0.80bn in H1-2026 (-83% in one half-year), attributed to customers shifting to long-term contracts with no source, then held for ten years; one point of opex is about IDR6bn a year, most of the IDR54.4bn EV. Revenue is also frozen at the FY2026E level achieved with H1-2026 Brent near USD96 while cost reverts to the deck's USD84, which is inconsistent with a 50% pass-through."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "The FY2025 FCFF of +IDR38.9bn is described as a working-capital cash release, but the audited cash flow statement shows operating cash flow of -IDR18.7bn for FY2025 [S6 p.5]; the model's delta_nwc is the opposite sign and the IDR57.6bn error exceeds the whole EV. The Brent transmission is asserted from the Indonesian PSC convention while the company states its mitigation is long-term fixed/semi-fixed pricing contracts [S6 p.38] and the GSAs disclose no indexation clause. Concentration is understated: the largest customer is 32% and Dharma 18% of revenue, 50% together [S6 p.155]. S2 is a February 2024 article used for current regime status; S10 is a January 2016 article listed but unused. Market cap renders as IDR413,947,077,076.0bn."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "FATAL bridge error: equity value IDR69.6bn = EV IDR54.4bn + net cash IDR5.6bn + negative minority IDR9.6bn, with an empty bridge, while the report itself says the held-for-sale entities and their IDR210.3bn of liabilities stay consolidated in the base case [S7 p.4, F32]. Deducting the IDR206.2bn net of their IDR4.07bn of assets gives equity of -IDR136.6bn, i.e. Rp0. The base and bear cases are therefore on inconsistent liability bases. DCF-only, g=0 to FY2035 and the WACC build are otherwise appropriate. The reverse DCF's 6.4% is not reproducible from the model's own cash flows."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "The prose says more than the model does: the bull narrative claims the divestment completes and the new quota is won, the bear claims customers cut volumes and the divestment fails, yet the scenario shocks are only Brent +/-20% and gross margin +/-1pt. The report is more bearish in words than in numbers, which understates the target spread. The conclusion does survive the bear probability being doubled (about Rp1), so the rating is not driven by one heroic input; but the price is a stale, untraded quote and the engine marks the name non-investable."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "The Brent path (deck FY2027E USD84 against spot USD95) is used consistently and the 2030 contract expiry is honoured. But the oil deck's usd_idr FY2027E of 18,350 is not used anywhere, although the report says IKD's purchases are USD-denominated and FX losses recur; params cost_ccy is IDR while the cost is described as USD. The recurring FX charge is a fixed number with no link to the macro deck."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "Optimism, unsourced: other_nonop -IDR8.0bn against an FY2025 FX loss of -IDR15.3bn and H1-2026 of -IDR10.6bn in six months; FY2026E net loss -IDR9.5bn against an H1-2026 actual of -IDR12.5bn, implying a profitable H2; opex below the FY2025 actual; and share count unchanged for ten years with no dilution. Conservatism: tax at 10% on EBIT, g=0, and a 30% liquidity discount whose level has no source. The optimistic stack is one-directional and lifts the base by more than Rp1/share, but it does not change the rating, so MATERIAL not FATAL."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "The QC calibration gate reports FY2025A EBITDA margin of 0.99% actual against -0.22% modelled, a -1.22pp gap that the model lines do not show and the report does not explain. The FY2025A NWC change does not reconcile to the audited cash flow statement. FY2026E revenue correctly reproduces the H1-2026 run-rate (2 x 300.6), but FY2026E net loss of -9.5bn is not reconciled to the -12.5bn H1 actual. Nothing shows FY2027E re-priced at FY2025 Brent and volume hitting the 5.6% actual margin."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_ENERGY",
+      "at": "2026-11-10T07:31:49+07:00",
+      "verdict": "APPROVED",
+      "notes": "APPROVED: SELL, target Rp1 (engine probability-weighted value Rp0.60, displayed/rounded to Rp1), expected return -95.4% on the Rp13 print. Both QC FIX items are non-target-changing and do not block. Q1: s4 and the engine apply the +IDR206.2bn held-for-sale release at a 25% weight in all three scenarios, while s5 says the bull \"assumes the divestment completes\"; align the s5/assumptions narrative to the uniform 25% weighting (preferred, no model change) or move the release to 100% in the bull. Either way the weighted target stays Rp1 (a 100% bull release lifts the bull from Rp3.4 to ~Rp8.3 and the target from Rp0.60 to ~Rp1.45, still displayed Rp1), so the rating and published target are robust; note the bull value is understated by ~Rp4.9/share and the report -95.4% would become about -89% under the 100% assumption. Q2 is cosmetic: the revenue_growth basis \"(2 x 300.6 + 519.4)\" should read \"2 x 300.6 = 601.0\" (the model line is correct). Batch: MTFN SELL is consistent with the mixed book (CGAS BUY, INPS SELL); the extreme return is a stale Rp13 print on a special-monitoring-board line with zero ADTV, disclosed in s4. Consensus quarantine held: no broker research, target or rating was used. Director to journal: apply the Q1/Q2 text corrections editorially before publish; neither changes the rating or target."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-10T07:20:46+07:00",
+      "verdict": "PASS",
+      "round": 1,
+      "bias": {
+        "direction": "neutral",
+        "note": "Every base driver is anchored on the last actual, the company contract book or the reviewed deck, in both directions. Gross margin 5.6% is the FY2025 audited ratio (F1-F3, S6 p.63); FY2026E revenue of 600.98 is 2 x H1-2026 revenue of 300.6 (F13, S7 p.6) and is flat to FY2035E on the Dharma GSPA volumes of 1,500-5,000 MMBtu/day to Feb 2030 with no contracted growth (F22-F23, S6 p.161); opex starts at the H1-2026 run-rate and fades back to the FY2025 actual of 4.7% (F15-F16, F29-F30); other_nonop -18.0bn sits inside the observed -15.3bn to -21.2bn FX range (F17, S6 p.63); terminal growth 0% follows the unsecured 2030 renewal. Scenarios are mirrored (Brent x1.2/x0.8, gross margin -1pt/+1pt, revenue growth -2pp/+2pp) with base at 50%. The -1.22pp calibration gap is the deck FY2026E Brent of USD96.0 against the FY2025A actual of USD68.1 (fund record), sourced and within tolerance. The nil base value is set by the balance sheet (total capital deficiency -IDR564.9bn, S7 p.5), not by a stacked operating haircut: the DCF enterprise value is already -IDR17.3bn, so equity is about -IDR2bn before the -IDR154.7bn bridge. No unsourced conservatism or optimism that moves the rating was found."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A EBITDA",
+          "model": 5.148,
+          "filing": 5.147,
+          "source": "S6",
+          "ok": true
+        },
+        {
+          "item": "Held-for-sale net liabilities 30 Jun 2026",
+          "model": 206.211,
+          "filing": 206.211,
+          "source": "S7",
+          "ok": true
+        },
+        {
+          "item": "Related-party gross other receivables 30 Jun 2026",
+          "model": 581.381,
+          "filing": 581.381,
+          "source": "S7",
+          "ok": true
+        },
+        {
+          "item": "Net cash 30 Jun 2026",
+          "model": 5.56,
+          "filing": 5.56,
+          "source": "S7",
+          "ok": true
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q1",
+          "severity": "FIX",
+          "area": "report_consistency",
+          "finding": "The scenario narratives contradict the model and s4. s5 and assumptions.scenarios.bear say the bear case assumes \"the divestment fails\" and the bridge \"carries [the held-for-sale net liabilities] at full weight\", while s5 says the bull \"assumes ... the divestment completes\"; the engine applies the identical +IDR206.211bn release at p=0.25 in all three scenarios (fund record valuation.scenarios; s4 says \"the same weighted bridge applies in all three scenarios\"). Evidence: model bridge items -206.211 at p=1.0 and +206.211 at p=0.25. If the bull is intended to assume completion, its value is understated by (1-0.25) x 206.211 / 31.842 = about Rp4.86 a share, i.e. bull ~Rp8.3 rather than Rp3.4 and a target nearer Rp1.5 than Rp0.60; the rating stays SELL either way.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q2",
+          "severity": "FIX",
+          "area": "evidence_and_citations",
+          "finding": "assumptions.revenue_growth basis states the FY2026E build as \"H2 is held at the H1 run-rate (2 x 300.6 + 519.4)\". The formula is arithmetically wrong: 2 x 300.6 = 600.98 is the model FY2026E revenue, and adding 519.4 gives 1,120.6. The model line and s3 prose are correct (revenue FY2026E 600.979); only the basis text is wrong. Evidence: fund record lines.revenue FY2026E 600.979; F13 300.612.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q3",
+          "severity": "NOTE",
+          "area": "scenarios",
+          "finding": "The equity bridge deducts a negative minority interest (-IDR9.629bn, S7 p.5) and so adds about Rp0.30 a share in every scenario. Negative book NCI is an accounting residual of losses allocated beyond the minority capital; a minority claim cannot be negative, and the DCF values IKD, which is 99% owned. Flooring NCI at zero would cut the bull value from Rp3.40 to about Rp3.10 and the target from Rp0.60 to about Rp0.54; the rating is unchanged and the base/bear remain floored at zero.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q4",
+          "severity": "NOTE",
+          "area": "assumptions",
+          "finding": "Revenue is held flat in nominal terms to FY2035E, but the deck long-run Brent escalates in USD after FY2029E (drivers_used: FY2030E 76.5, FY2035E 84.46, about 2% a year), so the cost line rises while revenue does not, FY2035E FCFF is -IDR4.6bn and the terminal value is -IDR40.7bn. s4 discloses only \"zero terminal growth\" and does not say the cost line escalates. Not value-load-bearing: the base is floored at zero even before the bridge (operating equity about -IDR2bn), and only the bull value is affected.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q5",
+          "severity": "NOTE",
+          "area": "evidence_and_citations",
+          "finding": "The related-party balance is cited as \"[S7 p.70, F37-F40]\" in s3, s5 and s6, but the quoted figures (581.380.714.195 / 546.411.914.517, 868.794.481.190, 542.152.639.535, 326.641.841.655) sit on S7 p.73-74 (and p.105), not p.70. The facts themselves are verified verbatim.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q6",
+          "severity": "NOTE",
+          "area": "presentation",
+          "finding": "Rendered unit strings are malformed: \"31,842 shares m million shares\" in s3, s5 and s6; \"1,500 MMBtu/day-5,000 MMBtu/day MMBtu\" in s1, s5 and s7; \"negative IDR-18.7bn\" in s3. s3 also says \"G&A of IDR7.1bn plus marketing of IDR0.8bn on H1-2026 revenue is 3.0% for FY2026E\" when that ratio is 2.6% (7.91/300.6); 3.0% is the FY2026E assumption after an H2 step-up, as the assumptions basis correctly states. Evidence: F15-F16, S7 p.6.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q7",
+          "severity": "NOTE",
+          "area": "report_consistency",
+          "finding": "s1 and s6 present \"the public holds 54.5%\" [S6 p.18, F19] next to \"insider ownership of 45.6% and a free float of 50.0%\" [S0] without reconciling them. Public 54.45% plus insider 45.6% is about 100%; the 50.0% free float is a different definition. No valuation effect.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q8",
+          "severity": "NOTE",
+          "area": "assumptions",
+          "finding": "The nwc_pct basis uses operating working capital of -IDR361.6bn while the filing working-capital deficit is -IDR352.2bn [S6 p.23, F20]; they are different measures (operating working capital vs current assets less current liabilities) and the model holds the absolute level flat, so there is no value effect, but the two numbers appear together unlabelled.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "extreme_call",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "expected return -95%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "Three sourced drivers produce the -95.4% expected return measured on the published target, which is the probability-weighted, liquidity-discounted value; the DCF itself floors at nil because the discounted cash flows do not cover the liability overhang. (1) The margin: FY2025 audited gross margin was 5.6% at Brent USD68.1, but H1-2026 fell to 2.4% at Brent near USD96 with only partial pass-through, and the reviewed deck has Brent at USD96 in FY2026E before mean-reverting [S6 p.63, F1-F3, S7 p.6, F13-F14, fund record]. (2) The balance sheet: parent equity is negative IDR 555.3bn, the working capital deficit is IDR 352.2bn and the accumulated deficit is IDR 5.36trn; management states a group-level going-concern material uncertainty, while the auditor's going-concern opinion on the Group is unmodified and the qualification is confined to inadequate disclosure of the going-concern uncertainty at the three held-for-sale entities [S7 p.5, S6 p.23, F20-F21]. (3) Today's Rp13 price implies about 10% revenue growth a year on the reverse DCF, but the only operating subsidiary's gas sales contracts run to February 2030 at 1,500-5,000 MMBtu/day with no contracted growth [S6 p.161, F22-F23]; the market is pricing a divestment/liability release that is not signed [S7 p.4, F32]. The stock also has no traded liquidity (zero ADTV, 63 zero-volume days in three months) [S0], so the target is a fundamental value, not an executable exit."
+        },
+        {
+          "id": "weights.changed",
+          "severity": "WARN",
+          "justified": true,
+          "message": "method weights differ from the industry default {'dcf_fcff': 0.6, 'ev_ebitda': 0.25, 'div_yield': 0.15}",
+          "justification": "DCF carries 100% because the EV/EBITDA leg has no reproducible peer: the only covered OIL_GAS_DOWNSTREAM name is RAJA.JK, a positive-equity gas-infrastructure builder, and MTFN's EBITDA of about IDR 5bn is smaller than the uncertainty in its own balance sheet [S0, S6]. The dividend-yield leg is zero because no payout is permitted while the company is in capital deficiency [S6 p.23]. Section 4 still shows an EV/EBITDA sanity range."
+        }
+      ],
+      "calibration": {
+        "kind": "ebitda_margin",
+        "period": "FY2025A",
+        "benchmark": null,
+        "volume": null,
+        "ebitda_actual": null,
+        "ebitda_model": null,
+        "gap_pct": null,
+        "actual": 0.009910899651061225,
+        "model": -0.002243969075570868,
+        "gap_pp": -1.2154868726632093
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-10",
+      "type": "initiation",
+      "rating": "SELL",
+      "tp": 1
+    }
+  ],
+  "news": [],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
