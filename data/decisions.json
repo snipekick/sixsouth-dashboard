@@ -1,5 +1,10 @@
 [
   {
+    "meta": {},
+    "body": "# IDEATION Session Journal \u2014 2026-11-10 (Tue)\n\nSession 2026-11-10T11:00:32+07:00 \u2192 2026-11-10T11:23:13+07:00. **1 new ADVANCE (ARCI, house coverage), 2 DISCARD (JNJ new, CMRY displaced). Not an early exit: ARCI was the only un\u2011carded candidate in either book that clears the fast\u2011disqualify sniff test \u2014 the INDO screen rows are all carded or inside the kill cooldown, and every GLOBAL row fails the valuation\u2011anchor check.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `reviews_open` **[]**; `kill_monitoring_suspended` **[]**. Nothing carried to the next trading session on the review/kill front.\n- GLOBAL 100% cash / 0 names (NAV $1,012,974.22, DD 0.0%, week_trades 0/10). INDO 81% cash / 4 names (NAV IDR 15,124,965,161.69; gross 18.99%, DD \u22122.06%, week_trades 1/10; MEDC \u221210.85%, ERAA \u22126.67%, JPFA \u22122.91% since entry).\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper scripts, **no ticker exports** \u2192 step 2 skipped with no dossier\u2011writer spawn.\n\n## Screen sweep\n- **GLOBAL:** 79 names, 12\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-09T08:47:10.786735+07:00",
       "book": "INDO",
@@ -900,17 +905,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-08 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops lane; standing since 09-26, ops confirmed 10-05 there is no authoritative index-level source \u2014 deliberately not stamped on a guess). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_CLOSE/claude_exit rc=1 (ops lane, not session-actionable) + the open `eraa_dossier_gate` (2026-10-07T13:15).\n- Macro regime (frontmatter 2026-10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`LLY`/`SMFG` (3 WATCH) + `BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`DMAS`/`TAPG`/`TINS` (4 WATCH) + `ERAA`/`MEDC` PROMOTED + `ELSA`/`PTBA` DISCARD.\n\n## Ingestion sweep\n\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-08T20:01:38.311080+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-08 \u2014 judgment pass, no tickets",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "20:00 WIB, North Book. QC WARN (carried): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 IDX-only param, no GLOBAL impact. Both books all-cash (GLOBAL nav 1,009,427 USD; INDO nav 15.21bn IDR), governor NONE both books -> no de-gross. No kills due: kill_actions_due empty, kill_monitoring_suspended empty, 0 live positions -> nothing to verify, no fail-closed breach. Entries: judged_unticketed has 3, all resolve to zero \u2014 (1) T-GLOBAL-NVO-002 verdict PASS_REDUCED is NO_TRADE stamped 0x, pm_pct 0.0, no ticket; (2) T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly nothing to propose. No tickets created -> risk_check --orders not re-run. No new escalation (ERAA dossier blocker already escalated 2026-10-07).",
     "persona": ""
   }
 ]
