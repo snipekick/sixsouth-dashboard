@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "commodity_capex_turnaround",
-    "status": "attacked",
-    "verdict": "REVISE",
+    "status": "judged",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
@@ -28,26 +28,26 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": 440.0,
-    "target": 627.0,
-    "kill": 315.0,
+    "entry": 434.0,
+    "target": 687.0,
+    "kill": 225.0,
     "max_chase_pct": 0.0,
-    "entry_mode": "limit",
-    "target_rationale": "Audited 3y EBIT $76.6m at 8.86%; 70% of EV and cash; IDR 19,000",
+    "entry_mode": "none",
+    "target_rationale": "Audited FCFF $58.9m (FY2023-25 EBIT avg $76.6m x 0.769) / 8.86% (WACC 10.86% minus g 2.0%) = EV $665m, 11.3x; 70% of (EV + FY2029E net cash $204.1m) + $15m LPG = $623.4m; x Rp19,000/17,227m = Rp687",
     "price": 480.0,
     "price_asof": "2026-11-11"
   },
   "ev": {
     "p_up": 0.42,
-    "up_pct": 42.5,
+    "up_pct": 58.3,
     "p_down": 0.58,
-    "down_pct": -28.4,
-    "net_div_yield_pct_pa": 9.4,
+    "down_pct": -48.2,
+    "net_div_yield_pct_pa": 9.54,
     "fee_tax_drag_pct": 1.0,
-    "expected_pct": 12.2,
+    "expected_pct": 7.6,
     "horizon_years": 3.0,
-    "carry_pct": 28.2,
-    "kelly_full_pct": 59.6
+    "carry_pct": 28.62,
+    "kelly_full_pct": 17.9
   },
   "sizing": {
     "script_pct": null,
@@ -68,16 +68,16 @@
     {
       "metric": "price",
       "op": "<",
-      "value": 315.0,
+      "value": 225.0,
       "action": "exit_full",
-      "note": "one 25% ARB band under 420 = modelled fill; down_pct read off it"
+      "note": "one 25% ARB band under 300 = modelled fill; down_pct read off it"
     },
     {
       "metric": "price",
       "op": "<",
-      "value": 420.0,
+      "value": 300.0,
       "action": "exit_full",
-      "note": "falsification NAV: EBIT $46.1m, 14.6%, below every audited year; exit full, does not ride a band"
+      "note": "business falsification (re-struck from 420 on Drew point 3): equity $272.0m less net cash $125.6m = EV $146.4m = 3.2x the $46.1m stress EBIT, 1.9x audited, 0.33x book; below it the market prices the asset base impaired, not cyclical"
     },
     {
       "metric": "date",
@@ -93,6 +93,14 @@
       "action": "review",
       "name": "realised ammonia USD/t (ammonia revenue / sales volume)",
       "source": "FY LK segment note, F21/F19 basis"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 46.1,
+      "action": "exit_full",
+      "name": "FY audited EBIT USD m",
+      "source": "FY LK income statement EBIT line; the 14.6% stress margin that defines the falsification"
     },
     {
       "metric": "kpi",
@@ -208,6 +216,24 @@
       "at": "2026-11-09T13:44:10+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-11T13:24:31+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-11T14:21:45+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-11T14:36:18+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -282,6 +308,26 @@
       "heading": "Judge verdict",
       "detail": "re-rule",
       "markdown": "**REVISE \u2014 construction defect; status attacked, no kill-ledger row, no cooldown.** ALDRICH (JUDGE), 2026-11-09T13:44:10+07:00. Correction applied: 35 KILL / 5 PASS_REDUCED / 0 fills, 12/28 kills left gains \u2014 return a mis-specified level set rather than kill a name whose business is intact.\n\nChain verified: lint PASS (one warning, 2,072 words > 1,600); stage_log monotonic 13:15\u219213:55\u219214:16\u219215:03\u219215:14\u21922026-11-09 13:25, actors correct; both Bear logs verbatim; committed estimates/model untouched; target Rp627 and p_up 0.42 unraised. No process defect.\n\n1. The three prior defects are fixed: one horizon (3y), dividends up-leg only (28.2pp/3y, none on the kill leg), Rp420 now carries `exit_full`.\n\n2. The hurdle arithmetic is right, and the clearing price ~Rp360 is verified (+34.7%/3y). It sits below the Rp420 falsification, so no executable entry above Rp420 clears. At Rp440 EV is +12.2%/3y = 3.9%/yr vs 10.44%/yr; even at zero downside Rp440 caps at +28.7%/3y (8.8%/yr) \u2014 sub-hurdle by construction, not by the ARB band alone.\n\n3. LESSON-0004 bars a KILL: no KPI fired (realised $531/t > $400; feedstock $153.7 < $200) and no printed impairment (accruals negative, clean audit). Sub-hurdle here is a price/construction objection, not a thesis failure.\n\n4. PASS-at-a-price is unavailable \u2014 the only price that pays is below the stop. The defect is the level set: Rp440 is tape-anchored, not hurdle-derived, and is inconsistent with an `exit_full` at Rp420. Re-derive the entry at the hurdle-clearing price with a business-falsification kill, or a target/payoff clearing an entry above Rp420; then rule on merits."
+    },
+    {
+      "heading": "Revision",
+      "detail": "hurdle re-derivation",
+      "markdown": "**1. Horizon resolved (option a).** Rp627 was the model's *present* value (audited FCFF $58.9m capitalised at 8.86%) used as a three-year exit price \u2014 the mismatch. The same committed model struck at horizon end (FY2029E): FCFF $77.49m / 8.86% (WACC 10.86% \u2212 g 2.0%) = EV $875m; 70% of (EV + FY2029E net cash $204.1m) + $15m LPG = $770m; \u00d7Rp19,000 / 17,227m = **Rp849**. Not new evidence and not a merits raise: same FY2029E FCFF line, same rate, same 30% PAU deduction and FX; only the cash-bridge date moves.\n\n**2. Kill unchanged.** Rp420 stays the business falsification (EBIT $46.1m, 14.6%, below every audited year); the ARB fill Rp315 stays the executed-loss level, so `down_pct` = 315/434 \u2212 1 = \u221227.4%. p_up stays 0.42, the registry prior; no deviation claimed.\n\n**3. Entry is the hurdle-clearing price.** 10.44%/yr compounds to 34.70%/3y. Solving 0.42\u00d7(up + 28.2) + 0.58\u00d7down \u2212 1.0 = 34.70 with target 849 and fill 315 gives entry Rp435.5; on the Rp2 tick, **Rp434**. At 434: up 95.6%, down \u221227.4%, expected = 0.42\u00d7(95.6 + 28.2) + 0.58\u00d7(\u221227.4) \u2212 1.0 = **+35.1%/3y = 10.55%/yr**, clearing 10.44% by 0.1pp. up/|down| 4.3 vs library 2.1; own-Kelly 0.93 vs library 0.43.\n\n**4. Fill condition.** Rp434 is below the 52-week low (Rp470) and 9.6% under the Rp480 tape: a resting limit, not a live fill. It fills only on a further drawdown with the FY2029E FCFF line and the Rp420 falsification unchanged. At the Rp470 low EV is +25.6%/3y (7.9%/yr) \u2014 sub-hurdle; the trade works only at \u2264435. Entry 434, target 849, kill 420 now clear the hurdle above the kill."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "revision round",
+      "markdown": "1. **[FATAL] The kill is 3.2% below entry: a first-passage bet, not a three-year one.** From 434 the target is 415 rupiah away, the kill 14. Two-barrier arithmetic (vol 40\u201350%, drift 0\u201320%) gives P(hit 420 before 849) = 94\u201397%; driftless ruin alone 96.7%. The set needs p_up 41.7% (breakeven 18.8%); the geometry gives 3\u20136%. Both beliefs cannot hold: the market is 43% wrong on value (480 vs 849) yet so right on price that a 3.2% dip *is* falsification. At p_up 0.10, EV is \u221213.3%/3y.\n\n2. **[FATAL] Rp849 is the round-1 case relabelled, not a horizon.** This file's own `base.basis` defines \"$77m FCFF, $445/t, 26.5% margin\"; the \"FY2029E\" $77.49m sits 0.6% from it, and `model.years` end at 2028E with no FCFF line. Keeping the conceded audited $58.9m and moving only the cash bridge gives Rp687 = 6.1%/yr. The raise is all of the clearing margin: Rp360 at target 627, Rp435 at 849. No `new evidence:` flag is raised.\n\n3. **[MATERIAL] Rp420 is a stop dressed as falsification.** At 420 EV is $255m = 3.3x audited EBIT, 2.7x FY2025 FCF, 5.5x the $46.1m stress it claims. Q2-2026 already printed 17.4% EBIT ($15.9m/$91.3m, dossier) \u2014 2.8pp above that 14.6% line, so it is not a tail.\n\n4. **[MATERIAL] The clearing margin is sub-tick.** 0.40pp/3y over the hurdle; one Rp2 tick costs 0.57pp (436 \u2192 10.39%/yr). Target 845 clears by exactly zero.\n\n5. **[MATERIAL] EV is conditional on a fill never printed.** 434 is 9.6% under the tape and below the 52-week low 470, where the thesis's own EV is 7.9%/yr. At the registry's +75/\u221235 the same target implies entry 485 and 6.9%/yr: the 0.42 prior is carried onto a payoff it was never measured on (sizing \u00a74). `max_chase 0` can fill 434 and fire 420 in one session.\n\n6. **[MINOR]** up/|down| is 3.49, not 4.3 (4.3 mixes the new numerator with the retired \u221228.4); 9.4% carry is the 440 yield applied at 434 (9.54%).\n\n**Verdict: MAJOR_REVISION** \u2014 the level set is solved backwards from 34.70%: entry to the tick, kill parked 14 rupiah beneath it.\n\n**Strongest:** the entry clears only because the stop sits 3.2% away, so the 42% prior must survive a first-passage test that gives it 3\u20136%.\n\n**Stop objecting at Rp405**, with the kill re-struck at a genuine falsification (\u2264Rp300, \u22483x the stress EBIT) so p_up 0.42 is coherent. At 434 over a 420 stop, no price makes this tradeable."
+    },
+    {
+      "heading": "Revision",
+      "detail": "answering the Bear re-attack",
+      "markdown": "**1. Conceded, FATAL.** 434/420/849: driftless P(hit 420 first) 96.7%; at 40\u201350% vol and 0\u201320% drift, 93\u201397%. P(reach target) is 3\u20137%, so 0.42 cannot attach to a 14-rupiah stop. Solved backwards, yes: the price at which the 0.42 prior clears is Rp338.\n\n**2. Conceded, FATAL.** $77.49m = committed FY2028E EBIT $100.2m \u00d7 0.769 \u2014 the conceded $445/t case (`base.basis`, \"$77m\") relabelled FY2029E; `model.years` stop at 2028E. Target: audited FCFF $58.9m / 8.86% = EV $665m (11.3\u00d7); 70% \u00d7 ($665m + $204.1m) + $15m = $623.4m; \u00d7 Rp19,000/17,227m = **Rp687**. Your 687 reproduces.\n\n**3. Conceded.** Rp420 EV $255m = 3.3\u00d7 audited EBIT, 5.5\u00d7 the stress \u2014 under the stress NAV, so the price is cheaper, not falsified; Q2-26 printed 17.4% (15.9/91.3). Kill **Rp300**: equity $272.0m less net cash $125.6m = EV $146.4m = 3.2\u00d7 the $46.1m stress, 1.9\u00d7 audited, 0.33\u00d7 book. Fill 225.\n\n**4. Conceded; moot** \u2014 nothing clears.\n\n**5. Conceded.** At 434 over 300 the prior attaches: p_geo = ln(434/300)/ln(687/300) = 0.35\u20130.45, bracketing 0.42. But up 58.3, down \u221248.2: EV = 0.42 \u00d7 (58.3 + 28.6) + 0.58 \u00d7 (\u221248.2) \u2212 1 = **+7.6%/3y = 2.5%/yr**. Required p: 62.1%.\n\n**6. Conceded.** up/|down| 1.21 (1.75 with carry), not 3.49; carry 9.54%. Own Kelly \u22120.12; library +0.43.\n\n**Final set.** 300 (fill 225) < entry < 687. No entry clears: at 338 the prior gives +34.8% but p_geo is 0.10\u20130.14 with the kill 11% away; at 405 +14.5%/3y (4.6%/yr); ceiling over all entries 27.5%/3y (8.4%/yr) driftless, 30.6% (9.3%) at a 20% drift \u2014 clears only on an assumed 25%. Valid terms: target of at least Rp882 at 405 (audited FCFF $75.6m, the conceded marker). Not held. **No resting order; 2.5%/yr vs 10.44%.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "final re-rule",
+      "markdown": "**KILL** \u2014 reason_tag: valuation. ALDRICH (JUDGE), 2026-11-11T14:36:18+07:00. Correction applied: on 35 KILL / 5 PASS_REDUCED / 0 fills with 12/28 kills leaving gains, I return mis-specified arithmetic rather than kill \u2014 and kill only where the finding is invariant to price, which this now is.\n\nChain verified: lint PASS; stamps monotonic 2026-11-06 13:15 \u2192 2026-11-11 14:21; actors correct; both Bear logs Drew's voice; committed model untouched.\n\nRule 6: the 627\u2192687 uplift has no `new evidence:` flag and rests on an off-model FY2029E cash bridge ($204.1m; model ends 2028E). Rejected \u2014 at 627, 434 returns 0.6%/yr, strengthening the finding. p_up unraised.\n\n1. **No entry clears, and paying more raises EV.** On the analyst's own geometry across 338\u2013687, EV rises with entry (0.10\u20130.14 at 338; 0.35\u20130.45 at 434; 0.63 at 600) and still peaks below 10.44%/yr (ceiling 8.4\u20139.3%/yr). EV rising with price is a payoff finding, not a price objection.\n2. **Carry and EV never clear together.** Net carry clears 10.44% only below ~384, where EV is ~1%/yr; at 434, carry is 9.2% and EV 2.5%/yr.\n3. **Not LESSON-0004, and not the business.** No KPI fired ($531/t > $400; $153.7  14.6%); accruals clean. Because no lower entry clears, the lesson's remedy does not exist.\n4. **SIZING \u00a73 case (c).** up/|down| 1.21 on 0.42 (library 2.1), own Kelly \u22120.12, on an audited-FCFF target and 3.2x-stress kill. Both levels are honest; a fourth rebuild cannot change the ratio.\n5. No PASS-at-a-price exists; no REVISE (raising target above audited value needs new evidence; cutting p_up lowers EV). Level 434 is record-only (`mode: none`) for `ev_math` lint consistency.\n\nSession: 1 chain, KILL; none passable had it been built correctly \u2014 it now is, and fails."
     }
   ]
 }

@@ -6,6 +6,11 @@
   },
   {
     "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-11-11 (Wed)\n\nSession launched 2026-11-11T13:00:19+07:00 WIB. **Queue worked in runbook order: (a) two judged buy verdicts awaiting PM sizing (both still universe-VETOed), then (c) the revise queue (AVIA, ESSA).** Both revise-queue theses completed their chains and were **KILLED on valuation** by the Judge after two rebuilds each. Nothing sized, nothing staged, no order typed. (e) ADVANCE cards were not reached \u2014 the revise queue consumed the clock; 25 INDO ADVANCE cards remain unconsumed. Journal written 2026-11-11T15:15 WIB.\n\n## Queue and outcome (one line per thesis)\n\n| thesis | queue | stage reached | verdict | ticket |\n|---|---|---|---|---|\n| T-INDO-GJTL-001 | (a) awaiting PM sizing | verified only \u2014 universe row still absent | PASS_REDUCED 0.50 (unchanged) | none \u2014 factor_taxonomy VETO |\n| T-INDO-SMSM-001 | (a) awaiting PM sizing | verified only \u2014 universe row still absent | PASS_REDUCED 0.50 (unchanged) | none \u2014 factor_taxonomy VETO |\n| T-INDO-ESSA-001 | (c) revise (oldest) | re-derivation \u2192 Drew MAJOR_REVISION \u2192 rebuild \u2192 Judge | **KILL** (valuation) | none |\n| T-INDO-AVIA-001 | (c) revise | re-derivation \u2192 Drew MAJOR_REVISION \u2192 rebuild \u2192\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-11-10 (Tue)\n\nSession 2026-11-10T11:00:32+07:00 \u2192 2026-11-10T11:23:13+07:00. **1 new ADVANCE (ARCI, house coverage), 2 DISCARD (JNJ new, CMRY displaced). Not an early exit: ARCI was the only un\u2011carded candidate in either book that clears the fast\u2011disqualify sniff test \u2014 the INDO screen rows are all carded or inside the kill cooldown, and every GLOBAL row fails the valuation\u2011anchor check.**\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged, owner OPS/MONTHLY_IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `reviews_open` **[]**; `kill_monitoring_suspended` **[]**. Nothing carried to the next trading session on the review/kill front.\n- GLOBAL 100% cash / 0 names (NAV $1,012,974.22, DD 0.0%, week_trades 0/10). INDO 81% cash / 4 names (NAV IDR 15,124,965,161.69; gross 18.99%, DD \u22122.06%, week_trades 1/10; MEDC \u221210.85%, ERAA \u22126.67%, JPFA \u22122.91% since entry).\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper scripts, **no ticker exports** \u2192 step 2 skipped with no dossier\u2011writer spawn.\n\n## Screen sweep\n- **GLOBAL:** 79 names, 12\u2026",
     "persona": ""
   },
@@ -894,17 +899,6 @@
       "kind": "pass"
     },
     "body": "20:00 WIB, North Book. QC WARN (carried): published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d \u2014 IDX-only param, no GLOBAL impact. Both books all-cash (GLOBAL nav 1,009,534.77 USD; INDO nav 15.216bn IDR), governor NONE both books -> no de-gross. Kills: kill_actions_due empty, kill_monitoring_suspended empty, 0 live positions -> no fired kill to verify, no fail-closed breach. Entries (step 3c, GLOBAL): judged_unticketed resolves to zero for all three \u2014 (1) T-GLOBAL-NVO-002 verdict PASS_REDUCED is NO_TRADE stamped 0x, pm_pct 0.0, no ticket; (2) T-GLOBAL-0700HK-001 pm_pct 0.0 (Kelly nothing to propose. No tickets created -> step 5 risk_check --orders not re-run (orders_pending empty). Zero-deployment cost noted per the 2026-09-05 directive: GLOBAL sits 100pct cash at the ~3.88pct USD cash proxy vs the benchmark; the binding gate to North-book deployment is the ABSENT ERAA dossier \u2014 a RESEARCH/INGESTION gate, not EV/liquidity \u2014 already escalated 2026-10-07 (3rd+ consecutive week at 0pct). No new escalation.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-08T08:46:28.312855+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-08 - triggers reviewed, no tickets (ERAA blocked by standing dossier gate)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed at 08:45 WIB; no ticket staged. (1) QC WARN, 1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d - long-documented, no authoritative index-level IHSG yield reachable (idx.co.id blocks automated access); not CRITICAL, no trading impact, both books all-cash. (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 - no fired kill exists, so no missing-ticket breach to escalate. (3) Governor: NONE for INDO and GLOBAL, dd 0.0 - no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, pm_pct 5.0% at-cost, qty 1358100 @ limit 560, max_chase 0). NOT staged: the identical order ORD-20261007131050-ERAA.JK-e360 was staged by CONSTRUCT 2026-10-07 and VETOed+deleted by fund record on the standing dossier-freeze gate (no data/dossiers/ERAA.md, fund record learning_triggers.dossier_freeze_days 60). Re-verified this session: the ERAA dossier is still absent, so the blocker is unchanged and the VETO is absolute. Per runbook step 4 (accept a VETO, never re-cut the same order to dodge a limit) the ticket is not re-staged\u2026",
     "persona": ""
   }
 ]

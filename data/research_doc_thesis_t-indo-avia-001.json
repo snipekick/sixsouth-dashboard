@@ -17,8 +17,8 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "attacked",
-    "verdict": "REVISE",
+    "status": "judged",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
@@ -28,26 +28,26 @@
     "analyst": "Dani"
   },
   "levels": {
-    "entry": 268.0,
-    "target": 386.4,
-    "kill": 250.0,
+    "entry": 296.0,
+    "target": 421.72,
+    "kill": 163.5,
     "max_chase_pct": 0.5,
     "entry_mode": "limit",
-    "target_rationale": "12x FY2026E EPS = COE-band DCF midpoint (348 at 13.5% to 426.34 at 11.5%).",
-    "price": 292.0,
+    "target_rationale": "11.24x FY2028E EPS 37.52 at the 3-year horizon end; 0.755 x 1.045/0.070 = 11.24x is the derived multiple (12x was a rounding). At the best executable entry (296) the ARB-banded failure leg makes the payoff near-symmetric and EV -4.5%/3y; no level set clears the hurdle.",
+    "price": 296.0,
     "price_asof": "2026-11-11"
   },
   "ev": {
-    "p_up": 0.4,
-    "up_pct": 44.18,
-    "p_down": 0.6,
-    "down_pct": -6.72,
-    "net_div_yield_pct_pa": 7.85,
+    "p_up": 0.38,
+    "up_pct": 42.47,
+    "p_down": 0.62,
+    "down_pct": -44.76,
+    "net_div_yield_pct_pa": 7.09,
     "fee_tax_drag_pct": 1.0,
-    "expected_pct": 22.06,
+    "expected_pct": -4.53,
     "horizon_years": 3.0,
-    "carry_pct": 23.55,
-    "kelly_full_pct": 428.2
+    "carry_pct": 21.27,
+    "kelly_full_pct": -15.8
   },
   "sizing": {
     "script_pct": 10.0,
@@ -68,9 +68,16 @@
     {
       "metric": "price",
       "op": "<",
-      "value": 250.0,
+      "value": 163.5,
       "action": "exit_full",
-      "note": "below the bear DCF (284.28)"
+      "note": "ARB-clamped fill: 218 x 0.75, one 25% band below the falsification level (SIZING_EV_BASE_RATES 6). The 218 review initiates the exit; this is the modelled fill."
+    },
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 218.0,
+      "action": "review",
+      "note": "falsified earnings power (GM 40.2%, zero volume growth, ROE=COE=12.5%) = EPS 27.20 x 8.0x = 218; 23.3% below the bear DCF 284.28. Review initiates exit, no discretion."
     },
     {
       "metric": "kpi",
@@ -183,6 +190,24 @@
       "at": "2026-11-06T15:19:32+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-11T13:33:18+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-11T14:58:58+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-11T15:09:50+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -262,6 +287,26 @@
       "heading": "Judge verdict",
       "detail": "hurdle re-rule",
       "markdown": "ALDRICH (JUDGE), 2026-11-09T13:58:03+07:00. Correction against the 35-KILL/0-fill record: an entry that cannot pay is a construction defect, not a business verdict.\n\n**REVISE (construction) \u2014 the PASS_REDUCED at \u2264Rp270 is withdrawn; PM sizing 0.25, pm_pct 2.50%, level 268 and max fill 269.34 are void until re-judged.** Lint PASS; stage chain monotonic; Bear log intact.\n\n1. **V5.4 basis conceded.** At 268, V5.4 gives 22.06%/3y = 6.9%/yr against FR+4% 10.44%. My 10.6%/yr used both-leg carry, deprecated 2026-11-05; `the sizing engine` prices the same legs. The price finding was right in kind, wrong in number.\n2. **The level set cannot clear above the kill.** At kill 250 the clearing entry is **Rp241** \u2014 below the kill, so the exit rule fires on the way in. At 268 a lower kill worsens it: 200 gives 3.5%/yr; the up leg is capped at +44% plus carry.\n3. **Construction, not thesis failure (LESSON-0004).** No KPI has fired (gross margin, volume), no earnings-quality impairment, EV at honest levels positive. The defect is geometry: a 3-year EV window carrying a target on FY2026E EPS (386.4 = 12x, a ~12-month level), a kill below the bear DCF rather than from business falsification, and a hurdle applied to the pair.\n4. **Instruction.** Resolve the horizon/target/EV-window mismatch and re-derive the kill from business falsification. Coherent paths: value the target at the horizon end (12x FY2028E EPS 37.52 \u2248 450, at which 255 clears 11.3%/yr above kill 250), or set a falsification kill \u2264220 (clearing entry \u2248227). Both are derived, never back-solved to the hurdle. Re-run `ev_math` under V5.4 and re-lint. If none clears, the honest result is a resting price trigger in numbers, not a fill.\n5. **Held.** p_up 0.40 registry, unshaded; payoff ratio 1.70; kill 250 a clean falsification for now; the float/placement residual still sizes a starter."
+    },
+    {
+      "heading": "Revision",
+      "detail": "horizon and level re-derivation",
+      "markdown": "1. **Window.** Three years from a Nov-2026 fill to a Nov-2029 exit. The old target (386.4 = 12x FY2026E) carried a ~12-month level through a 3-year window \u2014 the geometry Aldrich named.\n2. **Target 450.2 = 12 x FY2028E EPS 37.52**, the last committed year, so no post-FY2028 growth is credited. 12x is the warranted exit multiple: payout 75.5%, g = 24.5% retention x 18.3% ROE = 4.5%, COE 11.5% \u2192 0.755 x 1.045/0.070 = 11.3x; the DCF roll-forward is 426.34 x 1.115^3 = 591, so 450.2 is the conservative leg. Same multiple, same committed EPS, read at the horizon end (Judge instruction 4) \u2014 not a new-evidence raise.\n3. **Kill 218, from falsified earnings power.** GM 40.2% on FY2026E revenue 9,415.4 \u2192 GP 3,785.0 less SG&A 1,920.7 = EBIT 1,864.3; x0.781 = 1,456.0 + 149 net interest = 1,605.0; /59,016m = EPS 27.20. Zero volume growth, no franchise premium (ROE = COE = 12.5%, top of band): value = EPS/COE = 27.20 x 8.0 = 218. 23.3% below the bear DCF 284.28, and below the KPI thresholds: a breach reviews before it exits.\n4. **Entry 246** is the tick under the hurdle-clearing 247.9; max fill 246 x 1.005 = 247.2 still clears. It sits 12.8% above the kill, 13% below the bear DCF, at 6.6x FY2028E / 4.4x EV/EBIT.\n5. **EV, V5.4.** up 83.02%, down \u221211.38%, net dividends 8.53%/pa: 0.40 x (83.02 + 25.59) + 0.60 x (\u221211.38) \u2212 1.0 = **35.62%/3y = 10.69%/yr** against the 10.44% hurdle. Symmetry 108.6/12.4 = 8.8 (library 1.7). At the 296 tape, 4.0%/yr: no pass.\n6. **No fill.** 246 is 16.9% under the tape, so it rests as a limit (chase 0.5%, to 2027-06-30). It fills only on a further de-rating to 6.6x FY2028E. p_up 0.40 held."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "revision round",
+      "markdown": "1. **[FATAL] The 0.40 prior and the 8.8:1 payoff are from different populations.** Registry pairs 0.40 with +50/\u221230; at that failure loss this revision is 7.56%/yr. \u03c3 37.1% (58 weekly closes, fund record): up 5.0 log-units, kill 1.0 \u2192 P(450.2 before 218) = 12.1% driftless, 20.2% at 11.5% drift. A \u221211.38% leg cannot coexist with 0.40. New: 520\u2192298 (\u221242.7%); 296 *is* the 52-week low, 246 17.4% under it.\n\n2. **[FATAL] Ev_math contradicts the pre-mortem at line 89.** The kill fill is priced 187.5/140.6 \u2014 \u221223.78%/\u221242.85% from 246: 8.63%/yr at 0.40, 0.56% at point 1's p, negative at two bands. SIZING \u00a76 wants this leg in the headline EV.\n\n3. **[MATERIAL] 12x is a rounding of your own derivation, and it is the whole margin.** 0.755\u00d71.045/0.070 = 11.24x; at the DCF's g 4.0%, 10.47x. EV at 11.3x is 9.51%/yr, at 10.47x 8.09% \u2014 both under 10.44%. The Judge's \"\u2248450\" sketch is now the multiple's only support. Flag `new evidence:` or cut. Re-dating conceded in form.\n\n4. **[MATERIAL] The kill is 2.5 weekly sigmas from entry; the KPI band is a dead zone.** GM<42.0% only *reviews*; the price kill is exit_full. At GM 42.0% falsified EPS is 29.44 \u2192 235.5, 4.3% *below* the 246 entry: no rule acts until 218, where earnings power is above falsification. Fatal 1, a level down.\n\n5. **[MATERIAL] Carry funds the pass and is unfunded.** 10.2pp of 35.6pp is dividends on a 75.5% payout the thesis says exceeds FCFE by ~158 (F15/F23). At its own 50% payout: 9.74%/yr.\n\n6. **[MINOR] Arithmetic.** 4.4x EV/EBIT at 246 does not reproduce: (14,518\u22121,569)/2,623.8 = 4.9x. \"4.0%/yr at the 296 tape\" is 4.55%. The clearing entry reproduces at 247.8; one tick up (248) is 10.41%, the 0.5% chase leaves 0.08pp.\n\n**Verdict: MAJOR_REVISION.** The window is fixed; the probability-payoff pair carrying the EV is not: no entry above a 218 kill clears any honest failure loss.\n\n**Strongest sentence:** A trade whose kill is 12.8% under the entry and whose target 83% above it does not win 40% of the time \u2014 the barriers say 12 \u2014 and the quarter-point clearing the hurdle is a 0.7x rounding of your own multiple.\n\n**I stop objecting at Rp194 entry, kill Rp140** \u2014 a 0.41-log down barrier against 0.76 gives first-passage p 0.35\u20130.44, and the registry's 0.40, a 30% failure loss and the one-band ARB gap clear 10.44%/yr. At 246/218 nothing clears."
+    },
+    {
+      "heading": "Revision",
+      "detail": "answering the Bear re-attack",
+      "markdown": "1. **p_up class \u2014 conceded.** 0.40 is the +50/\u221230 prior. At its own \u221230% failure loss: 0.40\u00d7(83.02+25.59)+0.60\u00d7(\u221230)\u22121 = 24.4%/3y = 7.56%/yr, under 10.44%. The \u221211.38% leg belongs to no 0.40 population.\n2. **First passage \u2014 conceded.** \u03c3 = 37.14% annualised from 57 weekly log returns (58 closes, fund record). From 246 the 450.2/218 pair gives 11.6% driftless, 19.4% at 11.5% drift (your 12.1/20.2 reproduce); 296 is the 52-week low, 520\u2192298.\n3. **Ev_math vs pre-mortem \u2014 conceded.** 187.5/246\u22121 = \u221223.78%, 140.6/246\u22121 = \u221242.85%; at p 0.40 that is 8.63%/yr. The pre-mortem's 187.5 was the old 250 kill; for 218 the one-band fill is 163.5 (\u221233.5% from 246), worse.\n4. **12x \u2014 conceded.** 0.755\u00d71.045/0.070 = 11.24x; target 421.7, EV 9.4%/yr (10.47x/392.8 gives 8.1%). The 0.25pp pass was the rounding.\n5. **KPI dead zone \u2014 conceded.** GM 42.0% \u2192 EPS 29.44 \u2192 235.5, 4.3% under 246; 218 implies GM 40.2%, below the 42% review. The kill sits ~2.3 weekly sigmas (0.1208/0.0515) from entry \u2014 noise fires it.\n6. **Slips \u2014 conceded.** (14,518\u22121,569)/2,623.8 = 4.9x; tape EV 4.55%; clearing entry 247.8, one tick (248) 10.41%, chase leaves 0.08pp.\n7. **Minor \u2014 conceded**, as 6.\n\n**Rebuild.** Target 421.7 = 11.24\u00d737.52; falsification 218; exit_full 163.5 = 218\u00d70.75 (one 25% ARB band). Entry: the tape 296 is the most favourable executable price \u2014 deeper limits lower p faster than they lift payoff. Driftless P(421.7 before 218) = 0.38. Up +42.5%, down 163.5/296\u22121 = \u221244.8%, carry 7.09%/yr (21.3pp): EV = 0.38\u00d763.7 + 0.62\u00d7(\u221244.8) \u2212 1.0 = \u22124.5%/3y = **\u22121.5%/yr**. Even at full 11.5% drift (p 0.51) it is +9.6%/3y = +3.1%/yr. Own-Kelly (carry-inclusive) \u22120.07 \u2014 the ARB band makes the payoff near-symmetric. No entry in 220\u2013420 clears; the tape requires p 0.74. **No coherent set exists; recommend the record be closed.**"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "final re-rule",
+      "markdown": "ALDRICH (JUDGE), 2026-11-11T15:09:50+07:00. Correction against the 35-KILL/0-fill record: I do not kill a live business for being dear; I kill only where no honest level set pays.\n\n**KILL \u2014 reason_tag: valuation.** Final; takes a kill-ledger row. Dispositive flaw: no entry above the Rp218 falsification produces a probability-weighted return clearing 10.44%/yr. No position exists \u2014 AVIA is absent from fund record; the PM block (0.25/2.50%/268) was voided 2026-11-09T13:58:03. Level set retired.\n\n1. **Chain integrity.** Lint PASS; stage_log monotonic; actors correct; both Bear logs verbatim in Drew's voice; model untouched. One omission: the 11-11 Bear round lacks an `attacked` line \u2014 journal it.\n2. **386.4 \u2192 450.2 \u2192 421.72 is derivation, not a raise.** 450.2 re-dated the same 12x to FY2028E EPS at my instruction; 421.72 cut the multiple to its own derivation (0.755\u00d71.045/0.070 = 11.24x). No `new evidence:` flag was owed.\n3. **Payoff finding, not price objection.** LESSON-0004 bars re-killing a lower price that still pays; none pays \u2014 every entry 220\u2013420 tops out near 6%/yr. Its p 0.38 is arithmetic barrier distance (26.35/68.82); log distance gives 0.464, so the tape is +1.5%/yr (ARB fill) or +4.6%/yr (218 fill), not \u22121.5%. Conclusion holds; margin narrower.\n4. **SIZING \u00a73(c), not (a)/(b).** 421.72 is not under-set \u2014 at the DCF base 426.34, far under its 591 roll-forward \u2014 and the kill is falsification (8x EPS 27.20), not a stop. The payoff is genuinely uneconomic.\n5. **No third REVISE.** Two rebuilds exhausted the construction remedies; a conceded loop with no clearing price is a closed record.\n6. **Business intact \u2014 recorded.** GM 44.2%, 9M volume +3.5%, OCF 1,689 > NI 1,384, Crowe unmodified, house BUY 413. No KPI fired. Resubmittable on `new evidence:`.\n\n*Session close: one chain judged, 1 KILL; AVIA was buildable, not buyable above falsification.*"
     }
   ]
 }
