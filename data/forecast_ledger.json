@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T00:30:00+00:00",
-  "asof": "2026-11-10",
+  "generated_at": "2026-11-11T00:30:00+00:00",
+  "asof": "2026-11-11",
   "method": {
     "p_up": "committed probability the target prints before the kill, within the horizon",
     "p_now": "ln(px/kill)/ln(target/kill): gambler's-ruin probability from today's price",
@@ -12,15 +12,15 @@
   "overall": {
     "n": 51,
     "n_resolved": 5,
-    "n_open": 30,
-    "n_awaiting_entry": 16,
+    "n_open": 31,
+    "n_awaiting_entry": 15,
     "hit_rate": 0.8,
     "mean_p_up": 0.3769,
     "brier": 0.3556,
     "brier_base_rate": 0.279,
     "skill_vs_base": -0.275,
-    "mean_drift_open": 0.1677,
-    "mean_ret_since_pct": -3.5102
+    "mean_drift_open": 0.1613,
+    "mean_ret_since_pct": -3.5233
   },
   "by_book": {
     "GLOBAL": {
@@ -33,36 +33,36 @@
       "brier": 0.3364,
       "brier_base_rate": 0.2704,
       "skill_vs_base": -0.244,
-      "mean_drift_open": 0.2501,
-      "mean_ret_since_pct": -0.1174
+      "mean_drift_open": 0.2559,
+      "mean_ret_since_pct": -0.0422
     },
     "INDO": {
       "n": 28,
       "n_resolved": 4,
-      "n_open": 14,
-      "n_awaiting_entry": 10,
+      "n_open": 15,
+      "n_awaiting_entry": 9,
       "hit_rate": 0.75,
       "mean_p_up": 0.3721,
       "brier": 0.3604,
       "brier_base_rate": 0.2811,
       "skill_vs_base": -0.282,
-      "mean_drift_open": 0.0736,
-      "mean_ret_since_pct": -6.2971
+      "mean_drift_open": 0.0604,
+      "mean_ret_since_pct": -6.3829
     }
   },
   "by_analyst": {
     "Dani": {
       "n": 28,
       "n_resolved": 4,
-      "n_open": 14,
-      "n_awaiting_entry": 10,
+      "n_open": 15,
+      "n_awaiting_entry": 9,
       "hit_rate": 0.75,
       "mean_p_up": 0.3721,
       "brier": 0.3604,
       "brier_base_rate": 0.2811,
       "skill_vs_base": -0.282,
-      "mean_drift_open": 0.0736,
-      "mean_ret_since_pct": -6.2971
+      "mean_drift_open": 0.0604,
+      "mean_ret_since_pct": -6.3829
     },
     "Sloane": {
       "n": 23,
@@ -74,8 +74,8 @@
       "brier": 0.3364,
       "brier_base_rate": 0.2704,
       "skill_vs_base": -0.244,
-      "mean_drift_open": 0.2501,
-      "mean_ret_since_pct": -0.1174
+      "mean_drift_open": 0.2559,
+      "mean_ret_since_pct": -0.0422
     }
   },
   "by_verdict": {
@@ -89,21 +89,21 @@
       "brier": 0.3556,
       "brier_base_rate": 0.279,
       "skill_vs_base": -0.275,
-      "mean_drift_open": 0.2303,
-      "mean_ret_since_pct": -2.5797
+      "mean_drift_open": 0.2326,
+      "mean_ret_since_pct": -2.4424
     },
     "PASS_REDUCED": {
       "n": 10,
       "n_resolved": 0,
-      "n_open": 6,
-      "n_awaiting_entry": 4,
+      "n_open": 7,
+      "n_awaiting_entry": 3,
       "hit_rate": null,
       "mean_p_up": 0.417,
       "brier": null,
       "brier_base_rate": null,
       "skill_vs_base": null,
-      "mean_drift_open": -0.0827,
-      "mean_ret_since_pct": -8.498
+      "mean_drift_open": -0.0833,
+      "mean_ret_since_pct": -9.443
     },
     "REVISE": {
       "n": 1,
@@ -116,7 +116,7 @@
       "brier_base_rate": null,
       "skill_vs_base": null,
       "mean_drift_open": null,
-      "mean_ret_since_pct": 0.41
+      "mean_ret_since_pct": -0.41
     },
     "\u2014": {
       "n": 2,
@@ -129,7 +129,7 @@
       "brier_base_rate": null,
       "skill_vs_base": null,
       "mean_drift_open": null,
-      "mean_ret_since_pct": 1.79
+      "mean_ret_since_pct": 3.98
     }
   },
   "by_archetype": {
@@ -143,21 +143,21 @@
       "brier": 0.5184,
       "brier_base_rate": 0.3364,
       "skill_vs_base": -0.541,
-      "mean_drift_open": 0.1108,
-      "mean_ret_since_pct": -9.455
+      "mean_drift_open": 0.0944,
+      "mean_ret_since_pct": -9.624
     },
     "derated_compounder_rerating": {
       "n": 16,
       "n_resolved": 0,
-      "n_open": 9,
-      "n_awaiting_entry": 7,
+      "n_open": 10,
+      "n_awaiting_entry": 6,
       "hit_rate": null,
       "mean_p_up": 0.3563,
       "brier": null,
       "brier_base_rate": null,
       "skill_vs_base": null,
-      "mean_drift_open": 0.3006,
-      "mean_ret_since_pct": 0.7431
+      "mean_drift_open": 0.2704,
+      "mean_ret_since_pct": 0.8662
     },
     "dividend_income_anchor": {
       "n": 2,
@@ -170,7 +170,7 @@
       "brier_base_rate": null,
       "skill_vs_base": null,
       "mean_drift_open": null,
-      "mean_ret_since_pct": -0.265
+      "mean_ret_since_pct": -2.545
     },
     "holdco_discount_narrowing": {
       "n": 1,
@@ -183,7 +183,7 @@
       "brier_base_rate": null,
       "skill_vs_base": null,
       "mean_drift_open": null,
-      "mean_ret_since_pct": 0.89
+      "mean_ret_since_pct": 4.46
     },
     "infra_tower_compounder": {
       "n": 2,
@@ -196,7 +196,7 @@
       "brier_base_rate": 0.09,
       "skill_vs_base": 0.0,
       "mean_drift_open": -0.196,
-      "mean_ret_since_pct": -3.375
+      "mean_ret_since_pct": -3.765
     },
     "momentum_continuation": {
       "n": 8,
@@ -208,8 +208,8 @@
       "brier": 0.3364,
       "brier_base_rate": 0.2704,
       "skill_vs_base": -0.244,
-      "mean_drift_open": 0.1978,
-      "mean_ret_since_pct": 0.785
+      "mean_drift_open": 0.2144,
+      "mean_ret_since_pct": 1.455
     },
     "neglected_midcap_discovery": {
       "n": 5,
@@ -221,8 +221,8 @@
       "brier": 0.4489,
       "brier_base_rate": 0.3136,
       "skill_vs_base": -0.431,
-      "mean_drift_open": 0.0622,
-      "mean_ret_since_pct": -8.756
+      "mean_drift_open": 0.0537,
+      "mean_ret_since_pct": -9.612
     },
     "property_nav_discount_narrowing": {
       "n": 1,
@@ -247,8 +247,8 @@
       "brier": null,
       "brier_base_rate": null,
       "skill_vs_base": null,
-      "mean_drift_open": 0.096,
-      "mean_ret_since_pct": -4.69
+      "mean_drift_open": 0.098,
+      "mean_ret_since_pct": -4.628
     },
     "washout_rebound": {
       "n": 1,
@@ -260,16 +260,16 @@
       "brier": null,
       "brier_base_rate": null,
       "skill_vs_base": null,
-      "mean_drift_open": 0.251,
-      "mean_ret_since_pct": -17.61
+      "mean_drift_open": 0.243,
+      "mean_ret_since_pct": -18.18
     }
   },
   "judge": {
     "kills": 38,
     "kills_right_provisional": 6,
-    "kills_avg_ret_since_pct": -2.5797,
+    "kills_avg_ret_since_pct": -2.4424,
     "passes": 10,
-    "passes_avg_ret_since_pct": -8.498,
+    "passes_avg_ret_since_pct": -9.443,
     "note": "provisional until resolutions accumulate: a kill counts as right while the price drifts away from the analyst's target"
   },
   "calibration": [
@@ -279,7 +279,7 @@
       "mean_p_up": 0.15,
       "n_resolved": 0,
       "realized": null,
-      "mean_p_now": 0.805
+      "mean_p_now": 0.816
     },
     {
       "bin": "0.2\u20130.4",
@@ -287,7 +287,7 @@
       "mean_p_up": 0.2911,
       "n_resolved": 4,
       "realized": 0.75,
-      "mean_p_now": 0.6464
+      "mean_p_now": 0.6446
     },
     {
       "bin": "0.4\u20130.6",
@@ -295,7 +295,7 @@
       "mean_p_up": 0.4322,
       "n_resolved": 1,
       "realized": 1.0,
-      "mean_p_now": 0.5144
+      "mean_p_now": 0.5081
     },
     {
       "bin": "0.6\u20130.8",
@@ -339,15 +339,15 @@
       "resolved_on": null,
       "triggered_on": "2026-11-07",
       "trigger_px": 1085.0,
-      "px": 1100.0,
+      "px": 1115.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 1.38,
+      "ret_since_pct": 2.76,
       "to_entry_pct": null,
-      "p_now": 0.448,
-      "drift": 0.048,
-      "path_pct": 29.2,
-      "days_elapsed": 3,
-      "horizon_used_pct": 0.3
+      "p_now": 0.458,
+      "drift": 0.058,
+      "path_pct": 30.1,
+      "days_elapsed": 4,
+      "horizon_used_pct": 0.4
     },
     {
       "id": "F-T-INDO-AUTO-001@2026-11-07T10:39:07",
@@ -373,13 +373,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 3290.0,
+      "px": 3340.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 2.17,
-      "to_entry_pct": -37.4,
-      "path_pct": 58.3,
-      "days_elapsed": 3,
-      "horizon_used_pct": 0.3
+      "ret_since_pct": 3.73,
+      "to_entry_pct": -38.3,
+      "path_pct": 59.8,
+      "days_elapsed": 4,
+      "horizon_used_pct": 0.4
     },
     {
       "id": "F-T-INDO-SMSM-001@2026-11-07T10:28:36",
@@ -405,15 +405,15 @@
       "resolved_on": null,
       "triggered_on": "2026-11-07",
       "trigger_px": 1640.0,
-      "px": 1645.0,
+      "px": 1610.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 0.3,
+      "ret_since_pct": -1.83,
       "to_entry_pct": null,
-      "p_now": 0.485,
-      "drift": 0.085,
-      "path_pct": 40.5,
-      "days_elapsed": 3,
-      "horizon_used_pct": 0.3
+      "p_now": 0.452,
+      "drift": 0.052,
+      "path_pct": 37.3,
+      "days_elapsed": 4,
+      "horizon_used_pct": 0.4
     },
     {
       "id": "F-T-INDO-IATA-001@2026-11-06T13:21:02",
@@ -439,13 +439,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 72.0,
+      "px": 74.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 1.41,
-      "to_entry_pct": -61.4,
-      "path_pct": 79.8,
-      "days_elapsed": 4,
-      "horizon_used_pct": 0.4
+      "ret_since_pct": 4.23,
+      "to_entry_pct": -62.4,
+      "path_pct": 82.0,
+      "days_elapsed": 5,
+      "horizon_used_pct": 0.5
     },
     {
       "id": "F-T-INDO-DEWA-001@2026-11-06T13:19:44",
@@ -471,13 +471,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 226.0,
+      "px": 234.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 0.89,
-      "to_entry_pct": -73.1,
+      "ret_since_pct": 4.46,
+      "to_entry_pct": -74.0,
       "path_pct": 100,
-      "days_elapsed": 4,
-      "horizon_used_pct": 0.4
+      "days_elapsed": 5,
+      "horizon_used_pct": 0.5
     },
     {
       "id": "F-T-INDO-AVIA-001@2026-11-06T13:17:57",
@@ -498,18 +498,20 @@
       "expires_on": "2029-11-06",
       "expected_pct": 9.7,
       "forecast_id": "F-T-INDO-AVIA-001@2026-11-06T13:17:57",
-      "status": "AWAITING_ENTRY",
+      "status": "OPEN",
       "outcome": null,
       "resolved_on": null,
-      "triggered_on": null,
-      "trigger_px": null,
-      "px": 304.0,
+      "triggered_on": "2026-11-09",
+      "trigger_px": 298.0,
+      "px": 298.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 0.0,
-      "to_entry_pct": -1.1,
-      "path_pct": 39.6,
-      "days_elapsed": 4,
-      "horizon_used_pct": 0.4
+      "ret_since_pct": -1.97,
+      "to_entry_pct": null,
+      "p_now": 0.403,
+      "drift": 0.003,
+      "path_pct": 35.2,
+      "days_elapsed": 5,
+      "horizon_used_pct": 0.5
     },
     {
       "id": "F-T-INDO-ESSA-001@2026-11-06T13:15:53",
@@ -535,13 +537,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 490.0,
+      "px": 486.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 0.41,
-      "to_entry_pct": -10.2,
-      "path_pct": 56.1,
-      "days_elapsed": 4,
-      "horizon_used_pct": 0.4
+      "ret_since_pct": -0.41,
+      "to_entry_pct": -9.5,
+      "path_pct": 54.8,
+      "days_elapsed": 5,
+      "horizon_used_pct": 0.5
     },
     {
       "id": "F-T-INDO-AKRA-001@2026-10-31T10:14:42",
@@ -567,13 +569,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 1340.0,
+      "px": 1275.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -2.55,
-      "to_entry_pct": -17.8,
-      "path_pct": 76.2,
-      "days_elapsed": 10,
-      "horizon_used_pct": 1.1
+      "ret_since_pct": -7.27,
+      "to_entry_pct": -13.6,
+      "path_pct": 65.9,
+      "days_elapsed": 11,
+      "horizon_used_pct": 1.2
     },
     {
       "id": "F-T-INDO-JPFA-001@2026-10-31T10:11:41",
@@ -598,16 +600,16 @@
       "outcome": null,
       "resolved_on": null,
       "triggered_on": "2026-11-09",
-      "trigger_px": 1500.0,
-      "px": 1500.0,
+      "trigger_px": 1490.0,
+      "px": 1490.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -13.79,
+      "ret_since_pct": -14.37,
       "to_entry_pct": null,
-      "p_now": 0.37,
-      "drift": -0.07,
-      "path_pct": 28.3,
-      "days_elapsed": 10,
-      "horizon_used_pct": 1.1
+      "p_now": 0.361,
+      "drift": -0.079,
+      "path_pct": 27.5,
+      "days_elapsed": 11,
+      "horizon_used_pct": 1.2
     },
     {
       "id": "F-T-INDO-PTBA-001@2026-10-28T13:35:55",
@@ -633,15 +635,15 @@
       "resolved_on": null,
       "triggered_on": "2026-11-02",
       "trigger_px": 2980.0,
-      "px": 2970.0,
+      "px": 2940.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -8.33,
+      "ret_since_pct": -9.26,
       "to_entry_pct": null,
-      "p_now": 0.266,
-      "drift": -0.154,
-      "path_pct": 20.5,
-      "days_elapsed": 13,
-      "horizon_used_pct": 1.2
+      "p_now": 0.251,
+      "drift": -0.169,
+      "path_pct": 19.2,
+      "days_elapsed": 14,
+      "horizon_used_pct": 1.3
     },
     {
       "id": "F-T-GLOBAL-MRK-001@2026-10-24T10:15:54",
@@ -667,13 +669,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 148.76,
+      "px": 148.05,
       "px_date": "2026-11-09",
-      "ret_since_pct": 2.4,
-      "to_entry_pct": -18.3,
+      "ret_since_pct": 1.91,
+      "to_entry_pct": -17.9,
       "path_pct": 100,
-      "days_elapsed": 17,
-      "horizon_used_pct": 6.2
+      "days_elapsed": 18,
+      "horizon_used_pct": 6.6
     },
     {
       "id": "F-T-INDO-AADI-001@2026-10-21T13:11:27",
@@ -699,13 +701,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 10250.0,
+      "px": 10125.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -9.89,
-      "to_entry_pct": -26.3,
+      "ret_since_pct": -10.99,
+      "to_entry_pct": -25.4,
       "path_pct": 100,
-      "days_elapsed": 20,
-      "horizon_used_pct": 1.8
+      "days_elapsed": 21,
+      "horizon_used_pct": 1.9
     },
     {
       "id": "F-T-INDO-TOWR-002@2026-10-19T10:06:02",
@@ -738,8 +740,8 @@
       "p_now": 0.624,
       "drift": 0.304,
       "path_pct": 54.4,
-      "days_elapsed": 22,
-      "horizon_used_pct": 2.0
+      "days_elapsed": 23,
+      "horizon_used_pct": 2.1
     },
     {
       "id": "F-T-GLOBAL-SMFG-003@2026-10-19T10:05:18",
@@ -765,13 +767,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 24.28,
+      "px": 24.32,
       "px_date": "2026-11-09",
-      "ret_since_pct": 2.02,
-      "to_entry_pct": -24.7,
+      "ret_since_pct": 2.18,
+      "to_entry_pct": -24.8,
       "path_pct": 100,
-      "days_elapsed": 22,
-      "horizon_used_pct": 2.4
+      "days_elapsed": 23,
+      "horizon_used_pct": 2.5
     },
     {
       "id": "F-T-INDO-ASII-002@2026-10-19T10:04:04",
@@ -797,13 +799,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 5150.0,
+      "px": 5350.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 13.19,
-      "to_entry_pct": -20.0,
+      "ret_since_pct": 17.58,
+      "to_entry_pct": -23.0,
       "path_pct": 100,
-      "days_elapsed": 22,
-      "horizon_used_pct": 2.0
+      "days_elapsed": 23,
+      "horizon_used_pct": 2.1
     },
     {
       "id": "F-T-INDO-KLBF-002@2026-10-19T10:04:04",
@@ -829,13 +831,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 740.0,
+      "px": 750.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 2.78,
-      "to_entry_pct": -27.6,
+      "ret_since_pct": 4.17,
+      "to_entry_pct": -28.6,
       "path_pct": 100,
-      "days_elapsed": 22,
-      "horizon_used_pct": 2.0
+      "days_elapsed": 23,
+      "horizon_used_pct": 2.1
     },
     {
       "id": "F-T-GLOBAL-ABBV-001@2026-10-10T10:16:39",
@@ -861,13 +863,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 293.3,
+      "px": 293.89,
       "px_date": "2026-11-09",
-      "ret_since_pct": 6.09,
-      "to_entry_pct": -10.8,
-      "path_pct": 81.1,
-      "days_elapsed": 31,
-      "horizon_used_pct": 11.3
+      "ret_since_pct": 6.3,
+      "to_entry_pct": -11.0,
+      "path_pct": 81.6,
+      "days_elapsed": 32,
+      "horizon_used_pct": 11.7
     },
     {
       "id": "F-T-INDO-DMAS-001@2026-10-10T10:16:23",
@@ -901,8 +903,8 @@
       "p_now": 1.0,
       "drift": 0.62,
       "path_pct": 61.4,
-      "days_elapsed": 31,
-      "horizon_used_pct": 3.4
+      "days_elapsed": 32,
+      "horizon_used_pct": 3.5
     },
     {
       "id": "F-T-GLOBAL-SAP-001@2026-10-10T10:16:22",
@@ -928,13 +930,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 237.42,
+      "px": 233.74,
       "px_date": "2026-11-09",
-      "ret_since_pct": 10.54,
-      "to_entry_pct": -15.4,
-      "path_pct": 80.0,
-      "days_elapsed": 31,
-      "horizon_used_pct": 2.8
+      "ret_since_pct": 8.83,
+      "to_entry_pct": -14.1,
+      "path_pct": 76.8,
+      "days_elapsed": 32,
+      "horizon_used_pct": 2.9
     },
     {
       "id": "F-T-INDO-TAPG-002@2026-10-10T10:15:51",
@@ -960,15 +962,15 @@
       "resolved_on": null,
       "triggered_on": "2026-10-12",
       "trigger_px": 1765.0,
-      "px": 1905.0,
+      "px": 1900.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -5.22,
+      "ret_since_pct": -5.47,
       "to_entry_pct": null,
-      "p_now": 0.751,
-      "drift": 0.331,
-      "path_pct": 69.6,
-      "days_elapsed": 31,
-      "horizon_used_pct": 2.8
+      "p_now": 0.747,
+      "drift": 0.327,
+      "path_pct": 69.0,
+      "days_elapsed": 32,
+      "horizon_used_pct": 2.9
     },
     {
       "id": "F-T-INDO-JSMR-002@2026-10-03T10:30:00",
@@ -995,15 +997,15 @@
       "triggered_on": "2026-10-03",
       "trigger_px": 2540.0,
       "resolved_px": 2110.0,
-      "px": 2790.0,
+      "px": 2770.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 9.84,
+      "ret_since_pct": 9.06,
       "to_entry_pct": null,
       "p_now": 0.0,
       "drift": -0.3,
-      "path_pct": 56.8,
-      "days_elapsed": 38,
-      "horizon_used_pct": 3.5
+      "path_pct": 54.7,
+      "days_elapsed": 39,
+      "horizon_used_pct": 3.6
     },
     {
       "id": "F-T-GLOBAL-MS-001@2026-10-03T10:29:00",
@@ -1029,15 +1031,15 @@
       "resolved_on": null,
       "triggered_on": "2026-10-03",
       "trigger_px": 190.31,
-      "px": 187.1,
+      "px": 187.56,
       "px_date": "2026-11-09",
-      "ret_since_pct": -1.69,
+      "ret_since_pct": -1.45,
       "to_entry_pct": null,
-      "p_now": 0.624,
-      "drift": 0.124,
-      "path_pct": 58.5,
-      "days_elapsed": 38,
-      "horizon_used_pct": 13.9
+      "p_now": 0.632,
+      "drift": 0.132,
+      "path_pct": 59.3,
+      "days_elapsed": 39,
+      "horizon_used_pct": 14.2
     },
     {
       "id": "F-T-GLOBAL-BAC-001@2026-10-03T10:20:00",
@@ -1063,15 +1065,15 @@
       "resolved_on": null,
       "triggered_on": "2026-10-03",
       "trigger_px": 53.75,
-      "px": 50.55,
+      "px": 50.68,
       "px_date": "2026-11-09",
-      "ret_since_pct": -5.95,
+      "ret_since_pct": -5.71,
       "to_entry_pct": null,
-      "p_now": 0.365,
-      "drift": -0.115,
-      "path_pct": 32.5,
-      "days_elapsed": 38,
-      "horizon_used_pct": 3.5
+      "p_now": 0.372,
+      "drift": -0.108,
+      "path_pct": 33.2,
+      "days_elapsed": 39,
+      "horizon_used_pct": 3.6
     },
     {
       "id": "F-T-GLOBAL-NVO-002@2026-10-03T03:29:04",
@@ -1097,13 +1099,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 41.38,
+      "px": 40.7,
       "px_date": "2026-11-09",
-      "ret_since_pct": 10.88,
-      "to_entry_pct": -40.3,
-      "path_pct": 61.0,
-      "days_elapsed": 38,
-      "horizon_used_pct": 3.5
+      "ret_since_pct": 9.06,
+      "to_entry_pct": -39.3,
+      "path_pct": 59.4,
+      "days_elapsed": 39,
+      "horizon_used_pct": 3.6
     },
     {
       "id": "F-T-GLOBAL-MSFT-001@2026-09-26T10:30:00",
@@ -1129,15 +1131,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-26",
       "trigger_px": 516.17,
-      "px": 545.18,
+      "px": 533.16,
       "px_date": "2026-11-09",
-      "ret_since_pct": 5.62,
+      "ret_since_pct": 3.29,
       "to_entry_pct": null,
-      "p_now": 0.633,
-      "drift": 0.233,
-      "path_pct": 55.3,
-      "days_elapsed": 45,
-      "horizon_used_pct": 4.1
+      "p_now": 0.601,
+      "drift": 0.201,
+      "path_pct": 51.8,
+      "days_elapsed": 46,
+      "horizon_used_pct": 4.2
     },
     {
       "id": "F-T-GLOBAL-QCOM-001@2026-09-26T10:30:00",
@@ -1163,15 +1165,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-28",
       "trigger_px": 184.87,
-      "px": 171.47,
+      "px": 173.53,
       "px_date": "2026-11-09",
-      "ret_since_pct": -15.1,
+      "ret_since_pct": -14.08,
       "to_entry_pct": null,
-      "p_now": 0.376,
-      "drift": -0.024,
-      "path_pct": 31.5,
-      "days_elapsed": 45,
-      "horizon_used_pct": 16.4
+      "p_now": 0.398,
+      "drift": -0.002,
+      "path_pct": 33.5,
+      "days_elapsed": 46,
+      "horizon_used_pct": 16.8
     },
     {
       "id": "F-T-INDO-ERAA-001@2026-09-26T10:30:00",
@@ -1197,15 +1199,15 @@
       "resolved_on": null,
       "triggered_on": "2026-10-12",
       "trigger_px": 525.0,
-      "px": 486.0,
+      "px": 484.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -19.0,
+      "ret_since_pct": -19.33,
       "to_entry_pct": null,
-      "p_now": 0.177,
-      "drift": -0.263,
-      "path_pct": 12.2,
-      "days_elapsed": 45,
-      "horizon_used_pct": 4.9
+      "p_now": 0.172,
+      "drift": -0.268,
+      "path_pct": 11.9,
+      "days_elapsed": 46,
+      "horizon_used_pct": 5.0
     },
     {
       "id": "F-T-INDO-MEDC-001@2026-09-12T12:38:42",
@@ -1231,15 +1233,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-14",
       "trigger_px": 1460.0,
-      "px": 1180.0,
+      "px": 1140.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -24.12,
+      "ret_since_pct": -26.69,
       "to_entry_pct": null,
-      "p_now": 0.278,
-      "drift": -0.142,
-      "path_pct": 19.5,
-      "days_elapsed": 59,
-      "horizon_used_pct": 5.4
+      "p_now": 0.24,
+      "drift": -0.18,
+      "path_pct": 16.5,
+      "days_elapsed": 60,
+      "horizon_used_pct": 5.5
     },
     {
       "id": "F-T-GLOBAL-TSM-001@2026-09-12T11:11:12",
@@ -1265,15 +1267,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-12",
       "trigger_px": 433.24,
-      "px": 388.62,
+      "px": 396.48,
       "px_date": "2026-11-09",
-      "ret_since_pct": -10.3,
+      "ret_since_pct": -8.48,
       "to_entry_pct": null,
-      "p_now": 0.519,
-      "drift": 0.019,
-      "path_pct": 45.7,
-      "days_elapsed": 59,
-      "horizon_used_pct": 21.5
+      "p_now": 0.559,
+      "drift": 0.059,
+      "path_pct": 49.7,
+      "days_elapsed": 60,
+      "horizon_used_pct": 21.9
     },
     {
       "id": "F-T-INDO-TINS-001@2026-09-12T10:41:20",
@@ -1299,13 +1301,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 3330.0,
+      "px": 3530.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -29.75,
-      "to_entry_pct": -75.4,
+      "ret_since_pct": -25.53,
+      "to_entry_pct": -76.8,
       "path_pct": 100,
-      "days_elapsed": 59,
-      "horizon_used_pct": 5.4
+      "days_elapsed": 60,
+      "horizon_used_pct": 5.5
     },
     {
       "id": "F-T-GLOBAL-AAPL-001@2026-09-12T10:38:09",
@@ -1331,15 +1333,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-12",
       "trigger_px": 332.27,
-      "px": 350.69,
+      "px": 348.51,
       "px_date": "2026-11-09",
-      "ret_since_pct": 5.54,
+      "ret_since_pct": 4.89,
       "to_entry_pct": null,
-      "p_now": 0.92,
-      "drift": 0.42,
-      "path_pct": 90.8,
-      "days_elapsed": 59,
-      "horizon_used_pct": 21.5
+      "p_now": 0.901,
+      "drift": 0.401,
+      "path_pct": 88.6,
+      "days_elapsed": 60,
+      "horizon_used_pct": 21.9
     },
     {
       "id": "F-T-GLOBAL-XOM-001@2026-09-05T10:23:19",
@@ -1365,15 +1367,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-05",
       "trigger_px": 159.47,
-      "px": 164.73,
+      "px": 164.47,
       "px_date": "2026-11-09",
-      "ret_since_pct": 3.3,
+      "ret_since_pct": 3.14,
       "to_entry_pct": null,
-      "p_now": 0.698,
-      "drift": 0.298,
-      "path_pct": 59.9,
-      "days_elapsed": 66,
-      "horizon_used_pct": 6.0
+      "p_now": 0.696,
+      "drift": 0.296,
+      "path_pct": 59.7,
+      "days_elapsed": 67,
+      "horizon_used_pct": 6.1
     },
     {
       "id": "F-T-GLOBAL-JPM-001@2026-09-05T10:23:00",
@@ -1399,15 +1401,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-05",
       "trigger_px": 358.64,
-      "px": 342.08,
+      "px": 342.07,
       "px_date": "2026-11-09",
       "ret_since_pct": -4.62,
       "to_entry_pct": null,
       "p_now": 0.492,
       "drift": 0.042,
       "path_pct": 44.8,
-      "days_elapsed": 66,
-      "horizon_used_pct": 6.0
+      "days_elapsed": 67,
+      "horizon_used_pct": 6.1
     },
     {
       "id": "F-T-INDO-KLBF-001@2026-09-02T13:45:00",
@@ -1433,15 +1435,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-02",
       "trigger_px": 775.0,
-      "px": 740.0,
+      "px": 750.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -4.52,
+      "ret_since_pct": -3.23,
       "to_entry_pct": null,
-      "p_now": 0.433,
-      "drift": 0.033,
-      "path_pct": 34.2,
-      "days_elapsed": 69,
-      "horizon_used_pct": 6.3
+      "p_now": 0.451,
+      "drift": 0.051,
+      "path_pct": 35.9,
+      "days_elapsed": 70,
+      "horizon_used_pct": 6.4
     },
     {
       "id": "F-T-GLOBAL-UNH-001@2026-09-02T13:43:33",
@@ -1467,15 +1469,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-02",
       "trigger_px": 397.14,
-      "px": 397.62,
+      "px": 405.12,
       "px_date": "2026-11-09",
-      "ret_since_pct": 0.12,
+      "ret_since_pct": 2.01,
       "to_entry_pct": null,
-      "p_now": 0.653,
-      "drift": 0.253,
-      "path_pct": 59.1,
-      "days_elapsed": 69,
-      "horizon_used_pct": 6.3
+      "p_now": 0.688,
+      "drift": 0.288,
+      "path_pct": 62.9,
+      "days_elapsed": 70,
+      "horizon_used_pct": 6.4
     },
     {
       "id": "F-T-GLOBAL-COST-001@2026-08-26T06:11:55",
@@ -1501,15 +1503,15 @@
       "resolved_on": null,
       "triggered_on": "2026-08-26",
       "trigger_px": 945.47,
-      "px": 1066.1801,
+      "px": 1066.14,
       "px_date": "2026-11-09",
-      "ret_since_pct": 12.77,
+      "ret_since_pct": 12.76,
       "to_entry_pct": null,
-      "p_now": 0.996,
-      "drift": 0.646,
-      "path_pct": 99.4,
-      "days_elapsed": 76,
-      "horizon_used_pct": 6.9
+      "p_now": 0.995,
+      "drift": 0.645,
+      "path_pct": 99.3,
+      "days_elapsed": 77,
+      "horizon_used_pct": 7.0
     },
     {
       "id": "F-T-GLOBAL-MUFG-001@2026-08-22T10:15:00",
@@ -1535,15 +1537,15 @@
       "resolved_on": null,
       "triggered_on": "2026-08-22",
       "trigger_px": 22.04,
-      "px": 21.7,
+      "px": 21.65,
       "px_date": "2026-11-09",
-      "ret_since_pct": -1.54,
+      "ret_since_pct": -1.77,
       "to_entry_pct": null,
-      "p_now": 0.515,
-      "drift": 0.095,
-      "path_pct": 43.3,
-      "days_elapsed": 80,
-      "horizon_used_pct": 7.3
+      "p_now": 0.512,
+      "drift": 0.092,
+      "path_pct": 43.0,
+      "days_elapsed": 81,
+      "horizon_used_pct": 7.4
     },
     {
       "id": "F-T-INDO-TOWR-001@2026-08-22T10:14:21",
@@ -1576,8 +1578,8 @@
       "p_now": 0.284,
       "drift": -0.196,
       "path_pct": 23.3,
-      "days_elapsed": 80,
-      "horizon_used_pct": 7.3
+      "days_elapsed": 81,
+      "horizon_used_pct": 7.4
     },
     {
       "id": "F-T-GLOBAL-TXN-002@2026-08-19T06:12:37",
@@ -1603,15 +1605,15 @@
       "resolved_on": null,
       "triggered_on": "2026-08-19",
       "trigger_px": 264.36,
-      "px": 295.73,
+      "px": 300.52,
       "px_date": "2026-11-09",
-      "ret_since_pct": 11.87,
+      "ret_since_pct": 13.68,
       "to_entry_pct": null,
-      "p_now": 0.65,
-      "drift": 0.45,
-      "path_pct": 59.1,
-      "days_elapsed": 83,
-      "horizon_used_pct": 30.3
+      "p_now": 0.682,
+      "drift": 0.482,
+      "path_pct": 62.5,
+      "days_elapsed": 84,
+      "horizon_used_pct": 30.7
     },
     {
       "id": "F-T-INDO-TAPG-001@2026-08-19T06:12:27",
@@ -1637,15 +1639,15 @@
       "resolved_on": null,
       "triggered_on": "2026-10-12",
       "trigger_px": 1765.0,
-      "px": 1905.0,
+      "px": 1900.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -2.81,
+      "ret_since_pct": -3.06,
       "to_entry_pct": null,
-      "p_now": 0.683,
-      "drift": 0.383,
-      "path_pct": 58.7,
-      "days_elapsed": 83,
-      "horizon_used_pct": 9.1
+      "p_now": 0.68,
+      "drift": 0.38,
+      "path_pct": 58.3,
+      "days_elapsed": 84,
+      "horizon_used_pct": 9.2
     },
     {
       "id": "F-T-GLOBAL-AMD-001@2026-08-19T06:11:48",
@@ -1672,15 +1674,15 @@
       "triggered_on": "2026-08-19",
       "trigger_px": 473.25,
       "resolved_px": 630.63,
-      "px": 508.58,
+      "px": 515.21,
       "px_date": "2026-11-09",
-      "ret_since_pct": 7.47,
+      "ret_since_pct": 8.87,
       "to_entry_pct": null,
       "p_now": 1.0,
       "drift": 0.58,
-      "path_pct": 58.3,
-      "days_elapsed": 83,
-      "horizon_used_pct": 30.3
+      "path_pct": 60.6,
+      "days_elapsed": 84,
+      "horizon_used_pct": 30.7
     },
     {
       "id": "F-T-INDO-DSNG-002@2026-08-19T06:10:00",
@@ -1707,15 +1709,15 @@
       "triggered_on": "2026-10-12",
       "trigger_px": 1300.0,
       "resolved_px": 1550.0,
-      "px": 1305.0,
+      "px": 1285.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -9.38,
+      "ret_since_pct": -10.76,
       "to_entry_pct": null,
       "p_now": 1.0,
       "drift": 0.72,
-      "path_pct": 74.0,
-      "days_elapsed": 83,
-      "horizon_used_pct": 7.6
+      "path_pct": 71.3,
+      "days_elapsed": 84,
+      "horizon_used_pct": 7.7
     },
     {
       "id": "F-T-INDO-ELSA-002@2026-08-05T06:11:38",
@@ -1741,15 +1743,15 @@
       "resolved_on": null,
       "triggered_on": "2026-08-10",
       "trigger_px": 685.0,
-      "px": 570.0,
+      "px": 560.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -19.72,
+      "ret_since_pct": -21.13,
       "to_entry_pct": null,
-      "p_now": 0.399,
-      "drift": 0.199,
-      "path_pct": 28.2,
-      "days_elapsed": 97,
-      "horizon_used_pct": 10.6
+      "p_now": 0.382,
+      "drift": 0.182,
+      "path_pct": 26.7,
+      "days_elapsed": 98,
+      "horizon_used_pct": 10.7
     },
     {
       "id": "F-T-GLOBAL-SMFG-002@2026-08-05T06:05:00",
@@ -1775,14 +1777,14 @@
       "resolved_on": null,
       "triggered_on": "2026-08-05",
       "trigger_px": 25.74,
-      "px": 24.28,
+      "px": 24.32,
       "px_date": "2026-11-09",
-      "ret_since_pct": -5.67,
+      "ret_since_pct": -5.52,
       "to_entry_pct": null,
-      "p_now": 0.59,
-      "drift": 0.34,
-      "path_pct": 52.9,
-      "days_elapsed": 97,
+      "p_now": 0.593,
+      "drift": 0.343,
+      "path_pct": 53.3,
+      "days_elapsed": 98,
       "horizon_used_pct": 8.9
     },
     {
@@ -1809,13 +1811,13 @@
       "resolved_on": null,
       "triggered_on": null,
       "trigger_px": null,
-      "px": 418.4,
+      "px": 417.8,
       "px_date": "2026-11-09",
-      "ret_since_pct": -9.36,
-      "to_entry_pct": -18.8,
+      "ret_since_pct": -9.49,
+      "to_entry_pct": -18.6,
       "path_pct": 100,
-      "days_elapsed": 115,
-      "horizon_used_pct": 10.5
+      "days_elapsed": 116,
+      "horizon_used_pct": 10.6
     },
     {
       "id": "F-T-GLOBAL-TXN-001@2026-07-11T14:36:51",
@@ -1841,15 +1843,15 @@
       "resolved_on": null,
       "triggered_on": "2026-07-13",
       "trigger_px": 284.02,
-      "px": 295.73,
+      "px": 300.52,
       "px_date": "2026-11-09",
-      "ret_since_pct": -5.05,
+      "ret_since_pct": -3.51,
       "to_entry_pct": null,
-      "p_now": 0.805,
-      "drift": 0.655,
-      "path_pct": 68.0,
-      "days_elapsed": 122,
-      "horizon_used_pct": 11.1
+      "p_now": 0.816,
+      "drift": 0.666,
+      "path_pct": 69.7,
+      "days_elapsed": 123,
+      "horizon_used_pct": 11.2
     },
     {
       "id": "F-T-INDO-ELSA-001@2026-07-11T14:34:28",
@@ -1875,15 +1877,15 @@
       "resolved_on": null,
       "triggered_on": "2026-09-28",
       "trigger_px": 630.0,
-      "px": 570.0,
+      "px": 560.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -12.98,
+      "ret_since_pct": -14.5,
       "to_entry_pct": null,
-      "p_now": 0.441,
-      "drift": 0.221,
-      "path_pct": 34.6,
-      "days_elapsed": 122,
-      "horizon_used_pct": 11.1
+      "p_now": 0.418,
+      "drift": 0.198,
+      "path_pct": 32.6,
+      "days_elapsed": 123,
+      "horizon_used_pct": 11.2
     },
     {
       "id": "F-T-INDO-PNBN-001@2026-07-11T14:32:10",
@@ -1909,15 +1911,15 @@
       "resolved_on": null,
       "triggered_on": "2026-07-11",
       "trigger_px": 880.0,
-      "px": 725.0,
+      "px": 720.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": -17.61,
+      "ret_since_pct": -18.18,
       "to_entry_pct": null,
-      "p_now": 0.551,
-      "drift": 0.251,
-      "path_pct": 44.9,
-      "days_elapsed": 122,
-      "horizon_used_pct": 22.3
+      "p_now": 0.543,
+      "drift": 0.243,
+      "path_pct": 44.1,
+      "days_elapsed": 123,
+      "horizon_used_pct": 22.5
     },
     {
       "id": "F-T-INDO-DSNG-001@2026-07-11T14:31:36",
@@ -1944,15 +1946,15 @@
       "triggered_on": "2026-07-11",
       "trigger_px": 1170.0,
       "resolved_px": 1690.0,
-      "px": 1305.0,
+      "px": 1285.0,
       "px_date": "2026-11-09",
-      "ret_since_pct": 11.54,
+      "ret_since_pct": 9.83,
       "to_entry_pct": null,
       "p_now": 1.0,
       "drift": 0.67,
-      "path_pct": 65.3,
-      "days_elapsed": 122,
-      "horizon_used_pct": 13.4
+      "path_pct": 63.3,
+      "days_elapsed": 123,
+      "horizon_used_pct": 13.5
     },
     {
       "id": "F-T-GLOBAL-NVO-001@2026-07-11T14:29:14",
@@ -1978,15 +1980,15 @@
       "resolved_on": null,
       "triggered_on": "2026-07-27",
       "trigger_px": 47.08,
-      "px": 41.38,
+      "px": 40.7,
       "px_date": "2026-11-09",
-      "ret_since_pct": -16.37,
+      "ret_since_pct": -17.74,
       "to_entry_pct": null,
-      "p_now": 0.648,
-      "drift": 0.448,
-      "path_pct": 47.7,
-      "days_elapsed": 122,
-      "horizon_used_pct": 11.1
+      "p_now": 0.636,
+      "drift": 0.436,
+      "path_pct": 46.5,
+      "days_elapsed": 123,
+      "horizon_used_pct": 11.2
     },
     {
       "id": "F-T-GLOBAL-SMFG-001@2026-07-11T14:28:13",
@@ -2012,15 +2014,15 @@
       "resolved_on": null,
       "triggered_on": "2026-07-11",
       "trigger_px": 25.74,
-      "px": 24.28,
+      "px": 24.32,
       "px_date": "2026-11-09",
-      "ret_since_pct": -5.67,
+      "ret_since_pct": -5.52,
       "to_entry_pct": null,
-      "p_now": 0.468,
-      "drift": 0.118,
-      "path_pct": 40.8,
-      "days_elapsed": 122,
-      "horizon_used_pct": 11.1
+      "p_now": 0.471,
+      "drift": 0.121,
+      "path_pct": 41.1,
+      "days_elapsed": 123,
+      "horizon_used_pct": 11.2
     }
   ],
   "macro_calls": [
@@ -2110,16 +2112,16 @@
         "ticker": "ERAA.JK",
         "name": "Erajaya Swasembada",
         "book": "INDO",
-        "px": 486.0,
+        "px": 484.0,
         "target": 960.0,
         "kill": 420.0,
         "p_analyst": 0.44,
         "p_base": 0.44,
         "p_house": 0.44,
-        "up_pct": 97.5,
-        "down_pct": -13.6,
-        "ev_house_pct": 45.7,
-        "ev_house_ann_pct": 17.2,
+        "up_pct": 98.3,
+        "down_pct": -13.2,
+        "ev_house_pct": 46.3,
+        "ev_house_ann_pct": 17.4,
         "ev_analyst_pct": 26.7,
         "years_left": 2.38,
         "status": "OPEN",
@@ -2131,16 +2133,16 @@
         "ticker": "PTBA.JK",
         "name": "Bukit Asam",
         "book": "INDO",
-        "px": 2970.0,
+        "px": 2940.0,
         "target": 4842.0,
         "kill": 2488.0,
         "p_analyst": 0.42,
         "p_base": 0.42,
         "p_house": 0.42,
-        "up_pct": 63.0,
-        "down_pct": -16.2,
-        "ev_house_pct": 51.8,
-        "ev_house_ann_pct": 15.1,
+        "up_pct": 64.7,
+        "down_pct": -15.4,
+        "ev_house_pct": 53.0,
+        "ev_house_ann_pct": 15.5,
         "ev_analyst_pct": 49.7,
         "years_left": 2.96,
         "status": "OPEN",
@@ -2148,43 +2150,43 @@
         "stance": "ADD"
       },
       {
-        "thesis_id": "T-INDO-JPFA-001",
-        "ticker": "JPFA.JK",
-        "name": "Japfa Comfeed Indonesia",
-        "book": "INDO",
-        "px": 1500.0,
-        "target": 2450.0,
-        "kill": 1125.0,
-        "p_analyst": 0.44,
-        "p_base": 0.44,
-        "p_house": 0.44,
-        "up_pct": 63.3,
-        "down_pct": -25.0,
-        "ev_house_pct": 31.9,
-        "ev_house_ann_pct": 11.8,
-        "ev_analyst_pct": 30.7,
-        "years_left": 2.47,
-        "status": "OPEN",
-        "to_entry_pct": null,
-        "stance": "HOLD"
-      },
-      {
         "thesis_id": "T-INDO-MEDC-001",
         "ticker": "MEDC.JK",
         "name": "Medco Energi Internasional",
         "book": "INDO",
-        "px": 1180.0,
+        "px": 1140.0,
         "target": 2250.0,
         "kill": 920.0,
         "p_analyst": 0.42,
         "p_base": 0.42,
         "p_house": 0.42,
-        "up_pct": 90.7,
-        "down_pct": -22.0,
-        "ev_house_pct": 35.2,
-        "ev_house_ann_pct": 11.2,
+        "up_pct": 97.4,
+        "down_pct": -19.3,
+        "ev_house_pct": 39.6,
+        "ev_house_ann_pct": 12.5,
         "ev_analyst_pct": 15.0,
-        "years_left": 2.84,
+        "years_left": 2.83,
+        "status": "OPEN",
+        "to_entry_pct": null,
+        "stance": "HOLD"
+      },
+      {
+        "thesis_id": "T-INDO-JPFA-001",
+        "ticker": "JPFA.JK",
+        "name": "Japfa Comfeed Indonesia",
+        "book": "INDO",
+        "px": 1490.0,
+        "target": 2450.0,
+        "kill": 1125.0,
+        "p_analyst": 0.44,
+        "p_base": 0.44,
+        "p_house": 0.44,
+        "up_pct": 64.4,
+        "down_pct": -24.5,
+        "ev_house_pct": 32.6,
+        "ev_house_ann_pct": 12.1,
+        "ev_analyst_pct": 30.7,
+        "years_left": 2.47,
         "status": "OPEN",
         "to_entry_pct": null,
         "stance": "HOLD"
@@ -2194,16 +2196,16 @@
         "ticker": "GJTL.JK",
         "name": "GJTL.JK",
         "book": "INDO",
-        "px": 1100.0,
+        "px": 1115.0,
         "target": 2300.0,
         "kill": 605.0,
         "p_analyst": 0.4,
         "p_base": 0.4,
         "p_house": 0.4,
-        "up_pct": 109.1,
-        "down_pct": -45.0,
-        "ev_house_pct": 36.4,
-        "ev_house_ann_pct": 10.9,
+        "up_pct": 106.3,
+        "down_pct": -45.7,
+        "ev_house_pct": 34.9,
+        "ev_house_ann_pct": 10.5,
         "ev_analyst_pct": 22.2,
         "years_left": 2.99,
         "status": "OPEN",
@@ -2215,16 +2217,16 @@
         "ticker": "SMSM.JK",
         "name": "SMSM.JK",
         "book": "INDO",
-        "px": 1645.0,
+        "px": 1610.0,
         "target": 2300.0,
         "kill": 1200.0,
         "p_analyst": 0.4,
         "p_base": 0.4,
         "p_house": 0.4,
-        "up_pct": 39.8,
-        "down_pct": -27.1,
-        "ev_house_pct": 23.7,
-        "ev_house_ann_pct": 7.4,
+        "up_pct": 42.9,
+        "down_pct": -25.5,
+        "ev_house_pct": 25.9,
+        "ev_house_ann_pct": 8.0,
         "ev_analyst_pct": 9.2,
         "years_left": 2.99,
         "status": "OPEN",
@@ -2236,20 +2238,20 @@
         "ticker": "AVIA.JK",
         "name": "Avia Avian",
         "book": "INDO",
-        "px": 304.0,
+        "px": 298.0,
         "target": 386.4,
         "kill": 250.0,
         "p_analyst": 0.4,
         "p_base": 0.4,
         "p_house": 0.4,
-        "up_pct": 27.1,
-        "down_pct": -17.8,
-        "ev_house_pct": 23.7,
-        "ev_house_ann_pct": 7.4,
+        "up_pct": 29.7,
+        "down_pct": -16.1,
+        "ev_house_pct": 25.8,
+        "ev_house_ann_pct": 8.0,
         "ev_analyst_pct": 9.7,
-        "years_left": 2.99,
-        "status": "AWAITING_ENTRY",
-        "to_entry_pct": -1.1,
+        "years_left": 2.98,
+        "status": "OPEN",
+        "to_entry_pct": null,
         "stance": "HOLD"
       },
       {
@@ -2257,20 +2259,20 @@
         "ticker": "AKRA.JK",
         "name": "AKR Corporindo",
         "book": "INDO",
-        "px": 1340.0,
+        "px": 1275.0,
         "target": 1490.0,
         "kill": 860.0,
         "p_analyst": 0.55,
         "p_base": 0.55,
         "p_house": 0.55,
-        "up_pct": 11.2,
-        "down_pct": -35.8,
-        "ev_house_pct": 7.7,
-        "ev_house_ann_pct": 3.1,
+        "up_pct": 16.9,
+        "down_pct": -32.5,
+        "ev_house_pct": 12.3,
+        "ev_house_ann_pct": 4.8,
         "ev_analyst_pct": 29.21,
         "years_left": 2.47,
         "status": "AWAITING_ENTRY",
-        "to_entry_pct": -17.8,
+        "to_entry_pct": -13.6,
         "stance": "TRIM"
       },
       {
@@ -2278,20 +2280,20 @@
         "ticker": "NVO",
         "name": "Novo Nordisk (ADR)",
         "book": "GLOBAL",
-        "px": 41.38,
+        "px": 40.7,
         "target": 57.21,
         "kill": 16.59,
         "p_analyst": 0.28,
         "p_base": 0.28,
         "p_house": 0.28,
-        "up_pct": 38.3,
-        "down_pct": -59.9,
-        "ev_house_pct": -20.4,
-        "ev_house_ann_pct": -7.6,
+        "up_pct": 40.6,
+        "down_pct": -59.2,
+        "ev_house_pct": -19.3,
+        "ev_house_ann_pct": -7.1,
         "ev_analyst_pct": 28.0,
-        "years_left": 2.9,
+        "years_left": 2.89,
         "status": "AWAITING_ENTRY",
-        "to_entry_pct": -40.3,
+        "to_entry_pct": -39.3,
         "stance": "EXIT"
       }
     ],
@@ -2304,30 +2306,30 @@
         "lines": []
       },
       "INDO": {
-        "exp_12m_return_pct": 7.06,
+        "exp_12m_return_pct": 7.15,
         "coverage_pct": 100.0,
-        "cash_weight_pct": 80.9,
+        "cash_weight_pct": 81.2,
         "rf_annual_pct": 5.5,
         "lines": [
           {
             "ticker": "ERAA.JK",
-            "weight_pct": 4.28,
-            "ev_house_ann_pct": 17.2
+            "weight_pct": 4.27,
+            "ev_house_ann_pct": 17.4
           },
           {
             "ticker": "JPFA.JK",
-            "weight_pct": 4.77,
-            "ev_house_ann_pct": 11.8
+            "weight_pct": 4.75,
+            "ev_house_ann_pct": 12.1
           },
           {
             "ticker": "MEDC.JK",
-            "weight_pct": 5.3,
-            "ev_house_ann_pct": 11.2
+            "weight_pct": 5.13,
+            "ev_house_ann_pct": 12.5
           },
           {
             "ticker": "PTBA.JK",
-            "weight_pct": 4.72,
-            "ev_house_ann_pct": 15.1
+            "weight_pct": 4.68,
+            "ev_house_ann_pct": 15.5
           }
         ]
       }
