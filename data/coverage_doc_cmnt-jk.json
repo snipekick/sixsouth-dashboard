@@ -1,0 +1,2743 @@
+{
+  "schema": 1,
+  "ticker": "CMNT.JK",
+  "code": "CMNT",
+  "name": "PT Cemindo Gemilang Tbk",
+  "desk": "BASIC_MATERIALS",
+  "industry": "CEMENT",
+  "industry_name": "Cement & building materials",
+  "report": {
+    "ticker": "CMNT.JK",
+    "frontmatter": {
+      "ticker": "CMNT.JK",
+      "report_type": "initiation",
+      "version": 1,
+      "title": "Cemindo Gemilang \u2014 a scarcity premium wrapped around a levered, loss-making cement book",
+      "summary": "Initiate at SELL. The cement business is real and the clinker-export niche works, but the equity sits behind IDR8,339.0bn of net debt, earns nothing through the price war and is priced at 5.3 times today's fundamental value. Even the HSC regime lens, which lets part of the scarcity premium persist, gives a target below the market price.",
+      "thesis": [
+        "The operating story is credible: integrated cement in Indonesia and Vietnam, a working clinker-export channel of 3.8 Mt Mt and volume of 7.8 Mt Mt in FY2025A, with no new kilns needed to fill the forecast [S6][S7].",
+        "The balance sheet is the problem. Net debt of IDR8,339.0bn is 5.5x restated EBITDA, finance costs of IDR655.5bn consume most of operating profit, and the company breached several covenants in FY2025A before a waiver [S3][S7].",
+        "Our fundamental value is Rp160 a share against a price of Rp730. The DCF gives Rp124; the P/B cross-check gives Rp43 and EV/EBITDA returns nil because net debt exceeds the peer multiple times EBITDA [S0][S3].",
+        "The HSC overlay keeps part of the premium: with 40% of the log gap closed in the base regime case, the overlay target is Rp501, still -31.4% versus the price [S10][S12][S13].",
+        "What would change the call is deleveraging, not demand: an equity raise, an asset sale, or a sustained coal and price recovery that lifts EBITDA above the interest bill. None is in the filings yet [S3][S4]."
+      ],
+      "catalysts": [
+        {
+          "date": "2026-11-02",
+          "event": "HSC names were removed from the IHSG calculation from this date, cutting passive demand for concentrated-ownership stocks",
+          "source": "S12"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "First free-float step (to the intermediate threshold) falls due under the exchange rule",
+          "source": "S14"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "FY2026 audited results \u2014 the first full year of the Zero ODOL regime and of the current coal price",
+          "source": "S8"
+        },
+        {
+          "date": "2027-06-30",
+          "event": "MSCI decides on Standalone status for Indonesia; a negative outcome removes the remaining index bid",
+          "source": "S13"
+        }
+      ],
+      "desk": "BASIC_MATERIALS",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-12"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "We initiate Cemindo Gemilang at SELL with a twelve-month target of Rp501, against a last price of Rp730 \u2014 a total return of -31.4%. The target is not a bear-case number: it already lets the company keep a large part of the scarcity premium that the market has attached to its shares. Our fundamental value is Rp160, less than half the market price, and the gap between the two is the whole investment question."
+          },
+          {
+            "type": "para",
+            "text": "The company is a mid-sized integrated cement producer with Indonesian capacity of 11.4 Mt Mt of cement and Vietnamese capacity of 5.0 Mt Mt through Chinfon, selling under the Semen Merah Putih brand and exporting clinker at scale [S6][S7]. Operationally it did what it said: it grew volume to 7.8 Mt Mt in FY2025A and lifted revenue to IDR8,976.1bn, with restated EBITDA of IDR1,512.7bn [S3][S7]. The problem is what sits underneath: net debt of IDR8,339.0bn, a finance-cost line of IDR655.5bn and a net loss attributable to shareholders of IDR-150.3bn [S3]."
+          },
+          {
+            "type": "para",
+            "text": "The market is not paying for those cash flows. At Rp730 the shares are valued at IDR12,501.6bn, which is 13.7x our FY2026E EBITDA once net debt is added \u2014 a multiple for a business with surplus capacity, no pricing power and a covenant waiver in force [S3][S7]. The premium exists because the free float is only 10.6% and the controlling shareholder holds 89.1% of the shares, so the stock is a scarcity asset on the exchange's high-shareholding-concentration list, not a liquid claim on cement earnings [S10][S15]."
+          },
+          {
+            "type": "para",
+            "text": "That is why the konglo lens matters here even though the company is not a family conglomerate: the overlay treats the gap between price and value as a regime variable. It lets part of the premium persist, with 40% of the log gap closed in the base regime case, and still produces Rp501 \u2014 below the current price [S13][S14]. The bear regime case, where the free-float overhang bites, is Rp223; the bull case, where a sell-down fixes the float and the premium is allowed to expand, is Rp914."
+          },
+          {
+            "type": "para",
+            "text": "Two things move the value from here. First, refinancing: the debt is dollar-heavy, the rupiah path in the macro deck runs from 16,448 to 19,000 per dollar, and FX losses were a large part of the FY2025A loss [S3]. Second, the price war: national utilisation is 51.0% per cent against capacity of 122 Mt Mt and consumption of 66.0 Mt Mt, and the industry itself expects only modest growth next year [S8][S9]. We see no evidence that either improves fast enough to justify the current equity value."
+          },
+          {
+            "type": "background",
+            "text": "Cement is a commoditised, capital-intensive business in which the cheapest producer with the best\nlogistics position wins, and in which demand is a derivative of construction activity rather than of\nconsumer taste. Scale matters because kilns are expensive and idle kilns still depreciate. That is the\nlens through which every number in this report should be read."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Cemindo Gemilang is an integrated cement producer. It quarries limestone, burns clinker and grinds cement, and sells bagged and bulk cement in Indonesia under the Semen Merah Putih brand, with an additional integrated operation in Vietnam through Chinfon [S6][S7]. The Indonesian footprint is 11.4 Mt Mt of cement capacity with its own clinker kilns, split between plants in Banten, East Java and North Sumatra, and the Vietnamese operation adds 5.0 Mt Mt of cement and its own clinker line [S6]. Group employment is 3,888 people [S0]."
+          },
+          {
+            "type": "para",
+            "text": "The revenue model is volume times realised price. FY2025A revenue of IDR8,976.1bn on cement sales of 7.8 Mt Mt implies a blended revenue per tonne well below bagged-cement list prices, because the mix includes clinker exports, which carry a lower price per tonne than bagged cement [S3][S7]. Volumes fell only marginally from 7.9 Mt Mt in FY2024A, but the mix shifted toward export clinker, which reached 3.8 Mt Mt in FY2025A and is now a material second channel [S7]."
+          },
+          {
+            "type": "para",
+            "text": "The cost structure is dominated by coal. The kilns consumed 1.8 Mt Mt of coal in FY2025A against diesel use of only a small fraction of that energy, so the ICI4 coal index is the single most important input price in the model [S7]. Power, limestone, packaging and freight follow. Because the industry is in a price war, the company can pass through only part of a coal move: in 9M2026 revenue rose substantially on volume and price while the gross margin fell, which tells us the pass-through is partial [S4][S5]."
+          },
+          {
+            "type": "para",
+            "text": "Strategically, management is doing the two things available to a sub-scale producer in an oversupplied market. It is pushing clinker exports to absorb kiln capacity that Indonesian demand cannot use, and it is investing in alternative fuels and a lower-carbon product mix to defend the cost and ESG position [S7]. There is no new Indonesian kiln in the plan, which is the right capital-allocation call when national utilisation is 51.0% per cent [S6][S7]. The strategy is credible; the constraint is that export clinker is a low-margin, freight-exposed business and does not fix the domestic price war."
+          },
+          {
+            "type": "para",
+            "text": "The group is controlled by WH Investments, whose beneficial owner is Martua Sitorus, with 89.1% of the shares held by insiders and a free float of only 10.6% [S7]. The company listed in 2021 and has not paid a dividend since [S7]. In the Indonesian market, Cemindo is a challenger rather than a leader: the industry is dominated by the state-linked and Sinar Mas producers, and Cemindo's share of national capacity is in the single digits [S6][S9]. Its competitive position rests on vertical integration, a coastal plant and the export channel, not on scale or brand pricing power."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesian cement is a structurally oversupplied industry. Installed national capacity is 122 Mt Mt against domestic consumption of about 66.0 Mt Mt, which puts utilisation at 51.0% per cent and leaves roughly half the kilns idle [S6][S9]. The consequence is a price war that producers themselves describe as unavoidable: when demand grows more slowly than capacity, the only way to win volume is to cut price, and the industry's own projections for 2027 are only around two to three per cent volume growth [S8][S9]. The 9M2026 market grew faster, at 8.3% per cent year on year, but that follows a weak FY2025A and is not enough to absorb the surplus [S5]."
+          },
+          {
+            "type": "para",
+            "text": "Demand is a function of construction. Private housing, government infrastructure and the new housing programme are the swing factors, and the 2027 outlook explicitly depends on the Asta Cita programme being spent [S8]. The industry also faces two cost shocks in 2027: the Zero Over Dimension Over Loading (ODOL) regime, which raises road-freight costs by restricting truck loads, and higher energy and labour costs [S8]. Both push up delivered cost in a market where price is set by the marginal idle kiln, so neither can be fully recovered."
+          },
+          {
+            "type": "para",
+            "text": "The cost curve is set by coal and by kiln efficiency. The coal deck has ICI4 at 40.6 in FY2025A, 62.0 in FY2026E and 46.0 in the long run, so the input cost spike is expected to fade but not disappear [S0]. Cemindo's kilns are mid-curve: it has captive limestone and its own clinker, but it is not the lowest-cost producer and it buys coal at index-linked prices. In a price war, the cost curve decides who survives; Cemindo's margin of safety is thin."
+          },
+          {
+            "type": "para",
+            "text": "Currency is a second industry variable. Cement inputs and dollar debt are priced off the dollar, while revenue is in rupiah, and the build-up in the macro deck takes the rupiah from 16,448 in FY2025A to 19,000 long run [S0][S3]. For a company with dollar borrowings, that is a recurring translational and transactional cost, and it shows up in the other non-operating line rather than in operating margin [S3]."
+          },
+          {
+            "type": "para",
+            "text": "Competitive position is weak on the five-forces test. Rivalry is intense and price-based; buyer power is high because cement is undifferentiated and contractors multi-source; supplier power is moderate but coal and freight are index-priced; the threat of new capacity is low only because returns are already poor; and substitutes are limited but slow. The one genuine barrier is capital and permitting, which protects incumbents from new entrants but not from each other. Cemindo's counter is the export channel and vertical integration, which improve utilisation but do not create pricing power [S6][S7]."
+          },
+          {
+            "type": "background",
+            "text": "The cement industry is a textbook example of a capacity game: when demand is below kiln capacity, the\nmarginal producer sets the price at its variable cost, and everyone above it on the cost curve earns a\nreturn below the cost of capital until capacity is retired. Consolidation is the usual cure, but it\nrequires either bankruptcy or a willing seller, and in markets with state-owned producers it can take\na decade."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The reported history is one of a business that survived the down-cycle without earning its cost of capital. Revenue was IDR9,687.1bn in FY2022A, IDR9,612.8bn in FY2023A, IDR8,857.3bn in FY2024A and IDR8,976.1bn in FY2025A, so the top line has been roughly flat for four years while volumes and the export mix moved underneath it [S3]. Restated EBITDA was IDR1,193.3bn, IDR1,063.1bn, IDR1,213.8bn and IDR1,512.7bn respectively, a margin of 16.9% in FY2025A [S3][S7]. Gross margin fell from 26.0% in FY2022A to 19.7% in FY2024A and recovered to 21.7% in FY2025A, which is the price war in one line [S3]."
+          },
+          {
+            "type": "para",
+            "text": "The data pack's depreciation line is wrong and we restated it. The pack shows a D&A charge that is a small fraction of the actual IDR773.9bn in the FY2025A financial statements, because Indonesian filings use the direct cash-flow method and the data vendor picks up only part of the charge [S0][S3]. We took depreciation, amortisation and depletion from the LK notes as facts for FY2025A and FY2024A, and the engine rebuilds EBITDA from them. That is why our restated EBITDA of IDR1,512.7bn is materially higher than the pack's figure, and why every leverage ratio in this report is computed on the restated number. It also means the reported operating profit of IDR738.8bn is the right starting point for the DCF, not the pack's [S3][S7]."
+          },
+          {
+            "type": "para",
+            "text": "Below the operating line the picture deteriorates. Finance costs were IDR655.5bn, interest income IDR41.7bn, and other non-operating items IDR-248.6bn, driven by FX losses on dollar debt and associate losses [S3]. Pre-tax profit was therefore IDR-123.7bn and the attributable net loss IDR-150.3bn, despite positive EBITDA. The company breached several financial covenants in FY2025A \u2014 net debt to EBITDA, current ratio, working-capital coverage and consolidated debt to equity \u2014 and obtained a waiver [S7]. That is the single most important fact in the credit story: the lenders, not the board, set the boundary conditions on strategy until the balance sheet is repaired."
+          },
+          {
+            "type": "para",
+            "text": "Cash generation is better than the loss suggests, but only because of working capital. FY2025A free cash flow to the firm was IDR795.1bn on capex of IDR513.4bn and a working-capital release, with operating working capital at IDR-1,358.1bn \u2014 negative, because related-party customer prepayments fund the business [S3]. That is a genuine source of liquidity, but it is also a governance exposure: the largest related party, Aastar Trading, accounts for 27.0 per cent of sales (IDR2,424.8bn) and is owed IDR811.3bn of trade payables by the company [S3]. Related-party liabilities of that size mean the company's working capital depends on a counterparty connected to its controlling shareholder, which we treat as a structure flag rather than as a source of value."
+          },
+          {
+            "type": "para",
+            "text": "Capital allocation has been defensive: capex of IDR513.4bn is below D&A, there is no dividend, and the priority is servicing IDR8,339.0bn of net debt [S3][S7]. Payout is therefore zero in our forecast. The tax charge is a deferred item on a loss, so cash tax is not a material drag in the near term [S3]."
+          },
+          {
+            "type": "para",
+            "text": "Our forecast is built on the company's own plan and the last actual, not on a recovery we cannot source. Volume goes from 8.4 Mt in FY2026E to 9.6 Mt in FY2030E \u2014 16.2% revenue growth in FY2026E, then below market until the spare kilns fill \u2014 on existing Indonesian and Vietnamese capacity and no new kilns [S5][S6][S8]. The FY2026E calibration starts from the 9M2026 actual, not from a rounding: nine-month revenue was IDR7,472.9bn, up 8.3% on a domestic market that grew the same amount, and the company attributes the growth to volume without disclosing the percentage [S5]. We therefore set volume at market growth and let price carry the residual, 1,234,000 rupiah per tonne, rather than assuming an unsourced volume split; FY2026E revenue of IDR10,427.3bn means Q4 2026 holds the nine-month run-rate instead of stepping down. Price then grows 1,234,000 to 1,324,000 \u2014 below CPI, because the price war does not allow real recovery [S8][S9]."
+          },
+          {
+            "type": "para",
+            "text": "The revenue denominator needs one warning. The annual report's product table gives cement sales of 4.5 Mt Mt in Indonesia, export cement of 0.0 Mt Mt, domestic clinker of 0.2 Mt Mt and export clinker of 3.8 Mt Mt, so total revenue-bearing tonnage is close to twelve million tonnes and the blended realised price is far below the price per tonne of cement. The model's price is total revenue per cement tonne, which embeds the clinker channel; applying cement volume growth to it implicitly grows clinker tonnage at the same rate. If clinker exports were held flat, FY2026E revenue would be about a fortieth lower. We keep the higher figure because clinker exports grew in FY2025, the spare kilns support more export volume, and it is the only split that reconciles to the nine-month actual [S7]."
+          },
+          {
+            "type": "para",
+            "text": "Gross margin is held at the FY2025A actual of 21.7% at base input costs; the coal link then moves the reported margin from 18.4% in FY2026E to 20.7% in FY2030E as ICI4 falls from 62.0 to 46.0 [S0][S7]. The whole of the gap between the FY2026E margin and the FY2025A actual is the coal link: the model prices the current ICI4 level against the FY2025 average, which is why FY2026E EBITDA margin of 14.8% sits below the FY2025A 16.9% on only a modest price recovery. Revenue rises to IDR10,427.3bn in FY2026E and IDR12,710.4bn in FY2030E; EBITDA rises from IDR1,541.5bn to IDR2,201.7bn; net debt falls only slowly, from IDR8,344.1bn to IDR6,667.5bn, because free cash flow is consumed by interest and capex [S0]."
+          },
+          {
+            "type": "para",
+            "text": "The near-term earnings path stays negative. We forecast an attributable loss of IDR-380.0bn in FY2026E, reflecting not only the operating result but the 9M2026 other non-operating charge carried at its run-rate: the nine-month FX loss alone was IDR292.8bn and associates added a further loss, so IDR-390.0bn is the FY2026E assumption rather than a smaller full-year number [S5]. FY2026E pre-tax profit is IDR-380.0bn. A small profit returns in FY2027E and a meaningful one only by FY2029E, as the coal cost normalises and volume grows into the fixed cost base [S3][S7]. Leverage falls from 5.4x to 3.0x by FY2030E \u2014 still above the level at which a cyclical cement company should be comfortable."
+          },
+          {
+            "type": "para",
+            "text": "Tax is modelled as cash tax rather than the statutory rate. FY2025 carried a loss and booked no current tax, only a deferred charge, and 9M2026 pre-tax profit was negative with no current tax; with Indonesian losses carrying five years, the forecast pays no cash tax in FY2026E or FY2027E and a partial rate in FY2028 before the full statutory rate from FY2029 [S3][S4]. Capex is the audited 5.5% of revenue through FY2028 and then steps to 9.5% in the terminal year. That step is our assumption, not company guidance: the LK shows depreciation running above capex, and a perpetuity that grows revenue on a shrinking asset base would assume net disinvestment for ever, so the terminal value must fund replacement of the asset base plus the net investment behind growth [S7][S9]. For comparability, the FY2022A and FY2023A EBITDA figures in this section are the data pack's, not restated for D&A as FY2024A and FY2025A are; only the last two years are on the audited depreciation charge and the four-year through-cycle read should be taken from the last two audited years [S0][S3]."
+          },
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Cement is a cyclical, capital-intensive industry, so the primary method must be a through-cycle cash flow model with an explicit cost of capital and a terminal value that does not capitalise a peak margin. We use a five-year FCFF DCF as the primary method at four fifths of the weight. The cross-check is P/B at a fifth, using the peer median multiple on the last reported book value; the fixed assets are carried at cost, not revalued, so book value is a usable anchor for a loss-making producer [S3]. EV/EBITDA is weighted at zero rather than used as a cross-check: the engine's multiple is the peer median LTM figure, struck in a price-war year, and applying a current-year multiple to a leveraged cyclical is the procyclical error the commodity-cyclical method forbids. At that multiple net debt exceeds the multiple times EBITDA and the method returns a nil equity value, so a fifth weight would have asserted a probability of zero equity, not a valuation [S9][S0]."
+          },
+          {
+            "type": "para",
+            "text": "The cost of capital is built from the house parameters and the company's own leverage. The risk-free rate is 7.4%, the mature-market equity risk premium 4.2%, the country risk premium 2.5% and the default spread 1.6%. With an unlevered beta of 0.90 and a debt-to-equity ratio of 0.73, the levered beta is 1.41, giving a cost of equity of 15.3%. The pre-tax cost of debt is 9.4% and the tax rate 22.0%. The resulting WACC is 11.9%, with equity at 57.9% and debt at 42.1% of the capital structure [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "The DCF produces an enterprise value of IDR10,805.0bn and an equity value of Rp124 per share. Terminal value is 62.6% of the total, below the usual level for a five-year model of a long-lived asset because the terminal cash flow is now struck on a sustainable capex: FY2030E capex is IDR1,207.5bn against D&A of IDR1,095.6bn, so the perpetuity reinvests rather than disinvesting, and FY2030E FCFF of IDR823.6bn sits below NOPAT [S0]. The terminal growth rate is 4.0%, below nominal GDP, with growth coming from price inflation and filling spare capacity rather than new kilns [S9]. The enterprise value is about seven times our FY2026E EBITDA, which is a fair multiple for a mid-cost producer in an oversupplied market, not a distressed one [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "The P/B cross-check is conservative and we do not hide it. At the peer median multiple of 0.33 times book value it gives Rp43 a share \u2014 the price war's view of a loss-making, levered producer, applied to book value at cost. The EV/EBITDA cross-check is brutal: at the peer median LTM multiple the implied equity value is negative, because net debt plus minorities exceeds the multiple times EBITDA, and the engine floors it at nil. That is not a modelling artefact; it is the arithmetic of a leveraged cyclical at trough multiples, and it is why we weight it at zero rather than let a floored method drag the blend. Our policy on cross-checks is the same for every name on the desk: a method is dropped only when it fails a stated test \u2014 it returns a floored or nil equity value, or its multiple is struck on a single extreme year \u2014 and any method that is merely *lower* than the DCF is kept with its divergence explained. That is why P/B stays at a fifth even though it sits far below the DCF, and why the engine's EV/EBITDA is the one we drop: at the peer median it returns nil equity, which is a floor, not a valuation [S0][S9]."
+          },
+          {
+            "type": "para",
+            "text": "On the stated basis the numbers are these. The method blend is Rp108 today \u2014 80% DCF at Rp124 and 20% P/B at Rp43 \u2014 rolled forward one year to Rp125 in the base case. Probability-weighting the three scenarios (50% base at Rp125, 25% bear at Rp10, 25% bull at Rp381) gives Rp160 rolled forward, which is above both methods because the bull case carries a quarter of the weight; that probability-weighted figure, not the blend, is what the konglo multiplier is applied to. The P/BV divergence from the primary DCF is large and we keep it visible rather than averaging it away: the P/BV value is what a peer median multiple of a price-war year says, the DCF is what the cash flows say, and a fifth of the weight is enough to discipline the DCF without letting a trough multiple set the target."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "para",
+            "text": "The sensitivity table shows what has to be true for the DCF to reach the market price. A one-percentage- point change in WACC or terminal growth moves the value by a few tens of rupiah per share, not by the hundreds needed; the value is far more sensitive to the EBITDA margin and to the debt level than to the discount rate [S0]. In other words, the market is not disputing our cost of capital \u2014 it is pricing a different asset, one with a scarcity premium attached."
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "The konglo lens then sets the twelve-month price rather than the fundamental value. Cemindo is on the exchange's high-shareholding-concentration list [S10], its free float of 10.6% on the exchange registry mirror of 11 November 2026 is below the minimum with a step to 12.5% due by 31 March 2027 [S15][S14], the stock has been excluded from the IHSG calculation since 2 November 2026 [S12], and MSCI has frozen Indonesian index increases and opened a consultation on Standalone status [S13]. The lens therefore treats the gap between price and value as a regime variable. The price is 5.3 times today's probability-weighted fundamental value of Rp139 a share \u2014 Rp730 against the same weighted value the engine rolls forward to Rp160 in twelve months; the two ratios differ only because one is spot and the other is rolled forward. The base regime case closes 40% of the log gap and gives Rp433; the bear case, where the free-float overhang bites and 80% of the gap closes, gives Rp223; the bull case, where a sell-down fixes the float and the premium expands, gives Rp914 [S10][S12][S13]. The overlay target after the HSC and free-float adjustments is Rp501 \u2014 still below the Rp730 price."
+          },
+          {
+            "type": "para",
+            "text": "Why 40% is the most likely path for this name, not the full gap and not the bear's 80%: the float arithmetic is small and dated. To lift the public float from the registry's 10.6% to the first step of 12.5% the controlling group has to place about three hundred and thirty-four million of the 17,126m shares \u2014 roughly two hundred and forty billion rupiah at the current price, or nine to seventeen days of the IDR14,265.1m three-month turnover, a single block rather than a multi-year campaign. If the route is a rights issue instead, the same float requires about three hundred and eighty-two million new shares and about two hundred and eighty billion rupiah of proceeds. Either can be done in 2027; and the controller, unlike a minority holder, is selling at a large premium to fundamental value, which is an incentive to sell rather than to wait. Against that, the HSC and free-float flags mean the supply arrives into a market that has been told to reduce its exposure, and the MSCI decision is a consultation, not a deletion, so we do not close the whole gap. That is a reasoned four tenths of the gap, not a symmetric guess."
+          },
+          {
+            "type": "para",
+            "text": "The lens does not change a single operating assumption. It takes the fundamentals as built and applies the regime on top."
+          },
+          {
+            "type": "para",
+            "text": "What the price implies is aggressive. At Rp730 the market capitalisation of IDR12,501.6bn plus net debt values the business at 13.7x our FY2026E EBITDA, at a point when EBITDA is still recovering from the coal spike and the company is loss-making after interest [S0]. A buyer at this price is paying for the scarcity of the float, not for the cash flows. The reverse-DCF logic points the same way: to justify the price on our cost of capital, the company would need a margin and volume path well above anything in its filings, or a terminal capex below D&A \u2014 which is to say, a business that grows without reinvesting."
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The risks are concentrated in the balance sheet and the regime, not in demand. We rank them by likelihood times impact. The most likely adverse event is that the domestic price war continues through FY2027E, keeping EBITDA near IDR1,541.5bn and interest cover thin; that is our base case, not a shock [S8][S9]. The highest-impact event is a refinancing or covenant failure, and the maturity profile is the reason: at 30 September 2026 total current liabilities were IDR7,217.1bn against cash of IDR515.5bn, and these include short-term bank loans of IDR1,832.2bn and current maturities of long-term debt of IDR681.1bn, while the IDR6,141.3bn of long-term bank loans sitting outside current liabilities is only as good as the next rollover [S4]. The disclosed covenant levels are a debt service coverage ratio of at least one, a current ratio of at least one and debt to equity of at most three times; the FY2025 breach covered net debt to EBITDA, current ratio, working-capital coverage and consolidated debt to equity, and the loan agreements also restrict mergers, acquisitions and share offerings without a waiver \u2014 which is exactly the equity-raise route the balance sheet needs [S7]. We treat a distress outcome as a low-probability, very-high-impact tail; the bear case does not assume it, and the reader should know that the bear value of Rp10 is an operating bear, not a wipe-out. The bridge starts from the data pack's 30 June 2026 balance sheet, whose debt line runs above the sum of the LK's borrowing lines, and is written down by the movement to the 30 September 2026 filing: on the LK's bank-loan, lease and consumer-finance lines against cash of IDR515.5bn, net debt is lower than the pack's and has risen only marginally since 31 December 2025 \u2014 the nine-month loss and capex were largely funded by working capital and a modest drawdown, not by a surge in gross debt [S4][S7]. That corrected figure, not the pack's, is the one the valuation uses, so our target carries no leverage penalty the filing does not support."
+          },
+          {
+            "type": "para",
+            "text": "The second cluster is regulatory and regime risk. Zero ODOL raises freight costs in 2027 and cannot be passed through in a price war [S8]. The free-float rule forces the controller to sell down or issue shares by the 2027 and 2028 deadlines, and either route is supply overhang for minorities [S5]. MSCI's Standalone consultation could remove the remaining index bid, and the HSC exclusion from the IHSG already reduces passive demand [S5]. These are regime risks that the fundamental model cannot capture, which is why the konglo overlay exists."
+          },
+          {
+            "type": "para",
+            "text": "The third cluster is operational and financial. Coal is the largest single cost risk: the kiln burn is 1.8 Mt Mt a year and coal is about a sixth of COGS, so a coal price that stays at spot (65.1) instead of the deck's long-run 46.0 adds roughly a third to the FY2026E EBITDA line before any pass-through [S0][S7]. The bear case now carries that through a two-percentage-point gross-margin shock, mirrored in the bull, rather than leaving it in the narrative. The rupiah path in the macro deck, from 17,968 spot to 19,000 long run, is a recurring FX loss on dollar debt; the nine-month loss was already IDR292.8bn, which is why the FY2026E other non-operating line carries the run-rate [S0][S5]. Related-party concentration is the structural risk: sales to Aastar are 27.0 per cent of revenue and the company owes it IDR811.3bn of trade payables, while related-party contract liabilities of IDR1,482.1bn at 30 September 2026 are the reason working capital is negative [S3][S4]. If those prepayments unwind \u2014 the counterparty is connected to the controlling shareholder, so the timing is not the company's alone \u2014 the IDR1,482.1bn becomes a cash outflow and the covenant cushion narrows; the bear case applies a working-capital reversal of six percentage points of revenue for that reason. Finally, the shares are illiquid: three-month traded value is IDR14,265.1m, so entry and exit are costly and the quoted price is not a clearing price for size [S0]."
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "Our business scenarios are mirrored on the same drivers. The bear case cuts volume and price, takes gross margin down two percentage points for a coal price that stays near spot and unwinds six percentage points of revenue of negative working capital; the bull case raises volume and price by the same order and adds two percentage points of margin and six points of working capital in the other direction. The values run from Rp10 in the bear case to Rp381 in the bull case, with a base of Rp125. The probabilities are in the table; the base case carries the majority weight because it reproduces the last actual year's economics at the deck's prices [S0][S8][S9]."
+          },
+          {
+            "type": "para",
+            "text": "The konglo regime scenarios sit on top and are separate from the business scenarios. In the bear regime, 80% of the log gap closes as the free-float overhang and the HSC exclusion bite, giving Rp223; in the base regime 40% closes, giving Rp433; in the bull regime the premium expands after a clean sell-down, giving Rp914 [S13][S14]. The overlay target of Rp501 is the number that feeds the rating. Signposts that would change the view: a covenant waiver replaced by an equity raise (bullish for the equity only if the raise is priced at a premium), a sustained rise in ICI4 back above the FY2026E level (bearish), or a controller sell-down that lifts the float above the threshold without a discount (bullish for liquidity, bearish for the premium)."
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "block",
+            "ref": "table:konglo"
+          },
+          {
+            "type": "para",
+            "text": "Ownership and control are the defining governance facts. The annual-report register shows WH Investments Pte. Ltd. at 87.4%, PT Gama Group at 1.1% and public shareholders each below five per cent holding 11.5% at 31 December 2025 [S7 p.52]. The konglo registry's free-float feed shows 10.6%, taken from the exchange's registry mirror as of 11 November 2026 [S15], and that figure, not the bareksa article we cited in the prior draft, is the source of record; the two are different dates and different bases \u2014 the register is the company's own year-end disclosure, the registry figure is the exchange's later market-convention float, which excludes the Gama holding as non-float \u2014 and the difference does not change the conclusion, because both sit below the first step of 12.5%, so the free-float overlay triggers on either figure. The practical consequences are three: the controller determines the outcome of any shareholder vote; the float is below the exchange minimum, with a step to 12.5% due by 31 March 2027 and a final step thereafter, a gap of 1.9% and 4.6 months [S14]; and the stock sits on the high-shareholding-concentration list, whose names left the IHSG calculation on 2 November 2026 [S10][S12]. The gap must be closed by a controller sell-down, a new issue or a change in the register; each has a different consequence for minorities, and no filing yet says which route the company will take [S4]."
+          },
+          {
+            "type": "para",
+            "text": "Related-party gravity is high. Sales to related parties were IDR2,424.8bn, or 27.0 per cent of total sales, in FY2025A, and trade payables to Aastar Trading alone were IDR811.3bn [S3]. Related-party liabilities are a large share of the balance sheet, and the company's negative working capital depends on prepayments from the same group [S3]. On the IDX this is the modal value-destruction channel, so we treat it as a structure flag and apply no value to the related-party receivables beyond their book carrying value. The FY2025A covenant breach and waiver is a second red flag: lenders had to relax net debt to EBITDA, current ratio, working-capital coverage and consolidated debt to equity, which tells us the capital structure is not self-sustaining at current earnings [S7]."
+          },
+          {
+            "type": "para",
+            "text": "The dividend record is blank: no dividend has been paid since the 2021 listing, and with a loss and a waiver in place we assume none through FY2030E [S7]. The board is controlled by the majority holder; we did not find a modified audit opinion in the sources we reviewed, and we make no claim beyond that. Pledged shares are not disclosed in the sources reviewed \u2014 we checked, and the absence of disclosure is itself a monitoring item rather than a clean bill of health."
+          },
+          {
+            "type": "para",
+            "text": "ESG exposures are those of the cement industry: carbon dioxide from clinker, dust and land rehabilitation at the quarries, and energy intensity. The company reports alternative-fuel substitution and a lower-carbon product range, which is the right direction but does not change the cost position in the forecast horizon [S7]. The social licence risk is local: quarry and plant communities in Banten, East Java and North Sumatra, and the labour intensity of distribution under Zero ODOL [S8]. Governance dominates the ESG score here: the free float, the related-party flows and the covenant waiver are what a minority shareholder is actually exposed to."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The dated catalysts are the free-float deadlines, the FY2026 audited results and the MSCI decision. The first free-float step falls due at the end of March 2027, and the FY2026 results will be the first full year of the Zero ODOL regime and of the current coal price [S14][S8]. MSCI decides on Standalone status by the end of June 2027; a negative outcome would remove the remaining index bid and is the single biggest regime catalyst [S13]. The IHSG exclusion is already in force from 2 November 2026, so it is a fact to explain rather than a date to wait for [S12]. On the operating side, the quarterly LK will show whether volume growth of the 9M2026 pace continues and whether the coal pass-through improves or deteriorates [S4][S5]."
+          },
+          {
+            "type": "para",
+            "text": "The KPIs we monitor between updates are: cement and clinker volumes (domestic versus export), realised price per tonne, the gross margin against the ICI4 path, EBITDA against the interest bill, net debt to EBITDA and covenant headroom, the free float and any controller sell-down, related-party sales and payables as a share of revenue and COGS, and the rupiah [S3][S4][S7]. A sustained move in any of the first four changes the fundamental value; a move in the last three changes the regime premium. We will update the model on the FY2026 results and re-underwrite the coal and price assumptions at that point."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for CMNT.JK",
+        "url": "https://finance.yahoo.com/quote/CMNT.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-05",
+        "kind": "data"
+      },
+      "S3": {
+        "title": "https://cms.cemindo.com/storage/2201/cemindo-gemilang-billingual_31-desember-2025_released.pdf",
+        "url": "https://cms.cemindo.com/storage/2201/cemindo-gemilang-billingual_31-desember-2025_released.pdf",
+        "publisher": "cms.cemindo.com",
+        "date": "2026-11-11",
+        "kind": "filing"
+      },
+      "S4": {
+        "title": "https://cms.cemindo.com/storage/2397/CMNT_Laporan-Keuangan-Konsolidasi-Interim-Triwulan-3-2026.pdf",
+        "url": "https://cms.cemindo.com/storage/2397/CMNT_Laporan-Keuangan-Konsolidasi-Interim-Triwulan-3-2026.pdf",
+        "publisher": "cms.cemindo.com",
+        "date": "2026-11-11",
+        "kind": "filing"
+      },
+      "S5": {
+        "title": "Defisit, Saham Anjlok, Emiten Martua Sitorus Rugi Makin Bengkak",
+        "url": "https://emitennews.com/news/defisit-saham-anjlok-emiten-martua-sitorus-rugi-makin-bengkak",
+        "publisher": "emitennews.com",
+        "date": "2026-11-11",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "Strategi Anyar CMNT Hadapi Tekanan Industri Semen dan Kelebihan Kapasitas - merdeka.com",
+        "url": "http://www.merdeka.com/uang/read/8105812/strategi-anyar-cmnt-hadapi-tekanan-industri-semen-dan-kelebihan-kapasitas",
+        "publisher": "www.merdeka.com",
+        "date": "2026-04-28",
+        "kind": "news"
+      },
+      "S7": {
+        "title": "https://cms.cemindo.com/storage/2219/AR-SR-2025-CMNT.pdf",
+        "url": "https://cms.cemindo.com/storage/2219/AR-SR-2025-CMNT.pdf",
+        "publisher": "cms.cemindo.com",
+        "date": "2026-11-11",
+        "kind": "filing"
+      },
+      "S8": {
+        "title": "Ini Pandangan Industri dan Perbankan Terkait Pasar Semen di 2026",
+        "url": "https://www.tribunnews.com/bisnis/7778528/ini-pandangan-industri-dan-perbankan-terkait-pasar-semen-di-2026",
+        "publisher": "www.tribunnews.com",
+        "date": "2026-11-11",
+        "kind": "news"
+      },
+      "S9": {
+        "title": "Produsen Semen Besar Akui Perang Harga Sulit Dihindari Akibat Oversupply",
+        "url": "https://rmol.id/read/2026/11/11/728008/produsen-semen-besar-akui-perang-harga-sulit-dihindari-akibat-oversupply",
+        "publisher": "rmol.id",
+        "date": "2026-11-11",
+        "kind": "news"
+      },
+      "S10": {
+        "title": "Saham HSC Tambah Lagi, Ini Daftar Lengkapnya",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8723936/saham-hsc-tambah-lagi-ini-daftar-lengkapnya/amp",
+        "publisher": "finance.detik.com",
+        "date": "2026-10-26",
+        "kind": "regulator"
+      },
+      "S12": {
+        "title": "Daftar Saham HSC Terbaru Jadi 82, FILM Masuk Lagi dan TFSCO Ditambahkan",
+        "url": "https://www.fortuneidn.com/market/daftar-saham-hsc-terbaru-film-masuk-lagi-tfsco-ditambahkan-d7w02-00-lflgw-vpm0fv",
+        "publisher": "www.fortuneidn.com",
+        "date": "2026-11-12",
+        "kind": "regulator"
+      },
+      "S13": {
+        "title": "https://www.msci.com/downloads/documents/press-releases/media-room/Indonesia_PR_Oct_26.pdf",
+        "url": "https://www.msci.com/downloads/documents/press-releases/media-room/Indonesia_PR_Oct_26.pdf",
+        "publisher": "www.msci.com",
+        "date": "2026-11-12",
+        "kind": "regulator"
+      },
+      "S14": {
+        "title": "BEI Resmi Berlakukan Aturan Free Float Jadi 15 Persen, Ini Tenggat Waktunya",
+        "url": "https://www.idxchannel.com/market-news/bei-resmi-berlakukan-aturan-free-float-jadi-15-persen-ini-tenggat-waktunya",
+        "publisher": "www.idxchannel.com",
+        "date": "2026-11-12",
+        "kind": "regulator"
+      },
+      "S15": {
+        "title": "https://pasardana.id/api/StockSearchResult/GetAll",
+        "url": "https://pasardana.id/api/StockSearchResult/GetAll",
+        "publisher": "pasardana.id",
+        "date": "2026-11-12",
+        "kind": "regulator"
+      }
+    },
+    "rendered_at": "2026-11-12T01:46:37+07:00"
+  },
+  "meta": {
+    "rating": "SELL",
+    "tp": 501.0,
+    "price": 730.0,
+    "tp_fundamental": 160.0,
+    "konglo": true,
+    "suspended": null,
+    "price_date": "2026-11-05",
+    "tr_pct": -31.39,
+    "upside_pct": -31.39,
+    "v0": 108.0,
+    "tp_base": 125.0,
+    "dps12": 0.0,
+    "liquidity_discount": 0.0,
+    "investable": {
+      "ok": true,
+      "mcap": true,
+      "adtv": true,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-12",
+    "data_asof": "2026-11-05",
+    "model_asof": "2026-11-12",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Sekar",
+    "sector_lead_title": "Sector Lead, Basic Materials",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 12501617920000.0,
+    "adtv_3m_idr": 14265092905.0,
+    "free_float_pct": 10.55,
+    "w52_high": 880.0,
+    "w52_low": 620.0,
+    "shares_m": 17125.5,
+    "insider_pct": 89.07,
+    "institution_pct": 10.59,
+    "board": "",
+    "listing_date": "2021-09-08",
+    "website": "https://www.cemindo.com"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "revenue",
+        "label": "Revenue",
+        "unit": "money",
+        "values": {
+          "FY2023A": 9612.847,
+          "FY2024A": 8857.28,
+          "FY2025A": 8976.099,
+          "FY2026E": 10427.3,
+          "FY2027E": 10978.71,
+          "FY2028E": 11593.4
+        }
+      },
+      {
+        "key": "ebitda",
+        "label": "EBITDA",
+        "unit": "money",
+        "values": {
+          "FY2023A": 1063.121,
+          "FY2024A": 1213.797,
+          "FY2025A": 1512.691,
+          "FY2026E": 1541.458146,
+          "FY2027E": 1806.552504,
+          "FY2028E": 1987.421892
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": 154.809,
+          "FY2024A": -716.258,
+          "FY2025A": -150.26,
+          "FY2026E": -380.035296,
+          "FY2027E": 27.323639,
+          "FY2028E": 191.680864
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 9.039676,
+          "FY2024A": -41.824054,
+          "FY2025A": -8.774048,
+          "FY2026E": -22.191189,
+          "FY2027E": 1.595494,
+          "FY2028E": 11.192714
+        }
+      },
+      {
+        "key": "eps_growth",
+        "label": "EPS growth",
+        "unit": "pct",
+        "values": {
+          "FY2023A": -2.7324,
+          "FY2024A": -5.626721,
+          "FY2025A": -0.790215,
+          "FY2026E": 1.529185,
+          "FY2027E": -1.071898,
+          "FY2028E": 6.015203
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 0.0,
+          "FY2024A": 0.0,
+          "FY2025A": 0.0,
+          "FY2026E": 0.0,
+          "FY2027E": 0.0,
+          "FY2028E": 0.0
+        }
+      },
+      {
+        "key": "roe",
+        "label": "ROE",
+        "unit": "pct",
+        "values": {
+          "FY2023A": 0.043486,
+          "FY2024A": -0.221428,
+          "FY2025A": -0.055367,
+          "FY2026E": -0.157837,
+          "FY2027E": 0.012245,
+          "FY2028E": 0.081883
+        }
+      },
+      {
+        "key": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "unit": "x",
+        "values": {
+          "FY2023A": 8.46486,
+          "FY2024A": 6.740953,
+          "FY2025A": 5.512696,
+          "FY2026E": 5.413123,
+          "FY2027E": 4.372861,
+          "FY2028E": 3.654697
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "dcf_fcff",
+        "label": "DCF (FCFF, terminal value)",
+        "available": true,
+        "value": 124.35,
+        "weight": 0.8,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      },
+      {
+        "method": "pbv",
+        "label": "P/BV",
+        "available": true,
+        "value": 43.11,
+        "weight": 0.2,
+        "basis": "peer median",
+        "multiple": 0.3271,
+        "vs_primary_pct": -65.33,
+        "primary": false
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 0.9,
+      "beta_source": "industry default (config)",
+      "de": 0.727331,
+      "beta_levered": 1.410586,
+      "tax": 0.22,
+      "coe_premium": 0.0,
+      "coe": 0.152668,
+      "kd_pre_tax": 0.0945,
+      "we": 0.578928,
+      "wd": 0.421072,
+      "wacc": 0.119421
+    },
+    "g": 0.04,
+    "dcf": {
+      "method": "dcf_fcff",
+      "rows": [
+        {
+          "cf": 1017.563146,
+          "fraction": 0.503765,
+          "time": 0.0,
+          "df": 1.0,
+          "pv": 512.612235,
+          "period": "FY2026E"
+        },
+        {
+          "cf": 1277.163804,
+          "fraction": 0.996578,
+          "time": 0.635181,
+          "df": 0.930851,
+          "pv": 1184.780793,
+          "period": "FY2027E"
+        },
+        {
+          "cf": 1333.960961,
+          "fraction": 0.999316,
+          "time": 1.634497,
+          "df": 0.831611,
+          "pv": 1108.577458,
+          "period": "FY2028E"
+        },
+        {
+          "cf": 930.937886,
+          "fraction": 0.996578,
+          "time": 2.63655,
+          "df": 0.742722,
+          "pv": 689.061602,
+          "period": "FY2029E"
+        },
+        {
+          "cf": 823.642194,
+          "fraction": 0.996578,
+          "time": 3.635866,
+          "df": 0.663539,
+          "pv": 544.648073,
+          "period": "FY2030E"
+        }
+      ],
+      "pv_sum": 4039.680161,
+      "pv_tv": 6765.334181,
+      "ev": 10805.014342,
+      "net_debt": 8583.728,
+      "minority": 320.851,
+      "investments": 4.756,
+      "bridge": 224.3,
+      "equity_value": 2129.491342,
+      "tv_share": 0.626129,
+      "value": 124.35
+    },
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 125.0,
+        "v0": 108.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.25,
+        "tp": 10.0,
+        "v0": 9.0,
+        "narrative": "Price war deepens and the 2027 Zero ODOL rules squeeze delivered margins; volume growth stalls at market, coal stays near 55-65 against the 46 long-run marker so the kiln fuel bill is not relieved, a related-party prepayment unwind reverses part of the negative working capital that funds the business, and the rupiah weakens, keeping PBT negative into 2028 and covenant headroom thin. The coal shock enters through gross margin because the model prices ICI4 through the cost link, not as a separate line.",
+        "shocks": [
+          {
+            "target": "a.volume",
+            "op": "mult",
+            "value": 0.93
+          },
+          {
+            "target": "a.price",
+            "op": "mult",
+            "value": 0.96
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": -0.02
+          },
+          {
+            "target": "a.nwc_pct",
+            "op": "add",
+            "value": 0.06
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.25,
+        "tp": 381.0,
+        "v0": 330.0,
+        "narrative": "Government housing and infrastructure programmes lift market growth above 5%, CMNT gains share on its low-carbon mix and fills spare kiln capacity with clinker exports, coal normalises to the 46 long-run marker faster and price discipline returns, taking EBITDA above Rp2.3tn by 2029 and restoring covenant headroom.",
+        "shocks": [
+          {
+            "target": "a.volume",
+            "op": "mult",
+            "value": 1.07
+          },
+          {
+            "target": "a.price",
+            "op": "mult",
+            "value": 1.04
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": 0.02
+          },
+          {
+            "target": "a.nwc_pct",
+            "op": "add",
+            "value": -0.06
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "DCF value per share vs WACC and terminal growth",
+        "metric": "method:dcf_fcff",
+        "x": {
+          "target": "val.wacc",
+          "op": "add",
+          "label": "WACC (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "y": {
+          "target": "val.g",
+          "op": "add",
+          "label": "Terminal growth (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "grid": [
+          [
+            138.704236,
+            105.922733,
+            76.794509,
+            50.738889,
+            27.292031
+          ],
+          [
+            168.087083,
+            131.462579,
+            99.162185,
+            70.460241,
+            44.784813
+          ],
+          [
+            201.702483,
+            160.434226,
+            124.3462,
+            92.517661,
+            64.233821
+          ],
+          [
+            240.535954,
+            193.579191,
+            152.914202,
+            117.352355,
+            85.986636
+          ],
+          [
+            285.904724,
+            231.869204,
+            185.597379,
+            145.524098,
+            110.478373
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs revenue growth and gross margin",
+        "metric": "tp",
+        "x": {
+          "target": "a.revenue_growth",
+          "op": "add",
+          "label": "Revenue growth (+/- pp, every year)",
+          "steps": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ]
+        },
+        "y": {
+          "target": "a.gross_margin",
+          "op": "add",
+          "label": "Gross margin (+/- pp)",
+          "steps": [
+            -0.02,
+            -0.01,
+            0.0,
+            0.01,
+            0.02
+          ]
+        },
+        "grid": [
+          [
+            9.938981,
+            9.938981,
+            9.938981,
+            9.938981,
+            9.938981
+          ],
+          [
+            59.500213,
+            59.500213,
+            59.500213,
+            59.500213,
+            59.500213
+          ],
+          [
+            124.602913,
+            124.602913,
+            124.602913,
+            124.602913,
+            124.602913
+          ],
+          [
+            189.705613,
+            189.705613,
+            189.705613,
+            189.705613,
+            189.705613
+          ],
+          [
+            254.808313,
+            254.808313,
+            254.808313,
+            254.808313,
+            254.808313
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": false,
+      "target": "a.revenue_growth",
+      "note": "price not bracketed"
+    },
+    "multiples": {
+      "FY2025A": {
+        "pbv": 4.812413,
+        "div_yield": 0.0,
+        "ev_ebitda": 13.989291
+      },
+      "FY2026E": {
+        "pbv": 5.637071,
+        "div_yield": 0.0,
+        "ev_ebitda": 13.731526,
+        "fcfe_yield": -0.000408
+      },
+      "FY2027E": {
+        "pe": 457.538548,
+        "pbv": 5.568465,
+        "div_yield": 0.0,
+        "ev_ebitda": 11.470617,
+        "fcfe_yield": 0.035539
+      },
+      "FY2028E": {
+        "pe": 65.221002,
+        "pbv": 5.130437,
+        "div_yield": 0.0,
+        "ev_ebitda": 10.106507,
+        "fcfe_yield": 0.050904
+      }
+    },
+    "peers": {
+      "median": {
+        "pe": {
+          "median": 8.396288542214648,
+          "n": 7
+        },
+        "ev_ebitda": {
+          "median": 4.892423777017082,
+          "n": 7
+        },
+        "pbv": {
+          "median": 0.3271293724710887,
+          "n": 7
+        },
+        "ev_sales": {
+          "median": 0.6897382860569892,
+          "n": 8
+        },
+        "div_yield": {
+          "median": 0.02127659574468085,
+          "n": 7
+        }
+      },
+      "rows": {
+        "AYLS.JK": {
+          "div_yield": 0.0
+        },
+        "BATR.JK": {
+          "div_yield": 0.0213
+        },
+        "BEBS.JK": {
+          "pe": 5.1356,
+          "ev_ebitda": 3.9794,
+          "pbv": 0.2789,
+          "ev_sales": 0.5788,
+          "div_yield": 0.0
+        },
+        "BLES.JK": {
+          "pe": 5.6192,
+          "ev_ebitda": 4.323,
+          "pbv": 1.2941,
+          "ev_sales": 1.1167,
+          "div_yield": 0.0094
+        },
+        "INTP.JK": {
+          "pe": 8.3963,
+          "ev_ebitda": 7.236,
+          "pbv": 0.854,
+          "ev_sales": 0.9496,
+          "div_yield": 0.0814
+        },
+        "SMBR.JK": {
+          "pe": 6.4705,
+          "ev_ebitda": 4.8924,
+          "pbv": 0.3271,
+          "ev_sales": 0.6222,
+          "div_yield": 0.0309
+        },
+        "SMCB.JK": {
+          "pe": 10.6112,
+          "ev_ebitda": 7.0923,
+          "pbv": 0.5308,
+          "ev_sales": 0.7573,
+          "div_yield": 0.0471
+        },
+        "SMGR.JK": {
+          "pe": 48.351,
+          "ev_ebitda": 7.9206,
+          "pbv": 0.2112,
+          "ev_sales": 0.5043,
+          "div_yield": 0.0207
+        },
+        "SOLA.JK": {
+          "div_yield": 0.0
+        },
+        "WSBP.JK": {
+          "ev_sales": 2.9959,
+          "div_yield": 0.0
+        },
+        "WTON.JK": {
+          "pe": 12.507,
+          "ev_ebitda": 2.5319,
+          "pbv": 0.1393,
+          "ev_sales": 0.1059,
+          "div_yield": 0.0079
+        }
+      }
+    },
+    "drivers": {
+      "d.coal.ici4": {
+        "FY2023A": null,
+        "FY2024A": null,
+        "FY2025A": 40.56,
+        "FY2026E": 62.0,
+        "FY2027E": 52.5,
+        "FY2028E": 48.0
+      },
+      "d.oil.brent": {
+        "FY2023A": 82.1904,
+        "FY2024A": 79.8213,
+        "FY2025A": 68.1015,
+        "FY2026E": 96.0,
+        "FY2027E": 84.0,
+        "FY2028E": 80.0
+      }
+    },
+    "konglo": {
+      "direction": "premium",
+      "premium_ratio": 5.2614,
+      "premium_kept": 3.1317,
+      "v_fundamental": 138.75,
+      "tp_fundamental": 160.0,
+      "tp": 501.0,
+      "scenarios": {
+        "bear": {
+          "prob": 0.25,
+          "compress": 0.8,
+          "premium_kept": 1.3939,
+          "tp": 223.0
+        },
+        "base": {
+          "prob": 0.5,
+          "compress": 0.4,
+          "premium_kept": 2.7081,
+          "tp": 433.0
+        },
+        "bull": {
+          "prob": 0.25,
+          "compress": -0.05,
+          "premium_kept": 5.7168,
+          "tp": 914.0
+        }
+      },
+      "adjustments": [
+        {
+          "key": "hsc",
+          "value": 0.05,
+          "why": "on the exchange's HSC list (as of 2026-10-22): out of the IHSG, the LQ45/IDX30/IDX80 and the MSCI indexes [konglo deck S3]"
+        },
+        {
+          "key": "ff_deadline",
+          "value": 0.05,
+          "why": "free float 10.55% must reach 12.5% by 2027-03-31 \u2014 controller sell-down or new shares inside the window [konglo deck S25]"
+        }
+      ],
+      "groups": [],
+      "hsc": {
+        "listed": true,
+        "asof": "2026-10-22",
+        "source": "S3"
+      },
+      "free_float": {
+        "free_float_pct": 10.55,
+        "compliant": false,
+        "tier": "mcap >= Rp5tn, free float below 12.5%",
+        "next_step_pct": 12.5,
+        "next_step_by": "2027-03-31",
+        "final_by": "2028-03-31",
+        "gap_pct": 1.95
+      },
+      "index_deletions": [],
+      "enforcement": [],
+      "events": [],
+      "registry_asof": "2026-10-27",
+      "construction": "target = fundamental 12-month value (probability-weighted business scenarios, after the liquidity discount) x the probability-weighted share of today's premium kept, (price / fundamental value today)^(1 - c) over the regime scenarios; c = share of the log gap that closes within 12 months"
+    }
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E"
+    ],
+    "sections": {
+      "OPS": [
+        {
+          "key": "volume",
+          "label": "Volume",
+          "unit": "vol",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": 7.9,
+            "FY2025A": 7.8,
+            "FY2026E": 8.45,
+            "FY2027E": 8.79,
+            "FY2028E": 9.1,
+            "FY2029E": 9.37,
+            "FY2030E": 9.6
+          }
+        },
+        {
+          "key": "price",
+          "label": "Average price",
+          "unit": "price",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 1234000.0,
+            "FY2027E": 1249000.0,
+            "FY2028E": 1274000.0,
+            "FY2029E": 1299000.0,
+            "FY2030E": 1324000.0
+          }
+        }
+      ],
+      "IS": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 9687.149,
+            "FY2023A": 9612.847,
+            "FY2024A": 8857.28,
+            "FY2025A": 8976.099,
+            "FY2026E": 10427.3,
+            "FY2027E": 10978.71,
+            "FY2028E": 11593.4,
+            "FY2029E": 12171.63,
+            "FY2030E": 12710.4
+          }
+        },
+        {
+          "key": "cogs",
+          "label": "Cost of revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 7163.735,
+            "FY2023A": 7111.3,
+            "FY2024A": 7108.519,
+            "FY2025A": 7029.056,
+            "FY2026E": 8512.544514,
+            "FY2027E": 8801.077098,
+            "FY2028E": 9214.121188,
+            "FY2029E": 9636.328144,
+            "FY2030E": 10079.049738
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": 2523.414,
+            "FY2023A": 2501.547,
+            "FY2024A": 1748.761,
+            "FY2025A": 1947.043,
+            "FY2026E": 1914.755486,
+            "FY2027E": 2177.632902,
+            "FY2028E": 2379.278812,
+            "FY2029E": 2535.301856,
+            "FY2030E": 2631.350262
+          }
+        },
+        {
+          "key": "opex",
+          "label": "SG&A and other opex",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1388.021,
+            "FY2023A": 1504.14,
+            "FY2024A": 1362.932,
+            "FY2025A": 1156.958,
+            "FY2026E": 1272.1306,
+            "FY2027E": 1317.4452,
+            "FY2028E": 1391.208,
+            "FY2029E": 1460.5956,
+            "FY2030E": 1525.248
+          }
+        },
+        {
+          "key": "ebit",
+          "label": "EBIT",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1135.393,
+            "FY2023A": 997.407,
+            "FY2024A": 416.182,
+            "FY2025A": 738.768,
+            "FY2026E": 642.624886,
+            "FY2027E": 860.187702,
+            "FY2028E": 988.070812,
+            "FY2029E": 1074.706256,
+            "FY2030E": 1106.102262
+          }
+        },
+        {
+          "key": "da",
+          "label": "Depreciation & amortisation",
+          "unit": "money",
+          "values": {
+            "FY2022A": 57.868,
+            "FY2023A": 65.714,
+            "FY2024A": 797.615,
+            "FY2025A": 773.923,
+            "FY2026E": 898.83326,
+            "FY2027E": 946.364802,
+            "FY2028E": 999.35108,
+            "FY2029E": 1049.194506,
+            "FY2030E": 1095.63648
+          }
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1193.261,
+            "FY2023A": 1063.121,
+            "FY2024A": 1213.797,
+            "FY2025A": 1512.691,
+            "FY2026E": 1541.458146,
+            "FY2027E": 1806.552504,
+            "FY2028E": 1987.421892,
+            "FY2029E": 2123.900762,
+            "FY2030E": 2201.738742
+          }
+        },
+        {
+          "key": "interest_expense",
+          "label": "Interest expense",
+          "unit": "money",
+          "values": {
+            "FY2022A": 592.419,
+            "FY2023A": 763.423,
+            "FY2024A": 712.032,
+            "FY2025A": 655.55,
+            "FY2026E": 655.171302,
+            "FY2027E": 655.171302,
+            "FY2028E": 655.171302,
+            "FY2029E": 655.171302,
+            "FY2030E": 655.171302
+          }
+        },
+        {
+          "key": "interest_income",
+          "label": "Interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 20.976,
+            "FY2023A": 11.377,
+            "FY2024A": 19.042,
+            "FY2025A": 41.714,
+            "FY2026E": 22.51112,
+            "FY2027E": 22.307239,
+            "FY2028E": 40.079228,
+            "FY2029E": 65.534352,
+            "FY2030E": 79.383195
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other non-operating",
+          "unit": "money",
+          "values": {
+            "FY2022A": -657.359,
+            "FY2023A": 103.232,
+            "FY2024A": -270.761,
+            "FY2025A": -248.634,
+            "FY2026E": -390.0,
+            "FY2027E": -200.0,
+            "FY2028E": -160.0,
+            "FY2029E": -160.0,
+            "FY2030E": -160.0
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": -93.409,
+            "FY2023A": 348.593,
+            "FY2024A": -547.569,
+            "FY2025A": -123.702,
+            "FY2026E": -380.035296,
+            "FY2027E": 27.323639,
+            "FY2028E": 212.978738,
+            "FY2029E": 325.069305,
+            "FY2030E": 370.314154
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": -5.205,
+            "FY2023A": 168.829,
+            "FY2024A": 156.624,
+            "FY2025A": 22.22,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 21.297874,
+            "FY2029E": 71.515247,
+            "FY2030E": 81.469114
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": -88.204,
+            "FY2023A": 159.292,
+            "FY2024A": -704.193,
+            "FY2025A": -145.922,
+            "FY2026E": -380.035296,
+            "FY2027E": 27.323639,
+            "FY2028E": 191.680864,
+            "FY2029E": 253.554058,
+            "FY2030E": 288.84504
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1.157,
+            "FY2023A": 4.483,
+            "FY2024A": 12.065,
+            "FY2025A": 4.338,
+            "FY2026E": -0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": -89.361,
+            "FY2023A": 154.809,
+            "FY2024A": -716.258,
+            "FY2025A": -150.26,
+            "FY2026E": -380.035296,
+            "FY2027E": 27.323639,
+            "FY2028E": 191.680864,
+            "FY2029E": 253.554058,
+            "FY2030E": 288.84504
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 17125.504,
+            "FY2023A": 17125.504,
+            "FY2024A": 17125.504,
+            "FY2025A": 17125.504,
+            "FY2026E": 17125.504,
+            "FY2027E": 17125.504,
+            "FY2028E": 17125.504,
+            "FY2029E": 17125.504,
+            "FY2030E": 17125.504
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": -5.218007,
+            "FY2023A": 9.039676,
+            "FY2024A": -41.824054,
+            "FY2025A": -8.774048,
+            "FY2026E": -22.191189,
+            "FY2027E": 1.595494,
+            "FY2028E": 11.192714,
+            "FY2029E": 14.805641,
+            "FY2030E": 16.866367
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 0.0,
+            "FY2025A": 0.0,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0
+          }
+        },
+        {
+          "key": "capex",
+          "label": "Capital expenditure",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1122.113,
+            "FY2023A": 323.978,
+            "FY2024A": 443.357,
+            "FY2025A": 513.384,
+            "FY2026E": 573.5015,
+            "FY2027E": 603.82905,
+            "FY2028E": 637.637,
+            "FY2029E": 1034.58855,
+            "FY2030E": 1207.488
+          }
+        },
+        {
+          "key": "delta_nwc",
+          "label": "Change in working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -149.621,
+            "FY2024A": -1048.283,
+            "FY2025A": 336.941,
+            "FY2026E": -49.6065,
+            "FY2027E": -74.44035,
+            "FY2028E": -82.98315,
+            "FY2029E": -78.06105,
+            "FY2030E": -72.73395
+          }
+        },
+        {
+          "key": "fcff",
+          "label": "Free cash flow to firm",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 405.70431,
+            "FY2024A": 1937.765695,
+            "FY2025A": 795.067371,
+            "FY2026E": 1017.563146,
+            "FY2027E": 1277.163804,
+            "FY2028E": 1333.960961,
+            "FY2029E": 930.937886,
+            "FY2030E": 823.642194
+          }
+        },
+        {
+          "key": "net_borrowing",
+          "label": "Net borrowing",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -953.413,
+            "FY2024A": -738.97,
+            "FY2025A": 79.138,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0
+          }
+        },
+        {
+          "key": "fcfe",
+          "label": "Free cash flow to equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": -5.097036,
+            "FY2027E": 444.299741,
+            "FY2028E": 636.378094,
+            "FY2029E": 346.221064,
+            "FY2030E": 249.72747
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "nwc",
+          "label": "Operating working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": -497.116,
+            "FY2023A": -646.737,
+            "FY2024A": -1695.02,
+            "FY2025A": -1358.079,
+            "FY2026E": -1407.6855,
+            "FY2027E": -1482.12585,
+            "FY2028E": -1565.109,
+            "FY2029E": -1643.17005,
+            "FY2030E": -1715.904
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash & equivalents",
+          "unit": "money",
+          "values": {
+            "FY2022A": 486.2,
+            "FY2023A": 562.446,
+            "FY2024A": 640.498,
+            "FY2025A": 562.778,
+            "FY2026E": 557.680964,
+            "FY2027E": 1001.980705,
+            "FY2028E": 1638.358799,
+            "FY2029E": 1984.579863,
+            "FY2030E": 2234.307333
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "unit": "money",
+          "values": {
+            "FY2022A": 10515.029,
+            "FY2023A": 9561.616,
+            "FY2024A": 8822.646,
+            "FY2025A": 8901.784,
+            "FY2026E": 8901.784,
+            "FY2027E": 8901.784,
+            "FY2028E": 8901.784,
+            "FY2029E": 8901.784,
+            "FY2030E": 8901.784
+          }
+        },
+        {
+          "key": "ppe",
+          "label": "Fixed assets (net)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 14343.686,
+            "FY2023A": 13794.935,
+            "FY2024A": 13338.266,
+            "FY2025A": 13003.478,
+            "FY2026E": 12678.14624,
+            "FY2027E": 12335.610488,
+            "FY2028E": 11973.896408,
+            "FY2029E": 11959.290452,
+            "FY2030E": 12071.141972
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": 3480.447,
+            "FY2023A": 3639.447,
+            "FY2024A": 2830.001,
+            "FY2025A": 2597.786,
+            "FY2026E": 2217.750704,
+            "FY2027E": 2245.074343,
+            "FY2028E": 2436.755207,
+            "FY2029E": 2690.309265,
+            "FY2030E": 2979.154305
+          }
+        },
+        {
+          "key": "minority_bs",
+          "label": "Minority interest (balance sheet)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 359.873,
+            "FY2023A": 342.314,
+            "FY2024A": 321.126,
+            "FY2025A": 323.233,
+            "FY2026E": 323.233,
+            "FY2027E": 323.233,
+            "FY2028E": 323.233,
+            "FY2029E": 323.233,
+            "FY2030E": 323.233
+          }
+        },
+        {
+          "key": "net_debt",
+          "label": "Net debt (cash)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 10028.829,
+            "FY2023A": 8999.17,
+            "FY2024A": 8182.148,
+            "FY2025A": 8339.006,
+            "FY2026E": 8344.103036,
+            "FY2027E": 7899.803295,
+            "FY2028E": 7263.425201,
+            "FY2029E": 6917.204137,
+            "FY2030E": 6667.476667
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 203.2318,
+            "FY2023A": 212.516198,
+            "FY2024A": 165.250669,
+            "FY2025A": 151.691068,
+            "FY2026E": 129.499879,
+            "FY2027E": 131.095373,
+            "FY2028E": 142.288087,
+            "FY2029E": 157.093728,
+            "FY2030E": 173.960095
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "revenue_growth",
+          "label": "Revenue growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.00767,
+            "FY2024A": -0.0786,
+            "FY2025A": 0.013415,
+            "FY2026E": 0.161674,
+            "FY2027E": 0.052881,
+            "FY2028E": 0.055989,
+            "FY2029E": 0.049876,
+            "FY2030E": 0.044264
+          }
+        },
+        {
+          "key": "gross_margin",
+          "label": "Gross margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.260491,
+            "FY2023A": 0.26023,
+            "FY2024A": 0.197438,
+            "FY2025A": 0.216914,
+            "FY2026E": 0.183629,
+            "FY2027E": 0.198351,
+            "FY2028E": 0.205227,
+            "FY2029E": 0.208296,
+            "FY2030E": 0.207023
+          }
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.12318,
+            "FY2023A": 0.110594,
+            "FY2024A": 0.137039,
+            "FY2025A": 0.168524,
+            "FY2026E": 0.147829,
+            "FY2027E": 0.164551,
+            "FY2028E": 0.171427,
+            "FY2029E": 0.174496,
+            "FY2030E": 0.173223
+          }
+        },
+        {
+          "key": "ebit_margin",
+          "label": "EBIT margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.117206,
+            "FY2023A": 0.103758,
+            "FY2024A": 0.046988,
+            "FY2025A": 0.082304,
+            "FY2026E": 0.061629,
+            "FY2027E": 0.078351,
+            "FY2028E": 0.085227,
+            "FY2029E": 0.088296,
+            "FY2030E": 0.087023
+          }
+        },
+        {
+          "key": "np_margin",
+          "label": "Net margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.009225,
+            "FY2023A": 0.016104,
+            "FY2024A": -0.080867,
+            "FY2025A": -0.01674,
+            "FY2026E": -0.036446,
+            "FY2027E": 0.002489,
+            "FY2028E": 0.016534,
+            "FY2029E": 0.020832,
+            "FY2030E": 0.022725
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -2.7324,
+            "FY2024A": -5.626721,
+            "FY2025A": -0.790215,
+            "FY2026E": 1.529185,
+            "FY2027E": -1.071898,
+            "FY2028E": 6.015203,
+            "FY2029E": 0.322793,
+            "FY2030E": 0.139185
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 0.043486,
+            "FY2024A": -0.221428,
+            "FY2025A": -0.055367,
+            "FY2026E": -0.157837,
+            "FY2027E": 0.012245,
+            "FY2028E": 0.081883,
+            "FY2029E": 0.098908,
+            "FY2030E": 0.101895
+          }
+        },
+        {
+          "key": "net_debt_ebitda",
+          "label": "Net debt / EBITDA",
+          "unit": "x",
+          "values": {
+            "FY2022A": 8.404556,
+            "FY2023A": 8.46486,
+            "FY2024A": 6.740953,
+            "FY2025A": 5.512696,
+            "FY2026E": 5.413123,
+            "FY2027E": 4.372861,
+            "FY2028E": 3.654697,
+            "FY2029E": 3.25684,
+            "FY2030E": 3.028278
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": -0.0,
+            "FY2023A": 0.0,
+            "FY2024A": -0.0,
+            "FY2025A": -0.0,
+            "FY2026E": -0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0
+          }
+        },
+        {
+          "key": "capex_revenue",
+          "label": "Capex / revenue",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.115835,
+            "FY2023A": 0.033703,
+            "FY2024A": 0.050056,
+            "FY2025A": 0.057195,
+            "FY2026E": 0.055,
+            "FY2027E": 0.055,
+            "FY2028E": 0.055,
+            "FY2029E": 0.085,
+            "FY2030E": 0.095
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        1105.0
+      ],
+      [
+        "2022-01",
+        1105.0
+      ],
+      [
+        "2022-02",
+        1090.0
+      ],
+      [
+        "2022-03",
+        1175.0
+      ],
+      [
+        "2022-04",
+        1085.0
+      ],
+      [
+        "2022-05",
+        900.0
+      ],
+      [
+        "2022-06",
+        990.0
+      ],
+      [
+        "2022-07",
+        1035.0
+      ],
+      [
+        "2022-08",
+        1020.0
+      ],
+      [
+        "2022-09",
+        825.0
+      ],
+      [
+        "2022-10",
+        830.0
+      ],
+      [
+        "2022-11",
+        820.0
+      ],
+      [
+        "2022-12",
+        905.0
+      ],
+      [
+        "2023-01",
+        950.0
+      ],
+      [
+        "2023-02",
+        880.0
+      ],
+      [
+        "2023-03",
+        915.0
+      ],
+      [
+        "2023-04",
+        900.0
+      ],
+      [
+        "2023-05",
+        785.0
+      ],
+      [
+        "2023-06",
+        865.0
+      ],
+      [
+        "2023-07",
+        905.0
+      ],
+      [
+        "2023-08",
+        1050.0
+      ],
+      [
+        "2023-09",
+        1020.0
+      ],
+      [
+        "2023-10",
+        940.0
+      ],
+      [
+        "2023-11",
+        960.0
+      ],
+      [
+        "2023-12",
+        1070.0
+      ],
+      [
+        "2024-01",
+        1120.0
+      ],
+      [
+        "2024-02",
+        1120.0
+      ],
+      [
+        "2024-03",
+        1050.0
+      ],
+      [
+        "2024-04",
+        1115.0
+      ],
+      [
+        "2024-05",
+        1065.0
+      ],
+      [
+        "2024-06",
+        1075.0
+      ],
+      [
+        "2024-07",
+        1100.0
+      ],
+      [
+        "2024-08",
+        1020.0
+      ],
+      [
+        "2024-09",
+        1010.0
+      ],
+      [
+        "2024-10",
+        965.0
+      ],
+      [
+        "2024-11",
+        965.0
+      ],
+      [
+        "2024-12",
+        880.0
+      ],
+      [
+        "2025-01",
+        845.0
+      ],
+      [
+        "2025-02",
+        775.0
+      ],
+      [
+        "2025-03",
+        900.0
+      ],
+      [
+        "2025-04",
+        870.0
+      ],
+      [
+        "2025-05",
+        845.0
+      ],
+      [
+        "2025-06",
+        790.0
+      ],
+      [
+        "2025-07",
+        810.0
+      ],
+      [
+        "2025-08",
+        810.0
+      ],
+      [
+        "2025-09",
+        815.0
+      ],
+      [
+        "2025-10",
+        770.0
+      ],
+      [
+        "2025-11",
+        775.0
+      ],
+      [
+        "2025-12",
+        855.0
+      ],
+      [
+        "2026-01",
+        815.0
+      ],
+      [
+        "2026-02",
+        750.0
+      ],
+      [
+        "2026-03",
+        750.0
+      ],
+      [
+        "2026-04",
+        815.0
+      ],
+      [
+        "2026-05",
+        815.0
+      ],
+      [
+        "2026-06",
+        780.0
+      ],
+      [
+        "2026-07",
+        800.0
+      ],
+      [
+        "2026-08",
+        760.0
+      ],
+      [
+        "2026-09",
+        740.0
+      ],
+      [
+        "2026-10",
+        740.0
+      ],
+      [
+        "2026-11",
+        730.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "DCF (FCFF, terminal value)",
+        "value": 124.35,
+        "weight": 0.8
+      },
+      {
+        "label": "P/BV",
+        "value": 43.11,
+        "weight": 0.2
+      },
+      {
+        "label": "Scenario base",
+        "value": 125.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 10.0,
+        "weight": 0.25
+      },
+      {
+        "label": "Scenario bull",
+        "value": 381.0,
+        "weight": 0.25
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "volume",
+      "label": "Volume",
+      "unit": "vol",
+      "values": {
+        "FY2026E": 8.45,
+        "FY2027E": 8.79,
+        "FY2028E": 9.1,
+        "FY2029E": 9.37,
+        "FY2030E": 9.6
+      },
+      "value": null,
+      "lt": 9.6,
+      "basis": "Cement sales volume (Indonesia plus Vietnam). FY2026E +8.3% on FY2025A 7.8 Mt, set at the domestic market growth the company reports for 9M2026 rather than at an unsourced company volume number; FY2027-30 +4.0/3.5/3.0/2.5% starts at about twice market growth, the company target for 2026 (S6), and tapers to the industry 2-3% path (S8/S9) as the spare kilns fill; no new kiln is assumed. Total revenue-bearing tonnage is 11.8 Mt because the clinker channel adds 0.23 Mt domestic and 3.8 Mt export [S5][S6][S7].",
+      "sources": [
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "price",
+      "label": "Average price",
+      "unit": "price",
+      "values": {
+        "FY2026E": 1234000,
+        "FY2027E": 1249000,
+        "FY2028E": 1274000,
+        "FY2029E": 1299000,
+        "FY2030E": 1324000
+      },
+      "value": null,
+      "lt": 1324000,
+      "basis": "Total revenue per tonne of cement sold: FY2025A revenue Rp8,976bn / 7.8 Mt cement = Rp1.151m, which embeds the clinker channel (0.23 Mt domestic plus 3.8 Mt export, total tonnage 11.8 Mt, a blended Rp759k/t). FY2026E is the residual that reproduces the 9M2026 revenue run-rate: 9M revenue +16.2% on volume at +8.3% implies price +7.3%, and FY2026 revenue then grows 16.0% with no Q4 step-down. This applies cement volume growth to the clinker revenue in the denominator; with clinker tonnage flat instead, FY2026 revenue would be about 2.6% lower, and we prefer the run-rate calibration because clinker exports grew 8.9% in FY2025 and spare kiln capacity supports more (S7). FY2027-30 +1.2-2.0% a year is below CPI (3.28%) as the industry stays in a price war with 45-46% overcapacity [S5][S7][S9].",
+      "sources": [
+        "S5",
+        "S9"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "gross_margin",
+      "label": "Gross margin at base input costs",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.2169,
+        "FY2027E": 0.2169,
+        "FY2028E": 0.2169,
+        "FY2029E": 0.2169,
+        "FY2030E": 0.2169
+      },
+      "value": null,
+      "lt": 0.2169,
+      "basis": "FY2025A gross margin 21.69% held flat at base (FY2025) input costs - no margin expansion assumed; the coal link then drives the reported path: 2026 about 18.5% (9M2026 actual 18.7%), recovering to about 21% by 2029 as ICI4 falls from 62 to 46. Through-cycle 2022-25 average is 23.4%, so the base is not a trough margin. [S3][S7][S9]",
+      "sources": [
+        "S3",
+        "S7",
+        "S9"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link1_share",
+      "label": "Cost link 1: share of COGS exposed",
+      "unit": "pct",
+      "values": null,
+      "value": 0.17,
+      "lt": null,
+      "basis": "Coal is 17% of FY2025 COGS: 1.79 Mt consumed at the FY2025 ICI4 average of US$40.56/t is US$72.7m, about Rp1,195bn, against COGS of Rp7,029bn. The kiln fuel is the dominant variable cost. [S3][S7]",
+      "sources": [
+        "S3",
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link1_pass",
+      "label": "Cost link 1: pass-through to prices",
+      "unit": "pct",
+      "values": null,
+      "value": 0.55,
+      "lt": null,
+      "basis": "About 55% of the coal move is recovered in selling prices: 9M2026 revenue rose 16.2% on roughly 10% more volume while ICI4 rose from 40.56 to 62.0, i.e. unit coal cost up over 50%, and the gross margin fell only 2.5pp. The residual 45% is absorbed because the market is in a price war. [S4][S5]",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link2_share",
+      "label": "Cost link 2: share of COGS exposed",
+      "unit": "pct",
+      "values": null,
+      "value": 0.01,
+      "lt": null,
+      "basis": "Oil is marginal: diesel use was 71 TJ against 31,689 TJ of coal in FY2025 (0.2% of energy), so only haulage and lubricants are Brent-linked; 1% of COGS. [S7]",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "link2_pass",
+      "label": "Cost link 2: pass-through to prices",
+      "unit": "pct",
+      "values": null,
+      "value": 0.5,
+      "lt": null,
+      "basis": "Half of any diesel move is passed into delivered cement prices over a year; the amount is immaterial at a 1% cost share. [S7]",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "opex_pct",
+      "label": "SG&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.122,
+        "FY2027E": 0.12,
+        "FY2028E": 0.12,
+        "FY2029E": 0.12,
+        "FY2030E": 0.12
+      },
+      "value": null,
+      "lt": 0.12,
+      "basis": "Selling, distribution, G&A and other operating expense. 9M2026 was 12.2% of revenue (Rp910bn on Rp7,473bn) versus 13.5% in FY2025, so 12.2% for FY2026E and 12.0% thereafter; no operating leverage beyond the 9M2026 run-rate. [S4][S5]",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "da_pct",
+      "label": "D&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0862,
+        "FY2027E": 0.0862,
+        "FY2028E": 0.0862,
+        "FY2029E": 0.0862,
+        "FY2030E": 0.0862
+      },
+      "value": null,
+      "lt": 0.0862,
+      "basis": "FY2025 depreciation, amortisation and depletion Rp774bn on revenue Rp8,976bn = 8.62%; held because the asset base (PPE Rp12.8tn) is long-lived and capex stays below D&A in the forecast. [S7]",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_pct",
+      "label": "Capex / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.055,
+        "FY2027E": 0.055,
+        "FY2028E": 0.055,
+        "FY2029E": 0.085,
+        "FY2030E": 0.095
+      },
+      "value": null,
+      "lt": 0.095,
+      "basis": "Gross capital expenditure was Rp513bn in FY2025 (5.72% of revenue) and Rp443bn in FY2024 (5.01%), so 5.5% holds through FY2028 with no new kiln at 51% national utilisation. From FY2029E capex steps to 8.5% and then 9.5% of revenue in the terminal year: capex cannot stay below D&A (8.62% of revenue) for ever, and the terminal value must fund replacement of the asset base plus the net investment behind 2.5-4% growth, otherwise the perpetuity assumes net disinvestment while revenue grows. 9.5% is D&A plus roughly 0.9pp of growth capex, which keeps terminal FCFF below NOPAT [S7][S9].",
+      "sources": [
+        "S7",
+        "S9"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nwc_pct",
+      "label": "Operating working capital / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": -0.135,
+        "FY2027E": -0.135,
+        "FY2028E": -0.135,
+        "FY2029E": -0.135,
+        "FY2030E": -0.135
+      },
+      "value": null,
+      "lt": -0.135,
+      "basis": "Operating working capital at -13.5% of revenue, between the engine default (-13.7%) and FY2025 (-15.1%); the negative position is structural because related-party customer prepayments (Rp1.3tn contract liabilities from Aastar) fund the business. [S3]",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.1,
+        "FY2029E": 0.22,
+        "FY2030E": 0.22
+      },
+      "value": null,
+      "lt": 0.22,
+      "basis": "Cash tax, not the statutory rate, because accumulated fiscal losses shield the forecast. FY2025 carried a loss and booked only a deferred tax expense of Rp22bn; 9M2026 pre-tax profit was -Rp235bn with no current tax charge, so the engine tax of 22% on positive EBIT would overstate cash tax. Indonesian losses carry five years; 0% in FY2026-27 and 10% in FY2028 approximate the use of the shield, with the full 22% from FY2029 when the forecast turns solidly profitable. [S3][S4]",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cost_of_debt",
+      "label": "Cost of debt (on opening debt)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.0736,
+      "lt": null,
+      "basis": "FY2025 finance costs Rp655.6bn on opening debt Rp8,822.6bn = 7.36%; includes lease interest. [S3]",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cash_yield",
+      "label": "Yield on opening cash",
+      "unit": "pct",
+      "values": null,
+      "value": 0.04,
+      "lt": null,
+      "basis": "Interest income of Rp41.7bn on opening cash of Rp640.5bn = 6.5%, but most cash is short-term time deposits at lower rates; 4.0% is the forward assumption consistent with the BI rate path. [S3]",
+      "sources": [
+        "S3"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "net_borrowing",
+      "label": "Net new borrowing",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant",
+      "sources": [],
+      "engine_default": true
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other non-operating items",
+      "unit": "money",
+      "values": {
+        "FY2026E": -390,
+        "FY2027E": -200,
+        "FY2028E": -160,
+        "FY2029E": -160,
+        "FY2030E": -160
+      },
+      "value": null,
+      "lt": -160,
+      "basis": "FX losses on USD-denominated debt plus the share of associate losses. 9M2026 alone was -Rp303bn (net FX loss Rp292.8bn plus associate losses Rp10.3bn), so FY2026E carries the 9M run-rate at about -Rp390bn rather than a smaller full-year figure; FY2027E eases to -Rp200bn on the macro deck USD/IDR path to 18,350 and -Rp160bn thereafter. This is a real recurring drag, not a haircut. [S3][S4][S5]",
+      "sources": [
+        "S3",
+        "S4"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "Minority interests are small (Rp4.3bn of FY2025 profit) and are assumed nil for simplicity. [S3]",
+      "sources": [
+        "S0"
+      ],
+      "engine_default": true
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "No dividend has been paid since the 2021 IPO and the company is loss-making with a covenant waiver in place; zero payout assumed through 2030. [S7]",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "engine default constant",
+      "sources": [],
+      "engine_default": true
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth (DCF)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.04,
+      "lt": null,
+      "basis": "House nominal terminal growth of 4% in IDR: long-run Indonesian cement demand tracks nominal GDP, but 45-46% surplus national capacity keeps price growth at or below inflation, so terminal growth is set below the 4.5% nominal GDP path. [S9]",
+      "sources": [
+        "S9"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The DCF terminal is Rp17,431bn, 72.1% of EV, built on FY2030 FCFF of Rp1,331bn while FY2030 NOPAT is only Rp857bn (EBIT Rp1,098bn at 22%). FCFF exceeds NOPAT by Rp474bn because capex is 5.5% of revenue against D&A of 8.6%, so the perpetuity assumes net disinvestment while revenue grows 4% forever; D&A is also grown at 8.6% of revenue to Rp1,088bn by FY2030 (from Rp774bn) on a shrinking asset base. FCFF cannot exceed NOPAT in a growing perpetuity. A terminal with capex equal to D&A cuts the DCF from Rp366 to about Rp200/share and the lens target from 614 to roughly 520.",
+        "response": "accepted",
+        "answer": "Terminal capex raised to 9.5% of revenue from FY2029E (above D&A of 8.62%), so FY2030E capex of Rp1,207bn exceeds D&A of Rp1,096bn and FCFF of Rp824bn sits below NOPAT of Rp863bn. DCF falls from Rp366 to Rp111 a share and the lens target from Rp614 to Rp494, in line with the red team's Rp520 indication. The perpetuity no longer assumes net disinvestment. [S7]"
+      },
+      {
+        "id": "C2",
+        "severity": "FATAL",
+        "category": "evidence_and_citations",
+        "section": "6. Governance and ESG",
+        "challenge": "Every konglo fact in the summary and sections 4, 5, 6 and 7 is cited [S5], but S5 is an emitennews article on the 9M2026 loss whose body contains no free-float percentage, HSC status, IHSG deletion or MSCI consultation; only sidebar headlines appear. The facts are konglo-deck and registry items (registry S25/S3/S5), a house document, not a primary source. The cited AR (pages 52, 66, 81) shows WH Investments 87.37%, PT Gama Group 1.11% and public 11.52%, not the report's 10.6% float from [S7]. The free float triggers the ff_deadline flag and therefore the 614 target.",
+        "response": "accepted",
+        "answer": "Konglo facts now cite registered deck sources: S10 for HSC (CMNT named in the 82-name list), S12 for the IHSG exclusion (effective 2 November 2026, not 13 November), S13 for MSCI and S14 for the free-float rule. The stake table is restated from AR p.52 via facts F25-F27 (87.37/1.11/11.52) and the 10.55% feed figure is reconciled and the registry mirror gap flagged. [S10][S12][S13][S14]"
+      },
+      {
+        "id": "C3",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "4. Valuation",
+        "challenge": "The assumption note derives FY2026 price growth from 9M2026 revenue +16.2% on roughly 10% more volume, which implies realised price of +5.6%, yet the model uses +4.0%. On the model, Q4 2026 revenue is Rp2,642bn, only +3.8% YoY, against +16.2% for 9M, a deceleration no source supports. Holding the 9M realisation would lift FY2026 revenue by about 1.6% and EBITDA by about 8-10%.",
+        "response": "accepted",
+        "answer": "FY2026E volume held at the sourced domestic market growth of 8.3% and price lifted to Rp1,234,000 per tonne, the residual that reproduces the 9M2026 revenue run-rate: FY2026E revenue grows 16.2% and Q4 no longer steps down to +3.8%. The unsourced 8-10% volume claim is removed. [S5]"
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "FCFF taxes EBIT at 22% from FY2026, charging about Rp138bn in FY2026 and Rp242bn in FY2030, while the LK shows a deferred tax expense of Rp22bn on a FY2025 loss and no current tax in 9M2026 (PBT -Rp235bn), and the assumptions note itself says accumulated losses make cash tax near zero. No loss carryforward is modelled or sourced; the charge understates DCF value by roughly Rp30-35 per share.",
+        "response": "accepted",
+        "answer": "Cash tax modelled explicitly: 0% in FY2026E and FY2027E, 10% in FY2028E, 22% from FY2029E, reflecting the accumulated loss shield, the deferred-only FY2025 charge and the absence of current tax in 9M2026. FCFF and the DCF are rebuilt on that path. [S3][S4]"
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "conservatism_audit",
+        "section": "4. Valuation",
+        "challenge": "A 20% weight is put on EV/EBITDA at 4.89x, the peer median LTM multiple of a price-war year, floored at zero. That is the procyclical error the commodity-cyclical card prohibits (never value a cyclical on spot or current-year multiples) and the same error that was FATAL in APLI last week. It subtracts roughly Rp40-45 from the final target (614 vs about 658 with the method dropped).",
+        "response": "accepted",
+        "answer": "EV/EBITDA weight cut to zero with a recorded qc_justification: the engine's peer median LTM multiple is struck in a price-war year and applying it to a leveraged cyclical is the procyclical error the commodity-cyclical card forbids. The DCF stays primary and the multiple is shown as a disclosed cross-check that returns nil equity, not a weighted method. [S9]"
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "Method weights are 80/20/0 against the industry default 60/25/15 and the weights.changed WARN is unjustified. The stated reason for dropping P/B, a revalued asset base, is contradicted by S3 page 38, which says fixed assets are carried at cost. The peer median P/B is 0.327x, about Rp50 per share, so dropping the method raises the blend; restoring the default lowers the lens target from 614 to about 569.",
+        "response": "accepted",
+        "answer": "The revaluation rationale is withdrawn: AR p.38 says fixed assets are stated at cost less depreciation, so there is no revalued book to disqualify. P/B is restored at a fifth of the weight, weights.changed is justified, and the P/BV divergence is discussed in section 4 rather than averaged away. [S3]"
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The volume driver is 7.8 Mt of cement sales while FY2025 revenue of Rp8,976bn includes about 3.99 Mt of clinker (AR page 28 and 124: domestic cement 4.5 Mt, domestic clinker 0.23 Mt, export cement 0.05 Mt, export clinker 3.76 Mt), so total revenue-bearing tonnage is about 11.8 Mt. The Rp1,151k price is total revenue per cement tonne, not a cement price, and applying volume growth to it grows clinker revenue too; with flat clinker volumes, FY2026E revenue is overstated by roughly 2.5-3% (Rp250-300bn) and EBITDA by about Rp50-60bn.",
+        "response": "accepted",
+        "answer": "FY2025 revenue is reconciled to the AR product table: cement sales of 4.5 Mt in Indonesia, 0.05 Mt export and clinker of 0.23 Mt domestic and 3.8 Mt export give about 11.8 Mt of revenue-bearing tonnage and a blended realisable price well below the cement-only rate. The effect of holding clinker flat (about 2.6% lower FY2026E revenue) is disclosed and the base prefers the run-rate calibration. [S7]"
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The report discusses the covenant waiver but never gives the refinancing wall or the covenant thresholds. The 9M2026 LK shows current liabilities of Rp7,217bn, including short-term bank loans Rp1,832bn and current maturities of long-term loans Rp681bn, against cash of Rp516bn; the debt is largely current. The bear case of Rp170 contains no distressed refinancing or equity-wipeout scenario, and no maturity schedule or next test date is disclosed. The bridge also deducts Rp8,584bn of net debt while the summary quotes Rp8,339bn; the two are not reconciled.",
+        "response": "accepted",
+        "answer": "The refinancing wall is now in section 5 and in facts: current liabilities of Rp7,217bn at 30 September 2026 including Rp1,832bn short-term bank loans and Rp681bn current maturities against Rp516bn cash; disclosed covenants are DSCR 100%, current ratio 100% and DER 300%; the bridge is reconciled to the 30 September 2026 balance sheet. [S4][S7]"
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "Coal is the largest cost risk: at spot 65.1 against the 46 long-run deck marker, the 1.79 Mt burn costs about Rp560bn more, roughly 37% of FY2026E EBITDA. The bear narrative says coal stays near 55, but the bear shocks touch only volume, price and gross margin, so no coal shock is applied. The related-party prepayment unwind (Rp1,309bn of related-party contract liabilities) that would reverse the negative working capital is also absent from the bear.",
+        "response": "accepted",
+        "answer": "The bear now carries a two-percentage-point gross-margin shock for coal staying near spot and a six-percentage-point-of-revenue related-party prepayment unwind, both mirrored in the bull; the coal and working-capital effects flow through the scenario values shown in the report. [S4][S0]"
+      },
+      {
+        "id": "C10",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "4. Valuation",
+        "challenge": "Capacity is 16.4 Mt of cement (11.4 Indonesia plus 5 Vietnam) against about 11.9 Mt of cement and clinker output, so roughly 4.5 Mt is spare; clinker exports already grew 8.9% in FY2025. That capacity can add volume at marginal cost with no new kiln, yet the base grows volume only 4.5/4.0/3.5/3.0% from FY2027 and the bull only +5%, and no incremental margin on the idle capacity is quantified.",
+        "response": "accepted",
+        "answer": "Accepted in part: the volume path now runs at four per cent in FY2027 - above the industry's two to three per cent - then tapers to 2.5%, which is the utilisation-led clinker growth on the spare kilns, and the bull adds seven per cent. The single-channel engine cannot split clinker marginal-cost EBITDA from cement; that limitation is stated rather than papered over. [S7][S8]"
+      },
+      {
+        "id": "C11",
+        "severity": "MATERIAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The konglo lens base closes 40% of the log gap with no float arithmetic and no argument for why 40% is the most likely path for CMNT. From 11.52% (AR) or 10.55% (registry) to 12.5% requires about 168-334m shares, Rp123-244bn at Rp730, about 9-17 days of ADTV, and could be placed in one block; the dated catalysts (IHSG exclusion 13 Nov 2026, MSCI decision by 30 Jun 2027) are named but not tied to a probability. The konglo card requires this float math.",
+        "response": "accepted",
+        "answer": "The float arithmetic is now in section 4: to reach 12.5 per cent the group must place about 334m of the 17,126m shares, Rp244bn at Rp730, or 9-17 days of ADTV, or issue about 382m shares for Rp279bn; either is a block, the deadlines are dated (2 November 2026, 31 March 2027, 30 June 2027), and the seller's incentive is to sell at a premium to fundamental value - which is why 40 per cent, not zero and not the bear's 80 per cent, is the modal path. [S12][S13][S14]"
+      },
+      {
+        "id": "C12",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "FY2026E other non-operating income is -Rp250bn, but 9M2026 actual is already -Rp303bn (net FX loss Rp292.8bn plus associate losses Rp10.3bn, S4 page 6), which the report's own note cites. FY2026E is therefore less negative than the 9M run-rate without a source, understating the FY2026 loss and equity by about Rp50bn and flattering covenant headroom.",
+        "response": "accepted",
+        "answer": "FY2026E other non-operating income is now -Rp390bn, carrying the 9M2026 run-rate (-Rp303bn, of which FX -Rp292.8bn and associates -Rp10.3bn), instead of the smaller -Rp250bn. The FY2026E loss, equity and net debt are rebuilt on it. [S5]"
+      },
+      {
+        "id": "C13",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "4. Valuation",
+        "challenge": "Market capitalisation is stated as IDR12,501,617,920,000.0bn and three-month traded value as IDR14,265,092,904.8bn: both are raw rupiah labelled bn, wrong by nine orders (Rp12.5trn and Rp14.3bn per day). Section 4 also calls the premium 2.5 times fundamental value of Rp338, but 730/338 is 2.16x; the 2.49x ratio uses today's blend of Rp293. The 14.1x multiple itself is arithmetically right.",
+        "response": "accepted",
+        "answer": "Market cap and ADTV now use the rupiah formatters (idrb, idrm), removing the nine-order unit error. Section 4 defines one fundamental value and states the premium against it: price is 5.6 times today's fundamental value of Rp132, which the engine rolls to Rp151 in twelve months; the previous 2.5-times-Rp338 confusion is gone. [S0]"
+      },
+      {
+        "id": "C14",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The four-year restated EBITDA series in section 3 is only restated for FY2024-25: the model's D&A is Rp57.9bn in FY2022A and Rp65.7bn in FY2023A against Rp797.6bn in FY2024A, so the FY2023 EBITDA of Rp1,063bn and its 11% margin are pack numbers, not restated, and understate the true FY2023 margin by about 7pp. The through-cycle history used to frame the call is therefore not comparable.",
+        "response": "accepted",
+        "answer": "The pre-FY2024 EBITDA series is labelled as unreconciled data-pack figures, not restated for D&A, and the through-cycle read is confined to the last two audited years where the depreciation charge is sourced. We did not find a five-year D&A table to restate FY2022-23 from. [S0][S3]"
+      },
+      {
+        "id": "C15",
+        "severity": "MINOR",
+        "category": "calibration",
+        "section": "4. Valuation",
+        "challenge": "The only BLOCK flag, drift.volume, is justified by S6's statement that CMNT targets up to twice market growth in 2026; the justification applies that to FY2027-30 at 4.5/4.0/3.5/3.0%, which S6 does not say. The gate is answered with a source covering one year of a four-year drift, and the -2.07pp calibration gap is the sourced coal link but is never stated.",
+        "response": "accepted",
+        "answer": "Volume growth is cut from 16% to about 14% over four years and the path now starts at four per cent in FY2027 and tapers to 2.5%, sourced to the company's twice-market 2026 target and the industry's two to three per cent outlook; the calibration gap of -2.07pp and its coal driver (ICI4 62 versus the FY2025 40.56 average) are stated in section 3. The drift.volume gate no longer fires. [S6][S8][S9]"
+      },
+      {
+        "id": "C16",
+        "severity": "MINOR",
+        "category": "consistency_with_sector_deck",
+        "section": "2. Industry overview and competitive positioning",
+        "challenge": "Sections 2 and 5 say the rupiah path runs to 19,000 per dollar in the macro deck, but the deck's USD/IDR is 18,350 for FY2027E (spot 17,968) and the model uses 18,350. 19,000 appears in neither the deck nor the assumptions, and it is used to describe the FX drag on dollar debt.",
+        "response": "rebutted",
+        "answer": "The report contains no typed 19,000 path: sections 2 and 5 reference the macro deck through placeholders that resolve to the FY2027E 18,350 and the spot 17,968, which is the same 18,350 the model uses. There is nothing to reconcile because the two statements agree by construction. [S0]"
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "6. Governance and ESG",
+        "challenge": "The 10.55% free float that triggers the ff_deadline overlay is cited [S11], but S11 (bareksa) contains no CMNT or Cemindo line, as source grep and section 6 itself concede. The overlay is not cosmetic: the target of Rp494 equals the probability-weighted fundamental value of Rp151 multiplied by the konglo premium kept of 3.274x (151 x 3.274 = 494.4), so an uncited float controls a 3.3x swing in the stated target. The AR register shows 11.52% public [S7 p.52].",
+        "response": "accepted",
+        "answer": "Free float now cited to the exchange registry mirror archived as S15 (FreeFloatPct 10.5500, as of 11 Nov 2026), not the bareksa article; reconciled with the AR register's 11.52% public at 31 Dec 2025 [S7 p.52] \u2014 different dates and bases, both below the 12.5% first step so the ff_deadline overlay triggers either way, and the report says so. The platform target basis is stated: Rp501 equals the probability-weighted fundamental value of Rp160 times the premium kept."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "5. Risks",
+        "challenge": "Engine net debt is Rp224bn above the 9M2026 LK: borrowings of Rp8,874.9bn less cash Rp515.5bn is Rp8,359.4bn, against bridge net debt Rp8,583.7bn, and the same roughly Rp265bn add-on appears at FY2025A (model 8,339.0 versus LK 8,073.2). Section 5 also says the 9M2026 loss and capex added to gross debt, but gross debt rose only Rp239bn while cash fell Rp47bn, so net debt is roughly flat. A SELL whose central claim is leverage cannot rest on a net-debt figure the filing does not support.",
+        "response": "accepted",
+        "answer": "The bridge is corrected to the 30 Sep 2026 LK: valuation.bridge carries +Rp224.3bn (debt Rp9,092.8bn pack vs Rp8,874.9bn LK, cash Rp509.1bn vs Rp515.5bn), so the engine values net debt at Rp8,359.4bn; post_bs_review states the definition and that the pack's debt line runs above the sum of the LK borrowing lines at both dates [S4]. Section 5's gross-debt claim is removed and replaced with the LK's marginal net-debt move. Target Rp501."
+      },
+      {
+        "id": "L3",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "Section 4 says the weighted fundamental value of Rp151 sits between the DCF of Rp111 and the P/B of Rp43. It does not: Rp151 is the probability-weighted scenario value (0.5x113 + 0.25x10 + 0.25x368), above both methods, while the method blend is Rp98 today and Rp113 base. The paragraph conflates the method blend with the scenario weighting, and the konglo multiplier is then applied to the scenario value rather than the blend.",
+        "response": "accepted",
+        "answer": "Section 4 now separates the blend (Rp108 today: 80% DCF Rp124, 20% P/B Rp43, rolled to Rp125 base) from the probability-weighted scenario value (Rp160 rolled forward), states the weighting arithmetic and says the konglo multiplier applies to the weighted figure, not the blend [S0]. The false sits-between sentence is gone and the 7.0x is relabelled FY2026E."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "Idle capacity of roughly 4.5 Mt (16.4 Mt capacity vs about 11.9 Mt output), the clinker export channel (up 8.9% in FY2025) and a feasible free-float sell-down of 168-334m shares (Rp123-244bn) are upside levers, none quantified; the price path is also below the 9M run-rate."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "The refinancing wall (Rp7,217bn current liabilities, including Rp1,832bn short-term loans and Rp681bn current maturities, vs Rp516bn cash), a coal spike (spot 65.1 vs 46 long-run costs about Rp560bn) and a related-party prepayment unwind are absent from the bear case and from the model."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "The volume driver is cement-only 7.8 Mt against about 11.8 Mt of revenue-bearing tonnage, so the Rp1,151k per tonne price is total revenue per cement tonne, not a cement price; clinker mix is not modelled; 9M2026 other non-operating is -Rp303bn but FY2026E is set at -Rp250bn."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "The konglo regime paragraph in the summary and sections 4, 5, 6 and 7 is cited [S5], an emitennews loss article that contains none of those facts (only sidebar headlines); the free float is registry-only (10.55%) against the AR's 11.52% public; market cap and ADTV are mislabelled by nine orders. The D&A restatement itself is properly sourced and correct."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "The DCF terminal value is 72.1% of EV and capitalises FY2030 FCFF of Rp1,331bn against NOPAT of Rp857bn, because capex is 5.5% of revenue while D&A is 8.6%; a growing perpetuity cannot distribute more than NOPAT. Method weights are 80/20/0 against the 60/25/15 default and the weights.changed WARN is unjustified."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "The prose is disciplined and both cases are presented, but the claim that the target is not a bear-case number rests on a DCF whose terminal overstates value; the report never shows how little the target moves with the fundamental (lens elasticity about 0.39), and the scenario shocks are not mirrored."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "The rupiah long-run path is stated as 19,000 in sections 2 and 5 against the deck's 18,350 (spot 17,968) and the model's own 18,350; the ICI4 path (62 to 46) is not tied to the deck's 52.5 FY2027E marker; the coal path in the bear narrative is not the deck's."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "Below-run-rate conservatisms: FY2026 price +4% vs a 9M implied +5.6-7.6%; 22% tax on EBIT despite loss carryforwards; a 20% weight on a trough LTM multiple floored at zero. Offsetting optimism: P/B dropped (peer 0.33x), other non-operating -Rp250bn vs -Rp303bn in 9M, capex below D&A in perpetuity."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "The -2.07pp EBITDA margin gap (model 14.78% vs FY2025A 16.85%) is the sourced coal link but is not stated. The only BLOCK flag, drift.volume, is answered with S6's 2026 twice-market-growth target extrapolated to FY2030, which S6 does not say."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_BASIC_MATERIALS",
+      "at": "2026-11-12T01:44:50+07:00",
+      "verdict": "APPROVED",
+      "notes": "One stated cross-check rule applied: drop a leg only when it returns a floored/nil equity value or a multiple struck on a single extreme year; keep any leg merely lower than the DCF. P/B at 0.33x kept at 20% despite sitting far below the DCF; EV/EBITDA dropped only because peer-median LTM makes net debt exceed the multiple and floors equity at nil - a stated test, not a one-directional screen. Multiple legs are not mislabelled: P/B uses last reported book at cost, EV/EBITDA explicitly labelled a price-war LTM multiple. Konglo handling consistent (float 10.55% registry-verified, HSC, MSCI consultation, 40% gap closure reasoned). SELL Rp501 below Rp730 holds."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-12T01:42:35+07:00",
+      "verdict": "PASS",
+      "round": 1,
+      "bias": {
+        "direction": "neutral",
+        "note": "Base case reproduces the 9M2026 run-rate: FY2026E revenue +16.2% on the sourced 8.3% market volume (S5) with gross margin 18.5% vs 18.7% actual (S4); EBITDA Rp1,541bn is flat on FY2025A Rp1,513bn. The bearish leans (terminal capex 9.5% above D&A 8.62%, P/B on the 0.33x trough peer multiple, 22% cash tax from FY2029) are offset by the bullish leans (4% terminal growth, 4% FY2027 volume vs a 2-3% industry, FY2026E volume +8.3% at the top of guidance) and by the coal-driven margin path, which is sourced (ICI4 40.56 to 62.0). No stacked conservatism moves the rating: the -31.4% return is the konglo premium compression (deck compress_base 0.30 + hsc 0.05 + ff 0.05), not the operating model."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A EBITDA",
+          "model": 1512.69,
+          "filing": 1512.69,
+          "source": "S7",
+          "ok": true
+        },
+        {
+          "item": "Net debt at 30 Sep 2026 (debt 8,874.9 less cash 515.5)",
+          "model": 8359.4,
+          "filing": 8359.4,
+          "source": "S4",
+          "ok": true
+        },
+        {
+          "item": "FY2025A cement volume",
+          "model": 7.8,
+          "filing": 7.8,
+          "source": "S7",
+          "ok": true
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q1",
+          "severity": "FIX",
+          "area": "consistency",
+          "finding": "Investment summary still presents net debt of IDR8,339.0bn as the FY2025A figure and a 13.7x FY2026E EV/EBITDA, but the LK net debt at FY2025 is about Rp8,073bn (the Rp266bn pack add-on L2 identified) and on the corrected 30 Sep net debt the multiple is 13.5x (21,085/1,541). The bridge fix corrected the valuation date only.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q2",
+          "severity": "NOTE",
+          "area": "valuation",
+          "finding": "Terminal capex of 9.5% is above D&A of 8.62%, so the perpetuity reinvests more than it consumes; the step rests on F3/F9 arithmetic, not a company or industry capex source. It fixes the terminal FCFF>NOPAT FATAL and is directionally conservative.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q3",
+          "severity": "NOTE",
+          "area": "calibration",
+          "finding": "FY2026E at FY2025 prices calibrates 2.07pp below the FY2025A margin (14.78% vs 16.85%), driven by ICI4 62.0 against 40.56 - sourced, but the gap is not narrated in the report.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "drift.capex_pct",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.capex_pct moves +4.0pp from FY2026E to FY2030E: source the change or hold it",
+          "justification": "Capex rises from 5.5% of revenue in FY2028E to 9.5% in FY2030E and the terminal. This is not a haircut but the only internally consistent level: FY2025 D&A was Rp774bn (F3) against capex of Rp513bn (F9), so capex at 5.5% of revenue would carry a growing revenue stream on a shrinking asset base for ever, and terminal FCFF would exceed NOPAT in a growing perpetuity. 9.5% is D&A (8.62% of revenue) plus about 0.9pp of net investment behind the 2.5-4% growth that the spare kiln capacity cannot supply indefinitely [S7]."
+        },
+        {
+          "id": "weights.changed",
+          "severity": "WARN",
+          "justified": true,
+          "message": "method weights differ from the industry default {'dcf_fcff': 0.6, 'ev_ebitda': 0.25, 'pbv': 0.15}",
+          "justification": "Weights are 0.8 DCF / 0.0 EV/EBITDA / 0.2 P/B against the industry default 0.6/0.25/0.15. EV/EBITDA is zero because the engine applies the peer median LTM multiple of 4.89x from a price-war year to a leveraged cyclical, the procyclical error the commodity-cyclical card forbids [S9]; at that multiple net debt exceeds the multiple times EBITDA and the method returns nil, so a weight would assert a zero-equity probability, not a value. P/B is restored because fixed assets are at cost, not revalued [S3], correcting the original reason for dropping it."
+        },
+        {
+          "id": "konglo.overlay",
+          "severity": "WARN",
+          "justified": true,
+          "message": "konglo lens: price is 5.26x fundamental value (premium); the base case closes 40% of the log gap in 12 months (hsc, ff_deadline); target 501 vs fundamental 12-month value 160 \u2014 explain it in \u00a74 and \u00a76",
+          "justification": "The price is 5.7x today's fundamental value and the base case closes 40% of the log gap in twelve months, which is the konglo deck's central compression plus the HSC and free-float-deadline adjustments. That is the most likely path because the required sell-down is small (about 334m shares, Rp244bn, 9-17 days of ADTV), dated (IHSG exclusion already effective 2 Nov 2026, first float step 31 Mar 2027, MSCI decision by 30 Jun 2027) and the HSC list is the registry's own entry [S10][S12][S13]. It does not bend a single fundamental input."
+        }
+      ],
+      "calibration": {
+        "kind": "ebitda_margin",
+        "period": "FY2025A",
+        "benchmark": null,
+        "volume": null,
+        "ebitda_actual": null,
+        "ebitda_model": null,
+        "gap_pct": null,
+        "actual": 0.16852432220277427,
+        "model": 0.1478290781403819,
+        "gap_pp": -2.0695244062392373
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-12",
+      "type": "initiation",
+      "rating": "SELL",
+      "tp": 501
+    }
+  ],
+  "news": [],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
