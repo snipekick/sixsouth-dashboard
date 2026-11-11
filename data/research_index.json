@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-12T01:56:30+07:00",
+  "asof": "2026-11-12T04:06:46+07:00",
   "counts": {
     "theses": 57,
-    "ideas": 78,
-    "stocks": 95,
+    "ideas": 82,
+    "stocks": 99,
     "dossiers": 76,
     "ic": 3,
     "daily": 56,
@@ -2072,6 +2072,26 @@
   "ideas": [
     {
       "book": "INDO",
+      "ticker": "BBRI.JK",
+      "name": "Bank Rakyat Indonesia",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-12",
+      "doc": "research_doc_idea_indo-bbri"
+    },
+    {
+      "book": "INDO",
+      "ticker": "BUKA.JK",
+      "name": "Bukalapak.com",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-12",
+      "doc": "research_doc_idea_indo-buka"
+    },
+    {
+      "book": "INDO",
       "ticker": "CPIN.JK",
       "name": "Charoen Pokphand Indonesia",
       "verdict": "ADVANCE",
@@ -2079,6 +2099,36 @@
       "sleeve": "COVERAGE",
       "asof": "2026-11-12",
       "doc": "research_doc_idea_indo-cpin"
+    },
+    {
+      "book": "INDO",
+      "ticker": "CPRO.JK",
+      "name": "CPRO.JK",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-12",
+      "doc": "research_doc_idea_indo-cpro"
+    },
+    {
+      "book": "INDO",
+      "ticker": "EMTK.JK",
+      "name": "Elang Mahkota Teknologi",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-12",
+      "doc": "research_doc_idea_indo-emtk"
+    },
+    {
+      "book": "INDO",
+      "ticker": "GOTO.JK",
+      "name": "GoTo Gojek Tokopedia",
+      "verdict": "ADVANCE",
+      "regime": "UNASSESSED",
+      "sleeve": "COVERAGE",
+      "asof": "2026-11-12",
+      "doc": "research_doc_idea_indo-goto"
     },
     {
       "book": "INDO",
@@ -2219,16 +2269,6 @@
       "sleeve": "COVERAGE",
       "asof": "2026-11-10",
       "doc": "research_doc_idea_indo-arci"
-    },
-    {
-      "book": "INDO",
-      "ticker": "BBRI.JK",
-      "name": "Bank Rakyat Indonesia",
-      "verdict": "ADVANCE",
-      "regime": "UNASSESSED",
-      "sleeve": "COVERAGE",
-      "asof": "2026-11-10",
-      "doc": "research_doc_idea_indo-bbri"
     },
     {
       "book": "INDO",
@@ -4222,7 +4262,7 @@
       "ideas": [
         {
           "verdict": "ADVANCE",
-          "asof": "2026-11-10",
+          "asof": "2026-11-12",
           "doc": "research_doc_idea_indo-bbri"
         }
       ],
@@ -4352,6 +4392,25 @@
       "kill": null
     },
     {
+      "ticker": "BUKA.JK",
+      "book": "INDO",
+      "name": "Bukalapak.com",
+      "sector": "TECH",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-12",
+          "doc": "research_doc_idea_indo-buka"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
       "ticker": "CMRY.JK",
       "book": "INDO",
       "name": "Cisarua Mountain Dairy",
@@ -4392,6 +4451,25 @@
         "kind": "auto",
         "doc": "research_doc_dossier_cpin-jk"
       },
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
+      "ticker": "CPRO.JK",
+      "book": "INDO",
+      "name": "CPRO.JK",
+      "sector": null,
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-12",
+          "doc": "research_doc_idea_indo-cpro"
+        }
+      ],
+      "dossier": null,
       "price": null,
       "price_asof": null,
       "latest_verdict": null,
@@ -4601,6 +4679,25 @@
       }
     },
     {
+      "ticker": "EMTK.JK",
+      "book": "INDO",
+      "name": "Elang Mahkota Teknologi",
+      "sector": "TECH",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-12",
+          "doc": "research_doc_idea_indo-emtk"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
+      "kill": null
+    },
+    {
       "ticker": "ERAA.JK",
       "book": "INDO",
       "name": "Erajaya Swasembada",
@@ -4750,6 +4847,25 @@
       "price": 1095.0,
       "price_asof": "2026-11-11",
       "latest_verdict": "PASS_REDUCED",
+      "kill": null
+    },
+    {
+      "ticker": "GOTO.JK",
+      "book": "INDO",
+      "name": "GoTo Gojek Tokopedia",
+      "sector": "TECH",
+      "theses": [],
+      "ideas": [
+        {
+          "verdict": "ADVANCE",
+          "asof": "2026-11-12",
+          "doc": "research_doc_idea_indo-goto"
+        }
+      ],
+      "dossier": null,
+      "price": null,
+      "price_asof": null,
+      "latest_verdict": null,
       "kill": null
     },
     {
