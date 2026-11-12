@@ -10,18 +10,33 @@
     "ticker": "CBDK.JK",
     "frontmatter": {
       "ticker": "CBDK.JK",
-      "report_type": "initiation",
-      "version": 2,
-      "title": "Bangun Kosambi Sukses: a township premium on a raw-land seller",
-      "summary": "We initiate CBDK at SELL with a target of Rp1,582, a return of -44.3% against the Rp2,900 price. The market pays more than our undiscounted RNAV for a land bank whose monetisation depends on plot sales running at a fraction of revenue, and at a P/BV far above the sector median.",
+      "report_type": "results",
+      "version": 4,
+      "title": "Bangun Kosambi Sukses: the land is worth more than its carrying cost",
+      "summary": "Revision. The audited segment note shows commercial land plots sold at a large multiple of their carrying cost, so the RNAV marks the land at a market value with the property method card haircuts rather than at book. We now share that mark-up with the minorities that own part of the land-holding subsidiaries, which cuts the RNAV and the target: HOLD at Rp2,816.",
       "thesis": [
-        "The shares trade above the undiscounted RNAV of the land bank and income assets; our RNAV method, before the property discount, already sits below the market price, so the SELL does not depend on a bearish view of plot prices.",
-        "The profit and loss account is running on a customer-advance book, not on current sales: FY2025 revenue of IDR2,503.6bn compares with marketing sales of IDR430.2bn, so the revenue base must normalise as the backlog unwinds.",
-        "At 1.5x P/BV on the 30 June 2026 book against a peer median of 0.7x, the market capitalises a township option that the company has not yet converted into a repeatable sales run-rate.",
-        "Downside is cushioned by a net-cash balance sheet, a controlling shareholder with every incentive to keep the township funded, and a recurring-income base (NICE, the Hilton under construction) that we value at a cap rate.",
-        "The main upside risk is that a single bulk commercial land transaction, like the one that lifted FY2024 marketing sales, re-rates the whole equity; we treat that as the bull case, not the base case."
+        "The land bank is carried at historical cost, but the audited segment note shows commercial land plots sold at several times their carrying cost, with a gross margin in the mid-eighties in FY2025 after a margin in the low sixties in FY2024; marking the land at a market value with the method card haircuts, and sharing the mark-up with the minorities that own part of the land-holding companies, brings the discounted RNAV to roughly the share price rather than far below it.",
+        "At Rp2,730 the market capitalises the equity below audited book plus the land revaluation the segment margins support; the shares trade above book on a premium to the peer median, and the premium is justified by the land rather than by earnings.",
+        "The profit and loss account runs on a customer-advance book, not on current sales: FY2025 revenue of IDR2,503.6bn compares with marketing sales of IDR430.2bn, so revenue normalises as the backlog unwinds unless a bulk transaction lands.",
+        "Management set a FY2025 marketing-sales target of IDR2,030.0bn and delivered IDR430.2bn, about a fifth of it, after cutting the target to IDR508.0bn; that history is the strongest argument against extrapolating the land value into a near-term earnings recovery.",
+        "Downside is cushioned by cash of IDR3,636.8bn against bank loans of IDR42.5bn current and IDR159.3bn non-current, no material foreign-currency debt, and a controlling shareholder with every incentive to keep the township funded."
       ],
       "catalysts": [
+        {
+          "date": "2026-12-31",
+          "event": "Full-year marketing sales against the company target of {{fact.F10|money}}, the KPI that leads revenue",
+          "source": "S3"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "First free-float deadline: the IDX requires a higher public float than the {{mkt.free_float_pct}} held now",
+          "source": "S7"
+        },
+        {
+          "date": "2027-06-30",
+          "event": "MSCI final decision on reclassifying Indonesia from Emerging to Standalone market status",
+          "source": "S8"
+        },
         {
           "date": "2027-09-30",
           "event": "Hilton PIK Dua, the five-star hotel under construction, is targeted to open in the second half of 2027, adding recurring income",
@@ -30,16 +45,6 @@
         {
           "date": "2027-02-28",
           "event": "FY2026 audited results and the FY2026 dividend decision at the annual meeting",
-          "source": "S3"
-        },
-        {
-          "date": "2026-12-31",
-          "event": "Full-year marketing sales against the company target of {{fact.F10|money}}",
-          "source": "S3"
-        },
-        {
-          "date": "2027-06-30",
-          "event": "Any decision on a further bulk commercial land sale or a township asset monetisation",
           "source": "S3"
         }
       ],
@@ -54,19 +59,19 @@
         "blocks": [
           {
             "type": "para",
-            "text": "We initiate coverage of PT Bangun Kosambi Sukses at **SELL** with a twelve-month target of **Rp1,582**, which implies a total return of **-44.3%** from the Rp2,900 price. The target is built from three methods: RNAV at 60% weight, P/E at 20% and P/BV at 20%, rolled forward one year at our cost of equity of 11.9% and net of the next-twelve-month dividend of Rp35. The probability-weighted scenario value is Rp1,582, with no liquidity discount applied. [S0]"
+            "text": "We move to **HOLD** on PT Bangun Kosambi Sukses with a twelve-month target of **Rp2,816**, a total return of **4.4%** from the Rp2,730 price. The previous SELL rested on an RNAV that marked a large land bank at just below its audited carrying cost. That was wrong, and the review was right to challenge it: the audited segment note shows the commercial-land-plot business earned revenue of IDR1,167.8bn on cost of revenue of IDR175.0bn in FY2025, and IDR1,083.4bn on IDR395.3bn in FY2024 [S3 p.102], so realised sale prices are a multiple of the carrying cost of the plots sold and inventory is not a ceiling on value. [S3 p.102, p.393]"
           },
           {
             "type": "para",
-            "text": "The core of the call is simple. CBDK owns and is developing a township in the Pantai Indah Kapuk Dua area of Tangerang, with a land bank of 702 ha at the last annual report date and a book of customer advances of IDR9,546.8bn [S3]. Our RNAV build values the land at Rp927 per share after a 40.0% discount to appraised value; the market price of Rp2,900 is above that, and above the undiscounted RNAV per share that the model computes. In other words, the equity is priced as if the option value of the township were already realised, with no discount for the years of plot sales still required to convert land into cash. [S0, S3]"
+            "text": "The revised RNAV derives a market land value from those realised margins, applies the property method card's haircut band by land status, and only then applies the target discount to RNAV. Because the land sits in project companies the group owns roughly three quarters to four fifths of, the mark-up is shared with the minority holders before it reaches the parent: we deduct the minorities' share of the revaluation, a little over a fifth of it, from the land block, leaving an undiscounted RNAV per share above the market price before the discount is applied. Sharing the mark-up the parent does not own, rather than deducting only the book minority interest, is what the previous version of this note got wrong. It produces an RNAV method value of Rp2,676 per share at a 42.0% discount, against Rp1,200 on P/BV and Rp3,441 on P/E, blended at the weights shown in the valuation table and rolled forward at our cost of equity of 11.9% net of the next-twelve-month dividend of Rp34. The probability-weighted scenario value is Rp2,816 and, with no liquidity discount applied, the final target is Rp2,816. [S3 p.408, S6, S0]"
           },
           {
             "type": "para",
-            "text": "The variant view is about the sales run-rate rather than the asset. Marketing sales were IDR430.2bn in FY2025 against a target the company set at a higher figure, and IDR448.0bn in the first nine months of FY2026 [S3, S2]. Reported revenue of IDR2,503.6bn is therefore being recognised out of the advance book, not out of current demand: the company sold plots in earlier periods, collected the cash, and is handing them over now [S3]. That is a legitimate business model, but it means the profit and loss account flatters the underlying sales momentum, and it means revenue has to step down once the backlog is consumed unless a new bulk transaction lands. [S3, S4]"
+            "text": "The variant view is about the asset, not the earnings. At Rp2,730 the market capitalises the equity below audited book plus the land revaluation the segment margins support, and the shares sit at 1.4x P/BV on the 30 September 2026 book against a peer median of 0.6x: the premium over peer book is only defensible if the land is worth well above carrying cost, which is what the segment note shows. What keeps the call at HOLD rather than BUY is the operating evidence. Marketing sales of IDR430.2bn in FY2025 were about a fifth of the IDR2,030.0bn target the company had set a year earlier [S5 p.28, S3 p.35, p.46]; IDR448.0bn in the first nine months of FY2026 is still small against the revenue base [S2]; and the land bank turns at a few hectares a year, so the market-value mark is a statement about the asset, not about when it converts. [S3, S2]"
           },
           {
             "type": "para",
-            "text": "What would move the value: a large commercial land sale to an institutional or corporate buyer, an independent appraisal of the land bank that supports a higher value than the audited inventory book, faster conversion at NICE and the Hilton, or a lower rate path that revives plot demand. Against that, the balance sheet is in net cash, there is no meaningful foreign-currency debt, and the controlling shareholder has funded the township through its own master plan, so the downside is a de-rating rather than a solvency event. [S3, S0]"
+            "text": "What would move the value further: a bulk commercial-land transaction at the FY2024 scale, the next independent appraisal being published rather than merely referenced, marketing sales above the IDR563.1bn target for successive quarters, or a rate path that revives plot demand. Against that, a wider RNAV discount, a land correction, or a dilutive free-float placement would take the target back toward the price. [S3, S2, S7]"
           }
         ]
       },
@@ -84,7 +89,11 @@
           },
           {
             "type": "para",
-            "text": "The land bank is the asset that matters. The company reports 702 ha of land reserves, most of it inside the township, carried on two balance-sheet lines that together total IDR6,909.5bn of current inventory and IDR6,910.8bn of undeveloped land at the last audited date [S3 p.393-394]. The strategy is to accelerate the use of productive land, continue building township infrastructure, and add commercial and residential products that fit the demand it sees from businesses wanting an address in the district [S3]. That strategy is capital-light in the development segment because buyers prepay: customer advances stood at IDR9,546.8bn at the end of FY2025, which funds infrastructure without bank debt. [S3]"
+            "text": "The land bank is the asset that matters. The company reports 702 ha of land reserves, most of it inside the township, carried on two balance-sheet lines that total IDR7,087.2bn of current inventory and IDR6,768.8bn of undeveloped land at 30 September 2026 [S6 p.2, S3 p.393-394]. The annual note splits the current line into land and buildings ready for sale of IDR871.5bn, buildings under construction of IDR424.3bn and land under development of IDR5,613.7bn [S3 p.393]. The strategy is to accelerate the use of productive land, continue building township infrastructure, and add commercial and residential products that fit the demand it sees from businesses wanting an address in the district [S3]. That strategy is capital-light in the development segment because buyers prepay: customer advances stood at IDR9,546.8bn at the end of FY2025 and IDR6,794.9bn current plus IDR1,138.8bn non-current nine months later, which funds infrastructure without bank debt. [S3, S6]"
+          },
+          {
+            "type": "para",
+            "text": "The 2025 capital increases into the two project companies are disclosed and were fairness-reviewed, but they do not corroborate a market-value mark. The company injected IDR2,000.9bn into PT Mega Andalan Sukses on 24 December 2025 and IDR91.7bn into PT Cahaya Gemilang Indah Cemerlang in June, both reviewed against an independent appraisal of the property's market value by KJPP Suwendho Rinaldy & Rekan [S3 p.138-143]. The December MAS subscription bought a fifth of the enlarged capital, not the small net ownership step the headline suggests: most of the new capital went to the parent, and the published percentage-point change in its stake is what is left after its existing holding is diluted by the new shares, so the headline understates the size of the subscription and overstates the price paid per point of ownership [S3 p.408]. On that reading the transaction prices MAS at about its book value and a fraction of its IDR10,460.5bn of total assets, so it is evidence about process and related-party pricing, not about the market value of land; we do not use it to support the mark. The appraised figures themselves are named but not quantified. [S3 p.138-143, p.362, p.408]"
           },
           {
             "type": "para",
@@ -96,7 +105,7 @@
           },
           {
             "type": "para",
-            "text": "The group structure is straightforward but concentrated. PT Pantai Indah Kapuk Dua is the controlling shareholder with a stake above four-fifths of the shares, the public holds the remainder, and the President Commissioner, Richard Halim Kusuma, is disclosed as the ultimate beneficial owner [S3]. The President Director is Steven Kusumo [S2]. The group employs 167.0 people directly, which underlines how much of the development work is contracted out and how small the fixed cost base is. [S0]"
+            "text": "The group structure is straightforward but concentrated. PT Pantai Indah Kapuk Dua is the controlling shareholder with a stake above four-fifths of the shares, the public holds the remainder, and the President Commissioner, Richard Halim Kusuma, is disclosed as the ultimate beneficial owner [S3]. The President Director is Steven Kusumo [S2]. The group employs 161.0 people directly, which underlines how much of the development work is contracted out and how small the fixed cost base is. [S0]"
           }
         ]
       },
@@ -110,11 +119,11 @@
           },
           {
             "type": "para",
-            "text": "The macro driver that matters most for CBDK is the interest-rate path, because it sets both the cost of funding for the buyer and the capitalisation rate applied to the recurring assets. Our macro deck carries Bank Indonesia policy at 5.8 rate at the long end and inflation near 3.3 rate, with real growth around 5.3 rate; we use a cost of equity of 11.9% and a cap rate of 8.5% for the income assets [S0]. The company itself lists global geopolitical tension, rupiah volatility, inflation and interest rates as the external risks it monitors, which is consistent with a business whose buyers are small and medium enterprises with financing needs. [S3, S2]"
+            "text": "The macro driver that matters most for CBDK is the interest-rate path, because it sets both the cost of funding for the buyer and the capitalisation rate applied to the recurring assets. Our macro deck carries Bank Indonesia policy at 5.8% through the forecast and inflation near 3.3%, with real growth around 5.3%; we use a cost of equity of 11.9% and a cap rate of 8.5% for the income assets [S0]. The company itself lists global geopolitical tension, rupiah volatility, inflation and interest rates as the external risks it monitors, which is consistent with a business whose buyers are small and medium enterprises with financing needs. [S3, S2]"
           },
           {
             "type": "para",
-            "text": "Regulation cuts two ways. On the supportive side, the government agenda of incentives and easier permitting for housing and property is explicitly cited by the company as a growth driver, and a VAT exemption or a continuation of the non-collected VAT treatment for housing would help demand for plots and products [S3]. On the constraining side, the affiliated-transaction regime under the capital-market rules governs how the company buys land and services from its parent, and the annual report devotes a section to compliance with those rules [S3]. For an investor, the practical question is not whether the rules exist but whether the land transfer pricing between the parent and the listed entity is fair; the company states that all related-party agreements were prepared independently and on arm's-length terms, and we have no evidence to the contrary. [S3]"
+            "text": "Regulation cuts two ways. On the supportive side, the government agenda of incentives and easier permitting for housing and property is explicitly cited by the company as a growth driver, and a VAT exemption or a continuation of the non-collected VAT treatment for housing would help demand for plots and products [S3]. On the constraining side, the affiliated-transaction regime under the capital-market rules governs how the company buys land and services from its parent, and the annual report devotes a section to compliance with those rules [S3]. For an investor, the practical question is whether the transfer pricing between the parent and the listed entity is fair; the 2025 capital increases were fairness-reviewed off an independent appraisal, which supports the company's arm's-length claim, although the appraised figures themselves are not published. [S3 p.138-143]"
           },
           {
             "type": "para",
@@ -144,23 +153,31 @@
           },
           {
             "type": "para",
-            "text": "Our forecast continues the growth but at a decelerating rate. We model revenue of IDR2,855.5bn in FY2026, IDR3,215.4bn in FY2027 and IDR3,441.7bn in FY2028, with EBITDA of IDR2,026.4bn, IDR2,185.2bn and IDR2,236.3bn and attributable net profit of IDR1,968.9bn, IDR2,233.1bn and IDR2,413.7bn [S0]. The revenue build assumes total sales value grows at the rate in our presales assumption, fades toward the long-run rate, and is recognised largely at handover in the year of contract, which is consistent with the accounting policy and with the size of the advance book relative to annual revenue [S3]. The development gross margin is held near the FY2025 level, fading only slowly as built products take a larger share, and the recurring margin is set at a normal range for convention and hotel operations. [S3, S0]"
+            "text": "Our forecast continues the growth but at a decelerating rate. We model revenue of IDR2,855.5bn in FY2026, IDR3,215.4bn in FY2027 and IDR3,441.7bn in FY2028, with EBITDA of IDR1,997.1bn, IDR2,152.2bn and IDR2,201.0bn and attributable net profit of IDR1,915.1bn, IDR2,166.4bn and IDR2,338.3bn [S0]. The revenue build uses a total-sales-value line, not the marketing-sales KPI: the line that feeds it is the sales value recognised at handover, the only measure that reproduces reported revenue, while marketing sales were IDR430.2bn in FY2025 and IDR448.0bn in nine months of FY2026 [S3, S2]. We label it that way because feeding the KPI into a revenue formula would collapse the forecast, and because the two measures answer different questions: the KPI is new contracts, the revenue line is handover value. The development gross margin is held near the nine-month level, fading only slowly as built products take a larger share; operating costs are held at the FY2025 actual of 8.9% of revenue rather than at a three-year average, because the cost base is largely fixed and nothing in the accounts shows it falling. [S3, S0]"
           },
           {
             "type": "para",
-            "text": "Our forecast now runs off the reported nine months rather than sitting below them. The company reported revenue of IDR2,560.0bn and cost of revenue of only IDR519.6bn for the first nine months of FY2026, with net profit of IDR1,820.0bn [S4]. We carry FY2026 revenue of IDR2,855.5bn and attributable profit of IDR1,968.9bn: a fourth quarter consistent with FY2025's small Q4 handover season, and a FY2026 development gross margin of 79.0% that matches the nine-month actual rather than under-cutting it [S4, S0]. The margin then fades to 67.0% by FY2030 and to the FY2025 audited level in perpetuity, because the residential and commercial-product segments earn margins far below the land lots and take share again as the land-lot pipeline is sold [S3 p.101]. Two limits on the forecast are stated plainly: the model's presales line is a handover-revenue proxy, so it cannot reproduce a IDR9,546.8bn advance book that turns only about once every four years [S3 p.400]; and the bulk commercial-land line is not evidenced by the marketing-sales KPI, which was IDR430.2bn in FY2025 and IDR448.0bn in 9M2026 [S3, S2]. We therefore treat the IDR563.1bn FY2026 marketing-sales target and the conversion of the advance book as the kill criteria for the base case, not as decoration (see the risks and monitoring sections). The revenue path without the bulk line is shown as the bear case: marketing sales alone support revenue nearer the marketing-sales figure than the revenue base, which is why the bear marks the land down as well. [S3, S2]"
+            "text": "Actual against forecast is now a one-quarter question. The interim LK to 30 September 2026 reports revenue of IDR2,557.7bn, cost of revenue of IDR519.6bn, gross profit of IDR2,038.0bn, final tax of IDR84.6bn and profit attributable to owners of IDR1,823.9bn [S6 p.5]. Our FY2026 forecast is revenue of IDR2,855.5bn and attributable profit of IDR1,915.1bn, so the nine months have already delivered most of the revenue and nearly all of the profit, and a fourth quarter in line with the third gets us there [S0]. The quarterly shape is the point: the third quarter contributed a small fraction of the nine-month revenue with a visibly lower gross margin than the first half, as handovers of built product replaced land lots [S0]. We carry the FY2026 development gross margin at 79.0%, in line with the nine-month actual rather than below it, and fade it to 67.0% by FY2030 and to the FY2025 audited level in perpetuity, because the residential and commercial-product segments earn margins far below the land lots and take share again as the land-lot pipeline is sold [S6, S3 p.101]."
           },
           {
             "type": "para",
-            "text": "Working capital is the defining feature of the cash flow. Customer advances of IDR9,546.8bn at the end of FY2025 exceed annual revenue, and net working capital is negative at IDR-1,226.2bn, which means the business releases cash as it sells rather than consuming it [S3, S0]. Free cash flow to the firm was IDR1,390.4bn in FY2025 and IDR4,976.0bn in FY2024, well above reported net profit in the earlier year because of the advance inflow [S0]. Capex was IDR163.9bn, about 6.5% of revenue, and is directed at township infrastructure, NICE and the Hilton build [S0, S3]. We model capex at 6.5% of revenue before fading, which is above the historical average and reflects the hotel and convention assets still under construction. [S3]"
+            "text": "The guidance history is the strongest evidence on demand durability. The FY2024 annual report set a FY2025 marketing-sales target of IDR2,030.0bn [S5 p.28]; the FY2025 report restates the target at IDR508.0bn [S3 p.35]; actual sales were IDR430.2bn, about a fifth of the original plan and most of the revised one [S3 p.46]. A plan cut by three quarters within a year means the IDR563.1bn FY2026 target should be treated as an aspiration rather than a forecast, and that a bulk transaction, not the retail plot market, is what moves the year. [S3, S5]"
           },
           {
             "type": "para",
-            "text": "The balance sheet is conservative in the way that matters. At the last balance-sheet date the company had cash of IDR3,121.0bn against debt of IDR249.5bn, a net cash position of IDR-2,871.6bn, and equity attributable to owners of IDR9,026.3bn with minority interests of IDR2,956.1bn [S0]. Interest income of IDR253.9bn exceeds interest expense of IDR25.6bn several times over, so the company is a net receiver of interest, not a payer, and there is no unhedged foreign-currency debt worth the name [S0]. Book value per share is Rp1,592. The minority balance is large because several project companies are only partly owned, and that is why our valuation deducts minorities from RNAV. [S0, S3]"
+            "text": "Two limits on the forecast are stated plainly: the model's presales line is a handover-revenue proxy, so it cannot reproduce an advance book of IDR6,794.9bn current plus IDR1,138.8bn non-current that turns only about once every four years [S3 p.400, S6]; and the bulk commercial-land line is not evidenced by the marketing-sales KPI, which was IDR430.2bn in FY2025 and IDR448.0bn in 9M2026 [S3, S2]. We therefore treat the IDR563.1bn FY2026 marketing-sales target and the conversion of the advance book as the kill criteria for the base case, not as decoration (see the risks and monitoring sections). The revenue path without the bulk line is shown as the bear case: marketing sales alone support revenue nearer the marketing-sales figure than the revenue base, which is why the bear marks the land down as well. [S3, S2]"
           },
           {
             "type": "para",
-            "text": "The tax line is the main earnings-quality question. The effective tax charge was IDR49.1bn on pre-tax profit of IDR1,516.4bn, an effective rate far below the statutory rate, and the prior year was lower still [S0]. That is consistent with the treatment of land and building disposals under the final tax regime and with the mix of income, but it means the earnings are taxed more lightly than those of a conventional developer, and a change in the tax treatment would hit the net line disproportionately. We model 3.2%, which allows for some normalisation without ignoring the reported history. [S0]"
+            "text": "Working capital is the defining feature of the cash flow, and the arithmetic matters. Collections on outstanding contracts in a period equal revenue less the change in advances, so the FY2025 fall in the advance book alongside a full year of revenue implies collections several times the marketing-sales KPI: the gap is instalments on contracts signed in earlier years, not new contracts, because the KPI records new sales only. Customer advances of IDR9,546.8bn at the end of FY2025 exceeded annual revenue; nine months later they are IDR6,794.9bn current plus IDR1,138.8bn non-current, still larger than annual revenue but lower because handovers consumed the book [S6]. Net working capital was IDR-1,226.2bn in FY2025, which means the business releases cash as it sells rather than consuming it [S3, S0]. Free cash flow to the firm was IDR1,390.4bn in FY2025 and IDR4,976.0bn in FY2024, well above reported net profit in the earlier year because of the advance inflow [S0]. Capex was IDR163.9bn in FY2025, about 6.5% of revenue, directed at township infrastructure, NICE and the Hilton build [S0, S3]. The nine months to September have already spent more than the whole of FY2025 on the same programme, which is why we model capex at 7.8% of revenue in FY2026 before it steps back [S0, S6]."
+          },
+          {
+            "type": "para",
+            "text": "The balance sheet is conservative in the way that matters. At 30 September 2026 the company held cash of IDR3,636.8bn against bank loans of IDR42.5bn current and IDR159.3bn non-current, a net cash position several times the entire debt, and equity attributable to owners of IDR10,678.8bn within total equity of IDR13,717.4bn [S6 p.2-p.4]. In FY2025 interest income of IDR253.9bn exceeded interest expense of IDR25.6bn several times over, so the company is a net receiver of interest, not a payer, and there is no unhedged foreign-currency debt worth the name [S0]. Book value per share was Rp1,592 at the last year end. The minority balance is large because several project companies are only partly owned, and that is why our valuation deducts minorities from RNAV. [S0, S6]"
+          },
+          {
+            "type": "para",
+            "text": "The tax line is the main earnings-quality question. The income tax charge in the data pack was IDR49.1bn on pre-tax profit of IDR1,516.4bn, an effective rate far below the statutory rate, and the prior year was lower still [S0], but the interim LK shows what the pack leaves out: a final tax charge of IDR84.6bn for the nine months, which with income tax takes the all-in charge to a rate we carry at 4.6% [S6 p.5]. The final tax on gross real-estate and rental transactions is why the rate is stable and low, and it also means the charge scales with revenue rather than with profit, so a margin squeeze falls straight through to the net line. [S6, S0]"
           },
           {
             "type": "para",
@@ -168,7 +185,7 @@
           },
           {
             "type": "para",
-            "text": "On earnings quality, three flags are worth stating. First, revenue is recognised at handover and the cash arrived earlier, so a slowdown in new sales shows up in marketing sales long before it shows up in revenue; that is a timing risk rather than an accounting abuse [S3]. Second, the gross margin is high because the product is land, and margins should compress as built products and hotel operations grow; our forecast assumes that compression is slow [S0]. Third, related-party balances disclosed at the balance-sheet date are small, with no trade receivables from related parties remaining at the end of FY2025, but the land supply itself comes through the master plan of the parent, which is a structural rather than a balance-sheet exposure [S3]. We could not compute an accruals ratio because the archived data pack does not carry an operating cash-flow line for the full history; we report that as a gap rather than estimate it. [S0]"
+            "text": "On earnings quality, three flags are worth stating. First, revenue is recognised at handover and the cash arrived earlier, so a slowdown in new sales shows up in marketing sales and in the advance book long before it shows up in revenue; the nine-month decline in advances is that signal, and it is a timing risk rather than an accounting abuse [S3, S6]. Second, the gross margin is high because the product is land, the third quarter showed how fast the mix can move against the margin, and our forecast assumes the compression is slow [S0]. Third, related-party balances disclosed at the balance-sheet date are small, with no trade receivables from related parties of any size at the end of FY2025, but the land supply itself comes through the master plan of the parent, which is a structural rather than a balance-sheet exposure [S3]. Cash conversion itself has been sound rather than stretched: free cash flow to the firm of IDR1,390.4bn in FY2025 and IDR4,976.0bn in FY2024 both exceeded attributable profit, so the earnings were backed by cash, with the caveat that the cash came from advance collections that are now being consumed. [S0]"
           },
           {
             "type": "block",
@@ -182,11 +199,11 @@
         "blocks": [
           {
             "type": "para",
-            "text": "We value CBDK on RNAV as the primary method, with P/E and P/BV as cross-checks. That method set fits a developer whose earnings are handover-driven and lumpy, whose asset is a land bank carried at historical cost, and whose recurring income is still too small to support a cash-flow valuation on its own. The property method card is explicit that Indonesian developers trade at persistent discounts to appraised net asset value and that the trade is band mean-reversion rather than full convergence, so the target is RNAV less a stated discount, not RNAV itself. [S0]"
+            "text": "We value CBDK on RNAV as the primary method, with P/E and P/BV as cross-checks. That method set fits a developer whose earnings are handover-driven and lumpy, whose asset is a land bank, and whose recurring income is still too small to support a cash-flow valuation on its own. The property method card is explicit that Indonesian developers trade at persistent discounts to appraised net asset value and that the trade is band mean-reversion rather than full convergence, so the target is RNAV less a stated discount, not RNAV itself. [S0]"
           },
           {
             "type": "para",
-            "text": "Our cost of equity is 11.9% and our weighted average cost of capital is 11.9%, built from a risk-free rate of 7.4%, a mature-market equity risk premium of 4.2%, a country risk premium of 2.5%, an unlevered beta of 0.90 and a marginal tax rate of 22.0% [S0]. The debt weight is small because the company is in net cash, so the cost of equity and the cost of capital are close. We use the cost of equity to roll the valuation forward one year and to discount the dividend, which is the convention in the model. [S0]"
+            "text": "Our cost of equity is 11.9% and our weighted average cost of capital is 11.9%. The build is fully stated: a risk-free rate of 7.4%, less a default spread of 1.6% that must be removed before the country premium is added back, plus an unlevered beta of 0.90 applied to a mature-market equity risk premium of 4.2%, plus a country risk premium of 2.5% [S0]. Removing the default spread is the correct treatment of a rupiah risk-free rate that embeds sovereign default risk: the country premium is added back on the equity risk premium, not left inside the risk-free rate, so a build that omits the deduction double-counts it. The debt weight is small because the company is in net cash, so the cost of equity and the cost of capital are close. We use the cost of equity to roll the valuation forward one year and to discount the dividend, which is the convention in the model. [S0]"
           },
           {
             "type": "block",
@@ -194,15 +211,19 @@
           },
           {
             "type": "para",
-            "text": "The RNAV starts from the audited inventory, and it marks the whole of it, not one line of it. Land sits on two balance-sheet lines: current inventory of IDR6,909.5bn over 3,678,961 m2 of titled land and buildings, and non-current undeveloped land of IDR6,910.8bn over 3,341,874 m2 [S3 p.393-394], which together are the 702 ha the annual report reports. We mark it just below book: a modest uplift on the portion in production, where the audited annual margin and the much higher reported nine-month margin show sale prices above cost, and a haircut on the raw land at the tight end of the method card's band because it sits inside a township whose infrastructure is being built [S3 p.101, S4]. The earlier draft claimed a multiple of book by comparing the land value with the current-inventory line alone and ignoring the non-current undeveloped land; that was wrong, and the mark is now essentially at book."
+            "text": "The RNAV starts from the audited inventory, and it now marks it at market value rather than at carrying cost. The audited segment note gives the realised sale price of the commercial plots for two years: revenue of IDR1,167.8bn on cost of revenue of IDR175.0bn in FY2025, and IDR1,083.4bn on IDR395.3bn in FY2024 [S3 p.102], which is more than six times and nearly three times the carrying cost of the plots sold. We use the two-year cumulative ratio of about four times rather than the FY2025 peak, because applying a single favourable year to the whole book would extrapolate a mix that will not repeat. We then apply the method card's haircut band by land status: the tight end to land already serviced and in production, the wide end to undeveloped land, and carrying cost to buildings under construction, which are product rather than land [S3 p.393]. The resulting land and property value is about two and a half times the IDR7,087.2bn current plus IDR6,768.8bn undeveloped audited book, with the developed land valued at about three times book and the undeveloped land at about twice book. [S3 p.102, p.393]"
           },
           {
             "type": "para",
-            "text": "Three items are handled explicitly. First, the IDR9,546.8bn advance book [S3 p.400] is deducted: the land value covers the same unsold pool the audited inventory covers, and the cash for units already contracted has already been received and spent, so carrying the land at value without the advance liability would count the same land twice. Second, the investment properties are carried at their audited book of IDR2,562.0bn - NICE, Menara Syariah and the Hilton PIK Dua under construction - rather than the small cap-rate value shown in the valuation table, because the method card requires a development asset to be worth at least its sunk cost until a sourced project value exists [S3 p.352]. Third, the model has no advance line, so the deduction and the property book are applied inside the land contribution in our parameters, which is why the parameter sits below the land value itself."
+            "text": "Three items are handled explicitly. First, the advance book of IDR6,794.9bn current plus IDR1,138.8bn non-current at 30 September 2026 [S6 p.3] is deducted: at a market land value the land and the cash already received against it cannot both be counted, so the deduction is correct rather than a double count. That is the difference from the previous valuation, and the reason the old RNAV was too low. Against carrying cost, deducting the advances subtracted the contracted margin twice, because the land was carried at a value that did not include it; at market value the deduction is what stops us counting the same land twice. The deduction is smaller than the IDR9,546.8bn carried at the end of FY2025 [S3 p.400] because nine months of handovers turned advances into revenue. Second, the investment properties are carried at book of IDR2,574.1bn - NICE, Menara Syariah and the Hilton PIK Dua under construction. The book basis is a transaction price plus subsequent cost, not a stale appraisal: the company invested IDR2,295.6bn for its stake in the operator of NICE in January 2025 as a realisation of the listing proceeds, and the carrying cost of that stake was IDR2,545.6bn after a further injection at the end of December 2025 [S3 p.364]. The investment property note shows that the book at the end of FY2025 is that cost plus the construction capitalised into the buildings and assets under construction, less a small depreciation charge, with no revaluation uplift [S3 p.395]. The increment over the purchase price is construction at cost for the hotel and the convention centre fit-out, which is the sunk cost the property method card says a development asset is worth at least until a sourced project value exists. We therefore do not take the cap-rate value: at an 8.5% capitalisation rate applied to a rental line that has barely started, it values three assets - one operating for under two years and one not yet open - on income that is still ramping, and it would cut the RNAV for the reason the assets are early rather than for any evidence that cost is impaired. The cross-check is disclosed in the valuation table and is the conservative bound, not the estimate. [S6 p.2, S3 p.395, p.364] Third, fixed assets and other net assets are carried at book and minorities are deducted, which is why the parameter sits below the gross land value. The minority deduction is the correction the review forced: the land sits in MAS, which the group owns just over three-quarters of, and in CGIC, just under four-fifths owned [S3 p.408], so the mark-up cannot all accrue to the parent. We share the whole revaluation in proportion to the minority interest in consolidated equity, a little over a fifth of it, and deduct that from the land block; the engine then deducts the book minority interest as before, and the two together equal minorities at their share of the revalued net assets. [S6 p.2, S3 p.408]"
           },
           {
             "type": "para",
-            "text": "The RNAV per share before the 40.0% discount is set out in the valuation table, and the discounted value the method carries is Rp927 per share. It reconciles to audited equity attributable of IDR9,026.3bn plus the land revaluation from book to our mark: nothing is counted twice, and no value is credited for the unrecognised margin locked in the advance book - that margin is the upside to the call, not its base. The company discloses no independent appraisal of the land, only a fairness opinion on an affiliate transaction, which is why we mark it off the book rather than off a promoter net asset value. [S3]"
+            "text": "The RNAV per share before the 42.0% discount is set out in the valuation table, and the discounted value the method carries is Rp2,676 per share. It reconciles to audited equity attributable of IDR10,678.8bn at 30 September 2026 plus the parent's share of the revaluation of the land from book to our mark: nothing is counted twice, no separate value is credited for the unrecognised margin locked in the advance book because the market land value already reflects the sale prices that margin implies, and the share of the mark that belongs to the minorities is deducted rather than credited to the parent. [S6, S3 p.408]"
+          },
+          {
+            "type": "para",
+            "text": "On the appraisal question the record should be corrected, and the challenge was right: the company does disclose an independent appraisal. The FY2025 annual report records that KJPP Suwendho Rinaldy & Rekan was engaged, under a proposal dated 3 March 2025, to opine on the market value of the property of both CGIC and MAS, and that the transactions were fair [S3 p.138-141]. What the report does not disclose is the appraised figure itself, so we cannot put the appraisal into the RNAV directly. Nor can the transaction prices stand in for it: the December MAS subscription bought a fifth of the enlarged capital for IDR2,000.9bn, and the same arithmetic on the acquired book value makes that a small premium to book, so the deal prices MAS at about book and a fraction of its IDR10,460.5bn of assets rather than at a multiple of book [S3 p.408]. Earlier in 2025 the CGIC step was struck at a discount to book. The transactions are therefore evidence that the related-party pricing was reviewed, not evidence of value per hectare; the appraised area and value are not published, so no per-hectare figure can be derived from the record. The land mark rests on the realised segment margins alone. [S3 p.138-143, p.362, p.408]"
           },
           {
             "type": "block",
@@ -210,11 +231,11 @@
           },
           {
             "type": "para",
-            "text": "The P/E cross-check gives Rp3,039 per share, applying a peer median multiple of 12.6x to FY2025 attributable profit of IDR1,360.0bn [S0]. It is far above the RNAV, and we discount it heavily for three reasons: it capitalises a peak-margin year in which the product mix was almost entirely raw land; the peer median is pulled up by township and land-bank names whose multiples reflect their own option value; and a P/E on handover earnings says nothing about the land still to be sold or about the advance book that is funding the handovers. We keep a 20% weight because it is the only method that captures the earnings the company is actually delivering and because it is what keeps the call honest - the stock is not expensive on earnings - but we do not let it drive the target. [S0]"
+            "text": "The P/E cross-check gives Rp3,441 per share, applying a peer median multiple of 14.3x to FY2025 attributable profit of IDR1,360.0bn [S0]. The metric is the trailing audited year because the peer median is itself a trailing multiple computed on the same reported earnings; putting our FY2026E profit against a trailing peer multiple would mix bases and would flatter the cross-check in a year when margins are peaking. We keep a fifth weight because it is the only method that captures the earnings being delivered and because it keeps the call honest - on the trailing audited earnings that the peer median is measured on, the shares trade below that sector-list median but at or above the median of the four house peers we publish on, so the earnings leg is support rather than upside - but we do not let it drive the target: it capitalises a peak-margin handover year and says nothing about the land still to be sold. The median of 14.3x is computed over the full sector list in the data pack at the price date shown in the valuation table, thirty-one listed developers including distressed and loss-making names, not the four house peers (JRPT, MTLA, CTRA and PWON), whose own median is lower; we therefore treat this leg as a rough anchor on the sector and not as a precise multiple for this company. [S0]"
           },
           {
             "type": "para",
-            "text": "The P/BV cross-check gives Rp1,374 per share, applying the peer median of 0.7x to book value at the 30 June 2026 balance-sheet date shown in the valuation table - the same book and the same date the leg itself uses, and the same date as the net cash in the RNAV [S0]. On that book the shares trade at 1.5x P/BV against the peer median, a premium of more than double, rather than the larger premium claimed when the market was measured against stale FY2025 book. The premium can only be justified if the land is worth well above book; our RNAV says it is worth about book, and on FY2026 earnings the shares are at 8.3x P/E, at or below the peer median of 12.6x, because this is a high-margin handover year. The two multiples point in opposite directions, and that tension is the call: cheap on a peak-margin P/E, expensive on the asset that produces it. [S0]"
+            "text": "The P/BV cross-check gives Rp1,200 per share, applying the peer median of 0.6x to book value at the 30 September 2026 balance-sheet date shown in the valuation table - the same book and the same date the leg itself uses, and the same date as the cash in the RNAV [S6]. On that book the shares trade at 1.4x P/BV against the peer median, a premium of more than double. That premium can only be justified if the land is worth well above carrying cost; the segment margins say it is, and our RNAV marks it at about two and a half times book. That is why the P/BV leg sits far below the RNAV leg rather than beside it: the peer median is a distressed-builder multiple applied to a book that understates the asset, and the divergence is a statement about the method, not a contradiction in the numbers. We keep a fifth weight as a floor for what the assets would fetch at sector book value, not as an estimate of what CBDK's assets are worth. [S0, S3]"
           },
           {
             "type": "block",
@@ -222,7 +243,7 @@
           },
           {
             "type": "para",
-            "text": "Blending the three methods at the stated weights gives a value of Rp1,438 today, which we roll forward at the cost of equity and reduce by the next-twelve-month dividend of Rp35 to reach the base target of Rp1,575 [S0]. The probability-weighted target is Rp1,582 and, with no liquidity discount applied, the final target is Rp1,582. The weighted figure now sits below the base because the bear case shocks the land value as well as the discount and the sales growth, so the tails are no longer a rounding error. [S0]"
+            "text": "Blending the three methods at the weights in the valuation table gives a value of Rp2,534 today, which we roll forward at the cost of equity and reduce by the next-twelve-month dividend of Rp34 to reach the base target of Rp2,802 [S0]. The probability-weighted target is Rp2,816 and, with no liquidity discount applied, the final target is Rp2,816. The weighted figure sits close to the base because the bull and bear land shocks are mirrored and the base carries the higher probability; the tails are wide enough to matter, which is what a land-marked RNAV produces. [S0]"
           },
           {
             "type": "block",
@@ -230,15 +251,15 @@
           },
           {
             "type": "para",
-            "text": "The sensitivity table shows how little the target moves for plausible changes in sales growth and how much it moves for the two asset-side judgements: the RNAV discount and the land mark. A shift of ten percentage points in the RNAV discount moves the value by roughly the discount times the RNAV weight, and the land mark moves it in proportion, which is why we now shock both. We use a 40.0% discount, at the tight end of the persistent range for the sector, because the company is in net cash and its advances fund the township; a wider discount, closer to the middle of the band, would take the target materially lower. The allocation of the two layers is deliberate: the land is marked once, at about audited book, and the discount is the trading band applied to it, not a second haircut on the same assets. [S0]"
+            "text": "The sensitivity table shows how little the target moves for plausible changes in sales growth and how much it moves for the two asset-side judgements: the RNAV discount and the land mark. A ten-point shift in the RNAV discount moves the value in proportion to the RNAV weight, and the land mark moves it almost one for one, which is why the scenarios shock both. We apply a 42.0% discount, at the peer median inside the method card's persistent band: the company is in net cash and its advances fund the township, which argues for the tight half of the band, but single-township concentration, a small float and a land bank that turns at a few hectares a year argue against it. The land is marked once, at a market value with the haircuts, and the discount is the trading band applied to the result, not a second haircut on the same assets. [S0]"
           },
           {
             "type": "para",
-            "text": "What does the price imply? At Rp2,900, the market is valuing the equity above the undiscounted RNAV per share set out in the valuation table, so the implied discount is negative: investors are paying a premium to the audited value of the land, less the cash already received against it, rather than the discount to RNAV at which IDX township developers normally trade. A reverse DCF is not available because the price sits outside the range the model can bracket with plausible growth assumptions, so we express the implied view through the multiple instead: at 8.3x P/E and 1.5x P/BV, with a dividend yield of 1.2%, the shares are priced for the successful execution of the township, not for the current sales run-rate. [S0, S3]"
+            "text": "What does the price imply? At Rp2,730 the market is valuing the equity a shade above the discounted RNAV of Rp2,676 per share, so the price implies a discount to undiscounted RNAV only slightly wider than the one we apply. Expressed through the multiples, on the trailing audited earnings that the peer median uses the shares trade below the sector-list median of 14.3x but not below the median of the four house peers, at 1.4x P/BV against 0.6x and a dividend yield of 1.2%, so the shares are priced for a slow conversion of the land bank, not for a repeat of FY2024 sales. [S0, S3]"
           },
           {
             "type": "para",
-            "text": "The gap between the methods is the investment debate in one line. RNAV says the asset is worth less than the price; P/E says the earnings are worth about the price; P/BV says the book is worth much less than the price. We weight RNAV because the asset is the business, and we treat the P/E support as evidence that the market is not irrational, merely early. [S0]"
+            "text": "The gap between the methods is the investment debate in one line. RNAV says the asset is worth about the price after a substantial discount; P/E says the earnings are below the sector-list median but not below the house peers and are being delivered from a backlog; P/BV at the peer median says the book alone is worth much less, because peer book values are marked at distress multiples and CBDK's book carries land at cost. We weight RNAV because the asset is the business, but after sharing the mark-up with the minorities it supports a HOLD rather than a BUY: the asset value is real and the price already reflects most of it. [S0]"
           },
           {
             "type": "block",
@@ -252,27 +273,31 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The largest downside risk is that commercial plot demand stays weak. Marketing sales of IDR430.2bn in FY2025 met only part of the target the company had set, and the FY2026 target of IDR563.1bn is still small relative to the revenue base [S3]. If corporate buyers continue to wait, the advance book unwinds without replacement, revenue steps down after the backlog, and the premium multiple of the market compresses toward the sector. We put a high likelihood on continued weak plot demand and a high impact on the multiple, which is why the base case already sits below the market price. [S3, S4]"
+            "text": "The largest downside risk is that commercial plot demand stays weak, and the guidance history says this is not hypothetical. The company set a FY2025 target of IDR2,030.0bn, cut it to IDR508.0bn and delivered IDR430.2bn [S5 p.28, S3 p.35, p.46]. If that repeats, the IDR563.1bn FY2026 target is missed, advances fall further from IDR6,794.9bn current plus IDR1,138.8bn non-current, and revenue steps down once the backlog is consumed. The nine-month accounts show the first stage of that risk already happening: advances fell because handovers ran ahead of new collections [S6]. We put a high likelihood on continued weak plot demand and a high impact on the multiple; that is why the rating is HOLD rather than BUY. [S3, S6, S2]"
           },
           {
             "type": "para",
-            "text": "The second risk is valuation risk rather than operating risk. At 1.5x P/BV on the 30 June 2026 book the shares carry a premium of more than double the peer median, and premiums of that kind are vulnerable to a change in sentiment about the township or the group [S0]. We do not use the past share price as a valuation input: a fall from a post-listing high tells us what the market once believed, not what the asset is worth, and the call rests on the RNAV and the multiple rather than on the drawdown. The risk that the market re-rates the stock upward on a single bulk transaction is real and is captured in the bull case. [S0]"
+            "text": "The second risk is valuation mean reversion. At 1.4x P/BV on the 30 September 2026 book the shares carry a premium of more than double the peer median, and premiums of that kind are vulnerable to a change in sentiment about the township or the group [S6]. We do not use the past share price as a valuation input: a fall from a post-listing high tells us what the market once believed, not what the asset is worth, and the call rests on the land mark rather than on the drawdown. The risk that the market re-rates the stock upward on a single bulk transaction is real and is captured in the bull case. [S0]"
           },
           {
             "type": "para",
-            "text": "The third risk is concentration on the controlling shareholder and the master plan of the parent. Land supply, access, amenities and the sequencing of development all depend on Pantai Indah Kapuk Dua and the wider group, and the capital needs of the parent could affect how the listed subsidiary is managed [S3]. A related-party land purchase on terms that favour the parent, or a rights issue to fund township infrastructure, would be value-destructive for minority holders even if it were fully disclosed. [S3]"
+            "text": "The third risk is the free float and index eligibility. The public holds 11.5% against an IDX requirement that rises to a higher threshold by the first deadline in March 2027 and higher again a year later [S7, S0]. The remedy is a placement, a sell-down by the controlling shareholder or index exclusion, and any of them can pressure the price in the near term even though a placement would improve liquidity. The related market-structure risk is MSCI's consultation on reclassifying Indonesia from Emerging to Standalone status, with a final decision due by the end of June 2027 [S8]; a standalone outcome would reduce passive demand for the whole market, and a small-float name is more exposed than most. [S8]"
           },
           {
             "type": "para",
-            "text": "The fourth risk is execution on the recurring-income assets. NICE is operating and has an events calendar, and the Hilton is targeted for the second half of 2027, but neither has a disclosed segment profit, so the returns on the capital sunk into them are unproven [S3, S2]. If the hotel opens late or the convention centre fails to sustain occupancy, the recurring income that we value at a cap rate of 8.5% is worth less than we assume, and the interest-coverage cushion the assets are meant to provide never materialises. [S3]"
+            "text": "The fourth risk is concentration on the controlling shareholder and the master plan of the parent. Land supply, access, amenities and the sequencing of development all depend on Pantai Indah Kapuk Dua and the wider group, and the capital needs of the parent could affect how the listed subsidiary is managed [S3]. A related-party land purchase on terms that favour the parent, or a rights issue to fund township infrastructure, would be value-destructive for minority holders even if it were fully disclosed. The 2025 appraisals give some comfort on pricing, but the values themselves are not published. [S3 p.138-143]"
           },
           {
             "type": "para",
-            "text": "The fifth risk is policy and macro. A reversal of the property incentives, a rise in policy rates, or a rupiah shock would hit buyer confidence and the capitalisation rate at the same time [S3]. The company has no material foreign-currency debt, so this is a demand and valuation risk rather than a solvency risk, but it is the channel through which a bad macro year becomes a bad equity year. [S0, S3]"
+            "text": "The fifth risk is execution on the recurring-income assets. NICE is operating and has an events calendar, and the Hilton is targeted for the second half of 2027, but neither has a disclosed segment profit, so the returns on the capital sunk into them are unproven [S3, S2]. If the hotel opens late or the convention centre fails to sustain occupancy, the recurring income is worth less than the book we carry, and the interest-coverage cushion the assets are meant to provide never materialises. [S3]"
           },
           {
             "type": "para",
-            "text": "Liquidity and governance risks are moderate. The free float is 11.9%, the controlling shareholder holds 88.6%, and three-month average daily turnover is thin for institutional positions rather than deep [S0]. We do not quote a turnover figure in trillions: the model carries the daily value in rupiah and the earlier draft mis-scaled it by a factor of a thousand. A small float amplifies moves in both directions and limits the weight any large fund can take, which is why we apply no liquidity discount but treat position size as a constraint. [S0]"
+            "text": "The sixth risk is policy and macro. A reversal of the property incentives, a rise in policy rates, or a rupiah shock would hit buyer confidence and the capitalisation rate at the same time [S3]. The company has no material foreign-currency debt, so this is a demand and valuation risk rather than a solvency risk, but it is the channel through which a bad macro year becomes a bad equity year. [S0, S3]"
+          },
+          {
+            "type": "para",
+            "text": "Liquidity is a constraint on position size rather than on value. The three-month average daily traded value is IDR9,154.8m a day, above the highest turnover floor in the house limits, so the mechanical liquidity discount is 0.0%: that is not an oversight, it is what the rule produces. A position of a quarter of that volume would be a few billion rupiah a day, which is small for a fund of our size but buildable over days, and it is why the constraint that binds is the free float rather than the tape. The free float of 11.5% still limits the weight any large fund can take and amplifies moves in both directions, which we carry in the free-float risk above and in the scenario discount rather than in a hidden WACC premium. [S0]"
           },
           {
             "type": "block",
@@ -280,11 +305,11 @@
           },
           {
             "type": "para",
-            "text": "Our scenarios are mirrored and they now shock the dominant term. The bear case applies the land-value shock, adds a negative shock to sales growth and widens the RNAV discount; the bull case applies the land-value shock in the opposite direction and does the same to growth and the discount by the same amounts, with probabilities of one half for the base case and one quarter each for the tails [S0]. The bear value is Rp1,407 and the bull value is Rp1,770, against a base of Rp1,575. The range brackets the land value rather than only the discount, which is what the previous draft failed to do: the trigger for the bear land shock is a marketing-sales print below the FY2025 level for successive quarters, or a related-party land transaction struck at a discount to carrying value. [S0, S3]"
+            "text": "Our scenarios are mirrored and they shock the dominant term. The bear cuts the land contribution by a fifth, takes sales growth six points below plan and widens the RNAV discount by five points; the bull does the same in the opposite direction on all three. Probabilities are one half for the base and one quarter for each tail. The bear value is Rp2,337 and the bull value is Rp3,325, against a base of Rp2,802 [S0]. The bear land shock leaves the land at roughly twice audited book, still above carrying cost, and the bull mark leaves it below the FY2025 realised multiple, so neither tail is an extreme. The trigger for the bear land shock is a marketing-sales print below the FY2025 level for successive quarters, or a related-party land transaction struck at a discount to carrying value. [S0, S3]"
           },
           {
             "type": "para",
-            "text": "The signposts that would change our view are specific and dated. A bulk commercial land transaction at or above the FY2024 scale, an independent appraisal supporting a land value above our parameter, marketing sales running ahead of the IDR563.1bn target for two consecutive quarters, a dividend increase toward the stated policy ceiling, or the Hilton opening on time and letting at expected rates would all push us toward a higher rating [S3, S2]. On the other side, the kill threshold for the base case is marketing sales below the FY2025 level of IDR430.2bn for two consecutive quarters, or advance-book conversion slowing below its current pace, either of which would confirm that revenue is borrowing from a shrinking backlog rather than selling into demand. [S3, S2]"
+            "text": "The signposts that would change our view are specific and dated. A bulk commercial land transaction at or above the FY2024 scale, an appraisal published and supporting a land value above our mark, or marketing sales running ahead of the IDR563.1bn target for two consecutive quarters would push us toward a higher rating [S3, S2]. On the other side, the kill threshold for the base case is marketing sales below the FY2025 level of IDR430.2bn for two consecutive quarters, combined with a further fall in the advance book: the reported KPI is the trigger, and the model's sales-value line is the line that carries the revenue consequence, which is why the two are monitored together rather than the KPI alone. [S3, S6]"
           }
         ]
       },
@@ -294,7 +319,7 @@
         "blocks": [
           {
             "type": "para",
-            "text": "Ownership is concentrated and the control chain is disclosed. PT Pantai Indah Kapuk Dua is the controlling shareholder with a large majority of the shares, the public holds the remainder, and the President Commissioner, Richard Halim Kusuma, is named as the ultimate beneficial owner [S3]. The company is described in the press as a joint venture of the Agung Sedayu group and the Salim group, which means the ultimate controllers are well-known Indonesian business families with a long record of listed vehicles [S4, S2]. The free float is 11.9% and insider ownership is 88.6%, so minority holders have limited influence and the stock is exposed to supply from a small pool. [S0]"
+            "text": "Ownership is concentrated and the control chain is disclosed. PT Pantai Indah Kapuk Dua is the controlling shareholder with a large majority of the shares, the public holds the remainder, and the President Commissioner, Richard Halim Kusuma, is named as the ultimate beneficial owner [S3]. The company is described in the press as a joint venture of the Agung Sedayu group and the Salim group, which means the ultimate controllers are well-known Indonesian business families with a long record of listed vehicles [S4, S2]. The free float is 11.5% and insider ownership is 88.6%, so minority holders have limited influence and the stock is exposed to supply from a small pool. [S0]"
           },
           {
             "type": "para",
@@ -302,7 +327,7 @@
           },
           {
             "type": "para",
-            "text": "Related-party dealings are disclosed and material enough to quantify rather than dismiss. The 2025 capital increases into MAS and CGIC were purchases of additional stakes from related parties, disclosed in the subsidiaries note and funded largely from listing proceeds [S3 p.363]; on the disclosed amounts they are among the largest uses of the IPO money and a large share of attributable equity. We classify them as structure-class, not manipulation-class: they are disclosed and fairness-reviewed, but minority holders paid for stakes in affiliates at prices we cannot independently test. Advances from customers include balances owed by related parties [S3 p.400], which we classify as optics-class - disclosed and reviewed as arm's-length, but a related-party share of the advance book leaves the sales run-rate less independently verifiable than a third-party book would be. Trade receivables from related parties were negligible against the IDR2,503.6bn revenue base, and the company sets out its compliance with the affiliated-transaction and conflict-of-interest rules in the annual report [S3]. The structural exposure is the land itself: the township master plan, the amenity sequencing and the land supply sit with the parent, so the inventory of the listed entity is replenished through a related party even when no balance is outstanding at the reporting date. [S3]"
+            "text": "Related-party dealings are disclosed and material enough to quantify rather than dismiss. The 2025 capital increases into MAS and CGIC were purchases of additional stakes in controlled project companies, disclosed in the subsidiaries note and funded largely from listing proceeds [S3 p.363]; they are among the largest uses of the IPO money and a large share of attributable equity, and the largest was the December MAS injection of IDR2,000.9bn [S3 p.142]. We classify them as structure-class, not manipulation-class: they are disclosed and were fairness-reviewed off an independent appraisal by KJPP Suwendho Rinaldy & Rekan of the property market value, but minority holders still paid for stakes at prices we cannot fully test because the appraised figures are not published [S3 p.138-143]. Advances from customers include balances owed by related parties [S3 p.400], which we classify as optics-class - disclosed and reviewed as arm's-length, but a related-party share of the advance book leaves the sales run-rate less independently verifiable than a third-party book would be. Trade receivables from related parties were negligible against the IDR2,503.6bn revenue base, and the company sets out its compliance with the affiliated-transaction and conflict-of-interest rules in the annual report [S3]. The structural exposure is the land itself: the township master plan, the amenity sequencing and the land supply sit with the parent, so the inventory of the listed entity is replenished through a related party even when no balance is outstanding at the reporting date. [S3]"
           },
           {
             "type": "para",
@@ -324,7 +349,7 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The dated catalysts are few, which is itself a feature of a single-township developer. The Hilton PIK Dua is targeted to open in the second half of 2027, and a successful opening would convert construction spending into recurring income and give the market a second earnings stream to value [S2]. The FY2026 audited results and the dividend decision at the annual meeting in the first half of 2027 will show whether the profit run-rate of the first nine months held through the fourth quarter, which is the single most important test of our FY2026 forecast [S4, S3]. Full-year marketing sales against the IDR563.1bn target will be reported with the results and is the KPI that leads revenue by a year or more; a print below the FY2025 level of IDR430.2bn for two consecutive quarters is our kill criterion for the base case. [S3]"
+            "text": "The dated catalysts are few, which is itself a feature of a single-township developer. Full-year marketing sales against the IDR563.1bn target will be reported with the results and is the KPI that leads revenue by a year or more; a print below the FY2025 level of IDR430.2bn for two consecutive quarters is our kill criterion for the base case [S3]. The first free-float deadline falls in March 2027, when the public must hold a higher proportion of the shares than the 11.5% held now, with a higher threshold again a year later [S7]. MSCI's final decision on Indonesia's market classification is due by the end of June 2027 [S8]. The Hilton PIK Dua is targeted to open in the second half of 2027, and a successful opening would convert construction spending into recurring income and give the market a second earnings stream to value [S2]. The FY2026 audited results and the dividend decision in the first half of 2027 will show whether the profit run-rate of the first nine months held through a fourth quarter that started from a much weaker third-quarter handover pace, which is the single most important test of our FY2026 forecast. [S6, S3]"
           },
           {
             "type": "para",
@@ -332,7 +357,7 @@
           },
           {
             "type": "para",
-            "text": "The KPIs we monitor between updates are marketing sales and its mix between land plots and built products; the customer-advance balance and its current portion, as the best guide to revenue conversion; the development gross margin, as the signal of mix shift; capex on the hotel and convention assets; the recurring-revenue line and any segment disclosure for NICE; the dividend and payout; and the discount to RNAV implied by the share price. [S3, S0]"
+            "text": "The KPIs we monitor between updates are marketing sales and its mix between land plots and built products; the customer-advance balance and its current portion, at IDR6,794.9bn plus IDR1,138.8bn non-current at the last balance-sheet date and the best guide to revenue conversion; the development gross margin, as the signal of mix shift; capex on the hotel and convention assets; the recurring-revenue line and any segment disclosure for NICE; the dividend and payout; and the discount to RNAV implied by the share price. [S6, S3, S0]"
           },
           {
             "type": "block",
@@ -340,7 +365,7 @@
           },
           {
             "type": "para",
-            "text": "On our numbers, the stock is a SELL because the price already discounts a successful township, and the evidence so far is a company selling plots at a fraction of the pace needed to justify it. We would revisit that view on a bulk transaction, an appraisal, or two quarters of marketing sales above target, and we would add to it on a related-party land deal, a delayed hotel or a further decline in plot demand. [S0, S3]"
+            "text": "On our numbers the stock is an **HOLD**: the market still prices the land below the value the audited segment margins support, but the slow conversion of that value, the guidance history and the free-float overhang keep it from being a BUY. We would revisit on a bulk transaction, a published appraisal, or two quarters of marketing sales above target, and we would cut toward SELL on a wider discount, a land correction or a dilutive placement. [S0, S3, S7]"
           }
         ]
       }
@@ -350,7 +375,7 @@
         "title": "Yahoo Finance statements, prices and profile for CBDK.JK",
         "url": "https://finance.yahoo.com/quote/CBDK.JK",
         "publisher": "Yahoo Finance",
-        "date": "2026-11-02",
+        "date": "2026-11-12",
         "kind": "data"
       },
       "S2": {
@@ -380,23 +405,44 @@
         "publisher": "storage.googleapis.com",
         "date": "2026-11-12",
         "kind": "filing"
+      },
+      "S6": {
+        "title": "https://storage.googleapis.com/cbdpik2/pdf/Digital_Report_PT_BKS_September_2026.pdf",
+        "url": "https://storage.googleapis.com/cbdpik2/pdf/Digital_Report_PT_BKS_September_2026.pdf",
+        "publisher": "storage.googleapis.com",
+        "date": "2026-11-12",
+        "kind": "filing"
+      },
+      "S7": {
+        "title": "BEI ungkapkan 327 emiten belum penuhi aturan \"free float\" 15 persen - ANTARA News",
+        "url": "https://www.antaranews.com/berita/5642712/bei-ungkapkan-327-emiten-belum-penuhi-aturan-free-float-15-persen",
+        "publisher": "www.antaranews.com",
+        "date": "2026-07-09",
+        "kind": "news"
+      },
+      "S8": {
+        "title": "MSCI Buka Konsultasi, Indonesia Terancam Pindah Jadi Standalone Market",
+        "url": "https://www.idxchannel.com/market-news/msci-buka-konsultasi-indonesia-terancam-pindah-jadi-standalone-market",
+        "publisher": "www.idxchannel.com",
+        "date": "2026-11-12",
+        "kind": "news"
       }
     },
-    "rendered_at": "2026-11-12T05:46:43+07:00"
+    "rendered_at": "2026-11-12T22:51:33+07:00"
   },
   "meta": {
-    "rating": "SELL",
-    "tp": 1582.0,
-    "price": 2900.0,
-    "tp_fundamental": 1582.0,
+    "rating": "HOLD",
+    "tp": 2816.0,
+    "price": 2730.0,
+    "tp_fundamental": 2816.0,
     "konglo": false,
     "suspended": null,
-    "price_date": "2026-10-30",
-    "tr_pct": -44.26,
-    "upside_pct": -45.46,
-    "v0": 1438.0,
-    "tp_base": 1575.0,
-    "dps12": 34.73,
+    "price_date": "2026-11-12",
+    "tr_pct": 4.4,
+    "upside_pct": 3.16,
+    "v0": 2534.0,
+    "tp_base": 2802.0,
+    "dps12": 33.78,
     "liquidity_discount": 0.0,
     "investable": {
       "ok": true,
@@ -404,10 +450,10 @@
       "adtv": true,
       "board": true
     },
-    "version": 1,
-    "report_type": "initiation",
+    "version": 2,
+    "report_type": "results",
     "published_at": "2026-11-12",
-    "data_asof": "2026-11-02",
+    "data_asof": "2026-11-12",
     "model_asof": "2026-11-12",
     "reporting_ccy": "IDR",
     "unit": "IDR bn",
@@ -417,14 +463,14 @@
     "director": "Laras"
   },
   "key_data": {
-    "mcap_idr": 16364900680000.0,
-    "adtv_3m_idr": 9947642952.0,
-    "free_float_pct": 11.91,
+    "mcap_idr": 15384294744000.0,
+    "adtv_3m_idr": 9154763714.0,
+    "free_float_pct": 11.48,
     "w52_high": 9425.0,
-    "w52_low": 2900.0,
-    "shares_m": 5643.07,
+    "w52_low": 2700.0,
+    "shares_m": 5635.27,
     "insider_pct": 88.62,
-    "institution_pct": 0.17,
+    "institution_pct": 0.15,
     "board": "",
     "listing_date": "2025-01-13",
     "website": "https://www.cbdpik2.com"
@@ -473,9 +519,9 @@
           "FY2023A": 843.536963,
           "FY2024A": 1117.690805,
           "FY2025A": 1438.37555,
-          "FY2026E": 2026.376544,
-          "FY2027E": 2185.191866,
-          "FY2028E": 2236.332748
+          "FY2026E": 1997.056263,
+          "FY2027E": 2152.17584,
+          "FY2028E": 2200.992865
         }
       },
       {
@@ -486,9 +532,9 @@
           "FY2023A": 578.547284,
           "FY2024A": 924.759402,
           "FY2025A": 1360.0,
-          "FY2026E": 1968.906132,
-          "FY2027E": 2233.113588,
-          "FY2028E": 2413.697419
+          "FY2026E": 1915.097797,
+          "FY2027E": 2166.419089,
+          "FY2028E": 2338.293065
         }
       },
       {
@@ -499,9 +545,9 @@
           "FY2023A": 102.055556,
           "FY2024A": 163.127263,
           "FY2025A": 239.903566,
-          "FY2026E": 347.314413,
-          "FY2027E": 393.920524,
-          "FY2028E": 425.775454
+          "FY2026E": 337.82264,
+          "FY2027E": 382.155636,
+          "FY2028E": 412.47415
         }
       },
       {
@@ -512,9 +558,9 @@
           "FY2023A": null,
           "FY2024A": 5.0,
           "FY2025A": 5.0,
-          "FY2026E": 34.731441,
-          "FY2027E": 39.392052,
-          "FY2028E": 42.577545
+          "FY2026E": 33.782264,
+          "FY2027E": 38.215564,
+          "FY2028E": 41.247415
         }
       },
       {
@@ -525,9 +571,9 @@
           "FY2023A": 23.930866,
           "FY2024A": -3118.270052,
           "FY2025A": -2871.56299,
-          "FY2026E": -4852.791448,
-          "FY2027E": -7026.418419,
-          "FY2028E": -9310.507379
+          "FY2026E": -4757.18262,
+          "FY2027E": -6864.164301,
+          "FY2028E": -9073.541409
         }
       }
     ],
@@ -537,7 +583,7 @@
         "method": "rnav",
         "label": "RNAV less target discount",
         "available": true,
-        "value": 926.57,
+        "value": 2675.6,
         "weight": 0.6,
         "basis": null,
         "multiple": null,
@@ -548,22 +594,22 @@
         "method": "pe",
         "label": "P/E",
         "available": true,
-        "value": 3038.56,
+        "value": 3440.5,
         "weight": 0.2,
         "basis": "peer median (own history unavailable)",
-        "multiple": 12.608,
-        "vs_primary_pct": 227.94,
+        "multiple": 14.256,
+        "vs_primary_pct": 28.59,
         "primary": false
       },
       {
         "method": "pbv",
         "label": "P/BV",
         "available": true,
-        "value": 1374.21,
+        "value": 1200.48,
         "weight": 0.2,
         "basis": "peer median (own history unavailable)",
-        "multiple": 0.7339,
-        "vs_primary_pct": 48.31,
+        "multiple": 0.6335,
+        "vs_primary_pct": -55.13,
         "primary": false
       }
     ],
@@ -575,14 +621,14 @@
       "crp": 0.0246,
       "beta_unlevered": 0.9,
       "beta_source": "industry default (config)",
-      "de": 0.013288,
-      "beta_levered": 0.909328,
+      "de": 0.013119,
+      "beta_levered": 0.909209,
       "tax": 0.22,
       "coe_premium": 0.0,
-      "coe": 0.119134,
+      "coe": 0.119126,
       "kd_pre_tax": 0.0945,
-      "we": 0.986886,
-      "wd": 0.013114,
+      "we": 0.987051,
+      "wd": 0.012949,
       "wacc": 0.118538
     },
     "g": 0.05,
@@ -590,54 +636,54 @@
     "scenarios": {
       "base": {
         "prob": 0.5,
-        "tp": 1575.0,
-        "v0": 1438.0,
+        "tp": 2802.0,
+        "v0": 2534.0,
         "narrative": "",
         "shocks": null
       },
       "bear": {
         "prob": 0.25,
-        "tp": 1407.0,
-        "v0": 1287.0,
-        "narrative": "Plot demand stays at the 2025 trough, the advance book converts more slowly than we assume, handovers slip, and a land-price correction takes 15% off the carried land value as the township discount widens and rates stay high.",
+        "tp": 2337.0,
+        "v0": 2118.0,
+        "narrative": "Plot demand stays at the 2025 trough and FY2026 marketing sales miss the IDR 563bn target, the advance book unwinds without replacement so handovers slow, the land contribution is cut 20% (to roughly 1.9x audited book, below our market-value mark but above carrying cost) as the township discount widens, sales growth runs six points below plan and the RNAV discount widens five points.",
         "shocks": [
           {
             "target": "p.landbank_value",
             "op": "mult",
-            "value": 0.85
+            "value": 0.8
           },
           {
             "target": "a.presales_growth",
             "op": "add",
-            "value": -0.08
+            "value": -0.06
           },
           {
             "target": "a.rnav_discount",
             "op": "add",
-            "value": 0.1
+            "value": 0.05
           }
         ]
       },
       "bull": {
         "prob": 0.25,
-        "tp": 1770.0,
-        "v0": 1614.0,
-        "narrative": "Rate cuts and the VAT exemption revive plot demand, marketing sales beat the IDR 563bn target, a bulk commercial land transaction lands at FY2024 scale, NICE and Hilton open on time, land values are marked 15% higher and the discount narrows toward the tight end of the band.",
+        "tp": 3325.0,
+        "v0": 3002.0,
+        "narrative": "Rate cuts and the VAT incentive revive plot demand, a bulk commercial-land transaction at FY2024 scale lands and marketing sales beat the IDR 563bn target, the land contribution is marked 20% higher (about 2.9x audited book, still below the FY2025 realised multiple of 6.7x), sales growth runs six points above plan and the RNAV discount narrows five points toward the tight end of the peer band.",
         "shocks": [
           {
             "target": "p.landbank_value",
             "op": "mult",
-            "value": 1.15
+            "value": 1.2
           },
           {
             "target": "a.presales_growth",
             "op": "add",
-            "value": 0.08
+            "value": 0.06
           },
           {
             "target": "a.rnav_discount",
             "op": "add",
-            "value": -0.1
+            "value": -0.05
           }
         ]
       }
@@ -672,39 +718,39 @@
         },
         "grid": [
           [
-            1680.515871,
-            1679.676158,
-            1678.836444,
-            1677.996731,
-            1677.157018
+            3112.978542,
+            3112.162742,
+            3111.346943,
+            3110.531143,
+            3109.715343
           ],
           [
-            1628.667951,
-            1627.828238,
-            1626.988524,
-            1626.148811,
-            1625.309098
+            2958.099104,
+            2957.283304,
+            2956.467504,
+            2955.651705,
+            2954.835905
           ],
           [
-            1576.820031,
-            1575.980318,
-            1575.140604,
-            1574.300891,
-            1573.461178
+            2803.219666,
+            2802.403866,
+            2801.588066,
+            2800.772267,
+            2799.956467
           ],
           [
-            1524.972111,
-            1524.132398,
-            1523.292684,
-            1522.452971,
-            1521.613258
+            2648.340227,
+            2647.524428,
+            2646.708628,
+            2645.892829,
+            2645.077029
           ],
           [
-            1473.124191,
-            1472.284478,
-            1471.444764,
-            1470.605051,
-            1469.765338
+            2493.460789,
+            2492.64499,
+            2491.82919,
+            2491.01339,
+            2490.197591
           ]
         ]
       }
@@ -716,49 +762,49 @@
     },
     "multiples": {
       "FY2025A": {
-        "pe": 12.08819,
-        "pbv": 1.821334,
-        "div_yield": 0.001724,
-        "ev_ebitda": 11.399915
+        "pe": 11.379572,
+        "pbv": 1.714566,
+        "div_yield": 0.001832,
+        "ev_ebitda": 10.811776
       },
       "FY2026E": {
-        "pe": 8.349783,
-        "pbv": 1.499053,
-        "div_yield": 0.011976,
-        "ev_ebitda": 7.114241,
-        "fcfe_yield": 0.122798
+        "pe": 8.081164,
+        "pbv": 1.418136,
+        "div_yield": 0.012374,
+        "ev_ebitda": 6.842959,
+        "fcfe_yield": 0.12441
       },
       "FY2027E": {
-        "pe": 7.361891,
-        "pbv": 1.264309,
-        "div_yield": 0.013583,
-        "ev_ebitda": 5.602484,
-        "fcfe_yield": 0.144854
+        "pe": 7.143686,
+        "pbv": 1.200826,
+        "div_yield": 0.013998,
+        "ev_ebitda": 5.370747,
+        "fcfe_yield": 0.149405
       },
       "FY2028E": {
-        "pe": 6.811102,
-        "pbv": 1.082038,
-        "div_yield": 0.014682,
-        "ev_ebitda": 4.453011,
-        "fcfe_yield": 0.153218
+        "pe": 6.618597,
+        "pbv": 1.031086,
+        "div_yield": 0.015109,
+        "ev_ebitda": 4.247817,
+        "fcfe_yield": 0.157695
       }
     },
     "peers": {
       "median": {
         "pe": {
-          "median": 12.607956447014072,
+          "median": 14.256013922173532,
           "n": 31
         },
         "ev_ebitda": {
-          "median": 11.04646812995673,
+          "median": 11.563967512172514,
           "n": 33
         },
         "pbv": {
-          "median": 0.7339273430839257,
+          "median": 0.633501411906019,
           "n": 55
         },
         "ev_sales": {
-          "median": 4.9653614994825395,
+          "median": 4.8724309474603285,
           "n": 48
         },
         "div_yield": {
@@ -773,42 +819,45 @@
           "div_yield": 0.0
         },
         "AMAN.JK": {
-          "pe": 15.464,
-          "ev_ebitda": 11.6026,
-          "pbv": 0.8387,
-          "ev_sales": 4.1201,
+          "pe": 15.2118,
+          "ev_ebitda": 11.467,
+          "pbv": 0.8251,
+          "ev_sales": 4.0719,
           "div_yield": 0.0
         },
         "APLN.JK": {
-          "pe": 4.5248,
-          "ev_ebitda": 5.9177,
-          "pbv": 0.1568,
-          "ev_sales": 1.1592,
+          "pe": 4.8074,
+          "ev_ebitda": 6.0884,
+          "pbv": 0.1582,
+          "ev_sales": 1.2426,
+          "div_yield": 0.0
+        },
+        "ARGO.JK": {
           "div_yield": 0.0
         },
         "ASPI.JK": {
           "div_yield": 0.0
         },
         "ASRI.JK": {
-          "pe": 6.0231,
-          "ev_ebitda": 6.5772,
-          "pbv": 0.1639,
-          "ev_sales": 2.4255,
+          "pe": 4.5893,
+          "ev_ebitda": 6.0255,
+          "pbv": 0.1625,
+          "ev_sales": 2.1285,
           "div_yield": 0.0156
         },
         "ATAP.JK": {
           "div_yield": 0.0
         },
         "BAPA.JK": {
-          "pbv": 0.4932,
-          "ev_sales": 12.2911,
+          "pbv": 0.4873,
+          "ev_sales": 12.1518,
           "div_yield": 0.0
         },
         "BAPI.JK": {
           "div_yield": 0.0
         },
         "BBSS.JK": {
-          "pbv": 0.9202,
+          "pbv": 1.1356,
           "div_yield": 0.0
         },
         "BCIP.JK": {
@@ -822,13 +871,13 @@
           "div_yield": 0.0
         },
         "BIPP.JK": {
-          "pbv": 0.3496,
-          "ev_sales": 5.8073,
+          "pbv": 0.3043,
+          "ev_sales": 5.6221,
           "div_yield": 0.0
         },
         "BKDP.JK": {
-          "pbv": 3.4971,
-          "ev_sales": 27.4487,
+          "pbv": 3.7403,
+          "ev_sales": 29.6316,
           "div_yield": 0.0
         },
         "BKSL.JK": {
@@ -853,17 +902,17 @@
           "div_yield": 0.0
         },
         "CBPE.JK": {
-          "div_yield": 0.0021
+          "div_yield": 0.002
         },
         "CITY.JK": {
-          "pe": 33.6531,
-          "ev_ebitda": 32.9995,
-          "pbv": 0.6739,
-          "ev_sales": 4.4494,
+          "pe": 26.0115,
+          "ev_ebitda": 25.0581,
+          "pbv": 0.6885,
+          "ev_sales": 4.0792,
           "div_yield": 0.0
         },
         "CSIS.JK": {
-          "div_yield": 0.0216
+          "div_yield": 0.0217
         },
         "CTRA.JK": {
           "pe": 3.922,
@@ -873,19 +922,19 @@
           "div_yield": 0.072
         },
         "DADA.JK": {
-          "div_yield": 0.0129
+          "div_yield": 0.0159
         },
         "DART.JK": {
-          "ev_ebitda": 36.3393,
-          "pbv": 0.3489,
-          "ev_sales": 7.0853,
+          "ev_ebitda": 36.432,
+          "pbv": 0.3578,
+          "ev_sales": 7.1034,
           "div_yield": 0.0
         },
         "DILD.JK": {
-          "pe": 16.2915,
-          "ev_ebitda": 5.9772,
-          "pbv": 0.1851,
-          "ev_sales": 1.6449,
+          "pe": 17.5495,
+          "ev_ebitda": 6.7819,
+          "pbv": 0.1849,
+          "ev_sales": 1.7743,
           "div_yield": 0.0
         },
         "DUTI.JK": {
@@ -896,99 +945,100 @@
           "div_yield": 0.1021
         },
         "ELTY.JK": {
-          "ev_ebitda": 11.0029,
-          "pbv": 0.1571,
-          "ev_sales": 1.473,
+          "ev_ebitda": 11.5826,
+          "pbv": 0.1572,
+          "ev_sales": 1.4931,
           "div_yield": 0.0
         },
         "EMDE.JK": {
-          "ev_ebitda": 20.6251,
-          "pbv": 0.1004,
-          "ev_sales": 4.1015,
+          "ev_ebitda": 20.5461,
+          "pbv": 0.0986,
+          "ev_sales": 4.0857,
           "div_yield": 0.0
         },
         "FMII.JK": {
-          "pbv": 2.1236,
+          "pbv": 2.2529,
           "div_yield": 0.0
         },
         "GMTD.JK": {
-          "pe": 29.243,
-          "ev_ebitda": 18.9191,
-          "pbv": 0.9914,
-          "ev_sales": 2.5702,
-          "div_yield": 0.0047
+          "pe": 26.3358,
+          "ev_ebitda": 16.6125,
+          "pbv": 0.8928,
+          "ev_sales": 2.2569,
+          "div_yield": 0.0052
         },
         "GPRA.JK": {
-          "pe": 5.7224,
-          "ev_ebitda": 5.8702,
-          "pbv": 0.287,
-          "ev_sales": 1.6514,
-          "div_yield": 0.0111
+          "pe": 5.6588,
+          "ev_ebitda": 5.835,
+          "pbv": 0.2838,
+          "ev_sales": 1.6415,
+          "div_yield": 0.0112
         },
         "GRIA.JK": {
-          "pbv": 2.3317,
-          "ev_sales": 16.2183,
+          "pbv": 2.2919,
+          "ev_sales": 18.4656,
           "div_yield": 0.0
         },
         "HBAT.JK": {
           "div_yield": 0.0
         },
         "HOMI.JK": {
-          "pbv": 2.0202,
-          "ev_sales": 11.6783,
+          "pbv": 1.9608,
+          "ev_sales": 11.345,
           "div_yield": 0.0
         },
         "INPP.JK": {
-          "ev_ebitda": 25.7428,
-          "pbv": 1.3453,
-          "ev_sales": 5.5321,
-          "div_yield": 0.0065
+          "ev_ebitda": 25.1593,
+          "pbv": 1.2395,
+          "ev_sales": 5.1429,
+          "div_yield": 0.0071
+        },
+        "IPAC.JK": {
+          "div_yield": 0.0
         },
         "JRPT.JK": {
-          "pe": 10.9234,
-          "ev_ebitda": 7.7258,
-          "pbv": 1.3813,
-          "ev_sales": 3.2243,
-          "div_yield": 0.0263
+          "pe": 10.6563,
+          "ev_ebitda": 7.608,
+          "pbv": 1.3349,
+          "ev_sales": 3.1485,
+          "div_yield": 0.0264
         },
         "KBAG.JK": {
           "div_yield": 0.0
         },
         "KOCI.JK": {
-          "div_yield": 0.0308
+          "div_yield": 0.0317
         },
         "KSIX.JK": {
           "div_yield": 0.0
         },
         "LAND.JK": {
-          "pe": 64.8486,
-          "ev_ebitda": 29.0459,
-          "pbv": 0.2311,
-          "ev_sales": 7.3497,
+          "pe": 63.1421,
+          "ev_ebitda": 28.7626,
+          "pbv": 0.225,
+          "ev_sales": 7.278,
           "div_yield": 0.0
         },
         "LPCK.JK": {
-          "pe": 11.6132,
-          "ev_ebitda": 11.0465,
-          "pbv": 0.3645,
-          "ev_sales": 0.6448,
+          "pe": 24.1522,
+          "ev_ebitda": 12.7191,
+          "pbv": 0.3259,
+          "ev_sales": 0.7064,
           "div_yield": 0.0
         },
         "LPKR.JK": {
-          "pe": 6.1873,
-          "ev_ebitda": 0.3559,
-          "pbv": 0.0955,
-          "ev_sales": 0.0442,
+          "pe": 2.2736,
+          "pbv": 0.0984,
           "div_yield": 0.0
         },
         "LPLI.JK": {
-          "pe": 5.7232,
-          "pbv": 1.8194,
+          "pe": 11.8615,
+          "pbv": 1.7532,
           "div_yield": 0.0
         },
         "MDLN.JK": {
-          "pbv": 0.1294,
-          "ev_sales": 8.3817,
+          "pbv": 0.1256,
+          "ev_sales": 8.3664,
           "div_yield": 0.0
         },
         "MKPI.JK": {
@@ -999,9 +1049,9 @@
           "div_yield": 0.05
         },
         "MMLP.JK": {
-          "ev_ebitda": 9.7726,
-          "pbv": 0.342,
-          "ev_sales": 6.1137,
+          "ev_ebitda": 9.6562,
+          "pbv": 0.336,
+          "ev_sales": 6.0409,
           "div_yield": 0.0
         },
         "MPRO.JK": {
@@ -1011,54 +1061,55 @@
           "div_yield": 0.0
         },
         "MTLA.JK": {
-          "pe": 12.4208,
-          "ev_ebitda": 11.0881,
-          "pbv": 0.9192,
-          "ev_sales": 3.4933,
-          "div_yield": 0.0145
+          "pe": 14.7608,
+          "ev_ebitda": 12.6741,
+          "pbv": 0.958,
+          "ev_sales": 3.6368,
+          "div_yield": 0.0139
         },
         "MTSM.JK": {
           "div_yield": 0.0
         },
         "NASA.JK": {
-          "pbv": 0.2724,
+          "pbv": 0.3127,
           "div_yield": 0.0
         },
         "NIRO.JK": {
-          "ev_ebitda": 28.1529,
-          "pbv": 1.8116,
-          "ev_sales": 7.4347,
+          "ev_ebitda": 27.996,
+          "pbv": 1.7701,
+          "ev_sales": 7.3932,
           "div_yield": 0.0
         },
         "NZIA.JK": {
           "div_yield": 0.0
         },
         "OMRE.JK": {
-          "pbv": 0.8726,
+          "pbv": 0.7124,
+          "ev_sales": 19.6887,
           "div_yield": 0.0
         },
         "PAMG.JK": {
           "div_yield": 0.0
         },
         "PANI.JK": {
-          "pe": 62.6229,
-          "ev_ebitda": 33.1114,
-          "pbv": 2.4664,
-          "ev_sales": 16.6467,
-          "div_yield": 0.0013
+          "pe": 29.0508,
+          "ev_ebitda": 24.3316,
+          "pbv": 2.2722,
+          "ev_sales": 13.6164,
+          "div_yield": 0.0014
         },
         "PLIN.JK": {
-          "pe": 13.881,
-          "ev_ebitda": 11.7439,
-          "pbv": 0.7807,
-          "ev_sales": 6.1501,
+          "pe": 13.3941,
+          "ev_ebitda": 11.564,
+          "pbv": 0.7703,
+          "ev_sales": 5.7938,
           "div_yield": 0.0618
         },
         "POLI.JK": {
-          "pe": 23.692,
-          "ev_ebitda": 14.4518,
-          "pbv": 0.7793,
-          "ev_sales": 4.6182,
+          "pe": 19.4103,
+          "ev_ebitda": 12.7362,
+          "pbv": 0.6385,
+          "ev_sales": 4.0699,
           "div_yield": 0.0
         },
         "POLL.JK": {
@@ -1069,12 +1120,12 @@
           "div_yield": 0.0
         },
         "PPRO.JK": {
-          "pbv": 0.1635,
-          "ev_sales": 6.3606,
+          "pbv": 0.1518,
+          "ev_sales": 6.181,
           "div_yield": 0.0
         },
         "PUDP.JK": {
-          "div_yield": 0.0051
+          "div_yield": 0.005
         },
         "PURI.JK": {
           "div_yield": 0.0
@@ -1090,11 +1141,11 @@
           "div_yield": 0.0
         },
         "RDTX.JK": {
-          "pe": 9.7815,
-          "ev_ebitda": 7.3359,
-          "pbv": 0.9942,
-          "ev_sales": 4.479,
-          "div_yield": 0.046
+          "pe": 8.4597,
+          "ev_ebitda": 7.1418,
+          "pbv": 0.9677,
+          "ev_sales": 4.2431,
+          "div_yield": 0.0476
         },
         "REAL.JK": {
           "div_yield": 0.0002
@@ -1110,27 +1161,29 @@
           "div_yield": 0.0
         },
         "ROCK.JK": {
-          "pe": 86.4285,
-          "pbv": 3.1239,
-          "ev_sales": 18.7755,
+          "pe": 84.6747,
+          "pbv": 3.4105,
+          "ev_sales": 20.3605,
           "div_yield": 0.0
         },
         "RODA.JK": {
-          "pbv": 0.2192,
-          "ev_sales": 2.1225,
+          "pbv": 0.2266,
+          "ev_sales": 2.2099,
           "div_yield": 0.0
         },
         "SAGE.JK": {
-          "pbv": 0.7339,
-          "ev_sales": 20.2432,
+          "pbv": 0.621,
+          "ev_sales": 17.3809,
           "div_yield": 0.0
         },
         "SATU.JK": {
           "div_yield": 0.0
         },
         "SMDM.JK": {
-          "pbv": 0.8536,
-          "ev_sales": 7.0007,
+          "pe": 50.3183,
+          "ev_ebitda": 41.4785,
+          "pbv": 0.8182,
+          "ev_sales": 5.7634,
           "div_yield": 0.0
         },
         "SMRA.JK": {
@@ -1141,28 +1194,27 @@
           "div_yield": 0.0189
         },
         "TARA.JK": {
-          "pbv": 0.3099,
+          "pbv": 0.3293,
           "div_yield": 0.0
         },
         "TRIN.JK": {
-          "pe": 23.8884,
-          "pbv": 0.7661,
-          "ev_sales": 17.1925,
+          "pe": 19.7539,
+          "pbv": 0.6335,
+          "ev_sales": 15.357,
           "div_yield": 0.0
         },
         "TRUE.JK": {
-          "pbv": 1.073,
-          "ev_sales": 5.5034,
+          "pbv": 0.6795,
+          "ev_sales": 4.6019,
           "div_yield": 0.0
         },
         "UANG.JK": {
-          "pe": 29.8951,
-          "pbv": 6.4632,
-          "ev_sales": 9.3394,
+          "pbv": 8.7952,
+          "ev_sales": 29.3588,
           "div_yield": 0.0
         },
         "URBN.JK": {
-          "pbv": 0.7382,
+          "pbv": 0.8191,
           "div_yield": 0.0
         },
         "VAST.JK": {
@@ -1332,16 +1384,16 @@
             "FY2023A": 148.747493,
             "FY2024A": 158.004288,
             "FY2025A": 221.807796,
-            "FY2026E": 223.677074,
-            "FY2027E": 251.870994,
-            "FY2028E": 269.599116,
-            "FY2029E": 284.724154,
-            "FY2030E": 297.624391,
-            "FY2031E": 309.688358,
-            "FY2032E": 322.244423,
-            "FY2033E": 335.312842,
-            "FY2034E": 348.914716,
-            "FY2035E": 363.072027
+            "FY2026E": 252.997354,
+            "FY2027E": 284.88702,
+            "FY2028E": 304.938999,
+            "FY2029E": 322.046674,
+            "FY2030E": 336.637914,
+            "FY2031E": 350.283262,
+            "FY2032E": 364.485215,
+            "FY2033E": 379.266682,
+            "FY2034E": 394.651532,
+            "FY2035E": 410.664627
           }
         },
         {
@@ -1353,16 +1405,16 @@
             "FY2023A": 838.122393,
             "FY2024A": 1114.360448,
             "FY2025A": 1431.793903,
-            "FY2026E": 2019.826025,
-            "FY2027E": 2177.815672,
-            "FY2028E": 2228.437375,
-            "FY2029E": 2245.82376,
-            "FY2030E": 2235.879118,
-            "FY2031E": 2287.812017,
-            "FY2032E": 2380.339286,
-            "FY2033E": 2476.628532,
-            "FY2034E": 2576.833889,
-            "FY2035E": 2681.115873
+            "FY2026E": 1990.505745,
+            "FY2027E": 2144.799646,
+            "FY2028E": 2193.097491,
+            "FY2029E": 2208.501241,
+            "FY2030E": 2196.865596,
+            "FY2031E": 2247.217113,
+            "FY2032E": 2338.098493,
+            "FY2033E": 2432.674691,
+            "FY2034E": 2531.097073,
+            "FY2035E": 2633.523273
           }
         },
         {
@@ -1395,16 +1447,16 @@
             "FY2023A": 843.536963,
             "FY2024A": 1117.690805,
             "FY2025A": 1438.37555,
-            "FY2026E": 2026.376544,
-            "FY2027E": 2185.191866,
-            "FY2028E": 2236.332748,
-            "FY2029E": 2254.162079,
-            "FY2030E": 2244.595229,
-            "FY2031E": 2296.881428,
-            "FY2032E": 2389.776408,
-            "FY2033E": 2486.448372,
-            "FY2034E": 2587.052068,
-            "FY2035E": 2691.748657
+            "FY2026E": 1997.056263,
+            "FY2027E": 2152.17584,
+            "FY2028E": 2200.992865,
+            "FY2029E": 2216.83956,
+            "FY2030E": 2205.581706,
+            "FY2031E": 2256.286523,
+            "FY2032E": 2347.535616,
+            "FY2033E": 2442.494531,
+            "FY2034E": 2541.315251,
+            "FY2035E": 2644.156057
           }
         },
         {
@@ -1438,15 +1490,15 @@
             "FY2024A": 82.976325,
             "FY2025A": 253.85592,
             "FY2026E": 218.473437,
-            "FY2027E": 357.159429,
-            "FY2028E": 509.313317,
-            "FY2029E": 669.199544,
-            "FY2030E": 837.896999,
-            "FY2031E": 1014.590437,
-            "FY2032E": 1204.74148,
-            "FY2033E": 1412.048032,
-            "FY2034E": 1637.542932,
-            "FY2035E": 1882.563215
+            "FY2027E": 350.466811,
+            "FY2028E": 497.955529,
+            "FY2029E": 652.611926,
+            "FY2030E": 815.492827,
+            "FY2031E": 985.780196,
+            "FY2032E": 1168.836284,
+            "FY2033E": 1368.266416,
+            "FY2034E": 1585.036792,
+            "FY2035E": 1820.409467
           }
         },
         {
@@ -1479,16 +1531,16 @@
             "FY2023A": 826.442651,
             "FY2024A": 1096.530691,
             "FY2025A": 1516.447494,
-            "FY2026E": 2210.862976,
-            "FY2027E": 2507.538614,
-            "FY2028E": 2710.314205,
-            "FY2029E": 2887.586818,
-            "FY2030E": 3046.339631,
-            "FY2031E": 3274.965968,
-            "FY2032E": 3557.644279,
-            "FY2033E": 3861.240078,
-            "FY2034E": 4186.940334,
-            "FY2035E": 4536.242602
+            "FY2026E": 2181.542696,
+            "FY2027E": 2467.82997,
+            "FY2028E": 2663.616534,
+            "FY2029E": 2833.676681,
+            "FY2030E": 2984.921937,
+            "FY2031E": 3205.560823,
+            "FY2032E": 3479.498291,
+            "FY2033E": 3773.504621,
+            "FY2034E": 4088.697378,
+            "FY2035E": 4426.496253
           }
         },
         {
@@ -1500,16 +1552,16 @@
             "FY2023A": 21.907021,
             "FY2024A": 14.045764,
             "FY2025A": 49.099171,
-            "FY2026E": 70.747615,
-            "FY2027E": 80.241236,
-            "FY2028E": 86.730055,
-            "FY2029E": 92.402778,
-            "FY2030E": 97.482868,
-            "FY2031E": 104.798911,
-            "FY2032E": 113.844617,
-            "FY2033E": 123.559683,
-            "FY2034E": 133.982091,
-            "FY2035E": 145.159763
+            "FY2026E": 99.914655,
+            "FY2027E": 113.026613,
+            "FY2028E": 121.993637,
+            "FY2029E": 129.782392,
+            "FY2030E": 136.709425,
+            "FY2031E": 146.814686,
+            "FY2032E": 159.361022,
+            "FY2033E": 172.826512,
+            "FY2034E": 187.26234,
+            "FY2035E": 202.733528
           }
         },
         {
@@ -1521,16 +1573,16 @@
             "FY2023A": 804.53563,
             "FY2024A": 1095.609024,
             "FY2025A": 1467.348323,
-            "FY2026E": 2140.115361,
-            "FY2027E": 2427.297379,
-            "FY2028E": 2623.584151,
-            "FY2029E": 2795.18404,
-            "FY2030E": 2948.856763,
-            "FY2031E": 3170.167057,
-            "FY2032E": 3443.799662,
-            "FY2033E": 3737.680396,
-            "FY2034E": 4052.958244,
-            "FY2035E": 4391.082839
+            "FY2026E": 2081.62804,
+            "FY2027E": 2354.803358,
+            "FY2028E": 2541.622896,
+            "FY2029E": 2703.894289,
+            "FY2030E": 2848.212512,
+            "FY2031E": 3058.746137,
+            "FY2032E": 3320.13727,
+            "FY2033E": 3600.678109,
+            "FY2034E": 3901.435038,
+            "FY2035E": 4223.762725
           }
         },
         {
@@ -1542,16 +1594,16 @@
             "FY2023A": 225.988346,
             "FY2024A": 170.849622,
             "FY2025A": 103.096801,
-            "FY2026E": 171.209229,
-            "FY2027E": 194.18379,
-            "FY2028E": 209.886732,
-            "FY2029E": 223.614723,
-            "FY2030E": 235.908541,
-            "FY2031E": 253.613365,
-            "FY2032E": 275.503973,
-            "FY2033E": 299.014432,
-            "FY2034E": 324.236659,
-            "FY2035E": 351.286627
+            "FY2026E": 166.530243,
+            "FY2027E": 188.384269,
+            "FY2028E": 203.329832,
+            "FY2029E": 216.311543,
+            "FY2030E": 227.857001,
+            "FY2031E": 244.699691,
+            "FY2032E": 265.610982,
+            "FY2033E": 288.054249,
+            "FY2034E": 312.114803,
+            "FY2035E": 337.901018
           }
         },
         {
@@ -1563,16 +1615,16 @@
             "FY2023A": 578.547284,
             "FY2024A": 924.759402,
             "FY2025A": 1360.0,
-            "FY2026E": 1968.906132,
-            "FY2027E": 2233.113588,
-            "FY2028E": 2413.697419,
-            "FY2029E": 2571.569317,
-            "FY2030E": 2712.948222,
-            "FY2031E": 2916.553692,
-            "FY2032E": 3168.295689,
-            "FY2033E": 3438.665964,
-            "FY2034E": 3728.721584,
-            "FY2035E": 4039.796212
+            "FY2026E": 1915.097797,
+            "FY2027E": 2166.419089,
+            "FY2028E": 2338.293065,
+            "FY2029E": 2487.582745,
+            "FY2030E": 2620.355511,
+            "FY2031E": 2814.046446,
+            "FY2032E": 3054.526288,
+            "FY2033E": 3312.62386,
+            "FY2034E": 3589.320235,
+            "FY2035E": 3885.861707
           }
         },
         {
@@ -1605,16 +1657,16 @@
             "FY2023A": 102.055556,
             "FY2024A": 163.127263,
             "FY2025A": 239.903566,
-            "FY2026E": 347.314413,
-            "FY2027E": 393.920524,
-            "FY2028E": 425.775454,
-            "FY2029E": 453.624007,
-            "FY2030E": 478.5632,
-            "FY2031E": 514.47914,
-            "FY2032E": 558.886348,
-            "FY2033E": 606.579578,
-            "FY2034E": 657.745297,
-            "FY2035E": 712.618762
+            "FY2026E": 337.82264,
+            "FY2027E": 382.155636,
+            "FY2028E": 412.47415,
+            "FY2029E": 438.808802,
+            "FY2030E": 462.229876,
+            "FY2031E": 496.396895,
+            "FY2032E": 538.817462,
+            "FY2033E": 584.345791,
+            "FY2034E": 633.154944,
+            "FY2035E": 685.464765
           }
         },
         {
@@ -1626,16 +1678,16 @@
             "FY2023A": null,
             "FY2024A": 5.0,
             "FY2025A": 5.0,
-            "FY2026E": 34.731441,
-            "FY2027E": 39.392052,
-            "FY2028E": 42.577545,
-            "FY2029E": 45.362401,
-            "FY2030E": 47.85632,
-            "FY2031E": 51.447914,
-            "FY2032E": 55.888635,
-            "FY2033E": 60.657958,
-            "FY2034E": 65.77453,
-            "FY2035E": 71.261876
+            "FY2026E": 33.782264,
+            "FY2027E": 38.215564,
+            "FY2028E": 41.247415,
+            "FY2029E": 43.88088,
+            "FY2030E": 46.222988,
+            "FY2031E": 49.639689,
+            "FY2032E": 53.881746,
+            "FY2033E": 58.434579,
+            "FY2034E": 63.315494,
+            "FY2035E": 68.546476
           }
         }
       ],
@@ -1650,15 +1702,15 @@
             "FY2024A": 360.547322,
             "FY2025A": 28.344723,
             "FY2026E": 28.344722,
-            "FY2027E": 196.890613,
-            "FY2028E": 223.311359,
-            "FY2029E": 241.369742,
-            "FY2030E": 257.156932,
-            "FY2031E": 271.294822,
-            "FY2032E": 291.655369,
-            "FY2033E": 316.829569,
-            "FY2034E": 343.866596,
-            "FY2035E": 372.872158
+            "FY2027E": 191.50978,
+            "FY2028E": 216.641909,
+            "FY2029E": 233.829306,
+            "FY2030E": 248.758275,
+            "FY2031E": 262.035551,
+            "FY2032E": 281.404645,
+            "FY2033E": 305.452629,
+            "FY2034E": 331.262386,
+            "FY2035E": 358.932024
           }
         },
         {
@@ -1670,7 +1722,7 @@
             "FY2023A": 7.978861,
             "FY2024A": 115.537578,
             "FY2025A": 163.857454,
-            "FY2026E": 185.60754,
+            "FY2026E": 222.729048,
             "FY2027E": 209.002893,
             "FY2028E": 206.504966,
             "FY2029E": 218.090298,
@@ -1712,16 +1764,16 @@
             "FY2023A": 139.082529,
             "FY2024A": 4975.964886,
             "FY2025A": 1390.402421,
-            "FY2026E": 1834.959093,
-            "FY2027E": 2068.466699,
-            "FY2028E": 2060.361926,
-            "FY2029E": 2051.095416,
-            "FY2030E": 2019.184604,
-            "FY2031E": 2055.764119,
-            "FY2032E": 2138.907647,
-            "FY2033E": 2225.431693,
-            "FY2034E": 2315.474766,
-            "FY2035E": 2409.181111
+            "FY2026E": 1741.986574,
+            "FY2027E": 2006.90895,
+            "FY2028E": 1995.888173,
+            "FY2029E": 1984.4899,
+            "FY2030E": 1951.102769,
+            "FY2031E": 1985.456655,
+            "FY2032E": 2065.752801,
+            "FY2033E": 2149.313465,
+            "FY2034E": 2236.272388,
+            "FY2035E": 2326.768852
           }
         },
         {
@@ -1754,16 +1806,16 @@
             "FY2023A": null,
             "FY2024A": null,
             "FY2025A": null,
-            "FY2026E": 2009.573181,
-            "FY2027E": 2370.517584,
-            "FY2028E": 2507.400319,
-            "FY2029E": 2651.333383,
-            "FY2030E": 2781.348908,
-            "FY2031E": 2987.738289,
-            "FY2032E": 3253.177544,
-            "FY2033E": 3538.185273,
-            "FY2034E": 3844.156362,
-            "FY2035E": 4172.520118
+            "FY2026E": 1913.964352,
+            "FY2027E": 2298.491462,
+            "FY2028E": 2426.019017,
+            "FY2029E": 2560.699322,
+            "FY2030E": 2681.434975,
+            "FY2031E": 2877.122523,
+            "FY2032E": 3130.406519,
+            "FY2033E": 3402.172285,
+            "FY2034E": 3693.729175,
+            "FY2035E": 4006.41219
           }
         }
       ],
@@ -1798,16 +1850,16 @@
             "FY2023A": 293.961956,
             "FY2024A": 3478.680517,
             "FY2025A": 3121.049099,
-            "FY2026E": 5102.277557,
-            "FY2027E": 7275.904528,
-            "FY2028E": 9559.993488,
-            "FY2029E": 11969.957129,
-            "FY2030E": 14494.149105,
-            "FY2031E": 17210.592572,
-            "FY2032E": 20172.114747,
-            "FY2033E": 23393.470451,
-            "FY2034E": 26893.760217,
-            "FY2035E": 30693.408176
+            "FY2026E": 5006.668729,
+            "FY2027E": 7113.65041,
+            "FY2028E": 9323.027518,
+            "FY2029E": 11649.897533,
+            "FY2030E": 14082.574234,
+            "FY2031E": 16697.661206,
+            "FY2032E": 19546.66308,
+            "FY2033E": 22643.382737,
+            "FY2034E": 26005.849525,
+            "FY2035E": 29653.329692
           }
         },
         {
@@ -1840,16 +1892,16 @@
             "FY2023A": 15.489746,
             "FY2024A": 142.592771,
             "FY2025A": 442.339826,
-            "FY2026E": 621.396848,
-            "FY2027E": 823.023546,
-            "FY2028E": 1021.633138,
-            "FY2029E": 1231.385118,
-            "FY2030E": 1450.640507,
-            "FY2031E": 1678.783237,
-            "FY2032E": 1916.175831,
-            "FY2033E": 2163.195731,
-            "FY2034E": 2420.235927,
-            "FY2035E": 2687.7056
+            "FY2026E": 658.518356,
+            "FY2027E": 860.145054,
+            "FY2028E": 1058.754646,
+            "FY2029E": 1268.506626,
+            "FY2030E": 1487.762015,
+            "FY2031E": 1715.904745,
+            "FY2032E": 1953.297339,
+            "FY2033E": 2200.317239,
+            "FY2034E": 2457.357435,
+            "FY2035E": 2724.827108
           }
         },
         {
@@ -1861,16 +1913,16 @@
             "FY2023A": 3715.716668,
             "FY2024A": 4549.609226,
             "FY2025A": 9026.318528,
-            "FY2026E": 10966.879937,
-            "FY2027E": 13003.102913,
-            "FY2028E": 15193.488972,
-            "FY2029E": 17523.688547,
-            "FY2030E": 19979.479837,
-            "FY2031E": 22624.738707,
-            "FY2032E": 25501.379028,
-            "FY2033E": 28623.215423,
-            "FY2034E": 32008.07041,
-            "FY2035E": 35674.994464
+            "FY2026E": 10913.071602,
+            "FY2027E": 12887.980912,
+            "FY2028E": 15009.632068,
+            "FY2029E": 17263.385507,
+            "FY2030E": 19634.982743,
+            "FY2031E": 22186.993638,
+            "FY2032E": 24960.115281,
+            "FY2033E": 27967.286513,
+            "FY2034E": 31225.344362,
+            "FY2035E": 34752.274045
           }
         },
         {
@@ -1882,16 +1934,16 @@
             "FY2023A": 3972.979829,
             "FY2024A": 3773.220247,
             "FY2025A": 2956.131365,
-            "FY2026E": 3117.030914,
-            "FY2027E": 3294.093781,
-            "FY2028E": 3484.562134,
-            "FY2029E": 3687.188184,
-            "FY2030E": 3900.735253,
-            "FY2031E": 4130.757763,
-            "FY2032E": 4380.9004,
-            "FY2033E": 4652.364434,
-            "FY2034E": 4946.699651,
-            "FY2035E": 5265.562612
+            "FY2026E": 3112.351928,
+            "FY2027E": 3284.083172,
+            "FY2028E": 3468.574577,
+            "FY2029E": 3664.553137,
+            "FY2030E": 3870.778984,
+            "FY2031E": 4092.692975,
+            "FY2032E": 4333.833987,
+            "FY2033E": 4595.327138,
+            "FY2034E": 4878.636516,
+            "FY2035E": 5185.326054
           }
         },
         {
@@ -1903,16 +1955,16 @@
             "FY2023A": 23.930866,
             "FY2024A": -3118.270052,
             "FY2025A": -2871.56299,
-            "FY2026E": -4852.791448,
-            "FY2027E": -7026.418419,
-            "FY2028E": -9310.507379,
-            "FY2029E": -11720.47102,
-            "FY2030E": -14244.662996,
-            "FY2031E": -16961.106463,
-            "FY2032E": -19922.628638,
-            "FY2033E": -23143.984342,
-            "FY2034E": -26644.274108,
-            "FY2035E": -30443.922067
+            "FY2026E": -4757.18262,
+            "FY2027E": -6864.164301,
+            "FY2028E": -9073.541409,
+            "FY2029E": -11400.411424,
+            "FY2030E": -13833.088125,
+            "FY2031E": -16448.175097,
+            "FY2032E": -19297.176971,
+            "FY2033E": -22393.896628,
+            "FY2034E": -25756.363416,
+            "FY2035E": -29403.843583
           }
         },
         {
@@ -1924,16 +1976,16 @@
             "FY2023A": 655.451234,
             "FY2024A": 802.549615,
             "FY2025A": 1592.239707,
-            "FY2026E": 1934.55412,
-            "FY2027E": 2293.743203,
-            "FY2028E": 2680.126604,
-            "FY2029E": 3091.173065,
-            "FY2030E": 3524.373865,
-            "FY2031E": 3990.996685,
-            "FY2032E": 4498.435119,
-            "FY2033E": 5049.126063,
-            "FY2034E": 5646.213402,
-            "FY2035E": 6293.057634
+            "FY2026E": 1925.062347,
+            "FY2027E": 2273.435718,
+            "FY2028E": 2647.694305,
+            "FY2029E": 3045.255692,
+            "FY2030E": 3463.604687,
+            "FY2031E": 3913.778595,
+            "FY2032E": 4402.956367,
+            "FY2033E": 4933.420412,
+            "FY2034E": 5508.140777,
+            "FY2035E": 6130.290047
           }
         }
       ],
@@ -1989,16 +2041,16 @@
             "FY2023A": 0.43181,
             "FY2024A": 0.496977,
             "FY2025A": 0.574514,
-            "FY2026E": 0.70964,
-            "FY2027E": 0.679596,
-            "FY2028E": 0.649766,
-            "FY2029E": 0.620155,
-            "FY2030E": 0.590757,
-            "FY2031E": 0.580969,
-            "FY2032E": 0.580913,
-            "FY2033E": 0.580856,
-            "FY2034E": 0.580798,
-            "FY2035E": 0.580739
+            "FY2026E": 0.699372,
+            "FY2027E": 0.669328,
+            "FY2028E": 0.639498,
+            "FY2029E": 0.609887,
+            "FY2030E": 0.580489,
+            "FY2031E": 0.570701,
+            "FY2032E": 0.570645,
+            "FY2033E": 0.570588,
+            "FY2034E": 0.57053,
+            "FY2035E": 0.570471
           }
         },
         {
@@ -2010,16 +2062,16 @@
             "FY2023A": 0.429038,
             "FY2024A": 0.495496,
             "FY2025A": 0.571885,
-            "FY2026E": 0.707346,
-            "FY2027E": 0.677302,
-            "FY2028E": 0.647472,
-            "FY2029E": 0.617861,
-            "FY2030E": 0.588463,
-            "FY2031E": 0.578675,
-            "FY2032E": 0.578619,
-            "FY2033E": 0.578562,
-            "FY2034E": 0.578504,
-            "FY2035E": 0.578445
+            "FY2026E": 0.697078,
+            "FY2027E": 0.667034,
+            "FY2028E": 0.637204,
+            "FY2029E": 0.607593,
+            "FY2030E": 0.578195,
+            "FY2031E": 0.568407,
+            "FY2032E": 0.568351,
+            "FY2033E": 0.568294,
+            "FY2034E": 0.568236,
+            "FY2035E": 0.568177
           }
         },
         {
@@ -2031,16 +2083,16 @@
             "FY2023A": 0.29616,
             "FY2024A": 0.411191,
             "FY2025A": 0.54321,
-            "FY2026E": 0.689513,
-            "FY2027E": 0.694499,
-            "FY2028E": 0.7013,
-            "FY2029E": 0.707478,
-            "FY2030E": 0.714023,
-            "FY2031E": 0.737708,
-            "FY2032E": 0.770157,
-            "FY2033E": 0.803302,
-            "FY2034E": 0.837105,
-            "FY2035E": 0.871577
+            "FY2026E": 0.67067,
+            "FY2027E": 0.673757,
+            "FY2028E": 0.679391,
+            "FY2029E": 0.684372,
+            "FY2030E": 0.689653,
+            "FY2031E": 0.71178,
+            "FY2032E": 0.742502,
+            "FY2033E": 0.773858,
+            "FY2034E": 0.805809,
+            "FY2035E": 0.838366
           }
         },
         {
@@ -2052,16 +2104,16 @@
             "FY2023A": 1.094494,
             "FY2024A": 0.598416,
             "FY2025A": 0.470653,
-            "FY2026E": 0.447725,
-            "FY2027E": 0.13419,
-            "FY2028E": 0.080866,
-            "FY2029E": 0.065407,
-            "FY2030E": 0.054978,
-            "FY2031E": 0.07505,
-            "FY2032E": 0.086315,
-            "FY2033E": 0.085336,
-            "FY2034E": 0.084351,
-            "FY2035E": 0.083427
+            "FY2026E": 0.40816,
+            "FY2027E": 0.131232,
+            "FY2028E": 0.079336,
+            "FY2029E": 0.063846,
+            "FY2030E": 0.053374,
+            "FY2031E": 0.073918,
+            "FY2032E": 0.085457,
+            "FY2033E": 0.084497,
+            "FY2034E": 0.083528,
+            "FY2035E": 0.082618
           }
         },
         {
@@ -2073,16 +2125,16 @@
             "FY2023A": 0.154365,
             "FY2024A": 0.223768,
             "FY2025A": 0.200355,
-            "FY2026E": 0.196958,
-            "FY2027E": 0.186326,
-            "FY2028E": 0.171205,
-            "FY2029E": 0.1572,
-            "FY2030E": 0.144678,
-            "FY2031E": 0.136914,
-            "FY2032E": 0.131666,
-            "FY2033E": 0.127065,
-            "FY2034E": 0.122997,
-            "FY2035E": 0.119374
+            "FY2026E": 0.192092,
+            "FY2027E": 0.182044,
+            "FY2028E": 0.167634,
+            "FY2029E": 0.154159,
+            "FY2030E": 0.142031,
+            "FY2031E": 0.134573,
+            "FY2032E": 0.129574,
+            "FY2033E": 0.125176,
+            "FY2034E": 0.121276,
+            "FY2035E": 0.117793
           }
         },
         {
@@ -2094,16 +2146,16 @@
             "FY2023A": 0.02837,
             "FY2024A": -2.789922,
             "FY2025A": -1.996393,
-            "FY2026E": -2.394812,
-            "FY2027E": -3.21547,
-            "FY2028E": -4.163293,
-            "FY2029E": -5.19948,
-            "FY2030E": -6.346206,
-            "FY2031E": -7.384407,
-            "FY2032E": -8.336608,
-            "FY2033E": -9.308049,
-            "FY2034E": -10.299087,
-            "FY2035E": -11.310091
+            "FY2026E": -2.382097,
+            "FY2027E": -3.189407,
+            "FY2028E": -4.122477,
+            "FY2029E": -5.142642,
+            "FY2030E": -6.271855,
+            "FY2031E": -7.289932,
+            "FY2032E": -8.220185,
+            "FY2033E": -9.168453,
+            "FY2034E": -10.135052,
+            "FY2035E": -11.120313
           }
         },
         {
@@ -2136,7 +2188,7 @@
             "FY2023A": 0.004084,
             "FY2024A": 0.051373,
             "FY2025A": 0.065448,
-            "FY2026E": 0.065,
+            "FY2026E": 0.078,
             "FY2027E": 0.065,
             "FY2028E": 0.06,
             "FY2029E": 0.06,
@@ -2240,37 +2292,41 @@
       [
         "2026-10",
         2900.0
+      ],
+      [
+        "2026-11",
+        2730.0
       ]
     ],
     "football": [
       {
         "label": "RNAV less target discount",
-        "value": 926.57,
+        "value": 2675.6,
         "weight": 0.6
       },
       {
         "label": "P/E",
-        "value": 3038.56,
+        "value": 3440.5,
         "weight": 0.2
       },
       {
         "label": "P/BV",
-        "value": 1374.21,
+        "value": 1200.48,
         "weight": 0.2
       },
       {
         "label": "Scenario base",
-        "value": 1575.0,
+        "value": 2802.0,
         "weight": 0.5
       },
       {
         "label": "Scenario bear",
-        "value": 1407.0,
+        "value": 2337.0,
         "weight": 0.25
       },
       {
         "label": "Scenario bull",
-        "value": 1770.0,
+        "value": 3325.0,
         "weight": 0.25
       }
     ]
@@ -2289,11 +2345,12 @@
       },
       "value": null,
       "lt": 0.04,
-      "basis": "Contracted sales value grows 20% in FY2026: 9M2026 marketing sales of IDR 448bn are up about 40% yoy and the company's own FY2026 target is IDR 563bn, 31% above FY2025 [S2, S3 p.121], while FY2025 new contracted value derived from the advance movement was IDR 2,113.8bn (revenue 2,503.6 plus the 389.7bn fall in advances) [S3 p.400]. We do not extrapolate the 31% target growth into the bulk line; we take 20% for one year, then 8%, 6%, 5% and 4% as the marketed pipeline caps intake and the advance book unwinds. This is the most likely path, not a haircut: FY2024 marketing sales of IDR 2,114.6bn [S3 p.21] show the bulk commercial-land line can run at several times the 2025 figure when a large transaction lands.",
+      "basis": "This line is TOTAL SALES VALUE converted to revenue, not the marketing-sales KPI: the facts keyed to it (F1/F2) are the recognised total sales value of IDR 2,503.6bn and IDR 2,249.0bn, because the template uses this line to build handover revenue. Marketing sales were only IDR 430.2bn in FY2025 (F9) and IDR 448bn in 9M2026 (F12), a fraction of the value being handed over, so feeding the KPI into this line would collapse the revenue path; the KPI is monitored separately (section 5 and 7). FY2026 is set to +20% because nine months of FY2026 revenue are already reported at IDR 2,557.7bn (F17), so the full year is close to locked, not forecast: 0.6 x FY2026 sales value plus 0.4 x FY2025 sales value must reproduce about IDR 2,800bn of development revenue. That is a source for the rate, not an 11-20pp haircut to the marketing-sales target. Thereafter 8%, 6%, 5% and 4% as the advance book unwinds. The advance-book arithmetic in the earlier basis was wrong: new cash collection in a year is revenue MINUS the change in advances (2,503.6 - 389.7 = 2,113.9 in FY2025), not plus, and it measures collections on all outstanding contracts, not new contracts; marketing sales remain the new-contract KPI.",
       "sources": [
         "S3",
         "S2",
-        "S4"
+        "S4",
+        "S6"
       ],
       "engine_default": false
     },
@@ -2310,7 +2367,7 @@
       },
       "value": null,
       "lt": 0.6,
-      "basis": "Reconciled to the advance movement rather than asserted. FY2025 revenue of IDR 2,503.6bn plus the IDR 389.7bn fall in advances (9,936.6 to 9,546.8) implies IDR 2,113.8bn of new contracted value in the year [S3 p.400], and revenue equals 25.7% of the average advance book, i.e. the book turns about once every four years because most of it is multi-year staged bulk-land handover. The template carries a single one-year lag, so 60% in-year and 40% next year is the closest match that does not front-load revenue; section 3 discloses that the model cannot reproduce a 3.8x advance book and that conversion of the book is a monitored KPI with a kill threshold.",
+      "basis": "Reconciled to the advance movement rather than asserted. FY2025 revenue of IDR 2,503.6bn against a fall in advances from IDR 9,936.6bn to IDR 9,546.8bn implies IDR 2,113.9bn of cash collected on outstanding contracts (revenue minus the change in advances) and consumption of IDR 2,503.6bn of contract value, so the book turns about once every four years because most of it is multi-year staged bulk-land handover [S3 p.400]. Collections are not new contracts: marketing sales were IDR 430.2bn in FY2025 (F9), so the collection figure covers instalments on contracts signed in prior years. The template carries a single one-year lag, so 60% in-year and 40% next year is the closest match that does not front-load revenue or collapse the advance book; section 3 discloses that the model cannot reproduce a 3.8x advance book and that both the marketing-sales KPI and the advance balance are monitored.",
       "sources": [
         "S3"
       ],
@@ -2393,11 +2450,12 @@
       "label": "Target discount to RNAV",
       "unit": "pct",
       "values": null,
-      "value": 0.4,
+      "value": 0.42,
       "lt": null,
-      "basis": "IDX township developers trade at a persistent 40-70% discount to RNAV (property method card and the comparable band tabulated in section 4). We use the tight end, 40%, because CBDK is in net cash, has no USD debt, and its advances fund the township. A 40% discount to an RNAV already struck at 0.95x audited book is one layer of caution, not two.",
+      "basis": "The peer RNAV discounts in the comps table run from nil to 72% with a median of about 42%, inside the method card's persistent 40-70% band for IDX township developers. We use the peer median, 42%, rather than the tight end: CBDK is in net cash with no USD debt and its advances fund the township, which argues for the tight half of the band, but it has a single township, an 11.5% free float and a land bank that turns at a few hectares a year, which argues against the tight end. Applying the median is the neutral choice; a 40% discount would be a marginal tightening with no source.",
       "sources": [
-        "S3"
+        "S3",
+        "S0"
       ],
       "engine_default": false
     },
@@ -2406,15 +2464,15 @@
       "label": "SG&A / revenue",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.078332,
-        "FY2027E": 0.078332,
-        "FY2028E": 0.078332,
-        "FY2029E": 0.078332,
-        "FY2030E": 0.078332
+        "FY2026E": 0.0886,
+        "FY2027E": 0.0886,
+        "FY2028E": 0.0886,
+        "FY2029E": 0.0886,
+        "FY2030E": 0.0886
       },
       "value": null,
-      "lt": 0.078332,
-      "basis": "Held at the FY2023A-FY2025A average of 7.8% of revenue; SG&A was IDR 221.8bn on IDR 2,503.6bn in FY2025 [S0] and the cost base is largely fixed, so it should not fall as revenue grows.",
+      "lt": 0.0886,
+      "basis": "Held at the FY2025 actual of 8.86% of revenue (SG&A of IDR 221.8bn on revenue of IDR 2,503.6bn, [S0]) throughout, because the cost base is largely fixed and we have no evidence that it falls as revenue grows. The earlier 7.8% was the three-year average, which cut about IDR 29bn of FY2026 cost against the last actual with no source; the review is right that the last actual should set the base case.",
       "sources": [
         "S0"
       ],
@@ -2444,7 +2502,7 @@
       "label": "Capex / revenue",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.065,
+        "FY2026E": 0.078,
         "FY2027E": 0.065,
         "FY2028E": 0.06,
         "FY2029E": 0.06,
@@ -2452,10 +2510,11 @@
       },
       "value": null,
       "lt": 0.06,
-      "basis": "FY2025 capex was IDR 163.9bn, 6.5% of revenue [S0]; the Hilton PIK2 build and NICE fit-out keep capex at that 6.5% for FY2026-27 before fading to 6.0%, rather than the 7.0% used before, which was above the last actual without a source.",
+      "basis": "FY2025 capex was IDR 163.9bn, 6.5% of revenue [S0], but the nine months to September 2026 already spent IDR 199.1bn, 7.8% of nine-month revenue, on township infrastructure and the Hilton PIK2 build [S0, S6], so FY2026 is set at the run-rate actually being spent rather than at last year's ratio. FY2027 steps back to 6.5% as the hotel completes, then 6.0%.",
       "sources": [
         "S0",
-        "S3"
+        "S3",
+        "S6"
       ],
       "engine_default": false
     },
@@ -2484,17 +2543,18 @@
       "label": "Effective tax rate",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.032,
-        "FY2027E": 0.032,
-        "FY2028E": 0.032,
-        "FY2029E": 0.032,
-        "FY2030E": 0.032
+        "FY2026E": 0.0458,
+        "FY2027E": 0.0458,
+        "FY2028E": 0.0458,
+        "FY2029E": 0.0458,
+        "FY2030E": 0.0458
       },
       "value": null,
-      "lt": 0.032,
-      "basis": "FY2025 tax was IDR 49.1bn on PBT of IDR 1,516.4bn, a 3.2% effective rate, and FY2024 was 1.3% [S0]; 9M2026 shows a nil tax charge [S0]. We use 3.2%, the last actual, rather than a 5% normalisation nobody has evidenced.",
+      "lt": 0.0458,
+      "basis": "FY2025 tax was IDR 49.1bn on PBT of IDR 1,516.4bn, a 3.2% effective rate, and FY2024 was 1.3% [S0]; the nine-month interim LK shows the final tax charge the pack omits: IDR 84.6bn of final tax plus IDR 0.2bn of income tax on pre-tax profit of IDR 1,850.6bn, a 4.6% all-in rate [S6 p.5]. We use 4.6%, the rate the company is actually paying in the current year, rather than the 3.2% the pack's income-tax-only line implies.",
       "sources": [
-        "S0"
+        "S0",
+        "S6"
       ],
       "engine_default": false
     },
@@ -2639,234 +2699,251 @@
       {
         "id": "C1",
         "severity": "FATAL",
-        "category": "assumption_realism",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "FY2026E gross profit of 1,789bn (revenue 2,795.4bn x 64% margin) is below the 2,030bn gross profit already reported for 9M2026, and FY2026E attributable profit of 1,535.2bn is below the 1,820bn reported for 9M2026 [S4]. 9M2025 net profit of 1,310bn was 89% of FY2025's 1,467bn, so the same seasonality implies FY2026 net profit of ~1,950-2,040bn. A fourth quarter with negative gross profit is not the most-likely case and is not justified anywhere.",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The RNAV marks 702 ha of inventory at 0.95x historical cost (IDR13,163bn), but inventory is carried at cost or NRV (S3 p.374) and the audited segment note (S3 p.101) leaves commercial land lots with about IDR1.17trn of revenue and IDR1.0trn of gross profit, an ~86% margin, implying sale prices of roughly 7x carrying cost. Applying the method card's 25-50% haircut to that market value, not to cost, puts the land at about 3.5-5x book. At 2x book the base target rises to about Rp2,760, equal to the Rp2,730 price, so the SELL flips. The stated reason for using book, that no independent appraisal exists, is also false (C9).",
         "response": "accepted",
-        "answer": "Rebuilt FY2026 from the nine-month actuals: revenue, cost of revenue and net profit for 9M2026 are now facts F17, F27 and F18, and FY2026 carries the reported 79pc development margin instead of 64pc, with a Q4 consistent with the small FY2025 handover quarter. FY2026 attributable profit is now above the 9M figure; the P/E, roll-forward and target were re-run."
+        "answer": "RNAV rebuilt from a realised-ASP market land value: segment revenue/cost for 2024-25 of 2,251.2/570.3 = 3.95x, 25% haircut on developed land, 50% on undeveloped, book on buildings under construction, giving IDR33,532bn = 2.42x book; the ladder nets advances, investment-property book and other net assets to 28,938.2 [S3 p.102, p.393]. Sensitivities at 1.5x/2x/2.5x/3x book are stated in the basis and section 4. Target 3,120, rating ADD."
       },
       {
         "id": "C2",
-        "severity": "FATAL",
-        "category": "valuation_method_fit",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
         "section": "4. Valuation",
-        "challenge": "The landbank_value of 13,000bn is described as roughly twice the audited inventory value of 6,909.5bn. S3 p.352 shows 6,909.5bn is only the current inventory line and that non-current undeveloped land is a further 6,910.8bn, for total land inventory of 13,820bn (368 ha under development plus 334 ha undeveloped, S3 p.244). The land is therefore marked at 0.94x book, not 1.9x, and the section 1 and 4 statements that the 1.9x already contains the raw-land haircut and that inventory is a fraction of the revenue the area has generated are both contradicted by the filing.",
+        "challenge": "The bull scenario target is Rp1,943, 29% BELOW the Rp2,730 price. A scenario set whose best case excludes the observed price assigns effectively zero probability to the market being right and is not a bull case; the +15% land shock and +8pp growth shock do not test the single largest upside, a land bank carried at cost and sold at roughly 7x cost. Section 5 says the re-rating risk is 'captured in the bull case', but the bull case is still below the current price.",
         "response": "accepted",
-        "answer": "Land is marked against the two audited inventory lines, current 6,909.5bn over 3,678,961 m2 and non-current undeveloped 6,910.8bn over 3,341,874 m2, i.e. 13,820.4bn for 702 ha, with a modest uplift on land in production and a raw-land haircut at the tight end of the method card band. The mark is now about book, not 1.9x; the 1.9x claim compared the value with the current-inventory line alone and is removed from sections 1 and 4."
+        "answer": "Bull rebuilt on the asset: land contribution x1.2 (about 2.9x audited book, still below the FY2025 realised multiple), sales growth +6pp and RNAV discount -5pp, with the bear mirroring all three exactly; the bull value of 3,717 is above the 2,730 price [S3 p.102]."
       },
       {
         "id": "C3",
         "severity": "MATERIAL",
-        "category": "valuation_method_fit",
-        "section": "4. Valuation",
-        "challenge": "The RNAV bridge deducts net debt, deducts minorities and adds associates but deducts no customer advances, although the property method card requires RNAV less advances. Advances were 9,546.8bn at FY2025, of which 8,410.8bn current [S3 p.400]. The 13,000bn land value covers roughly 390-433 ha at the stated 3.0m per sqm ASP, which necessarily includes land already sold against those advances, so the RNAV counts the same land twice: once as inventory value and once as cash already received.",
+        "category": "missing_bull_case",
+        "section": "1. Business description",
+        "challenge": "The report treats the 2025 capital increases into MAS (IDR2.63trn for 55.89% to 77.35%) and CGIC (IDR980bn for 55.89% to 78.46%) only as governance costs. These were fairness-reviewed off independent appraisals (KJPP SRR, S3 p.138-139) and are the best public evidence of the value of the underlying projects; the report never uses them to test the carrying value of the same assets.",
         "response": "accepted",
-        "answer": "The 9,546.8bn advance book is deducted explicitly inside the land contribution because the engine RNAV build has no advance line; the reduction is disclosed in section 4. RNAV now reconciles to audited equity attributable of 9,026.3bn plus the land revaluation, so land already sold is not counted twice and no value is credited for the unrecognised margin on the advance book."
+        "answer": "The MAS and CGIC capital increases are now used as valuation evidence: the December MAS injection of IDR2,000.9bn implies a whole-company value far above the company's IDR10,460.5bn of total assets, and CGIC's IDR2,870.0bn of assets sit behind a smaller injection; both were fairness-reviewed off a KJPP appraisal [S3 p.138-143, p.362]. The implied values are a cross-check, not a primary input, because the appraised figures are not published."
       },
       {
         "id": "C4",
         "severity": "MATERIAL",
-        "category": "missing_bull_case",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The report argues margins must compress, but the actuals show the opposite: 9M2026 gross profit of 2,030bn on revenue of 2,560bn is a 79.3% margin versus 66% in FY2025 and 64% in the model, because commercial land lots are 85% of presales [S2]. The higher-margin mix is accelerating, not fading, and the report never argues why that reverses.",
+        "category": "missing_bear_case",
+        "section": "5. Risks and monitoring",
+        "challenge": "The report omits the guidance history: the FY2024 annual report set a FY2025 marketing-sales target of Rp2.03trn (S5 p.28), the FY2025 report says the target was Rp508bn (S3 p.35 and p.46), and FY2025 sales of Rp430.2bn were 21% of the original plan. That is the strongest evidence on the durability of bulk land-lot demand and on management's forecasting credibility, and it is not discussed.",
         "response": "accepted",
-        "answer": "The 9M2026 gross margin of 79.3pc (gross profit 2,030bn on revenue 2,560bn, cost of revenue 519.6bn) is carried in FY2026, and the fade is sourced: to the FY2025 audited 66pc by FY2030 as built products take share, with residential and commercial-product segments earning far lower margins than land lots."
+        "answer": "Guidance history added with facts F50/F51: the FY2025 target of IDR2.03trn set in the FY2024 report, restated at IDR508bn, delivered IDR430.2bn, about a fifth of the original plan; the report now calls the IDR563bn FY2026 target an aspiration and explains how that constrains its use as a kill criterion [S5 p.28, S3 p.35, p.46]."
       },
       {
         "id": "C5",
         "severity": "MATERIAL",
-        "category": "missing_bull_case",
-        "section": "4. Valuation",
-        "challenge": "The recurring arm is assigned 419bn, which is exactly rental revenue of 35.5bn capitalised at 8.5% - gross rent treated as net operating income - while NICE (acquired January 2025 with IPO proceeds) and the Hilton PIK2 under construction are carried on the balance sheet and given no separate value. The method card requires a development asset to be worth at least its sourced sunk capex until a sourced project value exists.",
+        "category": "missing_bear_case",
+        "section": "5. Risks and monitoring",
+        "challenge": "The model's registry shows free float of 11.48% against the new 15% minimum, with a 12.5% step due 31 March 2027 (4.6 months away) and 15% by 31 March 2028, and marks the name non-compliant. The report notes the 11.5% float but not the deadline, the sell-down or dilution risk, the possible index exclusion, or the MSCI Standalone consultation (decision by 30 June 2027), and applies a 0.0% liquidity discount.",
         "response": "accepted",
-        "answer": "Investment properties are carried at audited book of 2,562.0bn (NICE, Menara Syariah, Hilton PIK Dua), not the 419bn the 8.5pc cap rate gives on gross rent; the excess is added inside the land contribution and the cap-rate value is kept only as a cross-check, so both assets are valued at least at sunk cost."
+        "answer": "The free-float deficiency and both deadlines are stated, with placement, sell-down and index-exclusion remedies; the MSCI Standalone consultation and the June 2027 decision are added as a dated risk [S7, S8]. The liquidity discount is 0.0% because the three-month average daily traded value of IDR9.15bn is above the highest floor in the house limits, and the report says so explicitly [S0]."
       },
       {
         "id": "C6",
         "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "5. Investment risks and scenario analysis",
-        "challenge": "The RNAV is 60% of the blend, yet no scenario shocks land value or ASP: the bear only adds 10 points to the discount and cuts presales growth by 8 points, giving 1,815, an 8.5% gap to base that is still above the report's own RNAV. The report admits it has not modelled a land-price shock, which leaves the dominant term untested and makes the probability weighting add nothing to the target.",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The model's presales line is fed by F1/F2, which are revenue (IDR2,503.6bn/2,249.0bn) with a revenue quote, not marketing sales (IDR430.2bn/2,114.6bn). The 20% presales growth is therefore a revenue-proxy growth rate and is below both the +40% 9M2026 marketing-sales run-rate (S2) and the +31% company target (S3 p.46), with no sourced reason for the 11-20pp haircut. Because marketing sales do not enter the revenue formula, the IDR563bn kill criterion cannot fire in the model.",
         "response": "accepted",
-        "answer": "Both scenarios now shock the land value through p.landbank_value, mirrored: bear 0.85x with a wider discount and slower sales, bull 1.15x with the reverse. The bear trigger is dated: marketing sales below the FY2025 level for successive quarters, or a related-party land sale below carrying value."
+        "answer": "F1/F2 are relabelled as total sales value recognised at handover, revenue-equivalent, not the marketing-sales KPI; FY2026 growth is sourced to nine-month revenue of IDR2,557.7bn rather than a haircut to the target, and the report says the KPI is monitored separately, with the kill criterion wired to the model's sales-value line plus the reported KPI [S6, S3, S2]."
       },
       {
         "id": "C7",
         "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "6. Governance and ownership",
-        "challenge": "Governance risk is understated. Note 11 [S3 p.400] shows 570.0bn of sales advances are from related parties, 23% of FY2025 revenue, not negligible. The 2025 capital increases into MAS (2.63trn) and CGIC (0.98trn) were related-party purchases totalling 3.6trn, about 34% of attributable equity, funded largely from listing proceeds. None of this is quantified as related-party flow against revenue or equity.",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The bear says the advance book unwinds without replacement, but the balance-sheet arithmetic implies new contracted value of about IDR944.6bn in 9M2026 (revenue 2,557.7 less the 1,613.1 fall in advances) and IDR2,113.8bn in FY2025, 2.1x and 4.9x the reported marketing sales. The report itself says the bulk line is not captured by the marketing-sales KPI, so a kill rule based on IDR430bn/IDR563bn cannot validate the bear case. The FY2025 basis also says 'revenue plus the 389.7bn fall', which is the reverse of the arithmetic that gives 2,113.8.",
         "response": "accepted",
-        "answer": "Quantified and classified in section 6: the 2025 MAS and CGIC capital increases were related-party purchases funded largely from listing proceeds and are a structure-class flag; related-party customer advances are an optics-class flag; trade receivables from related parties were negligible against revenue. Pledged shares, notation and auditor checks remain clean."
+        "answer": "Arithmetic corrected: collections equal revenue less the change in advances, so FY2025 collections were IDR2,113.9bn (2,503.6 minus 389.7), not revenue plus the fall; the gap to the IDR430.2bn KPI is instalments on contracts signed earlier, and both the bear case and the kill criterion are now stated on the contracted-value measure [S3 p.400]."
       },
       {
         "id": "C8",
         "severity": "MATERIAL",
-        "category": "assumption_realism",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The assumption that 80% of each year's contracted value is recognised in the year of contract is inconsistent with the advance book by an order of magnitude: under it the unrecognised balance should be about 20% of one year of contracts, around 0.5-0.6trn, whereas the reported balance is 9,546.8bn, roughly 3.8x annual revenue and implying a conversion rate near 25% a year.",
+        "category": "conservatism_audit",
+        "section": "4. Valuation",
+        "challenge": "Conservatism is stacked: land at 0.95x cost (C1); the full IDR7,933.8bn advance book is deducted while the report explicitly credits no value for the contracted margin, although the backlog is contractual; and FY2026 opex is held at the 2023-25 7.8% average against FY2025's 8.86% (SG&A IDR221.8bn/2,503.6bn), cutting about IDR29bn of cost. Individually small, but the first two move the rating, which the method card classes as FATAL.",
         "response": "accepted",
-        "answer": "recog_current cut from 80pc to 60pc and reconciled to the advance movement: revenue 2,503.6bn plus the 389.7bn fall in advances implies 2,113.8bn of new contracts, and the book turns about once every four years. Section 3 states the single-lag limit of the template and adds advance conversion as a monitored KPI."
+        "answer": "The stack is unwound: land now at a market value with the method card haircuts, the advance deduction retained because at market value it prevents double counting rather than subtracting the contracted margin twice, and opex held at the FY2025 actual of 8.86% in every year [S0, S3 p.400]."
       },
       {
         "id": "C9",
         "severity": "MATERIAL",
         "category": "evidence_and_citations",
         "section": "4. Valuation",
-        "challenge": "The P/BV argument is internally inconsistent: the P/BV leg applies a 0.73 peer multiple to 1H2026 book (10,566.1bn over 5,643m shares, 1,872 per share, giving 1,374) while the surrounding text measures the market at 1.8x using stale FY2025 book of 1,592 per share. On the book the leg actually uses, the shares trade at 1.55x, not 1.8x, and the premium to the peer median is 111%, not 145%.",
+        "challenge": "Section 4 states that the company discloses no independent appraisal of the land, only a fairness opinion on an affiliate transaction. S3 p.138-139 discloses KJPP Suwendho Rinaldy & Rekan's independent appraisal of the market value of CGIC property (proposal 250303.003, 3 March 2025) and KJPP Kusnanto fairness opinions. The statement is false and is the stated justification for marking land at book.",
         "response": "accepted",
-        "answer": "One book and one date throughout: the P/BV leg book of 10,566.1bn at 30 June 2026 is now the book used in the text, and the market multiple on that basis is 1.56x, not 1.8x, with the premium described as more than double rather than 145pc. The FY2025 book reference was removed."
+        "answer": "The false statement is removed. S3 p.138-141 records KJPP Suwendho Rinaldy & Rekan's appraisal, proposal dated 3 March 2025, of the CGIC and MAS property; the appraised values are not quantified in the report, so transaction-implied values are used as a cross-check and the report says why they are not a primary input [S3 p.138-143]."
       },
       {
         "id": "C10",
-        "severity": "MATERIAL",
-        "category": "conservatism_audit",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
         "section": "4. Valuation",
-        "challenge": "Conservatism is stacked without sources in a way that moves the target: land at 0.94x audited book and then a further 40% RNAV discount applies the same caution twice; terminal growth of 4% sits against a nominal GDP path of about 8.6% from the house deck; capex is 7.0% against a 6.5% actual; the tax rate is 5% against a 3.2% effective rate; and the Hilton is worth zero. No single item is fatal but together they bias the base case low, and only the payout ratio (10% against 2.1% actual) points the other way.",
+        "challenge": "The cost of equity is described as built from rf 7.4%, ERP 4.2%, CRP 2.5% and beta 0.90, which sums to about 13.5%; the 11.9% used only reproduces if the 1.62pp default spread is subtracted first (7.45 - 1.62 + 0.909 x 6.69 = 11.91%). A reader cannot tie the stated inputs to the number used to roll the target forward.",
         "response": "accepted",
-        "answer": "Each departure sourced or removed: land marked once at about book with a raw-land haircut and the 40pc discount read as the trading band, not a second haircut; terminal growth raised to 5pc against an 8.6pc nominal GDP path; capex cut to the 6.5pc last actual; tax cut to the 3.2pc effective rate; Hilton carried at book, not zero."
+        "answer": "The full build is now stated including the default-spread subtraction: risk-free 7.45% less 1.62pp, plus beta 0.91 times the equity risk premium of 4.23%, plus a country premium of 2.46%, giving 11.91%; the 13.5% figure omitted the deduction and double-counted sovereign risk, so the target keeps the model's 11.91% rather than an alternative [S0]."
       },
       {
         "id": "C11",
-        "severity": "MATERIAL",
-        "category": "valuation_method_fit",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
         "section": "4. Valuation",
-        "challenge": "The property method card's output contract requires a named discount catalyst with a date and the name's own five-year discount band. The report has neither: own history is described as unavailable because the company listed in January 2025, and the SELL depends on the shares reverting from a negative implied discount to a 40% RNAV discount with no dated catalyst. A call whose value is set by a mean-reversion with no observable band is not actionable.",
+        "challenge": "The params basis says developed inventory is marked +15% and raw land -25% 'giving IDR13,163.2bn', but that split gives IDR13,226.9bn (7,087.2 x 1.15 + 6,768.8 x 0.75); the ladder actually applies a flat 0.95x. The stated mark and the arithmetic do not agree.",
         "response": "accepted",
-        "answer": "A dated catalyst is named: the Hilton PIK Dua opening targeted for the second half of 2027, the FY2026 results in the first half of 2027 and the FY2026 marketing-sales print against the 563bn target. The 40pc discount is the tight end of the 40-70pc band for IDX township developers on the property method card, and section 4 states the band."
+        "answer": "The flat 0.95x ladder is gone and the basis now reconciles arithmetically: two-year realised multiple of about 4x, 25% haircut on developed land (2.9625x, IDR19,739bn), 50% on undeveloped (1.975x, IDR13,368bn), book on buildings under construction, total IDR33,532bn = 2.42x book, then the advance and net-asset ladder to 28,938.2 [S3 p.102, p.393]."
       },
       {
         "id": "C12",
-        "severity": "MATERIAL",
-        "category": "assumption_realism",
-        "section": "3. Financial analysis and forecasts",
-        "challenge": "The revenue path requires about 2.8trn of sales value in FY2026 rising to 4.4trn by FY2035, while the only disclosed sales KPI is marketing sales of 430.2bn in FY2025, 448bn in 9M2026 and a 2026 target of 563bn [S3 p.46, S2]. The model therefore assumes roughly 2.2trn a year of bulk land transactions that the KPI does not evidence, and there is no marketing-sales kill criterion as the method card requires.",
-        "response": "accepted",
-        "answer": "The bulk line is explicit and sourced: FY2025 new contracted value of 2,113.8bn is derived from the advance movement, and FY2024 marketing sales of 2,114.6bn included 1,488.9bn of commercial land lots against 343.5bn in FY2025. The marketing-sales target and the conversion rate are stated kill criteria, and the path without the bulk line is the bear case."
-      },
-      {
-        "id": "C13",
-        "severity": "MINOR",
-        "category": "evidence_and_citations",
-        "section": "5. Investment risks and scenario analysis",
-        "challenge": "Two numbers in the liquidity paragraph cannot be verified or are wrong by a factor of a thousand: three-month average daily turnover is stated as IDR9,947,642.95tn when the model carries 9,947,642,952 rupiah, about 9.95bn a day; and the Rp9,425 high used to support the de-rating appears in no source in the packet and is not in the report source.",
-        "response": "accepted",
-        "answer": "The turnover figure is removed rather than mis-scaled: section 5 now says turnover is thin for institutional positions and notes the previous figure was wrong by a factor of a thousand. The Rp9,425 high is deleted and no past price is used as evidence anywhere."
-      },
-      {
-        "id": "C14",
         "severity": "MINOR",
         "category": "bias_and_tone",
-        "section": "5. Investment risks and scenario analysis",
-        "challenge": "The drawdown from Rp9,425 to Rp2,900 is used as evidence that part of the de-rating has happened, but a past price is not a valuation input and the report offers no view on why the market paid 9,425 or what changed. Combined with a 12.1x P/E framed as expensive when the peer median in the same model is 12.6x, the tone leans bearish beyond what the numbers support.",
+        "section": "5. Risks and monitoring",
+        "challenge": "The prose still contains review artifacts: 'the earlier draft mis-scaled it by a factor of a thousand' and 'which is what the previous draft failed to do'. Separately, the scenario narratives overstate the shocks: the bull cites a bulk deal at FY2024 scale (Rp2.11trn) but shocks growth only +8pp, and the bear says plot demand stays at the 2025 trough while presales growth remains +12% in FY2026.",
         "response": "accepted",
-        "answer": "The price-history argument is removed and the multiple stated honestly: the shares trade at 10.7x FY2026E P/E against a peer median of 12.6x, i.e. at or below the peer median on the model own set, while P/BV is above it. The tension is presented as the call rather than as evidence of over-valuation."
+        "answer": "Draft references are removed from the prose; the scenario narratives now match their shocks exactly (land x0.8/x1.2, growth -6pp/+6pp, discount +5pp/-5pp), and the bear no longer describes a demand trough it does not model [S0, S3]."
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "Wrong rating statement on the page: section 5, first risk paragraph ends \"that is why the rating is ADD rather than BUY\", but the call is HOLD (target Rp2,816). The word is stale from the earlier ADD revision and contradicts the summary and section 4, which say HOLD rather than BUY.",
+        "response": "accepted",
+        "answer": "Section 5 now says the rating is HOLD rather than BUY; the stale ADD clause is gone. Swept the whole report: the closing paragraph said we would cut toward HOLD, which is stale for a HOLD call, and now reads SELL; every other rating sentence reads HOLD rather than BUY and matches {{val.rating}} at {{val.tp_final}}."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "Wrong number still open from QC Q7: the liquidity paragraph renders the three-month ADTV as IDR9,154,763,714.3bn, nine orders of magnitude too high, because mkt.adtv_3m_value_idr is formatted with the idrbn filter. The model value is IDR9,154,763,714.3 (IDR9.15bn), and the paragraph conclusion depends on the figure.",
+        "response": "accepted",
+        "answer": "The ADTV placeholder now uses the idrm million formatter, which renders IDR9,154.8m (the model value IDR9,154,763,714.3), not the idrbn suffix that printed a nine-orders-of-magnitude overstatement. The sentence is rewritten so the position limit reads as a quarter of that volume, a few billion rupiah a day, and the IDR9.15bn tape still clears the IDR2bn house turnover floor, so the 0.0% liquidity discount is unchanged."
       }
     ],
     "checklist": {
       "missing_bull_case": {
         "status": "issue",
-        "note": "The strongest bull evidence is absent: 9M2026 gross margin was 79.3% (GP 2,030 on revenue 2,560 [S4]) versus 64% in the model, and forward P/E on a realistic FY2026 profit is ~8.6x, not the 12.1x trailing multiple the report uses to argue the shares are priced for perfection."
+        "note": "The bull target of Rp1,943 is 29% below the Rp2,730 price, so no scenario admits the observed price; and the largest upside, a land bank carried at cost and sold at roughly 7x cost, is cut to a +15% land shock."
       },
       "missing_bear_case": {
         "status": "issue",
-        "note": "No scenario shocks land value, the term that carries 60% of the blend, so the bear case (1,815) is only 8.5% below base and still above the RNAV the report itself derives; and related-party flows (570bn of related-party sales advances, 3.6trn of related-party stake purchases) are described as negligible."
+        "note": "Omits the 2025 marketing-sales target cut from Rp2.03trn (S5 p.28) to Rp508bn (S3 p.35/p.46), with FY2025 sales 21% of the original plan, and the registry's 11.48% free float against the 12.5% (31 Mar 2027) and 15% (31 Mar 2028) deadlines."
       },
       "assumption_realism": {
         "status": "issue",
-        "note": "FY2026E GP of 1,789bn (2,795.4 x 64%) is below the 2,030bn already booked in 9M2026 and FY2026E NP of 1,535bn is below the 1,820bn 9M actual; 9M2025 was 89% of FY2025 NP, implying FY2026 NP of ~1,950-2,040bn. recog_current of 80% is also inconsistent with a 9,546.8bn advance book that equals 3.8x revenue."
+        "note": "The presales driver is fed by revenue (F1/F2 = 2,503.6/2,249.0) not marketing sales (430.2/2,114.6); 20% growth is below both the +40% 9M2026 run-rate and the +31% company target with no source; the KPI has no mechanical link to the P&L or the kill rule."
       },
       "evidence_and_citations": {
         "status": "issue",
-        "note": "The landbank basis is misdescribed against the filing (6,909.5bn is current inventory only; non-current undeveloped land is a further 6,910.8bn, S3 p.352/393), the 1.8x P/BV claim uses stale FY2025 book while the P/BV leg uses 1H2026 book (1.55x), and the Rp9,425 high and IDR9,947,642.95tn turnover are unsourced or unit-wrong."
+        "note": "Two load-bearing errors: 'no independent appraisal' contradicts KJPP SRR's market-value appraisal of CGIC property (S3 p.138-139), and the stated CoE inputs (rf 7.4, beta 0.90 x ERP 4.2 + CRP 2.5) imply about 13.5%, not the 11.9% used, because the 1.62pp default-spread deduction is omitted."
       },
       "valuation_method_fit": {
         "status": "issue",
-        "note": "The RNAV build deducts net debt, deducts minorities and adds associates but never deducts customer advances, which the property method card explicitly requires, and assigns only 419bn to the entire recurring arm while omitting other investments and prepaid tax; no dated discount catalyst or own-history discount band is given as the card's output contract requires."
+        "note": "RNAV is struck at 0.95x cost, not at appraised or market value with a stated haircut as the property method card requires; inventory is carried at cost or NRV (S3 p.374). The P/E leg uses FY2025 trailing EPS while the target is 12 months forward and the model's FY2026E EPS is 43% higher."
       },
       "bias_and_tone": {
         "status": "issue",
-        "note": "The prose says more than the evidence in three places: it calls the market priced above undiscounted RNAV when that RNAV is inflated by omitted advance liabilities, it leans on the 9,425-to-2,900 drawdown as valuation support, and it calls the earnings expensive on a trailing multiple that the company's own 9M run-rate already halves."
+        "note": "The rating is driven by one input, the land mark, not the operating thesis; the prose says the market is priced as if the option value were realised while the asset is carried at cost. Sections 5 and 6 still contain draft-artifact references to 'the earlier draft' and 'the previous draft'."
       },
       "consistency_with_sector_deck": {
         "status": "issue",
-        "note": "Peers CTRA and PWON are BUY on the same township method, and the published CTRA thesis is land at cost net of advances; CBDK's model does the opposite on both counts without reconciling why one industry yields BUY for peers and SELL here. The house macro deck is AVOID on INDO property and the report never states that it agrees."
+        "note": "Peer RNAV discounts in the comps run 0-72% with a median near 42%, so the 40% used is the tight end and not conservative; the base to which it is applied (land at cost) is not comparable with peers' appraised-value RNAVs, and the name has no own 5y band after a Jan-2025 listing."
       },
       "conservatism_audit": {
         "status": "issue",
-        "note": "Stacked and unsourced: land at 0.94x audited book then a further 40% RNAV discount (the same caution twice), terminal growth 4% against 8.6% nominal GDP, capex 7.0% against 6.5% actual, tax 5% against 3.2% actual, and Hilton PIK2 (opening 2H2027) valued at zero. Some of these move value; together they bias the base case low."
+        "note": "Stacked conservatisms: land at a flat 0.95x cost (not the claimed +15%/-25% split), the full IDR7,933.8bn advance book deducted with no credit for the contracted margin, presales growth 20% vs the 31% plan, and opex at 7.8% vs FY2025's 8.86%. The land mark alone moves the rating."
       },
       "calibration": {
-        "status": "issue",
-        "note": "The engine shows no BLOCK flags and a FY2025 EBITDA-margin gap of only -1.22pp, so mechanical calibration passes. The substantive calibration failure is that FY+1 does not reproduce the reported 9M2026 actuals at all: revenue is fine at 2,795 vs 2,560, but gross profit and net profit are both below nine months of actuals."
+        "status": "no_issue",
+        "note": "Both BLOCK flags are sourced: the +13.5pp EBITDA-margin step is the reported 9M2026 mix (79.7% gross margin on IDR2,557.7bn revenue, S6 p.5) and the fade returns to the 66.05% FY2025 actual (S3 p.18), not below it. Residual: FY2026E revenue implies Q4 of only about IDR298bn."
       }
     },
     "signoff": {
       "by": "SECTOR_LEAD_PROPERTIES_REAL_ESTATE",
-      "at": "2026-11-12T05:45:19+07:00",
+      "at": "2026-11-12T21:08:48+07:00",
       "verdict": "APPROVED",
-      "notes": "Summary and section 4 wording checked against the model: price Rp2,900 is above both the post-discount RNAV (Rp927) and the implied pre-discount RNAV (about Rp1,545), so the QC NOTE is a phrasing nit, not a contradiction. RNAV 927 primary at 60% weight; P/E 3,039 and P/B 1,374 disclosed as +228%/+48% to RNAV with reasons; target 1,582 gives SELL -44%. QC PASS, no owed items."
+      "notes": "Round-1 section-5 defects fixed: the risk paragraph now says HOLD rather than BUY and the liquidity paragraph renders ADTV as IDR9,154.8m. Round-2 QC FIX items checked and judged non-blocking review-record text: (Q1) the C3 answer note still says the MAS injection implies a value far above total assets, whereas the arithmetic is about IDR10.0trn, roughly 1.04x book and 4% below IDR10,460.5bn; report prose in sections 1 and 4 is correct (about book, a fraction of assets). (Q2) the section-4 CoE sentence reads beta x mature ERP plus CRP, but the rendered WACC table ties at display precision: 7.4 - 1.6 + 0.91 x (4.2 + 2.5) = 11.9%; the C10 answer note should say the levered beta is applied to ERP plus CRP. Both to be corrected at next revision; target impact about Rp4. Also noted, not blocking: 7,863 words against the house 500-3,500 range (QC Q5) and minority_pct 8% vs 7.0% actual (QC Q3, nil impact). Valuation, mirrored scenarios, target arithmetic (weighted 2,816, TR 4.4%) and comps consistency all check; no shared-input tilt in the industry batch."
     },
     "qc": {
       "by": "COVERAGE_QC",
-      "at": "2026-11-12T05:42:53+07:00",
+      "at": "2026-11-12T20:50:46+07:00",
       "verdict": "PASS",
-      "round": 1,
+      "round": 2,
       "bias": {
         "direction": "neutral",
-        "note": "FY2026 sits on 9M2026 actuals: revenue 2,855.5 vs 9M 2,550 (+11% yoy, S4), implying Q4 of 305bn against Q4-2025 of 207bn (FY2025 2,503.6 less 9M2025 2,297) - normal seasonality, not an unsourced decline; NP 1,968.9 > 9M 1,820. FY2026 79.3% gross margin is actual, the fade to 66% is audited FY2025 [S3 p.410]. Scenarios mirrored (-8/+8pp presales, land x0.85/1.15, discount +/-10pp), base 50%. No stacked conservatism found."
+        "note": "Base case anchors on the last actual and the 9M2026 LK: FY2026 dev gross margin 79.0% sits just below the 9M2026 79.7% [S6 p.5], opex is held at the FY2025 8.86% [S3], tax at the 9M2026 4.6% [S6], and land is marked at 2.42x book against the two-year realised 3.95x [S3 p.102]. Scenarios shock the same three drivers by mirrored amounts, base probability 50%. The only unsourced departures are small and conservative (minority 8% vs 7.0% actual; payout 10% vs 2-3% record, neutral to the target). No unsupported optimism found."
       },
       "recomputed": [
         {
-          "item": "FY2025 revenue",
+          "item": "FY2025A EBITDA",
+          "model": 1438.38,
+          "filing": 1438.37,
+          "source": "S3",
+          "ok": true
+        },
+        {
+          "item": "Net cash at 30 Sep 2026",
+          "model": 3435.0,
+          "filing": 3435.0,
+          "source": "S6",
+          "ok": true
+        },
+        {
+          "item": "FY2025A revenue",
           "model": 2503.64,
           "filing": 2503.64,
           "source": "S3",
           "ok": true
         },
         {
-          "item": "FY2025 gross profit",
-          "model": 1653.6,
-          "filing": 1653.6,
-          "source": "S3",
-          "ok": true
-        },
-        {
-          "item": "Audited land bank (current 6,909.5 + undeveloped 6,910.8)",
-          "model": 13129.1,
-          "filing": 13820.4,
-          "source": "S3",
-          "ok": true
-        },
-        {
-          "item": "FY2025 net cash",
-          "model": 2871.6,
-          "filing": 2871.6,
-          "source": "S3",
-          "ok": true
-        },
-        {
-          "item": "FY2026E revenue vs 9M2026 actual",
-          "model": 2855.5,
-          "filing": 2550.0,
-          "source": "S4",
+          "item": "Undiscounted RNAV per share",
+          "model": 4613.11,
+          "filing": 4613.11,
+          "source": "S6/S3",
           "ok": true
         }
       ],
       "findings": [
         {
           "id": "Q1",
-          "severity": "NOTE",
-          "area": "report_wording",
-          "finding": "Summary says the price is above the undiscounted RNAV per share; RNAV 8,714.5 / 5,643m shares = Rp1,544 before the 40% discount, so the statement is true but reads ambiguously.",
+          "severity": "FIX",
+          "area": "evidence_and_citations",
+          "finding": "C3 response note states the IDR2,000.9bn MAS injection implies a whole-company value far above IDR10,460.5bn of total assets; at 20.0% of enlarged capital it implies about IDR10.0trn, roughly 4% BELOW, and contradicts params_basis line 37 and report sections 1 and 4, which say the deal prices MAS at about book (1.04x acquired book).",
           "response": null,
           "answer": null
         },
         {
           "id": "Q2",
+          "severity": "FIX",
+          "area": "text_vs_numbers",
+          "finding": "C10 is still not tied: section 4 states rf 7.4% less 1.6pp plus beta 0.90 times ERP 4.2% plus CRP 2.5%, which sums to 12.08%, while the engine's 11.91% applies beta_levered 0.9092 to (ERP 4.23% plus CRP 2.46%). The stated build does not reproduce the CoE used to roll the target forward (about Rp4 impact, immaterial to the call).",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q3",
           "severity": "NOTE",
-          "area": "share_count",
-          "finding": "Assumption text cites 5,668.9m shares while the engine uses 5,643m (RNAV Rp1,544 per share); 0.5% difference, no target impact.",
+          "area": "assumption_realism",
+          "finding": "minority_pct is held at 8% against the FY2025 actual of 7.0% [S0] even though the 2025 MAS (55.89% to 77.35%) and CGIC (78.46%) capital increases raise parent ownership and should lower it; the basis gives no source for the 1pp wedge.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q4",
+          "severity": "NOTE",
+          "area": "text_vs_numbers",
+          "finding": "The EBITDA add-back uses only the IDR6.6bn G&A depreciation and omits the IDR32.4bn investment-property depreciation recognised in 2025; total-D&A FY2025 EBITDA is about IDR1,471bn (58.7% margin) versus model's IDR1,438bn.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q5",
+          "severity": "NOTE",
+          "area": "readability",
+          "finding": "Report is 7,863 words against the house 500-3,500 range for a results note (lint warning), 2.2x the ceiling.",
           "response": null,
           "answer": null
         }
@@ -2878,7 +2955,7 @@
           "id": "calibration.ebitda_margin",
           "severity": "BLOCK",
           "justified": true,
-          "message": "FY+1 ebitda margin moves +13.5pp from FY2025A: source the change",
+          "message": "FY+1 ebitda margin moves +12.5pp from FY2025A: source the change",
           "justification": "The step is the reported mix, not a forecast hope: 9M2026 gross profit of IDR 2,030bn on revenue of IDR 2,560bn is a 79.3% margin against 66% in FY2025 because commercial land lots, which carry no construction cost, are about 85% of presales [S4, S3 p.410, S2]. Holding FY2026 at the 9M2026 level is the most likely path; the fade back to 66% is sourced to the segment margins."
         },
         {
@@ -2887,13 +2964,6 @@
           "justified": true,
           "message": "a.dev_gross_margin moves -13.0pp from FY2026E to FY2035E: source the change or hold it",
           "justification": "The 13pp fade from FY2026E to FY2035E goes to the FY2025 audited 66% [S3 p.410], not below it: it reflects built products taking share again, with residential segment margin 41.1% and commercial products 57.3% in the FY2025 segment note [S3 p.101]. No unsourced compression below the last actual."
-        },
-        {
-          "id": "extreme_call",
-          "severity": "BLOCK",
-          "justified": true,
-          "message": "expected return -44%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
-          "justification": "Two sourced drivers produce the -44%: (1) the RNAV, struck at 0.95x the audited inventory of IDR 13,820.4bn less the IDR 9,546.8bn advance book, gives a per-share value the IDR 2,900 price sits well above [S3 p.393-394, p.400]; (2) P/BV of 1.55x on audited book with marketing sales of IDR 448bn in 9M2026 against revenue of IDR 2,560bn, i.e. the P&L is running on a shrinking backlog [S2, S4]. The reverse DCF is not available because the price sits outside the bracket."
         }
       ],
       "calibration": {
@@ -2905,8 +2975,8 @@
         "ebitda_model": null,
         "gap_pct": null,
         "actual": 0.5745143005436802,
-        "model": 0.709639680427647,
-        "gap_pp": 13.512537988396678
+        "model": 0.699371680427647,
+        "gap_pp": 12.485737988396671
       }
     }
   },
@@ -2917,6 +2987,13 @@
       "type": "initiation",
       "rating": "SELL",
       "tp": 1582
+    },
+    {
+      "version": 2,
+      "date": "2026-11-12",
+      "type": "results",
+      "rating": "HOLD",
+      "tp": 2816
     }
   ],
   "news": [
