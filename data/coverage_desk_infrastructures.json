@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "asof": "2026-11-13T23:55:25+07:00",
+  "asof": "2026-11-14T01:02:28+07:00",
   "desk": "INFRASTRUCTURES",
   "name": "Infrastructures",
   "lead": "Tama",
@@ -13,7 +13,7 @@
     "CONSTRUCTION"
   ],
   "universe": 67,
-  "published": 10,
+  "published": 11,
   "rows": [
     {
       "ticker": "ACST.JK",
@@ -113,22 +113,22 @@
       "name": "PT Bali Towerindo Sentra Tbk",
       "desk": "INFRASTRUCTURES",
       "industry": "TOWERS",
-      "stage": "revision",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "HOLD",
+      "tp": 1182,
       "price": 1200.0,
-      "tr_pct": null,
+      "tr_pct": 0.43,
       "mcap_idr": 4721511000000.0,
       "adtv_idr": 46738294.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": false,
+      "last_update": "2026-11-14",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": true,
+      "suspended": false
     },
     {
       "ticker": "BDKR.JK",
@@ -458,7 +458,7 @@
       "name": "PT Inti Bangun Sejahtera Tbk",
       "desk": "INFRASTRUCTURES",
       "industry": "TOWERS",
-      "stage": "qc",
+      "stage": "parked",
       "published": false,
       "stale": false,
       "rating": null,
@@ -1079,7 +1079,7 @@
       "name": "PT Pertamina Geothermal Energy Tbk",
       "desk": "INFRASTRUCTURES",
       "industry": "POWER_UTILITIES",
-      "stage": "published",
+      "stage": "qc",
       "published": true,
       "stale": false,
       "rating": "BUY",
@@ -1091,7 +1091,7 @@
       "investable": true,
       "last_update": "2026-11-09",
       "version": 1,
-      "report_type": "initiation",
+      "report_type": "update",
       "doc": "fund record",
       "konglo": false,
       "suspended": false
@@ -1557,6 +1557,6 @@
       "suspended": null
     }
   ],
-  "digest": "# INFRASTRUCTURES \u2014 sector digest, ISO week 2026-W45\n\n**Coverage changes.** No Infrastructures publication moved this week. CDIA remains the desk's only live name: REDUCE, target Rp287 against the 29 October close of Rp362, -20.5% [CDIA report]. BREN stays parked after two QC failures and the 1 November queue close, with no rating or target [fund record]. The 5 November queue refresh re-listed 65 initiations across the five industries, none started [fund record]. MTRA, one of them, is delisted on 10 November [triage 3 Nov].\n\n**Deck moves.** None, because none exists. No Infrastructures deck is built in fund record \u2014 only macro, oil, metals, agri, coal and konglo \u2014 so there is no sector spot-versus-forecast gap; the industries read only macro inputs. The macro deck refreshed USD/IDR spot to 18,003.5 on 6 November against an FY2027E path of 18,350, 1.9% below forecast [macro deck, usd_idr]. Building the sector decks remains the gate on 62 queued names.\n\n**Material news.** PGEO reported record nine-month production of 4,114 GWh, is accelerating a 105 MW geothermal project toward 1 GW by 2028, gave dividend guidance and ruled out a buyback, preferring a rights issue or divestment to lift free float from 11.2% to 12.5% by March 2027 [triage 4 Nov]. WIKA's new contracts reached Rp9.78trn to September, up 57.9%, while its nine-month net loss narrowed to Rp1.53trn [triage 1, 4 Nov]. JSMR revenue rose 7.9% to Rp15.6trn; TOWR revenue grew 14.18%; MTEL profit was pressed by operating costs [triage 31 Oct, 6 Nov]. META declared an interim dividend of Rp60.64bn, Rp3.5 a share, an estimated 1.47% yield [triage 7 Nov]. DOOH agreed to buy 6.68bn INET shares for Rp2.005trn; PORT and TOTL declared Rp100.25bn and Rp136.4bn interim dividends [triage 4-6 Nov]. ARKO was suspended; BREN left the IHSG on 2 November with OJK administrative sanctions, no criminal case [triage 2, 6 Nov].\n\n**What to watch.** The 10 November MTRA delisting; whether ARKO's suspension lifts; PGEO's free-float route and the 14 geothermal working areas on tender; TLKM, EXCL and ISAT Q3 follow-through; and CDIA's refinancing calendar into the March 2027 float step.\n\n*Research only; not a recommendation to act.*",
+  "digest": "# INFRASTRUCTURES \u2014 sector digest, ISO week 2026-W46\n\n**Coverage changes.** Ten names published, mostly initiations. TELCO: ISAT BUY Rp4,371 (+214% on Rp1,425) [ISAT report]; EXCL BUY Rp3,464 (+132% on Rp1,495) [EXCL report]; MORA SELL Rp1,000 (-37% on Rp1,595) [MORA report]. POWER_UTILITIES: PGEO BUY Rp1,368 (+54% on Rp930) [PGEO report]; TGRA SELL Rp10 (-64% on Rp27) [TGRA report]; CDIA's results note cut the REDUCE target to Rp260 from Rp287 on a rebuilt 30 September bridge [CDIA report]. TOWERS: TOWR BUY Rp728 (+101% on Rp370) [TOWR report]; CENT SELL Rp29 (-56% on Rp65) [CENT report]. CONSTRUCTION: BUKK BUY Rp3,215 (+302% on Rp800 \u2014 an outlier flagged for review) [BUKK report]; PKPK SELL Rp1,702 (-72% on Rp6,125) [PKPK report]. No TOLL_ROADS publication.\n\n**Deck moves.** None. The desk still has no Industry deck, so its models read only the macro deck, reviewed 2026-11-07 and unchanged: USD/IDR spot Rp18,080 (onshore close 23 October), DXY 103.233, BI-Rate 5.75%, CPI 3.28% yoy, GDP 5.29% [macro deck]. The FY2027E path holds at USD/IDR 18,350, DXY 102.25 and BI-Rate 5.75% flat; `lt_escalation: ppp` carries the rupiah's inflation-gap drift beyond FY2029E.\n\n**Material news.** PGEO committed to lift free float from 11.2% to the 12.5% minimum by March 2027 [triage dd7dd7012ffc4640]. ADHI was among seven issuers fined by OJK for affiliated-transaction breaches [triage 093f4d77c7d0049e]. PORT declared a Rp100.25bn interim dividend and TOTL Rp40 a share [triage d0735314b6d427c7, 320c81cf7dc346d5]. Komdigi passed Telkomsel, Indosat and XLSMART through 700 MHz and 2.6 GHz spectrum selection, auction set for 7 July 2026 [triage 3c7cbf341a4faab0]. MTEL and JSMR were removed from the MSCI Global Small Cap Indexes [triage ce6fdb9748402de8]. BREN was named in OJK's DSSA/CUAN share-trading violator list [triage 2c8818cf4f2c5944].\n\n**What to watch.** PGEO's route to the March 2027 float; CDIA's refinancing calendar; the 7 July spectrum auction; toll-road November earnings; OJK's next step on BREN.\n\n*Research only; not a recommendation to act.*",
   "digest_file": "fund record"
 }
