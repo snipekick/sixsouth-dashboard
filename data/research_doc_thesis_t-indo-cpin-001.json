@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-CPIN-001",
+  "title": "Charoen Pokphand Indonesia (CPIN.JK)",
+  "meta": {
+    "id": "T-INDO-CPIN-001",
+    "book": "INDO",
+    "ticker": "CPIN.JK",
+    "name": "Charoen Pokphand Indonesia",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "washout_rebound",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-13T13:22:52+07:00",
+    "drafted": "2026-11-13T13:22:52+07:00",
+    "judged": "2026-11-13T15:02:29+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 2200.0,
+    "target": 3480.0,
+    "kill": 1800.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "FCFF DCF at WACC 12%/g 4% (Rp3,478), cross-checked on mid-cycle NOPAT/12% (Rp3,402)",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.45,
+    "up_pct": 58.18,
+    "p_down": 0.55,
+    "down_pct": -18.18,
+    "net_div_yield_pct_pa": 10.09,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 21.99,
+    "horizon_years": 1.5,
+    "carry_pct": 15.13,
+    "kelly_full_pct": 158.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.45,
+    "source": "the base-rate library washout_rebound",
+    "library": {
+      "rate": 0.45,
+      "base_up_pct": 50.0,
+      "base_down_pct": -25.0,
+      "horizon_y": 1.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1800.0,
+      "action": "exit_full",
+      "note": "Q2 run-rate value (EBIT 6.2% at 13% = Rp1,836-1,842) - the falsification level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "FY2026 audited EBIT margin 20y"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.09,
+      "action": "review",
+      "name": "annual_ebit_margin",
+      "source": "CPIN audited FY LK (IDX keterbukaan)"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 0.0,
+      "action": "review",
+      "name": "doc_price_ceiling_applied_to_live_bird",
+      "source": "Bapanas circulars (S11 series)"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        67478.0,
+        70705.0,
+        81700.0,
+        87419.0,
+        93101.0
+      ],
+      "ebit": [
+        5987.4,
+        8133.1,
+        9330.0,
+        9500.0,
+        10240.0
+      ],
+      "net_income": [
+        3712.9,
+        5643.9,
+        6958.0,
+        7111.0,
+        7703.0
+      ],
+      "eps": [
+        226.4,
+        344.2,
+        424.3,
+        433.7,
+        469.8
+      ],
+      "dps": [
+        108.0,
+        180.0,
+        221.9,
+        226.8,
+        245.7
+      ]
+    },
+    "valuation": {
+      "method": "FCFF DCF 2026-33, WACC 12% (pinned IDR 11-13% band), terminal g 4%, excess returns fading to cost of capital by 2033; cross-check on mid-cycle earnings power",
+      "bear": {
+        "value": 2250.0,
+        "basis": "Trough-margin falsification: EBIT 7.6% (FY2023 6.3%/FY2024 8.9% average, dossier ratios) on FY2026E revenue 81,700 = 6,209, NOPAT 4,812 capitalised at 13% = Rp2,257 -> 2,250"
+      },
+      "base": {
+        "value": 3480.0,
+        "basis": "DCF: PV 24,732 + PV(TV 85,443) = EV 59,240 less net debt 2,201 = IDR 56,707bn / 16,398m = Rp3,478; mid-cycle NOPAT/12% = Rp3,402"
+      },
+      "bull": {
+        "value": 5380.0,
+        "basis": "DCF at WACC 11%/g 4.5%, EBIT margin to 12.5% and growth 8%: EV 90,448 less net debt = Rp5,382"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-13T13:22:52+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-13T14:12:48+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T14:31:52+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-13T14:53:34+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-13T15:02:29+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "**Model (IDR bn).** 9M2026 net sales 60,200, attributable profit 5,180 (S2, F1, F12). Q4 at +7% on Q4-2025's 20,100 (FY2025 70,705 less 9M 50,600) \u2192 FY2026E revenue 81,700, EBIT 9,330, PBT 8,978 (interest 440, income 88), tax 22.5% \u2192 NI 6,958, EPS 424, DPS 222 at the 52.3% payout (S5, F22). FY2027E revenue +7% to 87,419, EBIT 9,500: corn is Rp7,800\u20138,000/kg (S12) against a Rp5,800/kg reference (S11, F36), feed rose Rp150\u2013300/kg in October (S12), and only 60% passes through with a lag (fund record link1_pass). FY2028E 93,101 / 10,240 / 470.\n\n**D&A (idea card Q3).** IDR18,060bn PPE (S0) against a Rp310bn charge is a 58-year life \u2014 plausible only if land dominates, which the archive cannot confirm. The house restatement to 1.53% (Rp1,287bn) is the opposite error: D&A already sits inside the pack's COGS (EBITDA = EBIT + D&A, dossier), so raising it without cutting EBIT adds 977bn straight to FCFF. \u00b1Rp1,000bn moves the base ~4%: the open item is the PPE note, not the cash flow.\n\n**Valuation.** Reinvestment 28% of NOPAT at ROIIC 18.7% (7,231/38,581) = 5.2% against 6.5% modelled \u2014 growth bought, not declared; excess returns fade to the 12% cost of capital by 2033. EV 59,240 less net debt 2,201 = **Rp3,478** = 8.0x FY2027E EPS, 6.0x EBITDA; implied exit EV/EBIT 6.2x against 4.5x at the Rp2,460 tape \u2014 the target does assume re-rating, stated not hidden. Cross-check mid-cycle EBIT 8,638 \u2192 Rp3,402. Owner earnings FY2025: NI 5,644 + D&A 310 \u2212 \u0394NWC 2,364 \u2212 capex 1,771 = 1,819; reported FCF 4,003, the gap being payables, not accruals. Sensitivity: WACC 11/13% = 4,019/3,059; g 3/4% = 3,227/3,478. **Entry 2,390** is the highest price at which the probability-weighted EV clears a 14.5%/yr hurdle over 1.5y (22.58% total): 0.45\u00d7(45.61 + 9.3\u00d71.5) + 0.55\u00d7(\u22125.86) \u2212 1.0 = 22.58%. up/|down| 7.78 vs library 2.00, own-Kelly 5.62, library 0.70 \u2014 the ratio is wide because the kill is the trough value only 5.9% below entry, not a stop-loss; on a two-band ARB fill (Rp1,270) own-Kelly falls to ~0.02, so size on the gap-adjusted leg."
+    },
+    {
+      "heading": "Market microstructure & liquidity",
+      "detail": null,
+      "markdown": "Last close Rp2,460 (2026-11-09, `research_prices` weekly); the designated `the price snapshot` carries no CPIN.JK entry, and the house datapack marks Rp2,370 (2026-11-04). **ADV missing: fail-closed** \u2014 `the liquidity feed` has no CPIN.JK line, so no 30-day value traded and no 20%-ADV days-to-exit can be computed; `the sizing engine` caps liquidity at zero and no ticket can be staged until the feed refreshes. For context only, the house 3-month ADTV of Rp96.2bn would make a 5%-NAV position (Rp765m on Rp15.29bn NAV) ~0.04 day, so the gate that fails is the data, not the depth. Ownership: 55.53% Jiaravanon family (F23), 38.49% reported public (F24), but the IDX registry free float is 15.41%, insiders 71.51%, institutions 15.74% (datapack, 2026-11-04); the lower registry float binds. ARB under `the fund rules idx_microstructure`: Rp2,390-2,460 sits in the >Rp500-5,000 bucket, \u00b125% daily band, Rp10 tick; a kill exit at 2,250 fills one band at Rp1,690 and two at Rp1,270. Flows stale: `fund record` is empty and the book regime line is STALE, so no flow number is estimated. The Rp2,460 tape is 2.9% above the Rp2,390 entry, so the limit **waits as a price trigger**; at Rp2,460 EV is 19.05% over 1.5y (12.3%/yr), below the 14.5% hurdle, while the 4-Nov pack price of Rp2,370 was inside it (23.61%, 15.2%/yr)."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House v3 (12-Nov) is BUY, target Rp5,240 (engine 5,253: 50% base 5,108 / 25% bear 3,967 / 25% bull 6,829), DCF 4,383. My FY26-28E revenue is ~3% lower, FY27E EBIT 9% lower (9,500 vs 10,445): I charge a FY27 margin give-back (10.9% vs 11.6%) because corn is Rp7,800-8,000 (S12/F39) against Rp5,800 (S11/F36) and only 60% passes. House now holds FY26/27 gross margin flat at 19.95% on identical cost drivers \u2014 its fix for the card's calibration flag \u2014 and I do not adopt the flat path. I use S12/F39 only; S2 has no corn price, so the card's S2 claim is not repeated. On D&A, the engine default is 0.49% (411bn); the house's 1.53% (1,287bn) adds ~977bn to FCFF without cutting EBIT, so I keep 310bn and flag the PPE note. My 3,480 target and 2,250 kill sit below the house bear; I do not adopt its 10.6x EV/EBITDA cross-check."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "Market narrative from memory: a family-controlled integrator whose profit is a corn derivative, paid for feed spread, never for franchise."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** FY2026 is a corn gift that reverses \u2014 Q2's 6.2% EBIT margin is the true run-rate \u2014 so at Rp2,460 the tape pays 5.8x FY2026E EPS and 4.4x EV/EBITDA, a trough multiple near the Rp2,370 52-week low.\n**Why wrong:** COGS grew 16.7% while sales grew 19.0% (S2, F1, F2, F10): pass-through works; the DOC ceiling hits 5.7% of 9M sales (F6/F1), not feed or broiler; net debt/EBITDA 0.26x (dossier) leaves no forced-seller balance sheet. Our base 3,480 is 8.0x FY2027E EPS / 6.0x EV/EBITDA \u2014 a re-rating to 6.2x EV/EBIT from 4.5x at the tape, far below the house's 10.6x EV/EBITDA \u2014 and our FY2027E EBIT margin (10.9%) is below the house's 11.6%, so no house optimism is embedded. Flows stale (`fund record` `{}`): foreign capitulation is unverified, so p_up stays at the 0.45 prior.\n**What proves us wrong:** audited FY2026 EBIT margin below 9%, or reference pricing extending from DOC to live birds, where Rp25,000/kg already exists (S11, F35)."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, each citing a dossier/filing line",
+      "markdown": "1. Q2-2026 EBIT fell to 1,208 from Q1's 3,435 \u2014 6.2% vs 17.2% margin (dossier quarters); the 9M recovery is one quarter.\n2. Q3-2026 profit is implied at 1,472 (9M 5,180 less H1 3,708, F12; dossier quarters), a 7.6% net margin against Q1's 12.9%.\n3. Corn is Rp7,800\u20138,000/kg (S12) against a Rp5,800/kg HET (S11, F36): the cost push lands after the reported period.\n4. The DOC ceiling fell to Rp6,500\u20137,000 farm gate from Rp7,000 farm / Rp11,000 loco pabrik (S11, F32\u2013F34), capping a segment worth Rp3,440bn (S2, F6).\n5. NWC rose 13,742\u219216,106 (+17.2%) on revenue +4.8% in FY2025 (dossier)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Mid-2028, down 30%: corn holds above Rp8,000/kg, reference pricing spreads to live birds, 6% EBIT margins become the run-rate, my 2027\u201328 EBIT is 25% high. The kill fills one to two ARB bands below 2,250 on a 15.4% registry free float (datapack 2026-11-04; reported public 38.49%, F24)."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "Accruals (NI\u2212CFO)/average assets: FY2023 \u22122.0%, FY2024 \u22121.4%, FY2025 \u22120.3% (CFO = FCF + capex, dossier cash-flow table) \u2014 negative, clean. Cash conversion 1.36x\u21921.16x\u21921.02x: weakening, above 1. IDX regime: no *pemantauan khusus*, B/E/L/M/S notation or PSAK 16 revaluation in S2/S5/S7 \u2014 none found, checked; Q1\u2013Q3 unaudited, FY2025 audited is the anchor. Related party: Rp430.98bn of breeding assets from affiliate PT Satwa Utama Raya (S6, F30), 0.6% of revenue. Structure: 55.53% family (F23), 38.49% public (F24); no rights issue or buyback since June 2026. All optics-class, no manipulation-class flag. Clean, so the archetype's first condition holds; the second (forced selling, not impairment) is a Phase-2 flow test \u2014 returns (ROE 16.5%) and solvency are unimpaired."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check.** FY25 revenue 70,705.0, EBIT 8,133.1, net debt 2,201.4, shares 16,398m \u2014 dossier-matched. The 9M2026 anchor (sales 60,200, profit 5,180) is absent from the dossier; S2/F1/F12 only, unverified. D&A 310 is not dossier-derivable: EBITDA\u2212EBIT = 388.9 FY25 / 276.8 FY24; the \"58-year life\" is 46 years. [MATERIAL]\n2. **Estimates.** Widest bar: FY27 EBIT margin 10.9%. A 1.9pp miss to 9.0% (its own review trigger) gives EV 50,815, equity Rp2,965 (\u221215%); entry EV ~12.9%, under the 14.5% hurdle \u2014 fragile, single-assumption dependency. [MATERIAL]\n3. **Dividend.** 9.3% = DPS 222 at 52.3% payout. Dossier cash dividends FY25 = 1,771 = Rp108/sh, 31.4% of NI; at that payout yield is 5.6% and entry EV falls to 20.1%, below the 22.5% hurdle (6.3pp of 22.58%). [MATERIAL]\n4. **Variant perception.** The mispricing is a 4.5x\u21926.2x EV/EBIT re-rating of a family-controlled, ceiling-capped, 15.4%-float processor. At constant 4.5x, FY27 EBIT 9,500 = Rp2,473: zero price return; all return is multiple expansion while the DCF fades ROIC to WACC (method card \u00a74). [MATERIAL]\n5. **Base rate/sleeve.** washout_rebound 0.45/n60/1.5y keyed right; p_up at prior honest. But down \u22125.86% takes the prior's probability, not its payoff: at base_down \u221225% entry EV is 12.1%. Drawdown \u221248.9%, clean accruals qualify; foreign capitulation unverified (fund record `{}`, regime stale). Sleeve is COVERAGE, not WASHOUT; per-sleeve rates known-missing. [MATERIAL]\n6. **Sizing/kill.** 2,250 < 2,390 < 3,480 is ordered, but the kill is a price stop, not falsification. A fired kill fills 1,690/1,270 (one/two ARB bands); ev_math books \u22125.86%. ADV absent from the liquidity feed \u2014 fail-closed: no days-to-exit, no ticket. [FATAL]\n7. **New fact.** research_prices CPIN.JK, 53 weekly closes to 2026-11-09: \u03c3 5.37%, so 2,250 sits 1.09\u03c3 below entry \u2014 ~80% touch over 78 weeks (~90% driftless); it fires on noise before the March-2027 audit. Tape 2,460, +4.7% off 2,350: a 2,390 limit chases the bounce. [MATERIAL]\n8. **Pre-mortem steelman.** They hedge operational failure, not \"nothing breaks and it still doesn't re-rate.\" 55.53% family/15.41% float = no forced buyer, no incentive to close the discount; 4.5x can persist for years while the cash dividend (31%, not 52%) disappoints. [MATERIAL]\n9. **Anti-gaming.** One draft stamp 13:22:52 = estimates_committed_at, untracked. \"Committed before any market number\" is unverifiable \u2014 the 11-04 datapack, 11-09 close and 11-12 house target predate it. No provable retro-edit. [MINOR]\n**Stop objecting:** Rp2,200 limit, kill re-set ~Rp1,800 (6.2% margin = Rp1,836, \u221223%; quarter-Kelly ~4%, not zero). At 2,390 with a 2,250 stop, both fail.\n\n**Verdict: MAJOR_REVISION.** A 5.9% price stop on a stock with 5.4% weekly volatility is not a falsification level \u2014 it is an ~80% chance of being shaken out of a thesis you say is worth 46% more."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **Fact-check** \u2014 conceded: the life is 46y, not 58; D&A 310 is derived (FY25 EBITDA\u2212EBIT 388.9), not a dossier line; the 9M anchor stays S2/F1/F12 and flagged unverified. Committed model unchanged.\n2. **Estimates** \u2014 conceded as fragility, absorbed by the entry cut: the Bear's own 9.0% FY27-margin case (equity 2,965) is still +34.8% from 2,200.\n3. **Dividend** \u2014 defended: dossier 1,771 = Rp108 = FY2024 DPS (model dps 2024A) paid in FY2025, not FY2025 declared; FY25 180/344 = 52.3%, so the payout is evidenced. Same DPS 222 is re-read at the lower entry (10.09%).\n4. **Variant perception** \u2014 partly conceded: 3,480 still implies 6.2x EV/EBIT vs 4.5x, but at 2,200 the return no longer needs it \u2014 constant 4.5x on FY27 EBIT 9,500 = 2,473 (+12.4%) plus carry.\n5. **Base rate/sleeve** \u2014 p_up held at the 0.45 prior, no uplift without flows; down_pct widened to \u221218.18 at the re-set kill; sleeve COVERAGE noted.\n6. **Sizing/kill (FATAL)** \u2014 conceded: 1,800 is the Q2 6.2% run-rate value (Rp1,836\u20131,842), a falsification level, not a stop. ARB fills (\u221238.6%/\u221254.0%) stay in the pre-mortem and gap-adjusted sizing leg; ev_math reads the levels.\n7. **New fact** \u2014 conceded: 2,250 at 1.09\u03c3 was noise; 1,800 sits 3.4 weekly \u03c3 below 2,200, and entry is 10.6% under the 2,460 tape, so no chase.\n8. **Steelman** \u2014 conceded in part: family control caps the re-rating, so entry no longer pays for it; +12.4% price plus carry clears the hurdle without a multiple move.\n9. **Anti-gaming** \u2014 conceded MINOR: a single untracked draft stamp cannot prove ordering; a process defect, not a valuation one."
+    },
+    {
+      "heading": "Revision",
+      "detail": "Re-attack (revision round 1)",
+      "markdown": "1. **Fact-check.** Revenue 70,705.0, EBIT 8,133.1, net debt 2,201.4 (6,662.1\u22124,460.7), shares 16,398m tie. The 9M anchor and NWC series (13,742\u219216,106) are S2-only \u2014 the dossier has no working-capital lines; D&A 310 conceded. [MINOR]\n2. **FATAL answered.** 1,800 is the 6.2%-margin trough value, 3.6 weekly \u03c3 below 2,200 (\u03c3 5.64%, 57 closes), not the 1.09\u03c3 noise stop \u2014 conceded, implemented. Second limb stands: `the liquidity feed` has no CPIN.JK line, no ticket. [MINOR]\n3. **1,800 is a trough, not rate-invariant falsification.** It capitalises 6.2% at 13%; at 14% it is ~1,700, and `the base-rate library` (fr_duration_carry) has Indonesia tightening through 2026, BI 5.75% \u2014 a rate de-rating hits 1,800 with margins intact and fires exit_full. On the house D&A (1,287 vs 310) the trough EBIT is ~1.1pp lower, value ~Rp1,480-1,680: 1,800 is the floor's optimistic end. The D&A open item cannot defend the base and be exempt from the kill. [MATERIAL]\n4. **ARB gap not in ev_math.** \u221218.18% is a level; the pre-mortem books \u221238.6%/\u221254.0%. EV then 10.8% (7.1%/yr) and 2.3%; quarter-Kelly 2.1% and zero against 6.9%. \"Gap-adjusted sizing leg\" is asserted; `sizing` is null. [MATERIAL]\n5. **Prior does not fit.** washout_rebound requires foreign-outflow extreme; `fund record` is `{}`, regime STALE. The name is \u221252% off 5,150, outside the prior's 25-40% window. At p 0.40 EV is 17.4% (11.5%/yr). 0.45 is an upper bound. [MATERIAL]\n6. **Entry executable only into weakness.** Tape 2,460; 2,200 is \u221210.6% (1.9\u03c3), 82% driftless touch over 78 weeks, 6.4% below the 52-week low 2,350 (thesis says 2,370). Driftless P(target before kill from 2,200) = 0.31 vs 0.45. `valid_until: null`. [MATERIAL]\n7. **Arithmetic/labels/stale body.** 21.99%/1.5y is 14.17%/yr, 0.33pp under the hurdle; clearing entry at p 0.45 is Rp2,190. DCF \"PV(TV 85,443)\" is undiscounted (PV 34,508; only then EV 59,240). Body still says \"Entry 2,390\", \"kill at 2,250 fills 1,690/1,270\". [MINOR]\n8. **New fact.** Capex 1,771 vs model D&A 310 = 5.7x (4.6x on the pack's 388.9; FY2023 13.3x, dossier): assets are replaced far above the charge \u2014 the PPE note, and it undercuts EBIT margin as the falsification metric. [MINOR]\n\n**Stop objecting:** Rp2,200, the price I named; the residual is size, not price \u2014 on the 0.40-prior/one-band-gap leg (~2% NAV), not 6.9%. Above 2,200 I object again.\n\n**Verdict: SURVIVES_WITH_SCARS.** The revision built the trade I asked for and exposed the real problem: at Rp2,200 it needs 0.45 to be exactly true, and the one condition that makes it true \u2014 foreign capitulation \u2014 is the one thing this book cannot see."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**PASS_REDUCED \u2014 size_multiplier 0.25.** Applying the standing correction: the ledger's 35-KILL/0-fill record is the underperformance, so I pass a positive-EV thesis at honest levels and let uncertainty size it rather than spend the kill cooldown on a name that cleared the screen.\n\n1. **Process \u2014 clean.** Lint passes; stage chain monotonic (draft\u2192attacked\u2192revision\u2192re-attacked), Bear verbatim, no gamed ordering. The FATAL (stop-as-falsification) is answered: 1,800 is the 6.2%-margin trough value, not a 5.9% noise stop.\n2. **Base rate \u2014 honest.** p_up 0.45 is exactly the registry washout_rebound prior, no shaded raise. Drew's residual point stands: 0.45 is an upper bound (drawdown \u221252% outside the 25-40% window; foreign capitulation unverified \u2014 `fund record` `{}`, regime STALE). At 0.40 EV is 17.4% (11.5%/yr): still positive, sub-hurdle \u2014 a size fact, not a kill.\n3. **Inputs \u2014 cited, open items flagged.** 9M anchor (S2/F1/F12), corn (S12/F39), payout (S5/F22) all cited; D&A and the PPE note are flagged, not hidden. Per-sleeve calibration is known-missing; no hit rate is invented.\n4. **Scars shrink size, not the thesis.** The kill is not rate-invariant (14% lifts the trough to ~1,700; house D&A to ~1,480\u20131,680), and the ARB gap means a fired kill fills at 1,690/1,270 \u2014 a \u221238.6%/\u221254.0% tail outside ev_math's \u221218.18%. Size the gap-adjusted leg.\n5. **Price \u2014 below the tape.** Entry 2,200 is 10.6% under 2,460, a resting limit that pays for the scars; above 2,200 the Bear's objection resumes.\n6. **Staging is fail-closed, not a merit defect.** ADV absent from `the liquidity feed` caps `the sizing engine` at zero until the feed refreshes; the verdict stands, no ticket stages."
+    }
+  ]
+}

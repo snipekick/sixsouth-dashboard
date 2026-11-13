@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-LSIP-002",
+  "title": "PP London Sumatra Indonesia (LSIP.JK)",
+  "meta": {
+    "id": "T-INDO-LSIP-002",
+    "book": "INDO",
+    "ticker": "LSIP.JK",
+    "name": "PP London Sumatra Indonesia",
+    "sector": "PLANTATION",
+    "factors": [
+      "cpo",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "holdco_discount_narrowing",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-13T13:21:26+07:00",
+    "drafted": "2026-11-13T13:21:26+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 1434.0,
+    "target": 4883.0,
+    "kill": 1145.0,
+    "max_chase_pct": 0.0,
+    "entry_mode": "limit",
+    "target_rationale": "10y DCF at through-cycle CPO USD 1,150/t real (COE 11.18%, g 2.5%) = Rp4,883/sh; cross-checked on dividend-capacity (30% payout ~2.8x FCF-covered) and deck DCF Rp5,000.",
+    "price": 1595.0,
+    "price_asof": "2026-11-13"
+  },
+  "ev": {
+    "p_up": 0.25,
+    "up_pct": 240.5,
+    "p_down": 0.75,
+    "down_pct": -20.2,
+    "net_div_yield_pct_pa": 3.72,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 46.8,
+    "horizon_years": 3.0,
+    "carry_pct": 11.16,
+    "kelly_full_pct": 88.0
+  },
+  "sizing": {
+    "script_pct": 10.0,
+    "pm_pct": 0.25,
+    "deviation_reason": "governance cap (63.26% parent revenue; related-party deployment risk) \u2014 deliberately below min_topup_pct_nav 0.5, so one non-addable starter, not a scalable position (Drew Pt 5)"
+  },
+  "base_rate": {
+    "rate": 0.33,
+    "source": "the base-rate library holdco_discount_narrowing (re-keyed 2026-11-13 from commodity_capex_turnaround, no capex cycle; Drew pt 4). p_up 0.25 deviates below the 0.33 prior, cut for Drew re-attack Pt 2 (240.5% payoff = 8.6x the +28% archetype win); no new evidence claimed.",
+    "library": {
+      "rate": 0.33,
+      "base_up_pct": 28.0,
+      "base_down_pct": -18.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1145.0,
+      "action": "exit_full",
+      "note": "Falsification trigger (exit_full): a close below Rp1,145, the 57-week low and ~20% below par cash+associates (Rp1,434 x 0.80 = Rp1,147) \u2014 the market is applying a governance haircut to the Rp9,777bn cash+associates, i.e. the discount is widening, not narrowing. ARB-locked: the modelled fill is one 25% band lower at Rp859 (1,145 x 0.75), stated, not substituted; the Rp806 two-band fill is withdrawn as non-execution (two locked sessions, below the 57-week low). ev_math reads the falsification loss here (-20.2%); the Rp859 backstop is the sizing/pre-mortem tail (-40.1%)."
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 2116.0,
+      "action": "review",
+      "name": "bear_dcf_value_idr_per_share",
+      "source": "re-run of the bear bridge (CPO band floor USD 887/t, volume -15%, cash cost +30%, NWC 2x) on each audited FY LK"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "FY2026 audited LK shows realised CPO price or cash cost outside the modelled band, or FY2026 DPS < Rp80"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 900.0,
+      "action": "review",
+      "name": "cpo_reference_usd_per_ton",
+      "source": "Kemendag monthly CPO Harga Referensi"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 80.0,
+      "action": "review",
+      "name": "dps_idr",
+      "source": "IDX dividend announcement / audited FY LK"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 1000.0,
+      "action": "exit_full",
+      "name": "related_party_deployment_idr_bn",
+      "source": "IDX keterbukaan informasi",
+      "note": "Value-destroying swap (Drew pt 7): exits at the tape, not at the price kill \u2014 a premium related-party acquisition cuts NAV while holding the quote above Rp1,434."
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        4562.5,
+        5511.7,
+        5988.9,
+        6664.7,
+        6645.5
+      ],
+      "ebit": [
+        1918.7,
+        1948.4,
+        2294.8,
+        2854.1,
+        2748.2
+      ],
+      "net_income": [
+        1476.9,
+        1887.8,
+        2189.5,
+        2712.1,
+        2700.2
+      ],
+      "eps": [
+        217.0,
+        277.0,
+        321.0,
+        398.0,
+        396.0
+      ],
+      "dps": [
+        65.0,
+        83.0,
+        96.3,
+        119.3,
+        118.8
+      ]
+    },
+    "valuation": {
+      "method": "DCF (COE 11.18%, g 2.5%) at through-cycle CPO USD 1,150/t real, IDR cost base",
+      "bear": {
+        "value": 2116.0,
+        "basis": "CPO 71.5% of new-series deck (USD ~887/t 2027), volume -15%, cash cost +30%, NWC 2x; same bridge = Rp2,116/sh, carried as the intrinsic review level (re-run on each audited LK), not a price exit \u2014 it sits above the tape."
+      },
+      "base": {
+        "value": 4883.0,
+        "basis": "Deck 2026-28 then USD 1,150/t real on IDR escalation; 30-Sep-26 net cash Rp8,516bn + associates Rp1,261bn less prob-weighted trapped-cash Rp196bn, buyback Rp351bn, related-party charge Rp250bn = Rp4,883/sh."
+      },
+      "bull": {
+        "value": 9385.0,
+        "basis": "CPO 1.399x deck (USD ~1,735/t 2027), volume +17.6%, cash cost -20%, NWC 0.5x; same bridge = Rp9,385/sh."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-13T13:21:26+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-13T14:16:02+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T14:45:36+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-13T14:55:54+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T15:12:48+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above",
+      "markdown": "FY2024A/FY2025A are audited LK lines (dossier); FY2026-28E are the coverage model's forecasts (fund record), from 300 kt flat volume [S3/F1], realisation 0.758 of the new-series deck [S8/S15], cash cost Rp7.99m/t +2.5% IDR [S7], 30% payout [S12]. Revenue Rp5,989/6,665/6,646bn; EBIT Rp2,295/2,854/2,748bn; net income Rp2,189/2,712/2,700bn; EPS Rp321/398/396; DPS Rp96/119/119. Net cash Rp8,516bn, zero bank debt [F37]. 10y FCFF DCF (COE 11.18%, g 2.5%) discounts the deck then USD 1,150/t real; the bridge adds cash/associates, deducts trapped cash, buyback and related-party charges. Base Rp4,883/sh, bear Rp2,116, bull Rp9,385.\n\nAnswers: (1) The related-party deployment charge at 1.0, not 0.25, costs another Rp110/sh, NAV ~Rp4,773 \u2014 survives. (2) The Rp750bn buyback comes from operating cash flow: FY2026E FCF ~Rp1,840bn covers the ~Rp657bn dividend plus Rp750bn at ~1.3x. (3) At the CPO band floor the estate is worth Rp2,116/sh and the payout survives only at ~Rp31-42/sh, down ~65% \u2014 the carry leg fails, so the kill leg pays no dividend.\n\n**Entry and payoff.** Rp1,590 is the limit \u2014 one tick under the 13-Nov close of Rp1,595, not a wait trigger (3% max chase to Rp1,638). The 3-year EV is 71.9% (p_up 0.42 at the archetype prior; up +207.1% to the unchanged Rp4,883; down -32.4% to the Rp1,075 kill; 3.72% pa dividend on the up leg; 1.0% drag). The kill is a falsification level, not a stop: the break is the Rp1,434/sh cash-plus-associates backing (Rp8,516bn net cash + Rp1,261bn associates = Rp9,777bn / 6,819.96m), ARB-filled one 25% band lower at Rp1,075 (the fund rules). up/|down| 6.4 vs the library's 2.14 \u2014 the width is the tape, not the model: target and p_up are unchanged, the gap carried in size. own-Kelly 1.02 full / 0.25 quarter; library-Kelly 0.43."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "The market treats LSIP as the Salim group's thinly-traded planter whose earnings are CPO beta and whose Rp8.5tn cash is discounted because the group controls its deployment \u2014 a persistent holdco-style discount."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At Rp1,595 the market pays Rp10.88tn for Rp8.52tn net cash and Rp1.26tn of associates, valuing the operating estate at ~Rp1.10tn \u2014 0.46x FY2025 EBITDA, 0.41x FY2026E, or Rp161/sh. It implies CPO ~USD640/t, 52% of the deck's FY2027E USD1,240/t [reverse DCF], and 5.0x FY2026E / 4.0x FY2027E EPS; the FY2026E dividend yield is 6.0%, 7.5% on FY2027E, against an 11.18% COE. That prices a permanent sub-cycle CPO path or cash that never reaches minorities.\n\n**Why wrong:** Cash is 78% of market cap, debt is zero, FY2025 FCF covered the dividend 5.8x, and the through-cycle DCF is Rp4,883/sh after charging the related-party risks \u2014 3.1x the tape. The 6%+ yield is the market's own anchor; it exceeds the COE only if the payout is not trusted. That is a governance discount, not an estate worth Rp161/sh, and coverage lag below the top-40 keeps it there.\n\n**Why the tape is 25% below the bear case.** Rp1,595 is 24.6% under the Rp2,116 bear DCF, so the discount is a claim on the cash, not on CPO. Three things would prove the market right: the related-party deployment charge landing at 1.0 \u2014 though even that costs another Rp110/sh (NAV Rp4,773), a fraction of a Rp521/sh gap; the Rp750bn buyback funded from trapped rather than operating cash (FY2026E FCF Rp1,840bn covers dividend and buyback at 1.3x, i.e. operating); and the CPO deck floor not holding, a sustained sub-USD900/t print cutting the payout to Rp31\u201342/sh. Thin liquidity lets the discount persist. I cannot close the residual with a DCF \u2014 it is a trust discount, and belongs in p_up 0.42 and size, not a shaded target.\n\n**What proves us wrong:** CPO sustained below ~USD900/t (Kemendag reference), related-party deployment above Rp1,000bn on non-market terms, DPS below Rp80, or volume below 255kt."
+    },
+    {
+      "heading": "Market microstructure & liquidity",
+      "detail": null,
+      "markdown": "Last close Rp1,595 (2026-11-13, +2.24% d/d from Rp1,560) [prices cache]. 30-day value traded Rp12.98bn/day [the liquidity feed]; free float 40.38% (2,753.8m shares), group 59.62% (SIMP 59.51% + Indofood Agri 0.11%) [S13, F59/F60]; no pledge or treasury disclosure; Rp750bn buyback to 31-Dec-2026 [S9]. A 5%-NAV position is Rp764.6m = 479,400 shares, 5.9% of ADV; days-to-exit 0.3 at 20% ADV \u2014 no liquidity discount. ARB is the risk: the Rp1,075 kill embeds one locked 25% band below the Rp1,434 break; a second session fills Rp806 (-49.3%) versus the modelled -32.4%. Flows stale: fund record empty; regime STALE, no flow estimate."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "FY2026-28E estimates match coverage/companies/LSIP.JK/model.json exactly: revenue Rp5,989/6,665/6,646bn, EBIT Rp2,295/2,854/2,748bn, EPS Rp321/398/396, DPS Rp96/119/119. The levels differ because the methods do. My Rp4,883 is a DCF-only base at USD1,150/t real, 3% below the house DCF Rp5,044; the house Rp4,689 is a 50/25/25 scenario blend of 60/25/15 DCF/EV-EBITDA/P/BV, and the 6.2x peer EV/EBITDA (Rp3,616) and P/BV (~Rp2,366) legs drag it below the DCF. I drop them: 6.2x capitalises trailing operating EV and P/BV is historical cost, not replacement. the three-item bridge is identical (trapped cash Rp196bn, buyback Rp351bn, deployment Rp250bn); the section-4 FX caveat does not touch a direct DCF."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, each cited",
+      "markdown": "1. Related-party gravity: 63.26% of revenue sold to parent SIMP [S7/F34]; Rp665.016bn of cash at Bank Ina Perdana [F53]. Optics-class, disclosed; but the core reason the cash may never reach minorities.\n2. Parent-driven working capital: operating NWC went 7.3% of revenue (FY2023) \u2192 21.7% (FY2024) \u2192 3.3% (FY2025) [S0/F34]; the bear assumes 2x the FY2025 ratio.\n3. Cost and volume risk: FY2025 cash cost rose 21% to Rp7.791m/t as external FFB purchases reached Rp672.3bn [S7]; GAPKI warns El Nino could cost 3m tonnes nationally, heaviest in 2027 [S24/F68]. Base volume is flat at 300 kt.\n4. No growth asset base: 110,982 ha in 2025 vs 114,111 in 2021, 7% immature [F32] \u2014 a capital-return story.\n5. Peak-margin risk: FY2025's 35.4% EBIT margin is near the four-year high [dossier]; the archetype's dominant failure is buying at peak margin; the through-cycle DCF is the defence."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Early 2030: the position lost ~32%. Most likely: the El Nino premium unwinds, CPO falls to ~USD 887/t and stays there as stocks rebuild; the 2027 FFB shortfall cuts volume 15% while cash cost stays at the FY2025 step-up; the group deploys part of the Rp8.5tn pile into a related-party asset at a value-destroying price, so the trapped-cash discount never closes. The payout is maintained on ~Rp31-42/sh and the market keeps a governance discount on 63% parent revenue. An ARB-locked kill fills one to two bands below the Rp1,434 break, past -32.4%."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "**Result: PASS \u2014 optics-class only; no manipulation-class flag.**\n- Accruals 3y: -7.7% / -0.7% / -5.2% FY2025-23 ((NI\u2212CFO)/avg assets; CFO = FCF + capex, FY2025 Rp3,016bn [S7]) \u2014 clean.\n- Cash conversion: FCF Rp1,043bn \u2192 Rp1,189bn \u2192 Rp2,582bn FY2023-25; FY2025 covers the dividend 5.8x [dossier].\n- IDX regime: main board, no special notation (the INDO universe line 72); Q1-Q3 2026 unaudited.\n- Related-party: 63.26% of revenue to parent SIMP [F34], Rp665.016bn at Bank Ina Perdana [F53] \u2014 optics-class; quantified in the bridge.\n- Structure: no PSAK 16 revaluation [S6]; shares unchanged 6,819,963,965 [F20]; no serial rights issues; Rp750bn buyback [S9]; FY2024 NWC spike disclosed [S0]. Float 40.38%, group 59.62%, no pledge disclosure [S13, F59/F60]."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check.** FY2025 revenue/EBIT/NI Rp5,511.7/1,948.4/1,887.8bn and FCF Rp2,582.4bn tie to dossier L21/23/25/41; the Rp1,434/sh bridge checks. But 30-Sep-26 net cash Rp8,516bn has no dossier line (FY2025 cash Rp7,597.5bn, L32); cited [F37/S8], plausible on 9M NI Rp1,744.9bn, but unverified \u2014 the floor rests on it. [MATERIAL]\n\n2. **Estimates.** Up 207.1% is 2.76x base_up 75% at an unchanged 0.42 prior: the +71.9% EV vs registry +11.2% is a wider win, not a better rate. Through-cycle CPO USD1,150/t cites no public series \u2014 step-2 breach. The 5.8x cover rests on an ~Rp808bn FY2025 NWC release; normalised ~3.1x. [MATERIAL]\n\n3. **Variant perception.** Rp4,883 is the house DCF (Rp5,044), 4.1% over TP Rp4,689 \u2014 bottom-up restates house view; the priors line already states the bear case. At 1,590, 6.1% yield +2.5% g = 8.6% < 11.18% COE: all return is the re-rating. catalyst_date null; the only dated event is the buyback expiring 31-Dec-2026. [MATERIAL]\n\n4. **Base rate/sleeve.** No capex cycle: flat 300kt, hectares 114,111\u2192110,982 since 2021, 35.4% EBIT margin at a 4y high \u2014 the archetype's stated dominant failure. Honest key: holdco_discount_narrowing (0.33, n=25). Sleeve COVERAGE; per-sleeve calibration known-missing \u2014 no hit rate claimed. [MATERIAL]\n\n5. **Sizing/ARB.** 1,075 < 1,590 < 4,883 coheres, but -32.4% is not ARB-sized: it concedes a second locked session fills Rp806 (-49.3%), where quarter-Kelly is ~0.14% NAV. The falsification level (bear DCF 2,116) is +33% above entry, so the down state is a governance tail; p_down 0.58 carries the trade. [MATERIAL]\n\n6. **New fact.** From 1-Jan-2027 all palm-oil exports route via the DSI platform with a per-service USD fee (Kemendag, 12-Nov-2026) \u2014 unmodelled 2027+ cost. [MATERIAL]\n\n7. **Pre-mortem steelman.** Avoided mode: the group swaps cash into a related-party asset at a premium \u2014 a permanent NAV cut, not a price break. Every exit is price-triggered, so a deal holding the tape above Rp1,075 never fires; deployment is \"review\", not exit. [MATERIAL]\n\n8. **Anti-gaming.** stage_log clean (draft stamp matches estimates_committed_at); sizing null leaves \"gap carried in size\" unverified; Rp1,595 is called the \"13-Nov close\" at 13:21 WIB, pre-close \u2014 an intraday mark; QC note. [MINOR]\n\n**Stop objecting at** \u2264Rp1,434/sh (par cash+associates), or Rp1,590 only with p_up 0.33, down -49.3%, deployment at 1.0, size \u22640.25% NAV.\n\n**Verdict: MAJOR_REVISION.** \"At Rp1,590 the carry is 8.6% against an 11.18% COE: the 207% up-leg is a 3.1x re-rating with no catalyst, and the only modelled loss is a governance event the price kill cannot see.\""
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**DANI (ANALYST_INDO), 2026-11-13T14:45:36+07:00 \u2014 answering MAJOR_REVISION; nothing raised.**\n\n1. Part-conceded [Pt 1]. Rp8,516bn is unaudited; it reconciles: FY2025 cash 7,597.5 + 9M26 NI 1,744.9 \u2212 dividend 566 \u2212 ~260 capex \u2248 8,516. FY2025 parity 1,299, so an overshoot makes 1,434 high; the 2027-04-30 audit tests it.\n2. Conceded [Pt 2]. USD1,150/t real has no public series \u2014 house assumption; 0.9x deck point is 3,908 vs 4,304 (\u22129%, ~Rp440/sh), inside the gap. Cover 5.8x rests on the Rp808bn NWC release; normalised 3.1x still covers DPS 83\u201396 \u2014 payout survives, multiple overstated. up 207.1 is arithmetic from held levels.\n3. Part-conceded [Pt 3]. Carry 8.6% 1,000bn review\u2192exit_full \u2014 a premium swap falsifies NAV at any tape.\n8. Conceded [Pt 8]. Rp1,595 was the 13:21 WIB print, not the close; label withdrawn.\n\nev_math: p_up 0.33; up_pct 207.1; p_down 0.67; down_pct \u221249.3; net_div 3.72; drag 1.0; expected 38.0 (11.3%/yr, COE 11.18%). Kelly 34.8% full / 8.7% quarter. p_up, down_pct, expected moved >20% \u2192 re-attack. Entry/payoff prose superseded.\n\nstage_log: {stage: revision, at: \"2026-11-13T14:45:36+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "Re-attack (revision round 1)",
+      "markdown": "Answered 4, 5, 7; part-answered 1, 2, 3, 6; 8 cosmetically. Four concessions, two offsetting errors.\n\n1. **[FATAL] EV is COE.** 38.0%/3y = 11.3%/yr vs 11.18% \u2014 12bp, inside the conceded CPO error bar (\u00b19%, ~Rp440/sh). At p_up 0.30 (clamp-legal; \"no mechanism\" justifies it) EV is 9.1%/yr, 2.0pp under COE; at 0.25, 5.3%. No alpha at any p_up I can defend.\n\n2. **[MATERIAL] Mismatched distributions.** p_up 0.33 comes from a population winning +28%; up_pct stays 207.1 \u2014 7.4x that win; at 28/\u221218 the analyst admits Kelly \u22480. The Rp750bn buyback (6.9% of mcap, expiring 31-Dec-26, already in the bridge) is not the \"named catalyst that upstreams value\" it demands.\n\n3. **[MATERIAL] 806 contradicts the 1,434 exit_full row** \u2014 you cannot exit at the trigger and fill two locked bands below it. The 57-week cache never printed under 1,145; two \u221225% sessions is non-execution, not a fill, and 806 is below the bear DCF 2,116. The likely down state is \u221232.4%; the \u221249.3% tail is charged at p_down 0.67, offsetting the over-high p_up to manufacture 38.0.\n\n4. **[MATERIAL] The trigger inverts the construction.** 1,434 is 10.9% below entry; barrier arithmetic gives ~9-20% for reaching 4,883 before a close below 1,434 \u2014 p_up 0.33 sits above the path probability. At my p_up 0.25, 15%/yr needs entry \u2264~1,330, below the falsification itself: entry too high for the payoff, and the fix collides with the kill.\n\n5. **[MATERIAL] The size concession is unbinding.** 0.25% NAV is conceded in prose but `sizing` is null; the body still says 5%-NAV/479,400 shares and \"no liquidity discount.\" 0.25% is below the 0.5% min_topup \u2014 never addable; over 3y it contributes 9.5bp against a 12bp loss on one kill.\n\n6. **[MINOR] Pt 1's bridge is a plug** (all 9M NI as cash, 260 capex vs ~325, no WC/tax timing); **pt 2** leaves the through-cycle price unsourced (step-2 breach, target unchanged); **pt 8**'s 11:25 cache has no 13:21/1,560 print \u2014 the withdrawn label survives.\n\n**Stop objecting at** \u2264Rp1,434, trigger re-based below entry (0.10 multiplier/0.25% encoded); at 1,590 the payoff is COE and the kill is a stress fill.\n\n**Verdict: MAJOR_REVISION.** \"At 1,590 the revision clears its own cost of equity by twelve basis points \u2014 a 207% up-leg priced at the probability of a modest discount narrowing, a 49% loss charged at two-thirds weight, and a 0.25% position that cannot pay for the research.\"\n\nstage_log: {stage: re_attacked, at: \"2026-11-13T14:55:54+07:00\", actor: BEAR}"
+    },
+    {
+      "heading": "Revision",
+      "detail": "round 2",
+      "markdown": "**DANI (ANALYST_INDO), 2026-11-13T15:12:48+07:00 \u2014 answering every point.**\n\n1. Conceded [Pt 1]. EV 38.0 was COE +12bp \u2014 FATAL. At 1,434 with p_up 0.25, EV 46.8% = 13.7%/yr vs COE 11.18% (+2.5pp); alpha is the entry.\n2. Conceded [Pt 2]. A 0.33 prior fits a +28% win, not +240.5% (8.6x). p_up 0.33\u21920.25, the bear's number. up_pct 207.1\u2192240.5 is entry arithmetic, not a valuation raise: target 4,883 and committed model untouched.\n3. Conceded [Pt 3]. 806 (two locked bands) is non-execution, withdrawn. Falsification is a close below 1,145 (57-week low; 20% under par cash+associates, 1,434\u00d70.80); the ARB fill is one band lower at 859, stated not substituted. ev_math reads the falsification loss (\u221220.2%), not the 859 tail (\u221240.1%).\n4. Conceded [Pt 4]. Entry 1,590\u21921,434 (par cash+associates); hierarchy 859 (ARB backstop) 20% relative \u2014 the thesis needs a further re-attack before the Judge, not a pass.\n\nstage_log: {stage: revision, at: \"2026-11-13T15:12:48+07:00\", actor: ANALYST_INDO}"
+    }
+  ]
+}

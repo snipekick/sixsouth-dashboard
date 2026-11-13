@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-BBRI-001",
+  "title": "Bank Rakyat Indonesia (BBRI.JK)",
+  "meta": {
+    "id": "T-INDO-BBRI-001",
+    "book": "INDO",
+    "ticker": "BBRI.JK",
+    "name": "Bank Rakyat Indonesia",
+    "sector": "FINANCIALS",
+    "factors": [
+      "bi_rate",
+      "em_flows"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "quality_bank_rerating",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-13T13:14:16+07:00",
+    "drafted": "2026-11-13T13:14:16+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 2190.0,
+    "target": 3320.0,
+    "kill": 1932.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Payout-consistent FY2028E BVPS Rp2,243 at 1.48x/18.5% ROE = Rp3,320. Entry Rp2,190 is 0.978x (12.7% ROE), a notch under the 14% bear; kill Rp1,932 is 0.861x (11.4%). EV 40.09%/3y = 11.89%/yr on an honest -11.78% kill leg, 28.2% below the Rp3,050 tape \u2014 a resting trigger, not a fill.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.48,
+    "up_pct": 51.6,
+    "p_down": 0.52,
+    "down_pct": -11.78,
+    "net_div_yield_pct_pa": 15.59,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 40.09,
+    "horizon_years": 3.0,
+    "carry_pct": 46.77,
+    "kelly_full_pct": 322.2
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.48,
+    "source": "the base-rate library quality_bank_rerating",
+    "library": {
+      "rate": 0.48,
+      "base_up_pct": 42.0,
+      "base_down_pct": -20.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1932.0,
+      "action": "exit_full",
+      "note": "11.4%-ROE warranted 0.861x on payout-consistent 2,243 \u2014 failure-state falsification print, NOT a stop"
+    },
+    {
+      "metric": "kpi",
+      "op": ">",
+      "value": 0.038,
+      "action": "review",
+      "name": "credit_cost",
+      "source": "BBRI quarterly LK: loans + impairment lines, 1Q-2Q 2027"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.65,
+      "action": "review",
+      "name": "casa_ratio",
+      "source": "BBRI quarterly LK / 1H27 results presentation"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "FY2026 audited LK shows credit cost >3.5% or payout <80%"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        172996.4,
+        186876.6,
+        202656.0,
+        219317.2,
+        236101.0
+      ],
+      "ebit": [
+        90896.2,
+        98429.7,
+        106394.4,
+        115580.2,
+        125133.5
+      ],
+      "net_income": [
+        59944.6,
+        56652.4,
+        62483.7,
+        65478.2,
+        70631.7
+      ],
+      "eps": [
+        398.0,
+        376.0,
+        412.3,
+        432.0,
+        466.0
+      ],
+      "dps": [
+        345.4,
+        346.0,
+        379.3,
+        397.5,
+        428.8
+      ]
+    },
+    "valuation": {
+      "method": "Residual income + warranted P/BV = (ROE-g)/(COE-g); COE 12.95% (7.45% IDR 10y [S9] + 5.5% ERP band midpoint); ebit line = pre-provision operating profit (revenue - opex), not GAAP EBIT; revenue is the",
+      "bear": {
+        "value": 2290.0,
+        "basis": "4.6% credit cost, 14.0% sustainable ROE, 1.1% g, 10% dilution: 1.09x on ~2,100 BVPS"
+      },
+      "base": {
+        "value": 3450.0,
+        "basis": "18.5% sustainable ROE, 1.5% retention-funded g: 1.48x on FY2028E BVPS 2,326"
+      },
+      "bull": {
+        "value": 4000.0,
+        "basis": "21.0% sustainable ROE, 1.7% g, 3.0% credit cost: 1.71x on ~2,340 BVPS"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-13T13:14:16+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-13T14:20:43+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T14:32:47+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-13T14:54:06+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T15:05:27+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above",
+      "markdown": "FY2024A\u2013FY2028E, IDR bn: revenue 172,996 / 186,877 / 202,656 / 219,317 / 236,101; pre-provision profit 90,896 / 98,430 / 106,394 / 115,580 / 125,134; attributable net income 59,945 / 56,652 / 62,484 / 65,478 / 70,632; EPS 398 / 376 / 412 / 432 / 466; DPS 345 / 346 / 379 / 398 / 429. Loans +10% FY2026E easing to 8.5% FY2028E, NIM 6.95%\u21926.75%, credit cost 3.20%\u21923.35%, CASA ~70%, payout held at 92% [assumptions; S15/S7]. The PBT bridge adds Rp21.0tn FY2025 of sharia/insurance/gold items outside the pack's revenue line (FY2025 LK [S6]), reconciling to reported PBT Rp72.79tn \u2014 not double-counted."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "Before document work I believed the market narrative was that BBRI is a durable ~19% ROE SOE franchise whose 92% payout makes it a bond-proxy, with the Kupedes-to-KUR rotation a known, bounded NIM drag."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** at Rp2,820 the market pays 1.28x FY2026E book (BVPS Rp2,204), which capitalises ~16.1% perpetual ROE at 12.95% COE and 1.5% g \u2014 already below FY2025's 17.5%, so it prices the fade toward my 14% bear, not the house's 19.6%.\n\n**Why wrong:** the fade is shallower. My 18.5% sustainable ROE is a haircut to FY2024's 18.9%, not the house's three-year average; at 1.48x warranted the shares are worth ~Rp3,273 today, +16% from the tape, and the 12.1% net dividend is the return anchor. 9M26 credit cost ~3.05% and micro formation down from 6.57% to 4.13% [S4] say the micro book is seasoning, not collapsing. The edge is ~2.4pp of ROE, not a 19%-durability story.\n\n**What proves us wrong:** credit cost above 3.8% for two quarters, CASA below 65%, company NIM below 6.0%, or a payout cut below 80%."
+    },
+    {
+      "heading": "Idea-card questions answered",
+      "detail": null,
+      "markdown": "1. **Other items:** the Rp21.09tn line is sharia net contribution plus insurance and gold, outside the pack's NII+NOII revenue; I carry it in the PBT bridge but not in revenue again [S6].\n2. **19.6% average ROE:** not capitalised. I use 18.5% sustainable, below FY2024's 18.9% and far below the model's 23% terminal (dossier; assumptions).\n3. **NIM 6.95% vs 6.16%:** different perimeter \u2014 pack conventional NII over consolidated earning assets versus company consolidated NIM including sharia. I do not extrapolate the 37bp 9M fall; I model 6.95%\u21926.75% by FY2028E [S15]."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Net income has fallen two straight years: FY2023 Rp60,099.9bn \u2192 FY2024 Rp59,944.6bn \u2192 FY2025 Rp56,652.4bn; EPS Rp398\u2192Rp376 (dossier, Income statement). The re-rating premise needs an inflection not yet in the audited numbers.\n2. ROE has compressed, not held: FY2023 19.3% \u2192 FY2024 18.9% \u2192 FY2025 17.5% (dossier, Derived ratios), so 18.5% sustainable is a haircut, not a floor.\n3. Credit cost is structurally high: FY2024 3.33%, FY2025 3.39%, 1H26 3.08%, 9M26 ~3.05% (assumptions, credit_cost [S6][S4][S15]); NPL coverage fell from 229.09% to 180.25% while write-offs ran Rp45.5tn FY2025 / Rp21.5tn 1H26 [S4].\n4. A 91.6% payout leaves ~8% retention (dossier: dividends paid Rp51,881.6bn vs net income Rp56,652.4bn), funding only ~1.5% growth at 18.5% ROE \u2014 the thesis must be carry plus modest re-rating, not growth.\n5. Cash conversion is weak: CFO/NI 0.26x FY2025 and 0.41x FY2024 (dossier, Derived ratios) \u2014 the bank-relevant accruals proxy is the provisioning-versus-write-off trend, not Sloan."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "Three years out this lost 30% because KUR/micro seasoning pushed credit cost to 4.5%+, NIM fell 50bp on administered lending, and the state cut the payout just as the multiple de-rated; the 14.6% net yield did not cover the price fall, and an ARB-locked exit filled below the kill."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "Financials, so Sloan is inapplicable; provisioning-versus-write-off is used instead. FY2024 provisions Rp41,744bn, FY2025 Rp46,724bn; write-offs Rp45.5tn/Rp21.5tn; coverage 229.09%\u2192180.25% [S4] \u2014 declining buffer, **optics-class**, not manipulation-class. IDX regime: no *papan pemantauan khusus* or special notation found in the dossier or Q3 LK; Q1\u2013Q3 LK are unaudited, so FY2025 audited is the anchor (dossier). Related-party: 53.19% state ownership [S3]; the channel is directed policy lending (KUR Rp293.4tn, 2027 target Rp325tn [S18][S22]) \u2014 policy risk, not family extraction; no related-party revenue share disclosed. Structure flags: no rights issue announced; Rp1tn buyback tranche disclosed 22 October 2026 [S16]; no PSAK 16 revaluation relevant to a bank. One optics-class flag; no auto-pass."
+    },
+    {
+      "heading": "Market microstructure & liquidity",
+      "detail": null,
+      "markdown": "Last close Rp2,820 (2026-11-10, house pack `model.market`); `the price snapshot` has no BBRI.JK row \u2014 a Phase-2 cache gap, so the pack print is the only fresh close. **ADV missing: fail-closed** \u2014 `the liquidity feed` has no BBRI.JK row, so `the sizing engine`'s liquidity cap is 0 until the feed refreshes. The pack's 3-month ADTV is Rp735bn; a 5%-NAV position (Rp765m on the Rp15.29bn book) is ~0.005 days at 20% participation \u2014 liquidity is ample but not script-executable today. Free float 46.81%, state 53.19% via Danantara incl. the Series A Dwiwarna (F22/F62); no family stake or pledge. The ARB band at this price is \u00b125% (the fund rules `idx_microstructure`, Rp200-5,000 bucket; tick Rp10): the Rp2,290 kill is 18.8% below the tape, inside one band, but a locked exit can fill 25-35% below it. **Flows stale:** `fund record` is empty, so the foreign-flow read \u2014 the entry-timing input for a foreign-heavy index name \u2014 is unavailable today; no flow number is estimated and the book regime line is STALE."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "FY2026-28E are the house engine's lines: net income Rp62.5/65.5/70.6tn, EPS Rp412/432/466, DPS Rp379/398/429, NIM 6.95%\u21926.75%, credit cost 3.2%\u21923.35%. The Rp21.09tn other-items bridge goes to PBT, not revenue, as the house does \u2014 no double count. We part on the multiple: the house capitalises the 19.6% FY2026-28E average ROE at 1.8% g for 1.59x warranted and a Rp4,258 base (Rp4,176 target); I use 18.5% ROE and 1.5% g for 1.48x, or Rp3,450. The house buys the Rp2,820 tape; my entry is Rp2,340, the FR+4%-clearing level. The house target is 1.89x FY2026E book, above its own warranted multiple. The house bear is Rp2,809, 0.4% below the tape; mine is Rp2,290 \u2014 I haircut ROE to 14% and BVPS to ~Rp2,100. On NIM, 6.95% is the pack's conventional perimeter against the 6.16% company consolidated 9M print (sharia included); I do not extrapolate the 37bp fall. Target Rp3,450 stays."
+    },
+    {
+      "heading": "Entry, EV and the hurdle",
+      "detail": null,
+      "markdown": "At Rp2,820 the lint-convention EV is +17.4%/3y = +5.5%/yr \u2014 the IDR cash proxy, not an equity return, and far below the 10y FR 7.45% and FR+4% \u224811.45%/yr. The house target Rp4,176 is no cure: at p_up 0.48 it is +9.1%/yr, still sub-hurdle. The tick at which the stated legs clear FR+4% with a usable margin is **Rp2,340** (up +47.44%, down \u22122.14%, net yield 14.59%/yr, EV +41.67%/3y = +12.3%/yr; up/|down| 28.8 vs library 2.10). That is 2.2% above the bear falsification, and ARB-adjusted fills return 7.4-8.8%/yr \u2014 below hurdle. It is a resting trigger, not a sizeable long: **the entry waits as a price trigger at Rp2,340, with the tape 20.5% above it; the honest Phase-2 outcome is no trade at Rp2,820.** Own-Kelly 1,473% is an artifact of the 2.1% down leg; library-Kelly +102%. **Macro tilt: AGAINST** \u2014 the desk is AVOID on INDO rate-sensitive bank NIM on funding-leg pressure; the house BUY is an explicit exception, and I do not override it."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Facts.** Revenue 186,876.6, NI 56,652.4, dividends 51,881.6 (91.6% payout), EPS 376 match the dossier (Income 23-25; Cash flow 42): no fabrication. But the packet 1y series prints 3,050 (2026-11-09) vs 2,820; at 3,050 implied ROE 17.4%, halving the edge. [MATERIAL]\n2. **EV is a down-leg artifact.** -2.14% is entry-to-kill distance, not loss-given-failure; weekly vol 4.69%, 17/56 weeks fell >2.14%. At the registry -20% downside, 3y EV is 9.8%/yr, below the 11.45% hurdle; it clears only if down_pct >= -8.3%. [FATAL]\n3. **Kill is a stop.** Entry 2,340 sits 2.2% above kill 2,290; a fill needs a fresh low below 2,640, then continuation kills it in days. The hard exit is price; the real falsifiers (credit 3.8%, CASA 65%, payout 80%) are review only. [FATAL]\n4. **ARB.** The body concedes a locked exit fills 25-35% below kill (1,490-1,718, -27% to -36%), yet ev_math keeps -2.14%: off 25-34pp. [FATAL]\n5. **ADV.** BBRI absent from the liquidity feed; size cap 0; ADTV unverifiable, so a fired trigger cannot be sized. [MATERIAL]\n6. **Carry/WHT.** 14.59% assumes 10% WHT; at 20%, 12.97% and EV at -20% downside ~9.2%/yr. 92% of EPS exceeds the card 60-85% SOE band; payout rose 72.4->80.2->91.6% (dossier 45-47), a peak not an anchor. [MATERIAL]\n7. **Base/sleeve.** quality_bank_rerating (0.48, n=20, -20%) is defensible but keeps the prior while claiming a 17.9pp better downside; COVERAGE calibration is known-missing, no rate invented. [MATERIAL]\n8. **Variant/steelman.** At 1.28x the market prices 16.1% ROE, above the 14% bear and below FY2025 17.5%: fair pay for 53.19% state control, a state-set 92% payout and KUR to Rp325tn. Unmentioned: no re-rating arrives; the structural SOE discount leaves ~13% net carry barely clearing FR+4%. [MATERIAL]\n9. **NEW fact.** Cash fell 198,281.4->126,392.2 (-36.3%) FY2024->FY2025 while debt rose 6.3% and assets 7.2% (dossier, Balance sheet 30-33): funding mix deteriorating into the macro funding-leg AVOID. [MATERIAL]\n10. **Anti-gaming.** Stamps are clean, but entry 2,340 is reverse-engineered from the hurdle, kill 2.2% below; the body admits up/|down| 28.8 and Kelly 1,473% artifact yet ships -2.14%. [MATERIAL]\n\n**Stop objecting:** entry 2,290 (14%-ROE bear) with kill re-cut to 2,060 (12%-ROE, 0.92x), an honest -10% leg, not 2,340 with a 2.1% noose.\n\n**Verdict: KILL_RECOMMENDED.** The 92%-payout, 1.28x-book rerating is a bond proxy whose entire +41.67% EV is manufactured by a -2.14% down leg smaller than half a weekly sigma; at the registry -20% downside it returns 9.8%/yr, below the FR+4% hurdle it was built to clear."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Levels re-derived from the committed valuation: entry 2,290 = 14%-ROE bear (1.09x); kill 2,060 = 12%-ROE warranted 0.92x; target 3,450 unchanged. p_up 0.48; up_pct read off entry.\n\n1. Conceded: packet prints 3,050 (2026-11-09), superseding the 2,820 pack print; implied edge at the tape ~1.1pp, not 2.4pp. Entry is a resting trigger 24.9% below it; no chase.\n2. Conceded (FATAL): -2.14% was entry-to-kill distance. down_pct is now -10.04% at the 2,060 falsification; EV 39.56%/3y = 11.8%/yr, clearing FR+4%.\n3. Conceded (FATAL): kill 2,060 is 12%-ROE warranted 0.92x \u2014 a falsification print 10.0% below entry, not a 2.1% stop. KPI kills stay review-only (ARB-locked quarterly exits are worse).\n4. Part-conceded (FATAL): -2.14% was indefensible; the kill leg is now -10.04%. ARB-locked fills 25-35% below kill (1,339-1,545) are a sizing haircut (SIZING_EV_BASE_RATES \u00a76) and pre-mortem scenario, not the level leg lint reads.\n5. Conceded: BBRI absent from the liquidity feed; cap 0; not sizeable until the feed refreshes.\n6. Defended: 10% is the domestic final WHT for an IDR book; 20% is the foreign case (EV 37.17% = 11.1%/yr). 92% payout is conceded as a peak, bounded by g 1.5% and the <80% payout kill.\n7. Defended: p_up stays the registry 0.48 \u2014 no second haircut, no raise. The 17.9pp better-downside claim was the artifact; withdrawn.\n8. Defended: the SOE discount is why entry is 1.04x FY2026E book, not 1.28x. Surviving-state net carry 14.91%/yr clears 11.45%; the 3,450 target still needs the 2.4pp ROE edge.\n9. Conceded: cash -36.3%, debt +6.3% is a real funding-mix negative; the CASA/credit review kills and AGAINST tilt capture it; the prior does not move.\n10. Conceded: entry 2,340 was hurdle-fitted. Entry 2,290 and kill 2,060 trace to the committed bear valuation; up/|down| 8.55 is carry-inclusive, not a 28.8 artifact."
+    },
+    {
+      "heading": "Revision",
+      "detail": "Re-attack (revision round 1)",
+      "markdown": "1. **One number discharged three FATALs.** #2\u2013#4 were answered by moving the kill to 2,060 and down_pct to \u221210.04%. The arithmetic closes; the claims do not. p_up 0.48 is the registry's, down_pct the analyst's \u2014 the prior's failing-case loss (\u221220%) was halved while its failure probability was kept. At \u221220% the revised EV is 10.4%/yr, under 11.45%; break-even down is \u221212.2%. [FATAL]\n2. **Carry, then carry again.** The dividend is 113% of the 39.56% EV; the price leg alone is 5.7%/yr, below the 7.45% FR. The up branch totals 95.4% against base_up_pct 42 (total-return) \u2014 2.27x the archetype's typical winner, unreconciled; at 42 it is 3.5\u20134.4%/yr. At the card's 85% payout ceiling 11.3%/yr; at FY2024's 80%, 11.0%. The 3y EV does not survive a payout cut. [FATAL]\n3. **Still a stop.** 2,060 is 9.0% below entry and 22.0% below the 52-week low (2,640, research_prices 2026-10-12). The KPI falsifiers stay review-only, so the sole hard exit is price \u2014 a bank can print 0.92x while earning 17.5%, so the kill fires when the mispricing is widest. [FATAL]\n4. **Levels not co-derived.** 2,290 is 1.09x on the bear's diluted 2,100 BVPS; 2,060 is 0.92x on 2,239 \u2014 FY2028E book. On the entry's own book 0.92x = 1,932, a \u221215.6% leg. [MATERIAL]\n5. **Phantom book (new).** DPS is 92% of EPS, but BVPS 2,138\u21922,326 implies 14.3% retention (86% payout). Payout-consistent FY2028E BVPS is 2,243; 1.48x = 3,320. Source: dossier equity 324,033.9/151,559m shares vs model dps/eps. [MATERIAL]\n6. **Two tapes, stale body.** Frontmatter uses 3,050; variant perception and microstructure still argue 2,820 and still call 2,290 \"the kill\". Entry is 24.9% under 3,050, 13.3% under the low. [MATERIAL]\n7. **P(fill) unstated.** Real expected return is p(fill)\u00d711.8%; 2,290 fills are selected by a 2.1pp implied-ROE de-rating, so p_up|fill < 0.48. A one-in-three ARB-locked exit at \u221235% takes EV to 10.6%/yr. [MATERIAL]\n8. **New disconfirming fact.** Quarterly NI 15,874 (4Q25) \u2192 15,493 \u2192 15,373 (2Q26); revenue 50,553 \u2192 49,616 \u2192 48,719. FY2026E 62,484 needs +2.4% H/H in 2H26; the DPS carrying 113% of EV rests on it. [MATERIAL]\n\n**Stop objecting:** entry \u22642,200, kill 1,932 (0.92x on the entry's own book), target 3,320 \u2014 11.5%/yr with the ARB tail visible. That is 27.9% under the tape: a watch-list trigger, not an allocation.\n\n**Verdict: MAJOR_REVISION.** The up branch is 2.27x the archetype's typical winner; 113% of EV is a dividend the model's book path says was never retained."
+    },
+    {
+      "heading": "Revision",
+      "detail": "round 2",
+      "markdown": "Levels co-derived on one book, payout-consistent FY2028E BVPS 2,243 (2,138 + 104.8 retained at 92%), COE 12.95%, g 1.5%: target 1.48x/18.5% = 3,320; entry 0.978x/12.7% = 2,190 (a notch under the 14% bear); kill 0.861x/11.4% = 1,932. p_up 0.48; up 51.60, down -11.78, net yield 15.59%/yr, EV 40.09%/3y = 11.89%/yr.\n\n1. p_up defended: 0.48 is the registry prior; SIZING \u00a71 bars a second haircut. Down conceded: at -20% EV is 10.74%/yr, sub-hurdle; break-even down is -14.96%, so the -11.78% kill has 3.2pp room.\n2. Conceded: carry is 116.7% of EV, probability-weighted price leg 5.86%/yr (under 7.45% FR), up branch 2.34x base_up 42. At 85% payout EV 11.44%/yr; at 80%, 11.11% \u2014 it fails an 80% cut.\n3. Part-conceded: kill 1,932 is 11.78% below entry and 26.82% below the 2,640 low \u2014 an 11.4%-ROE failure print. Price stays the automatic exit; KPI reviews are primary; ARB-locked exits are a sizing haircut.\n4. Conceded: all levels now on 2,243; the 2,100-vs-2,239 book mismatch is gone.\n5. Conceded: target 3,320 = 1.48x on 2,243, not the phantom 2,326.\n6. Conceded: frontmatter (2,190/1,932/3,320) is authoritative; entry is 28.2% under the 3,050 tape, 17.0% under the 2,640 low. Body 2,820/2,340/2,290 lines are superseded; protocol bars rewriting sections.\n7. Part-conceded: p(fill) is execution, not level math; ev_math is conditional on fill. One-in-three ARB-locked exit at -35% gives 10.81%/yr; unconditional return is p(fill)x11.89%.\n8. Conceded as fact; committed model unchanged. 4Q25-2Q26 NI 15,874\u219215,373 and revenue 50,553\u219248,719 put +2.4% H/H on FY2026E; the 80%-payout path (11.11%/yr) and credit/CASA reviews carry it."
+    }
+  ]
+}

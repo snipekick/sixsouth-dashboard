@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AMRT-001",
+  "title": "Sumber Alfaria Trijaya (Alfamart) (AMRT.JK)",
+  "meta": {
+    "id": "T-INDO-AMRT-001",
+    "book": "INDO",
+    "ticker": "AMRT.JK",
+    "name": "Sumber Alfaria Trijaya (Alfamart)",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "attacked",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-13T13:20:37+07:00",
+    "drafted": "2026-11-13T13:20:37+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 470.0,
+    "target": 660.0,
+    "kill": 323.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Target cut to the evidenced base: the committed base DCF Rp1,100 less the capitalised Rp1,334 other income the dossier cannot evidence (~Rp657, Drew #2). 660 = 4.5x FY2028E EV/EBIT vs 3.1x at entry 470; kill 323 = bear DCF, 6.0x bear FY2028E EPS 54.1.",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 40.43,
+    "p_down": 0.6,
+    "down_pct": -31.28,
+    "net_div_yield_pct_pa": 7.85,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 5.8,
+    "horizon_years": 3.0,
+    "carry_pct": 23.55,
+    "kelly_full_pct": 28.6
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 323.0,
+      "action": "exit_full",
+      "note": "bear-case falsification value (bear DCF, 6.0x bear FY2028E EPS); thesis-invalidating, NOT a stop; ARB gap may fill below"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 21.0,
+      "action": "review",
+      "name": "gross_margin_lk",
+      "source": "FY audited LK gross profit / revenue (FY2025A 21.90%; 9M2026 21.92%)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 600.0,
+      "action": "review",
+      "name": "net_store_adds",
+      "source": "company 2026 plan 800 outlets (assumptions S5) vs FY LK store-count disclosure"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 2.8,
+      "action": "review",
+      "name": "ebit_margin_lk",
+      "source": "FY LK profit from operations / revenue (FY2025A 3.61% on GP-less-net-opex basis)"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "FY2026 audited LK: revenue growth <5% OR gross margin <21.5% OR net store adds <600 OR Q4 EBIT margin <4.0%"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        118227.0,
+        126737.3,
+        135862.3,
+        145372.7,
+        155112.7
+      ],
+      "ebit": [
+        4078.5,
+        4562.4,
+        4904.6,
+        5248.0,
+        5599.6
+      ],
+      "net_income": [
+        3148.1,
+        3410.9,
+        3653.3,
+        3939.8,
+        4248.8
+      ],
+      "eps": [
+        75.81,
+        82.16,
+        88.9,
+        95.88,
+        103.39
+      ],
+      "dps": [
+        34.11,
+        41.5,
+        44.45,
+        47.94,
+        51.7
+      ]
+    },
+    "valuation": {
+      "method": "FCFF DCF, 10 explicit years FY2026-35, WACC 11.3%, terminal g 4.0%, capex ramped so terminal growth earns WACC; P/E cross-check",
+      "bear": {
+        "value": 323.0,
+        "basis": "Coverage bear shocks (growth -4pp, GM -100bp, opex +50bp, NWC to 0), same capex fade, g 4.0%; 6.0x bear FY2028E EPS 54.1."
+      },
+      "base": {
+        "value": 1100.0,
+        "basis": "Revenue +7.2/7.0/6.7%, GM 22.22%, opex 18.61%; ~10% NOPAT reinvestment at ~70% explicit ROIIC; WACC 11.3%, g 4.0%; 10.6x FY2028E EPS 103.4, exit 7.4x EV/EBIT."
+      },
+      "bull": {
+        "value": 2450.0,
+        "basis": "Growth +4pp, GM +100bp, opex -50bp, NWC -1.78pp more negative; same WACC/g; 14.9x bull FY2028E EPS 164."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-13T13:20:37+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-13T14:13:07+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T14:34:57+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-13T14:56:28+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-13T15:06:30+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "Revenue FY2026E +7.2% is 9M2026 actual (dossier 101,288.2 vs 94,476.0), 800 net adds on a 21,120-banner estate (3.8%, the distribution moat) plus CPI 3.28% (assumptions S5/S6). Gross margin 22.22% blends 9M2026 21.92% with the recurring Q4 23.10% (dossier FY2025 GP 27,756.2 less 9M2025 20,303.8 = Q4 GP 7,452.4 on 32,261.3) [Q3: not the 9M rate]. Opex 18.61% gives EBIT margin 3.61%; EBIT is LK profit from operations (GP less net opex, other income included), ~1,334 above the dossier's FY2025 line \u2014 flagged below. Below EBIT: other \u221281, tax 18.85%, minority 6.1%; EPS on 41,091.8m shares; DPS at 50% payout. [Q1] peers are a sanity check; MIDI (77.09%-owned) consolidates. [Q2] terminal g 4.0%, not 6.0%.\n\nValuation: FCFF DCF, 10 years, WACC 11.3%, g 4.0%, capex 3.95%\u21924.65% so terminal growth earns WACC; TV 46.8% of EV \u2192 1,100. Bear 323 (coverage shocks; 6.0x bear FY2028E EPS 54.1), bull 2,450. Base is 10.6x FY2028E EPS 103.4, a 7.4x EV/EBIT exit; entry 610 is 5.9x FY2028E and ~5.1x FY2026E EV/EBIT \u2014 ~2 turns of re-rating, payable at 19% ROE. Sensitivity: \u00b150bp margin 889-1,310; WACC 11-13% 1,144-903; g 3-5% 1,033-1,187.\n\nEntry 610 is 0.55x base: where 3.4:1 target-to-bear gives up/|down| 2.11 (library 1.67) and +11.6% expected; at the archetype's +50% payoff (entry ~733) the ratio is 0.89 and it sizes to zero \u2014 no trade above ~680. Own Kelly +24%/+6.0% quarter, library +13.3%; p_up 0.40."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "From memory, AMRT is the premium minimarket compounder that de-rated as store growth slowed and the 30x-era multiple came off, and the market now reads that de-rating as structural \u2014 cooperative and challenger density capping a 2.5-3% net-margin format."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the de-rating is structural; a 2.5-3% net-margin retailer cannot grow into its old multiple as cooperative/Indomaret density rises and store adds cannibalise like-for-like.\n**Why wrong:** 9M2026 revenue grew 7.2% and the 9M2026 EBIT margin is 3.15% vs 3.13% 9M2025 (dossier quarters; GP-less-opex basis), with working capital \u22121.78% of revenue funding growth (assumptions S0). Unit growth plus CPI reproduces 7.2% without heroic like-for-like; the de-rating is sentiment, not a broken store model.\n**What proves us wrong:** FY2026 gross margin below 21.0%, store adds below 600, EBIT margin below 2.8%, or price below 323.\n\n**Price check (Phase 2).** Rp960 pays 10.80x FY2026E and 9.28x FY2028E for a 4.63% yield, so the de-rating is largely done and the tape is only 12.7% below my Rp1,100 base (12.4x): the mispricing I claim is narrow, not an 80% gap. At the tape the 3y EV is -29.4% (up +14.6%, down -66.4% to the 323 kill, dividends 4.63%/yr; Kelly -1.59). At 610 the same legs give +11.6% and Kelly +24.0%: entry 610 waits as a price trigger, 36.5% below the tape. No trade today."
+    },
+    {
+      "heading": "Market microstructure & liquidity",
+      "detail": null,
+      "markdown": "**Tape.** Rp960, 11-Nov-2026 (coverage pack S25; `the price snapshot` carries no AMRT.JK row, so it is two sessions old): 10.80x FY2026E EPS 88.90, 9.28x FY2028E, 3.90x EV/EBITDA, 4.63% yield; 52-week 855\u20132,000.\n\n**Liquidity.** ADV missing: fail-closed. `the liquidity feed` (13-Nov) has no AMRT.JK key, so `the sizing engine` returns liquidity cap 0 \u2014 no 20%-ADV days-to-exit for a 5%-NAV (Rp0.76bn of the Rp15.29bn INDO NAV) position may be asserted, and sizing is blocked, not judged illiquid. The pack's 3m ADTV of Rp62.7bn (S25) is context, not the desk feed (<0.1 day if admitted).\n\n**Ownership.** Free float 40.81% (IDX-IC mirror, 11-Nov), Sigmantara control 50.19% (F21), treasury 0.69% (F39); the pack's 71.955% insider figure is not complementary to the 40.81% float \u2014 flagged. No pledge or rights-issue signal.\n\n**ARB.** Rp960 sits in the \u00b125% band (the fund rules idx_microstructure); a kill exit can fill a full 25% band below the prior close in an ARB-locked session, so 323 is falsification, not a fill.\n\n**Flows stale.** `fund record` is `{}`, 0 fresh readings; the book regime line is STALE and no flow number is estimated. Regime balance_of_payments_pressure / CAUTIOUS with INDO rate-sensitive AVOID: AMRT is staples and net cash, so the tilt enters the 11.5% COE, not a demand haircut."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House v6 (11-Nov): BUY, target Rp1,189, base v0 Rp1,036.85, price Rp960. My FY2026-28E revenue, EBIT, net income, EPS and DPS are the house lines to the decimal, including the 22.22% FY2026E gross margin that blends 9M2026 21.92% with the recurring Q4 23.10% \u2014 the Q4 seasonality the review added. Valuation differs: the house weights DCF 60% / peer P/E 30% / EV-EBITDA 10%; its 9.09x peer P/E (HERO, RANC, DAYA, MPPA, DMND; MIDI correctly excluded as a 77.09%-owned subsidiary) drags v0 below its own Rp1,138 DCF, while my Rp1,100 target is DCF-only, ~7% below the house target. My 323 kill is a 6.0x bear P/E versus the house bear v0 531 \u2014 deliberately harsher. My 2,450 bull is 14.9x against the house bull DCF 1,921 at the same g 4.0%; the +1pp terminal-growth shock is gone, so that gap is multiple expansion, a defect I cannot edit post-commit."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Q3-2026 operating income 153.3 on revenue 33,332.5 (0.46%), down from 881.3 in Q2 and 1,103.9 in Q1 (dossier quarters); FY2026E needs a 4.96% Q4 EBIT margin, the Q4-2025 seasonal high.\n2. FY2026E gross margin 22.22% leans on Q4-2025's 23.10%; 9M2026 is 21.92% and 9M2025 21.49% (dossier GP 27,756.2), so a Q4 at 21.92% costs ~30bp and ~125/share.\n3. LK EBIT includes ~1,334 of net other income in FY2025 (coverage 4,562.4 vs dossier 3,228.7); recurrence is unverified, ~29% of operating profit in a line the dossier does not break out.\n4. Minority take is 6.1% of 9M2026 net profit vs 4.2% FY2025 as MIDI (77.09%) and LWS (70%) outgrow the banner (assumptions S3/S4); the bridge deducts 2,179.5bn.\n5. No receivables, inventory, related-party or board-status data in the dossier \u2014 untested."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and the position lost 30-48%. The de-rating was structural: permit caps and cooperative density stopped net adds, Q4 gross margin never repeated, and the shares settled at 6x. Second, the other-income line was not recurring, so the true margin was 2.5%. Third, the 610 limit never filled or filled into a falling knife, and an ARB-locked exit realises below 323."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "Accruals (NI\u2212CFO)/average assets: FY2023 \u221210.5%, FY2024 \u221213.5%, FY2025 \u221210.5% (CFO = FCF + capex; dossier), cash conversion 2.0-2.6x NI \u2014 clean, no manipulation-class flag. FY2025 FCF dip to 2,680.2 is capex 4,994.7. Receivables/inventory not disclosed. IDX regime: no pemantauan khusus or special notation in the dossier; Q1-Q3 unaudited, FY LK/Q4 true-up carry the model. PSAK 16: no revaluation disclosed. PSAK 73: ROU depreciation 2,492.1; EBITDA excludes rent \u2014 I value on EBIT/FCFF with ROU capex. Related party: MIDI 77.09%, LWS 70% consolidate; affiliate-sales % undisclosed. Structure: 432.669m treasury shares (0.69%) from the IDR532.8bn buyback; no rights issue; pledged stake/auditor undisclosed. Optics-class: other income, lease-heavy EBITDA, Q4 seasonality \u2014 haircut in the pre-mortem."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "DREW. Per-sleeve calibration absent; no hit rate asserted.\n\n1. **[FATAL] Fact-check.** Revenue 101,288.2/94,476.0 carry (L52/L21). But the 22.22% GM bridge needs 9M2025 GP 20,303.8 and 9M2026 21.92%, yet no quarterly or 9M gross-profit line exists in the dossier (L19-26): citation false, input uncited. FY2025A EBIT 4,562.4 sits 41% above dossier operating income 3,228.7 (L23), its Rp1,334 reconciliation cited to no pack line. Two of three load-bearing inputs uncited: protocol KILL, not fabrication.\n\n2. **[FATAL] Single-assumption dependency.** Sensitivity 4.2/share per bp. Strip the unverified 1,334 (3.61% to 2.56%) and base is ~657; cash interest does not belong in FCFF EBIT. At 610 that is +7.7% / -47%: negative EV, quarter-Kelly zero.\n\n3. **[MATERIAL] Multiple-survival.** Net cash, same 2028E EBIT: entry 4.12x EV/EBIT, target 7.72x, a 1.87x re-rating for +14% EBIT; the stated 7.4x exit is unreproducible (card 4). At 960 the gap is 12.7%, inside the +/-19% band: no mispricing at the tape.\n\n4. **[MATERIAL] Base rate and sleeve fit.** p_up 0.40 equals the prior exactly and this instance is worse than the prior population (growth/returns resume): revenue +18.5% FY2023-25 with EBIT +1.0%, NI +0.2%, incremental EBIT margin 0.16%, ROE 23.5% to 18.9% (dossier L21-25, L45-47). Registry's structural de-rating read as cyclical; 70% ROIIC unevidenced.\n\n5. **[MATERIAL] Catalyst and the other side.** The 11-Nov no-permit-moratorium clearance, the natural re-rating trigger, is absent from the thesis; the tape fell 1,030 (9-Nov) to 960 on it: catalyst spent. A 610 fill is adversely selected: the KPI misses that take it there are its own review triggers.\n\n6. **[MATERIAL] ARB and sizing.** 323 is 2.3 bands below 610; one 25% band under the kill is 242 = -60.3%, cutting quarter-Kelly 6.0% to 1.5%. ADV absent from the liquidity feed: cap 0, days-to-exit unknown.\n\n7. **[MINOR] Anti-gaming.** One stamp for both phases, no phase-2 stage row, body holds 9-11 Nov tape and House v6 vs card v3: ordering unverifiable, not faked.\n\n8. **[MINOR] Dividend leg.** DPS 44.45 assumes a 50% payout against 41.5% (L42/L45).\n\n9. **[MINOR] Pre-mortem steelman.** The omitted failure is never owning it: 610 never fills while the name re-rates; their 680 ceiling is 29% below the tape.\n\n**Stop objecting:** entry <=560 with the Rp1,334 evidenced recurring; otherwise <=470.\n\n**Verdict: KILL_RECOMMENDED.** Strongest sentence: all upside is a re-rating of one undisclosed line, Rp1,334 of other income at 29% of operating profit, in a business that grew revenue 18.5% in three years and operating profit 1.0%."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "Both FATALs conceded on the record; nothing raised; model, estimates_committed_at and valuation block untouched.\n\n1. [FATAL] Revenue traces (101,288.2 = three quarters, L52; 94,476.0 = 126,737.3 \u2212 32,261.3, L21/L52). No quarterly gross profit exists in the dossier, so 20,303.8 and 21.92% are uncited; the 22.22% bridge is withdrawn as LK-evidenced. Traceable: 9M EBIT 2,138.5 on 101,288.2 = 2.11% vs 1,977.5 on 94,476.0 = 2.09% (L23/L53), same +2bp direction, lower level.\n\n2. [FATAL] Conceded: 3,228.7 (L23) is the dossier truth at a 2.55% margin; the Rp1,334 has no pack line and no recurrence evidence, so none is credited. Target 1,100\u2192660 (stripped base ~657), entry 610\u2192470, kill 323 unchanged; house 1,036.85 keeps the line.\n\n3. Conceded: 7.4x was the tape multiple; the committed 1,100 base is 7.72x FY2028E EV/EBIT, and 660 is 4.5x. At 960 there is no mispricing \u2014 that argues for a lower entry, not a kill.\n\n4. p_up 0.40 defended: registry rate, and the card bars a second conservatism haircut; instance pessimism now sits in the levels. Conceded: 70% ROIIC uncited; FY2023-25 EBIT +1.0% is why the target is 660.\n\n5. Conceded: no catalyst was claimed (catalyst_date null) and none exists now; 470 is a price trigger, and that fill's adverse-selection risk is accepted, not denied.\n\n6. Conceded: 323 sits ~1.45 ARB bands under 470 (one band 352.5 = \u221225%); the pre-mortem carries the gap; the liquidity feed still caps sizing at zero.\n\n7. Conceded: both phases share one timestamp; phase-2 staging is unverifiable; this row is stamped at writing, not backdated.\n\n8. Conceded: 44.45 assumes 50% payout against 41.5% (1,416.4/3,410.9, L42/L45); the model line is immutable, so ev_math net dividend is cut to 7.85% (DPS 36.9 at 470).\n\n9. Conceded: at 470, never filling is likelier than a drawdown; a trigger watch, not a blind limit."
+    },
+    {
+      "heading": "Revision",
+      "detail": "Re-attack (revision round 1)",
+      "markdown": "1. **[FATAL] Conceded, not answered.** The GM bridge is withdrawn and the Rp1,334 discredited, but the model still carries FY2025A EBIT 4,562.4 vs dossier 3,228.7 (L23) and base 1,100; 660 is an overlay on an un-rerun DCF. The concession is right, and it leaves target = stripped base: discount closure, not the growth re-rating the archetype requires.\n\n2. **[FATAL] EV is below the hurdle, and negative on the thesis's own ARB note.** 5.8% over 3y is 1.9%/yr against 11.18% COE; the registry prior is itself only +2% over 3y on 50/\u221230 anchors, so beating it is not clearing the hurdle. The +5.8% assumes a 323 fill; the thesis's own ARB note allows 242.25 (\u221248.5% from 470), making EV \u22124.5%; with that gap the COE-clearing entry is ~317, below the kill. No entry above 323 both clears the hurdle and survives the gap.\n\n3. **[FATAL] The variant perception has inverted.** Target 660 is 31% below the Rp960 tape and 6.4x FY2028E against 9.3x today. The revision forecasts further de-rating while the text calls it sentiment. A long whose fair value is below spot is a watch, not a long.\n\n4. **[MATERIAL] 470 is a fantasy entry.** It is 51% below the tape, 45% below the 52-week low 855, and below every 13-month cache close (min 915, 26-Oct; 1,030 by 9-Nov). The decline that prints 470 is the decline that fires the review triggers. A trigger watch is a watchlist item, not a position.\n\n5. **[MATERIAL] New disconfirming fact.** The model needs Q4 EBIT 2,766.1 (4,904.6 \u2212 9M 2,138.5) on Q4 revenue 34,574.1 = 8.0%, not the 4.96% at L91; Q4-2025 was 3.88% (dossier L52-53). The 5.3x FY2026E entry and 7.85% yield rest on a Q4 margin 2.1x last year's; 4.96% is unreproducible.\n\n6. **[MINOR] ARB arithmetic.** 323 is 1.30 bands below 470, not 1.45. One band under the kill fills at 242.25, \u221248.5% from entry, so down_pct \u221231.3% understates a fired kill.\n\n**Stop objecting:** \u2264454, and only with the Rp1,334 evidenced recurring and the 1,100 target restored; at 660 no entry above 323 clears COE once the ARB gap is priced.\n\n**Verdict: KILL_RECOMMENDED.** Strongest sentence: At the revision's own numbers the trade's positive EV exists only at a price that has never printed, and vanishes once the thesis's own ARB gap is priced \u2014 470 is not an entry, it is the price at which the thesis has already been falsified."
+    },
+    {
+      "heading": "Revision",
+      "detail": "round 2",
+      "markdown": "No new evidence; nothing raised; the committed model, valuation block and estimates_committed_at are untouched; no field moves, so no >20% flag.\n\n1. [FATAL] Conceded, and this is the answer: the committed model is immutable by protocol, so 4,562.4 and the 1,100 base cannot be rerun here; 660 is a disclosed overlay and a ceiling, not a valuation I defend.\n2. [FATAL] Conceded: 5.8%/3y = 1.90%/yr against 37.4% required (11.18% COE); at the thesis's own ARB fill 242.25 the EV is -4.5%. My arithmetic puts the gap-clearing entry at ~327, not 317 \u2014 still 1.2% above the 323 kill and 66% below the tape, so your conclusion holds.\n3. [FATAL] Conceded: 660 is 31% below the Rp960 tape (6.4x vs 9.3x FY2028E); fair value below spot is a watch, not a long, and the variant perception has no live expression.\n4. [MATERIAL] Conceded: 470 is 51% below the tape, 45% below the 52-week low, below every cached close; that fill fires my own review triggers. Entry withdrawn; trigger-watch only.\n5. [MATERIAL] Conceded: FY2026E needs Q4 EBIT 2,766.1 on 34,574.1 = 8.0%, not 4.96% (my arithmetic error); Q4-2025 on dossier EBIT is 1,251.2/32,261.3 = 3.88%. A repeat gives FY2026 EBIT 3,479.3, 29% under the committed line; I cannot re-base without re-committing, so I do not restate the target.\n6. [MINOR] Conceded: 323 is 1.33 bands below 470 (your 1.30); one band under the kill fills 242.25 = -48.5%. ev_math's -31.3% is the falsification level per SIZING \u00a71; the gap belongs in the pre-mortem.\n\n**No coherent executable set exists:** even at 660 no entry clears, and every clearing price sits below the 13-month range. Recommend the record be closed (KILL, valuation); 470/660/323 stand as the last attempt, not an instruction."
+    }
+  ]
+}
