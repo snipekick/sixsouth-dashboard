@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-11-14T01:39:25+07:00",
+  "asof": "2026-11-14T02:19:33+07:00",
   "decks": {
     "agri": {
       "title": "Agricultural & soft-commodity deck",
       "owner": "SECTOR_LEAD_CONSUMER_NON_CYCLICALS",
-      "asof": "2026-11-13",
+      "asof": "2026-11-14",
       "variables": {
         "cpo": {
           "label": "Crude palm oil (benchmark)",
@@ -44,7 +44,7 @@
           },
           "lt": 1093.67,
           "spot": {
-            "value": 1414.2654,
+            "value": 1405.006,
             "asof": "2026-11-13",
             "source": "Yahoo Finance ZL=F"
           },
@@ -67,7 +67,7 @@
           },
           "lt": 284.13,
           "spot": {
-            "value": 218.625,
+            "value": 217.339,
             "asof": "2026-11-13",
             "source": "Yahoo Finance ZW=F"
           },
@@ -90,7 +90,7 @@
           },
           "lt": 215.5,
           "spot": {
-            "value": 176.37,
+            "value": 175.4842,
             "asof": "2026-11-13",
             "source": "Yahoo Finance ZC=F"
           },
@@ -956,7 +956,7 @@
     "macro": {
       "title": "House macro deck",
       "owner": "MACRO_FX",
-      "asof": "2026-11-13",
+      "asof": "2026-11-14",
       "variables": {
         "usd_idr": {
           "label": "IDR per USD",
@@ -974,7 +974,7 @@
           },
           "lt": 19000.0,
           "spot": {
-            "value": 18190.0,
+            "value": 18149.0,
             "asof": "2026-11-13",
             "source": "Yahoo Finance IDR=X"
           },
@@ -997,7 +997,7 @@
           },
           "lt": 102.0,
           "spot": {
-            "value": 103.233,
+            "value": 103.337,
             "asof": "2026-11-13",
             "source": "Yahoo Finance DX-Y.NYB"
           },
@@ -1068,8 +1068,8 @@
         "rf_usd": {
           "label": "10-year US Treasury yield",
           "unit": "rate",
-          "value": 0.05103,
-          "asof": "2026-11-12",
+          "value": 0.05141,
+          "asof": "2026-11-13",
           "source": "Yahoo Finance ^TNX (US 10-year Treasury yield)",
           "status": "reviewed"
         },
@@ -1077,24 +1077,24 @@
           "label": "Mature-market equity risk premium (Damodaran)",
           "unit": "rate",
           "value": 0.0423,
-          "asof": "2026-11-13",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-13",
+          "asof": "2026-11-14",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-14",
           "status": "reviewed"
         },
         "crp_id": {
           "label": "Indonesia country risk premium (Damodaran)",
           "unit": "rate",
           "value": 0.0246,
-          "asof": "2026-11-13",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-13",
+          "asof": "2026-11-14",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-14",
           "status": "reviewed"
         },
         "default_spread_id": {
           "label": "Indonesia sovereign default spread (Damodaran)",
           "unit": "rate",
           "value": 0.0162,
-          "asof": "2026-11-13",
-          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-13",
+          "asof": "2026-11-14",
+          "source": "Damodaran country risk premiums (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html), page dated January 5, 2026, read 2026-11-14",
           "status": "reviewed"
         },
         "debt_spread_corp": {
@@ -1239,7 +1239,7 @@
     "metals": {
       "title": "Metals deck",
       "owner": "SECTOR_LEAD_BASIC_MATERIALS",
-      "asof": "2026-11-13",
+      "asof": "2026-11-14",
       "variables": {
         "gold": {
           "label": "Gold",
@@ -1257,7 +1257,7 @@
           },
           "lt": 4300,
           "spot": {
-            "value": 3892.8,
+            "value": 3886.2,
             "asof": "2026-11-13",
             "source": "Yahoo Finance GC=F"
           },
@@ -1280,7 +1280,7 @@
           },
           "lt": 65.0,
           "spot": {
-            "value": 49.865,
+            "value": 49.06,
             "asof": "2026-11-13",
             "source": "Yahoo Finance SI=F"
           },
@@ -1303,7 +1303,7 @@
           },
           "lt": 11000,
           "spot": {
-            "value": 13559.531,
+            "value": 13416.2304,
             "asof": "2026-11-13",
             "source": "Yahoo Finance HG=F"
           },
@@ -1326,7 +1326,7 @@
           },
           "lt": 3000,
           "spot": {
-            "value": 3125.0,
+            "value": 3120.0,
             "asof": "2026-11-13",
             "source": "Yahoo Finance ALI=F"
           },
@@ -1431,7 +1431,7 @@
     "oil": {
       "title": "Oil & gas deck",
       "owner": "SECTOR_LEAD_ENERGY",
-      "asof": "2026-11-13",
+      "asof": "2026-11-14",
       "variables": {
         "brent": {
           "label": "Brent crude",
@@ -1449,7 +1449,7 @@
           },
           "lt": 75.0,
           "spot": {
-            "value": 95.89,
+            "value": 95.8,
             "asof": "2026-11-13",
             "source": "Yahoo Finance BZ=F"
           },
@@ -1472,7 +1472,7 @@
           },
           "lt": 69.0,
           "spot": {
-            "value": 88.45,
+            "value": 88.63,
             "asof": "2026-11-13",
             "source": "Yahoo Finance CL=F"
           },
@@ -1495,7 +1495,7 @@
           },
           "lt": 3.1,
           "spot": {
-            "value": 3.273,
+            "value": 3.254,
             "asof": "2026-11-13",
             "source": "Yahoo Finance NG=F"
           },
