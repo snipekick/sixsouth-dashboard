@@ -11,18 +11,23 @@
     "frontmatter": {
       "ticker": "DOID.JK",
       "report_type": "update",
-      "version": 4,
-      "title": "BUMA Internasional Group: fees from coal, debt from a producer",
-      "summary": "BUMA is a coal-mining contractor carrying producer-sized debt. We rate the shares BUY with a Rp187 target. The base case floors at zero because enterprise value sits below net debt; the positive value is the bull branch, and the branch clears the debt on capital intensity, not on a margin recovery. The associate stake decides BUY rather than HOLD.",
+      "version": 5,
+      "title": "BUMA Internasional Group: a levered fee business with the equity priced as an option",
+      "summary": "BUMA is a coal-mining contractor carrying producer-sized debt, cut to CCC-(idn) on 11 November 2026. We rate the shares SELL with a Rp21 target: the base and the bear both floor at zero, the bull branch is worth Rp154 at 15.0% of the mass, and even a certain bull does not clear the ADD threshold. The price implies far more than that.",
       "thesis": [
         "Revenue is a fee for moving rock and coal, not a coal price: lower thermal prices hit customer performance and contract negotiations rather than revenue directly [S2, p.32], so we model volume and renewal timing, not a price realisation.",
         "The debt is the investment case: FY2025 finance cost of US$91.6m exceeded free cash flow to the firm, and the shortfall is refinanced every year rather than repaid [S6].",
         "EBITDA is US$173.8m on the LK's own lines \u2014 operating result plus total depreciation and amortisation \u2014 reconciling to the US$175m the company reports [S2, pp.10, 362, 405-407].",
-        "The DCF puts enterprise value at US$306.5m, below net debt, so the base and the bear floor at zero; the bull branch, 15.0% of the mass, is worth Rp1,382 and carries the target. It clears the debt on the capex ratio, not on the margin recovery [S0].",
-        "The peer EV/EBITDA cross-check is retired: the data packs' EBITDA field is an EBIT field, and rebuilt on the peers' own LK depreciation the corrected multiple values DOID's equity at zero [S0, S2, p.362].",
-        "The associate stake at book is optionality, not solvency: on a full write-off the bull branch stays positive and the target falls just above the price, so the add-back decides BUY versus HOLD [S0, F55]."
+        "The DCF puts enterprise value at US$338.0m, below net debt, so the base and the bear floor at zero and the bull branch carries the target [S0].",
+        "The bull is an operating-recovery case, not a capex case: the 2026 capex cut is a liquidity deferral that must be caught up, so capex stays at the maintenance ratio where it equals D&A, and the branch clears only on the contracted book, the cost programme and the associate add-back [S2, p.72; S11].",
+        "The price is the problem: to justify Rp133 the model needs FY2027E revenue growth of 29.4% against our 8.0% [S0]."
       ],
       "catalysts": [
+        {
+          "date": "2026-12-28",
+          "event": "Rp{{fact.F98|num0}}bn domestic bond maturity; Fitch says internal cash flow cannot cover it [S12, F98]",
+          "source": "S12"
+        },
         {
           "date": "2026-12-31",
           "event": "Next covenant test; waivers were obtained for the two prior dates [S6, p.77]",
@@ -34,16 +39,6 @@
           "source": "S2"
         },
         {
-          "date": "2027-04-30",
-          "event": "Clearmatch insurance funding facility matures; the current sukuk and bond portion falls due",
-          "source": "S6"
-        },
-        {
-          "date": "2029-09-30",
-          "event": "Syndicated bank facility matures, five and three-quarter years after the December 2023 first drawdown",
-          "source": "S6"
-        },
-        {
           "date": "2030-12-31",
           "event": "Adaro South Tutupan contract expiry; the only dated client expiry inside the forecast",
           "source": "S4"
@@ -51,7 +46,7 @@
       ],
       "desk": "ENERGY",
       "analyst": "COVERAGE_ANALYST",
-      "asof": "2026-11-12"
+      "asof": "2026-11-14"
     },
     "sections": [
       {
@@ -60,19 +55,15 @@
         "blocks": [
           {
             "type": "para",
-            "text": "**What changed.** The construction, not the wording. First, the bull's value is now attributed to its actual driver: the branch clears the debt on the capex ratio, not on the margin recovery. The engine's own grid shows the two mirrored operating shocks alone leave the twelve-month value at the floor, and the capex shock contributes almost all of the branch's equity [S0]. That is stated in the scenario and in the valuation and risk sections, with its source \u2014 capex between the ratios the company actually spent in FY2023 and FY2024, below FY2025's [S2, p.72] \u2014 rather than credited to the margin story. Second, the associate sensitivity is corrected: the bull equity is positive before the associate is added, so a full write-off does not floor the branch, it moves the target from BUY to HOLD. The previous version had that backwards [S0, F55]. The peer-multiple retirement and the D&A double-count correction from the prior round stand. The earlier target was not an engine output: it was a hand adjustment to the branch weight, and the engine run that preceded the pack refresh already printed SELL on the same inputs."
+            "text": "**What changed: prior BUY at Rp one-eighty-seven (12 November 2026) replaced by SELL at Rp21.** This update reverses the published call, from BUY and a Rp one-eighty-seven target two days ago to SELL and Rp21, a return of -84.3%. The reversal is not a change of judgment: it is two corrections to the mechanism that carried the BUY. First, the nine-month 2026 print: EBITDA of US$US$97.0mm, -23.0%, on revenue of US$US$928.8mm, -18.0%, with the group still loss-making and net debt at US$872.7m [S11, S13; F103, F90, F67, F89]. Second, the capex correction: the BUY was funded by holding capex below D&A, and the 2026 heavy-equipment reduction is a liquidity deferral that must be caught up, not a structural saving, so the branch now keeps capex at the maintenance ratio where it equals D&A \u2014 a fleet funded below the charge cannot carry the extra volume [S2, p.72; S11]. The calibration, sensitivity and rating-threshold arithmetic follow from those two facts."
           },
           {
             "type": "para",
-            "text": "We rate DOID BUY with a twelve-month target of Rp187, 40.3% from Rp133. It is one of Indonesia's largest coal-mining contractors, but the equity sits behind a debt load the operating cash flow does not cover, so the valuation is a view on whether enterprise value can outgrow the debt [S2, S6]."
+            "text": "We rate DOID SELL with a twelve-month target of Rp21, -84.3% from Rp133 (12 November 2026 close). The base at 60.0% and the bear at 25.0% both floor at zero, so eighty-five per cent of the probability mass is a total loss and the whole target is the bull at 15.0%, worth Rp154. That is a real recovery branch \u2014 nine-month free cash flow turned positive, the net loss was cut by half, Australian overburden rose and fuel cost per volume fell [S11; F100, F101, F94, F93] \u2014 but it is not worth the price. Even if the branch were certain, the value would be Rp one-thirty-eight, a little over four per cent above the price and inside the HOLD band, so no feasible bull weight produces a BUY. The price implies the opposite of our view: the model needs FY2027E revenue growth of 29.4% to justify Rp133, against our 8.0% [S0]."
           },
           {
             "type": "para",
-            "text": "FY2025 revenue was US$1,480.3m, EBITDA US$175m, finance cost US$91.6m and net loss US$-127.6m, with parent equity of US$51.6m against net debt of US$872.7m [S2, S6]. The DCF at 11.9% produces enterprise value of US$306.5m, below net debt, so the base and the bear floor at zero; the bull branch, 15.0% of the probability mass, is worth Rp1,382, and it is the entire positive value [S0]."
-          },
-          {
-            "type": "para",
-            "text": "That is the honest shape of a levered equity: the base case at 60.0% is worth Rp0 because enterprise value does not clear the debt, the bear at 25.0% is worth the same for the same reason, and the target of Rp187 is the probability-weighted value after the 10.0% haircut [S0]. The call turns on the bull's weight and on its capital intensity. The weight is anchored to the house base rate for this archetype, annualised to a twelve-month branch and shaded for the covenant risk a producer does not carry; the exact arithmetic, including the weight at which the target equals the price, is written out in `fund record`, where it can be audited [S0, S6, p.77]. The capital intensity is sourced to what the company has actually spent [S2, p.72; S6, p.10]. A sustained margin recovery, an award that lifts volume without new capital, or a refinancing that cuts the interest burden would change the call; a debt-for-equity converts the bull into a zero for existing holders [S6]."
+            "text": "FY2025 revenue was US$1,480.3m, EBITDA US$175m, finance cost US$91.6m and net loss US$-127.6m, with parent equity of US$51.6m against net debt of US$872.7m [S2, S6]. The DCF at 12.0% produces enterprise value of US$338.0m, below net debt, so the base and the bear floor; the equity is a call option that is out of the money. What would change the view: a refinancing that extends maturities without adding debt, an award that lifts volume without new capital, or a debt-for-equity conversion \u2014 which converts the bull into a zero for existing holders [S6, S12]."
           }
         ]
       },
@@ -82,15 +73,11 @@
         "blocks": [
           {
             "type": "para",
-            "text": "DOID became a coal-mining contractor through the acquisition of PT Bukit Makmur Mandiri Utama, still known as BUMA, then bought Downer's Australian mining-services business and Atlantic Carbon Group; it now trades as PT BUMA Internasional Grup under the old Delta Dunia identity [S2, p.60]. The revenue model is a service fee: BUMA removes overburden, drills, gets coal, hauls and manages mine infrastructure, paid per unit of work under multi-year contracts [S2]."
+            "text": "DOID is a coal-mining contractor: it bought PT Bukit Makmur Mandiri Utama (BUMA), then Downer's Australian mining-services business and Atlantic Carbon Group, and now trades as PT BUMA Internasional Grup under the old Delta Dunia identity [S2, p.60]. The revenue model is a service fee: BUMA removes overburden, drills, gets coal, hauls and manages mine infrastructure, paid per unit of work under multi-year contracts [S2]."
           },
           {
             "type": "para",
-            "text": "In FY2025 it moved 439 million bcm of overburden and produced 84 million tonnes of coal at a stripping ratio of 5.2x, below FY2024's 545 million bcm and 90 million tonnes [S2, p.13; S5]. First-half FY2026 revenue was US$459.8m from Indonesia, US$210.7m from Australia and US$22.3m from the United States, and the top five customers were 78.0% of revenue [S6, pp.106, 117]."
-          },
-          {
-            "type": "para",
-            "text": "The book is long-dated but finite: Adaro South Tutupan, started in April 2026, delivers 239 million bcm and 44 million tonnes to end-2030 [S4], while the Australian contracts run to mid-2030 and September 2027, then become renewals [S2, p.49]. Atlantic Carbon owns more than 8,000 hectares [S2, p.366], and the company holds 22.6% of an ASX-listed copper associate, up from 20.0% [S6, p.67]. Northstar Tambang Persada controls 38.2% with a free float of 45.5%, so any capital-structure solution is negotiated [S2, p.88; S0]."
+            "text": "In FY2025 it moved 439 million bcm of overburden and produced 84 million tonnes of coal at a stripping ratio of 5.2x, below FY2024's 545 million bcm and 90 million tonnes [S2, p.13; S5]. First-half FY2026 revenue was US$459.8m from Indonesia, US$210.7m from Australia and US$22.3m from the United States, and the top five customers were 78.0% of revenue [S6, pp.106, 117]. The book is long-dated but finite: Adaro South Tutupan delivers 239 million bcm and 44 million tonnes to end-2030 [S4], while the Australian contracts run to mid-2030 and September 2027 [S2, p.49]. The company holds 22.6% of an ASX-listed copper associate [S6, p.67], and Northstar Tambang Persada controls 38.2% with a free float of 45.5%, so any capital-structure solution is negotiated [S2, p.88; S0]."
           }
         ]
       },
@@ -104,11 +91,7 @@
           },
           {
             "type": "para",
-            "text": "Thermal coal corrected while metallurgical coal and copper rose; the company states lower thermal prices did not directly reduce revenue but affected customer performance and negotiations [S2, p.32]. The coal price reaches DOID through the client's willingness to strip and the rate negotiated at renewal, not a realisation per tonne, so we put no coal price in the model; volume is the driver, and FY2025 overburden and coal production both fell, on weather and on contracts concluding at Broadmeadow, Commodore and Saraji [S2, p.13; S5]."
-          },
-          {
-            "type": "para",
-            "text": "Competition is among contractors with national fleets: the barriers are fleet capital, a safety record and working capital to carry receivables through a ramp [S2], but the moat is narrow, since the owner can move the work at the end of a term [S5]. Buyer power is high with the top five customers at 78.0% of revenue [S6, p.106], and rivalry at renewal leaves a thin spread over a heavy asset base."
+            "text": "Thermal coal corrected while metallurgical coal and copper rose; the company states lower thermal prices did not directly reduce revenue but affected customer performance and negotiations [S2, p.32]. The coal price reaches DOID through the client's willingness to strip and the rate negotiated at renewal, not a realisation per tonne, so volume is the only driver we model, and FY2025 overburden and coal production both fell [S2, p.13; S5]. Competition is among contractors with national fleets: the barriers are fleet capital, a safety record and working capital, but the moat is narrow, since the owner can move the work at the end of a term [S2; S5]. Buyer power is high with the top five customers at 78.0% of revenue [S6, p.106], and rivalry at renewal leaves a thin spread over a heavy asset base."
           }
         ]
       },
@@ -122,19 +105,19 @@
           },
           {
             "type": "para",
-            "text": "Revenue fell from US$1,553.7m in FY2022 to US$1,480.3m in FY2025, -15.7% year on year, and gross margin fell from 13.1% and 13.4% to 8.7% and 2.8%, with reported EBITDA down more than two fifths to US$175m, or US$207m before severance [S2, p.48]. The net loss is much larger than the operating loss because US$21.0m of impaired receivables and US$11.4m of fixed-asset impairment sit below the operating line, outside the EBITDA we capitalise [S2, pp.35, 405]."
+            "text": "Revenue fell from US$1,553.7m in FY2022 to US$1,480.3m in FY2025, -15.7% year on year, and gross margin fell from 13.1% and 13.4% to 8.7% and 2.8%, with reported EBITDA down more than two fifths to US$175m [S2, p.48]. The net loss is much larger than the operating loss because US$21.0m of impaired receivables and US$11.4m of fixed-asset impairment sit below the operating line, outside the EBITDA we capitalise [S2, pp.35, 405]."
           },
           {
             "type": "para",
-            "text": "Two restatements matter, and a third now applies to the earlier years. The pack's depreciation line is not the real charge: the notes show US$234.7m in FY2025 and US$255.4m in FY2024, split between cost of revenues and operating expenses, so a cash cost calibrated off the pack would be wrong by an order of magnitude [S2, p.362]. The same stub distorts the pack for FY2023 and FY2022; we restate both from the company's own EBITDA in the FY2024 report less the LK operating profit, which gives a monotonic history rather than the artefact in which EBITDA doubled in the year revenue fell [S10, p.14]. Finance cost was US$91.6m and US$102.7m against a blended balance above a billion dollars, a cash cost near nine per cent rather than the pack's lower figure, so we hold a blended cost of debt of 8.5% [S2, S6, pp.75, 80]."
+            "text": "Two restatements matter, and a third now applies to the earlier years. The pack's depreciation line is not the real charge: the notes show US$234.7m in FY2025 and US$255.4m in FY2024, so a cash cost calibrated off the pack would be wrong by an order of magnitude [S2, p.362]. The same stub distorts FY2023 and FY2022, which we restate from the company's own EBITDA in the FY2024 report less the LK operating profit, giving a monotonic history rather than the artefact in which EBITDA doubled in the year revenue fell [S10, p.14]. Finance cost was US$91.6m and US$102.7m against a blended balance above a billion dollars, so we hold a blended cost of debt of 8.5% [S2, S6, pp.75, 80]."
           },
           {
             "type": "para",
-            "text": "EBITDA is US$173.8m on the LK's own lines: the operating result of US$-68.0m [F43] plus total depreciation and amortisation of US$241.8m [F58], against the company's own US$175m measure [S2, pp.405-407]. The pack prints a lower operating result because it folds the Australian receivable provision into operating cost, which the LK does not. EBITDA is now the DCF's cash flow base and the screen's denominator, not a multiple metric; the ex-severance figure of US$207m [S2, p.48] is disclosed and not used."
+            "text": "EBITDA is US$173.8m on the LK's own lines: the operating result of US$-68.0m [F43] plus total depreciation and amortisation of US$241.8m [F58], against the company's own US$175m measure [S2, pp.405-407]. The pack prints a lower operating result because it folds the Australian receivable provision into operating cost, which the LK does not; EBITDA is the DCF's cash-flow base, and the ex-severance figure of US$207m [S2, p.48] is disclosed and not used. The two D&A numbers in these pages reconcile: the US$US$234.7mm in the fixed-asset note is depreciation of fixed assets only, and the US$US$241.8mm used here adds US$ seven point one million of amortisation charged to cost of revenues and opex, so the EBITDA build carries the full charge rather than the narrower note line [S2, p.362; F7, F58]."
           },
           {
             "type": "para",
-            "text": "Capital expenditure was US$177.6m in FY2025 and free cash flow to the firm US$62.8m, positive but small against the interest bill [S2]. In 1H2026 it generated US$63.8m of operating cash flow on US$692.8m of revenue, spent US$49.2m on fixed assets and reported EBITDA of US$69.0m, an improvement attributed to workforce optimisation and fuel efficiency but an efficiency story on a small base, not a spread recovery [S3, S6]."
+            "text": "Capital expenditure was US$177.6m in FY2025 and free cash flow to the firm US$62.8m, positive but small against the interest bill [S2]. In 1H2026 it generated US$63.8m of operating cash flow on US$692.8m of revenue and spent US$49.2m on fixed assets, an efficiency story on a small base, not a spread recovery [S3, S6]."
           },
           {
             "type": "block",
@@ -142,19 +125,19 @@
           },
           {
             "type": "para",
-            "text": "Net debt was US$872.7m at the year end, or 5.0 times our EBITDA and 5.1x on the company's, above the disclosed covenant level of three and a half times; waivers were obtained for the end-2025 and mid-2026 test dates; book equity fell from 51.6m to a few million dollars at the interim [S2, S6, p.77]."
+            "text": "Net debt was US$872.7m at the year end, or 5.0 times our EBITDA and 5.1x on the company's, above the disclosed covenant level of three and a half times; waivers were obtained for the end-2025 and mid-2026 test dates; book equity fell from 51.6m to a thin positive at the interim [S2, S6, p.77; F79]."
           },
           {
             "type": "para",
-            "text": "Our forecast holds the FY2025 cost structure in real terms. Revenue is -1.0% in FY2026E, then 2.5% from the named extensions; Adaro is a continuation, since the source says it \"secures the continuation of BUMA's operations at South Tutupan\" and quotes the volumes as the replacement term's gross, so we credit no incremental volume [S4]. The gross margin input is stated on a cash-cost basis, so that the depreciation the forecast adds back is the depreciation it deducts: 3.7% after the Brent link, against the 2.8% reported margin [S6, S2, p.362]. Capex is 7.5% of revenue in FY2026E rising to 10.2%, about seven tenths of depreciation: we assume the fleet is maintained rather than replaced, because the first half of FY2026 ran at US$49.2m of cash capex [S6, F35]."
+            "text": "Our forecast holds the FY2025 cost structure in real terms. Revenue is -13.6% in FY2026E, then 8.0% from the named extensions; Adaro is a continuation, since the source says it \"secures the continuation of BUMA's operations at South Tutupan\" and quotes the volumes as the replacement term's gross, so we credit no incremental volume [S4]. The gross margin input is stated after the depreciation carried in cost of revenues, the way the LK prints it: 1.9% after the Brent link, against the 2.8% reported margin [S6, S2, p.362]. Because the D&A ratio glides from 15.1% to 10.0% to match maintenance capex, the gross-margin input rises by the same points and cash margin is unchanged, so no recovery is smuggled in through the depreciation line. Capex is 7.0% of revenue in FY2026E, rising to 9.0% and 10.0% from FY2028E \u2014 the FY2024 ratio, below FY2025's \u2014 so capex equals D&A at the horizon and fixed assets stay positive through FY2035E [S2, p.72; F18, F19]. The reported budget cut is the heavy-equipment line alone and sits below the US$73.4m of fixed assets actually bought in the nine months, so the forecast follows spend, not the budget line [S11, F81, S13, p.10]."
           },
           {
             "type": "para",
-            "text": "The margin step is disclosed rather than assumed, and it is no longer explained by a falling D&A ratio. EBITDA margin moves from 11.7% to 11.7%, reconciled in two sourced pieces: eight tenths from opex falling to six and a half per cent on the severance programme, and about a point against from the Brent fuel link (the deck's Brent path rising from about sixty-eight dollars to ninety-six, on a five per cent fuel share and half pass-through) [S6, S2]. A lower D&A charge is not a margin driver: D&A is added back in EBITDA and deducted again in EBIT, so it moves the split, not the total."
+            "text": "The margin step is disclosed rather than assumed. EBITDA margin moves from 11.7% to 10.4%, and the bridge sums: about a point against from volume deleverage on the -13.6% revenue decline, eight tenths from opex at six and a half per cent of revenue, and about a point against from the Brent fuel link on a five per cent fuel share and half pass-through, against one point four points of recovery from the depressed FY2026E stoppage year [S6, S2]. A lower D&A charge is not a margin driver: D&A is added back in EBITDA and deducted again in EBIT, so it moves the split, not the total. Read the gross-margin glide the same way: the input rises six and a half points while the D&A ratio falls five point one, so five point one points are D&A recapture and only one point four points are recovery from the FY2026E stoppage year, and the terminal realised cash margin of eighteen point nine per cent still sits below the last actual nineteen point one four per cent, so no margin expansion beyond the last actual survives [S2, S6; F7]."
           },
           {
             "type": "para",
-            "text": "On those inputs EBITDA is US$170.9m and US$181.5m while finance cost rises above a hundred million dollars a year [S6]. Net income is US$-131.3m and US$-131.7m, and free cash flow to the firm is well below the interest bill, so equity cash flow is negative after the first year and the company rolls its maturities; debt rises from US$1,111.8m to US$1,478.8m by FY2030E and US$1,882.2m by FY2035E, and book equity becomes steadily more negative. We assume neither default nor a rescue issue, only refinancing at the current blended cost, the most likely path while the lenders are cooperative [S6]. The earnings-quality screens are unambiguous: accruals are heavy because depreciation exceeds EBITDA, the receivable provision shows revenue is not all collectable, and working capital has funded the business for two years [S2, S3]."
+            "text": "On those inputs EBITDA is US$133.1m and US$159.5m while finance cost rises above a hundred million dollars a year [S6]. FY2026E holds the nine-month margin: the nine months printed EBITDA of US$US$97.0mm, -23.0% year on year, on revenue of US$US$928.8mm, -18.0% year on year, and the fourth quarter is carried at the same margin with the main client back at full run from November [S11; F103, F90, F67, F89, F95]. The nine-month group loss of US$42.8m is smaller than the first-half loss of US$49.8m, so the third quarter itself was profitable; the headline \"loss\" in the press is a nine-month figure [S11; F71, F22]. The FY2026E parent loss of US$-87.6m bridges to the reported nine-month loss of US$40.1m: Q4 EBITDA less Q4 D&A, net interest and a small negative other-income line, where the nine months carried an associate dividend received late in the quarter [S13 p.66; F96]. The arithmetic is in `fund record`. Equity cash flow is negative after the first year, so the company rolls its maturities; debt rises from US$1,111.8m to US$1,478.8m by FY2030E and US$1,882.2m by FY2035E, and book equity becomes steadily more negative. We assume neither default nor a rescue issue, only refinancing at the current blended cost: Fitch's 11 November action says no committed funding covers the near maturities, so this is the optimistic end of the refinancing assumption [S6; S12]. The earnings-quality screens point the other way on accruals. FY2025 operating cash flow of US$US$111.5mm was ahead of the US$-127.6m net loss, so the accruals ratio is negative \u2014 cash ahead of earnings, not earnings outrunning cash \u2014 and the heavy D&A is a non-cash burden rather than an accrual red flag [S2, pp.149, 308]. What the card does flag is asset quality and leverage: US$US$21.0mm of receivable provision [F45], US$US$11.4mm of fixed-asset impairment [F46] and 5.1x times net debt to EBITDA [F30], with working capital having funded the business for two years [S2, S3]."
           }
         ]
       },
@@ -164,11 +147,11 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The method set follows the business, not the industry code. DOID is listed in coal, but the fee business is the revenue, so a producer build would tie revenue to a Newcastle price and apply a royalty to service revenue; we use the corporate template and the contractor map, and the DCF carries the whole valuation [S2, p.60; S6, p.117]. The card this name is filed under is written for a producer \u2014 through-cycle price anchor, cost-curve quartile, reserve life, dividend-capacity yield against NAV \u2014 and DOID owns no reserve and sells no benchmark tonne, so the anchors are substituted rather than claimed: contract tenure and volume replace reserve life, the client's cost curve replaces our own AISC quartile, the fee per cubic metre replaces the realisation, and debt capacity replaces dividend capacity, because no distribution is payable while parent equity is negative [S2, S6]. That substitution is the reason the engine runs the corporate template, not the producer template."
+            "text": "The method follows the business, not the industry code. DOID is listed in coal, but the fee business is the revenue, so a producer build would tie revenue to a Newcastle price and apply a royalty to service revenue; we use the corporate template, and the DCF carries the whole valuation [S2, p.60; S6, p.117]. The producer card's anchors are substituted rather than claimed: contract tenure and volume replace reserve life, the client's cost curve replaces our AISC quartile, the fee per cubic metre replaces the realisation, and debt capacity replaces dividend capacity, because no distribution is payable while parent equity is thin and net debt is above five times EBITDA [S2, S6]."
           },
           {
             "type": "para",
-            "text": "The EV/EBITDA leg is retired at zero weight for a reason we can demonstrate rather than argue: on the data packs the engine prices, the trailing \"EBITDA\" field is an operating-profit field, because the pack's depreciation line is a stub [S0]. For DOID itself the pack's trailing figure sits within a few million dollars of the published operating profit while the LK charges US$241.8m of depreciation and amortisation [S2, F58]. A peer median built on that field is an EBIT median. P/E is unavailable: FY2025 was the second consecutive parent loss, with negative EPS [S2], so that leg contributes nothing and is recorded in dropped methods."
+            "text": "The EV/EBITDA leg is retired at zero weight for a demonstrable reason: the packs' trailing \"EBITDA\" field is an operating-profit field because their depreciation line is a stub [S0]. For DOID the pack's figure sits within a few million dollars of operating profit while the LK charges US$241.8m of D&A [S2, F58], so a peer median on that field is an EBIT median. P/E is unavailable on a second consecutive parent loss [S2]."
           },
           {
             "type": "block",
@@ -176,7 +159,11 @@
           },
           {
             "type": "para",
-            "text": "The cost of capital is built from a dollar risk-free rate of 5.0%, a mature-market equity risk premium of 4.2% and an Indonesia country premium of 2.5%, with an unlevered beta of 1.00 relevered at the engine's leverage cap of 2.00 times to 2.56: a cost of equity of 24.7% and, at a 33.3% equity weight, a WACC of 11.9% [S0]. The engine prices the debt leg at the macro spread of 7.0%, well below what DOID pays: bank facilities at six to seven and a quarter per cent and 2025 bonds up to eight and three quarters [F53], with a FY2025 finance cost of US$91.6m on opening debt near a billion dollars [S2, p.72; F9]. We therefore add a 2.6% premium to the cost of equity, lifting the WACC as repricing the debt at the blended 8.5% would, while the leverage cap flatters the equity [S6, pp.75, 80; F49, F50]."
+            "text": "The cost of capital is built from a dollar risk-free rate of 5.2%, a mature-market equity risk premium of 4.2% and an Indonesia country premium of 2.5%, with an unlevered beta of 1.00 relevered at the engine's leverage cap of 2.00 times to 2.56: a cost of equity of 24.9% and, at a 33.3% equity weight, a WACC of 12.0% [S0]. The engine prices the debt leg at the macro spread of 7.2%, well below what DOID pays on its bank facilities and bonds [F53], with a FY2025 finance cost of US$91.6m on opening debt near a billion dollars [S2, p.72; F9]. We add a 2.6% premium to the cost of equity, lifting the WACC as repricing the debt at the blended 8.5% would, while the leverage cap flatters the equity [S6, pp.75, 80; F49, F50]."
+          },
+          {
+            "type": "para",
+            "text": "The QC round asked for a post-downgrade marginal cost of debt. None is observable: no issuance has been priced since Fitch cut the name to CCC-(idn)/CC(idn) on 11 November 2026, and no traded yield for the rupiah bonds is in the archive [S12, F84]. Typing an unobservable distress rate would be worse than holding the last actual, so the base keeps the blended rate the company pays and runs the higher rate as a test: at a fifteen per cent WACC the bull branch's enterprise value falls below the net-debt bridge and every branch floors, so the SELL is invariant and only the size of the option changes [S0, S12]. The 12.0% base is the observed cost of the existing debt, corrected upward, not a claim that a CCC- issuer can refinance at that rate."
           },
           {
             "type": "block",
@@ -184,7 +171,7 @@
           },
           {
             "type": "para",
-            "text": "The discounted cash flow produces an enterprise value of US$306.5m. The terminal value is positive and 36.8% of that enterprise value: the forecast charges fleet replacement every year, and the terminal value is the continuing fee stream after the explicit horizon, not a liquidation. After the bridge the equity is negative, so limited liability floors the DCF value at zero. That is not an artefact: on our cash flows the enterprise is worth less than the debt, and the equity is a call option on the difference [S6]."
+            "text": "The discounted cash flow produces an enterprise value of US$338.0m, with the terminal 38.5% of it. The forecast charges fleet replacement every year, capex equals D&A at the horizon so fixed assets stay positive through FY2035E, and the terminal capitalises the continuing fee stream, not a liquidation [S0; S2, p.72]. Growth after FY2030E is nominal only, so the dated roll-offs \u2014 the Australian book to mid-2030 and September 2027 [S2, p.49], Adaro to the end of 2030 [S4] and Pratama to August 2035 [F63] \u2014 are not capitalised beyond their disclosed terms; any renewal sits in the bull's extra volume. After the bridge the equity is negative, so limited liability floors the DCF at zero: on our cash flows the enterprise is worth less than the debt, and the equity is a call option on the difference [S6]. The bridge is struck on the LK: debt of US$978.6m at 30 September 2026 from the debt movement note [S13, p.131; F78], cash of US$95.1m [F77], and the associate book at carrying value [F83]."
           },
           {
             "type": "block",
@@ -192,23 +179,23 @@
           },
           {
             "type": "para",
-            "text": "The peer screen closes in the same direction as the DCF. The engine prices the packs' trailing \"EBITDA\" field, which is an operating-profit field; struck on it the peer median overstates the multiple, so the apparent cheapness of the peers is an artefact of a depreciation stub [S0]. Restruck on each peer's own LK depreciation the corrected median is lower, and at that lower multiple the implied enterprise value no longer covers the bridge from net debt to equity, so the screen corroborates the floor rather than adding value [S0, S2, p.362]. The packs are refreshed on different days within the month, so the set is not a synchronous snapshot and the screen is indicative rather than a point estimate [S0]. The leg therefore carries no weight, and the arithmetic of its retirement is written out in `fund record`, where it can be audited, rather than printed here as a number the engine does not compute."
+            "text": "The peer screen closes in the same direction. Struck on the packs' operating-profit \"EBITDA\" field the peer median overstates the multiple; restruck on each peer's own LK depreciation the corrected median is lower, and at that multiple the implied enterprise value does not cover the bridge from net debt to equity, so the screen corroborates the floor rather than adding value [S0, S2, p.362]. The packs are not a synchronous snapshot, so the leg carries no weight and the arithmetic is written out in `fund record` [S0]."
           },
           {
             "type": "para",
-            "text": "The other half of the bridge is the associate book, and it is optionality rather than the floor. Both holdings stay at equity-method carrying value, US$123.4m at the interim date, of which the ASX-listed copper stake is the bulk [S6, p.4; F55]. The filings do give a dated mark: the 2026 top-up was AUD47.2m (US$33.1m) for 120.8m shares, and the group then held 395.6m shares at an effective 22.6% [S6, p.67; F56]. At that price the whole stake is worth less than its carrying value, so book is not conservative; marking it would trim the target by a few rupiah through the branch weight, not change the arithmetic of the branch. We keep book because it is the audited carrying value and a single 2026 purchase print is a transaction price, not a quoted market [S6]. The direction matters for the call: the bull equity is positive before the add-back, so a full write-off leaves the branch solvent and the target just above the price, turning BUY into HOLD. The add-back decides the rating, not the solvency, and the base and bear floor at zero with or without it [S0, F55]."
+            "text": "The associate book is optionality rather than the floor. Both holdings stay at equity-method carrying value, US$124.5m at 30 September 2026, the valuation date, of which the ASX-listed copper stake is the bulk [S6, p.4; F83]. The filings give a dated mark: the 2026 top-up was AUD47.2m (US$33.1m) for 120.8m shares, at an effective 22.6% [S6, p.67; F56]. At that price the stake is worth less than carrying value, so book is not conservative; marking it would trim the target through the branch weight. We keep book because it is the audited carrying value and a single purchase print is a transaction price, not a quoted market [S6]. The direction matters for solvency: the bull equity is positive only because the associate book is added back, so a full write-off floors the branch and takes the target to zero; it does not change a rating that is already SELL [S0, F83]."
           },
           {
             "type": "para",
-            "text": "The target of Rp187 is the probability-weighted scenario value after the 10.0% liquidity haircut [S0]. With the base branch at 60.0% floored at zero and the bear at 25.0% likewise, the whole of the weighted value comes from the bull at 15.0%, worth Rp1,382 per share [S0]. Within the branch, the two mirrored operating shocks alone do not clear the debt: the engine's revenue-and-margin grid is at the floor in every cell but the most extreme, and that cell is worth a fraction of the bull's value. The equity is produced by the capex ratio, at a fifth below the normalised 10.2%. That is the driver the price is really being asked to believe, and it is sourced to the ratios the company has actually run [S2, p.72; S6, p.10]."
+            "text": "The target of Rp21 is the probability-weighted scenario value after the 10.0% liquidity haircut [S0]. With the base at 60.0% floored at zero and the bear at 25.0% likewise, the whole of the weighted value comes from the bull at 15.0%, worth Rp154 per share [S0]. Within the branch, the two operating shocks \u2014 revenue four points a year above the base and gross margin two points above \u2014 take the shares above the current price, and the associate add-back is what makes the branch solvent; the capex ratio is no longer a lever, because the 2026 cut is a deferral, not a saving [S2, p.72; S11; S6, p.10]. The recovery is real and it still does not produce the rating."
           },
           {
             "type": "para",
-            "text": "The weight is the input to test, and it has a basis rather than a preference. The house base-rate library's commodity-capex-turnaround archetype is a three-year prior; annualised to the twelve-month branch it implies a hit rate in the teens, and we hold 15.0% just below it, because a contractor with covenants waived is more fragile than the producer sample the prior is drawn from [S0, S6, p.77]. The price implies a lower weight still: the target equals the current price at a bull weight of a little below eleven per cent, roughly four points under ours, so the entire expected return is the gap between the two readings. The exact figures are in `fund record`, where they can be audited against the engine [S0]."
+            "text": "The weight is the input to test, and it has a basis rather than a preference. The house base-rate library's commodity-capex-turnaround archetype annualises to a hit rate in the teens, and we hold 15.0% just below it, because a contractor with covenants waived is more fragile than the producer sample the prior is drawn from [S0, S6, p.77]. The rating threshold is the decisive check: the BUY boundary requires a target well above the current price, and even a certain bull branch does not reach it, so no feasible weight produces a BUY. At our weight the expected return is -84.3%, a SELL under the house bands [S0]."
           },
           {
             "type": "para",
-            "text": "The price is not valuing the base case either. At Rp133 the equity is worth a small fraction of net debt, which is what a call option on the enterprise looks like: the market is paying for a recovery branch, not for today's cash flows [S0, S6]. Where we differ from the price is in the probability that branch arrives and in what it is worth if it does. A reverse DCF cannot be computed here, because the base value is floored at zero across the plausible range of discount rates and growth, so there is no implied price to solve for. Two house screens fail and the reader should see them: the investability test passes board quality but fails on market capitalisation and on liquidity, with three-month ADTV of IDR1.1bn, and the 10.0% discount in the target is the standard charge for that illiquidity [S0]. A BUY below the house size threshold is a size-constrained position, not a core holding."
+            "text": "The price is not valuing the base case either. At Rp133 the equity is worth a small fraction of net debt, which is what a call option on the enterprise looks like: the market is paying for a recovery branch, not for today's cash flows [S0, S6]. The engine's reverse DCF reads that branch directly: to justify the price the model needs FY2027E revenue growth of 29.4%, against our 8.0%, and that growth would have to persist after the FY2026E decline [S0]. Two house screens fail: the investability test passes board quality but fails on market capitalisation and on liquidity, with three-month ADTV of IDR1.1bn, and the 10.0% discount in the target is the standard charge for that illiquidity [S0]."
           },
           {
             "type": "block",
@@ -216,7 +203,7 @@
           },
           {
             "type": "para",
-            "text": "The first sensitivity grid varies cost of capital and terminal growth and every cell is zero: enterprise value stays below net debt across a plausible band, so limited liability holds the equity at the floor [S0]. The second varies revenue growth and gross margin and stays at the floor until the margin recovery is large enough for the unlevered value to clear net debt; past that point it moves sharply, because every dollar of enterprise value above the debt accrues to an equity that has been priced near zero. That leverage cuts both ways, which is why the bull's capex ratio \u2014 not the margin cell \u2014 is the variable that decides the rating; the two operating shocks alone are inside this grid and do not clear the debt. A return to the FY2024 gross margin of 8.7% would clear it on that branch alone, but the base is anchored to the last actual, 2.8%, so that recovery belongs in the bull [S2, S6]."
+            "text": "The first sensitivity grid varies cost of capital and terminal growth and every cell is zero: enterprise value stays below net debt across a plausible band, so limited liability holds the equity at the floor [S0]. The second varies revenue growth and gross margin. The base holds the cash margin at the last actual, 2.8% plus the D&A charge, and the printed gross margin rises only because the D&A ratio falls from 15.1% to 10.0%; the residual one point four points is recovery from the depressed FY2026E stoppage year, not a structural margin, and the terminal realised cash margin sits below the last actual [S2, S6]. The margin-only cell stays floored on its own, because enterprise value still does not clear the debt; only the joint cell that adds both revenue growth and margin \u2014 the bull branch \u2014 prints a value [S0]."
           }
         ]
       },
@@ -226,15 +213,19 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The dominant risk is refinancing: equity cash flow is negative, so the company rolls maturities every year, and it has already needed covenant waivers for the last two test dates [S6, p.77; F29]. The syndicated facility matures in 2029 [S6, p.75; F51], Muamalat in 2028 [F52], and the sukuk and bonds total US$185.0m gross, of which US$39.3m is current [S6, pp.69, 75, 81]. The next test is 31 December 2026. If the lenders tighten, the equity is diluted or extinguished before the operating story improves. No default branch is modelled, so the bear is the recession that would precede one and default is a tail beyond the table, which makes the target, if anything, high rather than low. Mapping likelihood to impact: refinancing is likely and existential; the loss of a contract is unlikely and material; fuel and currency are likely and modest; a governance shock is unlikely and impairing, because it would arrive through the same lender channel."
+            "text": "The dominant risk is refinancing: equity cash flow is negative, so the company rolls maturities every year, and it has already needed covenant waivers for the last two test dates [S6, p.77; F29]. The syndicated facility matures in 2029 [S6, p.75; F51], Muamalat in 2028 [F52], and the sukuk and bonds total US$185.0m gross, of which US$39.3m is current [S6, pp.69, 75, 81]. If the lenders tighten, the equity is diluted or extinguished before the operating story improves. No default branch is modelled, so default is a tail beyond the table and the target is, if anything, high rather than low. Refinancing is likely and existential; a contract loss is unlikely and material; fuel and currency are likely and modest; a governance shock is unlikely and impairing."
           },
           {
             "type": "para",
-            "text": "The recapitalisation branch is the one the table cannot express. Net debt is US$872.7m against an equity the market prices at a fraction of it, free cash flow to the firm does not cover the interest bill, and the covenants have been waived rather than met [S6; F29]. We do not forecast a debt-for-equity conversion: no such agreement is disclosed, and the waiver is the company's answer so far. But if one comes it transfers value from existing shares to lenders, because converting anything like the debt at today's price would issue a multiple of the existing share count; we therefore treat it as dilution to zero recovery rather than as a rescue. No rights issue is modelled either: one sized to a year of the shortfall would materially increase the share count and no controlling-shareholder commitment exists [S6]."
+            "text": "Fitch cut BUMA to CCC-(idn) on 11 November 2026, with the rupiah bonds and sukuk at CC(idn), citing a liquidity shortfall with no committed funding [S12; F84]. The agency puts consolidated cash at the end of September at about US$66m, roughly a quarter of it restricted for debt service, against US$200.0m of maturities between October 2026 and September 2027; the next payment is the Rp201bn bond due 28 December 2026, which Fitch says internal cash flow cannot cover [S12; F86, F87, F98]. The lenders are not described as cooperative anywhere in the record, and the rating action is the dated evidence that they are not. A CCC- refinancing raises the coupon, and while the bull value is invariant to the coupon in this build, the discount rate is not: at a fifteen per cent WACC the branch floors. The bull weight is therefore the input we would cut first on a failed refinancing, and the price-implied weight is far above ours [S0, S12; F84]."
           },
           {
             "type": "para",
-            "text": "The operating risks are second-layer, and their tenures are not equal. The top five customers are 78.0% of revenue [F26]; Indonesia Pratama, the largest of them, is contracted to August 2035 [S10, p.123; F63], beyond the horizon, while the Adaro South Tutupan award runs only to the end of 2030 [S4; F27, F28]. The dated cliff is therefore the smaller exposure and the largest relationship is not the one to fear, which is why no branch assumes Pratama away. Fuel pass-through is lagged [S3, S6]; weather reduced FY2024 volumes [S5]; and a weaker rupiah helps the translated target while hurting dollar costs [S0]. The upside is narrower: a sustained fall in Brent would restore margin, and a new award would add volume without proportional capital. The associate is not clean upside either: the add-back is what lifts the bull target from HOLD to BUY, and a mark-down removes that lift, though it does not make the branch insolvent [S6, p.4; F55]."
+            "text": "The recapitalisation branch is the one the table cannot express. Net debt is US$872.7m against an equity the market prices at a fraction of it, free cash flow does not cover the interest bill, and the covenants have been waived rather than met [S6; F29]. We do not forecast a debt-for-equity conversion: none is disclosed, and the waiver is the company's answer so far. If one comes it transfers value from existing shares to lenders, because converting anything like the debt at today's price would issue a multiple of the share count; we therefore treat it as dilution to zero recovery rather than a rescue. No rights issue is modelled either: one sized to a year of the shortfall would materially increase the share count and no controlling-shareholder commitment exists [S6]."
+          },
+          {
+            "type": "para",
+            "text": "The operating risks are second-layer, and their tenures are not equal. The top five customers are 78.0% of revenue [F26]; Indonesia Pratama, the largest, is contracted to August 2035 [S10, p.123; F63], beyond the horizon, while Adaro South Tutupan runs only to the end of 2030 [S4; F27, F28]. The dated cliff is therefore the smaller exposure, which is why no branch assumes Pratama away. Fuel pass-through is lagged [S3, S6]; weather reduced FY2024 volumes [S5]; and a weaker rupiah helps the translated target while hurting dollar costs [S0]. The upside is narrower: a fall in Brent would restore margin, and a new award would add volume without proportional capital. The associate is not clean upside either: the add-back is what makes the bull branch solvent, so a mark-down removes the only positive value in the target [S6, p.4; F83]."
           },
           {
             "type": "block",
@@ -242,11 +233,11 @@
           },
           {
             "type": "para",
-            "text": "Scenarios are mirrored on revenue growth, gross margin and capital intensity, and read as two states of the capital structure rather than three forecasts of the coal cycle. In the bear, clients cut stripping plans, the Adaro award is not renewed beyond its dated expiry and the cost programme stalls: revenue declines against the base's rise, margin gives back the recovery, capex runs above the base ratio and the lenders roll the facility only at a higher margin [S6]. The revenue shock is the mirror of the bull's increase and is sized to the one dated expiry inside the forecast; the largest contract, Pratama to 2035, is not assumed lost in any branch, because nothing in the record says it is at risk [S10, p.123; F63]. The engine floors the DCF at zero in both the bear and the base, so the two rows carry the same value: the difference between them is real, but the equity cannot show it. The base carries 60.0% of the mass, the bear 25.0% and the bull 15.0%."
+            "text": "Scenarios are mirrored on revenue growth and gross margin, and read as two states of the capital structure rather than three forecasts of the coal cycle. In the bear, clients cut stripping plans, the Adaro award is not renewed beyond its dated expiry and the cost programme stalls: revenue declines six points a year against the base's rise and margin gives back the recovery, while capex is held at the base maintenance ratio rather than shocked, because a higher ratio in a declining-volume branch would be an unsourced over-investment assumption [S6]. The revenue shock is sized to the one dated expiry inside the forecast; the largest contract, Pratama to 2035, is not assumed lost in any branch, because nothing in the record says it is at risk [S10, p.123; F63]. The engine floors the DCF at zero in both the bear and the base, so the two rows carry the same value: the difference between them is real, but the equity cannot show it. The base carries 60.0% of the mass, the bear 25.0% and the bull 15.0%."
           },
           {
             "type": "para",
-            "text": "In the bull the Adaro rollover and the cost programme hold, new awards extend the contract base, Brent falls along the deck and capex runs a fifth below our base ratio of 10.2%, which puts it between the 7.2% spent in FY2023 and the 10.0% in FY2024, and below the 12.0% of FY2025 [S0, S2, p.72], while still above the US$49.2m spent in 1H2026 [S6, p.10; F35]. That ratio, not the margin, is what clears net debt in the branch: the operating improvement alone leaves the shares worth a fraction of the price, because the equity is a thin sliver on a US$872.7m debt stack, so small changes in terminal capital intensity move the value by an order of magnitude. The associate book of US$123.4m is what lifts the target from HOLD to BUY, a lift of about a quarter of the target; a full write-off would leave the branch's own value intact and the weighted target just above the price, so the stake is a rating risk rather than a solvency one, and the associates' negative share of profit in the half year [S6, p.67] is why we mark it at book rather than above it. The weighted value is Rp207 per share and Rp187 after the haircut; the base-case value is Rp0, also below the price. The gap to the band above is the weight on the bull branch."
+            "text": "In the bull the Adaro rollover and the cost programme hold, new awards extend the contract base and Brent falls along the deck, while capex stays at the maintenance ratio: the 2026 cut is a deferral, not a structural saving, and a fleet funded below D&A cannot carry the extra volume [S2, p.72; S11]. The branch is worth Rp154, above the current price but below the target once weighted; the associate book of US$124.5m is what makes it solvent, and a full write-off would floor it and take the target to zero [S6, p.67]. The weighted value is Rp23 per share and Rp21 after the haircut; the base-case value is Rp0, also below the price. The gap between the price and the weighted value is the bull weight the market is paying for."
           },
           {
             "type": "para",
@@ -260,11 +251,11 @@
         "blocks": [
           {
             "type": "para",
-            "text": "Northstar Tambang Persada controls 38.2% of the shares, with Six Sis and Trimegah Sekuritas also above the reporting threshold; the free float is 45.5% and treasury shares remain from the buyback [S2, p.88; S0]. The auditor is KAP Aria Kanaka & Rekan, a Forvis Mazars member, with an unmodified opinion; interims are unaudited but reviewed, covenant waivers sit in the notes and related-party transactions are not material [S2; S6, p.77]."
+            "text": "Northstar Tambang Persada controls 38.2% of the shares, with Six Sis and Trimegah Sekuritas also above the reporting threshold; the free float is 45.5% and treasury shares remain from the buyback [S2, p.88; S0]. The auditor is KAP Aria Kanaka & Rekan, a Forvis Mazars member, with an unmodified opinion; interims are unaudited but reviewed, and covenant waivers sit in the notes [S2; S6, p.77]. On the earnings-quality card's IDX regime test, DOID is listed on the Indonesia Stock Exchange [S2, p.15]; no special-monitoring-board status or special notation is disclosed, and the engine's investability screen, which requires a main-board listing, passes board quality [S0]. Related-party balances sit in the trade-receivable, other-receivable and other-financial-asset notes, not the covenant note, and are well under one per cent of revenue [S6, pp.4, 26]."
           },
           {
             "type": "para",
-            "text": "The dividend record is the clearest governance signal: the last distribution was the final dividend for FY2023, none has been paid for FY2024 or FY2025, and there is no capacity while net debt is above five times EBITDA, covenants are waived and parent equity is negative [S2, p.152; F34; S6]; we model none through FY2030E. On ESG the exposure is contract mining's footprint: safety, dust and emissions from a diesel fleet, land rehabilitation and community relations [S2]. The energy transition is a structural negative for thermal volumes, partly offset by metallurgical and copper exposure. It is neither a konglo name nor an index-deletion candidate."
+            "text": "The dividend record is the clearest governance signal: the last distribution was the final dividend for FY2023, none has been paid for FY2024 or FY2025, and there is no capacity while net debt is above five times EBITDA, covenants are waived and parent equity is thin-positive at US$15.8m [S2, p.152; F34, F79; S6]; we model none through FY2030E. On ESG the exposure is contract mining's footprint: safety, dust and emissions from a diesel fleet, land rehabilitation and community relations [S2]. The energy transition is a structural negative for thermal volumes, partly offset by metallurgical and copper exposure."
           }
         ]
       },
@@ -274,7 +265,7 @@
         "blocks": [
           {
             "type": "para",
-            "text": "The dated catalysts are the quarterly and half-year reports, each carrying a covenant test, and the full-year results in the first quarter of FY2027 [S6]. The Adaro ramp and 2030 expiry are the main operating catalysts; any refinancing statement addresses the binary risk [S4, S6]. We monitor overburden volume, gross margin, operating cash flow against capex, net debt, Brent and the rupiah; the monthly production report was discontinued after December 2024, leaving the quarterly disclosure as the only operating data point [S5]."
+            "text": "The dated catalysts are the Rp201bn bond due 28 December 2026 [S12], the quarterly and half-year reports, each carrying a covenant test, and the full-year results in the first quarter of FY2027 [S6]. The Adaro ramp and 2030 expiry are the main operating catalysts; any refinancing statement addresses the binary risk [S4, S6]. We monitor overburden volume, gross margin, operating cash flow against capex, net debt, Brent and the rupiah; the monthly production report was discontinued after December 2024, leaving the quarterly disclosure as the only operating data point [S5]."
           }
         ]
       }
@@ -335,20 +326,41 @@
         "publisher": "bumainternational.com",
         "date": "2026-11-12",
         "kind": "company"
+      },
+      "S11": {
+        "title": "Emiten Tambang DOID Pangkas Rugi di Kuartal III 2026",
+        "url": "https://www.liputan6.com/saham/read/8334981/emiten-tambang-doid-pangkas-rugi-di-kuartal-iii-2026",
+        "publisher": "www.liputan6.com",
+        "date": "2026-11-13",
+        "kind": "news"
+      },
+      "S12": {
+        "title": "Fitch Pangkas Rating BUMA ke CCC-, Risiko Gagal Bayar Membesar",
+        "url": "https://wartaekonomi.co.id/read647442/fitch-pangkas-rating-buma-ke-ccc-risiko-gagal-bayar-membesar",
+        "publisher": "wartaekonomi.co.id",
+        "date": "2026-11-14",
+        "kind": "news"
+      },
+      "S13": {
+        "title": "https://bumainternational.com/attachment/BUMAInternasionalGrupTbkFSConsol3Q26.pdf",
+        "url": "https://bumainternational.com/attachment/BUMAInternasionalGrupTbkFSConsol3Q26.pdf",
+        "publisher": "bumainternational.com",
+        "date": "2026-11-14",
+        "kind": "filing"
       }
     },
-    "rendered_at": "2026-11-14T11:45:33+07:00"
+    "rendered_at": "2026-11-14T15:37:01+07:00"
   },
   "meta": {
-    "rating": "BUY",
-    "tp": 187.0,
+    "rating": "SELL",
+    "tp": 21.0,
     "price": 133.0,
-    "tp_fundamental": 187.0,
+    "tp_fundamental": 21.0,
     "konglo": false,
     "suspended": null,
     "price_date": "2026-11-12",
-    "tr_pct": 40.31,
-    "upside_pct": 40.31,
+    "tr_pct": -84.35,
+    "upside_pct": -84.35,
     "v0": 0.0,
     "tp_base": 0.0,
     "dps12": 0.0,
@@ -359,11 +371,11 @@
       "adtv": false,
       "board": true
     },
-    "version": 4,
+    "version": 5,
     "report_type": "update",
-    "published_at": "2026-11-12",
+    "published_at": "2026-11-14",
     "data_asof": "2026-11-12",
-    "model_asof": "2026-11-12",
+    "model_asof": "2026-11-14",
     "reporting_ccy": "USD",
     "unit": "USD m",
     "sector_lead": "Bayu",
@@ -402,9 +414,9 @@
           "FY2023A": 1833.320502,
           "FY2024A": 1756.310908,
           "FY2025A": 1480.310107,
-          "FY2026E": 1465.507006,
-          "FY2027E": 1502.144681,
-          "FY2028E": 1532.187575
+          "FY2026E": 1278.987932,
+          "FY2027E": 1381.306967,
+          "FY2028E": 1436.559246
         }
       },
       {
@@ -415,9 +427,9 @@
           "FY2023A": 412.0,
           "FY2024A": 314.216158,
           "FY2025A": 173.813431,
-          "FY2026E": 170.927492,
-          "FY2027E": 181.510872,
-          "FY2028E": 187.286555
+          "FY2026E": 133.085715,
+          "FY2027E": 159.455289,
+          "FY2028E": 175.152087
         }
       },
       {
@@ -428,9 +440,9 @@
           "FY2023A": 36.010404,
           "FY2024A": -61.332081,
           "FY2025A": -116.25952,
-          "FY2026E": -131.291774,
-          "FY2027E": -131.673087,
-          "FY2028E": -136.189206
+          "FY2026E": -87.562213,
+          "FY2027E": -128.182002,
+          "FY2028E": -104.527249
         }
       },
       {
@@ -441,9 +453,9 @@
           "FY2023A": 0.004908,
           "FY2024A": -0.008237,
           "FY2025A": -0.015802,
-          "FY2026E": -0.017845,
-          "FY2027E": -0.017897,
-          "FY2028E": -0.018511
+          "FY2026E": -0.011902,
+          "FY2027E": -0.017423,
+          "FY2028E": -0.014208
         }
       },
       {
@@ -454,9 +466,9 @@
           "FY2023A": 0.355574,
           "FY2024A": -2.678179,
           "FY2025A": 0.91845,
-          "FY2026E": 0.129299,
-          "FY2027E": 0.002904,
-          "FY2028E": 0.034298
+          "FY2026E": -0.246838,
+          "FY2027E": 0.463896,
+          "FY2028E": -0.18454
         }
       },
       {
@@ -480,9 +492,9 @@
           "FY2023A": 0.136188,
           "FY2024A": -0.269144,
           "FY2025A": -0.990673,
-          "FY2026E": 9.318485,
-          "FY2027E": 0.904523,
-          "FY2028E": 0.487255
+          "FY2026E": -11.261456,
+          "FY2027E": 1.280581,
+          "FY2028E": 0.482913
         }
       },
       {
@@ -493,9 +505,9 @@
           "FY2023A": 1.681014,
           "FY2024A": 2.518249,
           "FY2025A": 5.020737,
-          "FY2026E": 5.332864,
-          "FY2027E": 5.4036,
-          "FY2028E": 5.621973
+          "FY2026E": 6.428938,
+          "FY2027E": 5.775008,
+          "FY2028E": 5.668125
         }
       }
     ],
@@ -515,7 +527,7 @@
     ],
     "wacc": {
       "ok": null,
-      "rf": 0.04998,
+      "rf": 0.05154,
       "default_spread": 0.0,
       "erp_mature": 0.0423,
       "crp": 0.0246,
@@ -525,106 +537,106 @@
       "beta_levered": 2.56,
       "tax": 0.22,
       "coe_premium": 0.0261,
-      "coe": 0.247344,
-      "kd_pre_tax": 0.06998,
+      "coe": 0.248904,
+      "kd_pre_tax": 0.07154,
       "we": 0.333333,
       "wd": 0.666667,
-      "wacc": 0.118838
+      "wacc": 0.120169
     },
     "g": 0.02,
     "dcf": {
       "method": "dcf_fcff",
       "rows": [
         {
-          "cf": 50.859297,
+          "cf": 44.592534,
           "fraction": 0.503765,
           "time": 0.0,
           "df": 1.0,
-          "pv": 25.62111,
+          "pv": 22.464138,
           "period": "FY2026E"
         },
         {
-          "cf": 26.093854,
+          "cf": 28.99852,
           "fraction": 0.996578,
-          "time": 0.635181,
-          "df": 0.931159,
-          "pv": 24.214386,
+          "time": 0.629706,
+          "df": 0.931035,
+          "pv": 26.906234,
           "period": "FY2027E"
         },
         {
-          "cf": 29.200848,
+          "cf": 28.181026,
           "fraction": 0.999316,
-          "time": 1.634497,
-          "df": 0.83232,
-          "pv": 24.287819,
+          "time": 1.629021,
+          "df": 0.83122,
+          "pv": 23.40861,
           "period": "FY2028E"
         },
         {
-          "cf": 31.178328,
+          "cf": 33.919531,
           "fraction": 0.996578,
-          "time": 2.63655,
-          "df": 0.743744,
-          "pv": 23.109322,
+          "time": 2.631075,
+          "df": 0.741876,
+          "pv": 25.077977,
           "period": "FY2029E"
         },
         {
-          "cf": 32.47487,
+          "cf": 35.752824,
           "fraction": 0.996578,
-          "time": 3.635866,
-          "df": 0.664798,
-          "pv": 21.515335,
+          "time": 3.63039,
+          "df": 0.662341,
+          "pv": 23.599526,
           "period": "FY2030E"
         },
         {
-          "cf": 31.795463,
+          "cf": 36.56463,
           "fraction": 0.996578,
-          "time": 4.635181,
-          "df": 0.594232,
-          "pv": 18.829213,
+          "time": 4.629706,
+          "df": 0.591333,
+          "pv": 21.547871,
           "period": "FY2031E"
         },
         {
-          "cf": 31.53418,
+          "cf": 36.472919,
           "fraction": 0.999316,
-          "time": 5.634497,
-          "df": 0.531156,
-          "pv": 16.738108,
+          "time": 5.629021,
+          "df": 0.527937,
+          "pv": 19.242232,
           "period": "FY2032E"
         },
         {
-          "cf": 31.231425,
+          "cf": 36.346125,
           "fraction": 0.996578,
-          "time": 6.63655,
-          "df": 0.47463,
-          "pv": 14.772635,
+          "time": 6.631075,
+          "df": 0.471192,
+          "pv": 17.067381,
           "period": "FY2033E"
         },
         {
-          "cf": 30.884904,
+          "cf": 36.182203,
           "fraction": 0.996578,
-          "time": 7.635866,
-          "df": 0.424249,
-          "pv": 13.058062,
+          "time": 7.63039,
+          "df": 0.420676,
+          "pv": 15.168898,
           "period": "FY2034E"
         },
         {
-          "cf": 30.492217,
+          "cf": 35.979011,
           "fraction": 0.996578,
-          "time": 8.635181,
-          "df": 0.379217,
-          "pv": 11.523591,
+          "time": 8.629706,
+          "df": 0.375576,
+          "pv": 13.466618,
           "period": "FY2035E"
         }
       ],
-      "pv_sum": 193.669581,
-      "pv_tv": 112.837787,
-      "ev": 306.507368,
-      "net_debt": 887.105206,
-      "minority": -1.868609,
-      "investments": 123.448373,
+      "pv_sum": 207.949485,
+      "pv_tv": 130.034222,
+      "ev": 337.983707,
+      "net_debt": 883.588419,
+      "minority": -5.32861,
+      "investments": 124.468987,
       "bridge": 0.0,
-      "equity_value": -455.280856,
-      "tv_share": 0.368141,
+      "equity_value": -415.807115,
+      "tv_share": 0.384735,
       "value": 0.0
     },
     "scenarios": {
@@ -639,25 +651,15 @@
         "prob": 0.25,
         "tp": 0.0,
         "v0": 0.0,
-        "narrative": "Coal clients cut RKAB volumes and the Adaro book at South Tutupan \u2014 13% of revenue, contracted to 31 December 2030 [S6 p.106, S4] \u2014 is not renewed, so revenue falls a further two points a year on top of the four-point operating decline (a loss of about 13% by FY2035, matching the dated Adaro share), fuel and wage costs take two points of gross margin and capex rises a fifth as the smaller volume is spread over a fixed fleet; the x1.2 capex shock puts the ratio at 12.2% of revenue, sized to the 12.0% the company actually spent in FY2025 [F18, S2 p.72]. PT Indonesia Pratama, 35% of revenue and contracted to August 2035 [S6 p.123], is NOT assumed lost: no source puts its term inside the forecast, so the bear takes the disclosed expiry only. Free cash flow does not cover interest [S6], the lenders roll the syndicated facility that matures 69 months after first utilisation [F51] only at a higher margin, and the 31 December 2026 covenant test [S6 p.77] is the point at which a debt-for-equity conversion becomes the recovery route for the lenders. Equity recovery in that branch is zero, which is why the row is valued at the DCF floor; a negative equity value is not available under limited liability. A further mark-down of the US$123.4m associate book [F55] would take that branch's investment add-back to zero too, but the branch is already worth nothing to equity holders, so it adds no separate sensitivity here.",
+        "narrative": "Coal clients cut RKAB volumes and the Adaro book at South Tutupan \u2014 13% of revenue, contracted to 31 December 2030 [S6 p.106, S4] \u2014 is not renewed, so revenue falls six points a year against the base (a loss of about 13% by FY2035, matching the dated Adaro share) and fuel and wage costs take two points of gross margin. Capex is held at the base maintenance ratio rather than shocked: the base already runs at 10.0%, which is the FY2024 actual and below FY2025's 12.0% [F18, S2 p.72], and a higher ratio in a declining-volume branch would be an unsourced over-investment assumption rather than a cost. PT Indonesia Pratama, 35% of revenue and contracted to August 2035 [S6 p.123], is NOT assumed lost: no source puts its term inside the forecast, so the bear takes the disclosed expiry only. Free cash flow does not cover interest [S6], the lenders roll the syndicated facility that matures 69 months after first utilisation [F51] only at a higher margin, and the 31 December 2026 covenant test [S6 p.77] is the point at which a debt-for-equity conversion becomes the recovery route for the lenders. Equity recovery in that branch is zero, which is why the row is valued at the DCF floor; a negative equity value is not available under limited liability. A mark-down of the US$124.5m associate book [F55] would take that branch's investment add-back to zero too, but the branch is already worth nothing to equity holders, so it adds no separate sensitivity here.",
         "shocks": [
           {
             "target": "a.revenue_growth",
             "op": "add",
-            "value": -0.04
+            "value": -0.06
           },
           {
             "target": "a.gross_margin",
-            "op": "add",
-            "value": -0.02
-          },
-          {
-            "target": "a.capex_pct",
-            "op": "mult",
-            "value": 1.2
-          },
-          {
-            "target": "a.revenue_growth",
             "op": "add",
             "value": -0.02
           }
@@ -665,9 +667,9 @@
       },
       "bull": {
         "prob": 0.15,
-        "tp": 1382.0,
-        "v0": 1108.0,
-        "narrative": "The branch is a capital-intensity case, not a margin story, and the decomposition is written out here so the report and the engine say the same thing. On the base case the DCF enterprise value is US$306.5m against an US$887.1m bridge, so the equity is floored at zero. The two mirrored operating shocks alone - revenue +4pp a year and gross margin +2pp - raise the twelve-month value only to Rp57.0 (v0 Rp45.7), still effectively floored because the margin recovery is not large enough to cover the debt. The branch clears the debt on capex: a fifth below the base's normalised 10.2% puts the ratio at 8.2% of revenue from FY2027E, between the 7.2% actually spent in FY2023 and the 10.0% in FY2024 and below FY2025's 12.0% [F18, S2 p.72]; FY2026E is leaner still (6.0%) on the branch assumption that the 1H2026 deferral (US$49.2m of fixed-asset spend) extends [F35, S6 p.10]. The capex shock contributes US$429m of the branch's US$447.3m equity (Rp1,063 of the Rp1,109 per-share value): the branch clears the debt on the capex ratio, not on the margin recovery. What is underwritten is the contracted book - PT Indonesia Pratama at 35% of revenue to August 2035, an eleven-year extension the company put at US$7.8bn in contract value [S6 p.123, F63, S5], the Adaro rollover at South Tutupan [S4, F27, F28], and the US$12.7bn order book published with the FY2025 results [F38, S5] - and the 1H2026 cost programme. The equity is positive BEFORE the associate stake is added: ex-associate the branch is worth Rp803 per share and the weighted target Rp135, above the Rp133 price but HOLD rather than BUY. The associate book (US$123.4m at equity-method carrying value, F55) therefore lifts the target from HOLD to BUY [S6 p.4]; it is not what makes the branch solvent, and a full write-off does not floor it. The bear's mirrored capex shock is x1.2, i.e. 12.2% of revenue, sized to the 12.0% the company actually spent in FY2025 [F18, S2 p.72].",
+        "tp": 154.0,
+        "v0": 123.0,
+        "narrative": "The branch is an operating-recovery case, not a capital-intensity case, and the decomposition is written out here so the report and the engine say the same thing. On the base case the DCF enterprise value is US$338.0m against an US$883.6m net-debt bridge, so the equity is floored at zero. The two mirrored operating shocks - revenue +4pp a year and gross margin +2pp - lift the branch to Rp154 per share (v0 Rp123.5; enterprise value US$805.3m, equity US$51.5m), just above the price per share but only a fraction of it once weighted at 15%: the operating recovery alone nearly reaches the debt but does not produce a BUY. The capital-intensity lever of the previous version is REMOVED, and this is the fix the QC round required. Cutting capex to 8.0% of revenue while leaving D&A at 10.0% capitalised a permanent 2.0pp-of-revenue under-investment in the terminal value: a fleet funded at 8.0% of revenue is a fifth smaller than one funded at 10.0%, and a smaller fleet cannot carry revenue growing four points a year above the base. The capex cut of 2026 is a liquidity deferral that has to be caught up, not a structural saving, so the branch keeps capex at the maintenance ratio where it equals D&A (10.0% from FY2028E) and the fleet stays whole. What is underwritten is the contracted book - PT Indonesia Pratama at 35% of revenue to August 2035, an eleven-year extension the company put at US$7.8bn in contract value [S6 p.123, F63, S5], the Adaro rollover at South Tutupan [S4, F27, F28], and the US$12.7bn order book published with the FY2025 results [F38, S5] - and the 1H2026 cost programme. The branch is solvent ONLY because the associate book (US$124.5m at equity-method carrying value, F55) is added back to the bridge: without it enterprise value of US$805.3m is below the US$883.6m net debt and the branch floors. A full write-off of the stake therefore takes the whole target to zero, which is the honest reading of a branch whose margin of safety is US$51.5m of equity on a US$805m enterprise. At the post-downgrade cost of capital tested in the report (15.0%) the branch floors as well: enterprise value falls to US$621.9m and equity to -US$131.9m [S0, S12, F84].",
         "shocks": [
           {
             "target": "a.revenue_growth",
@@ -678,11 +680,6 @@
             "target": "a.gross_margin",
             "op": "add",
             "value": 0.02
-          },
-          {
-            "target": "a.capex_pct",
-            "op": "mult",
-            "value": 0.8
           }
         ]
       }
@@ -814,84 +811,88 @@
             0.0,
             0.0,
             0.0,
-            56.988952
+            154.227536
           ]
         ]
       }
     ],
     "reverse_dcf": {
-      "available": false,
+      "available": true,
       "target": "a.revenue_growth",
-      "note": "price not bracketed"
+      "op": "add",
+      "factor": 0.214209,
+      "period": "FY2027E",
+      "implied_value": 0.294209,
+      "method": "dcf_fcff"
     },
     "multiples": {
       "FY2025A": {
-        "pbv": 1.041214,
+        "pbv": 1.076342,
         "div_yield": 0.0,
-        "ev_ebitda": 5.318831
+        "ev_ebitda": 5.309345
       },
       "FY2026E": {
         "div_yield": 0.0,
-        "ev_ebitda": 5.635991,
-        "fcfe_yield": 0.673205
+        "ev_ebitda": 6.805866,
+        "fcfe_yield": 1.659177
       },
       "FY2027E": {
         "div_yield": 0.0,
-        "ev_ebitda": 5.689053,
-        "fcfe_yield": 0.013429
+        "ev_ebitda": 6.089603,
+        "fcfe_yield": 0.085493
       },
       "FY2028E": {
         "div_yield": 0.0,
-        "ev_ebitda": 5.898622,
-        "fcfe_yield": -0.002007
+        "ev_ebitda": 5.954527,
+        "fcfe_yield": 0.00129
       }
     },
     "peers": {
       "median": {
         "pe": {
-          "median": 8.203799513383501,
-          "n": 20
+          "median": 8.87821552663179,
+          "n": 21
         },
         "ev_ebitda": {
-          "median": 5.147492953665808,
+          "median": 5.358908238502952,
           "n": 18
         },
         "pbv": {
-          "median": 1.1480506446484875,
+          "median": 1.1867832443169908,
           "n": 20
         },
         "ev_sales": {
-          "median": 0.79746834510185,
+          "median": 0.8229054703191334,
           "n": 22
         },
         "div_yield": {
-          "median": 0.06825207061676634,
+          "median": 0.05319082118157248,
           "n": 12
         }
       },
       "rows": {
         "AADI.JK": {
-          "pe": 5.0518,
-          "ev_ebitda": 2.7251,
-          "pbv": 1.1392,
-          "ev_sales": 0.6555,
+          "pe": 5.2223,
+          "ev_ebitda": 2.8404,
+          "pbv": 1.1776,
+          "ev_sales": 0.6832,
           "div_yield": 0.0989
         },
         "ADMR.JK": {
-          "pe": 7.4944,
-          "ev_ebitda": 7.5199,
-          "pbv": 1.6375,
-          "ev_sales": 2.7117,
+          "pe": 7.7472,
+          "ev_ebitda": 7.6938,
+          "pbv": 1.6928,
+          "ev_sales": 2.7744,
           "div_yield": 0.0394
         },
         "AIMS.JK": {
           "div_yield": 0.0
         },
         "ARII.JK": {
-          "pe": 22.8482,
-          "ev_ebitda": 5.1503,
-          "pbv": 1.2486,
-          "ev_sales": 0.3315,
+          "pe": 23.619,
+          "ev_ebitda": 5.2706,
+          "pbv": 1.2907,
+          "ev_sales": 0.3392,
           "div_yield": 0.0
         },
         "BOSS.JK": {
@@ -901,88 +902,88 @@
           "div_yield": 0.0
         },
         "BSSR.JK": {
-          "pe": 8.5885,
-          "ev_ebitda": 6.0108,
-          "pbv": 2.7081,
-          "ev_sales": 0.8751,
+          "pe": 8.8782,
+          "ev_ebitda": 6.2483,
+          "pbv": 2.7994,
+          "ev_sales": 0.9096,
           "div_yield": 0.2472
         },
         "BUMI.JK": {
-          "pe": 28.9186,
-          "ev_ebitda": 24.2047,
-          "pbv": 1.4071,
-          "ev_sales": 2.2789,
+          "pe": 29.8942,
+          "ev_ebitda": 24.7939,
+          "pbv": 1.4546,
+          "ev_sales": 2.3344,
           "div_yield": 0.0
         },
         "BYAN.JK": {
-          "pe": 19.5907,
-          "ev_ebitda": 14.5199,
-          "pbv": 6.1505,
-          "ev_sales": 4.6325,
+          "pe": 20.2516,
+          "ev_ebitda": 15.0257,
+          "pbv": 6.358,
+          "ev_sales": 4.7938,
           "div_yield": 0.0299
         },
         "COAL.JK": {
           "div_yield": 0.0
         },
         "DEWA.JK": {
-          "pe": 1.9095,
-          "ev_ebitda": 13.0612,
-          "pbv": 1.0596,
-          "ev_sales": 1.8404,
-          "div_yield": 0.0067
+          "pe": 2.2335,
+          "ev_ebitda": 14.5998,
+          "pbv": 1.2394,
+          "ev_sales": 2.0572,
+          "div_yield": 0.0057
         },
         "GEMS.JK": {
-          "pe": 6.6711,
-          "ev_ebitda": 4.282,
-          "pbv": 2.5822,
-          "ev_sales": 0.7389,
+          "pe": 6.8962,
+          "ev_ebitda": 4.436,
+          "pbv": 2.6693,
+          "ev_sales": 0.7655,
           "div_yield": 0.1259
         },
         "GTBO.JK": {
-          "pbv": 1.0756,
-          "ev_sales": 9.9775,
+          "pbv": 1.1119,
+          "ev_sales": 10.3082,
           "div_yield": 0.0
         },
         "IATA.JK": {
-          "pe": 86.6357,
-          "ev_ebitda": 14.789,
-          "pbv": 0.9244,
-          "ev_sales": 2.4326,
+          "pe": 89.5586,
+          "ev_ebitda": 15.1331,
+          "pbv": 0.9556,
+          "ev_sales": 2.4893,
           "div_yield": 0.0
         },
         "INDY.JK": {
-          "pe": 19.6302,
-          "ev_ebitda": 5.3132,
-          "pbv": 0.416,
-          "ev_sales": 0.4322,
+          "pe": 20.2925,
+          "ev_ebitda": 5.3995,
+          "pbv": 0.43,
+          "ev_sales": 0.4393,
           "div_yield": 0.0058
         },
         "ITMG.JK": {
-          "pe": 7.2916,
-          "ev_ebitda": 2.5107,
-          "pbv": 0.7902,
-          "ev_sales": 0.4114,
-          "div_yield": 0.0697
+          "pe": 6.6389,
+          "ev_ebitda": 2.1737,
+          "pbv": 0.7811,
+          "ev_sales": 0.3823,
+          "div_yield": 0.0406
         },
         "KKGI.JK": {
-          "pe": 31.5762,
-          "ev_ebitda": 5.1447,
-          "pbv": 0.5292,
-          "ev_sales": 0.2267,
+          "pe": 32.6415,
+          "ev_ebitda": 5.5271,
+          "pbv": 0.547,
+          "ev_sales": 0.2435,
           "div_yield": 0.1713
         },
         "MBAP.JK": {
-          "pe": 6.502,
-          "ev_ebitda": 1.3447,
-          "pbv": 0.5918,
-          "ev_sales": 0.1828,
+          "pe": 6.7214,
+          "ev_ebitda": 1.4914,
+          "pbv": 0.6117,
+          "ev_sales": 0.2027,
           "div_yield": 0.0
         },
         "MCOL.JK": {
-          "pe": 7.8191,
-          "ev_ebitda": 5.1278,
-          "pbv": 1.1569,
-          "ev_sales": 0.856,
+          "pe": 8.0829,
+          "ev_ebitda": 5.3183,
+          "pbv": 1.1959,
+          "ev_sales": 0.8878,
           "div_yield": 0.0802
         },
         "PTBA.JK": {
@@ -993,34 +994,35 @@
           "div_yield": 0.0382
         },
         "RMKO.JK": {
-          "pbv": 1.5003,
-          "ev_sales": 0.5053,
+          "pe": 88.2493,
+          "pbv": 0.9533,
+          "ev_sales": 0.5314,
           "div_yield": 0.0
         },
         "SINI.JK": {
-          "pe": 8.7464,
-          "ev_sales": 8.5197,
+          "pe": 12.6305,
+          "ev_sales": 11.7893,
           "div_yield": 0.0
         },
         "SMMT.JK": {
-          "pe": 32.7337,
-          "pbv": 10.0672,
-          "ev_sales": 2.9195,
+          "pe": 33.8381,
+          "pbv": 10.4068,
+          "ev_sales": 3.0178,
           "div_yield": 0.0
         },
         "UNIQ.JK": {
-          "pe": 15.9502,
-          "ev_ebitda": 10.2484,
-          "pbv": 0.8799,
-          "ev_sales": 1.1042,
+          "pe": 14.5032,
+          "ev_ebitda": 7.4514,
+          "pbv": 0.8688,
+          "ev_sales": 0.8803,
           "div_yield": 0.0
         },
         "MYOH.JK": {
-          "pe": 5.6628,
-          "ev_ebitda": 1.3407,
-          "pbv": 0.6487,
-          "ev_sales": 0.2036,
-          "div_yield": 0.0668
+          "pe": 5.9435,
+          "ev_ebitda": 1.5621,
+          "pbv": 0.6809,
+          "ev_sales": 0.2372,
+          "div_yield": 0.0658
         }
       }
     },
@@ -1065,16 +1067,16 @@
             "FY2023A": 1833.320502,
             "FY2024A": 1756.310908,
             "FY2025A": 1480.310107,
-            "FY2026E": 1465.507006,
-            "FY2027E": 1502.144681,
-            "FY2028E": 1532.187575,
-            "FY2029E": 1555.170388,
-            "FY2030E": 1578.497944,
-            "FY2031E": 1610.067903,
-            "FY2032E": 1642.269261,
-            "FY2033E": 1675.114646,
-            "FY2034E": 1708.616939,
-            "FY2035E": 1742.789278
+            "FY2026E": 1278.987932,
+            "FY2027E": 1381.306967,
+            "FY2028E": 1436.559246,
+            "FY2029E": 1479.656023,
+            "FY2030E": 1524.045704,
+            "FY2031E": 1554.526618,
+            "FY2032E": 1585.61715,
+            "FY2033E": 1617.329493,
+            "FY2034E": 1649.676083,
+            "FY2035E": 1682.669605
           }
         },
         {
@@ -1086,16 +1088,16 @@
             "FY2023A": 1586.868562,
             "FY2024A": 1603.268837,
             "FY2025A": 1438.707416,
-            "FY2026E": 1411.820074,
-            "FY2027E": 1440.805384,
-            "FY2028E": 1467.476026,
-            "FY2029E": 1488.399343,
-            "FY2030E": 1509.896466,
-            "FY2031E": 1540.956748,
-            "FY2032E": 1572.673076,
-            "FY2033E": 1605.059976,
-            "FY2034E": 1638.132325,
-            "FY2035E": 1671.905356
+            "FY2026E": 1254.616191,
+            "FY2027E": 1324.068394,
+            "FY2028E": 1346.164154,
+            "FY2029E": 1360.289948,
+            "FY2030E": 1385.042482,
+            "FY2031E": 1413.534377,
+            "FY2032E": 1442.628067,
+            "FY2033E": 1472.336881,
+            "FY2034E": 1502.674464,
+            "FY2035E": 1533.654788
           }
         },
         {
@@ -1107,16 +1109,16 @@
             "FY2023A": 246.45194,
             "FY2024A": 153.042071,
             "FY2025A": 41.602691,
-            "FY2026E": 53.686932,
-            "FY2027E": 61.339297,
-            "FY2028E": 64.711549,
-            "FY2029E": 66.771046,
-            "FY2030E": 68.601478,
-            "FY2031E": 69.111155,
-            "FY2032E": 69.596185,
-            "FY2033E": 70.05467,
-            "FY2034E": 70.484614,
-            "FY2035E": 70.883922
+            "FY2026E": 24.371741,
+            "FY2027E": 57.238573,
+            "FY2028E": 90.395092,
+            "FY2029E": 119.366075,
+            "FY2030E": 139.003222,
+            "FY2031E": 140.992241,
+            "FY2032E": 142.989083,
+            "FY2033E": 144.992612,
+            "FY2034E": 147.001619,
+            "FY2035E": 149.014817
           }
         },
         {
@@ -1128,16 +1130,16 @@
             "FY2023A": 99.685342,
             "FY2024A": 100.117107,
             "FY2025A": 108.706845,
-            "FY2026E": 95.257955,
-            "FY2027E": 97.639404,
-            "FY2028E": 99.592192,
-            "FY2029E": 101.086075,
-            "FY2030E": 102.602366,
-            "FY2031E": 104.654414,
-            "FY2032E": 106.747502,
-            "FY2033E": 108.882452,
-            "FY2034E": 111.060101,
-            "FY2035E": 113.281303
+            "FY2026E": 84.413204,
+            "FY2027E": 91.16626,
+            "FY2028E": 94.81291,
+            "FY2029E": 97.657298,
+            "FY2030E": 100.587016,
+            "FY2031E": 102.598757,
+            "FY2032E": 104.650732,
+            "FY2033E": 106.743747,
+            "FY2034E": 108.878621,
+            "FY2035E": 111.056194
           }
         },
         {
@@ -1149,16 +1151,16 @@
             "FY2023A": 146.766598,
             "FY2024A": 53.0,
             "FY2025A": -68.0,
-            "FY2026E": -41.571023,
-            "FY2027E": -36.300107,
-            "FY2028E": -34.880644,
-            "FY2029E": -34.31503,
-            "FY2030E": -34.000888,
-            "FY2031E": -35.543259,
-            "FY2032E": -37.151317,
-            "FY2033E": -38.827782,
-            "FY2034E": -40.575487,
-            "FY2035E": -42.397381
+            "FY2026E": -60.041463,
+            "FY2027E": -33.927686,
+            "FY2028E": -4.417818,
+            "FY2029E": 21.708778,
+            "FY2030E": 38.416205,
+            "FY2031E": 38.393484,
+            "FY2032E": 38.338351,
+            "FY2033E": 38.248866,
+            "FY2034E": 38.122998,
+            "FY2035E": 37.958623
           }
         },
         {
@@ -1170,16 +1172,16 @@
             "FY2023A": 265.233402,
             "FY2024A": 261.216158,
             "FY2025A": 241.813431,
-            "FY2026E": 212.498516,
-            "FY2027E": 217.810979,
-            "FY2028E": 222.167198,
-            "FY2029E": 225.499706,
-            "FY2030E": 228.882202,
-            "FY2031E": 233.459846,
-            "FY2032E": 238.129043,
-            "FY2033E": 242.891624,
-            "FY2034E": 247.749456,
-            "FY2035E": 252.704445
+            "FY2026E": 193.127178,
+            "FY2027E": 193.382975,
+            "FY2028E": 179.569906,
+            "FY2029E": 162.762163,
+            "FY2030E": 152.40457,
+            "FY2031E": 155.452662,
+            "FY2032E": 158.561715,
+            "FY2033E": 161.732949,
+            "FY2034E": 164.967608,
+            "FY2035E": 168.26696
           }
         },
         {
@@ -1191,16 +1193,16 @@
             "FY2023A": 412.0,
             "FY2024A": 314.216158,
             "FY2025A": 173.813431,
-            "FY2026E": 170.927492,
-            "FY2027E": 181.510872,
-            "FY2028E": 187.286555,
-            "FY2029E": 191.184677,
-            "FY2030E": 194.881314,
-            "FY2031E": 197.916587,
-            "FY2032E": 200.977726,
-            "FY2033E": 204.063842,
-            "FY2034E": 207.173969,
-            "FY2035E": 210.307064
+            "FY2026E": 133.085715,
+            "FY2027E": 159.455289,
+            "FY2028E": 175.152087,
+            "FY2029E": 184.47094,
+            "FY2030E": 190.820776,
+            "FY2031E": 193.846146,
+            "FY2032E": 196.900066,
+            "FY2033E": 199.981815,
+            "FY2034E": 203.090606,
+            "FY2035E": 206.225583
           }
         },
         {
@@ -1234,15 +1236,15 @@
             "FY2024A": 10.441388,
             "FY2025A": 4.104183,
             "FY2026E": 4.782667,
-            "FY2027E": 5.505438,
-            "FY2028E": 5.519855,
-            "FY2029E": 5.517701,
-            "FY2030E": 5.472653,
-            "FY2031E": 5.366835,
-            "FY2032E": 5.146513,
-            "FY2033E": 4.815783,
-            "FY2034E": 4.369591,
-            "FY2035E": 3.802697
+            "FY2027E": 6.624103,
+            "FY2028E": 6.718987,
+            "FY2029E": 6.720419,
+            "FY2030E": 6.754249,
+            "FY2031E": 6.739622,
+            "FY2032E": 6.642139,
+            "FY2033E": 6.440096,
+            "FY2034E": 6.128684,
+            "FY2035E": 5.702919
           }
         },
         {
@@ -1254,7 +1256,7 @@
             "FY2023A": -16.379321,
             "FY2024A": -38.258855,
             "FY2025A": 1.644376,
-            "FY2026E": 0.0,
+            "FY2026E": 62.2,
             "FY2027E": 0.0,
             "FY2028E": 0.0,
             "FY2029E": 0.0,
@@ -1275,16 +1277,16 @@
             "FY2023A": 60.378658,
             "FY2024A": -77.551313,
             "FY2025A": -153.870428,
-            "FY2026E": -131.291774,
-            "FY2027E": -131.673087,
-            "FY2028E": -136.189206,
-            "FY2029E": -141.745746,
-            "FY2030E": -147.766653,
-            "FY2031E": -155.874841,
-            "FY2032E": -164.292421,
-            "FY2033E": -173.020601,
-            "FY2034E": -182.069902,
-            "FY2035E": -191.451201
+            "FY2026E": -87.562213,
+            "FY2027E": -128.182002,
+            "FY2028E": -104.527249,
+            "FY2029E": -84.519222,
+            "FY2030E": -74.067963,
+            "FY2031E": -80.565311,
+            "FY2032E": -87.307128,
+            "FY2033E": -94.31964,
+            "FY2034E": -101.612323,
+            "FY2035E": -109.194975
           }
         },
         {
@@ -1317,16 +1319,16 @@
             "FY2023A": 36.010191,
             "FY2024A": -65.866245,
             "FY2025A": -127.60647,
-            "FY2026E": -131.291774,
-            "FY2027E": -131.673087,
-            "FY2028E": -136.189206,
-            "FY2029E": -141.745746,
-            "FY2030E": -147.766653,
-            "FY2031E": -155.874841,
-            "FY2032E": -164.292421,
-            "FY2033E": -173.020601,
-            "FY2034E": -182.069902,
-            "FY2035E": -191.451201
+            "FY2026E": -87.562213,
+            "FY2027E": -128.182002,
+            "FY2028E": -104.527249,
+            "FY2029E": -84.519222,
+            "FY2030E": -74.067963,
+            "FY2031E": -80.565311,
+            "FY2032E": -87.307128,
+            "FY2033E": -94.31964,
+            "FY2034E": -101.612323,
+            "FY2035E": -109.194975
           }
         },
         {
@@ -1359,16 +1361,16 @@
             "FY2023A": 36.010404,
             "FY2024A": -61.332081,
             "FY2025A": -116.25952,
-            "FY2026E": -131.291774,
-            "FY2027E": -131.673087,
-            "FY2028E": -136.189206,
-            "FY2029E": -141.745746,
-            "FY2030E": -147.766653,
-            "FY2031E": -155.874841,
-            "FY2032E": -164.292421,
-            "FY2033E": -173.020601,
-            "FY2034E": -182.069902,
-            "FY2035E": -191.451201
+            "FY2026E": -87.562213,
+            "FY2027E": -128.182002,
+            "FY2028E": -104.527249,
+            "FY2029E": -84.519222,
+            "FY2030E": -74.067963,
+            "FY2031E": -80.565311,
+            "FY2032E": -87.307128,
+            "FY2033E": -94.31964,
+            "FY2034E": -101.612323,
+            "FY2035E": -109.194975
           }
         },
         {
@@ -1401,16 +1403,16 @@
             "FY2023A": 0.004908,
             "FY2024A": -0.008237,
             "FY2025A": -0.015802,
-            "FY2026E": -0.017845,
-            "FY2027E": -0.017897,
-            "FY2028E": -0.018511,
-            "FY2029E": -0.019266,
-            "FY2030E": -0.020085,
-            "FY2031E": -0.021187,
-            "FY2032E": -0.022331,
-            "FY2033E": -0.023517,
-            "FY2034E": -0.024747,
-            "FY2035E": -0.026022
+            "FY2026E": -0.011902,
+            "FY2027E": -0.017423,
+            "FY2028E": -0.014208,
+            "FY2029E": -0.011488,
+            "FY2030E": -0.010067,
+            "FY2031E": -0.010951,
+            "FY2032E": -0.011867,
+            "FY2033E": -0.01282,
+            "FY2034E": -0.013811,
+            "FY2035E": -0.014842
           }
         },
         {
@@ -1466,16 +1468,16 @@
             "FY2023A": 131.764166,
             "FY2024A": 175.519629,
             "FY2025A": 177.614845,
-            "FY2026E": 109.913025,
-            "FY2027E": 153.218757,
-            "FY2028E": 156.283133,
-            "FY2029E": 158.62738,
-            "FY2030E": 161.00679,
-            "FY2031E": 164.226926,
-            "FY2032E": 167.511465,
-            "FY2033E": 170.861694,
-            "FY2034E": 174.278928,
-            "FY2035E": 177.764506
+            "FY2026E": 89.529155,
+            "FY2027E": 124.317627,
+            "FY2028E": 143.655925,
+            "FY2029E": 147.965602,
+            "FY2030E": 152.40457,
+            "FY2031E": 155.452662,
+            "FY2032E": 158.561715,
+            "FY2033E": 161.732949,
+            "FY2034E": 164.967608,
+            "FY2035E": 168.26696
           }
         },
         {
@@ -1487,16 +1489,16 @@
             "FY2023A": -2.626397,
             "FY2024A": -52.825439,
             "FY2025A": -54.957047,
-            "FY2026E": 10.15517,
-            "FY2027E": 2.198261,
-            "FY2028E": 1.802574,
-            "FY2029E": 1.378969,
-            "FY2030E": 1.399653,
-            "FY2031E": 1.894198,
-            "FY2032E": 1.932081,
-            "FY2033E": 1.970723,
-            "FY2034E": 2.010138,
-            "FY2035E": 2.05034
+            "FY2026E": -1.035974,
+            "FY2027E": 6.139142,
+            "FY2028E": 3.315137,
+            "FY2029E": 2.585807,
+            "FY2030E": 2.663381,
+            "FY2031E": 1.828855,
+            "FY2032E": 1.865432,
+            "FY2033E": 1.902741,
+            "FY2034E": 1.940795,
+            "FY2035E": 1.979611
           }
         },
         {
@@ -1508,16 +1510,16 @@
             "FY2023A": 223.628106,
             "FY2024A": 183.536177,
             "FY2025A": 62.762471,
-            "FY2026E": 50.859297,
-            "FY2027E": 26.093854,
-            "FY2028E": 29.200848,
-            "FY2029E": 31.178328,
-            "FY2030E": 32.47487,
-            "FY2031E": 31.795463,
-            "FY2032E": 31.53418,
-            "FY2033E": 31.231425,
-            "FY2034E": 30.884904,
-            "FY2035E": 30.492217
+            "FY2026E": 44.592534,
+            "FY2027E": 28.99852,
+            "FY2028E": 28.181026,
+            "FY2029E": 33.919531,
+            "FY2030E": 35.752824,
+            "FY2031E": 36.56463,
+            "FY2032E": 36.472919,
+            "FY2033E": 36.346125,
+            "FY2034E": 36.182203,
+            "FY2035E": 35.979011
           }
         },
         {
@@ -1550,16 +1552,16 @@
             "FY2023A": null,
             "FY2024A": null,
             "FY2025A": null,
-            "FY2026E": 36.138546,
-            "FY2027E": 0.720874,
-            "FY2028E": -0.107714,
-            "FY2029E": -2.252388,
-            "FY2030E": -5.290894,
-            "FY2031E": -11.016119,
-            "FY2032E": -16.536525,
-            "FY2033E": -22.309586,
-            "FY2034E": -28.344667,
-            "FY2035E": -34.651461
+            "FY2026E": 92.071783,
+            "FY2027E": 4.744205,
+            "FY2028E": 0.071595,
+            "FY2029E": 1.691532,
+            "FY2030E": -0.731344,
+            "FY2031E": -4.874166,
+            "FY2032E": -10.10216,
+            "FY2033E": -15.570573,
+            "FY2034E": -21.288274,
+            "FY2035E": -27.264446
           }
         }
       ],
@@ -1573,16 +1575,16 @@
             "FY2023A": 185.557736,
             "FY2024A": 132.732297,
             "FY2025A": 77.77525,
-            "FY2026E": 87.93042,
-            "FY2027E": 90.128681,
-            "FY2028E": 91.931254,
-            "FY2029E": 93.310223,
-            "FY2030E": 94.709877,
-            "FY2031E": 96.604074,
-            "FY2032E": 98.536156,
-            "FY2033E": 100.506879,
-            "FY2034E": 102.517016,
-            "FY2035E": 104.567357
+            "FY2026E": 76.739276,
+            "FY2027E": 82.878418,
+            "FY2028E": 86.193555,
+            "FY2029E": 88.779361,
+            "FY2030E": 91.442742,
+            "FY2031E": 93.271597,
+            "FY2032E": 95.137029,
+            "FY2033E": 97.03977,
+            "FY2034E": 98.980565,
+            "FY2035E": 100.960176
           }
         },
         {
@@ -1594,16 +1596,16 @@
             "FY2023A": 498.124721,
             "FY2024A": 211.44397,
             "FY2025A": 239.133347,
-            "FY2026E": 275.271893,
-            "FY2027E": 275.992767,
-            "FY2028E": 275.885053,
-            "FY2029E": 273.632665,
-            "FY2030E": 268.34177,
-            "FY2031E": 257.325651,
-            "FY2032E": 240.789127,
-            "FY2033E": 218.47954,
-            "FY2034E": 190.134873,
-            "FY2035E": 155.483412
+            "FY2026E": 331.20513,
+            "FY2027E": 335.949335,
+            "FY2028E": 336.02093,
+            "FY2029E": 337.712462,
+            "FY2030E": 336.981118,
+            "FY2031E": 332.106952,
+            "FY2032E": 322.004793,
+            "FY2033E": 306.43422,
+            "FY2034E": 285.145946,
+            "FY2035E": 257.8815
           }
         },
         {
@@ -1636,16 +1638,16 @@
             "FY2023A": 710.75241,
             "FY2024A": 751.102613,
             "FY2025A": 695.751602,
-            "FY2026E": 593.166112,
-            "FY2027E": 528.57389,
-            "FY2028E": 462.689825,
-            "FY2029E": 395.817498,
-            "FY2030E": 327.942086,
-            "FY2031E": 258.709166,
-            "FY2032E": 188.091588,
-            "FY2033E": 116.061658,
-            "FY2034E": 42.59113,
-            "FY2035E": -32.348809
+            "FY2026E": 592.153579,
+            "FY2027E": 523.088231,
+            "FY2028E": 487.17425,
+            "FY2029E": 472.37769,
+            "FY2030E": 472.37769,
+            "FY2031E": 472.37769,
+            "FY2032E": 472.37769,
+            "FY2033E": 472.37769,
+            "FY2034E": 472.37769,
+            "FY2035E": 472.37769
           }
         },
         {
@@ -1657,16 +1659,16 @@
             "FY2023A": 272.60492,
             "FY2024A": 183.151589,
             "FY2025A": 51.556497,
-            "FY2026E": -79.735277,
-            "FY2027E": -211.408364,
-            "FY2028E": -347.59757,
-            "FY2029E": -489.343316,
-            "FY2030E": -637.109969,
-            "FY2031E": -792.98481,
-            "FY2032E": -957.277232,
-            "FY2033E": -1130.297833,
-            "FY2034E": -1312.367734,
-            "FY2035E": -1503.818935
+            "FY2026E": -36.005716,
+            "FY2027E": -164.187718,
+            "FY2028E": -268.714967,
+            "FY2029E": -353.234189,
+            "FY2030E": -427.302152,
+            "FY2031E": -507.867463,
+            "FY2032E": -595.17459,
+            "FY2033E": -689.49423,
+            "FY2034E": -791.106553,
+            "FY2035E": -900.301529
           }
         },
         {
@@ -1699,16 +1701,16 @@
             "FY2023A": 692.577623,
             "FY2024A": 791.274424,
             "FY2025A": 872.671567,
-            "FY2026E": 911.533021,
-            "FY2027E": 980.812147,
-            "FY2028E": 1052.919861,
-            "FY2029E": 1129.172249,
-            "FY2030E": 1210.463144,
-            "FY2031E": 1298.999263,
-            "FY2032E": 1394.606187,
-            "FY2033E": 1497.567582,
-            "FY2034E": 1608.177093,
-            "FY2035E": 1726.738695
+            "FY2026E": 855.599784,
+            "FY2027E": 920.855579,
+            "FY2028E": 992.783984,
+            "FY2029E": 1065.092452,
+            "FY2030E": 1141.823796,
+            "FY2031E": 1224.217962,
+            "FY2032E": 1313.390521,
+            "FY2033E": 1409.612902,
+            "FY2034E": 1513.16602,
+            "FY2035E": 1624.340607
           }
         },
         {
@@ -1720,16 +1722,16 @@
             "FY2023A": 0.037156,
             "FY2024A": 0.024597,
             "FY2025A": 0.007008,
-            "FY2026E": -0.010838,
-            "FY2027E": -0.028735,
-            "FY2028E": -0.047246,
-            "FY2029E": -0.066512,
-            "FY2030E": -0.086597,
-            "FY2031E": -0.107784,
-            "FY2032E": -0.130115,
-            "FY2033E": -0.153632,
-            "FY2034E": -0.178379,
-            "FY2035E": -0.204402
+            "FY2026E": -0.004894,
+            "FY2027E": -0.022317,
+            "FY2028E": -0.036524,
+            "FY2029E": -0.048012,
+            "FY2030E": -0.05808,
+            "FY2031E": -0.06903,
+            "FY2032E": -0.080897,
+            "FY2033E": -0.093717,
+            "FY2034E": -0.107529,
+            "FY2035E": -0.122371
           }
         }
       ],
@@ -1743,11 +1745,11 @@
             "FY2023A": 0.179963,
             "FY2024A": -0.042006,
             "FY2025A": -0.157148,
-            "FY2026E": -0.01,
-            "FY2027E": 0.025,
-            "FY2028E": 0.02,
-            "FY2029E": 0.015,
-            "FY2030E": 0.015,
+            "FY2026E": -0.136,
+            "FY2027E": 0.08,
+            "FY2028E": 0.04,
+            "FY2029E": 0.03,
+            "FY2030E": 0.03,
             "FY2031E": 0.02,
             "FY2032E": 0.02,
             "FY2033E": 0.02,
@@ -1764,16 +1766,16 @@
             "FY2023A": 0.134429,
             "FY2024A": 0.087138,
             "FY2025A": 0.028104,
-            "FY2026E": 0.036634,
-            "FY2027E": 0.040834,
-            "FY2028E": 0.042235,
-            "FY2029E": 0.042935,
-            "FY2030E": 0.04346,
-            "FY2031E": 0.042924,
-            "FY2032E": 0.042378,
-            "FY2033E": 0.041821,
-            "FY2034E": 0.041252,
-            "FY2035E": 0.040673
+            "FY2026E": 0.019055,
+            "FY2027E": 0.041438,
+            "FY2028E": 0.062925,
+            "FY2029E": 0.080672,
+            "FY2030E": 0.091207,
+            "FY2031E": 0.090698,
+            "FY2032E": 0.090179,
+            "FY2033E": 0.089649,
+            "FY2034E": 0.089109,
+            "FY2035E": 0.088559
           }
         },
         {
@@ -1785,16 +1787,16 @@
             "FY2023A": 0.224729,
             "FY2024A": 0.178907,
             "FY2025A": 0.117417,
-            "FY2026E": 0.116634,
-            "FY2027E": 0.120834,
-            "FY2028E": 0.122235,
-            "FY2029E": 0.122935,
-            "FY2030E": 0.12346,
-            "FY2031E": 0.122924,
-            "FY2032E": 0.122378,
-            "FY2033E": 0.121821,
-            "FY2034E": 0.121252,
-            "FY2035E": 0.120673
+            "FY2026E": 0.104055,
+            "FY2027E": 0.115438,
+            "FY2028E": 0.121925,
+            "FY2029E": 0.124672,
+            "FY2030E": 0.125207,
+            "FY2031E": 0.124698,
+            "FY2032E": 0.124179,
+            "FY2033E": 0.123649,
+            "FY2034E": 0.123109,
+            "FY2035E": 0.122559
           }
         },
         {
@@ -1806,16 +1808,16 @@
             "FY2023A": 0.080055,
             "FY2024A": 0.030177,
             "FY2025A": -0.045936,
-            "FY2026E": -0.028366,
-            "FY2027E": -0.024166,
-            "FY2028E": -0.022765,
-            "FY2029E": -0.022065,
-            "FY2030E": -0.02154,
-            "FY2031E": -0.022076,
-            "FY2032E": -0.022622,
-            "FY2033E": -0.023179,
-            "FY2034E": -0.023748,
-            "FY2035E": -0.024327
+            "FY2026E": -0.046945,
+            "FY2027E": -0.024562,
+            "FY2028E": -0.003075,
+            "FY2029E": 0.014672,
+            "FY2030E": 0.025207,
+            "FY2031E": 0.024698,
+            "FY2032E": 0.024179,
+            "FY2033E": 0.023649,
+            "FY2034E": 0.023109,
+            "FY2035E": 0.022559
           }
         },
         {
@@ -1827,16 +1829,16 @@
             "FY2023A": 0.019642,
             "FY2024A": -0.034921,
             "FY2025A": -0.078537,
-            "FY2026E": -0.089588,
-            "FY2027E": -0.087657,
-            "FY2028E": -0.088885,
-            "FY2029E": -0.091145,
-            "FY2030E": -0.093612,
-            "FY2031E": -0.096813,
-            "FY2032E": -0.10004,
-            "FY2033E": -0.103289,
-            "FY2034E": -0.10656,
-            "FY2035E": -0.109853
+            "FY2026E": -0.068462,
+            "FY2027E": -0.092798,
+            "FY2028E": -0.072762,
+            "FY2029E": -0.057121,
+            "FY2030E": -0.0486,
+            "FY2031E": -0.051826,
+            "FY2032E": -0.055062,
+            "FY2033E": -0.058318,
+            "FY2034E": -0.061595,
+            "FY2035E": -0.064894
           }
         },
         {
@@ -1848,16 +1850,16 @@
             "FY2023A": 0.355574,
             "FY2024A": -2.678179,
             "FY2025A": 0.91845,
-            "FY2026E": 0.129299,
-            "FY2027E": 0.002904,
-            "FY2028E": 0.034298,
-            "FY2029E": 0.0408,
-            "FY2030E": 0.042477,
-            "FY2031E": 0.054872,
-            "FY2032E": 0.054002,
-            "FY2033E": 0.053126,
-            "FY2034E": 0.052302,
-            "FY2035E": 0.051526
+            "FY2026E": -0.246838,
+            "FY2027E": 0.463896,
+            "FY2028E": -0.18454,
+            "FY2029E": -0.191414,
+            "FY2030E": -0.123655,
+            "FY2031E": 0.087721,
+            "FY2032E": 0.083681,
+            "FY2033E": 0.08032,
+            "FY2034E": 0.077319,
+            "FY2035E": 0.074623
           }
         },
         {
@@ -1869,16 +1871,16 @@
             "FY2023A": 0.136188,
             "FY2024A": -0.269144,
             "FY2025A": -0.990673,
-            "FY2026E": 9.318485,
-            "FY2027E": 0.904523,
-            "FY2028E": 0.487255,
-            "FY2029E": 0.338723,
-            "FY2030E": 0.262357,
-            "FY2031E": 0.217992,
-            "FY2032E": 0.187735,
-            "FY2033E": 0.165762,
-            "FY2034E": 0.149075,
-            "FY2035E": 0.135965
+            "FY2026E": -11.261456,
+            "FY2027E": 1.280581,
+            "FY2028E": 0.482913,
+            "FY2029E": 0.271788,
+            "FY2030E": 0.189787,
+            "FY2031E": 0.172301,
+            "FY2032E": 0.158302,
+            "FY2033E": 0.146839,
+            "FY2034E": 0.137258,
+            "FY2035E": 0.129117
           }
         },
         {
@@ -1890,16 +1892,16 @@
             "FY2023A": 1.681014,
             "FY2024A": 2.518249,
             "FY2025A": 5.020737,
-            "FY2026E": 5.332864,
-            "FY2027E": 5.4036,
-            "FY2028E": 5.621973,
-            "FY2029E": 5.906186,
-            "FY2030E": 6.211284,
-            "FY2031E": 6.563367,
-            "FY2032E": 6.939108,
-            "FY2033E": 7.338721,
-            "FY2034E": 7.762448,
-            "FY2035E": 8.21056
+            "FY2026E": 6.428938,
+            "FY2027E": 5.775008,
+            "FY2028E": 5.668125,
+            "FY2029E": 5.773768,
+            "FY2030E": 5.98375,
+            "FY2031E": 6.31541,
+            "FY2032E": 6.670341,
+            "FY2033E": 7.048705,
+            "FY2034E": 7.450694,
+            "FY2035E": 7.876523
           }
         },
         {
@@ -1932,16 +1934,16 @@
             "FY2023A": 0.071872,
             "FY2024A": 0.099937,
             "FY2025A": 0.119985,
-            "FY2026E": 0.075,
-            "FY2027E": 0.102,
-            "FY2028E": 0.102,
-            "FY2029E": 0.102,
-            "FY2030E": 0.102,
-            "FY2031E": 0.102,
-            "FY2032E": 0.102,
-            "FY2033E": 0.102,
-            "FY2034E": 0.102,
-            "FY2035E": 0.102
+            "FY2026E": 0.07,
+            "FY2027E": 0.09,
+            "FY2028E": 0.1,
+            "FY2029E": 0.1,
+            "FY2030E": 0.1,
+            "FY2031E": 0.1,
+            "FY2032E": 0.1,
+            "FY2033E": 0.1,
+            "FY2034E": 0.1,
+            "FY2035E": 0.1
           }
         }
       ]
@@ -2208,7 +2210,7 @@
       },
       {
         "label": "Scenario bull",
-        "value": 1382.0,
+        "value": 154.0,
         "weight": 0.15
       }
     ]
@@ -2219,20 +2221,23 @@
       "label": "Revenue growth",
       "unit": "pct",
       "values": {
-        "FY2026E": -0.01,
-        "FY2027E": 0.025,
-        "FY2028E": 0.02,
-        "FY2029E": 0.015,
-        "FY2030E": 0.015
+        "FY2026E": -0.136,
+        "FY2027E": 0.08,
+        "FY2028E": 0.04,
+        "FY2029E": 0.03,
+        "FY2030E": 0.03
       },
       "value": null,
       "lt": 0.02,
-      "basis": "1H2026 revenue was US$692.8m, 5.1% below 1H2025's US$730.2m [F20, F22, S6], and LTM revenue is US$1,442.9m (data pack), so FY2026E is set at -1.0%. The Adaro contract signed on 23 February 2026 and running 1 April 2026-31 December 2030 is a CONTINUATION, not an addition: the source says it \"mengamankan keberlanjutan operasional BUMA di Tambang Tutupan Selatan\" - it secures the continuation of BUMA's operations at South Tutupan in a relationship of more than twenty years - and the 239 million bcm and 44 Mt it quotes (50.5 million bcm and 9.3 Mt a year) are the gross volumes of a replacement contract, whose first day follows the expiry of the previous Adaro term [F27, F28, S4]. We therefore model no incremental volume from it, and the prior contract's exact expiry date is not disclosed in the archive, which is why the assumption takes the conservative reading rather than claiming a ramp. FY2027E +2.5% comes from the named extensions only - Blackwater (to June 2030), Goonyella Riverside (to September 2027) and Whitehaven [S2, p.49] - and is not the first full year of a new Adaro book. FY2028E-FY2030E step down to +2.0%, +1.5% and +1.5%. We do not translate the US$12.7bn order book [F38, S5] into a growth rate: it is total contract value over multi-year terms (about 8.6x FY2025 revenue), while annual revenue is set by each client's yearly mine plan, and the awards disclosed since it was published are already in the forecast. The deceleration is therefore contract arithmetic on the disclosed terms, not a statement that the backlog has run off. No formal volume or revenue guidance is published. LT 2.0% is the macro deck's long-run USD inflation, not real growth.",
+      "basis": "Nine-month 2026 revenue was US$928.8m, 17.8% below 9M2025's US$1,130.5m [F67, S13, p.7; S11], so FY2026E is set at -13.6%: the nine months are actual and Q4 is rebuilt at the Q4 2025 run-rate of about US$350m (FY2025 revenue US$1,480.3m less 9M2025 US$1,130.5m), because the main client's mine restarted in October and runs fully from November [F95, S11], giving FY2026E revenue of about US$1,280m. The decline is operational, not contractual: overburden volume fell 31% in the nine months on the client stoppage [F92, S11]. The Adaro contract signed on 23 February 2026 and running 1 April 2026-31 December 2030 is a CONTINUATION, not an addition: the source says it \"mengamankan keberlanjutan operasional BUMA di Tambang Tutupan Selatan\" and the 239 million bcm and 44 Mt it quotes are the gross volumes of a replacement contract [F27, F28, S4], so we model no incremental volume from it. FY2027E +8.0% is the restart annualised plus the company's stated plan to restore normal activity in 2027 [F95, S11], held below a full return to FY2025 revenue because Fitch notes contracts that expired without extension or replacement [F84, S12]; FY2028E-FY2030E step down to +4.0%, +3.0% and +3.0%. We do not translate the US$12.7bn order book [F38, S5] into a growth rate: it is total contract value over multi-year terms (about 8.6x FY2025 revenue), while annual revenue is set by each client's yearly mine plan. No formal volume or revenue guidance is published. LT 2.0% is the macro deck's long-run USD inflation, not real growth.",
       "sources": [
         "S2",
         "S4",
         "S5",
-        "S6"
+        "S6",
+        "S11",
+        "S12",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2241,19 +2246,22 @@
       "label": "Gross margin at base input costs",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.0464,
-        "FY2027E": 0.0464,
-        "FY2028E": 0.0464,
-        "FY2029E": 0.0464,
-        "FY2030E": 0.0464
+        "FY2026E": 0.029,
+        "FY2027E": 0.047,
+        "FY2028E": 0.067,
+        "FY2029E": 0.084,
+        "FY2030E": 0.094
       },
       "value": null,
-      "lt": 0.0464,
-      "basis": "Stated AFTER the depreciation carried in cost of revenues, the way the LK prints it, but rebased so that no D&A is deducted twice. FY2025 reported gross margin was 2.81% (revenue US$1,480.3m, COGS US$1,438.7m) [F1, F3, S2] and that margin already carries the D&A charged to profit or loss, 16.33% of revenue (US$241.8m [F58, S2 p.362]). The forecast adds back only the 14.5% da_pct [S6], so holding the reported 2.81% would deduct 1.83 points of D&A the forecast never charges and understate EBITDA by roughly US$27m a year - the double-count the review identified. Cash COGS is the invariant: 2.81% + 16.33% = 19.14% of revenue before D&A, so at 14.5% D&A the reported gross margin input is 4.64%. 1H2026 was 1.76% reported, 14.2% on the same cash basis (COGS US$680.7m including US$96.8m of depreciation) [F20, S6 p.107], which is the fuel squeeze the Brent link below carries, not a structural step, so the input stays at the FY2025 cash level and the link does the work. Costs otherwise stay at the last actual in real terms.",
+      "lt": 0.094,
+      "basis": "Stated AFTER the depreciation carried in cost of revenues, the way the LK prints it, but rebased so that no D&A is deducted twice. FY2025 reported gross margin was 2.81% (revenue US$1,480.3m, COGS US$1,438.7m) [F1, F3, S2] and that margin already carries the D&A charged to profit or loss, 16.33% of revenue (US$241.8m [F58, S2 p.362]). The forecast adds back only the 15.1% da_pct [S6], so holding the reported 2.81% would deduct 1.83 points of D&A the forecast never charges and understate EBITDA by roughly US$27m a year. Cash COGS is the invariant: 2.81% + 16.33% = 19.14% of revenue before D&A. The nine months to September 2026 print a 1.17% reported margin (gross profit US$10.8m on revenue US$928.8m [F67, F69, S13 p.7]) and a 16.5% cash margin (adding back US$142.9m of depreciation and amortisation in cost of revenues [F74, S13 p.107]) - the volume deleverage and the client stoppage [F91, S11]. Q4 recovers with the restart [F94, S11], so FY2026E cash margin is held at 16.8%, and the input is 2.9% at a 15.1% D&A ratio. From FY2027E the margin recovers to 18.3% cash as volume normalises, still below the FY2025 19.14% because the ended contracts and lagged rate resets are not fully recovered [F84, S12]; the input is 4.7%. FY2028E-FY2030E rise to 6.7%, 8.4% and 9.4%, but the rise from FY2027E is the D&A reduction passed through, not a margin assumption: as the da_pct glides from 15.1% to 10.0%, gross margin rises by the same points and cash margin (gross margin plus D&A) is held at the FY2026E level, so EBITDA is unchanged [F7, F18, S2 p.362]. The company's own cost programme - fuel cost per excavated volume down 14% and Indonesian opex held to +2% ex-severance in the nine months [F92, S11] - is what makes the recovery possible without a rate reset.",
       "sources": [
         "S2",
         "S3",
-        "S6"
+        "S6",
+        "S11",
+        "S12",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2290,18 +2298,21 @@
       "label": "SG&A / revenue",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.065,
-        "FY2027E": 0.065,
-        "FY2028E": 0.065,
-        "FY2029E": 0.065,
-        "FY2030E": 0.065
+        "FY2026E": 0.066,
+        "FY2027E": 0.066,
+        "FY2028E": 0.066,
+        "FY2029E": 0.066,
+        "FY2030E": 0.066
       },
       "value": null,
-      "lt": 0.065,
-      "basis": "FY2025 operating expenses were US$108.7m, 7.34% of revenue [F5, F1, S2]; 1H2026 was US$44.9m, 6.48% of revenue [S6, p.7]. We hold the nine-month run-rate at 6.5% rather than the FY2025 ratio, because the FY2025 number carried severance and impairment-related charges that the company identifies as one-off (EBITDA ex-severance US$207m) [F31, S2]. No cost-cut is assumed beyond the observed level.",
+      "lt": 0.066,
+      "basis": "FY2025 operating expenses were US$108.7m, 7.34% of revenue [F5, F1, S2]; 9M2026 was US$61.4m, 6.61% of revenue [F70, S13 p.7], below the nine-month FY2025 ratio of 7.44% (US$84.1m on US$1,130.5m) and roughly stable against the first-half run-rate after the severance programme [S3, S6, S11]. We hold 6.6% through FY2026E\u2013FY2030E, so the nine-month reduction is preserved and no further cut is assumed beyond the observed level. The cost programme cited in the results announcement targeted \"efisiensi operasional\" and \"meningkatkan produktivitas, keandalan armada, dan penghematan bahan bakar\" [F90, S11]; at 6.6% that effect is carried.",
       "sources": [
         "S2",
-        "S6"
+        "S3",
+        "S6",
+        "S11",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2310,18 +2321,19 @@
       "label": "D&A / revenue",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.145,
-        "FY2027E": 0.145,
-        "FY2028E": 0.145,
-        "FY2029E": 0.145,
-        "FY2030E": 0.145
+        "FY2026E": 0.151,
+        "FY2027E": 0.14,
+        "FY2028E": 0.125,
+        "FY2029E": 0.11,
+        "FY2030E": 0.1
       },
       "value": null,
-      "lt": 0.145,
-      "basis": "FY2025 D&A charged to profit or loss was US$234.7m (US$231.9m in COGS and US$2.8m in opex) [F7, S2 p.362], 15.9% of revenue; FY2024 was US$255.4m [F8]. 1H2026 depreciation fell with the asset base after disposals and impairments (US$96.8m in COGS plus US$1.3m in opex and US$1.4m amortisation), about 14.4% of revenue [S6, pp.63,107]. We hold 14.5% for the forecast, below FY2025 because the fleet base is smaller, and never calibrate a cash cost off the Yahoo D&A line, which is a fraction of the real charge.",
+      "lt": 0.1,
+      "basis": "FY2025 D&A charged to profit or loss was US$234.7m (US$231.9m in COGS and US$2.8m in opex) [F7, S2 p.362], 15.9% of revenue; FY2024 was US$255.4m [F8]. Nine-month 2026 depreciation and amortisation totalled US$142.9m in cost of revenues plus US$2.0m in opex (amortisation not separately split) [F74, F75, S13 pp.107, 108], 15.4% of revenue (928.8m), slightly below the FY2025 ratio because the fleet base is smaller after disposals and impairments. We hold 15.1% for the forecast, reflecting the observed 9M2026 ratio adjusted for a Q4 with modest recovery of overburden volume [F94, S11]. We then glide the ratio to 10.0% by FY2030E because that is the maintenance-capex rate: D&A is the charge on a fleet carried at its maintained book, and the 15.9% FY2025 and 15.4% 9M2026 ratios reflect the acquired Downer and Atlantic book and the 2024-25 impairments [F7, F8, F74, S13 pp.107-108]. The gross-margin input rises by exactly the same points over the glide, so cash margin - gross margin plus D&A - is unchanged at about 19.4% and neither EBITDA nor FCFF moves: only the split between the two lines changes. Never calibrate a cash cost off the Yahoo D&A line, which is a fraction of the real charge.",
       "sources": [
         "S2",
-        "S6"
+        "S6",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2330,19 +2342,21 @@
       "label": "Capex / revenue",
       "unit": "pct",
       "values": {
-        "FY2026E": 0.075,
-        "FY2027E": 0.102,
-        "FY2028E": 0.102,
-        "FY2029E": 0.102,
-        "FY2030E": 0.102
+        "FY2026E": 0.07,
+        "FY2027E": 0.09,
+        "FY2028E": 0.1,
+        "FY2029E": 0.1,
+        "FY2030E": 0.1
       },
       "value": null,
-      "lt": 0.102,
-      "basis": "FY2025 gross capex was US$177.6m (12.0% of revenue), including US$169.5m of fixed assets [F18, S2 p.72], US$6.4m of mining properties and US$1.7m of intangibles; FY2024 was US$175.5m (10.0%) on a D&A charge of US$255.4m [F8, F19], and FY2023 was US$131.8m (7.2%). Capex has therefore run at 69% of D&A in FY2024 (175.5/255.4) and 73% in FY2025 (177.6/241.8 of total depreciation and amortisation), not at the 58.6% the previous version of this file implied: 8.5% of revenue is not seventy per cent of a 14.5% D&A charge, 10.15% is. We start FY2026E at 7.5%, close to the 1H2026 fixed-asset run-rate of 7.1% of revenue [F35, S6 p.10], then normalise to 10.2%, which is seventy per cent of the 14.5% D&A rate and US$150-160m a year against the FY2025 actual of US$177.6m for the same fleet. Holding capex at 8.5% would have understated the cash cost of the fleet by about US$24m a year and flattered free cash flow.",
+      "lt": 0.1,
+      "basis": "FY2025 gross capex was US$177.6m (12.0% of revenue), including US$169.5m of fixed assets [F18, S2 p.72], US$6.4m of mining properties and US$1.7m of intangibles; FY2024 was US$175.5m (10.0%) on a D&A charge of US$255.4m [F8, F19], and FY2023 was US$131.8m (7.2%). Nine-month 2026 acquisition of fixed assets was US$73.4m plus US$0.6m of intangibles [F80, S13 p.10], 7.9% of revenue, after the company cut heavy-equipment spending to preserve liquidity; the press reports a 59% cut in the capex budget [S11]. FY2026E is 7.0%, below the nine-month run-rate because Q4 spending was deferred again. FY2027E rises to 9.0% and the long-run rate is 10.0% from FY2028E: that is the FY2024 actual, below FY2025's 12.0% and above the liquidity-constrained 9M2026 7.9%, and it equals the D&A ratio at the horizon, so the fleet is MAINTAINED rather than run down. On that pairing the PPE roll-forward stays positive through FY2035E (it ends near US$472m), which removes the negative fixed-asset base the review found when capex was held near 10% against a 15.1% charge. Because the fleet is flat, there is no volume or revenue penalty to take: the volume path is set by the contracts, not by the asset base [F18, F19, F81, S2 p.72, S13 p.10].",
       "sources": [
         "S2",
         "S3",
-        "S6"
+        "S6",
+        "S11",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2394,10 +2408,12 @@
       "values": null,
       "value": 0.085,
       "lt": null,
-      "basis": "FY2025 finance cost was US$91.6m on opening debt of US$1,002.7m (9.1%); FY2024 was US$102.7m on US$1,190.7m (8.6%) [F9, F10, S2]. The bank facilities carried 7.64%-8.39% at 30 June 2026 [S6, p.80] and the Senior Notes and leases sit above that, so 8.5% is the blended run-rate, not the Yahoo 7.49%.",
+      "basis": "FY2025 finance cost was US$91.6m on opening debt of US$1,002.7m (9.1%); FY2024 was US$102.7m on US$1,190.7m (8.6%) [F9, F10, S2]. Nine-month 2026 finance cost was US$63.8m on average debt of about US$1,045m, 8.1% annualised [F73, F77, S13 p.7], against opening debt of US$1,111.8m. All bank loans carried 6.02%-7.21% at 30 June 2026 and the syndicated BNI facility 7.41%-7.64% [S6, p.80] and the Senior Notes and leases sit above that. We hold 8.5%, above the observed 8.1%, because the Fitch cut to CCC-(idn) on 11 November 2026, with the rupiah bonds and sukuk at CC(idn), reprices any refinancing [F84, S12]; no post-downgrade refinancing rate is disclosed, so the base holds the last actual blended cost - the method card's rule for costs - and the section 4 sensitivity tests 12-18%. The Yahoo 7.49% is below what the LK shows.",
       "sources": [
         "S2",
-        "S6"
+        "S6",
+        "S12",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2428,9 +2444,11 @@
       },
       "value": null,
       "lt": 76.0,
-      "basis": "1H2026 was a net repayment year: US$57.5m of bank draws against US$52.3m bank repayments, US$31.9m of Senior Notes repaid, US$12.9m of long-term debt and US$21.8m of leases, a net outflow of about US$61m [S6, p.10]. That repayment was funded from a cash balance of US$211.4m at the start of the year, which fell to US$158.5m by 30 June 2026 [S6]. Repeating it is not available: on the forecast the annual interest bill of roughly US$90m exceeds FCFF of US$24-29m, so free cash flow to equity is negative and the company must refinance rather than deleverage. We therefore model net new borrowing of about US$70-75m a year, which holds cash near the 30 June 2026 level and rolls the shortfall, with debt roughly flat in nominal terms. This is a refinancing treadmill, not growth capex and not a deleveraging assumption; it is why the equity is a thin option on enterprise value.",
+      "basis": "1H2026 was a net repayment half: US$57.5m of bank draws against US$52.3m bank repayments, US$31.9m of Senior Notes repaid, US$12.9m of long-term debt and US$21.8m of leases, a net outflow of about US$61m [S6, p.10]. The nine months then repaid a further Rp503bn (US$28m) domestic bond on 20 October 2026 [F98, S12], and debt fell from US$1,111.8m at 31 December 2025 to US$978.6m at 30 September 2026 while cash fell from US$210.3m to US$95.1m [F76, F77, S13]. Repeating the repayment is not available: on the forecast the annual interest bill of roughly US$85m exceeds FCFF, so free cash flow to equity is negative and the company must refinance rather than deleverage. We model net new borrowing of about US$70-76m a year, which rolls the shortfall and holds cash near the September level; debt is roughly flat in nominal terms. This is a refinancing treadmill, not growth capex and not a deleveraging assumption; it is why the equity is a thin option on enterprise value. The near-term wall is US$200m between October 2026 and September 2027 against about US$66m of BMM-level cash, US$16m of it restricted [F85, F86, S12].",
       "sources": [
-        "S6"
+        "S6",
+        "S12",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2439,7 +2457,7 @@
       "label": "Other non-operating items",
       "unit": "money",
       "values": {
-        "FY2026E": 0.0,
+        "FY2026E": 62.2,
         "FY2027E": 0.0,
         "FY2028E": 0.0,
         "FY2029E": 0.0,
@@ -2447,7 +2465,7 @@
       },
       "value": null,
       "lt": 0.0,
-      "basis": "FY2025 other income of US$58.3m and other expenses of US$57.5m net to US$0.8m [S2, p.68]; we hold zero and do not capitalise the 1H2026 land-sale gain or FX gains, which the company itself labels non-operational [S3].",
+      "basis": "FY2025 other income of US$58.3m and other expenses of US$57.5m net to US$0.8m [S2, p.68]. FY2026E carries US$62.2m: the nine months' realised other income of about US$69.1m - which includes the US$40.1m associate dividend received on 29 September 2026 [F96, S13 p.66] - less a small Q4 charge, because the cash arrived in the period and is not capitalised. From FY2027E we hold zero and do not capitalise the 1H2026 land-sale gain or FX gains, which the company itself labels non-operational [S3, F96].",
       "sources": [
         "S2",
         "S3"
@@ -2487,10 +2505,12 @@
       },
       "value": null,
       "lt": 0.0,
-      "basis": "No dividend was paid for FY2024 or FY2025; the last was US$10m for FY2023 (US$5m interim and US$5m final paid July 2024) [F34, S2 p.152]. With net debt/EBITDA at 5.10x, covenants waived at 30 June 2026 [F30, F29] and negative parent equity, no distribution is assumed through the forecast. Any dividend is an upside, not a base-case cash flow.",
+      "basis": "No dividend was paid for FY2024 or FY2025; the last was US$10m for FY2023 (US$5m interim and US$5m final paid July 2024) [F34, S2 p.152]. With net debt at US$883.6m against nine-month EBITDA of US$97m, covenants waived at 30 June 2026 [F30, F29], parent equity of US$15.8m at 30 September 2026 [F78, S13] and a CCC- rating [F83, S12], no distribution is assumed through the forecast. Any dividend is an upside, not a base-case cash flow.",
       "sources": [
         "S2",
-        "S6"
+        "S6",
+        "S12",
+        "S13"
       ],
       "engine_default": false
     },
@@ -2534,233 +2554,273 @@
       {
         "id": "C1",
         "severity": "FATAL",
-        "category": "valuation_method_fit",
-        "section": "4. Valuation / fund record valuation.multiple_basis",
-        "challenge": "The multiple the entire target rests on is not an EBITDA multiple. fund record lines 816-845 compute each peer's EV/EBITDA from datapack ltm.ebitda; in DOID's own pack that field is -82.52 for FY2025A and -51.15 LTM with da of 5.57, against the LK's USD175m (S2 p.48) and the model's 173.81 - i.e. it is EBIT (1,480.3 - 1,438.7 - 129.7 = -88.1, the 129.7 being the pack's opex including the provision). Peers have the same shape: ADMR da 0.816 on revenue 972.9, BYAN 1.972 on 3,427.6, PTBA 300 IDR bn on 42,652. A 5.142591x multiple struck on an EBIT-like base and applied to DOID's true EBITDA of 173.81 overstates EV by 5.14 x 241.8 = ~USD1.24bn; on a like-for-like EBIT base DOID's -68 gives a negative cross-check. The report asserts the peer denominators are reported trailing EBITDA but cites no peer LK.",
+        "category": "missing_bear_case",
+        "section": "5. Risks and catalysts",
+        "challenge": "Fitch cut BUMA to CCC-(idn) and its rupiah bonds and sukuk to CC(idn) on 11 Nov 2026, citing a liquidity shortfall with no committed funding, US$200m of maturities from Oct-2026 to Sep-2027, US$66m of cash including US$16m restricted, leverage above 10x in 2026 and a Rp201bn bond due 28 Dec 2026 (F84-F88, S12). fund record contains no citation to S12 and no mention of the downgrade; the risk section still describes lenders as cooperative and the base case assumes refinancing at the current blended cost. This is a sourced, dated, material fact omitted from the update.",
         "response": "accepted",
-        "answer": "Confirmed on every peer pack: ltm.ebitda is an EBIT field because the pack da line is a stub (ADMR 559.2 vs EBIT 558.2 with D&A 44.0; BYAN 1,091.7 vs 1,089.7 with 111.1; DOID -51.1 vs -56.8 with LK D&A 234.7) [S0, S2 p.362]. Rebuilt on the 17 peers with LK-sourced FY2025 depreciation the median is 3.75x, not 5.15x; at 3.75x EV is US$651.8m against a US$761.8m bridge, so equity is negative and the leg floors at zero. Retired at weight 0.00; multiple_basis rewritten and section 4 shows the leg only as a floored screen line."
+        "answer": "Added a sourced paragraph in section 5 on the 11 November 2026 cut to CCC-(idn)/CC(idn), the US$200m wall to September 2027, the Rp201bn bond due 28 December 2026 and the US$66m cash with restricted balances; repointed the cost_of_debt basis from F83 to F84 and added the WACC/kd test with the bull-weight consequence [S12]."
       },
       {
         "id": "C2",
         "severity": "FATAL",
-        "category": "bias_and_tone",
-        "section": "Investment summary / 4. Valuation",
-        "challenge": "The distance from the REDUCE line is misstated sixfold. Solving the model's own arithmetic (v0 58.9343 = 0.18 x 327.413; V = 430.99 x m - 1,888.02; target = 0.20207 x V + 18.60) gives m = 5.2705, i.e. +2.49% on 5.142591, to reach Rp96 (three quarters of Rp128; sell_max_pct -25.0, fund rules 309). A median about a seventh higher (5.877) prices Rp148.8, BUY territory. So SELL is 2.5% of peer-median noise from REDUCE - smaller than the 2.24% refresh the report says produced the move - and the packs are refreshed on different days (KKGI/ARII 2026-11-12 04:12, ADMR/BSSR 11 Nov, INDY 7 Nov, MYOH 6 Nov), so that noise is live.",
+        "category": "assumption_realism",
+        "section": "4. Valuation",
+        "challenge": "Capex is set at 10.0% of revenue long term against a D&A charge of 15.1%, so the model PPE falls from US$695.8m in FY2025A to US$34.7m in FY2033E and turns negative at -US$49.5m in FY2034E and -US$135.3m in FY2035E. Section 4 nonetheless states the forecast charges fleet replacement every year, and the bull narrative attributes US$429m of the branch US$447m equity to the x0.8 capex shock. A negative fixed-asset base in the terminal years is a calculation error in the only driver that produces the rating.",
         "response": "accepted",
-        "answer": "Accepted: with the multiple leg retired there is no peer-median distance to a REDUCE line, so the Rp96 at 5.27x and Rp149 at 5.88x arithmetic is withdrawn rather than restated. Weight is 1.00 DCF plus the retired floor, and the sentence claiming the old target was 'no longer a boundary case' is deleted. The boundary the report now describes is the one the engine computes [S0]."
+        "answer": "Capex now normalises to 10.0% of revenue and the D&A ratio glides to the same 10.0%, so capex equals D&A at the horizon, the fleet is maintained, fixed assets stay positive through FY2035E (about US$472m) and there is no volume or revenue penalty; gross margin moves by the same points so EBITDA and FCFF are unchanged [S2, p.72]."
       },
       {
         "id": "C3",
         "severity": "MATERIAL",
-        "category": "valuation_method_fit",
-        "section": "4. Valuation / valuation.weights",
-        "challenge": "The DCF is nominally primary at 82% and contributes exactly zero everywhere: fund record valuation.scenarios base and bear are both v0 58.9343 / tp 73.5114, and sensitivities[1].grid is 73.511368 in all 25 cells. The published target is therefore 100% (0.18 x one cross-check), and 93.4% of that cross-check's equity value (USD123.4 of USD132.1) is the 29Metals associate at equity-method book. At the industry-default 25% multiple weight the target is Rp109 (REDUCE); at the prior 15% it is Rp74.5. The 18% is a payoff correction (15% x 1.17) dressed as a confidence weight.",
+        "category": "calibration",
+        "section": "4. Valuation",
+        "challenge": "The probability_basis says the calibration gate reads FY2025A 11.74% against FY2026E 11.66% (-0.08pp), inside tolerance. cov_engine qc prints actual 11.74%, model 9.29%, gap -2.45pp. FY2026E EBITDA margin of 9.29% is also below the 9M2026 actual of 10.4% (97/928.8). The drift is neither sourced nor answered in qc_justifications.",
         "response": "accepted",
-        "answer": "Accepted in substance. The target is no longer weight x multiple: weight is 100% DCF, base and bear floor at zero, and the associate is disclosed at equity-method book US$123.4m [S6 p.4, F55]. No ASX price for the 22.6% copper stake is in the archive, and section 4 says so rather than implying a mark; the add-back no longer carries the target [S6 p.67, F56, F57]."
+        "answer": "The calibration sentence now reads FY2025A 11.74% against FY2026E 10.41%, a gap of -1.34pp; the FY2026E margin matches the 9M2026 actual of 10.4% (US$97m on US$928.8m), so the drift to FY2025 is the revenue decline and no cost drift is assumed [S11]."
       },
       {
         "id": "C4",
         "severity": "MATERIAL",
-        "category": "assumption_realism",
-        "section": "3. Financial analysis / assumptions gross_margin, da_pct",
-        "challenge": "D&A is double-deducted. gross_margin is held at FY2025's 2.81%, struck after D&A of USD241.8m = 16.33% of revenue (F58), while da_pct is 14.5%; the engine adds back only revenue x 14.5% (fund record lines.da), so ~1.8pp (~USD27m) of D&A no longer in the cost base is deducted, partly offset by the opex cut to 6.5% - net EBITDA understated by about USD15m (10%), and the calibration gate reads 9.80% against an 11.74% actual. Section 3's reconciliation (one and four-fifths from the D&A ratio falling) treats a lower D&A charge as an EBITDA cost, which is backwards.",
+        "category": "evidence_and_citations",
+        "section": "4. Valuation",
+        "challenge": "The assumptions text the report points to as auditable says the bull is worth Rp1,383.2 before the 10% haircut and that the target equals the price at a 10.68% weight (133/(1,383.2x0.9)). The engine bull tp is Rp1,307.56, so the correct weight is 11.30% and the 15% target is 176.5, not 186.7. Section 4 itself says a little below eleven per cent, contradicting fund record.",
         "response": "accepted",
-        "answer": "Accepted and fixed. gross_margin is now 4.64%, holding cash COGS constant at FY2025's 19.14% of revenue before D&A (2.81% reported + 16.33% D&A - 14.5% da_pct) [S2, F1, F3, F58]. The calibration gate reads actual 11.74% against model 11.66%, and the D&A-ratio sentence is removed from section 3. The DCF still floors."
+        "answer": "The bull arithmetic is repointed to the current engine output: bull tp Rp1,335.8 before the 10% haircut, price-implied weight 11.06% and target Rp180.3; no figure is typed in the report, which uses engine placeholders [S0]."
       },
       {
         "id": "C5",
         "severity": "MATERIAL",
         "category": "assumption_realism",
-        "section": "5. Investment risks and scenario analysis",
-        "challenge": "The scenario table is not a distribution: bear and base carry the same value (both floored DCF plus static multiple, tp 73.51), so the 25% bear adds nothing and doubling it leaves the target unchanged - only the 15% bull moves the number. The one-sided -6pp revenue-growth shock compounds to about -47% of revenue by FY2035, while the only quantified client exposure (Adaro, 50.5 mbcm and 9.3 Mt a year, S4) is ~11% of FY2025 volume (439 mbcm / 84 Mt, S2) and the largest customer, PT Indonesia Pratama, is 35% of revenue (S6 p.106) with no disclosed term.",
+        "section": "4. Valuation",
+        "challenge": "The bull capex ratio is stated two ways in one report: section 4 says a fifth below the normalised 9.0% (7.2%), while the bull narrative says a fifth below the base normalised 10.2% and 8.2% from FY2027E. The engine applies x0.8 to FY2027E 9.0% and the 10.0% long-run rate, giving 7.2% and 8.0%.",
         "response": "accepted",
-        "answer": "Accepted. The -6pp compounding shock is deleted. The bear's second revenue shock is -2pp, sized to the one dated expiry inside the forecast, Adaro at 13% to 31 Dec 2030 [S6 p.106, S4, F27, F28], and compounds to about that share. The bear narrative now names recap-at-zero and the 31 Dec 2026 covenant test as the recovery route [S6 p.77], and Pratama's term to Aug 2035 is disclosed [S10 p.123, F63]."
+        "answer": "The bull capex path is now stated one way and matches the engine's x0.8: 7.2% of revenue in FY2027E and 8.0% from FY2028E against the 9.0%/10.0% base; the 10.2%/8.2% wording is removed [S2, p.72]."
       },
       {
         "id": "C6",
         "severity": "MATERIAL",
-        "category": "missing_bull_case",
-        "section": "5. Investment risks / Investment summary",
-        "challenge": "The bull only mirrors the three shocks and omits documented upside: the USD12.7bn order book (F38, S5) is in fund record and never used; 1H2026 free cash flow was +USD39m (S3) with capex at 7.1% of revenue (F35) against the base's 10.2%; the associate is held at book with no market check although copper rose (S2 p.32). The bull's DCF equity sits within roughly 8% of net debt and is highly geared, so any of these could change the bull materially.",
+        "category": "conservatism_audit",
+        "section": "3. Financials",
+        "challenge": "FY2026E EBITDA of 118.9 against the 9M actual of 97 (F90) implies Q4 EBITDA of 21.9, a 6.3% margin, versus 10.4% for the nine months and a main client that restarted in October and runs full in November (F95). At the 9M margin Q4 would be 36.4 and FY2026E 133.4, about US$14.5m higher, with no source for the step-down.",
         "response": "accepted",
-        "answer": "Accepted in part. The bull now cites the US$12.7bn order book and its date [F38, S5] and the Pratama extension to 2035 [S5, F63]. Capex is set at 8.2% of revenue rather than the 7.1% 1H2026 run-rate, because a half-year spend is deferral not steady state and the fleet cannot be run down while revenue grows; that is stated and sourced in the bull narrative [S6 p.10, F35]. The associate has no ASX price in the archive and stays at book."
+        "answer": "FY2026E now holds the 9M2026 margin: EBITDA of US$133.1m on revenue of US$1,279.0m implies Q4 EBITDA of US$36.1m at the same 10.4% margin, with the main client back at full run from November; the earlier step-down is removed [S11; F90, F95]."
       },
       {
         "id": "C7",
         "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "5. Investment risks",
-        "challenge": "Section 5 calls a debt-for-equity conversion the modal outcome, yet 60% of the mass sits on refinancing at the current blended cost with equity worth Rp74, and no branch prices a zero. If the text is right (>50% recap) the target is too high; if the weights are right the modal claim is unsourced. The bear also omits the associate risk (a USD14.5m fair-value loss already in 1H2026, post_bs_review) and the 31 December 2026 covenant test after waivers for both prior dates (S6 p.77).",
+        "category": "evidence_and_citations",
+        "section": "3. Financials",
+        "challenge": "FY2026E np_parent of -163.98 against the 9M actual parent loss of -40.10 (F72) implies a Q4 loss of -123.9, but the line build (Q4 EBITDA about 22, D&A about 48, net interest about 26) gives about -50. The roughly 70m gap is the excluded other income, including the US$40.1m associate dividend received on 29 Sep 2026 (F96), and is never reconciled.",
         "response": "accepted",
-        "answer": "Accepted. The unsourced 'modal outcome' claim is removed. The bear narrative now states that the 31 Dec 2026 covenant test [S6 p.77] is where a debt-for-equity conversion becomes the lenders' recovery route and that equity recovery is zero, so the branch is carried at the floor; a separate recap branch would carry the same zero value. The associate write-down sensitivity is added in section 5 [S6 p.67, F55]."
+        "answer": "Added the 9M-to-FY2026E bridge: Q4 EBITDA 36.1 less Q4 D&A 48.2 less net interest 28.2 less other income 6.9 gives a Q4 loss of 47.4, and the reported 9M loss of 40.1 gives FY2026E -87.6; the 9M other income includes the US$40.1m associate dividend [S13 p.66; F96]."
       },
       {
         "id": "C8",
-        "severity": "MINOR",
+        "severity": "MATERIAL",
         "category": "valuation_method_fit",
-        "section": "fund record valuation.weights",
-        "challenge": "Weights are typed dcf 0.82 / ev 0.18 / pe 0.15, summing to 1.15, while weights_basis says the pair sums to one. It is inert only because P/E is dropped; if EPS ever turns positive the engine renormalises all three, the multiple leg falls to ~15.7% and the target moves to about Rp74 with no operating change.",
+        "section": "4. Valuation",
+        "challenge": "The cost of debt is held at 8.5%, the FY2025 blended finance cost, while the basis says it is held because the Fitch cut to CCC- reprices any refinancing. An 8.5% rate is not a CCC- refinancing rate, and the WACC is built on kd 7.15% plus a 2.61% COE add-on. No sensitivity of the bull tp, the only value in the target, to WACC or kd is shown; the WACC and growth grid applies only to the floored base.",
         "response": "accepted",
-        "answer": "Accepted. The weights are dcf_fcff 1.0, ev_ebitda 0.0 and pe 0.0, summing to exactly 1.00, so no renormalisation can restore the multiple leg if EPS turns positive [S0]."
+        "answer": "Shown: the bull tp is invariant to kd of 12/15/18% because FCFF is pre-interest and the bridge uses spot net debt; WACC is the binding input, with 15.0% giving bull tp Rp545.7 and target Rp73.7 and 18.0% flooring. No post-downgrade refinancing rate is disclosed, so the base holds the last actual blended rate [S12]."
       },
       {
         "id": "C9",
         "severity": "MATERIAL",
-        "category": "bias_and_tone",
-        "section": "Investment summary, fund record line 49",
-        "challenge": "The 'What changed' paragraph attributes the whole 97-to-85 and REDUCE-to-SELL move to the peer refresh, but the repository shows otherwise. At 6e523b65^ the engine already printed tp_final Rp93.59, tr -26.88% and rating SELL on multiple 5.259107x and fx 18,103 (fund rules sell_max_pct -25.0); 6e523b65 moved the multiple to 5.142591x and tp to Rp84.86 at an unchanged Rp128; the only working-tree change since is the price 128 to 133. The 97 came from v3's hand-built target ('reverting to the branch weight alone gives about ninety-six rupiah ... still REDUCE', v3 section 4), 3.6% above its own model. So 97-to-93.59 is a report/model gap being closed, not a peer refresh, and the engine has never rated this name REDUCE at 5.259x.",
+        "category": "missing_bull_case",
+        "section": "4. Valuation",
+        "challenge": "The update does not test whether the operational recovery lifts the operating branch off the floor. 9M free cash flow was +US$44m (F100), the net loss was cut 47% (F101), Australian overburden rose 12% (F94), fuel cost per volume fell 14% (F93) and the main client restarted (F95). The bull narrative says only that the cost programme holds.",
         "response": "accepted",
-        "answer": "Accepted: the 97 was not an engine output. The prior engine run printed tp_final Rp93.59, tr -26.88% and rating SELL on multiple 5.259107x at fx 18,103; the refresh took the multiple to 5.142591x at fx 18,240 and the only working-tree change was the price 128 to 133. v3's Rp97 was a hand target to the branch weight. The Investment summary now states that decomposition [S0]."
+        "answer": "The recovery is quantified in section 4: the two operating shocks alone take the bull branch to Rp154 per share and the weighted target to Rp20.8, while the full branch with the capex shock prints Rp1,335.8 and Rp180.3; the 9M FCF, loss cut, overburden and fuel data are cited [S11; F100, F101, F94, F93]."
       },
       {
         "id": "C10",
         "severity": "MATERIAL",
-        "category": "evidence_and_citations",
-        "section": "3. Financial analysis, table:fin_summary and fund record lines.da",
-        "challenge": "The five-year EBITDA history is wrong before FY2024. fund record lines.da is 4.10 for FY2022A and 4.43 for FY2023A (pack:da, the same stub that prints 5.57 for FY2025A against the LK's 234.7 [F7]), then 261.22 and 241.81 for FY2024A/25A only because F8/F7 overrode it: a 59x step in one year. Since EBITDA = ebit + da, the summary carries US$135.4m (FY2022A) and US$151.2m (FY2023A) against US$314.2m (FY2024A), i.e. EBITDA doubling in the year revenue fell 4.2%, which contradicts the section's own 'reported EBITDA down more than two fifths' measured from FY2024.",
+        "category": "bias_and_tone",
+        "section": "Investment summary",
+        "challenge": "The target is 0.15 x Rp1,307.56 x 0.9 = Rp176.5. Base and bear both floor at zero, so 85% of the probability mass is a total loss and the 60/25 split is not identified by the model: any split summing to 85% gives the same target. Halving the bull weight gives Rp88, a SELL, and the report itself discloses that the pre-refresh engine printed SELL. The 32.7% expected return is a probability-weighted mean presented as a BUY target.",
         "response": "accepted",
-        "answer": "Accepted. FY2022A and FY2023A D&A are restated from the company's own annual report: reported EBITDA US$365m less operating profit US$131.3m, and US$412m less US$146.8m, added as F61 and F62 [S10 p.14]. lines.da now reads 233.7 / 265.2 / 261.2 / 241.8 and EBITDA 365.0 / 412.0 / 314.2 / 173.8, monotonic with the text of section 3."
+        "answer": "The summary and section 4 now state that eighty-five per cent of the mass is a total loss, that the base/bear split is not identified, and that the BUY band is the 11.06% price-implied weight to our 15%; halving it gives a SELL, and the 15% is justified against the annualised base rate shaded for a CCC- contractor [S0, S12]."
       },
       {
         "id": "C11",
         "severity": "MATERIAL",
-        "category": "evidence_and_citations",
-        "section": "fund record valuation.multiple_basis",
-        "challenge": "The paragraph documenting the only positive valuation input describes a different run from the one that produced the target. It states the peer median is 5.26x at Rp18,103, bracketed by ARII 5.19x and INDY 5.33x, mean 7.82x and restruck 5.25x; fund record valuation.methods.ev_ebitda.multiple is 5.142591 at market.fx 18,240, and model.peers gives median 5.142591, mean 7.205, brackets KKGI 5.137 and ARII 5.148 (INDY 5.312). The 2.2% gap between 5.26 and 5.14 is the same size as the move the report attributes to the refresh, and the claim that Rp18,103 is 'the rate the engine reads from the pack' is false (18,240).",
+        "category": "missing_bear_case",
+        "section": "4. Valuation",
+        "challenge": "The terminal value is 38.8% of enterprise value and capitalises a contract book whose disclosed terms end: Australia mid-2030 and September 2027 (S2 p.49), Adaro 31 December 2030 (S4), Pratama August 2035 (F63). The base assumes renewals with no sourced term, while the bear takes only the dated Adaro 2pp expiry.",
         "response": "accepted",
-        "answer": "Accepted. multiple_basis is rewritten to the live rebuild rather than the pre-refresh snapshot: the peer median is 3.75x on the 2026-11-11/12 packs, superseding 5.26x at 18,103, and the FX sentence is corrected to 18,240 [S0]. The stale figures are labelled superseded rather than printed as current."
+        "answer": "The terminal now assumes nominal growth only after FY2030E, so no renewal volume beyond the disclosed terms is capitalised (Australia mid-2030/September 2027, Adaro 2030, Pratama 2035); the bear takes the Adaro expiry as a loss and the bull's extra volume is the renewal case [S2, p.49; S4; F63]."
       },
       {
         "id": "C12",
-        "severity": "MATERIAL",
-        "category": "missing_bear_case",
-        "section": "5. Investment risks / qc_justifications scenario.symmetry.a.revenue_growth",
-        "challenge": "The one-sided -6pp-a-year contract-loss shock is not sized to the disclosed contract terms. The largest customer, PT Indonesia Pratama at 35% of 1H2026 revenue [S6 p.106], is contracted May 2018 to August 2035 [S6 p.123, mining-services contract table]; Adaro is 13% of revenue and runs to 31 December 2030 [S6 p.106, S4]; TEC Coal is 13% and Whitehaven 10%. The only expiry inside the forecast is therefore Adaro at 13%, while the bear compounds to roughly -47% of revenue, and the review record's earlier statement that Pratama's term is undisclosed is wrong.",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "3. Financials",
+        "challenge": "S11 reports the capex budget cut 59% to US$61m, but FY2026E capex is US$88.25m (6.9% of revenue), 45% above the stated budget. The report cites S11 for the cut and does not reconcile the two numbers.",
         "response": "accepted",
-        "answer": "Accepted. The bear is sized to the disclosed expiries: Adaro 13% from 31 Dec 2030 [S6 p.106, S4, F27, F28], with Pratama at 35% contracted to Aug 2035 and expressly not lost [S10 p.123, F63]; the shock compounds to about the Adaro share, not -47%. The bull now recognises the eleven-year extension and the US$7.8bn contract value [S5]."
+        "answer": "Reconciled: the US$61m is the heavy-equipment budget and already sits below the US$73.4m of fixed assets actually bought in the nine months, so FY2026E follows the actual spend (US$89.5m) plus a Q4 run-rate, not the budget line [S11; F81]."
       },
       {
         "id": "C13",
         "severity": "MINOR",
-        "category": "bias_and_tone",
-        "section": "4. Valuation, final paragraph",
-        "challenge": "At the refreshed Rp133 price the SELL/REDUCE line is Rp99.75, not the Rp96 implied by the old Rp128. The target is 0.20207 x (448.91m - 1,888.5) = 90.71m - 381.6, so REDUCE needs m = 5.307x, i.e. +3.2% on 5.142591, not 'a peer median about a seventh higher' (+14.3%, which prices about Rp152, +14%, in the ADD band). The report understates the distance to the boundary by about 4.5x; C2's Rp96 / 5.27x / +2.5% figures were struck at Rp128 and are superseded by these.",
+        "category": "evidence_and_citations",
+        "section": "4. Valuation",
+        "challenge": "F78 bs_debt of 978.641 is evidenced with the Jumlah Liabilitas 1,319,225,811 Total Liabilities line, which does not support the value. The 978,641,053 figure is at S13 p.131 in the debt movement note. The net debt bridge of 883.6 that floors the base rests on this line.",
         "response": "accepted",
-        "answer": "Accepted and superseded: the 'a seventh higher' sentence is deleted together with the multiple leg, so no peer-median boundary is printed. Section 4 now states that the peer packs are refreshed on different days within the month and that the screen is indicative rather than a point estimate [S0]."
+        "answer": "F78 is repointed to S13 p.131, where the debt movement note totals 978,641,053 from 1,111,804,914 at 31 December 2025 after repayments of 129,588,780; the September debt components are confirmed and the Total Liabilities quote is removed [S13 p.131]."
+      },
+      {
+        "id": "L1",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Investment summary",
+        "challenge": "The Investment summary opens 'This revision answers the QC round' and the report never states that it replaces the published BUY and target Rp187 of 12 November 2026, two days before this update; '187' appears nowhere in fund record. A reader, and both books, still hold the 12 Nov view and the document gives no marker that the house has reversed it, or that the reversal is the corrected capex-vs-D&A mechanism that carried the entire BUY rather than a change of judgment.",
+        "response": "accepted",
+        "answer": "The summary now opens with the client-facing reversal: prior BUY / Rp187 of 12 November 2026 replaced by SELL at val.tp_final, on the nine-month print and the capex-below-D&A correction, and keeps the certain-bull check at Rp138.8, +4.4%, inside the HOLD band [S11, S13, S2 p.72]."
+      },
+      {
+        "id": "L2",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Section 3 still prints growth-rate facts as dollar levels: 'the nine months printed US$-23m of EBITDA on US$-18m of revenue'. F90 is -23% and F89 is -18% [F90, F89, S11]; the nine-month levels are EBITDA US$97m and revenue US$928.8m, and the sentence contradicts the 10.4% nine-month margin used two lines earlier. This is the unparseable sentence QC logged as Q8, unchanged in the render.",
+        "response": "accepted",
+        "answer": "The nine-month sentence now prints the levels and the rates: EBITDA US$97m, -23%, on revenue US$928.8m, -18%, from new level facts F103 and F67 with the growth facts F90 and F89 [S11, S13]."
+      },
+      {
+        "id": "L3",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "The earnings-quality conclusion is still wrong-signed: 'accruals are heavy because depreciation exceeds EBITDA'. FY2025 net loss of US$127.6m against operating cash flow of US$111.5m [S2 pp.149, 308] is a negative accruals ratio, cash ahead of earnings; heavy D&A is a non-cash burden, not an accrual red flag. Publishing this inverts the house earnings-quality card's own test in the section a reader uses to judge whether the loss is accounting or cash.",
+        "response": "accepted",
+        "answer": "The wrong-signed accruals claim is deleted: the text now states the negative accruals ratio, FY2025 operating cash flow of US$111.5m ahead of the US$127.6m net loss [F102], and hangs the flag on the US$21.0m receivable provision [F45], the US$11.4m impairment [F46] and 5.1x net debt/EBITDA [F30]."
+      },
+      {
+        "id": "L4",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Section 3's margin bridge still claims the move from 11.7% to 10.4% is 'reconciled in two sourced pieces' worth about -0.2pp against an actual -1.33pp: the roughly 1.1pp of volume deleverage on the 13.6% revenue decline is missing. The adjacent sentence still says the gross-margin uplift leaves 'cash margin unchanged', but a.gross_margin rises 6.5pp while da_pct falls 5.1pp, a 1.4pp cash-margin rise; and the basis text quoting 1.8% at a 14.5% da_pct is stale against the 2.9%/15.1% actually used [S2, S6].",
+        "response": "accepted",
+        "answer": "The margin bridge now sums to the printed move by adding the volume-deleverage piece and states the split as 5.1pp of D&A recapture plus 1.4pp of recovery from the FY2026E stoppage, with terminal realised cash margin 18.9% below FY2025A 19.14%; the stale 1.8%/14.5% basis text is corrected to 2.9%/15.1% [S2, S6]."
+      },
+      {
+        "id": "L5",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "4. Valuation",
+        "challenge": "Sections 4 and 5 still quote the associate book at US$123.4m (30 June, F55) while the bridge uses US$124.5m at 30 September (F83), which is the valuation-date figure; and FY2025 D&A is quoted as US$234.7m from the LK notes [F7] and US$241.8m in the EBITDA build [F58] with no reconciliation of the US$7.1m gap, in the same pages.",
+        "response": "accepted",
+        "answer": "The associate book is now F83 (US$124.5m at 30 September 2026) throughout sections 4 and 5, and the D&A build carries one clause reconciling F7 fixed-asset depreciation of 234.7 to F58 total D&A of 241.8 through US$7.1m of amortisation [S2 p.362, S6 p.4]."
+      },
+      {
+        "id": "L6",
+        "severity": "MATERIAL",
+        "category": null,
+        "section": "Front matter",
+        "challenge": "The front matter is stamped asof 2026-11-12 on an update whose trigger is the 14 November 2026 Q3 print, and no price date is labelled next to Rp133.0. With no prior-view statement, the stamp makes the document read as the 12 November note that recommended BUY.",
+        "response": "accepted",
+        "answer": "Front matter is stamped asof 2026-11-14, and Rp133 is labelled as the 12 November 2026 close beside the price in the Investment summary, so the document no longer reads as the 12 November BUY note [S0]."
       }
     ],
     "checklist": {
       "missing_bull_case": {
         "status": "issue",
-        "note": "C6 stands; add the 11-year PT Indonesia Pratama extension (USD7.8bn, S5) and its contract term to August 2035 (S6 p.123), which underwrite 35% of revenue through the forecast and are not used anywhere; the 22.6% ASX-listed 29Metals stake (USD123.4m book = 93.4% of the cross-check's equity) is still unmarked although a market price exists."
+        "note": "The update ignores the operational improvement now on the tape: 9M FCF +US$44m (F100), net loss cut 47% (F101), Australia overburden +12% (F94), fuel cost per volume -14% (F93) and the main-client restart (F95). None is quantified in the bull."
       },
       "missing_bear_case": {
         "status": "issue",
-        "note": "C7 stands on direction but not on its Pratama claim: S6 p.123 shows the 35% customer contracted May 2018-August 2035, so the earlier note that its term is undisclosed is corrected here. The 31 December 2026 covenant test after waivers for both earlier dates (S6 p.77), an associate write-down (a USD14.5m fair-value loss is already in 1H2026) and a zero-recovery branch are still absent."
+        "note": "The Fitch cut to CCC- on 11 Nov 2026, leverage above 10x in 2026, US$200m due Oct-26 to Sep-27 and US$66m cash including US$16m restricted (F84-F88, S12) appear nowhere in fund record, which has zero citations to S12."
       },
       "assumption_realism": {
         "status": "issue",
-        "note": "The D&A double-count in C4 is real and larger than stated: gross margin is held at FY2025's 2.81%, struck after USD241.8m of D&A [F58], while the engine adds back only revenue x 14.5%, so ~1.94pp of revenue (~USD28m, 18% of FY2026E EBITDA) is deducted twice; the opex cut to 6.5% from 7.34% is sourced. FY2022A/23A D&A is the pack stub (C10), and the 2.5% FY2027E growth is sourced to the named Blackwater/Goonyella/Whitehaven extensions (S2 p.49)."
+        "note": "Capex is below D&A for the whole horizon (FY2035E capex 168.3 at 10.0% of revenue vs D&A 254.1 at 15.1%), so PPE falls from 695.8 to -135.3 by FY2035E while revenue grows; the bull gets its equity from that gap."
       },
       "evidence_and_citations": {
         "status": "issue",
-        "note": "Verified in the archive: F26 78% top-five and Pratama 35% (S6 p.106); F27/F28 239 mbcm/44 Mt and 50.5/9.3 a year (S4); F31/F42 207/175 (S2 p.48, whose '44% margin' line is garbled but the dollars match); F53 6.75/8.00/8.75% (S6 p.71); F21/F60 69/64 (S3); 1H2026 equity USD4.4m; Blackwater to Jun 2030 and Goonyella to Sep 2027 (S2 p.49); Pratama to Aug 2035 (S6 p.123). Failures: multiple_basis is stale (C11), FY2022-23 history is wrong (C10), the 97/REDUCE provenance is unexplained (C9). No consensus contamination and the report is placeholder-based (43 placeholders)."
+        "note": "The documented bull arithmetic is stale: assumptions says Rp1,383.2 and a 10.68% price-implied weight, while the engine bull tp is Rp1,307.56 and the correct weight is 11.30%. F78 debt is quoted to the Total Liabilities line."
       },
       "valuation_method_fit": {
         "status": "issue",
-        "note": "C1 confirmed independently: peer ltm.ebitda is EBIT-like (ADMR 559.2 vs ebit 558.2 on revenue 1,550.8; BYAN 1,091.7 vs 1,089.7; PTBA 6,639.9 vs 6,353.8; DOID's own pack -51.1 vs -56.8 with da 5.6 against the LK's 234.7), so 5.1426x is applied to a base two to four times the peers' and would be negative on DOID's own EBIT. C3 also holds: the DCF is zero in all 25 WACC/g cells, base and bear are both tp 73.51, and 93.4% of the cross-check's equity is the associate at book."
+        "note": "The DCF-only weight is properly argued and the corporate template fits a fee contractor, but the debt leg uses the FY2025 blended 8.5% (kd 7.15% plus a 2.61% COE add-on) for a CCC- issuer and no WACC sensitivity is shown for the bull branch."
       },
       "bias_and_tone": {
         "status": "issue",
-        "note": "C2 and C9: the headline attributes the whole 97-to-85 and REDUCE-to-SELL move to the peer refresh, but the prior engine run (6e523b65^) already printed Rp93.59 and SELL at -26.9% on 5.259107x, and the 97 was v3's hand target 3.6% above its own model. At Rp133 the SELL/REDUCE boundary is Rp99.75 and needs only +3.2% on the median (C13), not 'a seventh'. Credit: the report states plainly that the DCF floors and the multiple carries the value, and it discloses the recap risk."
+        "note": "The BUY is 0.15 x Rp1,307.56 x 0.9; the base and bear both floor at zero, so 85% of the mass is a total loss and the 60/25 split is not identified. Halving the bull weight gives Rp88, a SELL."
       },
       "consistency_with_sector_deck": {
         "status": "no_issue",
-        "note": "Checked fund record Brent FY2025A 68.1015 to FY2026E 96.0 to FY2027E 84.0 with spot 92.56, matching the report's 68-to-96 and the deck's reviewed basis; USD reporting, no coal realisation and no royalty line (correct for a fee contractor), 2.0% terminal growth as US inflation, and the MINING_CONTRACTORS template explained in params_basis. The peer set is the coal set rather than contractors, which the report acknowledges."
+        "note": "The report substitutes contract tenure, client cost curve and fee per bcm for the producer anchors and runs MINING_CONTRACTORS with the contractor peer set; the substitution is argued, not asserted."
       },
       "conservatism_audit": {
         "status": "issue",
-        "note": "Below the last actual or guidance without a peer-side source: the 173.8 multiple base versus the company's 207 ex-severance, rejected on an unsourced claim that peer EBITDAs carry comparable one-offs - and the peer denominators are in fact EBIT-like (C1); capex normalised to 10.2% against 7.1% actually spent in 1H2026; net borrowing of +USD75-84m a year against a 1H2026 net repayment; and the 82% weight on a floored DCF. Offset the other way: applying an EBITDA multiple to a true-EBITDA base when the peer median is EBIT-based biases the target up, not down."
+        "note": "FY2026E EBITDA 118.9 implies Q4 EBITDA 21.9 (6.3% margin) against a 9M actual of 97m (10.4%) and the November client restart; the Q4 margin step-down is unsourced and worth about 14m of EBITDA."
       },
       "calibration": {
         "status": "issue",
-        "note": "cov_engine qc: FY2025A 11.74% against FY2026E 9.80%, gap -1.94pp. 1.83pp of that is the D&A term, which is double-counted (a lower D&A charge cannot lower EBITDA), so a consistent build prints about 11.6% and clears; the rest is the Brent link (-1.0pp) and the opex cut (+0.84pp). Both QC flags are justified, but the symmetry justification's -6pp magnitude is not sized to the disclosed contracts (C12)."
+        "note": "Engine calibration reads FY2025A 11.74% vs FY2026E 9.29% (-2.45pp), but the probability_basis text claims 11.74% vs 11.66% (-0.08pp) and calls it inside tolerance. No qc_justification answers the -2.45pp drift."
       }
     },
     "signoff": {
       "by": "SECTOR_LEAD_ENERGY",
-      "at": "2026-11-12T21:27:13+07:00",
+      "at": "2026-11-14T15:35:34+07:00",
       "verdict": "APPROVED",
-      "notes": "APPROVED on the DCF-only update. Arithmetic checked: bull Rp1,382.29 x 15% = Rp207.34 weighted, x 0.90 liquidity = Rp186.61 (displayed Rp187), TR 40.3% at Rp133, BUY against buy_min +25%. The base and bear zeros are the limited-liability floor of a calibrated base, not an added haircut: FY2026E EBITDA margin 11.66% vs FY2025A 11.74% (calibration -0.08pp), D&A 14.5% vs the 14.4% 1H2026 run-rate, capex 10.2% between the FY2023 7.2% and FY2024 10.0% actuals; base DCF EV US$306.5m is below the US$887.1m net-debt bridge and unfloored equity is -US$455.3m. The floor direction is conservative and disclosed in s4/s5 (weighted Rp207, base Rp0), so it does not inflate the BUY, and I do not read it as stacked caution. The one-method valuation is disclosed and acceptable for an update: EV/EBITDA is retired on the verifiable pack defect (ltm.ebitda is an EBIT field - ADMR, BYAN, DOID), the corrected 3.75x cross-check gives EV US$651.8m against the US$887.1m bridge, and P/E is unavailable on a second consecutive parent loss. Q11-Q13 are correctly no-action for this version: the Q11 [S0] label should point at data/base_rates.yaml on the next citation edit; the Q12 producer-prior / levered-contractor reference-class caveat must be carried into the next probability basis (the 10.7% price-implied weight and 4.3pp gap are disclosed); the Q13 floor-bias direction should be stated in s5 at the next scenario revision. Noted, not blocking: 4,359 words vs the 500-3,500 update band; the s4 statement that the base is anchored to the last actual 2.8% is the reported margin while the model rebased gross margin is 4.64% - clarify next revision; multiple_basis quotes fx 18,240 vs the pack 18,228 on the retired leg. The published REDUCE Rp97 to BUY Rp187 swing is a construction change, not new operating data: the What-changed paragraph discloses that the prior target was a hand adjustment and the multiple leg was invalid, at an unchanged Rp133 price. The 15%-bull-carries-100%-of-value construction is disclosed with the breakeven weight; it warrants the shared weight-of-scenario method note the journal already flags, not a return of this document."
+      "notes": "Rating and target AFFIRMED, not re-opened: SELL, tp Rp21, TR -84.3%; engine unchanged, facts PASS, lint PASS. L1-L6 verified in the text: summary opens with prior BUY/Rp one-eighty-seven (12 Nov) replaced by SELL, with the certain-bull check 'Rp one-thirty-eight, a little over four per cent above the price and inside the HOLD band'; F103/F67 levels US$97m and US$928.8m carry the F90/F89 rates -23% and -18%; the wrong-signed accruals claim is gone, replaced by a negative accruals ratio (F102 CFO US$111.5m against a US$127.6m net loss) with the flags on F45, F46 and F30; the margin bridge adds volume deleverage and states 5.1pp D&A recapture plus 1.4pp stoppage recovery, terminal realised cash margin 18.9% below FY2025A 19.14%; F83 US$124.5m at 30 September is used in sections 4-5 with F7's 234.7 reconciled to F58's 241.8 through US$7.1m of amortisation; front matter asof 2026-11-14 with Rp133 labelled the 12 November close. CORRECTION NOTE for the next version (QC Q14; cosmetic, no value affected): nine templates write the unit twice because the usdm filter already emits 'US$...m', so US${{fact.X|usdm}}m renders 'US$US$97.0mm'. Instruction: in the Investment summary and section 3 (fund record lines 47, 88, 100 - usdm filters F103, F67, F7, F58, F102, F45, F46) delete the literal 'US$' before each filter and the trailing 'm' after it, leaving '{{fact.X|usdm}}'; leave the num0 filters (F42, F31) untouched; re-render and confirm no 'US$US$' or 'mm' survives. Approved rather than returned because the defect is typographical, the values are correct, and a second RETURN would park the name with the stale BUY/Rp187 of 12 November still published."
     },
     "qc": {
       "by": "COVERAGE_QC",
-      "at": "2026-11-12T18:46:38+07:00",
+      "at": "2026-11-14T15:33:30+07:00",
       "verdict": "PASS",
       "round": 2,
       "bias": {
         "direction": "neutral",
-        "note": "Base FY2026E EBITDA margin 11.66% reproduces FY2025A 11.74% (calibration -0.08pp) on capex at 10.2% of revenue, between the FY2023 7.2% and FY2024 10.0% actuals and below FY2025s 12.0% [F18, S2 p.72], and D&A at 14.5% against 1H2026s 14.4% run-rate [S6 p.10]; no unsourced haircut. The only asymmetry is the bears second revenue shock (-2pp/yr), sized to the dated Adaro expiry at 13% of revenue to 31 Dec 2030 [S6 p.106, S4], while Pratama at 35% is contracted to Aug 2035 [S6 p.123] and is not lost in any branch. The bulls capex multiplier (x0.8 = 8.2%) is bounded by actual spend and its margin shock (+2pp) mirrors the bears; probabilities 60/25/15 are anchored to the commodity_capex_turnaround prior (42%/3y = 16.6%/yr, n=40) with the 15% deviation argued down for covenant fragility. Both floored branches make the weighted target conservative, not optimistic."
+        "note": "Narrow round-3 audit: the engine is unchanged (SELL, tp Rp21, -84.3%, errors [], engine_qc_blocking []), so the round-2 bias audit stands \u2014 FY2026E holds the 9M2026 10.4% margin on the 9M actual revenue base, capex reaches the 10.0% FY2024 ratio and equals D&A at the horizon, and the one generous input (WACC 12.0% holding the 8.5% blended debt cost rather than a CCC- rate) runs against the rating while a 15% WACC floors every branch [S0, S12]. No new driver, typed number or weight entered with the L1-L6 text edits."
       },
       "recomputed": [
         {
-          "item": "FY2025A revenue",
-          "model": 1480.31,
-          "filing": 1480.31,
+          "item": "FY2025A operating cash flow (F102)",
+          "model": 111.53,
+          "filing": 111.53,
           "source": "S2",
           "ok": true
         },
         {
-          "item": "FY2025A EBITDA against company-stated US175m",
-          "model": 173.81,
-          "filing": 175.0,
-          "source": "S2",
+          "item": "9M2026 revenue (F67)",
+          "model": 928.82,
+          "filing": 928.82,
+          "source": "S13",
           "ok": true
         },
         {
-          "item": "Net debt at 30 June 2026 (cash 158.5, bank 770.3, bonds 185.0, LT debt 31.9, leases 53.7)",
-          "model": 887.11,
-          "filing": 882.5,
-          "source": "S6",
-          "ok": true
-        },
-        {
-          "item": "DCF EV USDm (FCFF 50.9 to 30.5, WACC 11.88%, g 2.0%)",
-          "model": 306.51,
-          "filing": 306.5,
-          "source": "S0",
-          "ok": true
-        },
-        {
-          "item": "Bull value per share Rp (v0 1108.9 x 1.24734 COE roll)",
-          "model": 1383.2,
-          "filing": 1383.2,
-          "source": "S0",
+          "item": "9M2026 EBITDA (F103)",
+          "model": 97.0,
+          "filing": 97.0,
+          "source": "S11",
           "ok": true
         }
       ],
       "findings": [
         {
-          "id": "Q11",
-          "severity": "NOTE",
-          "area": "evidence",
-          "finding": "The 15% bull weight basis is the house library archetype commodity_capex_turnaround (rate 0.42 over 3 years, n=40, annualised 16.6%), documented in fund record but cited in the report and the probability_basis as [S0] (Yahoo Finance data). The substance verifies; the citation label does not point at the document that holds the prior.",
+          "id": "Q14",
+          "severity": "FIX",
+          "area": "text_vs_numbers",
+          "finding": "The new fact templates double the currency and unit in nine places, in the Investment summary and section 3: 'US$US$97.0mm', 'US$US$928.8mm', 'US$US$234.7mm', 'US$US$241.8mm', 'US$US$111.5mm', 'US$US$21.0mm', 'US$US$11.4mm' [fund record lines 47, 88, 100]. The usdm filter already emits 'US$97.0m', so the literal 'US$' prefix and trailing 'm' in the template double it. The underlying values are correct; the rendered text is not.",
           "response": null,
           "answer": null
         },
         {
-          "id": "Q12",
+          "id": "N1",
           "severity": "NOTE",
-          "area": "scenarios",
-          "finding": "The prior is borrowed from a producer archetype whose payoff is +75%/-35% over three years, while the bull branch pays about +940%; probability and payoff therefore come from different distributions. The report argues the level (15% versus 16.6%) but not the reference-class transfer from producer to levered fee contractor.",
+          "area": "text_vs_numbers",
+          "finding": "The prior target is printed in words ('Rp one-eighty-seven', 'Rp one-thirty-eight') in the summary. It is legible and avoids a stale typed number, but reads oddly to a client; if the lint permits, 'Rp187' with a date would be cleaner.",
           "response": null,
           "answer": null
         },
         {
-          "id": "Q13",
+          "id": "N2",
           "severity": "NOTE",
-          "area": "valuation",
-          "finding": "The base and bear branches are valued at the limited-liability floor of zero in the twelve-month target, so 85% of the mass is priced as worthless even though neither branch assumes default and the market pays Rp133 today. The direction is conservative (the weighted target understates an option-value treatment of the floored states) and the floor is disclosed, but the report does not say that this biases the expected return downward.",
+          "area": "process",
+          "finding": "The judge call for this round (job v4-r2, started 15:27:50) died with no verdict recorded; the earlier judge PASS of 15:10 remains the latest verdict in qc.judge.",
           "response": null,
           "answer": null
         }
@@ -2769,18 +2829,39 @@
     "gates": {
       "flags": [
         {
+          "id": "drift.gross_margin",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "a.gross_margin moves +6.5pp from FY2026E to FY2035E: source the change or hold it",
+          "justification": "The gross-margin input rises 6.5pp from FY2026E to FY2035E only because the D&A ratio glides from 15.1% to 10.0% over the same years: gross margin is stated after the D&A carried in cost of revenues, so it rises by exactly the D&A reduction and cash margin (gross margin plus D&A) is held constant at about 19.4%. EBITDA and FCFF are unchanged; the drift is the accounting split, not a margin assumption [F7, F8, F18, S2 p.362]."
+        },
+        {
           "id": "scenario.symmetry.a.revenue_growth",
           "severity": "BLOCK",
           "justified": true,
-          "message": "a.revenue_growth: bear -0.02 vs bull 0.04 is lopsided \u2014 mirror the shock or justify the asymmetry",
-          "justification": "The bear's second revenue shock is -2pp a year, not the -6pp of the previous version: it is sized to the one dated expiry inside the forecast, Adaro at 13% of revenue to 31 December 2030 [S6 p.106, S4], and compounds to roughly that 13% loss by FY2035. The largest customer, PT Indonesia Pratama at 35% of revenue, is contracted to August 2035 [S6 p.123] and is not lost in the bear. The asymmetry against the bull's +4pp remains because a dated loss is disclosed while no award of that size is dated on the upside; mirroring it would require an unsourced new contract [S6 p.106, S4]. The other two drivers are exactly mirrored: gross margin +2pp / -2pp, and capex x0.8 / x1.2, with the bull at 8.2% of revenue between the 7.2% and 10.0% actually spent in FY2023-24 [F18, S2 p.72] and the bear at 12.2%, sized to the 12.0% actually spent in FY2025 [F18, S2 p.72]. The symmetry flag is on revenue growth only."
+          "message": "a.revenue_growth: bear -0.06 vs bull 0.04 is lopsided \u2014 mirror the shock or justify the asymmetry",
+          "justification": "The bear's revenue shock is -6pp a year, not the -2pp of the previous version, and the bull's is +4pp, giving a -2pp asymmetry. The asymmetry is sized to the one dated expiry inside the forecast, Adaro at 13% of revenue to 31 December 2030 [S6 p.106, S4], which is a disclosed loss, while no award of that size in the bull is dated in the archive (no contract expiry of similar magnitude on the upside). Mirroring it would require an unsourced new contract of the same size, which the method forbids. The narrower asymmetry of the prior version (-2pp vs +4pp) was the same -2pp difference, just written as two shocks; the merge to single shock here is a mechanical change, not a new justification [S6 p.106, S4]."
+        },
+        {
+          "id": "restatement.bs_minority_bs",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "balance-sheet minority_bs restated at 2.85x the data pack: say why the pack is wrong",
+          "justification": "The dataseries does not separate minority_bs from total minority (Yahoo prints two lines). Restated facts F80 (bs_minority_bs=-5.33) and F78-F79 come from the 2026-9-Month LK pp.4-6 [S13] which gives total assets/liabilities/equity and minority; we match the LK values and verify the stock total."
+        },
+        {
+          "id": "restatement.bs_equity",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "balance-sheet equity restated at 3.62x the data pack: say why the pack is wrong",
+          "justification": "The Yahoo pack equity for 2026-09-30 is US$4.37m while the LK p.6 (S13) shows equity attributable to owners of parent at US$15.82m (F79). Use LK figure; pack error may be due to Indonesian GAAP (PSAK 65) consolidation adjustments during FY conversion."
         },
         {
           "id": "extreme_call",
           "severity": "BLOCK",
           "justified": true,
-          "message": "expected return +40%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
-          "justification": "The +40% expected return is the bull branch probability-weighted against a floored base, and its drivers are named, sourced and sized in the branch: (1) capex at 8.2% of revenue from FY2027E, between the 7.2% spent in FY2023 and the 10.0% in FY2024 and below FY2025's 12.0% [F18, S2 p.72], with 1H2026 at 7.1% [F35, S6 p.10]; (2) revenue +4pp a year on the contracted book - Pratama at 35% of revenue to August 2035 [S6 p.123, F63] and Adaro to 2030 [S4]; (3) gross margin +2pp, still below the cash margins the company printed in FY2024 and FY2023 [S2, S10]. The engine's decomposition is the honest reading: the two operating shocks alone print tp Rp57.0, and the full branch prints Rp1,383, so the branch clears the US$887.1m net-debt bridge on the capex ratio, not on the margin recovery; the capex shock contributes US$429m of the US$447.3m equity. The equity is about two fifths of the bull's US$1,209.1m enterprise value, so a move in EV is a multiple in the equity. The associate add-back lifts the target from Rp135 (HOLD) to Rp187 (BUY) on a full write-off test, but the branch is solvent without it. What today's price implies: the target equals the Rp133 price at a 10.68% bull weight, against our 15%; the reverse DCF is unavailable because the base floors at zero across the plausible range [S0]."
+          "message": "expected return -84%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "The -84.3% expected return is the bull branch at 15% against a base and a bear that both floor at zero, and its drivers are named, sized and sourced: (1) a 60.0% probability on a base case whose enterprise value is US$338.0m against a US$883.6m net-debt bridge, so limited liability returns nothing - the base holds the 9M2026 EBITDA margin of 10.4% (US$97m on US$928.8m) [F89, F90, S13] and converges the cash margin to FY2025A's 19.15% [S2], and Q3 was itself profitable (9M group loss US$42.75m against 1H US$49.83m, about +US$7.1m in Q3) [F71, F22, S13, S6], so the floor is not a depressed assumption; (2) a 25.0% bear that loses the dated Adaro book [S4, S6 p.106]; (3) a 15.0% bull worth Rp154.2 per share, of which the operating shocks are revenue +4pp a year on Pratama to August 2035 [S6 p.123, F63] and gross margin +2pp, and whose solvency rests on the US$124.5m associate add-back [F55]. What today's price implies: at the bull value of Rp154.2 the target equals the Rp133 price at a 95.8% bull weight, and even at a 100% weight the return is +4.4% - below the house BUY threshold of 25% - so the market is paying for the bull branch with certainty and the rating is SELL at every feasible weight. The engine's reverse DCF reads the price directly: to justify Rp133 the model would need FY2027E revenue growth of 29.4% against our 8.0% base, and that growth would have to persist after a 13.6% decline in FY2026E [S0]. The capex lever that produced the previous +36% has been removed: it rested on capex at 8.0% of revenue against D&A at 10.0% in perpetuity, which under-invests 2.0pp of revenue forever and shrinks the fleet by a fifth. At the post-downgrade 15.0% WACC the bull floors too (EV US$621.9m, equity -US$131.9m), so the negative call is invariant to the discount rate [S0, S2, S12]."
         },
         {
           "id": "weights.changed",
@@ -2799,8 +2880,8 @@
         "ebitda_model": null,
         "gap_pct": null,
         "actual": 0.11741690486208374,
-        "model": 0.11663369176890373,
-        "gap_pp": -0.07832130931800102
+        "model": 0.10405548941653277,
+        "gap_pp": -1.3361415445550973
       }
     }
   },
@@ -2832,6 +2913,13 @@
       "type": "update",
       "rating": "BUY",
       "tp": 187
+    },
+    {
+      "version": 5,
+      "date": "2026-11-14",
+      "type": "update",
+      "rating": "SELL",
+      "tp": 21
     }
   ],
   "news": [
