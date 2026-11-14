@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "asof": "2026-11-14T18:24:26+07:00",
+  "asof": "2026-11-14T18:27:20+07:00",
   "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used.",
   "totals": {
     "universe": 975,
-    "published": 257,
-    "in_progress": 13,
+    "published": 258,
+    "in_progress": 12,
     "parked": 298,
     "stale": 0,
     "not_rated": 3
@@ -14,7 +14,7 @@
     "BUY": 96,
     "ADD": 13,
     "HOLD": 32,
-    "SELL": 84,
+    "SELL": 85,
     "REDUCE": 29,
     "NOT RATED": 3
   },
@@ -124,7 +124,7 @@
         "FINANCIAL_HOLDCOS"
       ],
       "universe": 106,
-      "published": 32
+      "published": 33
     },
     {
       "desk": "PROPERTIES_REAL_ESTATE",
@@ -637,7 +637,7 @@
       "desk": "FINANCIALS",
       "template": "bank",
       "universe": 48,
-      "published": 32,
+      "published": 33,
       "workbook": "models/BANKS.xlsx",
       "methods": {
         "justified_pbv": 0.5,
@@ -2855,22 +2855,22 @@
       "name": "PT Bank MNC Internasional Tbk",
       "desk": "FINANCIALS",
       "industry": "BANKS",
-      "stage": "signoff",
-      "published": false,
+      "stage": "published",
+      "published": true,
       "stale": false,
-      "rating": null,
-      "tp": null,
+      "rating": "SELL",
+      "tp": 2,
       "price": 21.0,
-      "tr_pct": null,
+      "tr_pct": -89.52,
       "mcap_idr": 933638944434.0,
       "adtv_idr": 669494951.0,
-      "investable": null,
-      "last_update": null,
-      "version": 0,
-      "report_type": null,
-      "doc": null,
-      "konglo": null,
-      "suspended": null
+      "investable": false,
+      "last_update": "2026-11-14",
+      "version": 1,
+      "report_type": "initiation",
+      "doc": "fund record",
+      "konglo": false,
+      "suspended": false
     },
     {
       "ticker": "BABY.JK",
