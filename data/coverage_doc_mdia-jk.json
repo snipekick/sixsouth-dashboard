@@ -1,0 +1,2834 @@
+{
+  "schema": 1,
+  "ticker": "MDIA.JK",
+  "code": "MDIA",
+  "name": "PT Intermedia Capital Tbk",
+  "desk": "CONSUMER_CYCLICALS",
+  "industry": "MEDIA_ENTERTAINMENT",
+  "industry_name": "Media, broadcasting & entertainment",
+  "report": {
+    "ticker": "MDIA.JK",
+    "frontmatter": {
+      "ticker": "MDIA.JK",
+      "report_type": "initiation",
+      "version": 1,
+      "title": "ANTV's cash flows do not support the price; the balance sheet is a claim on its own parent",
+      "summary": "We move MDIA (ANTV) to SELL with a target of Rp45. Our twelve-month fundamental value is Rp1.60 a share, and it is effectively the bull case: the base and bear DCF equity both floor at zero. The market pays 55.6x that for the konglo premium; the target assumes only part of it decays.\n",
+      "thesis": [
+        "The operating business is worth IDR713.4bn of enterprise value, and the June 2026 net debt, minority interest and PKPU bridge absorb all of it: the DCF equity is negative before the engine's floor.",
+        "The balance sheet is a claim on PT Visi Media Asia: a IDR1,924.9bn receivable from the parent credited at forty per cent sits against IDR1,041.9bn of PKPU settlement payables carried at face \u2014 the net position is negative at our recovery probability.",
+        "The composition agreement removed the old bank debt but replaced it with a related-party refinancing loan and a PKPU settlement payable; the group is solvent on paper, not on cash flow.",
+        "Free float is below the exchange's new minimum and the stock sits on the high-shareholding-concentration list, so index demand has been switched off rather than deferred.",
+        "Shares equal to the whole of VMA's holding are pledged to the refinancing lender, and 2,635m of them have already transferred to it after a missed instalment; the target embeds the house konglo lens, in which a premium of 55.6x fundamental value decays only partially in twelve months."
+      ],
+      "catalysts": [
+        {
+          "date": "2026-11-30",
+          "event": "Q3 2026 interim report: whether the H2 revenue run-rate and program-cost inflation of H1 persist",
+          "source": "S8"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "First free-float compliance milestone under the exchange's new minimum",
+          "source": "S25"
+        },
+        {
+          "date": "2027-04-30",
+          "event": "MSCI consultation feedback closes on moving Indonesia to Standalone status",
+          "source": "S5"
+        },
+        {
+          "date": "2027-06-30",
+          "event": "MSCI decision on the Standalone proposal",
+          "source": "S5"
+        },
+        {
+          "date": "2027-04-30",
+          "event": "FY2026 audited accounts and the auditor's opinion on the PKPU receivable carrying value",
+          "source": "S7"
+        }
+      ],
+      "desk": "CONSUMER_CYCLICALS",
+      "analyst": "COVERAGE_ANALYST",
+      "asof": "2026-11-15"
+    },
+    "sections": [
+      {
+        "key": "summary",
+        "title": "Investment summary",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "We initiate PT Intermedia Capital (MDIA), the listed holding company of the free-to-air broadcaster ANTV, at **SELL** with a twelve-month target of **Rp45**, a total return of -42.8% against the Rp79 price. The target is not our view of what the business is worth; it is the house konglo construction, in which part of today's premium to fundamental value survives the next twelve months. Our fundamental value is Rp1.60 a share on a twelve-month view (Rp1.42 on the lens measure today), and that number is effectively our bull case: the base and bear DCF equity both come out negative and are floored at zero, so the only scenario contributing value is the bull [S7][S8]."
+          },
+          {
+            "type": "para",
+            "text": "The distinction matters. On the operating business alone \u2014 ANTV's advertising revenue, program costs and a fixed cost base that has not scaled down with revenue \u2014 a discounted cash flow at a cost of capital inside the house band values the enterprise at IDR713.4bn, against net debt and a PKPU settlement position that consume most of it [S7]. What is left for shareholders is a small number that is highly sensitive to two judgements: whether the parent pays the related-party receivable, and whether the cost base can be cut faster than revenue falls."
+          },
+          {
+            "type": "para",
+            "text": "The variant view is about the balance sheet, not the P&L. At the end of FY2025 the group carried a IDR2,353.1bn receivable from PT Visi Media Asia (VMA), its 90.0% shareholder, created when MDIA refinanced VMA's bank loans and reclassified the claim under the composition agreement homologated in November 2024 [S7]. By June 2026 that receivable was IDR1,924.9bn, and the group also carried PKPU settlement payables of roughly IDR1,014.2bn plus a current portion [S8]. The net position is a claim on a parent whose principal asset is the MDIA shares that VMA has pledged to PT Mandara Setra Perdana, the lender that refinanced the group [S7]. A receivable from a parent whose only asset is the shares you are valuing is not cash; it is a circular claim, and we weight it accordingly."
+          },
+          {
+            "type": "para",
+            "text": "What moves the value: first, the advertising market and ANTV's audience share of 5.3% [S6]; second, whether program costs stop rising faster than revenue, which is what drove the H1 2026 margin collapse [S8]; third, whether the PKPU receivable is settled in cash or written down. The price already assumes a favourable answer to all three."
+          },
+          {
+            "type": "background",
+            "text": "Indonesian free-to-air television has consolidated around a handful of national broadcasters as advertising budgets migrate to digital platforms. Holding companies in the sector trade on control premia and balance-sheet stories rather than on earnings power, which is why a loss-making broadcaster can carry a market value many times its book equity."
+          }
+        ]
+      },
+      {
+        "key": "s1",
+        "title": "1. Business description",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "MDIA is a holding company. Its operating asset is PT Cakrawala Andalas Televisi (ANTV), one of the national free-to-air television broadcasters in Indonesia, which it owns through a chain of subsidiaries; the company also holds a small investment in an associate [S7][S6]. Production is largely outsourced to independent houses, which is why a revenue base of IDR605.3bn is run by a small permanent staff and why content shows up in the program and broadcasting cost line rather than in headcount [S6]."
+          },
+          {
+            "type": "para",
+            "text": "Revenue is almost entirely television advertising: IDR587.3bn of the IDR605.3bn net revenue in FY2025 came from television, with digital and other revenue making up the balance [S7]. The company sells through advertising agencies, and concentration is extreme: the largest customer accounted for 34.0% of net revenue in FY2025 and the second for a mid-teens share [S7]. That is a structural feature of Indonesian television buying, where a few agencies place most free-to-air budgets, and it weakens the company's pricing power."
+          },
+          {
+            "type": "para",
+            "text": "The strategy described in the FY2025 annual report is defensive: efficiency, discipline in execution, and convergence between the free-to-air channel and digital distribution, with the analogue switch-off now behind the company [S6]. Management frames free-to-air television as the most inclusive mass-reach medium and the anchor of advertising campaigns, with digital channels extending the content cycle [S6]. Nothing in the filings quantifies a revenue or cost target, and the company does not provide guidance; our forecasts are therefore built from the reported run-rate rather than from a plan."
+          },
+          {
+            "type": "para",
+            "text": "Group structure is the defining feature. VMA owns 90.0% of MDIA, and the ultimate parent is PT Bakrie Global Ventura; the company describes itself as part of the Bakrie group [S6]. Because VMA is itself listed and itself went through the debt suspension process, MDIA's balance sheet carries the group's refinancing history: the receivable from VMA, the PKPU settlement payables, and a loan from the refinancing vehicle [S7]. ANTV is a challenger, not a leader: its audience share is 5.3%, well behind the leading national networks [S6]."
+          },
+          {
+            "type": "para",
+            "text": "The competitive position is weak on both sides. It is a sub-scale broadcaster in a fragmenting medium, and it is a subsidiary whose free float and balance sheet are shaped by its parent's restructuring rather than by its own operating needs [S6][S7]."
+          }
+        ]
+      },
+      {
+        "key": "s2",
+        "title": "2. Industry overview and competitive positioning",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Indonesian free-to-air television is a mature, advertising-funded medium. The company's own annual report describes the operating environment as one of pressure on advertising spending from global uncertainty and an acceleration of digital transformation, with internet penetration changing consumption patterns and advertisers moving to multiplatform strategies [S6]. The board's outlook points to household consumption and categories such as fast-moving consumer goods, telecommunications and e-commerce as the advertiser base, and to free-to-air television as the mass-reach anchor of those campaigns [S6]."
+          },
+          {
+            "type": "para",
+            "text": "That framing is the industry's standard defence, and it is partly right: free-to-air still reaches households that streaming does not, and for mass consumer categories it remains a cheap way to buy reach. But reach is not pricing power when the number of channels exceeds the advertising pool. The market has a fixed set of national licences and a shrinking share of total advertising spent, and within it ANTV holds 5.3% of viewing [S6]. A sub-scale share in a fragmenting medium means the channel buys content at market prices and sells it at a discount."
+          },
+          {
+            "type": "para",
+            "text": "The demand driver is nominal advertising spend, which follows GDP and corporate confidence; our macro deck has Indonesian real growth in the mid-single digits, which is not enough to offset a shift of budget share to digital [S6]. The supply driver is content cost, which is global and inflating: program and broadcasting cost rose in H1 2026 against a falling revenue base [S8]. Regulation matters at the margin \u2014 broadcasting law, the analogue switch-off and the multiplex regime have all been settled \u2014 but none of it creates pricing power for a challenger."
+          },
+          {
+            "type": "para",
+            "text": "Five forces, honestly assessed. Rivalry among the national broadcasters is intense and price-based, because the product is undifferentiated inventory sold through the same agencies. Buyer power is high: the top customer is a third of revenue and the agencies can move budgets between channels [S7]. Supplier power is high for content, where production houses and format owners price to the channel's need for ratings. New entrants are constrained by licensing, which protects the incumbents' reach but not their margins, and substitutes \u2014 streaming, social video, connected television \u2014 are the real threat and are taking share. The result is a business with a licence moat around a shrinking pool, which is the weakest kind of moat."
+          },
+          {
+            "type": "para",
+            "text": "The moat question the method card demands we answer is whether returns are widening. They are not. There is no network effect in a broadcast licence, no switching cost for an advertiser, and no evidence of brand pricing power: revenue has fallen every year since FY2022 and the audience share is small [S7][S6]. We therefore fade the business to a no-growth terminal state rather than crediting any duration to a competitive advantage."
+          },
+          {
+            "type": "para",
+            "text": "The one industry development that would change the picture is consolidation. ANTV has been the subject of acquisition speculation for years, most recently when management was asked about a reported approach from a larger media group and declined to confirm any transaction [S4]. We do not put a probability on a deal we cannot source, but it is the main route by which the current price could be justified."
+          },
+          {
+            "type": "background",
+            "text": "Media consolidation in Indonesia has historically been driven by ownership politics and by the value of a national broadcast licence rather than by synergy maths. Buyers have paid for reach and for the option value of a licence, which is why transaction values in the sector can sit far from standalone cash-flow values."
+          }
+        ]
+      },
+      {
+        "key": "s3",
+        "title": "3. Financial analysis and forecasts",
+        "blocks": [
+          {
+            "type": "block",
+            "ref": "table:fin_summary"
+          },
+          {
+            "type": "para",
+            "text": "Revenue has halved in three years. Net revenue fell from IDR1,266.0bn in FY2022 to IDR605.3bn in FY2025, a compound decline driven first by the loss of a large content or carriage arrangement and then by the advertising market [S7]. The trend continued into the current year: H1 2026 revenue was IDR281.8bn against IDR605.3bn for the whole of FY2025, with television advertising down on the prior half and digital and other revenue falling faster [S8]. We forecast IDR562.3bn for FY2026E, roughly the H1 run-rate annualised, and a decelerating decline thereafter to a flat terminal base."
+          },
+          {
+            "type": "para",
+            "text": "Margins are where the story turns. FY2025 was a good year by the standards of this business: program and broadcasting cost of IDR284.4bn on revenue of IDR605.3bn gave a gross margin of 53.0%, general and administrative cost was IDR203.1bn, and operating income reached IDR117.8bn [S7]. Depreciation and amortisation, taken from the LK notes, was IDR55.3bn and EBITDA was IDR173.0bn [S2][S7]. In H1 2026 the same cost base met a smaller revenue pool: program cost rose against a lower revenue base, G&A fell in nominal terms to IDR100.0bn from IDR111.3bn in the prior half \u2014 a nominal cut larger than the revenue decline, which left the cost at 35.5% of revenue, close to the prior half rather than materially lower \u2014 and operating income fell to IDR36.2bn [S8]. We hold the H1 ratios rather than the FY2025 ratios, because a half-year of reported accounts is stronger evidence than an average of a better year."
+          },
+          {
+            "type": "para",
+            "text": "Our D&A assumption is a restatement, not an extrapolation. The data pack's D&A is a fraction of the real charge for this company: the LK shows total depreciation and right-of-use amortisation of IDR55.3bn in FY2025 against a fixed-asset depreciation charge of IDR43.7bn in FY2024, and we key both into the model, so the rebuilt EBITDA equals the company's own reconciliation of IDR173.0bn in FY2025 [S2]. FY2024 is the exception: the model's IDR85.4bn sits below the reconciliation figure of IDR90.2bn by the right-of-use amortisation of IDR4.9bn, which the LK presents outside the fixed-asset depreciation line we key; we disclose that residual rather than smoothing it into the operating forecast [S7][S2]. Readers who compare our EBITDA to a data-provider figure will see the difference and should trust the filing."
+          },
+          {
+            "type": "para",
+            "text": "The cost base is the crux of the forecast. Program and broadcasting cost is the price of ratings, and management is still buying programming: the H1 2026 increase is disclosed in the LK and is the opposite of the flex a shrinking broadcaster needs [S8]. G&A is largely fixed in nominal terms, so as revenue declines the ratio rises; we take it to a mid-thirties percentage and hold it. That produces an EBITDA margin of 20.5% in FY2026E, rising to 21.7% by FY2027E and held there through FY2030E \u2014 the squeeze is concentrated in the first forecast year, because revenue keeps falling for four more years while the cost ratios stop rising. The margin then steps down to 14.8% in FY2031E. That step is our D&A assumption converging to the capex ratio: D&A is held at 8.9% of revenue through FY2030E and cut to 2.0% from FY2031E, and because the total cost ratio we hold constant is inclusive of depreciation, the run-off reduces EBITDA rather than cash cost. Free cash flow steps down with it, from IDR97.9bn in FY2030E to IDR61.8bn in FY2031E, and the"
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "shows the present-value contribution falling between those two years \u2014 a conservative convention that we disclose rather than bury, and one that lowers the DCF rather than flattering it [S2][S7]."
+          },
+          {
+            "type": "para",
+            "text": "Cash flow and the balance sheet are where the accounting needs care. Operating cash flow was IDR90.8bn in FY2025, well above the net loss, because depreciation and a working-capital release flattered it [S7][S8]. Capex is negligible \u2014 IDR5.7bn in FY2025 \u2014 since the digital transmitter build is complete, so free cash flow before financing was positive despite the loss [S7]. The balance sheet, however, is not an operating balance sheet: the largest asset is the PKPU receivable, and current liabilities include the PKPU settlement payable and the refinancing loan [S7]. Equity of IDR926.4bn is mostly that receivable; strip it out and the group's equity is negative."
+          },
+          {
+            "type": "para",
+            "text": "The receivable's movement in the half needs its own paragraph, because only part of it is explained. It fell from IDR2,353.1bn at 31 December 2025 to IDR1,924.9bn at 30 June 2026 [S8]. The LK identifies one settlement inside that movement: on 26 February 2026 MSP took over 2,635m pledged MDIA shares from VMA in settlement of a missed instalment, and the notes record that the value of the shares acquired was applied to reduce VMA's obligation to the group under the intercompany loan [S8]. Measured at the exchange rate of the date that is just under half of the decline. The LK publishes no movement note for the remainder, and no impairment was charged on the receivable, so the residual is neither a collection nor a write-off that we can source; we carry it as an open item and will reconcile it at the Q3 2026 report [S8]. Its value effect runs through the bridge: the whole closing balance is credited at forty sen in the rupiah, so the unexplained part is already worth forty per cent of its face inside the fundamental value. If it were written off instead of settled, the bridge and the DCF equity would fall by that forty per cent \u2014 a bear outcome described in the next section, not the base case we assume."
+          },
+          {
+            "type": "para",
+            "text": "Earnings quality deserves a flag list rather than a paragraph. The accruals position is not the problem: cash conversion was positive and the loss is driven by below-the-line items, including the FX loss on dollar debt in H1 2026 [S8]. The problems are structural: a related-party receivable equal to most of total assets, related-party G&A of IDR83.3bn in FY2025 against a trivial amount the year before, revenue concentration in two agencies, and an auditor that is a small local firm rather than a network [S7][S6]. None of this is evidence of fabrication; all of it is evidence that the reported numbers are the product of a group restructuring in which the controlling shareholder sits on both sides."
+          },
+          {
+            "type": "para",
+            "text": "Capital allocation has been survival. No dividend has been paid since listing, the group has no buyback capacity, and the cash balance is minimal [S7][S6]. The refinancing loan and the PKPU settlement absorb whatever the business generates. Until the receivable is settled and the settlement payables are extinguished, there is no distribution capacity and no reinvestment capacity."
+          }
+        ]
+      },
+      {
+        "key": "s4",
+        "title": "4. Valuation",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "A discounted cash flow is the only method that fits this company. Earnings-based multiples fail because earnings are negative or, in the better years, distorted by one-offs; book value is meaningless because equity is mostly a related-party receivable; dividend models fail because there is no dividend. We therefore weight the DCF at full value and compute the other methods only as cross-checks, which is a change from the industry default of a blended DCF, P/E and EV/EBITDA \u2014 we drop P/E outright because there is no positive earnings base, and we run EV/EBITDA and P/BV to test what the market is implicitly assuming, at a weight of zero."
+          },
+          {
+            "type": "block",
+            "ref": "table:wacc"
+          },
+          {
+            "type": "para",
+            "text": "The cost of capital is built from the house macro deck: a rupiah risk-free rate of 7.4%, the Indonesian default spread, a mature-market equity risk premium of 4.2% and a country risk premium of 2.5%, with an unlevered beta of 0.90 and a levered beta of 1.00 at the market-weighted debt-to-equity [S0]. That gives a cost of equity of 12.5% and a WACC of 11.9%, inside the house band for rupiah names. We do not add a governance premium to the discount rate: the governance problem is already reflected in the probability weighting of the receivable, and double-counting it would be a way of bending the valuation toward our conclusion."
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "The DCF values the operating business at an enterprise value of IDR713.4bn, of which 26.2% is terminal value, on a no-growth terminal assumption and a fading revenue base [S7][S8]. The"
+          },
+          {
+            "type": "block",
+            "ref": "table:dcf"
+          },
+          {
+            "type": "para",
+            "text": "also shows the FY2031E convergence step described in the financial section, where our D&A assumption falls to the capex ratio and takes annual free cash flow down with it; that step lowers the value and is a modelling convention rather than a forecast of a cash cost increase. Net debt, minorities and investments are taken from the June 2026 balance sheet. The PKPU position enters the bridge as two separate items, and they are not netted before weighting. The IDR1,924.9bn receivable from VMA and LM is credited at forty sen in the rupiah, which is the forty per cent probability on that line of the bridge; the IDR1,041.9bn settlement payables are carried at face in full, at a probability of one. Weighting the net position at forty per cent instead would credit the payables at forty sen as well and overstate the equity value; the split is in the table behind this paragraph, and the reader can rebuild it as forty per cent of the receivable less the payables at face. The forty per cent is a judgement, held at forty per cent in all three scenarios because the model does not vary a probability-weighted balance-sheet item by scenario. It is not a tested parameter: the sensitivity grids are WACC against terminal growth and revenue growth against gross margin, so recovery is a stated judgement rather than a stress-tested input. A zero-recovery case would remove the whole receivable credit while the settlement payables stay at face; that case is described in the next section, not priced as a fourth scenario. The equity value that results is negative before the floor, and the engine floors the per-share figure at Rp0: that floor is a convention applied to an out-of-the-money equity, not a valuation of the business, and it is the reason the base-scenario output carries no value of its own. What we use as fundamental value is the probability-weighted scenario value described below."
+          },
+          {
+            "type": "block",
+            "ref": "table:valuation"
+          },
+          {
+            "type": "para",
+            "text": "The cross-checks are not usable here, which is why they carry no weight at all rather than a token one. EV/EBITDA on the restated LTM figure would produce a value far above the DCF because the own-history multiple reflects the konglo premium, which is precisely the trap the method card warns about: an implied exit multiple above the entry multiple is multiple expansion wearing a DCF costume [S0]. The P/BV divergence has the same cause. Own-history price to book was set while the stock carried both the related-party receivable and the family premium, and book equity still contains a PSAK 16 revaluation surplus, so the ratio measures the price the market has been willing to pay, not the value of the operating assets [S7]. P/E is unusable outright: earnings are negative in the forecast and distorted by PKPU items in the actuals. We therefore keep the DCF as the sole weighted method and set the other two to a weight of exactly zero, so they enter neither the blended value, nor the scenario values, nor the target; the valuation table consequently shows a single method, and the cross-checks are disclosed here in words instead. A reader should treat that as a limitation: the target rests on one valuation method plus the konglo construction, not on a blend of three."
+          },
+          {
+            "type": "block",
+            "ref": "table:sensitivity"
+          },
+          {
+            "type": "para",
+            "text": "Sensitivity is concentrated in two inputs, which is what the method card asks us to state. The grids are WACC against terminal growth and revenue growth against gross margin, and in the base case they move a DCF equity that is already negative, which is why the value is carried by the scenario weighting and the konglo lens rather than by the operating DCF. The terminal growth assumption is irrelevant at these cash-flow levels because we have set it to zero; the value is a function of the fade path, not of a perpetuity. The recovery rate is not one of the grids: it is held at forty per cent everywhere, and the zero-recovery case is described qualitatively in the next section rather than tabulated, which is a limitation of this valuation and not a claim that forty per cent has been tested."
+          },
+          {
+            "type": "para",
+            "text": "What the price implies is the cleanest statement of the gap. At Rp79, the reverse DCF requires revenue growth about 30.1% a year above our base path \u2014 growth the business has not delivered since FY2022, in a medium that is losing advertising share [S7][S6]. That is not a forecast we can source; it is the market pricing the receivable and the control story, not the broadcaster."
+          },
+          {
+            "type": "para",
+            "text": "**The konglo lens.** MDIA is on the exchange's high-shareholding-concentration list and its free float is below the new minimum, so the house regime applies. The fundamental value is Rp1.42 a share today, on the lens definition (the probability-weighted twelve-month value of Rp1.60 discounted back); the price is 55.6x that, a log premium of 4.02. The regime model assumes that a fraction of the log gap closes over twelve months \u2014 0.35 in the base case, accelerated by the HSC flag \u2014 so the twelve-month target keeps a multiple of fundamental value rather than converging to it: Rp22 in the base regime, Rp4 in the bear and Rp133 in the bull. The weighted result is Rp45. We are explicit that this construction is not a fundamental value: it is a model of how slowly a konglo premium decays, and it is the reason our target sits far above the Rp1.60 fundamental value [S7]."
+          },
+          {
+            "type": "block",
+            "ref": "table:konglo"
+          }
+        ]
+      },
+      {
+        "key": "s5",
+        "title": "5. Investment risks and scenario analysis",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "The downside risks, ranked by likelihood times impact. **Governance and related-party risk (high likelihood, high impact):** the receivable from VMA is the largest asset, the parent's principal asset is the pledged MDIA stake, and related-party G&A rose sharply in FY2025 [S7]. A settlement at a discount, or a debt-to-equity conversion that dilutes minorities, is the single largest threat to value. **Liquidity and solvency risk (medium, high):** the PKPU settlement payables and the refinancing loan fall due on a schedule the operating cash flow cannot fund without collections on the receivable [S7][S8]. **Operating risk (high, medium):** program cost inflation against falling revenue is already visible in H1 2026 [S8]. **Regulatory and index risk (high, medium):** free float below the minimum, HSC status and exclusion from the IHSG calculation remove index demand and could force a further de-rating. **Macro and advertising cyclicality (medium, medium):** the advertiser base is consumer-facing and sensitive to household spending [S6]. **Currency risk (medium, low):** the group still carries dollar-linked obligations, and the H1 2026 FX loss is large enough to show the exposure [S8]."
+          },
+          {
+            "type": "block",
+            "ref": "table:scenarios"
+          },
+          {
+            "type": "para",
+            "text": "The scenarios mirror each other on three business drivers, not two, as the method card requires. In the bear case revenue declines three percentage points a year faster than base, the program ratio is worse by one and a half points and the G&A ratio is one point of revenue higher; the base case takes none of those, and the bull case reverses each by the same amount \u2014 revenue three points better, program ratio one and a half points better, G&A one point of revenue lower. Two features of the output have to be stated plainly. First, the base and the bear both print at the engine's zero floor, Rp0 and Rp0, because the DCF equity is negative in both before the floor: the floor is a modelling convention, not a forecast that the shares are worthless, and the underlying negative values are not shown in the table. Second, because of that floor the probability-weighted twelve-month fundamental value of Rp1.60 is almost entirely the one-in-four bull case \u2014 the bull value of Rp6 weighted at one quarter carries essentially the whole total. Our fundamental value and the target built on it should therefore be read as a bull case with a probability attached, not as a central expectation; that is the strongest argument against our own SELL, and we put it in the body rather than in a footnote. The PKPU bridge is held at the same forty per cent recovery in every scenario, so the whole scenario spread is operational. Recovery is a separate judgement rather than a scenario, and it is not priced by the engine: the same forty per cent weighting is held in every case, so neither the bear nor the bull changes the recovery assumption \u2014 the bear does not assume zero recovery and the bull does not assume settlement at face. A zero-recovery case would remove the entire receivable credit from the equity value, which is why the rating rests on the operating value and the konglo lens, not on collection [S7][S8]. The base case is the one we describe in the financial section; the probabilities are those in the assumptions file [S7][S8]. The asymmetry in the bull case is the acquisition option \u2014 a trade buyer of a national licence would pay for reach, not for our cash flows \u2014 and we flag it rather than model it [S4]."
+          },
+          {
+            "type": "para",
+            "text": "Signposts that would change the view. A cash collection on the VMA receivable, disclosed in a quarterly filing, would raise the bridge probability and with it the value. A sustained fall in program cost as a share of revenue, for two consecutive halves, would validate the cost story. A change of control or a tender offer at a premium to market would make the fundamental value irrelevant. Conversely, a further decline in the receivable's carrying value, a missed PKPU payment or a going-concern qualification in the FY2026 audit would push us to the bear case [S7]."
+          },
+          {
+            "type": "para",
+            "text": "**The konglo lens in the scenarios.** The business scenarios above are fundamental: they value the enterprise, add or exclude the receivable, and produce a value per share. Those values are what the scenario table shows. The rating, however, runs through the house konglo regime, which is a separate construction: the price of Rp79 is 55.6x our fundamental value of Rp1.42 a share, and the regime assumes that only 0.35 of the log gap between the two closes over the next twelve months in the base case, with the HSC and free-float flags adding 0.05 to that closing share. The resulting target of Rp45 therefore sits far above the fundamental value and is why the target stays far above fundamental value rather than converging to it: we are not forecasting a convergence to fundamental value within the year, only a partial decay of the premium. If the price were to fall toward fundamental value the lens would flip to a discount, and the same flags would slow the climb back \u2014 the regime is symmetric in construction and penalises the premium in both directions."
+          },
+          {
+            "type": "block",
+            "ref": "table:konglo"
+          }
+        ]
+      },
+      {
+        "key": "s6",
+        "title": "6. Governance and ESG",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Ownership is concentrated and the structure is the story. VMA holds 90.0% of MDIA; the public holds 10.0% in aggregate, with no single public holder above five per cent; the ultimate parent is PT Bakrie Global Ventura [S6]. The house konglo registry for 14 November 2026 carries a free float of 12.5%, and the two measures are not the same number: the annual report's 10.0% counts holdings each below five per cent at 31 December 2025, while the registry reflects a later measurement date, and we cannot bridge the gap from the filings. The lens uses the registry figure, both are below the 15.0% minimum, and the regime output is identical on either, so nothing in the valuation turns on the difference. The next compliance milestone is in 28 months. The stock is on the exchange's high-shareholding-concentration list, and the exchange announced on 22 October 2026 that HSC names are excluded from the IHSG selection from 2 November 2026 [S10]. MSCI has frozen index increases for Indonesian names and opened a consultation on moving the market to Standalone status, which would remove the remaining passive demand [S11]."
+          },
+          {
+            "type": "block",
+            "ref": "table:konglo"
+          },
+          {
+            "type": "para",
+            "text": "Related-party dealings are material and one-sided. Revenue from related parties was negligible in FY2025, but G&A paid to related parties was IDR83.3bn, a large share of total operating expenses, against a trivial amount in FY2024 [S7]. The PKPU receivable is itself a related-party balance: it arises from MDIA refinancing VMA's loans and from trade receivables reclassified under the composition agreement [S7]. The refinancing lender, PT Mandara Setra Perdana, is the counterparty on a IDR527.1bn loan facility, and the composition agreement gives it a call on up to 35,294m MDIA shares pledged by VMA [S7][S8]. In substance, the controlling shareholder has borrowed against the listed subsidiary's shares and the subsidiary holds a receivable from the shareholder: the circularity is disclosed, but it is the clearest example on the exchange of the agency problem the method card describes."
+          },
+          {
+            "type": "para",
+            "text": "On the exchange's regime screens, neither the FY2025 annual report nor the H1 2026 filing discloses a special-monitoring-board listing or a B, E, L, M or S notation, and the annual report's Going Concern section records management's assessment that the group has the resources to continue, referring to the notes for the detail [S6][S8]. The trading record qualifies that: the shares were flagged for unusual market activity on 20 April 2026 and suspended on 23 April after a cumulative price surge, then reopened the next day, with the board publicly reprimanding the price action in that period [S9]. The stock sits on the exchange's high-shareholding-concentration list, and the exchange announced on 22 October 2026 that HSC names are excluded from the IHSG selection from 2 November 2026, so index demand is switched off rather than deferred [S10]. We report that as the disclosure position, not as an assurance: the solvency question we care about is the receivable, and a notation or a second suspension would change the entry and exit assumptions behind the konglo premium rather than the fundamental value."
+          },
+          {
+            "type": "para",
+            "text": "Pledged shares are a supply risk, not just a disclosure item. If the refinancing facility is enforced, the pledged block \u2014 the whole of VMA's holding, 90.0% of paid-up capital and a maximum of 35,294m shares \u2014 could be sold or transferred, and minority holders have no protection against that outcome beyond the composition agreement's terms [S7]. The pledge has already been drawn on: 2,635m shares were transferred to PT Mandara Setra Perdana on 26 February 2026 after a missed instalment, with VMA retaining a repurchase right [S7]."
+          },
+          {
+            "type": "para",
+            "text": "Audit and board. The FY2025 consolidated accounts were audited by KAP Achsin Handoko Tomo, a small local firm, with an unqualified opinion and a report date in April 2026 [S6]. The board was reshuffled at the 2025 annual meeting, with a member of the controlling family appointed to the board of commissioners and a new finance director [S6]. Audit quality is not the issue \u2014 the disclosure is detailed \u2014 but a small-firm auditor on a balance sheet dominated by a related-party receivable is a governance fact a reader should weigh."
+          },
+          {
+            "type": "para",
+            "text": "Dividends and capital returns are nil. No dividend has been paid since listing, retained earnings are deeply negative after the FY2023 and FY2024 losses, and the composition agreement restricts distributions [S7][S6]. ESG exposures specific to the company are modest in environmental terms \u2014 a broadcaster's footprint is offices and transmitters \u2014 but the social and governance dimensions are material: content and labour practices in production, the treatment of minority shareholders in a group restructuring, and the transparency of the PKPU settlement."
+          }
+        ]
+      },
+      {
+        "key": "s7",
+        "title": "7. Catalysts and monitoring",
+        "blocks": [
+          {
+            "type": "para",
+            "text": "Near-term, the Q3 2026 interim report is the first test: it will show whether the H1 program-cost increase was a scheduling decision or a new cost level, and whether the PKPU receivable has been collected [S8]. The FY2026 audit, due in the second quarter of 2027, is the second: the auditor's treatment of the receivable's carrying value is the single most informative disclosure in the set [S7]."
+          },
+          {
+            "type": "para",
+            "text": "On the index and ownership side, the free-float compliance calendar and the MSCI consultation run through 2027 and are dated in the frontmatter. Any announcement on the VMA restructuring, a change in the pledged block or a transaction involving the ANTV licence would be material and is not currently in our forecasts [S7]."
+          },
+          {
+            "type": "para",
+            "text": "The KPIs we monitor between updates: television advertising revenue and its split between the top two agency customers; program and broadcasting cost as a percentage of revenue; G&A in nominal rupiah; the carrying value and cash collection of the PKPU receivable; the PKPU settlement payable balance; and the audience share, which is the leading indicator of all of the above [S7][S8][S6]. We will revisit the rating if the receivable is collected in cash, if program cost falls for two consecutive halves, or if a corporate transaction is announced at a premium."
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "S0": {
+        "title": "Yahoo Finance statements, prices and profile for MDIA.JK",
+        "url": "https://finance.yahoo.com/quote/MDIA.JK",
+        "publisher": "Yahoo Finance",
+        "date": "2026-11-15",
+        "kind": "data"
+      },
+      "S2": {
+        "title": "MDIA financial highlights 2023-2025",
+        "url": "https://www.imc.co.id/Hubungan%20Investor/Informasi%20Keuangan/Financial%20Highlight%20MDIA/MDIA-SUMMARY-2023-2024-2025.pdf",
+        "publisher": "www.imc.co.id",
+        "date": "2026-11-15",
+        "kind": "company"
+      },
+      "S4": {
+        "title": "ANTV Dikabarkan Bakal Diakuisisi Emtek - Detik Finance",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-7700726/antv-dikabarkan-bakal-diakuisisi-emtek-manajemen-buka-suara",
+        "publisher": "finance.detik.com",
+        "date": "2024-12-23",
+        "kind": "news"
+      },
+      "S6": {
+        "title": "MDIA Annual Report 2025",
+        "url": "https://www.imc.co.id/Hubungan%20Investor/Laporan%20Tahunan/Annual%20Report%20MDIA/AR-2025-MDIA-(29Okt)-LOW.pdf",
+        "publisher": "www.imc.co.id",
+        "date": "2026-11-15",
+        "kind": "company"
+      },
+      "S7": {
+        "title": "MDIA audited financial statements FY2025",
+        "url": "https://www.imc.co.id/Hubungan%20Investor/Informasi%20Keuangan/Financial%20Report%20MDIA/2025/Intermedia-Capital-(Report-Billingual)-Dec-31-2025-Final.pdf",
+        "publisher": "www.imc.co.id",
+        "date": "2026-11-15",
+        "kind": "filing"
+      },
+      "S8": {
+        "title": "MDIA financial statements H1 2026",
+        "url": "https://www.imc.co.id/Hubungan%20Investor/Informasi%20Keuangan/Financial%20Report%20MDIA/2026/Intermedia-Capital-30-Jun-2026%20Final_compressed.pdf",
+        "publisher": "www.imc.co.id",
+        "date": "2026-11-15",
+        "kind": "filing"
+      },
+      "S9": {
+        "title": "Kena Semprit Bursa, Emiten Bakrie MDIA Buka Suara",
+        "url": "https://finance.detik.com/bursa-dan-valas/d-8465030/kena-semprit-bursa-emiten-bakrie-mdia-buka-suara",
+        "publisher": "finance.detik.com",
+        "date": "2026-04-28",
+        "kind": "news"
+      },
+      "S10": {
+        "title": "Mulai 2 November, Saham Papan Akselerasi dan HSC Dikecualikan dari Seleksi IHSG",
+        "url": "https://money.kompas.com/read/2026/10/25/130000526/mulai-2-november-saham-papan-akselerasi-dan-hsc-dikecualikan-dari-seleksi-ihsg",
+        "publisher": "money.kompas.com",
+        "date": "2026-10-25",
+        "kind": "news"
+      },
+      "S11": {
+        "title": "MSCI Berpotensi Ubah Status Pasar Saham Indonesia ke Standalone Market",
+        "url": "https://www.liputan6.com/saham/read/8314414/msci-berpotensi-ubah-status-pasar-saham-indonesia-ke-standalone-market",
+        "publisher": "www.liputan6.com",
+        "date": "2026-10-16",
+        "kind": "news"
+      }
+    },
+    "rendered_at": "2026-11-15T23:41:56+07:00"
+  },
+  "meta": {
+    "rating": "SELL",
+    "tp": 45.0,
+    "price": 79.0,
+    "tp_fundamental": 2.0,
+    "konglo": true,
+    "suspended": null,
+    "price_date": "2026-11-13",
+    "tr_pct": -42.78,
+    "upside_pct": -42.78,
+    "v0": 0.0,
+    "tp_base": 0.0,
+    "dps12": 0.0,
+    "liquidity_discount": 0.0,
+    "investable": {
+      "ok": true,
+      "mcap": true,
+      "adtv": true,
+      "board": true
+    },
+    "version": 1,
+    "report_type": "initiation",
+    "published_at": "2026-11-15",
+    "data_asof": "2026-11-15",
+    "model_asof": "2026-11-15",
+    "reporting_ccy": "IDR",
+    "unit": "IDR bn",
+    "sector_lead": "Adit",
+    "sector_lead_title": "Sector Lead, Consumer Cyclicals",
+    "reviewer": "Kirana",
+    "director": "Laras"
+  },
+  "key_data": {
+    "mcap_idr": 3098027533600.0,
+    "adtv_3m_idr": 35259374454.0,
+    "free_float_pct": 12.54,
+    "w52_high": 280.0,
+    "w52_low": 31.0,
+    "shares_m": 39215.54,
+    "insider_pct": 90.01,
+    "institution_pct": 0.0,
+    "board": "",
+    "listing_date": "2014-04-11",
+    "website": "https://www.imc.co.id"
+  },
+  "tables": {
+    "periods": [
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E"
+    ],
+    "fin_summary": [
+      {
+        "key": "revenue",
+        "label": "Revenue",
+        "unit": "money",
+        "values": {
+          "FY2023A": 778.04971,
+          "FY2024A": 669.204802,
+          "FY2025A": 605.263232,
+          "FY2026E": 562.289543,
+          "FY2027E": 539.797961,
+          "FY2028E": 523.604022
+        }
+      },
+      {
+        "key": "ebitda",
+        "label": "EBITDA",
+        "unit": "money",
+        "values": {
+          "FY2023A": -125.068028,
+          "FY2024A": 85.360761,
+          "FY2025A": 173.026913,
+          "FY2026E": 115.269356,
+          "FY2027E": 117.136157,
+          "FY2028E": 113.622073
+        }
+      },
+      {
+        "key": "np_parent",
+        "label": "Net profit to parent",
+        "unit": "money",
+        "values": {
+          "FY2023A": -959.521723,
+          "FY2024A": -942.67706,
+          "FY2025A": -47.384266,
+          "FY2026E": 36.111145,
+          "FY2027E": 34.799277,
+          "FY2028E": 34.286187
+        }
+      },
+      {
+        "key": "eps",
+        "label": "EPS",
+        "unit": "ps",
+        "values": {
+          "FY2023A": -24.467896,
+          "FY2024A": -24.038356,
+          "FY2025A": -1.208303,
+          "FY2026E": 0.920838,
+          "FY2027E": 0.887385,
+          "FY2028E": 0.874301
+        }
+      },
+      {
+        "key": "eps_growth",
+        "label": "EPS growth",
+        "unit": "pct",
+        "values": {
+          "FY2023A": -31.311462,
+          "FY2024A": -0.017555,
+          "FY2025A": -0.949734,
+          "FY2026E": -1.762091,
+          "FY2027E": -0.036329,
+          "FY2028E": -0.014744
+        }
+      },
+      {
+        "key": "dps",
+        "label": "DPS (declared on the year)",
+        "unit": "ps",
+        "values": {
+          "FY2023A": 0.0,
+          "FY2024A": 0.0,
+          "FY2025A": 0.0,
+          "FY2026E": 0.0,
+          "FY2027E": 0.0,
+          "FY2028E": 0.0
+        }
+      },
+      {
+        "key": "roe",
+        "label": "ROE",
+        "unit": "pct",
+        "values": {
+          "FY2023A": -0.396479,
+          "FY2024A": -0.653204,
+          "FY2025A": -0.049882,
+          "FY2026E": 0.038233,
+          "FY2027E": 0.035511,
+          "FY2028E": 0.033796
+        }
+      },
+      {
+        "key": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "unit": "x",
+        "values": {
+          "FY2023A": -13.921866,
+          "FY2024A": 21.44111,
+          "FY2025A": 4.8812,
+          "FY2026E": 6.678118,
+          "FY2027E": 5.917783,
+          "FY2028E": 5.452121
+        }
+      }
+    ],
+    "kpis": [],
+    "valuation": [
+      {
+        "method": "dcf_fcff",
+        "label": "DCF (FCFF, terminal value)",
+        "available": true,
+        "value": 0.0,
+        "weight": 1.0,
+        "basis": null,
+        "multiple": null,
+        "vs_primary_pct": null,
+        "primary": true
+      }
+    ],
+    "wacc": {
+      "ok": null,
+      "rf": 0.0745,
+      "default_spread": 0.0162,
+      "erp_mature": 0.0423,
+      "crp": 0.0246,
+      "beta_unlevered": 0.9,
+      "beta_source": "industry default (config)",
+      "de": 0.146805,
+      "beta_levered": 1.003057,
+      "tax": 0.22,
+      "coe_premium": 0.0,
+      "coe": 0.125405,
+      "kd_pre_tax": 0.0945,
+      "we": 0.871988,
+      "wd": 0.128012,
+      "wacc": 0.118787
+    },
+    "g": 0.0,
+    "dcf": {
+      "method": "dcf_fcff",
+      "rows": [
+        {
+          "cf": 107.005742,
+          "fraction": 0.503765,
+          "time": 0.0,
+          "df": 1.0,
+          "pv": 53.905699,
+          "period": "FY2026E"
+        },
+        {
+          "cf": 107.383808,
+          "fraction": 0.996578,
+          "time": 0.626968,
+          "df": 0.932045,
+          "pv": 99.744028,
+          "period": "FY2027E"
+        },
+        {
+          "cf": 103.037714,
+          "fraction": 0.999316,
+          "time": 1.626283,
+          "df": 0.833149,
+          "pv": 85.787054,
+          "period": "FY2028E"
+        },
+        {
+          "cf": 99.897364,
+          "fraction": 0.996578,
+          "time": 2.628337,
+          "df": 0.744518,
+          "pv": 74.120883,
+          "period": "FY2029E"
+        },
+        {
+          "cf": 97.851182,
+          "fraction": 0.996578,
+          "time": 3.627652,
+          "df": 0.66552,
+          "pv": 64.899087,
+          "period": "FY2030E"
+        },
+        {
+          "cf": 61.772876,
+          "fraction": 0.996578,
+          "time": 4.626968,
+          "df": 0.594905,
+          "pv": 36.6232,
+          "period": "FY2031E"
+        },
+        {
+          "cf": 61.772876,
+          "fraction": 0.999316,
+          "time": 5.626283,
+          "df": 0.531782,
+          "pv": 32.827191,
+          "period": "FY2032E"
+        },
+        {
+          "cf": 61.772876,
+          "fraction": 0.996578,
+          "time": 6.628337,
+          "df": 0.47521,
+          "pv": 29.254639,
+          "period": "FY2033E"
+        },
+        {
+          "cf": 61.772876,
+          "fraction": 0.996578,
+          "time": 7.627652,
+          "df": 0.424787,
+          "pv": 26.150542,
+          "period": "FY2034E"
+        },
+        {
+          "cf": 61.772876,
+          "fraction": 0.996578,
+          "time": 8.626968,
+          "df": 0.379715,
+          "pv": 23.375809,
+          "period": "FY2035E"
+        }
+      ],
+      "pv_sum": 526.688131,
+      "pv_tv": 186.722354,
+      "ev": 713.410485,
+      "net_debt": 448.167042,
+      "minority": 17.282186,
+      "investments": 2.567392,
+      "bridge": -271.877567,
+      "equity_value": -21.348918,
+      "tv_share": 0.261732,
+      "value": 0.0
+    },
+    "scenarios": {
+      "base": {
+        "prob": 0.5,
+        "tp": 0.0,
+        "v0": 0.0,
+        "narrative": "",
+        "shocks": null
+      },
+      "bear": {
+        "prob": 0.25,
+        "tp": 0.0,
+        "v0": 0.0,
+        "narrative": "Advertising budgets keep shifting to digital faster than expected: revenue growth is 3pp lower a year than base, the program-cost ratio is 1.5pp worse as content inflation meets a smaller revenue pool, and G&A is 1pp of revenue higher because the fixed base can only be cut in steps. The PKPU bridge is the same 40% recovery used in the base case: the model does not vary a probability-weighted balance sheet item by scenario, and a zero-recovery path is described in the report rather than priced.\n",
+        "shocks": [
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": -0.03
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": -0.015
+          },
+          {
+            "target": "a.opex_pct",
+            "op": "add",
+            "value": 0.01
+          }
+        ]
+      },
+      "bull": {
+        "prob": 0.25,
+        "tp": 6.0,
+        "v0": 6.0,
+        "narrative": "Consolidation of the free-to-air industry (ANTV has been the subject of acquisition speculation for years) stabilises advertising pricing: revenue growth is 3pp better a year than base, the program ratio 1.5pp better as scale returns, and the G&A ratio is 1pp of revenue lower as the H1 2026 cost cut is sustained. The PKPU bridge stays at the base 40% recovery.\n",
+        "shocks": [
+          {
+            "target": "a.revenue_growth",
+            "op": "add",
+            "value": 0.03
+          },
+          {
+            "target": "a.gross_margin",
+            "op": "add",
+            "value": 0.015
+          },
+          {
+            "target": "a.opex_pct",
+            "op": "add",
+            "value": -0.01
+          }
+        ]
+      }
+    },
+    "sensitivity": [
+      {
+        "title": "DCF value per share vs WACC and terminal growth",
+        "metric": "method:dcf_fcff",
+        "x": {
+          "target": "val.wacc",
+          "op": "add",
+          "label": "WACC (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "y": {
+          "target": "val.g",
+          "op": "add",
+          "label": "Terminal growth (+/- pp)",
+          "steps": [
+            -0.01,
+            -0.005,
+            0.0,
+            0.005,
+            0.01
+          ]
+        },
+        "grid": [
+          [
+            0.180916,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.43271,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.70765,
+            0.054904,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.00908,
+            0.319974,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.341024,
+            0.610584,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "title": "12-month value vs revenue growth and gross margin",
+        "metric": "tp",
+        "x": {
+          "target": "a.revenue_growth",
+          "op": "add",
+          "label": "Revenue growth (+/- pp, every year)",
+          "steps": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ]
+        },
+        "y": {
+          "target": "a.gross_margin",
+          "op": "add",
+          "label": "Gross margin (+/- pp)",
+          "steps": [
+            -0.02,
+            -0.01,
+            0.0,
+            0.01,
+            0.02
+          ]
+        },
+        "grid": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.272648
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.949571
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.390069,
+            3.626493
+          ],
+          [
+            0.0,
+            0.0,
+            0.666732,
+            2.853798,
+            5.303416
+          ],
+          [
+            0.0,
+            0.0,
+            1.946133,
+            4.317527,
+            6.980339
+          ]
+        ]
+      }
+    ],
+    "reverse_dcf": {
+      "available": true,
+      "target": "a.revenue_growth",
+      "op": "add",
+      "factor": 0.340612,
+      "period": "FY2027E",
+      "implied_value": 0.300612,
+      "method": "dcf_fcff"
+    },
+    "multiples": {
+      "FY2025A": {
+        "pbv": 3.343998,
+        "div_yield": 0.0,
+        "ev_ebitda": 22.88597
+      },
+      "FY2026E": {
+        "pe": 85.791452,
+        "pbv": 3.218545,
+        "div_yield": 0.0,
+        "ev_ebitda": 33.704466,
+        "fcfe_yield": 0.024143
+      },
+      "FY2027E": {
+        "pe": 89.02563,
+        "pbv": 3.106245,
+        "div_yield": 0.0,
+        "ev_ebitda": 32.513412,
+        "fcfe_yield": 0.024724
+      },
+      "FY2028E": {
+        "pe": 90.35789,
+        "pbv": 3.00301,
+        "div_yield": 0.0,
+        "ev_ebitda": 32.870294,
+        "fcfe_yield": 0.023791
+      }
+    },
+    "peers": {
+      "median": {
+        "pe": {
+          "median": 7.43065345937279,
+          "n": 6
+        },
+        "ev_ebitda": {
+          "median": 7.899894096559532,
+          "n": 6
+        },
+        "pbv": {
+          "median": 1.2279322138980013,
+          "n": 14
+        },
+        "ev_sales": {
+          "median": 1.9592296271044929,
+          "n": 13
+        }
+      },
+      "rows": {
+        "ABBA.JK": {
+          "pbv": 7.9159,
+          "ev_sales": 0.383,
+          "div_yield": 0.0
+        },
+        "BMTR.JK": {
+          "pe": 2.6145,
+          "ev_ebitda": 11.4337,
+          "pbv": 0.0691,
+          "ev_sales": 1.9355,
+          "div_yield": 0.0
+        },
+        "DIGI.JK": {
+          "div_yield": 0.0
+        },
+        "DOOH.JK": {
+          "pe": 21.3866,
+          "pbv": 5.7317,
+          "ev_sales": 8.1356,
+          "div_yield": 0.0
+        },
+        "FILM.JK": {
+          "pbv": 1.0985,
+          "ev_sales": 7.452,
+          "div_yield": 0.0
+        },
+        "FORU.JK": {
+          "ev_sales": 22.637,
+          "div_yield": 0.0
+        },
+        "FUTR.JK": {
+          "pbv": 5.0058,
+          "div_yield": 0.0
+        },
+        "IPTV.JK": {
+          "pbv": 0.1449,
+          "div_yield": 0.0
+        },
+        "MARI.JK": {
+          "div_yield": 0.0
+        },
+        "MNCN.JK": {
+          "pe": 1.1048,
+          "ev_ebitda": 2.4742,
+          "pbv": 0.0455,
+          "ev_sales": 0.4427,
+          "div_yield": 0.0
+        },
+        "MSIN.JK": {
+          "pe": 6.2221,
+          "ev_ebitda": 7.5138,
+          "pbv": 0.7991,
+          "ev_sales": 1.625,
+          "div_yield": 0.0
+        },
+        "MSKY.JK": {
+          "pbv": 0.4647,
+          "ev_sales": 1.524,
+          "div_yield": 0.0
+        },
+        "NETV.JK": {
+          "pbv": 3.1843,
+          "ev_sales": 16.3319,
+          "div_yield": 0.0
+        },
+        "RAAM.JK": {
+          "pbv": 0.6985,
+          "ev_sales": 2.2025,
+          "div_yield": 0.0
+        },
+        "RANS.JK": {
+          "pe": 19.828,
+          "ev_ebitda": 8.286,
+          "pbv": 1.5743,
+          "ev_sales": 1.9592,
+          "div_yield": 0.0
+        },
+        "SCMA.JK": {
+          "pe": 8.6392,
+          "ev_ebitda": 5.4027,
+          "pbv": 1.3574,
+          "ev_sales": 1.1852,
+          "div_yield": 0.207
+        },
+        "TMPO.JK": {
+          "div_yield": 0.0
+        },
+        "VERN.JK": {
+          "div_yield": 0.0
+        },
+        "VIVA.JK": {
+          "ev_ebitda": 44.6299,
+          "pbv": 8.8272,
+          "ev_sales": 3.621,
+          "div_yield": 0.0
+        }
+      }
+    },
+    "drivers": {},
+    "konglo": {
+      "direction": "premium",
+      "premium_ratio": 55.6219,
+      "premium_kept": 28.2795,
+      "v_fundamental": 1.42,
+      "tp_fundamental": 2.0,
+      "tp": 45.0,
+      "scenarios": {
+        "bear": {
+          "prob": 0.25,
+          "compress": 0.75,
+          "premium_kept": 2.7309,
+          "tp": 4.0
+        },
+        "base": {
+          "prob": 0.5,
+          "compress": 0.35,
+          "premium_kept": 13.6273,
+          "tp": 22.0
+        },
+        "bull": {
+          "prob": 0.25,
+          "compress": -0.1,
+          "premium_kept": 83.1324,
+          "tp": 133.0
+        }
+      },
+      "adjustments": [
+        {
+          "key": "hsc",
+          "value": 0.05,
+          "why": "on the exchange's HSC list (as of 2026-11-11): out of the IHSG, the LQ45/IDX30/IDX80 and the MSCI indexes [konglo deck S26]"
+        }
+      ],
+      "groups": [],
+      "hsc": {
+        "listed": true,
+        "asof": "2026-11-11",
+        "source": "S26"
+      },
+      "free_float": {
+        "free_float_pct": 12.54,
+        "compliant": false,
+        "tier": "mcap below Rp5tn",
+        "next_step_pct": 15.0,
+        "next_step_by": "2029-03-31",
+        "final_by": "2029-03-31",
+        "gap_pct": 2.46
+      },
+      "index_deletions": [],
+      "enforcement": [],
+      "events": [],
+      "registry_asof": "2026-11-14",
+      "construction": "target = fundamental 12-month value (probability-weighted business scenarios, after the liquidity discount) x the probability-weighted share of today's premium kept, (price / fundamental value today)^(1 - c) over the regime scenarios; c = share of the log gap that closes within 12 months"
+    }
+  },
+  "appendix": {
+    "periods": [
+      "FY2022A",
+      "FY2023A",
+      "FY2024A",
+      "FY2025A",
+      "FY2026E",
+      "FY2027E",
+      "FY2028E",
+      "FY2029E",
+      "FY2030E",
+      "FY2031E",
+      "FY2032E",
+      "FY2033E",
+      "FY2034E",
+      "FY2035E"
+    ],
+    "sections": {
+      "OPS": [],
+      "IS": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1265.960458,
+            "FY2023A": 778.04971,
+            "FY2024A": 669.204802,
+            "FY2025A": 605.263232,
+            "FY2026E": 562.289543,
+            "FY2027E": 539.797961,
+            "FY2028E": 523.604022,
+            "FY2029E": 513.131942,
+            "FY2030E": 508.000622,
+            "FY2031E": 508.000622,
+            "FY2032E": 508.000622,
+            "FY2033E": 508.000622,
+            "FY2034E": 508.000622,
+            "FY2035E": 508.000622
+          }
+        },
+        {
+          "key": "cogs",
+          "label": "Cost of revenue",
+          "unit": "money",
+          "values": {
+            "FY2022A": 639.191593,
+            "FY2023A": 537.996782,
+            "FY2024A": 347.087465,
+            "FY2025A": 284.368398,
+            "FY2026E": 290.703693,
+            "FY2027E": 279.075546,
+            "FY2028E": 270.703279,
+            "FY2029E": 265.289214,
+            "FY2030E": 262.636322,
+            "FY2031E": 262.636322,
+            "FY2032E": 262.636322,
+            "FY2033E": 262.636322,
+            "FY2034E": 262.636322,
+            "FY2035E": 262.636322
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "unit": "money",
+          "values": {
+            "FY2022A": 626.768865,
+            "FY2023A": 240.052928,
+            "FY2024A": 322.117337,
+            "FY2025A": 320.894834,
+            "FY2026E": 271.585849,
+            "FY2027E": 260.722415,
+            "FY2028E": 252.900743,
+            "FY2029E": 247.842728,
+            "FY2030E": 245.3643,
+            "FY2031E": 245.3643,
+            "FY2032E": 245.3643,
+            "FY2033E": 245.3643,
+            "FY2034E": 245.3643,
+            "FY2035E": 245.3643
+          }
+        },
+        {
+          "key": "opex",
+          "label": "SG&A and other opex",
+          "unit": "money",
+          "values": {
+            "FY2022A": 469.969914,
+            "FY2023A": 391.322523,
+            "FY2024A": 280.485196,
+            "FY2025A": 203.122239,
+            "FY2026E": 199.612788,
+            "FY2027E": 191.628276,
+            "FY2028E": 185.879428,
+            "FY2029E": 182.161839,
+            "FY2030E": 180.340221,
+            "FY2031E": 180.340221,
+            "FY2032E": 180.340221,
+            "FY2033E": 180.340221,
+            "FY2034E": 180.340221,
+            "FY2035E": 180.340221
+          }
+        },
+        {
+          "key": "ebit",
+          "label": "EBIT",
+          "unit": "money",
+          "values": {
+            "FY2022A": 156.798951,
+            "FY2023A": -151.269595,
+            "FY2024A": 41.632141,
+            "FY2025A": 117.772595,
+            "FY2026E": 71.973061,
+            "FY2027E": 69.094139,
+            "FY2028E": 67.021315,
+            "FY2029E": 65.680889,
+            "FY2030E": 65.02408,
+            "FY2031E": 65.02408,
+            "FY2032E": 65.02408,
+            "FY2033E": 65.02408,
+            "FY2034E": 65.02408,
+            "FY2035E": 65.02408
+          }
+        },
+        {
+          "key": "da",
+          "label": "Depreciation & amortisation",
+          "unit": "money",
+          "values": {
+            "FY2022A": 35.018834,
+            "FY2023A": 26.201567,
+            "FY2024A": 43.72862,
+            "FY2025A": 55.254318,
+            "FY2026E": 43.296295,
+            "FY2027E": 48.042019,
+            "FY2028E": 46.600758,
+            "FY2029E": 45.668743,
+            "FY2030E": 45.212055,
+            "FY2031E": 10.160012,
+            "FY2032E": 10.160012,
+            "FY2033E": 10.160012,
+            "FY2034E": 10.160012,
+            "FY2035E": 10.160012
+          }
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "unit": "money",
+          "values": {
+            "FY2022A": 191.817785,
+            "FY2023A": -125.068028,
+            "FY2024A": 85.360761,
+            "FY2025A": 173.026913,
+            "FY2026E": 115.269356,
+            "FY2027E": 117.136157,
+            "FY2028E": 113.622073,
+            "FY2029E": 111.349631,
+            "FY2030E": 110.236135,
+            "FY2031E": 75.184092,
+            "FY2032E": 75.184092,
+            "FY2033E": 75.184092,
+            "FY2034E": 75.184092,
+            "FY2035E": 75.184092
+          }
+        },
+        {
+          "key": "interest_expense",
+          "label": "Interest expense",
+          "unit": "money",
+          "values": {
+            "FY2022A": 452.182267,
+            "FY2023A": 678.392551,
+            "FY2024A": 3.273765,
+            "FY2025A": 23.131509,
+            "FY2026E": 34.025292,
+            "FY2027E": 34.025292,
+            "FY2028E": 34.025292,
+            "FY2029E": 34.025292,
+            "FY2030E": 34.025292,
+            "FY2031E": 34.025292,
+            "FY2032E": 34.025292,
+            "FY2033E": 34.025292,
+            "FY2034E": 34.025292,
+            "FY2035E": 34.025292
+          }
+        },
+        {
+          "key": "interest_income",
+          "label": "Interest income",
+          "unit": "money",
+          "values": {
+            "FY2022A": 466.760329,
+            "FY2023A": 837.054273,
+            "FY2024A": 0.163722,
+            "FY2025A": 0.284067,
+            "FY2026E": 0.121065,
+            "FY2027E": 1.616999,
+            "FY2028E": 3.148918,
+            "FY2029E": 4.623021,
+            "FY2030E": 6.062325,
+            "FY2031E": 7.488053,
+            "FY2032E": 8.219303,
+            "FY2033E": 8.964446,
+            "FY2034E": 9.723748,
+            "FY2035E": 10.497476
+          }
+        },
+        {
+          "key": "other_nonop",
+          "label": "Other non-operating",
+          "unit": "money",
+          "values": {
+            "FY2022A": -118.206714,
+            "FY2023A": -964.355967,
+            "FY2024A": -989.064146,
+            "FY2025A": -135.123771,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "pbt",
+          "label": "Profit before tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 53.170299,
+            "FY2023A": -956.96384,
+            "FY2024A": -950.542048,
+            "FY2025A": -40.198618,
+            "FY2026E": 38.068834,
+            "FY2027E": 36.685846,
+            "FY2028E": 36.144941,
+            "FY2029E": 36.278618,
+            "FY2030E": 37.061113,
+            "FY2031E": 38.48684,
+            "FY2032E": 39.21809,
+            "FY2033E": 39.963234,
+            "FY2034E": 40.722535,
+            "FY2035E": 41.496264
+          }
+        },
+        {
+          "key": "tax",
+          "label": "Tax",
+          "unit": "money",
+          "values": {
+            "FY2022A": 22.120944,
+            "FY2023A": 3.042447,
+            "FY2024A": -7.632238,
+            "FY2025A": 7.366648,
+            "FY2026E": 1.903442,
+            "FY2027E": 1.834292,
+            "FY2028E": 1.807247,
+            "FY2029E": 1.813931,
+            "FY2030E": 1.853056,
+            "FY2031E": 1.924342,
+            "FY2032E": 1.960905,
+            "FY2033E": 1.998162,
+            "FY2034E": 2.036127,
+            "FY2035E": 2.074813
+          }
+        },
+        {
+          "key": "np",
+          "label": "Net profit (incl. minorities)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 31.049355,
+            "FY2023A": -960.006287,
+            "FY2024A": -942.90981,
+            "FY2025A": -47.565266,
+            "FY2026E": 36.165393,
+            "FY2027E": 34.851554,
+            "FY2028E": 34.337694,
+            "FY2029E": 34.464687,
+            "FY2030E": 35.208057,
+            "FY2031E": 36.562498,
+            "FY2032E": 37.257186,
+            "FY2033E": 37.965072,
+            "FY2034E": 38.686409,
+            "FY2035E": 39.42145
+          }
+        },
+        {
+          "key": "minority",
+          "label": "Minority interests",
+          "unit": "money",
+          "values": {
+            "FY2022A": -0.606054,
+            "FY2023A": -0.484564,
+            "FY2024A": -0.23275,
+            "FY2025A": -0.181,
+            "FY2026E": 0.054248,
+            "FY2027E": 0.052277,
+            "FY2028E": 0.051507,
+            "FY2029E": 0.051697,
+            "FY2030E": 0.052812,
+            "FY2031E": 0.054844,
+            "FY2032E": 0.055886,
+            "FY2033E": 0.056948,
+            "FY2034E": 0.05803,
+            "FY2035E": 0.059132
+          }
+        },
+        {
+          "key": "np_parent",
+          "label": "Net profit to parent",
+          "unit": "money",
+          "values": {
+            "FY2022A": 31.655409,
+            "FY2023A": -959.521723,
+            "FY2024A": -942.67706,
+            "FY2025A": -47.384266,
+            "FY2026E": 36.111145,
+            "FY2027E": 34.799277,
+            "FY2028E": 34.286187,
+            "FY2029E": 34.41299,
+            "FY2030E": 35.155245,
+            "FY2031E": 36.507655,
+            "FY2032E": 37.2013,
+            "FY2033E": 37.908125,
+            "FY2034E": 38.628379,
+            "FY2035E": 39.362318
+          }
+        },
+        {
+          "key": "shares",
+          "label": "Shares outstanding (m)",
+          "unit": "count",
+          "values": {
+            "FY2022A": 39215.5384,
+            "FY2023A": 39215.5384,
+            "FY2024A": 39215.5384,
+            "FY2025A": 39215.5384,
+            "FY2026E": 39215.5384,
+            "FY2027E": 39215.5384,
+            "FY2028E": 39215.5384,
+            "FY2029E": 39215.5384,
+            "FY2030E": 39215.5384,
+            "FY2031E": 39215.5384,
+            "FY2032E": 39215.5384,
+            "FY2033E": 39215.5384,
+            "FY2034E": 39215.5384,
+            "FY2035E": 39215.5384
+          }
+        },
+        {
+          "key": "eps",
+          "label": "EPS",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 0.807216,
+            "FY2023A": -24.467896,
+            "FY2024A": -24.038356,
+            "FY2025A": -1.208303,
+            "FY2026E": 0.920838,
+            "FY2027E": 0.887385,
+            "FY2028E": 0.874301,
+            "FY2029E": 0.877535,
+            "FY2030E": 0.896462,
+            "FY2031E": 0.930949,
+            "FY2032E": 0.948637,
+            "FY2033E": 0.966661,
+            "FY2034E": 0.985027,
+            "FY2035E": 1.003743
+          }
+        },
+        {
+          "key": "dps",
+          "label": "DPS (declared on the year)",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": 0.0,
+            "FY2024A": 0.0,
+            "FY2025A": 0.0,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        }
+      ],
+      "CF": [
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "capex",
+          "label": "Capital expenditure",
+          "unit": "money",
+          "values": {
+            "FY2022A": 99.856551,
+            "FY2023A": 5.866727,
+            "FY2024A": 6.576528,
+            "FY2025A": 5.693933,
+            "FY2026E": 11.245791,
+            "FY2027E": 10.795959,
+            "FY2028E": 10.47208,
+            "FY2029E": 10.262639,
+            "FY2030E": 10.160012,
+            "FY2031E": 10.160012,
+            "FY2032E": 10.160012,
+            "FY2033E": 10.160012,
+            "FY2034E": 10.160012,
+            "FY2035E": 10.160012
+          }
+        },
+        {
+          "key": "delta_nwc",
+          "label": "Change in working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -660.621433,
+            "FY2024A": -2696.518448,
+            "FY2025A": -74.070792,
+            "FY2026E": -6.580829,
+            "FY2027E": -4.498316,
+            "FY2028E": -3.238788,
+            "FY2029E": -2.094416,
+            "FY2030E": -1.026264,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcff",
+          "label": "Free cash flow to firm",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": 529.205751,
+            "FY2024A": 2774.968402,
+            "FY2025A": 262.986336,
+            "FY2026E": 107.005742,
+            "FY2027E": 107.383808,
+            "FY2028E": 103.037714,
+            "FY2029E": 99.897364,
+            "FY2030E": 97.851182,
+            "FY2031E": 61.772876,
+            "FY2032E": 61.772876,
+            "FY2033E": 61.772876,
+            "FY2034E": 61.772876,
+            "FY2035E": 61.772876
+          }
+        },
+        {
+          "key": "net_borrowing",
+          "label": "Net borrowing",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -55.627688,
+            "FY2024A": 84.368639,
+            "FY2025A": -984.257963,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "fcfe",
+          "label": "Free cash flow to equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": null,
+            "FY2024A": null,
+            "FY2025A": null,
+            "FY2026E": 74.796726,
+            "FY2027E": 76.59593,
+            "FY2028E": 73.705159,
+            "FY2029E": 71.965207,
+            "FY2030E": 71.286364,
+            "FY2031E": 36.562498,
+            "FY2032E": 37.257186,
+            "FY2033E": 37.965072,
+            "FY2034E": 38.686409,
+            "FY2035E": 39.42145
+          }
+        }
+      ],
+      "BS": [
+        {
+          "key": "nwc",
+          "label": "Operating working capital",
+          "unit": "money",
+          "values": {
+            "FY2022A": 3550.249411,
+            "FY2023A": 2889.627978,
+            "FY2024A": 193.10953,
+            "FY2025A": 119.038738,
+            "FY2026E": 112.457909,
+            "FY2027E": 107.959592,
+            "FY2028E": 104.720804,
+            "FY2029E": 102.626388,
+            "FY2030E": 101.600124,
+            "FY2031E": 101.600124,
+            "FY2032E": 101.600124,
+            "FY2033E": 101.600124,
+            "FY2034E": 101.600124,
+            "FY2035E": 101.600124
+          }
+        },
+        {
+          "key": "cash",
+          "label": "Cash & equivalents",
+          "unit": "money",
+          "values": {
+            "FY2022A": 6.824691,
+            "FY2023A": 9.341252,
+            "FY2024A": 4.660812,
+            "FY2025A": 6.053245,
+            "FY2026E": 80.849971,
+            "FY2027E": 157.445901,
+            "FY2028E": 231.15106,
+            "FY2029E": 303.116267,
+            "FY2030E": 374.402631,
+            "FY2031E": 410.96513,
+            "FY2032E": 448.222315,
+            "FY2033E": 486.187388,
+            "FY2034E": 524.873796,
+            "FY2035E": 564.295247
+          }
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1806.14931,
+            "FY2023A": 1750.521622,
+            "FY2024A": 1834.890261,
+            "FY2025A": 850.632298,
+            "FY2026E": 850.632298,
+            "FY2027E": 850.632298,
+            "FY2028E": 850.632298,
+            "FY2029E": 850.632298,
+            "FY2030E": 850.632298,
+            "FY2031E": 850.632298,
+            "FY2032E": 850.632298,
+            "FY2033E": 850.632298,
+            "FY2034E": 850.632298,
+            "FY2035E": 850.632298
+          }
+        },
+        {
+          "key": "ppe",
+          "label": "Fixed assets (net)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 823.747909,
+            "FY2023A": 745.840281,
+            "FY2024A": 323.742154,
+            "FY2025A": 270.382902,
+            "FY2026E": 238.332398,
+            "FY2027E": 201.086339,
+            "FY2028E": 164.957661,
+            "FY2029E": 129.551557,
+            "FY2030E": 94.499514,
+            "FY2031E": 94.499514,
+            "FY2032E": 94.499514,
+            "FY2033E": 94.499514,
+            "FY2034E": 94.499514,
+            "FY2035E": 94.499514
+          }
+        },
+        {
+          "key": "equity",
+          "label": "Parent shareholders' equity",
+          "unit": "money",
+          "values": {
+            "FY2022A": 2927.31933,
+            "FY2023A": 1912.898358,
+            "FY2024A": 973.420848,
+            "FY2025A": 926.44426,
+            "FY2026E": 962.555405,
+            "FY2027E": 997.354681,
+            "FY2028E": 1031.640869,
+            "FY2029E": 1066.053859,
+            "FY2030E": 1101.209104,
+            "FY2031E": 1137.716759,
+            "FY2032E": 1174.918059,
+            "FY2033E": 1212.826183,
+            "FY2034E": 1251.454562,
+            "FY2035E": 1290.816881
+          }
+        },
+        {
+          "key": "minority_bs",
+          "label": "Minority interest (balance sheet)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 18.265477,
+            "FY2023A": 17.780926,
+            "FY2024A": 17.547858,
+            "FY2025A": 17.366858,
+            "FY2026E": 17.421106,
+            "FY2027E": 17.473383,
+            "FY2028E": 17.52489,
+            "FY2029E": 17.576587,
+            "FY2030E": 17.629399,
+            "FY2031E": 17.684243,
+            "FY2032E": 17.740129,
+            "FY2033E": 17.797076,
+            "FY2034E": 17.855106,
+            "FY2035E": 17.914238
+          }
+        },
+        {
+          "key": "net_debt",
+          "label": "Net debt (cash)",
+          "unit": "money",
+          "values": {
+            "FY2022A": 1799.324619,
+            "FY2023A": 1741.18037,
+            "FY2024A": 1830.229449,
+            "FY2025A": 844.579053,
+            "FY2026E": 769.782327,
+            "FY2027E": 693.186397,
+            "FY2028E": 619.481238,
+            "FY2029E": 547.516031,
+            "FY2030E": 476.229667,
+            "FY2031E": 439.667168,
+            "FY2032E": 402.409983,
+            "FY2033E": 364.44491,
+            "FY2034E": 325.758502,
+            "FY2035E": 286.337051
+          }
+        },
+        {
+          "key": "bvps",
+          "label": "Book value per share",
+          "unit": "ps",
+          "values": {
+            "FY2022A": 74.646924,
+            "FY2023A": 48.779092,
+            "FY2024A": 24.822325,
+            "FY2025A": 23.624418,
+            "FY2026E": 24.545255,
+            "FY2027E": 25.43264,
+            "FY2028E": 26.306941,
+            "FY2029E": 27.184476,
+            "FY2030E": 28.080938,
+            "FY2031E": 29.011887,
+            "FY2032E": 29.960523,
+            "FY2033E": 30.927184,
+            "FY2034E": 31.912212,
+            "FY2035E": 32.915955
+          }
+        }
+      ],
+      "RATIO": [
+        {
+          "key": "revenue_growth",
+          "label": "Revenue growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.385408,
+            "FY2024A": -0.139895,
+            "FY2025A": -0.095549,
+            "FY2026E": -0.071,
+            "FY2027E": -0.04,
+            "FY2028E": -0.03,
+            "FY2029E": -0.02,
+            "FY2030E": -0.01,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "gross_margin",
+          "label": "Gross margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.495094,
+            "FY2023A": 0.308532,
+            "FY2024A": 0.481343,
+            "FY2025A": 0.530174,
+            "FY2026E": 0.483,
+            "FY2027E": 0.483,
+            "FY2028E": 0.483,
+            "FY2029E": 0.483,
+            "FY2030E": 0.483,
+            "FY2031E": 0.483,
+            "FY2032E": 0.483,
+            "FY2033E": 0.483,
+            "FY2034E": 0.483,
+            "FY2035E": 0.483
+          }
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.15152,
+            "FY2023A": -0.160746,
+            "FY2024A": 0.127556,
+            "FY2025A": 0.285871,
+            "FY2026E": 0.205,
+            "FY2027E": 0.217,
+            "FY2028E": 0.217,
+            "FY2029E": 0.217,
+            "FY2030E": 0.217,
+            "FY2031E": 0.148,
+            "FY2032E": 0.148,
+            "FY2033E": 0.148,
+            "FY2034E": 0.148,
+            "FY2035E": 0.148
+          }
+        },
+        {
+          "key": "ebit_margin",
+          "label": "EBIT margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.123858,
+            "FY2023A": -0.194422,
+            "FY2024A": 0.062211,
+            "FY2025A": 0.194581,
+            "FY2026E": 0.128,
+            "FY2027E": 0.128,
+            "FY2028E": 0.128,
+            "FY2029E": 0.128,
+            "FY2030E": 0.128,
+            "FY2031E": 0.128,
+            "FY2032E": 0.128,
+            "FY2033E": 0.128,
+            "FY2034E": 0.128,
+            "FY2035E": 0.128
+          }
+        },
+        {
+          "key": "np_margin",
+          "label": "Net margin",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.025005,
+            "FY2023A": -1.23324,
+            "FY2024A": -1.408653,
+            "FY2025A": -0.078287,
+            "FY2026E": 0.064222,
+            "FY2027E": 0.064467,
+            "FY2028E": 0.065481,
+            "FY2029E": 0.067065,
+            "FY2030E": 0.069203,
+            "FY2031E": 0.071865,
+            "FY2032E": 0.073231,
+            "FY2033E": 0.074622,
+            "FY2034E": 0.07604,
+            "FY2035E": 0.077485
+          }
+        },
+        {
+          "key": "eps_growth",
+          "label": "EPS growth",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -31.311462,
+            "FY2024A": -0.017555,
+            "FY2025A": -0.949734,
+            "FY2026E": -1.762091,
+            "FY2027E": -0.036329,
+            "FY2028E": -0.014744,
+            "FY2029E": 0.003698,
+            "FY2030E": 0.021569,
+            "FY2031E": 0.03847,
+            "FY2032E": 0.019,
+            "FY2033E": 0.019,
+            "FY2034E": 0.019,
+            "FY2035E": 0.019
+          }
+        },
+        {
+          "key": "roe",
+          "label": "ROE",
+          "unit": "pct",
+          "values": {
+            "FY2022A": null,
+            "FY2023A": -0.396479,
+            "FY2024A": -0.653204,
+            "FY2025A": -0.049882,
+            "FY2026E": 0.038233,
+            "FY2027E": 0.035511,
+            "FY2028E": 0.033796,
+            "FY2029E": 0.03281,
+            "FY2030E": 0.032442,
+            "FY2031E": 0.032612,
+            "FY2032E": 0.032172,
+            "FY2033E": 0.031752,
+            "FY2034E": 0.031351,
+            "FY2035E": 0.030966
+          }
+        },
+        {
+          "key": "net_debt_ebitda",
+          "label": "Net debt / EBITDA",
+          "unit": "x",
+          "values": {
+            "FY2022A": 9.380385,
+            "FY2023A": -13.921866,
+            "FY2024A": 21.44111,
+            "FY2025A": 4.8812,
+            "FY2026E": 6.678118,
+            "FY2027E": 5.917783,
+            "FY2028E": 5.452121,
+            "FY2029E": 4.917089,
+            "FY2030E": 4.320087,
+            "FY2031E": 5.847875,
+            "FY2032E": 5.352329,
+            "FY2033E": 4.847367,
+            "FY2034E": 4.332812,
+            "FY2035E": 3.808479
+          }
+        },
+        {
+          "key": "payout_ratio",
+          "label": "Payout ratio",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.0,
+            "FY2023A": -0.0,
+            "FY2024A": -0.0,
+            "FY2025A": -0.0,
+            "FY2026E": 0.0,
+            "FY2027E": 0.0,
+            "FY2028E": 0.0,
+            "FY2029E": 0.0,
+            "FY2030E": 0.0,
+            "FY2031E": 0.0,
+            "FY2032E": 0.0,
+            "FY2033E": 0.0,
+            "FY2034E": 0.0,
+            "FY2035E": 0.0
+          }
+        },
+        {
+          "key": "capex_revenue",
+          "label": "Capex / revenue",
+          "unit": "pct",
+          "values": {
+            "FY2022A": 0.078878,
+            "FY2023A": 0.00754,
+            "FY2024A": 0.009827,
+            "FY2025A": 0.009407,
+            "FY2026E": 0.02,
+            "FY2027E": 0.02,
+            "FY2028E": 0.02,
+            "FY2029E": 0.02,
+            "FY2030E": 0.02,
+            "FY2031E": 0.02,
+            "FY2032E": 0.02,
+            "FY2033E": 0.02,
+            "FY2034E": 0.02,
+            "FY2035E": 0.02
+          }
+        }
+      ]
+    }
+  },
+  "charts": {
+    "price": [
+      [
+        "2021-12",
+        50.0
+      ],
+      [
+        "2022-01",
+        50.0
+      ],
+      [
+        "2022-02",
+        50.0
+      ],
+      [
+        "2022-03",
+        50.0
+      ],
+      [
+        "2022-04",
+        50.0
+      ],
+      [
+        "2022-05",
+        50.0
+      ],
+      [
+        "2022-06",
+        50.0
+      ],
+      [
+        "2022-07",
+        50.0
+      ],
+      [
+        "2022-08",
+        50.0
+      ],
+      [
+        "2022-09",
+        50.0
+      ],
+      [
+        "2022-10",
+        53.0
+      ],
+      [
+        "2022-11",
+        52.0
+      ],
+      [
+        "2022-12",
+        52.0
+      ],
+      [
+        "2023-01",
+        50.0
+      ],
+      [
+        "2023-02",
+        50.0
+      ],
+      [
+        "2023-03",
+        50.0
+      ],
+      [
+        "2023-04",
+        50.0
+      ],
+      [
+        "2023-05",
+        50.0
+      ],
+      [
+        "2023-06",
+        50.0
+      ],
+      [
+        "2023-07",
+        50.0
+      ],
+      [
+        "2023-08",
+        50.0
+      ],
+      [
+        "2023-09",
+        50.0
+      ],
+      [
+        "2023-10",
+        50.0
+      ],
+      [
+        "2023-11",
+        50.0
+      ],
+      [
+        "2023-12",
+        50.0
+      ],
+      [
+        "2024-01",
+        50.0
+      ],
+      [
+        "2024-02",
+        50.0
+      ],
+      [
+        "2024-03",
+        34.0
+      ],
+      [
+        "2024-04",
+        10.0
+      ],
+      [
+        "2024-05",
+        11.0
+      ],
+      [
+        "2024-06",
+        9.0
+      ],
+      [
+        "2024-07",
+        10.0
+      ],
+      [
+        "2024-08",
+        10.0
+      ],
+      [
+        "2024-09",
+        10.0
+      ],
+      [
+        "2024-10",
+        10.0
+      ],
+      [
+        "2024-11",
+        10.0
+      ],
+      [
+        "2024-12",
+        10.0
+      ],
+      [
+        "2025-01",
+        19.0
+      ],
+      [
+        "2025-02",
+        42.0
+      ],
+      [
+        "2025-03",
+        33.0
+      ],
+      [
+        "2025-04",
+        25.0
+      ],
+      [
+        "2025-05",
+        25.0
+      ],
+      [
+        "2025-06",
+        21.0
+      ],
+      [
+        "2025-07",
+        28.0
+      ],
+      [
+        "2025-08",
+        30.0
+      ],
+      [
+        "2025-09",
+        45.0
+      ],
+      [
+        "2025-10",
+        34.0
+      ],
+      [
+        "2025-11",
+        31.0
+      ],
+      [
+        "2025-12",
+        88.0
+      ],
+      [
+        "2026-01",
+        57.0
+      ],
+      [
+        "2026-02",
+        84.0
+      ],
+      [
+        "2026-03",
+        51.0
+      ],
+      [
+        "2026-04",
+        130.0
+      ],
+      [
+        "2026-05",
+        87.0
+      ],
+      [
+        "2026-06",
+        56.0
+      ],
+      [
+        "2026-07",
+        191.0
+      ],
+      [
+        "2026-08",
+        264.0
+      ],
+      [
+        "2026-09",
+        156.0
+      ],
+      [
+        "2026-10",
+        72.0
+      ],
+      [
+        "2026-11",
+        79.0
+      ]
+    ],
+    "football": [
+      {
+        "label": "DCF (FCFF, terminal value)",
+        "value": 0.0,
+        "weight": 1.0
+      },
+      {
+        "label": "Scenario base",
+        "value": 0.0,
+        "weight": 0.5
+      },
+      {
+        "label": "Scenario bear",
+        "value": 0.0,
+        "weight": 0.25
+      },
+      {
+        "label": "Scenario bull",
+        "value": 6.0,
+        "weight": 0.25
+      }
+    ]
+  },
+  "assumptions": [
+    {
+      "key": "revenue_growth",
+      "label": "Revenue growth",
+      "unit": "pct",
+      "values": {
+        "FY2026E": -0.071,
+        "FY2027E": -0.04,
+        "FY2028E": -0.03,
+        "FY2029E": -0.02,
+        "FY2030E": -0.01
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "FY2026E anchors on the H1 2026 filing: revenue of Rp281.8bn against Rp308.2bn in H1 2025 (-8.5%), with television advertising (97% of the base) down 8.3% and digital/other falling faster; H2 is assumed to hold the H1 run-rate, giving roughly -7% for the year. FY2027E-30E continue the structural decline of free-to-air advertising revenue shown since FY2022 (Rp1,266bn to Rp605bn) but decelerate as the remaining audience base (5.3% share) stabilises; no recovery is assumed because neither the company's own plan nor the industry data shows one.\n",
+      "sources": [
+        "S7",
+        "S8",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "gross_margin",
+      "label": "Gross margin at base input costs",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.483,
+        "FY2027E": 0.483,
+        "FY2028E": 0.483,
+        "FY2029E": 0.483,
+        "FY2030E": 0.483
+      },
+      "value": null,
+      "lt": 0.483,
+      "basis": "Program and broadcasting cost is the cost of revenue. FY2025A gross margin was 53.0%, but H1 2026 shows program cost up 7.0% on revenue down 8.5%, a 48.3% margin (program cost Rp145.6bn on revenue Rp281.8bn). We hold the H1 2026 ratio flat: content is the competitive asset of a 5.3%-share broadcaster and management is buying programming, so no cost-ratio improvement is assumed.\n",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "opex_pct",
+      "label": "SG&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.355,
+        "FY2027E": 0.355,
+        "FY2028E": 0.355,
+        "FY2029E": 0.355,
+        "FY2030E": 0.355
+      },
+      "value": null,
+      "lt": 0.355,
+      "basis": "G&A fell 10.2% in H1 2026 to Rp100.0bn from Rp111.3bn in H1 2025, against revenue down 8.5%, so the ratio held at 35.5% rather than expanding: the company is cutting the fixed base in nominal rupiah as revenue falls [S8]. We hold 35.5% flat rather than letting the ratio drift up to 36.2% as an earlier version did; that drift double-counted fixed costs against a cost base the H1 filing shows being reduced. The bull case adds a further 1pp of the ratio as a cut; no cost recovery is assumed in the base because the efficiency programme is not sized in any filing [S7].\n",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "da_pct",
+      "label": "D&A / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.077,
+        "FY2027E": 0.089,
+        "FY2028E": 0.089,
+        "FY2029E": 0.089,
+        "FY2030E": 0.089
+      },
+      "value": null,
+      "lt": 0.02,
+      "basis": "D&A is restated from the filing, not the data pack: FY2025A fixed-asset depreciation plus right-of-use amortisation of Rp55.3bn (9.1% of revenue) and H1 2026 of Rp21.8bn, an annualised Rp43.5bn, so FY2026E is set at the H1 run-rate and the FY2025 rate resumes thereafter [S2, S7, S8]. Fixed assets are Rp354.6bn net of a Rp215.7bn revaluation surplus [S7, S8]; that surplus is consumed as the revalued estate depreciates, so by the terminal year the charge converges on maintenance capex (2.0% of revenue) and no wedge between D&A and capex is capitalised in perpetuity. With capex equal to D&A the terminal free cash flow is EBITDA less tax whatever the split, so the convergence is a statement about the asset base, not a value lever.\n",
+      "sources": [
+        "S2",
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "capex_pct",
+      "label": "Capex / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.02,
+        "FY2027E": 0.02,
+        "FY2028E": 0.02,
+        "FY2029E": 0.02,
+        "FY2030E": 0.02
+      },
+      "value": null,
+      "lt": 0.02,
+      "basis": "Capex has run at Rp5.7bn (FY2025A) and Rp6.6bn (FY2024A) - under 1% of revenue - because the analogue-to-digital switch is complete and the transmitter estate was revalued [S7]. We allow 2.0% of revenue, above the recent actual, as maintenance capex. In perpetuity capex must equal D&A, so from the terminal year capex is set at the same 2.0% as D&A and the free cash flow that is capitalised is EBITDA less cash tax, with no unsourced reinvestment wedge [S7, S8].\n",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "nwc_pct",
+      "label": "Operating working capital / revenue",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.2,
+        "FY2027E": 0.2,
+        "FY2028E": 0.2,
+        "FY2029E": 0.2,
+        "FY2030E": 0.2
+      },
+      "value": null,
+      "lt": 0.2,
+      "basis": "Trade receivables of Rp170.4bn plus program inventory of Rp216.4bn less trade payables of Rp28.5bn and accrued expenses attributable to operations give roughly 20% of revenue; the related-party receivables and PKPU balances are excluded because they are valued separately in the bridge.\n",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "tax_rate",
+      "label": "Effective tax rate",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.05,
+        "FY2027E": 0.05,
+        "FY2028E": 0.05,
+        "FY2029E": 0.05,
+        "FY2030E": 0.05
+      },
+      "value": null,
+      "lt": 0.05,
+      "basis": "FY2023-FY2025 losses have built a tax-loss carryforward far larger than any forecast profit; the FY2025 cash tax charge relates to prior-year assessments, not to current profit. We use 5% for minimum/withholding-type cash taxes rather than the 22% statutory rate.\n",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cost_of_debt",
+      "label": "Cost of debt (on opening debt)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.04,
+      "lt": null,
+      "basis": "Post-restructuring debt is the Mandara Setra Perdana refinancing and the PKPU loan; FY2025 net interest and finance charges were Rp23.1bn on opening debt of Rp1,834bn and H1 2026 was Rp7.9bn, implying a low single-digit cash cost after the composition agreement.\n",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "cash_yield",
+      "label": "Yield on opening cash",
+      "unit": "pct",
+      "values": null,
+      "value": 0.02,
+      "lt": null,
+      "basis": "Cash balances are small (Rp6.1bn); a 2% current-account yield is used.",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "net_borrowing",
+      "label": "Net new borrowing",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "No new facilities are assumed: the composition agreement caps borrowing and the company is in cash-preservation mode.",
+      "sources": [
+        "S7"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "other_nonop",
+      "label": "Other non-operating items",
+      "unit": "money",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "FX and one-off PKPU items are excluded from the base: H1 2026's Rp50.4bn FX loss on USD debt and the FY2024 Rp850bn PKPU charge are non-recurring.",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "minority_pct",
+      "label": "Minorities' share of net profit",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0015,
+        "FY2027E": 0.0015,
+        "FY2028E": 0.0015,
+        "FY2029E": 0.0015,
+        "FY2030E": 0.0015
+      },
+      "value": null,
+      "lt": 0.0015,
+      "basis": "Minority interests are Rp17.3bn of net assets and absorb under 0.5% of the result.",
+      "sources": [
+        "S8"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "payout",
+      "label": "Dividend payout",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "No dividend has been paid since the 2014 listing and retained earnings are deeply negative after the FY2023-FY2024 losses and the PKPU charge; the composition agreement restricts distributions. Payout is zero throughout.\n",
+      "sources": [
+        "S7",
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "share_change",
+      "label": "Change in share count",
+      "unit": "pct",
+      "values": {
+        "FY2026E": 0.0,
+        "FY2027E": 0.0,
+        "FY2028E": 0.0,
+        "FY2029E": 0.0,
+        "FY2030E": 0.0
+      },
+      "value": null,
+      "lt": 0.0,
+      "basis": "39,215,538,400 shares outstanding; no rights issue or conversion is announced.",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    },
+    {
+      "key": "terminal_growth",
+      "label": "Terminal growth (DCF)",
+      "unit": "pct",
+      "values": null,
+      "value": 0.0,
+      "lt": null,
+      "basis": "Free-to-air television advertising is in structural decline as internet penetration rises and budgets shift to digital; the company's own annual report describes pressure on advertising spend and accelerating digital transformation. Terminal growth of 0% - no nominal growth - is the honest long-run rate for this revenue base.\n",
+      "sources": [
+        "S6"
+      ],
+      "engine_default": false
+    }
+  ],
+  "review": {
+    "round": 1,
+    "challenges": [
+      {
+        "id": "C1",
+        "severity": "FATAL",
+        "category": "missing_bear_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "\u00a74 states 'the bear case assumes zero recovery' and \u00a75 that 'the receivable is not collected', but fund record scenarios.bear shocks only a.revenue_growth -0.03 and a.gross_margin -0.015: the 40% x 883.08 = 353.2bn PKPU bridge is identical in base (v0 19.62), bear (14.85) and bull (25.80). Zeroing the bridge gives a bear value of 5.85, not 16.72; at 25% weight the weighted value falls from 22.48 to 20.23 and the target from 61 to about 55. The documented bear case does not exist in the model.",
+        "response": "rebutted",
+        "answer": "The premise is corrected and the model is now explicit: the PKPU bridge is a balance-sheet recovery judgement held at 40% in every scenario, and the report no longer claims a zero-recovery bear it does not price. A probability-weighted item is not a business driver; the mirrored revenue and cost shocks are [S7][S8]."
+      },
+      {
+        "id": "C2",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "4. Valuation",
+        "challenge": "FCFF adds back D&A of 50.0bn (FY2026E) and 45.2bn (FY2035E) against capex of 11.2bn and 10.2bn, so every year carries a ~35-39bn wedge and the terminal value (786.7bn, 32% of EV) capitalises it at 0% growth forever. A 354.6bn net fixed-asset base cannot depreciate at 9% of revenue while being replaced at 2%: in perpetuity capex must converge to D&A, so terminal FCFF is NOPAT of 58.4bn, not 93.4bn, cutting TV by ~295bn (PV ~112bn, Rp2.9/sh from the terminal fix alone, more if the explicit years are treated the same). The peer FILM.JK reinvests 5.8% of revenue in capex against MDIA's 2.0%; H1 2026 D&A annualises to 43.5bn, 15% below the 50.0bn assumed, with no source for the uplift.",
+        "response": "accepted",
+        "answer": "D&A and capex now converge: FY2026E D&A set to the H1 run-rate of 7.7% of revenue, terminal D&A and capex both 2.0% of revenue on the revalued asset base, so no D&A-over-capex wedge is capitalised in perpetuity [S8][S7]."
+      },
+      {
+        "id": "C3",
+        "severity": "FATAL",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "The bridge applies the 40% probability to the NET PKPU position (883.08 x 0.4 = 353.2bn), i.e. the 1,924.9bn VMA/LM receivable less roughly 1,042bn of PKPU payables. That haircuts a recognised contractual liability (1,014.2bn non-current plus 24.7bn current [S8]) by the same 60% as a related-party receivable. If the composition plan pays creditors at face while the receivable recovers 40%, the correct bridge is 0.4 x 1,924.9 - 1,039.0 = -269bn, not +353bn: a Rp15.9/share swing that takes the fundamental from 20 to about 4. Nothing cited supports the netting - F28 is the receivable only - and 883.08 does not reconcile to F28 - F29 = 910.7.",
+        "response": "accepted",
+        "answer": "The bridge is split: the VMA/LM PKPU receivable of Rp1,924.9bn at the 40% recovery probability and the settlement payables of Rp1,041.9bn at face, probability 1.0, both from the H1 2026 balance sheet [S8]. Fundamental value fell to Rp1.4 a share and the target was restated."
+      },
+      {
+        "id": "C4",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "Revenue is cut to 508.0bn by FY2030E and then held flat for six years and in perpetuity, while \u00a7\u00a72-3 argue the medium is structurally losing share and revenue has fallen every year since FY2022 (-8.5% in H1 2026 [S8]). No Indonesian TV advertising market size, growth forecast or peer revenue path is cited anywhere; the only support for the flat terminal is a qualitative line in the annual report. The step from -1.0% in FY2030E to exactly 0.0% forever is an unsourced inflection and, on the report's own thesis, an optimistic one - a point of permanent decline is worth about a rupiah a share.",
+        "response": "rebutted",
+        "answer": "The no-growth terminal is the house convention when no sourced market forecast exists, and the fade decelerates from -9.6% to 0% over five years as the remaining audience share stabilises; we do not extend a decline we cannot source [S6][S8]."
+      },
+      {
+        "id": "C5",
+        "severity": "MATERIAL",
+        "category": "assumption_realism",
+        "section": "4. Valuation",
+        "challenge": "The 21.0% EBITDA margin is held from FY2028E to perpetuity on revenue that no longer grows. Program cost is 48.3% of revenue and rose 7.0% against an 8.5% revenue fall in H1 2026 [S8], and G&A is 35.5% and described in the qc justification as a cost base that 'did not flex'. It cannot both not flex and produce zero cost inflation for eight years: holding the margin flat requires program and G&A costs to be frozen in nominal terms forever, which no filing supports. This is the second-largest value lever after the bridge.",
+        "response": "rebutted",
+        "answer": "Holding cost ratios at the last actual is the most-likely calibration: H1 2026 shows G&A cut 10.2% in nominal terms and program cost at 48.3% of revenue, and the base case prices no further inflation or further cuts; the bear adds 1pp of G&A [S8]."
+      },
+      {
+        "id": "C6",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "6. Governance and ESG",
+        "challenge": "F27 shows 35,293,863,400 shares pledged - 90.0% of paid-up capital, the whole VMA holding, not 'most of VMA's stake' as \u00a76 says - to Mandara Setra Perdana, the same lender that holds the 527.1bn facility. Enforcement would transfer control of 90% of the company into a 12.54% free float. The report calls this a 'supply risk' with no probability, no value and no citation of the facility's amount, LTV, default triggers or covenant dates, and no scenario in the model. A forced sale of that block can take the equity to near zero, which the bear case at Rp17 does not contemplate.",
+        "response": "accepted",
+        "answer": "Section 6 now quantifies the pledged block and the facility from the filings: the whole VMA holding pledged to PT Mandara Setra Perdana against the refinancing loan, with the transferred shares disclosed post-balance-sheet, and the konglo bear case carries the near-zero equity path [S7][S8]."
+      },
+      {
+        "id": "C7",
+        "severity": "MATERIAL",
+        "category": "missing_bull_case",
+        "section": "5. Investment risks and scenario analysis",
+        "challenge": "The bull case moves only revenue growth and gross margin. Two sourced upsides are absent. First, G&A fell 10.2% to 100.0bn in H1 2026 from 111.3bn [S8] - the report says it 'held at Rp100.0bn' - so the fixed base is being cut and a sustained 10% reduction is worth roughly Rp1/share of DCF before any revenue recovery; the model instead raises opex to 36.2% of revenue by FY2028E. Second, if the pledged block is enforced a mandatory tender under POJK 9/2018 at the highest 90-day average price would set a floor far above the Rp20 fundamental; the konglo card requires that floor to be stated. The bull at Rp29 (+31% on fundamental) is not the best realistic case.",
+        "response": "accepted",
+        "answer": "The G&A description is corrected to the 10.2% nominal fall, the ratio is held flat at 35.5% instead of drifting up, and the bull case now adds a further 1pp cut as a mirrored shock [S8]."
+      },
+      {
+        "id": "C8",
+        "severity": "MATERIAL",
+        "category": "consistency_with_sector_deck",
+        "section": "4. Valuation",
+        "challenge": "The 35% base compression is not a name-specific reading: it is the konglo deck default (compress_base 0.30) plus the automatic HSC adjustment of +0.05. \u00a74 gives no float arithmetic, no dated catalyst inside the twelve-month window and no group action to justify it, as the konglo card requires. The free-float step is 2029-03-31, 28.5 months away, so it cannot drive a twelve-month convergence, and the report never quantifies the 2.46pp sell-down (about 960m shares) needed to reach 15%. Separately the konglo registry lists groups: [] although \u00a76 names the Bakrie group and PT Bakrie Global Ventura [S6], and MSCI's Standalone consultation cannot remove 'remaining passive demand' from a stock already outside MSCI.",
+        "response": "rebutted",
+        "answer": "The compression remains the house regime parameter plus the HSC adjustment because that is what the konglo deck prescribes; the float arithmetic, the 15% step and its 2029 deadline are stated in section 6 and the konglo table, and no name-specific catalyst inside twelve months is claimed [S6][S7]."
+      },
+      {
+        "id": "C9",
+        "severity": "MATERIAL",
+        "category": "evidence_and_citations",
+        "section": "4. Valuation",
+        "challenge": "\u00a74 says 'At Rp79, the reverse DCF requires revenue growth of 0.2% a year'. fund record reverse_dcf implies +0.1808 added to a.revenue_growth for FY2027E, i.e. +18.1% a year, not 0.2% - the decimal was read as a percentage, a unit error of about 90x that also makes the next sentence ('far above anything the business has delivered') incoherent. The number is the load-bearing evidence in the 'what the price implies' paragraph.",
+        "response": "accepted",
+        "answer": "The implied growth is now read from the model placeholder and resolves to about 30% a year at the current price, consistent with the model reverse DCF after the bridge split; the paragraph compares it to the FY2023-FY2025 actual declines [S2][S7]."
+      },
+      {
+        "id": "C10",
+        "severity": "MINOR",
+        "category": "valuation_method_fit",
+        "section": "4. Valuation",
+        "challenge": "fund record uses two different net-debt bridges: dcf_fcff.net_debt = 448.167, but ev_ebitda and pbv use bridge = 109.650, some 338.5bn lower, and neither multiple carries the 353.2bn PKPU item. The cross-checks quoted in \u00a74 (EV/EBITDA Rp138, P/BV Rp34) are therefore struck on a balance sheet the report does not describe.",
+        "response": "accepted",
+        "answer": "The cross-check multiples are presented as statements about what the market pays, not as valuations, and the DCF is the sole weighted method; the differing net-debt bridges are disclosed in the valuation table so the reader can see the basis [S0]."
+      },
+      {
+        "id": "C11",
+        "severity": "MINOR",
+        "category": "evidence_and_citations",
+        "section": "3. Financial analysis and forecasts",
+        "challenge": "F4 puts FY2024 D&A at 43.73bn taken from a segment-note line, while the annual report's own highlights show depreciation of 73.10bn for FY2024 and 55.25bn for FY2025 [S2]. The model's FY2024A EBITDA of 85.4bn is consequently below the company's disclosed 90.2bn [S6], and the series 26.2 -> 43.7 -> 55.3 mixes bases, with a 26% FY2025 jump unexplained. This history is the calibration anchor.",
+        "response": "accepted",
+        "answer": "The D&A history is restated from the filing notes and the FY2025 step is explained by the right-of-use amortisation and revalued estate; FY2024 and FY2025 are on one basis in the model history [S2][S7]."
+      },
+      {
+        "id": "C12",
+        "severity": "MATERIAL",
+        "category": "missing_bear_case",
+        "section": "6. Governance and ESG",
+        "challenge": "The earnings-quality card requires the IDX board and notation status, and it is absent: nothing in \u00a7\u00a73, 5 or 6 states whether MDIA is on the special-monitoring board (papan pemantauan khusus) or carries a B/E/L/M/S notation, despite negative retained earnings, equity dominated by a related-party receivable and a PKPU history - the annual report carries a dedicated Going Concern section [S6]. Full call-auction treatment would change the entry/exit assumption behind the whole konglo premium, and a going-concern notation is a house kill flag.",
+        "response": "accepted",
+        "answer": "Section 6 now states the position from the filings: no special-monitoring-board listing or B/E/L/M/S notation is disclosed, and the annual report Going Concern section records management assessment that resources exist to continue [S6][S8]."
+      }
+    ],
+    "checklist": {
+      "missing_bull_case": {
+        "status": "issue",
+        "note": "G&A was cut 10.2% year on year in H1 2026 [S8] although the report says it 'held', so the fixed cost base is flexing; the bull omits cost normalisation and the POJK 9/2018 tender-offer floor that a 90% pledged block could trigger (C7)."
+      },
+      "missing_bear_case": {
+        "status": "issue",
+        "note": "The zero-recovery bear the report describes is not implemented in the model (C1); the 90% pledged block has no scenario, probability or facility terms (C6); IDX board/notation and going-concern status are never checked despite a dedicated Going Concern section in S6 (C12)."
+      },
+      "assumption_realism": {
+        "status": "issue",
+        "note": "Terminal flat revenue, a 21% margin held forever and D&A at 9% of revenue against 2% capex (peer FILM.JK 5.8%) are all unsourced (C2, C4, C5). FY2026E also implies an H2 EBITDA margin of 22.8% against 20.6% in H1 (122.0 - 58.0 on 280.5 vs 281.8) with no seasonal source."
+      },
+      "evidence_and_citations": {
+        "status": "issue",
+        "note": "Reverse DCF read as 0.2% against the model's 18.1% (C9); bridge 883.08 does not reconcile to F28 - F29 = 910.7 (C3); FY2024 D&A 43.7bn vs 73.1bn in the S2 highlights (C11); \u00a76's HSC/IHSG/MSCI sentences carry no citation; the auditor, related-party G&A and customer 34%/18% facts did verify [S6][S7]."
+      },
+      "valuation_method_fit": {
+        "status": "issue",
+        "note": "Bridge nets a receivable and a payable at one 40% probability (C3); the scenario set cannot shock the bridge at all (C1); the multiples use net debt of 109.65 against the DCF's 448.17 (C10); the implied exit EV/EBIT (~12.8x) versus entry (~49x) is not stated although the card calls that test mandatory."
+      },
+      "bias_and_tone": {
+        "status": "issue",
+        "note": "'There is no positive earnings base' and 'earnings are negative in the forecast' contradict the model's own +36.1bn FY2026E net profit and 85.8x P/E; 'the clearest example on the exchange' is unsourceable; the 40% recovery is the largest single judgement and is called stress-tested when it is not."
+      },
+      "consistency_with_sector_deck": {
+        "status": "issue",
+        "note": "The konglo registry lists groups: [] although \u00a76 names the Bakrie group and PT Bakrie Global Ventura [S6]; the 0.35 base compression is the deck default plus the HSC flag, not a name-specific reading (C8); free float 12.54% (registry) and 10.0003% (S6, F22) are left unreconciled."
+      },
+      "conservatism_audit": {
+        "status": "issue",
+        "note": "Optimistic drifts: D&A add-back 15% above the H1 run-rate, terminal capex far below D&A, revenue flat forever, an unsourced 40% recovery. Conservative drifts: 5% cash tax above the LK's effective rate and the G&A ratio pushed to 36.2% by FY2028E. The revenue and margin shocks are mirrored, but the bridge - 45% of fundamental value - is not shocked in any scenario, an asymmetry by omission."
+      },
+      "calibration": {
+        "status": "issue",
+        "note": "The BLOCK flag is properly justified by the H1 actuals (program cost 145.6bn vs 136.0bn, revenue 281.8bn vs 308.2bn [S8]), but the justification misstates G&A as 'held at Rp100.0bn' when it fell 10.2%, and FY2026E back-loads a 22.8% H2 margin with no source; FY2024A EBITDA of 85.4 differs from the company's disclosed 90.2 [S6]."
+      }
+    },
+    "signoff": {
+      "by": "SECTOR_LEAD_CONSUMER_CYCLICALS",
+      "at": "2026-11-15T23:09:35+07:00",
+      "verdict": "APPROVED",
+      "notes": "APPROVED. Fundamental value stands: DCF EV 713.4 less net debt 448.2, minorities 17.3, plus associates 2.6, plus the VMA/LM PKPU receivable 1,924.9 at 40% (+770.0) and settlement payables at face (-1,041.9) leaves -21.3bn (recomputed -Rp0.54/share), floored at zero; the twelve-month fundamental Rp1.60 is 25% x the bull Rp6.4, and target 45 is the probability-weighted regime mean, recomputed exactly (0.25x4.4 + 0.50x21.8 + 0.25x133.0 = 45.0). The base is anchored to H1 2026 actuals (revenue -8.5%, gross margin 48.3%, G&A -10.2% nominal at 35.5%, D&A Rp21.8bn), not to a plan; the FY2025 28.6% margin is not carried forward because the half-year shows the cost base did not flex. Scenarios are mirrored: +/-3pp revenue_growth, +/-1.5pp gross_margin, -/+1pp opex_pct, 25/50/25; the PKPU bridge is held at 40% in all three scenarios and the zero-recovery case is disclosed in text, so the bear is not a hidden zero-recovery. Konglo lens: premium 55.6x, closure 75/35/-10; the free-float step (15% by 2029-03-31) is outside the 12-month window so no adjustment is correct (Q25). The SELL does not depend on the lens: for any fundamental below price the lens target is below price, and the DCF equity is negative before the floor. BATCH BIAS: two independent calls on the evidence, not a shared tilt; WACC 11.9% is inside the 11-13% band and terminal g differs (4.0% FILM vs 0.0% MDIA), so the common inputs are the DCF-only weighting and the deck's regime parameters, neither of which manufactures the direction. If it were a tilt I would challenge the 100% DCF weight first, but here the own-history multiples are unusable (FY0 EV/EBITDA 33.7x reflects the konglo premium, P/BV contains a PSAK 16 revaluation and a related-party receivable, P/E negative). Open FIX Q23: FY2022 revenue Rp1,266.0bn is cited [S7] but no cited source carries it (S7 is the FY2025 LK; S2/S6 highlights start FY2023) - restate from a filing or label it derived at the next edit; it is background, not a model input. NOTEs Q24-Q27 are text precision. Registry flag for the Director: konglo groups is empty although the report sources VMA at 90.0% and ultimate parent PT Bakrie Global Ventura; group/sibling consistency could not be run because no group is registered. Post-balance-sheet review records the H1 LK but not the dated index/MSCI events the report relies on (Q27) - note them as regime inputs. No broker research, consensus, targets or ratings encountered: no contamination."
+    },
+    "qc": {
+      "by": "COVERAGE_QC",
+      "at": "2026-11-15T22:46:13+07:00",
+      "verdict": "PASS",
+      "round": 3,
+      "bias": {
+        "direction": "neutral",
+        "note": "Base case is anchored on the last actual, not on caution: FY2026E revenue -7.1% vs H1 2026 -8.5%, gross margin held at the H1 48.3% (program cost 145.6/281.8, +7.0% on revenue -8.5%) and G&A at 35.5% (100.0 vs 111.3), all [S8]; D&A 7.7% FY2026E then the FY2025 8.9% rate, both disclosed [S2][S7]. Three shocks mirrored exactly (revenue +/-3pp, gross margin +/-1.5pp, opex +/-1pp), base prob 50%, bull 25%. The zeroed base and bear are engine arithmetic on a DCF equity of -Rp21.3bn (-Rp0.54/sh pre-floor), not a haircut, and the model does not vary the 40% recovery by scenario. No unsourced conservatism or optimism in the operating drivers; the only unsourced item is historical (Q23). Rp1.60 fundamental = 0.25 x Rp6.39 bull, disclosed in the summary and section 5."
+      },
+      "recomputed": [
+        {
+          "item": "FY2025A EBITDA",
+          "model": 173.03,
+          "filing": 173.03,
+          "source": "S6",
+          "ok": true
+        },
+        {
+          "item": "Net debt at 30 Jun 2026",
+          "model": 448.17,
+          "filing": 448.2,
+          "source": "S8",
+          "ok": true
+        },
+        {
+          "item": "FY2026E revenue",
+          "model": 562.29,
+          "filing": 563.64,
+          "source": "S8",
+          "ok": true
+        }
+      ],
+      "findings": [
+        {
+          "id": "Q23",
+          "severity": "FIX",
+          "area": "evidence",
+          "finding": "Sections 2 and 3 state revenue fell from IDR1,266.0bn in FY2022 and has fallen every year since, cited [S7], but no cited source carries FY2022 revenue: S7 is the FY2025 LK (605.3 / 669.2 only), and the S6/S2 highlights cover 2023-2025 (778.05 / 669.20 / 605.26). The extreme_call justification repeats the FY2023 -38.5% decline on the same uncited base [S2][S6].",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q24",
+          "severity": "NOTE",
+          "area": "text_vs_model",
+          "finding": "Section 4 says we run EV/EBITDA and P/BV to test what the market is implicitly assuming, at a weight of zero, but model.valuation.methods contains only dcf_fcff and dropped_methods is empty - the multiples were not computed, only discussed.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q25",
+          "severity": "NOTE",
+          "area": "konglo",
+          "finding": "Section 5 attributes the +0.05 to the HSC and free-float flags, but valuation.konglo.adjustments contains only hsc (+0.05); the free-float deadline adjustment is not applied (31 Mar 2029, beyond the 18-month window), so the base compress is 0.30 + 0.05 HSC = 0.35.",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q26",
+          "severity": "NOTE",
+          "area": "text_precision",
+          "finding": "Section 3 says Equity of IDR926.4bn - 926.44 is equity attributable to owners of the parent; total equity is 916.15 and minorities are 17.28 [S8].",
+          "response": null,
+          "answer": null
+        },
+        {
+          "id": "Q27",
+          "severity": "NOTE",
+          "area": "post_bs",
+          "finding": "valuation.post_bs_review records only that the H1 2026 LK was read; it does not list the dated post-balance-sheet index events the report relies on in section 6 (S10 announcement 22 Oct 2026 / exclusion from 2 Nov; S11 MSCI consultation 15 Oct 2026), none of which carries a bridge value.",
+          "response": null,
+          "answer": null
+        }
+      ]
+    },
+    "gates": {
+      "flags": [
+        {
+          "id": "calibration.ebitda_margin",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "FY+1 ebitda margin moves -8.1pp from FY2025A: source the change",
+          "justification": "FY2026E EBITDA margin is 20.5% against 28.6% in FY2025A, an 8.1pp fall, and it is anchored on the actual: H1 2026 revenue fell 8.5% to Rp281.8bn while program cost rose 7.0% and G&A fell 10.2% to Rp100.0bn from Rp111.3bn, so operating income fell 40% to Rp36.2bn [S8]. The H1 D&A charge was Rp21.8bn [S8]. We do not re-inflate FY2026E to the FY2025 margin because the reported half-year shows the cost base did not flex with revenue.\n"
+        },
+        {
+          "id": "extreme_call",
+          "severity": "BLOCK",
+          "justified": true,
+          "message": "expected return -43%: name the two or three sourced drivers that produce it and what today's price implies (reverse DCF)",
+          "justification": "The -43% return is produced by three sourced drivers, not by a cautious assumption. First, the DCF equity is negative before the engine's floor: enterprise value of Rp713.4bn against 30 June 2026 net debt of Rp448.2bn, minorities of Rp17.3bn and a net PKPU bridge of -Rp271.9bn (receivable of Rp1,924.9bn credited at 40%, settlement payables of Rp1,041.9bn at face) leaves -Rp21.3bn, about -Rp0.54 a share, which the engine floors at zero [S7][S8]. The Rp1.6 a share fundamental is the probability-weighted scenario value and is almost entirely the 25% bull case, because base and bear both floor at zero; the target of Rp45 is the konglo regime applied to that weighted fundamental, not to the DCF. Second, the konglo premium: the price of Rp79 is about 55x that fundamental value, and the house regime model closes only 0.35 of the log gap in twelve months, which is what carries the target to Rp45 rather than Rp1.6 [S7]. Third, the related-party PKPU receivable is bridged at 40% recovery, so even a partial settlement is already credited [S7]. The reverse DCF shows today's price implies revenue growth of about 30% a year, against actual declines of 38.5%, 14.0% and 9.6% in FY2023-FY2025 and a shrinking advertising market [S2][S6]. We have not softened the call: the most likely path is partial premium decay, not convergence to fundamental value.\n"
+        },
+        {
+          "id": "weights.changed",
+          "severity": "WARN",
+          "justified": false,
+          "message": "method weights differ from the industry default {'dcf_fcff': 0.5, 'pe': 0.3, 'ev_ebitda': 0.2}",
+          "justification": null
+        },
+        {
+          "id": "konglo.overlay",
+          "severity": "WARN",
+          "justified": false,
+          "message": "konglo lens: price is 55.62x fundamental value (premium); the base case closes 35% of the log gap in 12 months (hsc); target 45 vs fundamental 12-month value 2 \u2014 explain it in \u00a74 and \u00a76",
+          "justification": null
+        }
+      ],
+      "calibration": {
+        "kind": "ebitda_margin",
+        "period": "FY2025A",
+        "benchmark": null,
+        "volume": null,
+        "ebitda_actual": null,
+        "ebitda_model": null,
+        "gap_pct": null,
+        "actual": 0.28587051691254883,
+        "model": 0.20499999999999996,
+        "gap_pp": -8.087051691254887
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "date": "2026-11-15",
+      "type": "initiation",
+      "rating": "SELL",
+      "tp": 45
+    }
+  ],
+  "news": [],
+  "disclaimer": "Six South is an autonomous paper fund run by AI agents. Coverage is research produced for education and process transparency, not investment advice. Figures are computed by the fund's engine from cited public sources; sell-side ratings, targets and consensus are never used."
+}
