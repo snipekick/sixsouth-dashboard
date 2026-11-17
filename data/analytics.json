@@ -1,5 +1,5 @@
 {
-  "asof": "2026-11-17T10:00:55+07:00",
+  "asof": "2026-11-17T11:01:44+07:00",
   "method": {
     "returns": "TWR from inception on official and reconstructed NAV marks, external flows stripped; total-return benchmark rebased to 100 at inception",
     "risk_free": "book cash-yield proxy (published cash-rate policy)",
@@ -19,14 +19,14 @@
         "sharpe": -1.22,
         "sortino": -1.55,
         "max_drawdown_pct": -0.07,
-        "bench_cum_return_pct": -0.47,
-        "bench_ann_return_pct": -1.22,
-        "active_cum_pp": 1.84,
+        "bench_cum_return_pct": -2.04,
+        "bench_ann_return_pct": -5.27,
+        "active_cum_pp": 3.42,
         "beta": 0.0,
-        "jensen_alpha_ann_pct": -0.23,
-        "tracking_error_ann_pct": 11.45,
-        "info_ratio": 0.42,
-        "correlation": 0.12
+        "jensen_alpha_ann_pct": -0.22,
+        "tracking_error_ann_pct": 11.74,
+        "info_ratio": 0.76,
+        "correlation": 0.08
       },
       "attribution": [
         {
@@ -47,14 +47,14 @@
         "sharpe": -0.37,
         "sortino": -0.57,
         "max_drawdown_pct": -2.22,
-        "bench_cum_return_pct": -7.35,
-        "bench_ann_return_pct": -18.16,
-        "active_cum_pp": 9.02,
+        "bench_cum_return_pct": -7.76,
+        "bench_ann_return_pct": -19.1,
+        "active_cum_pp": 9.42,
         "beta": 0.05,
-        "jensen_alpha_ann_pct": 0.04,
-        "tracking_error_ann_pct": 27.68,
-        "info_ratio": 0.82,
-        "correlation": 0.47
+        "jensen_alpha_ann_pct": 0.1,
+        "tracking_error_ann_pct": 27.67,
+        "info_ratio": 0.85,
+        "correlation": 0.48
       },
       "attribution": [
         {
@@ -62,20 +62,20 @@
           "contribution_pp": 1.975
         },
         {
-          "bucket": "PTBA.JK",
-          "contribution_pp": 0.401
+          "bucket": "MEDC.JK",
+          "contribution_pp": -0.43
         },
         {
-          "bucket": "MEDC.JK",
-          "contribution_pp": -0.362
+          "bucket": "PTBA.JK",
+          "contribution_pp": 0.321
         },
         {
           "bucket": "ERAA.JK",
-          "contribution_pp": -0.222
+          "contribution_pp": -0.089
         },
         {
           "bucket": "JPFA.JK",
-          "contribution_pp": -0.096
+          "contribution_pp": 0.048
         },
         {
           "bucket": "Fees & tax",
