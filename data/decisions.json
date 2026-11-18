@@ -1,5 +1,21 @@
 [
   {
+    "meta": {
+      "date": "2026-11-18T22:19:40.008128+07:00",
+      "book": "INDO",
+      "title": "CONSTRUCT 2026-11-18 queue: CPIN sized; GJTL/SMSM blocked",
+      "thesis": "T-INDO-CPIN-001",
+      "kind": "other"
+    },
+    "body": "Queue (a) awaiting_pm_sizing. CPIN: Voss CLEAR_WITH_NOTES; script 10%% x Judge 0.25 = 2.5%%, PM 2.0%% (JPFA corn/feed overlap, gap-adjusted Kelly ~2.1%%); entry_plan limit 2200 stands, last 2380 so ticket waits (max fill 2266). GJTL: Voss ESCALATE, untagged in universe CSV, unsized; SMSM: same, unsized. Queues b,c,d,e: b/c/d empty; ADVANCE cards not built this session (INDO book 0 chains advanced; sizing queue consumed). Deployment INDO 19.3%%, GLOBAL 0%% - below band; GLOBAL has no sized PASS awaiting. rules_applied: none.",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-18 (launched 22:14 WIB, journal 2026-11-18T22:16:15+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (4 fx_carry_rates asof >60d, unchanged). No kill actions due, no reviews open. Live theses: 4. Judged-unticketed: 7 (awaiting PM sizing: GJTL, SMSM, CPIN). Entry staging: nothing staged.\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (README plus two .py files). Skipped. The .py files were not run.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, 0 WASHOUT/NEGLECTED, prices live. INDO 97 names, 9 NEGLECTED plus 12 MOMENTUM, prices live. The macro frontmatter was read (balance_of_payments_pressure / CAUTIOUS, asof 2026-11-14). Nothing was re-reasoned and the memo was not edited.\n- Step 4: GLOBAL has un-carded candidates, so the session did not exit early. INDO has none: all 16 unique screen rows already carry a card, so no INDO cards were written.\n\n## Cards\n**GLOBAL**\n- `GLOBAL-TSM` written, **WATCH** (regime NEUTRAL, sleeve UNSCREENED, source kill_revisit). Kill T-GLOBAL-TSM-001 on 2026-09-16 at $413.75, reason tag `other`. Last $363.31 = \u221212.2%, below the $430 entry level. The price branch is met and the evidence branch is not: the\u2026",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-11-13 (Fri)\n\nSession 2026-11-13T11:00:28+07:00 \u2192 2026-11-13T11:21+07:00. **8 coverage BUYs gated (7 ADVANCE\u2192DISCARD, 1 confirmed ADVANCE), 1 new GLOBAL DISCARD (BRK-B), 1 WATCH retired (SHEL). No new ADVANCE from the screens.** The story is again the coverage stream, not the screen.\n\n## State at entry\n- QC **WARN, 1 flag** (`published cash-rate policy fx_carry_rates.CNH asof 2026-08-22 > 60d`) \u2014 already logged 11-07, owner OPS/IC, not re-filed. Governor **NONE** both books; `kill_actions_due` **[]**; `reviews_open` **[]**; nothing owed to the next trading session on the kill/review front.\n- GLOBAL 100% cash / 0 names (NAV $1,013,297.29, DD 0.0%, week_trades 0/10). INDO 80.2% cash / 4 names (NAV IDR 15,282,630,916; gross 19.79%, DD \u22121.03%, week_trades 1/10; PTBA +9.22%, ERAA \u22121.90%, MEDC \u22125.81% since entry).\n- Ingestion sweep: `data/fundamentals_inbox/` holds README + two helper scripts, **no ticker exports** \u2192 step 2 skipped.\n- HUMAN_ATTENTION carried one open entry from 11-12 (`coverage_buy_stream_fails_ideation_gate`) \u2014 still open, still mine to apply, not to overrule.\n\n## Screen sweep\n- **GLOBAL:** 79 names, 12 MOMENTUM, 0 WASHOUT, 0 NEGLECTED\u2026",
     "persona": ""
@@ -871,28 +887,6 @@
       "kind": "other"
     },
     "body": "WEEKLY_DEEP 2026-10-10. The step-3 ingestion path built data/dossiers/ERAA.fund record (kind full, fundamentals_complete true, asof 2026-10-10) from a fresh yfinance ERAA.JK export, clearing the standing _dossier_frozen VETO that blocked T-INDO-ERAA-001 since 2026-10-07. Re-staged ORD-20261010101159-ERAA.JK-2bf6: INDO equity buy ERAA.JK qty 1,237,200 LIMIT 560 max_chase 0, thesis T-INDO-ERAA-001 (judged PASS_REDUCED 0.5x). Sizing: qty bound by max_single_trade_pct_nav 5.0 at market 615 (=5.00% NAV); at-cost 4.55% <= Voss hard_max 5.0. fund record --orders verdict PASS within constitution (ledger_rows 89). Placed nothing today; ticket staged for the next IDX pre-open. The 2026-10-31 Q3-2026 LK print remains the entry gate. First risk-PASSed ticket in the fund's record (previously 24 kills / 0 tickets).",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-10T10:13:58.618131+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP 2026-10-10 sourcing triage \u2014 ranked, both books",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "GLOBAL (Sloane). (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: none clean \u2014 NVO already re-visited (T-GLOBAL-NVO-002, PASS_REDUCED 0x); SMFG re-advance gates unmet (needs Q1-FY26 ROE>9% evidence or P/BV DEEP-DIVE; ABBV \u2014 defensive compounder, WITH the CAUTIOUS risk appetite, +9% EV, at 52w high => DEEP-DIVE. SMFG, LLY stay WATCH (gates unmet). (d) cold rows not needed (quota met). NOTE: GLOBAL screen is MOMENTUM-only this week (0 NEGLECTED / 0 WASHOUT), so the \">=1 non-MOMENTUM\" rule is UNAVAILABLE and waived for this book. Picks: SAP, ABBV.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-09T08:46:18.466176+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-09 - triggers reviewed, no tickets (ERAA still blocked by standing dossier gate)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed at 08:45 WIB; no ticket staged. (1) QC WARN, 1 flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d - long-documented, no authoritative index-level IHSG yield reachable; not CRITICAL, no trading impact, both books all-cash (INDO and GLOBAL 100% cash, n_names 0). (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 - no fired kill exists, so no missing-ticket breach to escalate; fund record empty. (3) Governor: NONE for INDO and GLOBAL, dd 0.0 - no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, pm_pct 5.0% at-cost, qty 1358100 @ limit 560, max_chase 0, sizing block present). NOT staged: the identical order ORD-20261007131050-ERAA.JK-e360 was staged by CONSTRUCT 2026-10-07 and VETOed+deleted by fund record on the standing dossier-freeze gate (no data/dossiers/ERAA.md, fund record learning_triggers.dossier_freeze_days 60). Re-verified this session: the ERAA dossier is still absent (data/dossiers holds only DSNG/ELSA/MEDC/NVO/PNBN/SMFG/TXN), so the blocker is unchanged and the VETO is absolute. Per\u2026",
     "persona": ""
   }
 ]
