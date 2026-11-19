@@ -28,6 +28,17 @@
   },
   {
     "meta": {
+      "date": "2026-11-19T20:00:34.587517+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-11-19T20:00:34+07:00: no new GLOBAL tickets; INDO CPIN entry confirmed",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Runbook step-by-step at 2026-11-19T20:00:34+07:00. QC=WARN (not CRITICAL): 4 stale fx_carry_rates in published cash-rate policy (EUR 2026-09-16, GBP 2026-09-17, CNH 2026-08-22, BRL 2026-09-16, all >60d); no trading block, flagged for refresh. Kill exits: none due (kill_actions_due empty; kill_monitoring_suspended empty), no missing kill tickets. Governor: NONE on GLOBAL and INDO; no DEGROSS, so no de-gross sells or buys. Entry staging: GLOBAL staged=[], blocked=[]; waiting T-GLOBAL-NVO-002 (last 39.43 vs max_fill 24.72, gap 59.5%) is a price trigger, no action. INDO: CONFIRMED staged entry ORD-20261119084519-CPIN.JK-a5f1 (T-INDO-CPIN-001, buy 134100 @ limit 2200, 2.0% NAV, risk PASS, no blocks); INDO waiting AKRA/AUTO/TINS above max fill, no action. FX sleeve: no Macro-FX theses ticketed in the brief; no FX tickets written. Tickets created by this session: none, so risk_check not required. Judged-unticketed theses (INDO AKRA/GJTL/SMSM/AUTO/TINS, GLOBAL NVO) are not new-thesis entries here and were not ticketed intraday. Escalations: none beyond the existing QC stale-FX-rate flag.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-18T22:19:40.008128+07:00",
       "book": "INDO",
       "title": "CONSTRUCT 2026-11-18 queue: CPIN sized; GJTL/SMSM blocked",
@@ -870,17 +881,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-12 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN heartbeat_gap (no session 46h before IDX_PREOPEN; ops lane).\n- Macro regime (frontmatter asof 2026-10-10; prose note 10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`SAP` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `LLY`/`SMFG` WATCH, `BAC`/`MS`/`QCOM` DISCARD. INDO `DMAS`/`TAPG` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `ERAA`/`MEDC` PROMOTED (theses alive), `AMMN`/`TINS` WATCH\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-12T20:04:09.303805+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-12 \u2014 no actionable North-Book tickets (PASS)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "North Book (GLOBAL) preopen. QC WARN only: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d stale \u2014 a South-book data item, noted not escalated; WARN does not restrict trading. Kill exits: book 100% cash, 0 live positions, kill_actions_due empty \u2014 no fired kill lacks a live ticket/fill (nothing to verify). Governor NONE, gross 0.0% \u2014 no DEGROSS, no de-gross mix to choose. Entries (3c): no eligible GLOBAL thesis. T-GLOBAL-NVO-002 and T-GLOBAL-0700HK-001 are judged PASS_REDUCED but sized pm_pct 0.0 (Kelly=WARN only.",
     "persona": ""
   }
 ]
