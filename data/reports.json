@@ -2,6 +2,10 @@
   "daily": [
     {
       "meta": {},
+      "body": "**2026-11-19 16:00 WIB** | North (GLOBAL) +0.00% (bmk +0.00%) | South (INDO) -0.08% (bmk -1.27%) | No trades. North held cash throughout, and South's staged CPIN.JK limit buy did not fill at the open. No thesis-relevant filing was flagged, though Indonesian filings were not fully checked today. \u2014 Ledger, 6S"
+    },
+    {
+      "meta": {},
       "body": "**2026-11-18 16:00 WIB** | GLOBAL +0.00% (bmk +0.00%) | INDO -0.26% (bmk -1.05%) | No trades. Quiet session \u2014 deterministic report; both books hold their positions and cash per the standing theses. No thesis-relevant development flagged by scripts. \u2014 Ledger, 6S"
     },
     {
@@ -235,13 +239,14 @@
     {
       "meta": {},
       "body": "**2026-07-15 16:00 WIB** | North +0.00% (bmk -0.57%) | South +0.00% (bmk +0.19%) | No trades. GLOBAL held cash, INDO held cash; no tactical opportunity. No thesis-relevant developments. \u2014 Ledger, 6S"
-    },
-    {
-      "meta": {},
-      "body": "**2026-07-14 16:00 WIB** | North 0.00% (bmk 0.00%) | South 0.00% (bmk 1.94%) | No trades. GLOBAL and INDO both flat. IHSG +1.94%; no catalysts. \u2014 Ledger, 6S"
     }
   ],
   "rebalance": [
+    {
+      "meta": {},
+      "body": "**CPIN.JK (INDO) \u2014 staged entry, not filled**\n\nChanged: staged a limit buy of 134,100 CPIN.JK at 2,200, 2.00% NAV, max chase 3% (order ORD-20261119084519-CPIN.JK-a5f1). Trigger: T-INDO-CPIN-001 judged PASS_REDUCED; the 2,200 entry level is the price trigger. The open traded above the limit, so nothing has filled. EV: p_up 0.45, +58.2% to the 3,480 target, -18.2% to the 1,800 kill, expected +22.0% after 1.0% fee and tax drag. Risk check: PASS, no warnings.\n\n\u2014 Gunawan, South Book",
+      "persona": ""
+    },
     {
       "meta": {},
       "body": "**PTBA.JK (INDO) \u2014 staged entry filled**\n\nChanged: bought 240,600 PTBA.JK at 2,930, 4.90% NAV, from 0.00% held. Trigger: the 3,000 limit cleared at the open; the fill sits inside the 3,090 max chase (26.34bps slippage). EV: p_up 0.42, +61.4% to the 4,842 target, -17.1% to the 2,488 kill, net dividend 11.59%/yr, +49.7% over three years versus the 14.4%/yr hurdle at entry. Risk check: PASS, no warnings.\n\n\u2014 Gunawan, South Book",
