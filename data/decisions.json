@@ -22,6 +22,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-19 (launched 11:00 WIB, journal 2026-11-19T11:02:04+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (4 fx_carry_rates asof >60d, unchanged). No kill actions due, no reviews open. Pending order ORD-20261119084519-CPIN.JK is a trading-session matter, not this session's.\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (README plus two .py files). Skipped. The .py files were not run.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, 0 WASHOUT/NEGLECTED, prices live. INDO 97 names, 9 NEGLECTED plus 12 MOMENTUM, prices live. Macro frontmatter read (balance_of_payments_pressure / CAUTIOUS, asof 2026-11-14). Nothing re-reasoned, memo not edited.\n- Step 4: un-carded screen rows exist, so no early exit. GLOBAL: MSFT. INDO: AALI and DSNG. Those are the only uncarded rows among the 21 screen names.\n\n## Cards\n**GLOBAL**\n- `GLOBAL-MSFT` written, **WATCH** (regime NEUTRAL, sleeve MOMENTUM). Revisit candidate: killed T-GLOBAL-MSFT-001 on 2026-09-28 at $516.17 (valuation); now $508.29, about 1.5% below the kill. Valuation gate unresolved, not a \"no\". LESSON-0003 applies: the kill basis must be reproduced before re-advance.\n\n**INDO**\n- `INDO-AALI`\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-18T22:19:40.008128+07:00",
       "book": "INDO",
@@ -876,17 +881,6 @@
       "kind": "other"
     },
     "body": "North Book (GLOBAL) preopen. QC WARN only: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d stale \u2014 a South-book data item, noted not escalated; WARN does not restrict trading. Kill exits: book 100% cash, 0 live positions, kill_actions_due empty \u2014 no fired kill lacks a live ticket/fill (nothing to verify). Governor NONE, gross 0.0% \u2014 no DEGROSS, no de-gross mix to choose. Entries (3c): no eligible GLOBAL thesis. T-GLOBAL-NVO-002 and T-GLOBAL-0700HK-001 are judged PASS_REDUCED but sized pm_pct 0.0 (Kelly=WARN only.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-10T10:13:58.776233+07:00",
-      "book": "INDO",
-      "title": "WEEKLY_DEEP 2026-10-10 sourcing triage \u2014 ranked, INDO",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "INDO (Dani). (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: ELSA cheap-hook fires (630 below the 08-05 kill entry 695) but the re-card gate is evidence/catalyst-only, never price => DISCARD stands; TAPG is ABOVE its prior kill (2,010 vs 1,830) => a fresh look, not a below-entry revisit. (c) WATCH cards: DMAS.JK \u2014 NEGLECTED (non-MOMENTUM), PROPERTY but the AGAINST card names a live variant (Kota Deltamas is an INDUSTRIAL township selling land to manufacturers/FDI, not mortgage-financed residential), P/E 5.6, ~16% yield, RNAV-anchored => DEEP-DIVE; TAPG.JK \u2014 NEGLECTED (non-MOMENTUM), CPO cash-generative mid-cap, -22% off high, EV +11.2% base => DEEP-DIVE; TINS.JK \u2014 fires both sleeves and sits on the desk #1 FAVOR tilt (ID tin supply discipline) but entry is fully extended (mom12 +285%), the card itself says \"scout, not chase\" => stays WATCH. (d) cold rows not needed (quota met). Picks: DMAS, TAPG (both non-MOMENTUM => rule satisfied).",
     "persona": ""
   }
 ]
