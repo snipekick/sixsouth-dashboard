@@ -11,6 +11,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-20 (launched 11:00 WIB, journal 2026-11-20T11:04:31+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (4 fx_carry_rates asof >60d, unchanged). No kill actions due, no reviews open. Pending order ORD-20261119084519-CPIN.JK is a trading-session matter, not this session's.\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (README plus two .py files). Skipped. The .py files were not run.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, 0 WASHOUT/NEGLECTED, prices live. INDO 97 names, 9 NEGLECTED plus 12 MOMENTUM, prices live, flow regime STALE. Macro frontmatter read (balance_of_payments_pressure / CAUTIOUS, asof 2026-11-14). Nothing re-reasoned, memo not edited.\n- Step 4: uncarded screen rows exist in GLOBAL (AAPL, COP, SONY), so no early exit. INDO: every screen row already carded; kill-ledger revisit names all carded. Nothing new from INDO.\n\n## Cards\n**GLOBAL**\n- `GLOBAL-SMFG` written, **DISCARD** (regime NEUTRAL, sleeve UNSCREENED). Kill-ledger revisit: price $22.49 is below the 10-19 entry limit of $23.55, but the EV (about +10.8% against a 12.1% hurdle) and the valuation target (+16% against a +42% up-leg) both fail. Three killed\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-19T08:45:35.102811+07:00",
       "book": "INDO",
@@ -876,17 +881,6 @@
       "kind": "risk_veto"
     },
     "body": "Order `ORD-20261010101159-ERAA.JK-2bf6` VETOed and removed by risk_check: trade 5.1% NAV > 5.0% cap",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-12T08:46:50.213791+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-12 - triggers reviewed, no new tickets (ERAA ticket live + risk-PASS, no kills, governor NONE)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed at 08:45 WIB; no new ticket staged, no cancel. (1) QC WARN (not CRITICAL), 2 flags: 'price cache 47h old' (cache-age) and 'published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d' (long-documented, ops/human-owned; escalated 2026-08-22/09-05/10-03); no trading impact, both books all-cash (INDO + GLOBAL 100% cash, n_names 0). (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 -> no fired kill on any position exists, so no missing-ticket breach to escalate; fund record empty. The four kill_ledger rows dated 2026-10-12 (T-GLOBAL-ABBV-001, T-GLOBAL-SAP-001, T-INDO-DMAS-001, T-INDO-TAPG-002) are all status judged / verdict KILL - thesis-level rejections never ticketed; both books hold 0 positions, so no exit ticket is owed. (3) Governor: NONE for INDO and GLOBAL, dd 0.0, degross_since null -> no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, sizing.pm_pct 5.0% at-cost, sizing block present). Its ticket ALREADY EXISTS and is live: ORD-20261010101159-ERAA.JK-2bf6 (book INDO, equity, ERAA.JK, buy, qty 1237200\u2026",
     "persona": ""
   }
 ]
