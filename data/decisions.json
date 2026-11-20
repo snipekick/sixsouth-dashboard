@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-20T08:45:43.366962+07:00",
+      "book": "INDO",
+      "title": "IDX PREOPEN 08:45 - triggers reviewed, no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (not CRITICAL): 4 stale fx_carry_rates >60d; already escalated in HUMAN_ATTENTION 06:30 - no new escalation. Kill actions due: none. Kill monitoring suspended: none. Governor INDO: NONE (no de-gross). Entry staging today (fund record): staged 0, blocked 0; waiting for price (no journal line needed): T-INDO-AKRA-001 (last 1295 vs max fill 1102.1, gap 17.5%), T-INDO-AUTO-001 (3040 vs 1987.9, gap 52.9%), T-INDO-TINS-001 (3050 vs 819, gap 272.4%). Carried-over standing ticket ORD-20261119084519-CPIN.JK-a5f1 (buy 134100 @ limit 2200, max chase 3%, thesis T-INDO-CPIN-001, PASS risk check 08:45) still pending; thesis unchanged (kill 1800, target 3480); no current CPIN price in brief so no fill-or-cancel judgment made. No tickets created this session, so no risk_check run and no 09:00 slip. Flow regime STALE (n=0): not estimated. Passes: no buys, no sells, no cancels.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-19T08:45:35.102811+07:00",
       "book": "INDO",
       "title": "IDX preopen 08:45: CPIN staged entry confirmed; AKRA/AUTO/TINS waiting for price; no other action",
@@ -876,11 +887,6 @@
       "kind": "other"
     },
     "body": "Triggers reviewed at 08:45 WIB; no new ticket staged, no cancel. (1) QC WARN (not CRITICAL), 2 flags: 'price cache 47h old' (cache-age) and 'published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d' (long-documented, ops/human-owned; escalated 2026-08-22/09-05/10-03); no trading impact, both books all-cash (INDO + GLOBAL 100% cash, n_names 0). (2) Kill exits: kill_actions_due [] and kill_monitoring_suspended [] and live_theses 0 -> no fired kill on any position exists, so no missing-ticket breach to escalate; fund record empty. The four kill_ledger rows dated 2026-10-12 (T-GLOBAL-ABBV-001, T-GLOBAL-SAP-001, T-INDO-DMAS-001, T-INDO-TAPG-002) are all status judged / verdict KILL - thesis-level rejections never ticketed; both books hold 0 positions, so no exit ticket is owed. (3) Governor: NONE for INDO and GLOBAL, dd 0.0, degross_since null -> no de-gross tickets emitted; buys not vetoed. (4) Entries: the only INDO judged+risk-checked+sized thesis is T-INDO-ERAA-001 (PASS_REDUCED 0.5x, sizing.pm_pct 5.0% at-cost, sizing block present). Its ticket ALREADY EXISTS and is live: ORD-20261010101159-ERAA.JK-2bf6 (book INDO, equity, ERAA.JK, buy, qty 1237200\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-12 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN heartbeat_gap (no session 46h before IDX_PREOPEN; ops lane).\n- Macro regime (frontmatter asof 2026-10-10; prose note 10-03): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `ABBV`/`SAP` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `LLY`/`SMFG` WATCH, `BAC`/`MS`/`QCOM` DISCARD. INDO `DMAS`/`TAPG` PROMOTED (**theses KILLed 10-10 \u2014 dangling**), `ERAA`/`MEDC` PROMOTED (theses alive), `AMMN`/`TINS` WATCH\u2026",
     "persona": ""
   }
 ]
