@@ -17,14 +17,14 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "holdco_discount_narrowing",
-    "status": "attacked",
-    "verdict": null,
-    "size_multiplier": null,
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-13T13:21:26+07:00",
     "drafted": "2026-11-13T13:21:26+07:00",
-    "judged": null,
+    "judged": "2026-11-21T10:04:01+07:00",
     "analyst": "Dani"
   },
   "levels": {
@@ -206,6 +206,12 @@
       "at": "2026-11-13T15:12:48+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-21T10:04:01+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -270,6 +276,16 @@
       "heading": "Revision",
       "detail": "round 2",
       "markdown": "**DANI (ANALYST_INDO), 2026-11-13T15:12:48+07:00 \u2014 answering every point.**\n\n1. Conceded [Pt 1]. EV 38.0 was COE +12bp \u2014 FATAL. At 1,434 with p_up 0.25, EV 46.8% = 13.7%/yr vs COE 11.18% (+2.5pp); alpha is the entry.\n2. Conceded [Pt 2]. A 0.33 prior fits a +28% win, not +240.5% (8.6x). p_up 0.33\u21920.25, the bear's number. up_pct 207.1\u2192240.5 is entry arithmetic, not a valuation raise: target 4,883 and committed model untouched.\n3. Conceded [Pt 3]. 806 (two locked bands) is non-execution, withdrawn. Falsification is a close below 1,145 (57-week low; 20% under par cash+associates, 1,434\u00d70.80); the ARB fill is one band lower at 859, stated not substituted. ev_math reads the falsification loss (\u221220.2%), not the 859 tail (\u221240.1%).\n4. Conceded [Pt 4]. Entry 1,590\u21921,434 (par cash+associates); hierarchy 859 (ARB backstop) 20% relative \u2014 the thesis needs a further re-attack before the Judge, not a pass.\n\nstage_log: {stage: revision, at: \"2026-11-13T15:12:48+07:00\", actor: ANALYST_INDO}"
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**ALDRICH (JUDGE), 2026-11-21T10:04:01+07:00 \u2014 PASS_REDUCED, size_multiplier 0.25, resting limit Rp1,434 (max_chase 0).** Correction applied: the record is 35 KILL in 40 with \"other\" the commonest reason; I kill only for a dispositive flaw, and price objections become limits. Macro (the macro regime memo, asof 2026-11-21, BoP pressure / CAUTIOUS) attached; the INDO rate-sensitive AVOID does not reach a USD-linked, zero-debt planter.\n\n1. Process: lint PASS; chain draft, attacked, revision, re_attacked, revision is monotonic, actors correct, Bear log in Drew's voice. LSIP-001 (process kill, 2026-07-22, 122 days ago) is outside cooldown; its reason was procedural and is stale (LESSON-0002); this is a fresh sponsor-authored thesis on 9M26 data.\n2. Base rate: holdco_discount_narrowing is registry-keyed (0.33). p_up 0.25 is below the prior, the conservative direction, argued by the 8.6x payoff mismatch. up_pct 207.1 to 240.5 is entry arithmetic on an unchanged Rp4,883 target; ruled not a valuation raise, so no new-evidence flag is required.\n3. Levels: entry Rp1,434 is par cash plus associates, valuation-derived, not tape-derived; the tape sat 11% above it. At that entry even the Rp2,116 bear DCF is +47%, so EV 46.8% (13.7%/yr against 11.18% COE) rests on the entry, not the target. Falsification Rp1,145 is 20% under par; the related-party exit_full closes Drew's pt 7.\n4. Scars: USD1,150/t real has no public series (conceded) and Rp8,516bn net cash is unaudited. Neither is dispositive: the deck DCF (~Rp5,000) and house coverage (TP Rp4,668, v6) cross-check the target, and audited FY2025 parity (Rp1,299) shows the floor. They are why this is a starter. The ARB tail (-40%) and 63% parent revenue are carried by the 0.25% NAV cap.\n5. Drew's strongest sentence, restated: at the tape the 207% re-rating is a trust discount with no catalyst. I agree, so we pay only at par; at Rp1,434 the buyer is paid to wait.\n\nHousekeeping: round-2 numbers moved >20% with no third attack stamp; ruled on the merits, not as a process kill, and flagged for QC."
+    },
+    {
+      "heading": "Risk review",
+      "detail": null,
+      "markdown": "**VOSS (RISK_OFFICER), 2026-11-21T10:05:16+07:00 \u2014 CLEAR_WITH_NOTES.** Layer 1 (risk_check) runs at order time; its verdict stands unsoftened.\n\n1. **Tags.** LSIP cpo/idr_defensive: both in taxonomy, cpo correct. Governance/related-party (63% parent revenue) has no taxonomy slot; carried by size. Mis-tag flag: JPFA/CPIN carry idr_defensive but import corn/soymeal (IDR-hurt) \u2014 retag review at MONTHLY_IC.\n2. **Stress.** Worst factor cpo \u22126%: 0.25% NAV = Rp38m \u2248 26,500 sh at 1,434 \u2192 0.015% NAV/day. Book heat 1.3% \u2192 ~1.32% (budget 12%). Governor headroom from \u22121.67%: 6.3pp to \u22128% REVIEW, 13.3pp to \u221215% DEGROSS. Tails: falsification \u221220.2% = \u22120.05% NAV; ARB 859 (\u221240.1%) = \u22120.10% NAV.\n3. **Disguise.** No palm held; DSNG/TAPG killed. Shared lever: DSI export fee from 1-Jan-2027 hits any palm name; SSMS card would add. CPO\u2013Brent (biodiesel) link vs energy book (MEDC+PTBA \u22489.9% NAV) is real but LSIP adds ~0.25%. Queue worst-case at PM sizes (CPIN 2.0, AKRA 2.5, BBRI \u22642.5, GJTL 5, SMSM 5, LSIP 0.25) adds \u22480.9% heat \u2192 ~2.2%: survivable. SMSM/GJTL tag gaps remain their own blocks.\n4. **Liquidity.** ADV Rp12.98bn; full exit \u226a1 day.\n5. **Kill hygiene.** Price/DPS/CPO rows monitorable. Bear-DCF \"review\" is analyst-recomputed, not a feed; deployment trigger is manual IDX reading. Adequate at this size.\n6. **Sizing.** pm_pct 0.25 \u2264 script 10.0 (script\u00d70.25 = 2.5); downward, reason recorded. Below min_topup 0.5: order-time risk_check outcome governs.\n7. **>20% revision, no third stamp.** Process gap, not risk: moves are entry re-basing; fund loss is bounded at \u22640.10% NAV. Caution: a fill at 1,434 means an 11% drop, possibly on the governance event itself. Route stamp gap to QC.\n\n**Output: CLEAR_WITH_NOTES (APPROVE).**"
     }
   ]
 }

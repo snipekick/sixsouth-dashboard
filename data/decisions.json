@@ -1,6 +1,61 @@
 [
   {
     "meta": {
+      "date": "2026-11-21T10:25:06.649302+07:00",
+      "book": "INDO",
+      "title": "WEEKLY_DEEP 2026-11-21 triage and portfolio review",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Macro DELTA: no marker tripped, regime balance_of_payments_pressure/CAUTIOUS held; IDR=X 17,637 print on 11-19 judged a bad tick. Triage: 3 attacked theses judged \u2014 BBRI PASS_REDUCED 0.25 (sized 2.5% NAV, limit 2190), LSIP-002 PASS_REDUCED 0.25 (sized 0.25%, limit 1434 par cash+assoc), AMRT-001 REVISE then rebuilt as AMRT-002 (draft, EV -1.4% at entry 878, no-trade at tape, left unattacked/draft; passable only below ~770). GJTL and SMSM remain UNSIZED: both absent from data/universe_indo.csv (Voss VETO fail-closed; 5th consecutive escalation). Portfolio review: ERAA/PTBA/JPFA/MEDC re-affirmed, none within 10% of kill or target (dist-to-kill 19.8-28.4%; MEDC -10.5% since entry, 25.5% above kill), last_reviewed stamped; no position >15% NAV. INDO deployed 19.2% vs 60-95% band; cluster of judged names rests as limit orders under the tape (BBRI 2190 vs 3080, LSIP 1434 vs ~1595). Idea cards BBRI/LSIP/AMRT/GJTL/SMSM/TSM stamped PROMOTED. Blockers: old claude_exit/timeout/cov_* blockers reviewed \u2014 historic session-wrapper exits (many from usage-limit 429s per 2026-11-20 IDX_CLOSE), none open as actionable work; no re-escalation beyond the universe-tag item.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-21T10:08:52.265916+07:00",
+      "book": "INDO",
+      "title": "LSIP.JK sizing: script 10.0% vs Judge-reduced 2.5% vs PM 0.25% NAV",
+      "thesis": "T-INDO-LSIP-002",
+      "kind": "sizing"
+    },
+    "body": "2026-11-21T10:07+07:00. Price at decision Rp1,560 (last_price in ticket). size_position: recommended_pct 10.0 (constitution cap binding; kelly_quarter 22.0, liquidity cap 125.2); Judge PASS_REDUCED x0.25 gives 2.50%. PM chooses 0.25% NAV (downward only, 10x below the Judge-reduced figure): governance cap, 63.26% parent revenue and related-party deployment risk, unaudited Rp8,516bn net cash, ARB tail -40.1% = ~-0.10% NAV; reason recorded in sizing block. Minimum-tranche check: 0.25% 0); a first starter is not blocked (ticket dry-run: 26,500 sh at Rp1,430 limit, pct_nav 0.25, no min-tranche rejection). Recorded honestly: the starter is below the nominal 0.5 minimum and can never be added to; order-time risk_check governs. Entry plan: limit Rp1,434, max_chase 0, valid_until null (tick-rounded limit 1,430, max fill 1,430). Last Rp1,560 is 8.8% above level; staging per entry.stage_within_pct decides whether it tickets now or waits as a price trigger. Flows stale, no flow estimate. Macro BoP pressure/CAUTIOUS; rate-sensitive AVOID does not reach this USD-linked zero-debt planter. LSIP is USD-linked CPO: explicit currency stance. Deployment 19.2% gross, below band; starter adds exposure\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-21T10:06:46.136655+07:00",
+      "book": "INDO",
+      "title": "BBRI.JK sizing: suggested 10.0% vs chosen 2.5%",
+      "thesis": "T-INDO-BBRI-001",
+      "kind": "sizing"
+    },
+    "body": "Suggested (script_pct) 10.0% NAV, constitution cap binds. Judge PASS_REDUCED 0.25 -> 2.50%. Chosen pm_pct 2.5%, no PM deviation. Price at decision 3080 (2026-11-20 close); entry limit 2190 (28.9% below tape), max_chase 3%, mode limit, valid_until null: resting trigger. Macro AVOID on INDO rate-sensitive and 18.8% NAV IDR-loser cluster considered: BBRI adds 0.13% NAV stress heat (1.30->1.43% of 12% budget); the 0.25 multiplier already carries the tilt; book 19.2% deployed vs 60-95% band so no further cut. Flows stale. CPIN buy pending at 2200 (separate ticket). Heat to be re-run at fill.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-21T10:25:06.805657+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP GLOBAL: TSM revisit PASS_REDUCED",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "Kill-revisit TSM (prior T-GLOBAL-TSM-001) rebuilt as TSM-002: phase1/phase2 analyst, Drew MAJOR_REVISION (terminal OM 51% vs 47.1% cycle mean; adverse selection of 250 limit), revision reset entry to 240, Aldrich PASS_REDUCED 0.25, Voss APPROVE, PM 2.5% NAV limit 240 (spot 318.7, resting trigger). GLOBAL still 100% cash / 0% deployed; NVO-002 (limit 24.00) also resting. QCOM, 0700.HK and other kill revisits not pursued this session (quota/rate-limit economy) \u2014 carried to CONSTRUCT. Process note: an analyst agent wrote an estimated stage_log stamp (10:30:00); orchestrator corrected it and Aldrich ruled hygiene defect not kill.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-21T10:24:26.259894+07:00",
+      "book": "GLOBAL",
+      "title": "TSM-002 sizing suggested 10.0 vs chosen 2.50; GLOBAL zero deployment",
+      "thesis": "T-GLOBAL-TSM-002",
+      "kind": "sizing"
+    },
+    "body": "Suggested-vs-chosen: script recommended_pct 10.0% NAV (constitution cap binds), Judge PASS_REDUCED 0.25 -> 2.50%; pm_pct 2.50%, deviation none. Entry plan limit 240, max_chase 3% (max fill 247.20), valid to 2027-02-20; price at decision TSM 318.71 (2026-11-20), so the ticket waits as a price trigger. NVO-002 already sized 2.50% (script 10.0): left unchanged. ZERO-DEPLOYMENT LINE: GLOBAL cash 1,014,159.29 USD = 100% of NAV 1,014,159.29; deployment 0.0% vs 60-95% band; no ticket staged this session; both starters (TSM 2.50% + NVO 2.50%) resting at limits would reach only 5.0% if filled. Opportunity cost: benchmark level 92.83 on 2026-11-21 (base 100 at 2026-07-06, after the -3.49% ACWI day on 11-20; the Judge cited ~+11% at an earlier mark) vs book NAV 1,014,159 (cash only, about +1.4%). At the latest mark cash has outperformed the benchmark, so the realised cost of 0% is currently nil; it was positive at the earlier peak. Attribution of binding gate: entry-price EV shading (limits far below spot), not liquidity or construction. Not lowering the bar; honest 0% stays 0%. Week count toward 3-week HUMAN_ATTENTION escalation tracked by WEEKLY_DEEP. Rules applied: LESSON-0003 (do not\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-20T08:45:43.366962+07:00",
       "book": "INDO",
       "title": "IDX PREOPEN 08:45 - triggers reviewed, no action",
@@ -838,49 +893,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-14 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-14T08:47; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-14T20:09:40.106750+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-14 \u2014 no trading actions; both GLOBAL judged theses size-to-zero",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "North Book, 20:00 WIB US_PREOPEN (six South duty / North Book; tier cheap). QC WARN, not CRITICAL \u2014 single flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d (standing since 08-31; IDX-only input, not consumed by North Book; ops/human-owned, already escalated 08-22/09-05/10-03; fail-closed blocks any action that would use it). Flag carried, no action. (a) Kill exits: none fired \u2014 kill_actions_due empty, live_theses empty, kill_monitoring_suspended empty; nothing to verify against a live ticket or fill. No breach. (b) Governor de-gross: governor NONE both books, GLOBAL gross 0.0% / dd 0.0% / n_names 0 \u2014 no DEGROSS, no de-gross mix to choose. (c) Entries: no GLOBAL thesis qualifies. The two GLOBAL judged-unticketed are both size-to-zero \u2014 T-GLOBAL-NVO-002 (PASS_REDUCED/NO_TRADE, sizing.pm_pct 0.0, own-Kelly<=0 at spot, expected -13.0%/3y vs +11.6% cash) and T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x, sizing.pm_pct 0.0, Kelly<=0, three Judge-ordered Phase-2 deliverables never completed). Quantity from sizing.pm_pct is zero for both \u2014 no ticket, no resize (never resize here). T-INDO-ERAA-001 is South Book (INDO/PM_INDO), out of scope for a North\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# CONSTRUCT Session Journal \u2014 2026-10-14 (Wed 13:00 WIB)\n\n## State at entry\n- QC WARN (1 flag, ops/human lane, not session-actionable): `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (standing since 09-26; no authoritative index-level source; escalated 08-22/09-05/10-03).\n- Both books 100% cash, dd 0.0, governor NONE, n_names 0; pending_orders [], kill_actions_due [], reviews_open []. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001.\n- human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-14T08:47; ops lane).\n\n## Step 1 \u2014 Queue inventory (runbook step 1) \u2014 EMPTY\n- **(a) Parked drafts** (`status: draft`/`attacked`, no verdict): **none.** All 40 theses are `judged` (38) or `killed` (2: T-GLOBAL-AAPL-001, T-GLOBAL-TSM-001). No decaying mid-pipeline thesis exists. (`fund record` is the template, not a thesis.)\n- **(b) ADVANCE idea cards promoted by a prior WEEKLY_DEEP triage but never constructed**: **none.** 15 cards in `fund record`: WATCH 4 (GLOBAL LLY/SMFG; INDO AMMN/TINS), DISCARD 9 (GLOBAL ABBV/BAC/MS/QCOM/SAP; INDO DMAS/ELSA/PTBA/TAPG), PROMOTED 2 (INDO ERAA/MEDC). Both PROMOTED cards\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-13 (Mon)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-13T08:47; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-13T20:01:12.088494+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-13 \u2014 no trading actions; both GLOBAL judged theses size-to-zero",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "North Book, 20:00 WIB. QC WARN (not CRITICAL) \u2014 one flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d stale. Flag carried; no action \u2014 IDX-only input, not consumed by North Book, and fail-closed blocks any action that would use it. (a) Kill exits: none fired \u2014 kill_actions_due empty, no live theses, no suspended kill monitoring; nothing to verify against a ticket/fill. (b) Governor: NONE, 0% gross \u2014 no de-gross. (c) Entries: the two GLOBAL judged-unticketed theses are both size-to-zero \u2014 T-GLOBAL-NVO-002 (verdict PASS_REDUCED/NO_TRADE, sizing.pm_pct 0.0, own-Kelly <=0 at spot, expected -13.0%/3y) and T-GLOBAL-0700HK-001 (verdict PASS_REDUCED 0.5x, sizing.pm_pct 0.0, negative-EV, three Judge-ordered Phase-2 deliverables never completed). Quantity from sizing.pm_pct is zero for both \u2014 no ticket staged, no resize (never resize here). T-INDO-ERAA-001 is South Book (PM_INDO authority), out of scope for this North Book session. (d) FX sleeve: no judged Macro-FX thesis exists \u2014 no FX ticket. No orders created, so no fund record --orders run. Book remains 100% cash, gross 0.0%, n_names 0.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-12 11:00:12.528443+07:00",
-      "book": "INDO",
-      "title": "VETO ERAA.JK buy 1237200.0",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "risk_veto"
-    },
-    "body": "Order `ORD-20261010101159-ERAA.JK-2bf6` VETOed and removed by risk_check: trade 5.1% NAV > 5.0% cap",
     "persona": ""
   }
 ]

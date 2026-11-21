@@ -17,14 +17,14 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "quality_bank_rerating",
-    "status": "attacked",
-    "verdict": null,
-    "size_multiplier": null,
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-13T13:14:16+07:00",
     "drafted": "2026-11-13T13:14:16+07:00",
-    "judged": null,
+    "judged": "2026-11-21T10:04:08+07:00",
     "analyst": "Dani"
   },
   "levels": {
@@ -50,9 +50,9 @@
     "kelly_full_pct": 322.2
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "Judge PASS_REDUCED 0.25 x script 10.0% = 2.5% NAV; no further PM cut (book 19.2% deployed vs 60-95% band; BBRI adds 0.13% NAV heat)"
   },
   "base_rate": {
     "rate": 0.48,
@@ -189,6 +189,12 @@
       "at": "2026-11-13T15:05:27+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-21T10:04:08+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -260,9 +266,24 @@
       "markdown": "1. **One number discharged three FATALs.** #2\u2013#4 were answered by moving the kill to 2,060 and down_pct to \u221210.04%. The arithmetic closes; the claims do not. p_up 0.48 is the registry's, down_pct the analyst's \u2014 the prior's failing-case loss (\u221220%) was halved while its failure probability was kept. At \u221220% the revised EV is 10.4%/yr, under 11.45%; break-even down is \u221212.2%. [FATAL]\n2. **Carry, then carry again.** The dividend is 113% of the 39.56% EV; the price leg alone is 5.7%/yr, below the 7.45% FR. The up branch totals 95.4% against base_up_pct 42 (total-return) \u2014 2.27x the archetype's typical winner, unreconciled; at 42 it is 3.5\u20134.4%/yr. At the card's 85% payout ceiling 11.3%/yr; at FY2024's 80%, 11.0%. The 3y EV does not survive a payout cut. [FATAL]\n3. **Still a stop.** 2,060 is 9.0% below entry and 22.0% below the 52-week low (2,640, research_prices 2026-10-12). The KPI falsifiers stay review-only, so the sole hard exit is price \u2014 a bank can print 0.92x while earning 17.5%, so the kill fires when the mispricing is widest. [FATAL]\n4. **Levels not co-derived.** 2,290 is 1.09x on the bear's diluted 2,100 BVPS; 2,060 is 0.92x on 2,239 \u2014 FY2028E book. On the entry's own book 0.92x = 1,932, a \u221215.6% leg. [MATERIAL]\n5. **Phantom book (new).** DPS is 92% of EPS, but BVPS 2,138\u21922,326 implies 14.3% retention (86% payout). Payout-consistent FY2028E BVPS is 2,243; 1.48x = 3,320. Source: dossier equity 324,033.9/151,559m shares vs model dps/eps. [MATERIAL]\n6. **Two tapes, stale body.** Frontmatter uses 3,050; variant perception and microstructure still argue 2,820 and still call 2,290 \"the kill\". Entry is 24.9% under 3,050, 13.3% under the low. [MATERIAL]\n7. **P(fill) unstated.** Real expected return is p(fill)\u00d711.8%; 2,290 fills are selected by a 2.1pp implied-ROE de-rating, so p_up|fill < 0.48. A one-in-three ARB-locked exit at \u221235% takes EV to 10.6%/yr. [MATERIAL]\n8. **New disconfirming fact.** Quarterly NI 15,874 (4Q25) \u2192 15,493 \u2192 15,373 (2Q26); revenue 50,553 \u2192 49,616 \u2192 48,719. FY2026E 62,484 needs +2.4% H/H in 2H26; the DPS carrying 113% of EV rests on it. [MATERIAL]\n\n**Stop objecting:** entry \u22642,200, kill 1,932 (0.92x on the entry's own book), target 3,320 \u2014 11.5%/yr with the ARB tail visible. That is 27.9% under the tape: a watch-list trigger, not an allocation.\n\n**Verdict: MAJOR_REVISION.** The up branch is 2.27x the archetype's typical winner; 113% of EV is a dividend the model's book path says was never retained."
     },
     {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED, size_multiplier 0.25, resting limit Rp2,190 (kill Rp1,932, target Rp3,320).** Correction applied this session: the record is 35 KILL / 5 PASS_REDUCED / 0 fills with \"other\" the modal reason, so I rule on whether the thesis is wrong, not on whether killing feels safe. Lint passes (word-count warning only) and the stage_log chain is monotonic with the correct actors.\n\n1. Base rate: p_up 0.48 is the registry rate for quality_bank_rerating, with no second haircut. The registry down leg is -20%; the thesis uses -11.78%. I accept that only because the kill is a falsification print (0.861x, an 11.4% ROE) co-derived on one payout-consistent FY2028E BVPS of 2,243. At -20% EV is 10.74%/yr against an 11.45% hurdle. That is the scar, and it is why the size is 0.25.\n2. Revisions: the round-2 target cut (3,450 to 3,320) and the lower entry carry no raise, and up_pct was re-read off entry rather than raised. No unflagged raise, so the revision-raise rule is not triggered.\n3. Drew's strongest sentence, restated: most of the EV is a 92% payout that may be a peak, and the price leg alone is under the risk-free rate. I accept this partly. EV is 11.11%/yr at an 80% payout, a hair under the hurdle, and a payout cut is a kill-review trigger. It cuts size, not the verdict, because a fill at Rp2,190 means entering 28% under the tape and 17% under the 52-week low.\n4. Fill selection: p_up given a fill is below 0.48. A fill implies a de-rating and a funding-leg stress, which fits the AGAINST macro tilt (INDO rate-sensitive AVOID). I rule size 0.25 and no chase. The max_chase of 3% is acceptable.\n5. Citations and coverage: load-bearing inputs are cited (dossier, S4/S6/S15). The house target (Rp4,176) is reconciled; the gap is ROE 18.5% against 19.6% and g, which is explained. The superseded 2,820/2,340/2,290 body text does not govern, since the frontmatter is authoritative.\n6. Open inputs, not dispositive: BBRI is absent from the liquidity feed, so the liquidity cap is 0 until the feed refreshes. The 2H26 net income step (+2.4% H/H) is unproven. The PM must not size until ADV populates.\n7. Deployment: the INDO book is in cash, and a resting order at a price that clears FR+4% costs nothing. Kill-ledger row: none."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "Gunawan, 2026-11-21T10:07+07:00. script_pct 10.0 (constitution cap) x Judge 0.25 = 2.50% NAV; pm_pct 2.5, no deviation. Entry plan confirmed unchanged: limit Rp2,190, max_chase 3% (max fill Rp2,256), valid_until null. Fill is 28.9% under the 3,080 tape, so this is a contingent stress-regime trigger, not a present purchase. Macro AVOID tilt and the 18.8% IDR-loser cluster are already priced into the 0.25 multiplier; BBRI adds 0.13% NAV heat (1.30% to 1.43% of 12%) and the cluster only matters if the trigger fills. Book is 19.2% deployed vs the 60-95% band (80.8% cash), so a further shave would deepen the shortfall for ~0.5pp of cluster reduction. Heat re-run at fill (Voss note 7)."
+    },
+    {
       "heading": "Revision",
       "detail": "round 2",
       "markdown": "Levels co-derived on one book, payout-consistent FY2028E BVPS 2,243 (2,138 + 104.8 retained at 92%), COE 12.95%, g 1.5%: target 1.48x/18.5% = 3,320; entry 0.978x/12.7% = 2,190 (a notch under the 14% bear); kill 0.861x/11.4% = 1,932. p_up 0.48; up 51.60, down -11.78, net yield 15.59%/yr, EV 40.09%/3y = 11.89%/yr.\n\n1. p_up defended: 0.48 is the registry prior; SIZING \u00a71 bars a second haircut. Down conceded: at -20% EV is 10.74%/yr, sub-hurdle; break-even down is -14.96%, so the -11.78% kill has 3.2pp room.\n2. Conceded: carry is 116.7% of EV, probability-weighted price leg 5.86%/yr (under 7.45% FR), up branch 2.34x base_up 42. At 85% payout EV 11.44%/yr; at 80%, 11.11% \u2014 it fails an 80% cut.\n3. Part-conceded: kill 1,932 is 11.78% below entry and 26.82% below the 2,640 low \u2014 an 11.4%-ROE failure print. Price stays the automatic exit; KPI reviews are primary; ARB-locked exits are a sizing haircut.\n4. Conceded: all levels now on 2,243; the 2,100-vs-2,239 book mismatch is gone.\n5. Conceded: target 3,320 = 1.48x on 2,243, not the phantom 2,326.\n6. Conceded: frontmatter (2,190/1,932/3,320) is authoritative; entry is 28.2% under the 3,050 tape, 17.0% under the 2,640 low. Body 2,820/2,340/2,290 lines are superseded; protocol bars rewriting sections.\n7. Part-conceded: p(fill) is execution, not level math; ev_math is conditional on fill. One-in-three ARB-locked exit at -35% gives 10.81%/yr; unconditional return is p(fill)x11.89%.\n8. Conceded as fact; committed model unchanged. 4Q25-2Q26 NI 15,874\u219215,373 and revenue 50,553\u219248,719 put +2.4% H/H on FY2026E; the 80%-payout path (11.11%/yr) and credit/CASA reviews carry it."
+    },
+    {
+      "heading": "Risk note",
+      "detail": null,
+      "markdown": "**CLEAR_WITH_NOTES.** Layer 1: risk_check --book INDO, governor NONE, drawdown -1.67%, no VETO; the BBRI order itself is not yet ticketed. size_position: script 10.0% (constitution cap binds), x0.25 = 2.50% NAV (Rp380m). The the liquidity feed row now exists (Rp977.6bn), so the open ADV input is resolved.\n\n1. Factor tags: BBRI bi_rate/em_flows, both on the closed list, stress -4/-5; max rule gives -5. The business also carries domestic_cycle credit risk (-5 as well), so no heat change. No retag.\n2. Stress: BBRI adds 2.5 x 5 = 0.13% NAV; book heat 1.30% to 1.43% (12% budget). Headroom after the trade is 4.90pp to -8% REVIEW and 11.90pp to -15% DEGROSS (both counted from the -1.67% drawdown less heat). With every pending name sized at the PM anchors (BBRI, CPIN 2.0, AKRA 2.5, LSIP 0.25, GJTL and SMSM 5.0 each, last two assumed) heat is 2.22%; headroom is 4.11pp / 11.11pp.\n3. Disguise: IDR/funding-leg losers are BBRI 2.5 + ERAA 4.70 + JPFA 4.58 + CPIN 2.0 + GJTL 5.0 = 18.8% NAV, all against the AVOID tilt. Hedgers are MEDC, PTBA, AKRA, LSIP and SMSM at 17.6%. BBRI KUR/micro credit shares the smallholder poultry/feed borrower with CPIN/JPFA. domestic_cycle primary reaches 21.3% (soft cap 40%). The stress table is thin: IHSG fell -10.5% on 16-Oct against bi_rate -4.0, and BBRI is 9.95% of IHSG. At -10.5% BBRI costs 0.26% NAV, which is immaterial at this size. Recalibration goes to MONTHLY_IC.\n4. Liquidity: 0.002 days at 20% ADV.\n5. Kill hygiene: price kill is machine-monitorable. The KPI kills cite quarterly LK with no feed, so they are manual reviews.\n6. Sizing block is null/null. The PM must record script_pct 10.0 and pm_pct <= 2.50. Anything above is a VETO-level breach.\n7. Fill at Rp2,190 is 28.9% under the 3,080 tape, which implies a stress regime. Re-run heat at fill. GJTL and SMSM remain untagged (un-buyable) per their notes."
     }
   ]
 }

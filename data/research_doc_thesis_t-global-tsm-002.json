@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-GLOBAL-TSM-002",
+  "title": "Taiwan Semiconductor (ADR) (TSM)",
+  "meta": {
+    "id": "T-GLOBAL-TSM-002",
+    "book": "GLOBAL",
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor (ADR)",
+    "sector": "SEMIS",
+    "factors": [
+      "semis_ai",
+      "china_growth"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "momentum_continuation",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": "2027-01-14",
+    "estimates_committed_at": "2026-11-21T10:15:27+07:00",
+    "drafted": "2026-11-21T10:15:27+07:00",
+    "judged": "2026-11-21T10:23:09+07:00",
+    "analyst": "Sloane"
+  },
+  "levels": {
+    "entry": 240.0,
+    "target": 315.0,
+    "kill": 203.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base-case FCFE DCF 9,953 TWD/ADS (COE 9%, g 3.5%, OM 55->51%), converted at the 31.6 TWD/USD rate implied by TSMC's own reported Q1-Q2'26 USD vs TWD revenue (not a market quote); phase 2 re-converts at spot.",
+    "price": 318.7099914550781,
+    "price_asof": "2026-11-20"
+  },
+  "ev": {
+    "p_up": 0.5,
+    "up_pct": 31.3,
+    "p_down": 0.5,
+    "down_pct": -15.4,
+    "net_div_yield_pct_pa": 1.0,
+    "fee_tax_drag_pct": 0.3,
+    "expected_pct": 8.0,
+    "horizon_years": 0.75,
+    "carry_pct": 0.75,
+    "kelly_full_pct": 161.0
+  },
+  "sizing": {
+    "script_pct": 10.0,
+    "pm_pct": 2.5,
+    "deviation_reason": "No discretionary deviation: Judge PASS_REDUCED 0.25 x script recommended 10.0% (constitution_cap binds; kelly_quarter 25.0, heat_after 0.9/12.0) = 2.50% NAV exactly; Voss ceiling 2.50 honoured; fill at 240 is risk-off-correlated so no upsizing considered."
+  },
+  "base_rate": {
+    "rate": 0.5,
+    "source": "the base-rate library momentum_continuation (rate 0.50, base_up 30%, base_down -22%, horizon 0.75y, n=200); no deviation: p_up held at the registry rate",
+    "library": {
+      "rate": 0.5,
+      "base_up_pct": 30.0,
+      "base_down_pct": -22.0,
+      "horizon_y": 0.75
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 203.0,
+      "action": "exit_full",
+      "note": "bear value (OM back to FY24A ~46%, no growth from FY26E): the falsification of margin-step-up-is-structural; thesis-invalidating, NOT a stop. Phase 2 may restate at spot FX."
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-01-20",
+      "action": "review",
+      "condition": "Q4'26 results: review if OM <55% (Q3'26 58.7%) or revenue QoQ growth <0"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 50.0,
+      "action": "review",
+      "name": "operating_margin_pct",
+      "source": "TSMC quarterly IR / 20-F (FY25A 50.8%, FY24A 45.7%)"
+    }
+  ],
+  "model": {
+    "currency": "TWD",
+    "unit": "bn (EPS and DPS per ADS = 5 ordinary shares; 5.1865bn ADS-equivalents)",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        2894.3,
+        3809.1,
+        5468.0,
+        6562.0,
+        7349.0
+      ],
+      "ebit": [
+        1322.0,
+        1936.1,
+        3212.0,
+        3609.0,
+        3821.0
+      ],
+      "net_income": [
+        1158.4,
+        1697.6,
+        2849.0,
+        3194.0,
+        3382.0
+      ],
+      "eps": [
+        226.25,
+        327.35,
+        549.0,
+        616.0,
+        652.0
+      ],
+      "dps": [
+        70.0,
+        90.0,
+        100.0,
+        115.0,
+        125.0
+      ]
+    },
+    "valuation": {
+      "method": "FCFE DCF per ADS (COE 9%, terminal g 3.5%), 5-year fade FY27-31, TWD",
+      "bear": {
+        "value": 6406.0,
+        "basis": "Revenue flat at FY26E, OM reverts to FY24A 45.7% (~46%), FCFE conversion 90%->82%; ~US$203 at 31.6"
+      },
+      "base": {
+        "value": 9953.0,
+        "basis": "Rev +20/+12/+10/+8/+6%, OM 55/52/51/51/51%, FCFE conversion 60%->75%; ~US$315 at 31.6"
+      },
+      "bull": {
+        "value": 12489.0,
+        "basis": "AI complex persists: rev +28/+18/+14/+10/+8%, OM 58->54%; ~US$395 at 31.6"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-21T10:15:27+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-21T10:19:35+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-21T10:19:36+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-21T10:19:44+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-21T10:22:34+07:00",
+      "actor": "Sloane",
+      "role": "ANALYST_GLOBAL"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-21T10:23:09+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Revisit of T-GLOBAL-TSM-001",
+      "detail": null,
+      "markdown": "**Why the prior died (Bear, 2026-09-16, KILL_RECOMMENDED).** Not a fundamentals error: Drew accepted the margins and killed on (1) negative EV by own arithmetic (p 0.50, +15%/-30%, quarter-Kelly 0), (2) base-case DCF ~= spot, so no margin of safety, (3) a $300 kill that sat above the real tail, (4) no dated catalyst, (5) edge self-refuted. Post-kill scoring (LESSON-0003) was TSM +14.3%: the kill under-weighted the AI complex.\n\n**New evidence (fundamental, dated after the kill).** Sep-2026 quarter, dossier asof 2026-11-18: revenue TWD 1,494.2bn (+17.6% QoQ), EBIT 876.4bn (OM 58.7%), net income 763.1bn. The prior's named test (review if OM <54%) did not fire; the step-up survived a third quarter (Q1 58.1%, Q2 60.3%, Q3 58.7%; 9M 59.0%). Nine-month revenue TWD 3,898.7bn already runs ahead of the prior's ~US$170bn FY26E (my FY26E 5,468 is 1.8% above that at 31.6)."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "Market narrative: irreplaceable AI foundry, margins the new normal."
+    },
+    {
+      "heading": "EARNINGS_QUALITY_FLAGS gate",
+      "detail": null,
+      "markdown": "- Accruals (NI-CFO)/avg assets: FY23 -7.4%, FY24 -10.9%, FY25 -7.9% (CFO 2,275.0 vs NI 1,697.6; avg assets 7,312.3). Cash outruns earnings; no flag.\n- Divergence: CFO/NI 1.58x (FY24) to 1.34x (FY25) while EBIT margin rose 45.7% to 50.8%: margin up with weaker cash conversion. Mild; haircut: FCFE conversion modelled at 60% of NI, below FY24's 74%.\n- NI/EBIT was 92.2% in Q2'26 vs 87.1% in Q3: non-operating income is a swing factor. I use 88.5% (9M average 88.7%).\n- Capex/revenue 48.1%, 44.2%, 33.3%, 33.7% (FY22-25); FCF FY25 992.4 = 58% of NI.\n- Related-party, pledging, IDX flags: n/a. Gate clears. Dossier is Yahoo-sourced: verify against the 20-F."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed before any market number",
+      "markdown": "FY26E: nine months actual revenue 3,898.7, EBIT 2,301.9, NI 2,042.2 (Mar/Jun/Sep quarters). Q4 assumed +5% QoQ to 1,569 at 58% OM: FY26E revenue 5,468, EBIT 3,212 (58.7%), NI 2,849, EPS 549 per ADS. DPS is a low-weight assumption (FY25 paid 466.8 = 27.5% payout).\n\n**Load-bearing assumptions (carry >70% of value):**\n1. *Revenue path.* FY27E +20% to 6,562. The Q4'26E run-rate alone (1,569 x 4 = 6,276) is already +14.8% over FY26E, so +20% needs only ~+2% sequential growth per quarter. Fades to +12/+10/+8/+6%.\n2. *Through-cycle operating margin 51-52%.* Base falls from 59% (9M26) to 55% FY27E, 52% FY28E, 51% terminal. Cites: EBIT margins FY22 49.5%, FY23 42.6%, FY24 45.7%, FY25 50.8%; four-year mean 47.1%. Terminal sits ~4pp above that mean because FY25 and the last three quarters show a step-up; 59% is not assumed to persist.\n3. *Reinvestment and cash.* FCFE conversion 60% of NI rising to 75% by FY31, terminal 82% (g 3.5% / ROE ~20%). Cites: capex 1,282.6 vs CFO 2,275.0; FY25 FCF/NI 58%.\n**Valuation per ADS (TWD):** bear 6,406 / base 9,953 / bull 12,489. USD equivalents (~US$203 / 315 / 395) use 31.6 TWD/USD, the rate implied by TSMC's reported Q1-Q2'26 USD and TWD revenue. Phase 2 re-converts at spot. Base is ~18x FY26E EPS, below the prior thesis' ~$418-445 (5-year fade and FCFE haircut).\n\n**Not yet carried (no source in the Phase 1 packet):** hyperscaler capex guides, utilisation, customer concentration, export-control and Taiwan-geography downside numbers (card items 1-3). UNAVAILABLE here; Phase 2 to source. Until then only the bull case carries the AI complex."
+    },
+    {
+      "heading": "Macro regime",
+      "detail": null,
+      "markdown": "Quoted from the macro regime memo frontmatter, unaltered: \"regime: balance_of_payments_pressure\", \"risk_appetite: CAUTIOUS\". All five tilts are Indonesia/commodity scoped; none names semis or Taiwan, so the regime gives no tilt for TSM. The Fed path is listed UNVERIFIED in the markers."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": "Phase 1 part",
+      "markdown": "**Market believes:** the margin step-up is permanent.\n**Why wrong:** the step-up is real for three quarters and in FY25's 50.8%, but a 51-52% through-cycle margin (not 59%) is what the base underwrites, about 18x FY26E EPS. Edge tag: (a) analytical.\n**What proves us wrong:** Q4'26 OM at or above 58% with revenue still growing QoQ and FY27 revenue above +28%, i.e. the bull path."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Q3'26 OM 58.7% < Q2 60.3%: first sequential margin slip (dossier quarterly table).\n2. CFO/NI 1.58x to 1.34x and FCF/NI 74% to 58% (FY24 to FY25): cash conversion fell as margin rose; capex/revenue 33.7% is a fixed commitment.\n3. FY22 OM 49.5% to FY23 42.6%: a 7pp one-year drop already happened within the last four years, the reversion path the bear case uses."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is end-2027 and this position lost 30%. Most likely cause: OM slid toward 52% as new capacity depreciated (EBITDA minus EBIT was 806bn in FY25 vs 757bn in FY24 and is rising), revenue stalled at the Q4 run-rate, and the market stopped paying for the step-up. Second: the price paid; far above the 9,953 base, the loss is the multiple."
+    },
+    {
+      "heading": "Phase 2: market data, entry, EV",
+      "detail": null,
+      "markdown": "**Spot.** TSM US$318.71 (the price snapshot, 2026-11-20), down 9.5% from 352.09 on 11-19; cause not in the packet. At spot the base target 315 is 1.2% below price: up -1.2%, down -36.3% to the 203 kill. EV about -18.7%. This is not a long at spot; it is PASS-at-a-price.\n\n**Entry 240 as revised (limit, chase 3%, valid to 2027-02-20; was 250, see Revision).** At 240 vs fixed 315/203: up +31.3%, down -15.4%, dividend 1.0%/yr net (~US$3.2 after withholding), 0.75y horizon, drag 0.3: expected = 0.5(31.3+0.75) - 0.5(15.4) - 0.3 = +8.0%. Ratio 2.0 vs library 1.36; sizing small.\n**Variant perception.** Edge (a) analytical, weak. No timing edge claimed; the 1-month-reversal filter is not passed (stock just broke down).\n\n**AI-complex reading (LESSON-0003).** Hyperscaler capex guides: UNAVAILABLE in packet. The bull case (US$395) carries the complex; the -9.5% day suggests it is being cut.\n\n**Ownership checklist.** 13F, insider, index, short interest: UNAVAILABLE.\n\n**FX (TWD/USD).** TWD spot UNAVAILABLE in cache; the 31.6 implied rate is retained, not a market quote. Earnings are TWD, the ADS trades in USD: a 1% TWD move shifts the USD target and kill roughly 1%.\n\n**Conviction 2/5.** Fundamentals fine, price not. Liquidity: ADR highly liquid, days-to-exit trivial. Correlation: AI/semis beta to any held US tech."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "**Drew (BEAR) attack on T-GLOBAL-TSM-002**\n\n1. Fact-check clean: 9M sums, OM 58.1/60.3/58.7, EPS 549 (2,849/5.1865bn), USD conversions and EV +3.7% reproduce from the dossier. But load-bearing #3 (FCFE conversion 60% to 75%) cites only FY25 FCF/NI; the dossier has no FY26 capex or CFO while revenue runs +43%. [MATERIAL]\n2. Widest error bar is terminal OM. The thesis's own four-year mean is 47.1%; base uses 51% on three quarters. At 47% (NI-linear, about -8%) base is ~US$290: at 250, up +16% vs down -18.8%, EV about -1.3%. Fragile, single-assumption dependency. [MATERIAL]\n3. The fill is adverse selection. A 250 limit fills only after a further -22%. ACWI fell 3.49% the same day (the price snapshot, 2026-11-20): TSM's -9.5% is ~2.7x market beta, not a clean AI-complex signal. The fill-state is risk-off, where p_up sits below 0.50 and the kill is 19% away. [MATERIAL]\n4. Archetype mislabeled. momentum_continuation fails its own 1-month-reversal filter, and the payoff is DCF, not the registry's +30/-22. This is a value limit-buy borrowing a momentum prior; p_up 0.50 has no evidence under it. [MATERIAL]\n5. Construction, other direction: haircuts stack. Base fell from ~US$418-445 (TSM-001) to 315 while 9M revenue ran ahead. FCFF-to-FCFE, 60% conversion, 51% OM and the fade price one margin worry; p_down 0.50 at the bear value adds a fourth. Bull (395) and the AI complex (LESSON-0003) get zero weight; a 25/50/25 mix gives ~US$307, not 315. The idea may be under-set, not merely expensive. [MATERIAL]\n6. FX: 31.6 is a period-implied rate, not a quote. A 5% TWD move shifts target to 299-331, kill to 193-213. No ADR-versus-Taiwan-line premium check (2330 absent from cache). [MATERIAL]\n7. Pipeline: first revision stamp 10:30:00 was agent-estimated, future-dated against the 10:19 clock, later orchestrator-corrected; two revision stamps one second apart for a prose trim. Disclosed; no estimate moved after 10:15:27. Escalate to QC. [MINOR]\n8. Pre-mortem omits a Taiwan/export-control shock and TWD appreciation; 203 is the bear case, not the tail. [MINOR]\n\n**Price at which I stop objecting:** at or below ~240 (EV about +8%, above the ~6% 0.75y hurdle), with Q4'26 OM at or above 55% and revenue QoQ positive.\n\n**Verdict: MAJOR_REVISION**\nAt 250 the long clears neither the hurdle nor a fill-conditional probability test, and its payoff leg rests on a margin 4pp above the thesis's own cycle mean."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**Entry reset 250 to 240.** p_up 0.50, target 315 and kill 203 unchanged; no new evidence offered. up_pct 31.3 and down_pct -15.4 move only because entry moved; EV +8.0%.\n\n1. Conceded: no FY26 capex or CFO in the dossier, so 60% to 75% conversion rests on FY25 alone. Flagged for the 20-F; not defended.\n2. Conceded. Terminal OM 51% is 4pp above the 47.1% mean and rests on three quarters. At 47% base is ~US$290; at 240 that is +20.8% up, -15.4% down, EV ~+2.8%. Positive but thin; the 240 level buys that cushion. Target not changed.\n3. Conceded in part. A fill at 240 needs -25% from spot, and the ACWI -3.49% day shows 2.7x beta, so the fill state is risk-off. I do not raise or lower p_up without evidence; sizing must treat the fill as correlated with market stress.\n4. Conceded. This is a value limit-buy borrowing a momentum prior. p_up 0.50 is a registry default, not an estimate, and I do not claim otherwise. Archetype label left as filed; the Judge may reclassify.\n5. Disputed, no change. The 25/50/25 mix gives ~US$307, 2.5% below 315, within noise, and raising p_up or target needs new evidence I lack. The bull case is already weighted through p_up 0.50. Haircut stacking is a fair warning against lowering the kill further.\n6. Conceded. 31.6 is period-implied; a 5% TWD move spans target 299-331 and kill 193-213. No 2330 premium check; TWD spot unavailable. Unfixed; 240 gives partial buffer.\n7. Conceded and disclosed; the stamps stay. Escalation to QC is Drew's call.\n8. Conceded. 203 is the bear case, not the tail; a Taiwan or export-control shock gaps below it, and TWD appreciation hits ADS value. Sizing must assume a loss beyond 203.\n\nQ4'26 review trigger (OM <55% or QoQ revenue negative) stands as Drew's stop-objecting condition."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**PASS_REDUCED, size_multiplier 0.25, resting limit 240 (valid to 2027-02-20).** Correction applied: the ledger shows 35 kills of 40 and 0% deployment, and LESSON-0003 scored the first TSM kill at +14.3% missed; I am not killing a right-shaped idea over price or open inputs. Lint passes (word-count warning only).\n\n1. Process: stage_log is monotonic (10:15:27, 10:19:35, 10:19:36, 10:19:44 Bear, 10:22:34), actors correct, Bear log present. The agent-estimated 10:30:00 stamp was future-dated, disclosed in-file and corrected; no estimate changed after 10:15:27. A hygiene defect, not a gamed pipeline, so no process kill. Drew's QC escalation is his call; I add no flag.\n2. Base rate: p_up 0.50 equals the registry rate; no raise, no unflagged new evidence. Target 315 and kill 203 are DCF-derived, not price-history anchored. Entry 240 is valuation math (EV +8.0% vs ~6% hurdle).\n3. Drew's strongest sentence, restated: the payoff rests on terminal OM 4pp above the thesis's own cycle mean, and a 240 fill happens in a risk-off state. True in part: at 47% OM base is ~US$290 and EV ~+2.8% at 240, thin but positive. A sizing scar, not a dispositive flaw.\n4. Archetype momentum_continuation is mislabeled (value limit-buy, fails the reversal filter). I take no edge from it; p_up 0.50 is a default, so the 0.25 starter prices that. Reclassification left to registry owners.\n5. Load-bearing FCFE conversion lacks FY26 capex/CFO: verify against the 20-F before any add. Tail beyond 203 (Taiwan, export controls, TWD) is unmodelled, another reason for starter size.\n6. Deployment: GLOBAL is 100% cash against a benchmark near +11%. A starter limit is the lower-risk ruling than a 60-day lockout. Not at spot (EV about -18.7%); no chase.\n7. Review at Q4'26 (OM below 55% or revenue QoQ negative)."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**Voss (RISK_OFFICER) 2026-11-21T10:24:30+07:00. PASS_REDUCED 0.25, limit 240. CLEAR_WITH_NOTES (APPROVE).**\n\n*Layer 1 (read-only; risk_check --orders not run):* GLOBAL 100% cash (NAV 1,014,159), governor NONE. size_position: recommended/hard_max 10.0% (constitution cap binds) x0.25 = 2.50% NAV. Dossier asof 2026-11-18, inside 60d freeze.\n\n1. *Factor-tag audit:* the GLOBAL universe row 10: TSM, SEMIS, semis_ai / china_growth, mega, heavy. Both tags are in the closed taxonomy. PASS. china_growth is a stretch; Taiwan geography is the real second leg and has no tag.\n2. *Stress:* semis_ai -9.0% x 2.50% = 0.225% NAV (script heat 0.9% at the unreduced 10%). With NVO-002 (us_defensive -3.0% x 2.50% = 0.075%): book 0.30% vs 12% budget. Headroom: 7.7 pts to REVIEW (-8), 14.7 pts to DEGROSS (-15).\n3. *Disguise:* NVO-002 shares no factor, customer or policy lever; combined 5.0% gross, 2.5% per factor vs 40% soft. Hidden bets: (a) the 240 fill is risk-off-correlated (TSM 2.7x ACWI beta); (b) a Taiwan/export-control gap through 203. A -40% gap costs 1.0% NAV (kill-203 loss is -15.4% x 2.5% = 0.39%). Acceptable at this size.\n4. *Liquidity:* ADR, days-to-exit trivial. PASS.\n5. *Kill hygiene:* price<203 is machine-monitorable; OM<50 KPI cites TSMC IR (manual pull). Catalyst date unconfirmed. Notes only.\n6. *Sizing block is null:* PM must record script_pct=10.0 and pm_pct <=2.50. Any pm_pct above 2.50 is a VETO-level breach.\n7. *FX:* TWD/USD unquoted in cache; 31.6 is period-implied; +/-5% TWD moves the kill to 193-213. Unhedged; flagged, not blocking at 2.5%.\n8. *Horizon:* adds a long; flagged, not forced.\n\nPost-trade stress-day book loss 0.30% NAV; headroom 7.7 / 14.7 pts. Conditions: no chase above 247; before any add, verify FY26 capex/CFO against the 20-F and source TWD spot."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**Harrison (PM_GLOBAL) 2026-11-21T10:24:16+07:00.** Size TSM-002 at 2.50% NAV (script 10.0% x Judge 0.25; no further deviation). Entry plan confirmed as filed: limit 240, max_chase 3% (max fill 247.20, matching Voss's no-chase-above-247), valid_until 2027-02-20. Spot 318.71 is far above the max fill, so the ticket waits as a price trigger (entry_staging.waiting); no order typed here, quantity comes only from the sizing engine ticket. Conditions carried: verify FY26 capex/CFO against the 20-F and source TWD spot before any add; Q4'26 review trigger (OM <55% or QoQ revenue negative)."
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-AMRT-002",
+  "title": "Sumber Alfaria Trijaya (Alfamart) (AMRT.JK)",
+  "meta": {
+    "id": "T-INDO-AMRT-002",
+    "book": "INDO",
+    "ticker": "AMRT.JK",
+    "name": "Sumber Alfaria Trijaya (Alfamart)",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "draft",
+    "verdict": null,
+    "size_multiplier": null,
+    "supersedes": "T-INDO-AMRT-001",
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-21T10:12:01+07:00",
+    "drafted": "2026-11-21T10:12:01+07:00",
+    "judged": null,
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 878.0,
+    "target": 1066.0,
+    "kill": 653.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Base DCF 1,066 on LK-evidenced operating profit (recurring other income kept, 87.6 non-recurring stripped); 8.10x FY2028E EV/EBIT. Entry 878 = (1,066 + 3y DPS 140.5) / 1.1118^3, the price that pays the 11.18% COE if base is reached; kill 653 = other income not recurring (DCF), 25.6% below entry, about one ARB band.",
+    "price": 1085.0,
+    "price_asof": "2026-11-20"
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 21.4,
+    "p_down": 0.6,
+    "down_pct": -25.6,
+    "net_div_yield_pct_pa": 5.3,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -1.4,
+    "horizon_years": 3.0,
+    "carry_pct": 15.9,
+    "kelly_full_pct": -14.9
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (rate 0.40, +50/-30, 3y); no deviation",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 653.0,
+      "action": "exit_full",
+      "note": "falsification value (DCF with other income not recurring); thesis-invalidating, NOT a stop; an ARB-locked exit can fill one band lower (~490)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 1100.0,
+      "action": "review",
+      "name": "other_operating_income_lk",
+      "source": "FY LK Note 21a Pendapatan lainnya (FY2025A 1,333.7; FY2024A 1,223.6)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 3.0,
+      "action": "review",
+      "name": "ebit_margin_lk",
+      "source": "FY LK income from operations / revenue (FY2025A 3.60%; 9M2026 3.15%)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 600.0,
+      "action": "review",
+      "name": "net_store_adds",
+      "source": "company 2026 plan 800 net adds (F10) vs FY LK store-count disclosure"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-03-31",
+      "action": "review",
+      "condition": "FY2026 audited LK: revenue growth <5% OR LK EBIT margin <3.3% OR other operating income <1,100 OR net store adds <600"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        118227.0,
+        126737.3,
+        135862.4,
+        145372.8,
+        155112.7
+      ],
+      "ebit": [
+        4078.5,
+        4562.4,
+        4795.9,
+        5131.7,
+        5475.5
+      ],
+      "net_income": [
+        3148.1,
+        3410.9,
+        3592.8,
+        3848.6,
+        4110.6
+      ],
+      "eps": [
+        75.81,
+        82.16,
+        87.43,
+        93.66,
+        100.04
+      ],
+      "dps": [
+        34.11,
+        41.5,
+        43.72,
+        46.83,
+        50.02
+      ]
+    },
+    "valuation": {
+      "method": "FCFF DCF, 10 explicit years FY2026-35, WACC 11.3%, terminal g 4.0%, capex ramped 3.95% to 4.65% so terminal growth earns WACC; bridge -545 as the house engine (reproduces house 1,100 / 323 / 2,450 on ",
+      "bear": {
+        "value": 653.0,
+        "basis": "Other operating income 1,333.7 does not recur: LK EBIT margin 2.55% (dossier basis), growth/WACC/g unchanged. House demand-recession shocks (growth -4pp, margin -150bp, NWC to 0) give 298: tail, in the pre-mortem."
+      },
+      "base": {
+        "value": 1066.0,
+        "basis": "Revenue +7.2/7.0/6.7%, LK EBIT margin 3.53% flat (3.60% FY2025A less 87.6 non-recurring); implied FY2026E reinvestment 10.8% of NOPAT (ROIIC an output, ~66%, not asserted); 10.7x FY2028E EPS 100.0, 8.10x EV/EBIT."
+      },
+      "bull": {
+        "value": 2406.0,
+        "basis": "House shocks on the base: growth +4pp, margin +150bp, NWC -3.56% of revenue; same WACC/g."
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-21T10:12:01+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 21-Nov at writing, not backdated; LK-only inputs, no market number enters the model; the tape was already in the file's history",
+      "markdown": "Revenue FY2026E +7.2% is the 9M2026 LK actual (101,288.2 vs 94,475.9, S3 p.4) and equals 800 net adds on 21,120 banners (3.8%, F10/F9) plus CPI 3.28%. FY27/28E +7.0/6.7%.\n\n**EBIT is LK income from operations, other operating income inside.** FY2025A 4,562.4 (audited LK p.17, F3). The dossier's 3,228.7 excludes other income 1,333.7 (LK p.17 / Note 21a p.118, F13): 4,562.4 \u2212 1,333.7 = 3,228.7, a tie to the decimal. Note 21a: fee-based 764.2, space rental 251.2, admin services 130.1, royalties 55.0, product registration 45.5 (recurring, 1,246.0); insurance claims 42.5, asset-sale gains 17.0, other 28.1 (87.6, excluded). Recurring EBIT 4,474.8 = 3.53% margin, held flat.\n\n9M2026 LK EBIT 3,191.7 (3.15%) vs 2,958.4 (3.13%), +7.9% (F17). FY2026E EBIT 4,795.9 implies Q4 1,604.3 on 34,574.1 = 4.64%, against Q4-2025 LK 1,604.0 on 32,261.3 = 4.97% (4,562.4 \u2212 2,958.4): flat in rupiah, below last year's margin. Aldrich's ~3.9% is the same quarter on the dossier basis (1,251.2/32,261.3 = 3.88%, ex other income); Drew's 8.0% subtracted a dossier 9M from an LK full year. The 22.22% gross-margin bridge is not used.\n\nBelow EBIT: other \u221281 (FY2025A \u2212177.1, 9M2026 \u221237.0), tax 18.85%, minority 6.1% (156.1/2,558.9), 41,091.8m shares (S3 p.6). DPS at 50% payout: the 1,705.3 paid in 2026 is 50% of FY2025 profit 3,410.9 (F31); the dossier's 41.5% is the FY2024 final paid in 2025.\n\nDCF: WACC 11.3% (IDR band 11-13%), g 4.0%, capex 3.95% to 4.65% (FY2025A capex 4,994.7 = 3.94%), D&A 3.52% incl. ROU 2,492.1 (F14), NWC \u22121.78%; TV 46.6% of EV. Base 1,066. Sensitivity: margin \u00b150bp 856-1,277; WACC 11-13% 1,110-874; g 3-5% 1,001-1,152."
+    },
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory",
+      "markdown": "From memory, AMRT is the premium minimarket compounder whose 30x-era multiple came off, and the market reads that de-rating as structural: cooperative and challenger density against a thin-margin format."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** the de-rating is structural and margins are 2.5%, as the screen line shows.\n**Why wrong:** the screen line omits 1,333.7 of fee, rent and royalty income the audited LK reports inside operating profit; LK margin is 3.6% and 9M2026 held it (3.15% vs 3.13%) on 7.2% growth. The edge is slow incorporation of LK footnote detail. It is priced at the tape (below).\n**What proves us wrong:** price below 653, FY2026 other operating income below 1,100, LK margin below 3.0%, or net adds below 600.\n\n**Price check (Phase 2).** Tape Rp1,085 (`the price snapshot`, 20-Nov, flat on 19-Nov): 12.4x FY2026E, 10.8x FY2028E, 8.24x FY2028E EV/EBIT against 8.10x at my base, 4.0% yield. The tape is 1.8% above base: no edge today, so this is a watch, not a buy. Entry 878 is derived, not read from a chart: (1,066 + 140.5 DPS FY26-28E) / 1.1118^3, the price at which reaching base pays the COE. It sits inside the pack's 52-week range (855-2,000, S25), 19% below the tape. At 878: up +21.4%, kill 653 \u221225.6%, EV \u22121.4%, up/|down| 1.37 vs library 1.67, own-Kelly \u221214.4% vs library +13.3%. Priced at one ARB band below the kill (fill ~490, \u221244%) EV is \u221212.6%. Which defect: (c), no trade at printed prices; target is the base DCF and the kill is a falsification value, not a stop. Own-Kelly turns positive, gap-priced, only below ~770, under the 52-week low: that is the sizing trigger."
+    },
+    {
+      "heading": "Market microstructure & liquidity",
+      "detail": null,
+      "markdown": "**Liquidity.** `the liquidity feed` (21-Nov 10:00) now carries AMRT.JK at Rp83.6bn/day; 5% of INDO NAV (Rp0.76bn) is under 0.05 day at 20% participation. Sizing remains script/PM.\n**Ownership.** Free float 40.81% (IDX-IC mirror, carried from T-INDO-AMRT-001, not re-verified), Sigmantara 50.19% (F21), treasury 0.69% (S3 p.6). No pledge or rights-issue signal.\n**ARB.** \u00b125% band; a kill exit can fill one band below the trigger.\n**Flows stale** (`fund record` empty); none estimated. Regime balance_of_payments_pressure / CAUTIOUS (asof 2026-11-21); \"INDO rate-sensitive (banks NIM, property, consumer discretionary): AVOID\". AMRT is net-cash staples, so the tilt sits in the 11.18% COE, not in demand."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House v6 (12-Nov): BUY, target Rp1,189. House FY2026E EBIT 4,904.6 and EPS 88.90 sit 2.3% above mine (4,795.9; 87.43) because I strip 87.6 of non-recurring other income and drop the 22.22% gross-margin bridge. My 1,066 is DCF-only, 10% under the house target, which blends peer P/E 9.09x and a house DCF near 1,138. Bear differs: mine 653 is a thesis falsifier, the house bear v0 is 531."
+    },
+    {
+      "heading": "New evidence",
+      "detail": null,
+      "markdown": "new evidence: audited FY2025 LK p.17 and Note 21a p.118 (S4; house facts F3, F13) and 9M2026 LK p.4 (S3; F17). They tie dossier 3,228.7 to LK 4,562.4 and show recurrence in FY2024 (1,223.6) and FY2025 (1,333.7). This lifts the target from 660 (T-INDO-AMRT-001 overlay) to 1,066. Aldrich to rule."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Q3-2026 dossier operating income 153.3 on 33,332.5 (0.46%) after 881.3 in Q2 and 1,103.9 in Q1 (ex other income): unexplained; FY2026E needs a 4.64% LK Q4.\n2. Dossier EBIT FY2023-25 3,197.2 to 3,228.7 (+1.0%) on revenue +18.5%; ROE 23.5% to 18.9%. No operating leverage on the dossier basis.\n3. Other income is 29% of LK EBIT and fee-based income (764.2) depends on suppliers; recurrence evidence is two audited years plus a derived 9M (981 to 1,053, LK less dossier, cross-source).\n4. Minority share 6.1% (9M2026) vs 4.2% FY2025 as MIDI (77.09%) and LWS outgrow the banner.\n5. Tape 1,085 already sits above base 1,066."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is 2029 and the position lost 30-45%. Suppliers or regulators cut the fee-based income, so the margin fell to 2.55% and the price broke 653, with an ARB-locked exit filling near 490. Second, a demand recession and permit cap took the house tail (298). Third, the limit never filled while the tape ran above base, so the thesis earned nothing."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "Accruals (NI \u2212 CFO)/average assets FY2025 \u221210.5% (CFO = FCF + capex, dossier): clean. No special-notation or pemantauan khusus in the dossier. Q1-Q3 unaudited. PSAK 73: ROU depreciation 2,492.1; EBITDA excludes rent, so I value on EBIT/FCFF with ROU capex. Related-party receivables 12.9 (0.4%, F36); MIDI and LWS consolidate. Pledge and auditor not in the dossier."
+    }
+  ]
+}

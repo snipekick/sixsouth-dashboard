@@ -18,13 +18,13 @@
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
     "status": "attacked",
-    "verdict": null,
+    "verdict": "REVISE",
     "size_multiplier": null,
     "supersedes": null,
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-13T13:20:37+07:00",
     "drafted": "2026-11-13T13:20:37+07:00",
-    "judged": null,
+    "judged": "2026-11-21T10:04:19+07:00",
     "analyst": "Dani"
   },
   "levels": {
@@ -197,6 +197,18 @@
       "at": "2026-11-13T15:06:30+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-21T10:04:19+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-21T10:12:37+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
     }
   ],
   "kill_outcome": null,
@@ -261,6 +273,16 @@
       "heading": "Revision",
       "detail": "round 2",
       "markdown": "No new evidence; nothing raised; the committed model, valuation block and estimates_committed_at are untouched; no field moves, so no >20% flag.\n\n1. [FATAL] Conceded, and this is the answer: the committed model is immutable by protocol, so 4,562.4 and the 1,100 base cannot be rerun here; 660 is a disclosed overlay and a ceiling, not a valuation I defend.\n2. [FATAL] Conceded: 5.8%/3y = 1.90%/yr against 37.4% required (11.18% COE); at the thesis's own ARB fill 242.25 the EV is -4.5%. My arithmetic puts the gap-clearing entry at ~327, not 317 \u2014 still 1.2% above the 323 kill and 66% below the tape, so your conclusion holds.\n3. [FATAL] Conceded: 660 is 31% below the Rp960 tape (6.4x vs 9.3x FY2028E); fair value below spot is a watch, not a long, and the variant perception has no live expression.\n4. [MATERIAL] Conceded: 470 is 51% below the tape, 45% below the 52-week low, below every cached close; that fill fires my own review triggers. Entry withdrawn; trigger-watch only.\n5. [MATERIAL] Conceded: FY2026E needs Q4 EBIT 2,766.1 on 34,574.1 = 8.0%, not 4.96% (my arithmetic error); Q4-2025 on dossier EBIT is 1,251.2/32,261.3 = 3.88%. A repeat gives FY2026 EBIT 3,479.3, 29% under the committed line; I cannot re-base without re-committing, so I do not restate the target.\n6. [MINOR] Conceded: 323 is 1.33 bands below 470 (your 1.30); one band under the kill fills 242.25 = -48.5%. ev_math's -31.3% is the falsification level per SIZING \u00a71; the gap belongs in the pre-mortem.\n\n**No coherent executable set exists:** even at 660 no entry clears, and every clearing price sits below the 13-month range. Recommend the record be closed (KILL, valuation); 470/660/323 stand as the last attempt, not an instruction."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": "Aldrich",
+      "markdown": "Correction applied: the ledger shows 35 kills and 0 fills, and \"other\" as the modal reason. A kill here would spend the cooldown on a name whose merits were never tested.\n\n**VERDICT: REVISE (REVISE_CONSTRUCTION). No kill-ledger row, no cooldown. Return to ANALYST_INDO.**\n\n1. Lint PASS (word-count warning only). The stage_log chain is monotonic, the actors are right, and Drew's attacks are in his own voice. No process defect.\n2. Construction defect. Target 660 is an overlay on a DCF that was never rerun. Entry 470 is 51% below the tape and below the 52-week low (855). Together they give a thesis that sizes to zero by arithmetic, and the sponsor's own round-2 text asks for the record to be closed. That is a mis-built thesis, not a finding about the business.\n3. The sponsor over-conceded Drew's FATAL 2. Dossier FY2025 net income is 3,410.9 (net margin 2.7%) against dossier EBIT of 3,228.7, so the earnings are real and sit partly below the operating line. The open question is whether that Rp1,334bn other-income line recurs, and the house coverage carries it on a \"restated basis\". An unexplained gap against house coverage is a REVISE under V5, not a KILL. Stripping it entirely, as the overlay does, is not evidenced either.\n4. Cure. Cite the reconciliation from 3,228.7 to 4,562.4 to a primary line (LK notes or the house fact pack), or state the exclusion. Re-commit the model and valuation under `supersedes:` on honest inputs. Do not use the uncited 22.22% gross-margin bridge. Derive the entry from valuation. It must sit within a price that has printed, and the kill-gap must be priced at one ARB band (-25%), not at the 323 falsification level.\n5. p_up at the 0.40 registry rate is acceptable. Raising the target above 660 needs a flagged `new evidence:` citation and will be ruled on then. Rebuild the Q4 margin at a repeatable level (about 3.9%, not 8.0%).\n6. Liquidity: the AMRT.JK key is missing from the liquidity feed. Sizing is blocked until the feed is repaired. This is a PM-lane item, not a ground for killing the thesis.\n7. At the Rp960 tape the thesis has no edge today. PASS-at-a-price is available only once it is rebuilt."
+    },
+    {
+      "heading": "Revision",
+      "detail": "round 3, answering the Judge's REVISE",
+      "markdown": "The committed model, valuation and estimates_committed_at of this file are untouched. The cure is re-committed as `T-INDO-AMRT-002` (`supersedes: T-INDO-AMRT-001`), the repo's supersession convention (id must equal filename stem).\n\n2. [Construction] Accepted. The 660 overlay and 470 entry are withdrawn. 002 reruns the DCF on LK inputs: base 1,066, entry 878, kill 653.\n3. [Over-concession] Accepted; my round-2 concession was wrong. LK income from operations 4,562.4 less other income 1,333.7 ties to the dossier's 3,228.7 exactly (LK p.17, Note 21a p.118, house facts F3/F13). I exclude only the 87.6 non-recurring (insurance claims, asset-sale gains, other); recurring EBIT 4,474.8 = 3.53%.\n4. [Cure] Reconciliation is cited to a primary line. The 22.22% gross-margin bridge is dropped. Entry 878 = (1,066 + 140.5 DPS) / 1.1118^3, inside the 855-2,000 range. Kill-gap priced one band below the 653 kill (fill ~490): EV -12.6%.\n5. [Target, Q4] The target above 660 carries a flagged `new evidence:` line in 002 for your ruling. Q4-2025 on the dossier basis is 3.88% (your ~3.9%); on the LK basis it is 4.97%, and FY2026E needs 4.64%, flat in rupiah. The 8.0% mixed a dossier 9M with an LK full year.\n6. [Liquidity] `the liquidity feed` now carries AMRT.JK at Rp83.6bn/day (21-Nov); sizing is script/PM.\n7. [Tape] The tape is now Rp1,085, 1.8% above my base: no edge today, a watch.\n\np_up 0.40 stands. Disclosed in 002: at 878 EV is -1.4% and own-Kelly -14.4% (library +13.3%), a genuine no-trade at printed prices (defect (c)); gap-priced Kelly turns positive only below ~770, under the 52-week low. I did not move entry to 855 or shrink the kill to manufacture a positive EV."
     }
   ]
 }
