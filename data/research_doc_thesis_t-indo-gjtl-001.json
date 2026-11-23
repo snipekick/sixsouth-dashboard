@@ -217,6 +217,12 @@
       "at": "2026-11-07T12:48:06+07:00",
       "actor": "Aldrich",
       "role": "JUDGE"
+    },
+    {
+      "stage": "risk",
+      "at": "2026-11-23T13:00:50+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
     }
   ],
   "kill_outcome": null,
@@ -315,6 +321,11 @@
       "heading": "Risk note update",
       "detail": null,
       "markdown": "Confirms the 11-09 and 11-20 reviews; no duplicate analysis. Changes only below.\n1. Factor tag: GJTL.JK is still absent from the INDO universe (re-grepped 11-21, no match). factor_taxonomy (the risk checker) VETOes an untagged buy, so no size is buyable until the row exists. Proposed: AUTOS, domestic_cycle, em_flows. SMSM.JK is also absent.\n2. Stress, sizer anchor 10%: heat 1.30 to 1.80% NAV. At 5.0% (Rp759m): 1.55%. Pro forma with all pending names (GJTL, SMSM, CPIN order, BBRI, AKRA, LSIP-002 at PM sizes; my estimate): about 2.1% NAV. Headroom about 5.9pp to the -8% REVIEW and 12.9pp to the -15% DEGROSS. Heat does not bind.\n3. Exit: 0.78 days at 5.0% (limit 7).\n4. Disguised concentration. (a) Autos aftermarket: GJTL 5.0 + SMSM 5.0 + AUTO 2.5 = 12.5% NAV on one GAIKINDO parc and replacement-demand lever (sector cap 30%). (b) domestic_cycle, primary tag plus AKRA factor2: ERAA 4.70 + JPFA 4.58 + CPIN 1.94 + AUTO 2.5 + SMSM 5.0 + GJTL 5.0 + AKRA 2.5 = about 26% NAV (soft cap 40; AMRT excluded). (c) The macro desk is AVOID on INDO rate-sensitive consumer names, and BBRI is a bi_rate long. GJTL's Rp5tn debt and imported inputs add a second IDR funding leg.\n5. Tail: ARB -45% is -2.25% NAV at 5.0%, or -1.35% at 3.0%. The receivable trigger is review-only. Kill limbs and the null sizing block are unchanged from 11-20.\n\nVerdict: ESCALATE/blocked (untagged, fail-closed). Once tagged: RECOMMEND_REDUCE 0.6 of PM size (5.0% to 3.0% NAV), on stacked governance tail and AUTOS overlap."
+    },
+    {
+      "heading": "Risk review",
+      "detail": null,
+      "markdown": "2026-11-23. Prior reviews (11-09, 11-20, 11-21) stand; changes only.\n1. Factor tag: GJTL.JK still absent from the INDO universe (0 matches; SMSM also 0). Untagged is VETO, fail-closed, un-buyable at any size. Proposed AUTOS, domestic_cycle, em_flows.\n2. Stress (sizer anchor 10%): heat 1.30 to 1.80% NAV; ~1.55% at 5.0%. Headroom 6.20pp to -8% REVIEW, 13.20pp to -15% DEGROSS (about 6.45 / 13.45pp at 5.0%).\n3. Exit: 0.78 days at 5.0% (limit 7).\n4. Tail: ARB -45% is -2.25% NAV at 5.0%.\n5. Kills: price kills 800/605 monitorable; the 2027-04-30 \"not reduced\" limb has no numeric bound (propose >3,950.6bn); ebitda_fy2026 has no fund record key. Review-only.\n6. Sizing block null; PM must record 10.00 / 5.00 or lower.\n7. Disguise: AUTOS aftermarket (GJTL+SMSM+AUTO) about 12.5% NAV; domestic_cycle about 26%, under the 40% soft cap. Macro AVOID on INDO consumer discretionary; this trade is against it.\nVerdict: ESCALATE/blocked until tagged. Once tagged: RECOMMEND_REDUCE 0.6 of PM size (5.0% to 3.0% NAV; tail -1.35% NAV)."
     }
   ]
 }
