@@ -1,6 +1,28 @@
 [
   {
     "meta": {
+      "date": "2026-11-23T08:47:47.364230+07:00",
+      "book": "INDO",
+      "title": "IDX preopen 08:45 \u2014 triggers reviewed, one staged entry confirmed, no other action",
+      "thesis": "T-INDO-LSIP-002",
+      "kind": "pass"
+    },
+    "body": "QC WARN (not CRITICAL): price cache 47h old and four fx_carry_rates asof >60d; no trading consequence identified here, flagged for QC. Governor NONE, DD -1.67pct, no kill_actions_due, no kill_monitoring_suspended. Kill-level distances all open: MEDC.JK px 1155 vs kill 920 (25.5pct), JPFA 1445 vs 1125 (28.4pct), PTBA 2980 vs 2488 (19.8pct), ERAA 535 vs 420 (27.4pct). No de-gross required. Staged entry T-INDO-LSIP-002 reconfirmed against thesis file: limit 1430 (thesis entry 1434), qty 26,500 (0.25pct NAV, PASS_REDUCED x0.25), target 4883, kill close below 1145; ticket ORD-20261123084520-LSIP.JK-6b2f created 08:45:20 WIB, before the 09:00 clock. Blocked entries: none. Waiting for price (no fault, not ticketed): T-INDO-AKRA-001 (gap 18.0pct), T-INDO-BBRI-001 (36.5pct), T-INDO-AUTO-001 (47.9pct), T-INDO-TINS-001 (283.4pct). No entry tickets typed by this session; no cancels. Pending ticket ORD-20261119084519-CPIN.JK-a5f1 (buy limit 2200) carried unchanged from 2026-11-19, not re-cut. Flow regime STALE for INDO: no regime estimate used.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-23T08:45:20.537586+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry LSIP.JK",
+      "thesis": "T-INDO-LSIP-002",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-LSIP-002: buy 26,500 LSIP.JK limit 1430 (max chase 0%, max fill 1430) = 0.25% NAV at most. Target 0.25% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261123084520-LSIP.JK-6b2f is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-21T10:25:06.649302+07:00",
       "book": "INDO",
       "title": "WEEKLY_DEEP 2026-11-21 triage and portfolio review",
@@ -877,22 +899,6 @@
   {
     "meta": {},
     "body": "# IDEATION Session Journal \u2014 2026-10-15 (Thu)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-15T08:53; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-15T20:02:23.262532+07:00",
-      "book": "GLOBAL",
-      "title": "US_PREOPEN 2026-10-15 \u2014 no trading actions; both GLOBAL judged theses size-to-zero",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "North Book, 20:00 WIB US_PREOPEN (six South duty / North Book; tier cheap). QC WARN, not CRITICAL \u2014 single standing flag: published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d (first_seen 2026-08-31; IDX-only input, not consumed by the North Book; ops/human-owned, already escalated 08-22/09-05/10-03; fail-closed blocks any action that would use it). Flag carried, no action. (a) Kill exits: none fired \u2014 kill_actions_due empty, live_theses empty, kill_monitoring_suspended empty, both books 100% cash with 0 holdings; nothing to verify against a live ticket or fill. No breach. (b) Governor de-gross: governor NONE both books (state NONE, live false), GLOBAL gross 0.0% / dd 0.0% / n_names 0 \u2014 no DEGROSS, no de-gross mix to choose, no buys. (c) Entries: no GLOBAL thesis qualifies. Both GLOBAL judged-unticketed size-to-zero \u2014 T-GLOBAL-NVO-002 (PASS_REDUCED/NO_TRADE, sizing.pm_pct 0.0, own-Kelly<=0 at spot 38.12, expected -13.0%/3y vs cash) and T-GLOBAL-0700HK-001 (PASS_REDUCED 0.5x, sizing.pm_pct 0.0, Kelly<=0, hard_max 0.0). Quantity from sizing.pm_pct is zero for both, so no ticket and no resize (never resize here). T-GLOBAL-NVO-002 watchlist machine\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-14 (Wed)\n\n## State at entry\n- QC: WARN, 1 flag \u2014 `published cash-rate policy jkse_dividend_yield_proxy_annual_pct asof 2026-06-30 >60d` (ops/human lane; standing since 09-26, no authoritative index-level source \u2014 deliberately not stamped on a guess; escalated 08-22/09-05/10-03). No kill actions due, no reviews open, no pending orders; governor NONE both books, 100% cash, 0 names. judged_unticketed: T-INDO-ERAA-001, T-GLOBAL-NVO-002, T-GLOBAL-0700HK-001 (not mine). human_attention head: WARN blocker_written IDX_PREOPEN/claude_exit rc=1 (2026-10-14T08:47; ops lane, not session-actionable).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`SAP`/`BAC`/`MS`/`QCOM` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses alive), `ELSA`/`PTBA`/`DMAS`/`TAPG` DISCARD.\n\n## Ingestion sweep\n- data/fundamentals_inbox/\u2026",
     "persona": ""
   }
 ]
