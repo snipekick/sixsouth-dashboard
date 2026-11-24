@@ -22,6 +22,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-24 (launched 11:01 WIB, journal 2026-11-24T11:03:14+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (5 fx_carry_rates asof >60d, unchanged). No kill actions due, no reviews open. Pending LSIP.JK and CPIN.JK orders are trading-session matters, not this session's.\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (README plus `fund record` and `fund record`). Skipped. The .py files were not run.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, prices live. INDO 97 names, 9 NEGLECTED plus 12 MOMENTUM, prices live, flow regime STALE. Macro frontmatter read (balance_of_payments_pressure / CAUTIOUS, asof 2026-11-21). Memo not edited.\n- Step 4: uncarded screen row in GLOBAL: UL (#12 MOMENTUM). INDO: every screen row already carded. Kill-revisit candidates: UNH (\u221215.2% since its 09-02 valuation kill) and MUFG, JPM, 0700.HK, none carded.\n\n## Cards\n- **No new cards written.** Early exit under step 4: no uncarded candidate cleared the fast-disqualify check on data available this session.\n- **GLOBAL-UL** (not carded): no dossier in data/dossiers/ and no valuation anchor cached, so the EV and valuation-anchored target checks cannot be run. Same\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-23T08:47:47.364230+07:00",
       "book": "INDO",
@@ -894,17 +899,6 @@
       "kind": "other"
     },
     "body": "Triggers reviewed at 08:45-08:46 WIB; no new ticket typed, no cancel. (1) QC OK (qc_flags_total 0) -> no CRITICAL, proceed. (2) Kill exits: kill_revisits [], kill_actions_due [], kill_monitoring_suspended [], live_theses 0 -> no fired kill exists on any position, so no missing-ticket breach to escalate; nothing owed. (3) Governor: INDO NONE (dd 0.0%, gross 0.0%), GLOBAL NONE -> no de-gross tickets emitted, buys not vetoed. (4) Entries staged by the prelude (fund record, dry-run risk check PASS; brief entry_staging.INDO.asof 2026-10-16T08:45:07+07:00), both confirmed to still match their theses: (4a) T-INDO-ERAA-001 -> ORD-20261016084509-ERAA.JK-0571, buy 1,332,800 ERAA.JK limit 560, max_chase 0 (max fill 560) = 4.899% NAV at-cost, target 5.00% (PM sizing.pm_pct 5.0, Judge PASS_REDUCED 0.5x). Thesis entry_plan {level 560, max_chase_pct 0} -> ticket limit 560 / chase 0 MATCHES; spot 615 (asof 2026-10-15) is 9.8% above the limit, so it is a resting limit below market, not a chase; kill 420 not breached (615>420); catalyst_date 2026-10-31 (Q3-2026 LK) remains the gate. Still wanted, no cancel. (4b) T-INDO-MEDC-001 -> ORD-20261016084509-MEDC.JK-264f, buy 507,700 MEDC.JK limit 1400\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-16T08:45:09.622287+07:00",
-      "book": "INDO",
-      "title": "auto-staged entry MEDC.JK",
-      "thesis": "T-INDO-MEDC-001",
-      "kind": "entry"
-    },
-    "body": "Auto-staged entry tranche (limit) for T-INDO-MEDC-001: buy 507,700 MEDC.JK limit 1400 (max chase 5%, max fill 1470) = 4.90% NAV at most. Target 6.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261016084509-MEDC.JK-264f is stamped by risk_check and fills at the next open only within the limit.",
     "persona": ""
   }
 ]
