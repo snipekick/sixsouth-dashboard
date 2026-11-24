@@ -1,6 +1,28 @@
 [
   {
     "meta": {
+      "date": "2026-11-24T08:45:48.194001+07:00",
+      "book": "INDO",
+      "title": "IDX preopen 08:45 - triggers reviewed; CPIN staged entry confirmed, no other action",
+      "thesis": "T-INDO-CPIN-001",
+      "kind": "other"
+    },
+    "body": "[2026-11-24T08:45:48+07:00] QC WARN (5 stale fx_carry_rates, no CRITICAL): no trading gate tripped. Kill exits: none fired in session brief (kill_actions_due empty, kill_monitoring_suspended empty); no ticket owed. Governor NONE on INDO and GLOBAL, so no de-gross; no buys written. Entries: fund record staged CPIN.JK (T-INDO-CPIN-001) buy 133,900 limit 2200, max chase 3% (max fill 2266), 2.00% NAV, ticket ORD-20261124084519-CPIN.JK-1444, risk_check PASS, no warnings. Confirmed against thesis: verdict PASS_REDUCED size 0.25 (PM 2.0%), entry 2200, kill price<1800, target 3480. Prior blocker resolved: thesis cited missing ADV for CPIN; market-data snapshot now carries CPIN.JK (~Rp50.2bn ADV). Last close 2290 (2026-11-23), so the limit is 3.9% below the tape and waits as a price trigger. Blocked entries: none. Waiting for price (no fault): AKRA-001 (last 1245 vs max fill 1102), AUTO-001 (2950 vs 1988), BBRI-001 (3070 vs 2256), TINS-001 (3060 vs 819). Pre-existing open ticket not created today: ORD-20261123084520-LSIP.JK-6b2f (buy 26,500 limit 1430; 2026-11-23 close 1605, not reached); left as is, outside this session's staging. No tickets created by this session, so no risk_check run\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-24T08:45:19.677522+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry CPIN.JK",
+      "thesis": "T-INDO-CPIN-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-CPIN-001: buy 133,900 CPIN.JK limit 2200 (max chase 3%, max fill 2266) = 2.00% NAV at most. Target 2.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261124084519-CPIN.JK-1444 is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-23T08:47:47.364230+07:00",
       "book": "INDO",
       "title": "IDX preopen 08:45 \u2014 triggers reviewed, one staged entry confirmed, no other action",
@@ -883,22 +905,6 @@
       "kind": "entry"
     },
     "body": "Auto-staged entry tranche (limit) for T-INDO-MEDC-001: buy 507,700 MEDC.JK limit 1400 (max chase 5%, max fill 1470) = 4.90% NAV at most. Target 6.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261016084509-MEDC.JK-264f is stamped by risk_check and fills at the next open only within the limit.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-16T08:45:09.479552+07:00",
-      "book": "INDO",
-      "title": "auto-staged entry ERAA.JK",
-      "thesis": "T-INDO-ERAA-001",
-      "kind": "entry"
-    },
-    "body": "Auto-staged entry tranche (limit) for T-INDO-ERAA-001: buy 1,332,800 ERAA.JK limit 560 (max chase 0%, max fill 560) = 4.90% NAV at most. Target 5.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261016084509-ERAA.JK-0571 is stamped by risk_check and fills at the next open only within the limit.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-16 (Fri)\n\n## State at entry\n- QC: **OK, 0 flags** \u2014 the long-standing `published cash-rate policy jkse_dividend_yield_proxy_annual_pct` WARN is CLEARED (re-stamped 2026-10-15, value 5.15, computed by fund record from the maintained INDO universe \u2014 replaces the V3 3.0 @ 2026-06-30 placeholder that tripped MARKET_PARAM_STALE for ~2 months). No kill actions due, no reviews open, no pending orders; governor NONE both books. GLOBAL 100% cash / 0 names; INDO 90.9% cash / 2 names (ERAA, MEDC). judged_unticketed: T-INDO-TINS-001 (judged, cannot stage \u2014 price far above the ticket limit). human_attention head: V4 cutover + four owner-lane WARN/INFO items (02:30, wrapper-authored; not mine).\n- Macro regime (frontmatter asof 2026-10-10): `balance_of_payments_pressure`, risk_appetite CAUTIOUS. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc; AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM/property/consumer discretionary). Frontmatter only, not re-reasoned, not edited.\n- Cards at entry: GLOBAL `LLY`/`SMFG` WATCH, `ABBV`/`BAC`/`MS`/`QCOM`/`SAP` DISCARD. INDO `AMMN`/`TINS` WATCH, `ERAA`/`MEDC` PROMOTED (theses\u2026",
     "persona": ""
   }
 ]
