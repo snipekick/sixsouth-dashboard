@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-25T20:00:33.880347+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-11-25: no tickets (pass)",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (not CRITICAL): 5 published cash-rate policy fx_carry_rates stale >60d (EUR, JPY, GBP, CNH, MXN); flagged, no trading action taken. Kill actions due: none (kill_actions_due empty). Governor: NONE in GLOBAL and INDO, so no de-gross step. FX sleeve: no judged Macro-FX theses awaiting ticket; no FX tickets written. Entry staging: GLOBAL staged=0 blocked=0 waiting=2 (T-GLOBAL-NVO-002 gap 63.1%, T-GLOBAL-TSM-002 gap 41.3%); INDO staged=0 blocked=0 waiting=4 (T-INDO-AKRA-001 gap 16.1%, T-INDO-AUTO-001 gap 50.9%, T-INDO-BBRI-001 gap 37.4%, T-INDO-TINS-001 gap 282.2%). All waiting theses are price triggers, not faults. No new tickets created, so risk_check not run. Carry-over: INDO pending orders ORD-20261123084520-LSIP.JK-6b2f and ORD-20261124084519-CPIN.JK-1444 are untouched by this session. Judged-unticketed theses (8) and revise_queue T-INDO-AMRT-001 are not actioned here (no intraday thesis tickets permitted).",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-24T08:45:48.194001+07:00",
       "book": "INDO",
       "title": "IDX preopen 08:45 - triggers reviewed; CPIN staged entry confirmed, no other action",
@@ -888,17 +899,6 @@
       "kind": "sizing"
     },
     "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 10.0% NAV (binding constitution_cap; kelly_quarter 21.48%, liquidity 733.29%, stress-day book loss 0.42% NAV  pm_pct 6.00% NAV (exact product 10.0x0.60 = 6.0), no further deviation. Entry plan: mode=limit, level 1,400 IDR (the analyst value-anchored level STANDS; two-point EV +15.0% at 1,400 vs a thin +7.0% at spot 1,515), max_chase_pct 5 -> max fill 1,470 stays below spot (no chase into the market), valid_until 2026-12-31. Both 2026-09-16 VETO hard gates re-verified remediated (dossier fresh asof 2026-10-16; mcap IDR 33.99T >= 1T floor). Next tranche (script): 507,600 sh = 5,076 lots = 4.899% NAV (capped at 98% of the 5% single-trade cap); remaining 1.101% NAV stages after the first fill. Price-at-decision: MEDC.JK spot 1,515 IDR (asof 2026-10-15). Rules applied: none.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-16T08:47:01.839006+07:00",
-      "book": "INDO",
-      "title": "IDX_PREOPEN 2026-10-16 - triggers reviewed; ERAA + MEDC staged entries confirmed vs thesis; no kills; governor NONE; TINS waiting (no action)",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triggers reviewed at 08:45-08:46 WIB; no new ticket typed, no cancel. (1) QC OK (qc_flags_total 0) -> no CRITICAL, proceed. (2) Kill exits: kill_revisits [], kill_actions_due [], kill_monitoring_suspended [], live_theses 0 -> no fired kill exists on any position, so no missing-ticket breach to escalate; nothing owed. (3) Governor: INDO NONE (dd 0.0%, gross 0.0%), GLOBAL NONE -> no de-gross tickets emitted, buys not vetoed. (4) Entries staged by the prelude (fund record, dry-run risk check PASS; brief entry_staging.INDO.asof 2026-10-16T08:45:07+07:00), both confirmed to still match their theses: (4a) T-INDO-ERAA-001 -> ORD-20261016084509-ERAA.JK-0571, buy 1,332,800 ERAA.JK limit 560, max_chase 0 (max fill 560) = 4.899% NAV at-cost, target 5.00% (PM sizing.pm_pct 5.0, Judge PASS_REDUCED 0.5x). Thesis entry_plan {level 560, max_chase_pct 0} -> ticket limit 560 / chase 0 MATCHES; spot 615 (asof 2026-10-15) is 9.8% above the limit, so it is a resting limit below market, not a chase; kill 420 not breached (615>420); catalyst_date 2026-10-31 (Q3-2026 LK) remains the gate. Still wanted, no cancel. (4b) T-INDO-MEDC-001 -> ORD-20261016084509-MEDC.JK-264f, buy 507,700 MEDC.JK limit 1400\u2026",
     "persona": ""
   }
 ]
