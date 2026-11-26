@@ -17,6 +17,17 @@
   },
   {
     "meta": {
+      "date": "2026-11-26T20:00:34.018115+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-11-26 \u2014 no new tickets; pass",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "[2026-11-26T20:00:33+07:00] QC=WARN (6 flags: fx_carry_rates EUR/JPY/GBP/CNH/MXN asof >60d; not CRITICAL, run continued). Kill actions due: none; kill_monitoring_suspended: none. Governor: GLOBAL NONE, INDO NONE; no de-gross required. Entry staging GLOBAL: staged 0, blocked 0; waiting NVO-002 (gap 65.7%) and TSM-002 (gap 38.5%) \u2014 price triggers, no action. INDO staging: staged 0, blocked 0; waiting AKRA-001 (13.0%), AUTO-001 (51.9%), BBRI-001 (36.1%), LSIP-002 (10.1%), TINS-001 (259%) \u2014 price triggers, no action. Pending CPIN.JK buy ORD-20261124084519-CPIN.JK-1444 is pre-existing (created 2026-11-24), not touched here. FX sleeve: no judged Macro-FX theses live; no FX ticket. Tickets created this session: 0, so risk_check not run. Flags for PM: fx_carry_rates stale >60d (blocks FX sizing until refreshed); IDX disclosures feed down (HUMAN_ATTENTION 2026-11-26T16:00:46) \u2014 carried, not re-escalated. Token use: wrapper-logged.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-25T20:00:33.880347+07:00",
       "book": "GLOBAL",
       "title": "US_PREOPEN 2026-11-25: no tickets (pass)",
@@ -882,17 +893,6 @@
       "kind": "other"
     },
     "body": "Session 2026-10-19T09:46:46+07:00 -> 10:37+07:00. Four construction chains run, three INDO and one GLOBAL, all with full stage chains (draft -> Bear attack -> Revision -> re-attack where ev_math moved >20% -> Judge). Verdict mix: 4 KILL, 0 PASS, 0 PASS_REDUCED, 0 REVISE. No thesis reached step 8, so no Voss review, no size_position run, and no ticket staged; nothing was placed.\n\nT-INDO-ASII-002 (KILL, valuation): at 4,000 the win state is 8.9%/yr against an 11.2% hurdle \u2014 even p_up = 1.0 fails. The hurdle-clearing entry (~2,910) needs the 4,400 re-rating the thesis disclaims and sits below its own review trigger.\nT-INDO-KLBF-002 (KILL, valuation): at 520 expected 3.0%/yr, sub-cash before sub-hurdle; the only clearing entry (~404) is below the 410 impairment kill. The win state does clear (11.7%/yr), so this one dies on the 60% failure weight, not on certainty.\nT-GLOBAL-SMFG-003 (KILL, valuation): at 17.75 the win state is +11.10%/3y against a 12.10% hurdle; the clearing entry (~12.97-13.93) sits below the 14.20 kill. The FY2026 ROE print that justified re-advancing the idea card does not survive the recurring-ROE correction (8.6% ex one-offs); LESSON-0002 re-test confirms the\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T13:06:59.982520+07:00",
-      "book": "GLOBAL",
-      "title": "CONSTRUCT 2026-10-19 \u2014 1 chain, KILL (negative EV), no ticket staged",
-      "thesis": "T-GLOBAL-0700HK-001",
-      "kind": "kill_confirmation"
-    },
-    "body": "Session launched 2026-10-19T13:00:17+07:00. Queue inventory (step 1): (a) awaiting_pm_sizing empty; (b) judged_missing_levels empty; (c) revise_queue empty, but one attacked thesis with no verdict \u2014 T-GLOBAL-0700HK-001 (status attacked since 2026-10-16, the oldest open chain); (d) buy_verdict_sized_zero empty; (e) no ADVANCE idea cards in fund record (every card is DISCARD, WATCH or PROMOTED). The two judged-unticketed theses (T-GLOBAL-NVO-002, T-INDO-TINS-001) are already sized and risk-checked and rest at value-anchored limits far below spot (NVO 24.00 vs 39.22; TINS 780 vs 3,310) \u2014 no sizing or staging action belongs to CONSTRUCT.\n\nChain processed: T-GLOBAL-0700HK-001 (Tencent, 0700.HK, GLOBAL). Stage reached: Judge re-rule (Aldrich, frontier, isolated spawn; stage_log 2026-10-19T13:03:58+07:00). Verdict: KILL. Grounds: (1) negative EV at the thesis own entry \u2014 corrected 0.40(+12.1%) + 0.60(-45.5%) + 0.5% = -22.0%, and base fair value HK$370 sits 11.4% below the HK$417.80 market; (2) variant perception conceded void \u2014 model g = 20.9% x 40% = 8.4%, inside the 8-10% the thesis says the market prices; (3) target/up-down asymmetry is a construction defect (up leg at base value\u2026",
     "persona": ""
   }
 ]
