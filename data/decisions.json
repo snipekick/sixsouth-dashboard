@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-26T08:45:34.437882+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-11-26: triggers reviewed, no action",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "QC WARN (5 stale fx_carry_rates >60d, no FX exposure; not CRITICAL, no trading gate). Kill actions due: none; kill revisits informational only. Governor NONE, no de-gross tickets. Entry staging INDO: staged 0, blocked 0; waiting for price: AKRA-001 (gap 13.0%), LSIP-002 (10.1%), BBRI-001 (36.1%), AUTO-001 (51.9%), TINS-001 (259%). Price triggers, no action. No new tickets created by this session, so no risk_check run and no slip. Carry-over: ORD-20261124084519-CPIN.JK-1444 (buy 133,900 @ 2200, created 2026-11-24) still in orders_pending; not created today, left untouched for PM/ops review. GJTL-001 and SMSM-001 await PM sizing (not my action). Thesis review: no entry requires a line; no new theses intraday.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-25T20:00:33.880347+07:00",
       "book": "GLOBAL",
       "title": "US_PREOPEN 2026-11-25: no tickets (pass)",
@@ -888,17 +899,6 @@
       "kind": "sizing"
     },
     "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 3.45% NAV (binding quarter-Kelly after haircut; kelly_full 13.78%, liquidity cap 1801.5%, stress-day book loss 0.28% NAV  pm_pct 1.725% NAV (exact product 3.45x0.50 = 1.725, the lint bound; no further deviation). Entry plan: mode=limit, level 780 IDR (the analyst value-anchored level STANDS - moving it up destroys the EV: at the 1y low 1,100 up_pct +13.6% / down_pct -60.9% -> negative two-point EV), max_chase_pct 5 (max fill 819, still ~80% below spot), valid_until 2026-12-31. Carried note (not cured): 780 sits below the 1y low 1,100 -> an unfillable resting ticket; capital will not deploy absent an ~81% collapse, so this is a patient value discipline, not an executable path at spot 4,170. Next tranche (script): 320,700 sh = 3,207 lots = 1.725% NAV, remaining 0.0%. Price-at-decision: TINS.JK spot 4,170 IDR (asof 2026-10-15). Rules applied: none.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-16T03:24:48.993565+07:00",
-      "book": "INDO",
-      "title": "SIZED MEDC 6.00% NAV - Judge 0.60 x script 10.0 (limit 1,400)",
-      "thesis": "T-INDO-MEDC-001",
-      "kind": "sizing"
-    },
-    "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 10.0% NAV (binding constitution_cap; kelly_quarter 21.48%, liquidity 733.29%, stress-day book loss 0.42% NAV  pm_pct 6.00% NAV (exact product 10.0x0.60 = 6.0), no further deviation. Entry plan: mode=limit, level 1,400 IDR (the analyst value-anchored level STANDS; two-point EV +15.0% at 1,400 vs a thin +7.0% at spot 1,515), max_chase_pct 5 -> max fill 1,470 stays below spot (no chase into the market), valid_until 2026-12-31. Both 2026-09-16 VETO hard gates re-verified remediated (dossier fresh asof 2026-10-16; mcap IDR 33.99T >= 1T floor). Next tranche (script): 507,600 sh = 5,076 lots = 4.899% NAV (capped at 98% of the 5% single-trade cap); remaining 1.101% NAV stages after the first fill. Price-at-decision: MEDC.JK spot 1,515 IDR (asof 2026-10-15). Rules applied: none.",
     "persona": ""
   }
 ]
