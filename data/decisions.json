@@ -11,6 +11,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-26 (launched 11:00 WIB, journal 2026-11-26T11:02:19+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (5 fx_carry_rates asof >60d, unchanged). No kill actions due, no reviews open. Pending CPIN.JK order is a trading-session matter. INDO flow regime STALE (n=0).\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (README plus `fund record` and `fund record`). Skipped. The .py files were not run.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, prices live. INDO 97 names, 9 NEGLECTED plus 12 MOMENTUM, prices live, flow regime STALE. Macro frontmatter read (balance_of_payments_pressure / CAUTIOUS, asof 2026-11-21). Memo not edited.\n- Step 4: uncarded screen rows: GLOBAL UL (#10 MOMENTUM) and GLOBAL MRK (#12 MOMENTUM). INDO: every screen row already carded. Kill-revisit list from the brief: 0700.HK, QCOM, AMD, TAPG, UNH, MS, ELSA, MUFG.\n\n## Cards\n- **GLOBAL-MRK: written, WATCH, regime NEUTRAL.** Screen #12 MOMENTUM, uncarded. Kill revisit of T-GLOBAL-MRK-001 (killed 10-28 at $141.82, tag other; now $140.29). EV at dividend_income_anchor base is +9%/2.5y: positive, but ~3.5%/yr, under the COE band. The valuation anchor is not cleared on the\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-25T20:00:33.880347+07:00",
       "book": "GLOBAL",
@@ -888,17 +893,6 @@
       "kind": "kill_confirmation"
     },
     "body": "Session launched 2026-10-19T13:00:17+07:00. Queue inventory (step 1): (a) awaiting_pm_sizing empty; (b) judged_missing_levels empty; (c) revise_queue empty, but one attacked thesis with no verdict \u2014 T-GLOBAL-0700HK-001 (status attacked since 2026-10-16, the oldest open chain); (d) buy_verdict_sized_zero empty; (e) no ADVANCE idea cards in fund record (every card is DISCARD, WATCH or PROMOTED). The two judged-unticketed theses (T-GLOBAL-NVO-002, T-INDO-TINS-001) are already sized and risk-checked and rest at value-anchored limits far below spot (NVO 24.00 vs 39.22; TINS 780 vs 3,310) \u2014 no sizing or staging action belongs to CONSTRUCT.\n\nChain processed: T-GLOBAL-0700HK-001 (Tencent, 0700.HK, GLOBAL). Stage reached: Judge re-rule (Aldrich, frontier, isolated spawn; stage_log 2026-10-19T13:03:58+07:00). Verdict: KILL. Grounds: (1) negative EV at the thesis own entry \u2014 corrected 0.40(+12.1%) + 0.60(-45.5%) + 0.5% = -22.0%, and base fair value HK$370 sits 11.4% below the HK$417.80 market; (2) variant perception conceded void \u2014 model g = 20.9% x 40% = 8.4%, inside the 8-10% the thesis says the market prices; (3) target/up-down asymmetry is a construction defect (up leg at base value\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-16T03:24:48.801453+07:00",
-      "book": "INDO",
-      "title": "SIZED TINS 1.725% NAV - Judge 0.50 x script 3.45 (limit 780, unfillable resting bid)",
-      "thesis": "T-INDO-TINS-001",
-      "kind": "sizing"
-    },
-    "body": "CONSTRUCT 2026-10-16. fund record anchor recommended_pct 3.45% NAV (binding quarter-Kelly after haircut; kelly_full 13.78%, liquidity cap 1801.5%, stress-day book loss 0.28% NAV  pm_pct 1.725% NAV (exact product 3.45x0.50 = 1.725, the lint bound; no further deviation). Entry plan: mode=limit, level 780 IDR (the analyst value-anchored level STANDS - moving it up destroys the EV: at the 1y low 1,100 up_pct +13.6% / down_pct -60.9% -> negative two-point EV), max_chase_pct 5 (max fill 819, still ~80% below spot), valid_until 2026-12-31. Carried note (not cured): 780 sits below the 1y low 1,100 -> an unfillable resting ticket; capital will not deploy absent an ~81% collapse, so this is a patient value discipline, not an executable path at spot 4,170. Next tranche (script): 320,700 sh = 3,207 lots = 1.725% NAV, remaining 0.0%. Price-at-decision: TINS.JK spot 4,170 IDR (asof 2026-10-15). Rules applied: none.",
     "persona": ""
   }
 ]
