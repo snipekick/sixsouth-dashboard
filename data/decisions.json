@@ -22,6 +22,11 @@
     "persona": ""
   },
   {
+    "meta": {},
+    "body": "# IDEATION \u2014 2026-11-27 (launched 11:00 WIB, journal 2026-11-27T11:02:07+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (5 `fx_carry_rates` asof >60d plus 1 additional flag, 6 total). No kill actions due, no reviews open. Pending `CPIN.JK` buy order (`ORD-20261127084520-CPIN.JK-48d3`) is a trading-session matter. INDO flow regime STALE (`n=0`).\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (only `fund record`, `fund record`, `fund record`). Skipped.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, prices live. INDO 97 names, 3 NEGLECTED plus 12 MOMENTUM, prices live, flow regime STALE. Macro frontmatter read (`balance_of_payments_pressure` / `CAUTIOUS`, asof `2026-11-21`). Memo not edited.\n- Step 4: uncarded screen rows: GLOBAL `UL` (#10 MOMENTUM); INDO has no uncarded screen rows. Kill-revisit list from the brief: `0700.HK`, `QCOM`, `AMD`, `TAPG.JK`, `UNH`, `ELSA.JK`, `MS`, `MUFG`.\n\n## Cards\n- **GLOBAL-0700HK (`fund record`): written, DISCARD, regime NEUTRAL.** Uncarded kill revisit (`T-GLOBAL-0700HK-001`, killed 2026-10-19 at HK$417.80, tag `other`, cooldown expired 2026-11-18; now HK$344.60, \u221217.5%). Dossier (`data/dossiers/0700.fund record`) and\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-26T08:45:34.437882+07:00",
       "book": "INDO",
@@ -882,17 +887,6 @@
       "kind": "review"
     },
     "body": "GLOBAL closes WEEKLY_DEEP 2026-10-19 at 0.00% deployed, 0 names, cash USD 1,010,393.56, no ticket staged \u2014 the zero-deployment test fires and cash is priced against its benchmark rather than assumed neutral. Realised opportunity cost since inception (fund record, bench_level normalised to 100 at 2026-07-11): book 1,000,116.44 -> 1,010,393.56 = +1.03%; benchmark 100.00 -> 100.3633 = +0.36%; cash is +0.67pp AHEAD of the benchmark, so the realised cost of holding cash to date is negative \u2014 this is a statement about the tape, not a licence to keep it. Attribution of the binding gate (three-consecutive-week condition met: GLOBAL has never ramped since 2026-07-07): it is NOT 'no qualifying opportunity' and NOT construction defects or liquidity. There is one Judge-PASSED, PM-sized name \u2014 T-GLOBAL-NVO-002, PASS_REDUCED 0.25 -> pm_pct 2.50% NAV, entry_plan limit 24.00 (max fill 24.72) valid to 2027-02-15 \u2014 resting as a price trigger because the maximum fill sits 36% below the 2026-10-16 close of 38.83, far outside entries.stage_within_pct 10%, so fund record correctly writes no ticket. The gate that binds GLOBAL is therefore valuation/entry level: 22 GLOBAL theses to date, 21 KILL and 1\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T09:55:23.222777+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP 2026-10-19 triage \u2014 blockers + HUMAN_ATTENTION backlog",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Triage at 2026-10-19T09:55:23+07:00. Blocker files: 30 historical files, newest 2026-10-16 IDX_CLOSE/daily_quiet rc=3 ('trades today \u2014 not a quiet day') \u2014 a correct non-quiet signal, not a fault; resolved/no action. All other blocker files predate the V4 cutover (2026-10-16) and are superseded by V4 prelude/budget fixes; no open blocker affects this session. HUMAN_ATTENTION backlog dispositions: (1) heartbeat_gap 51h \u2014 ops/launchd, no session-side action; remains escalated. (2) market_param_stale INDO cash yield 5.50 asof 2026-08-19 \u2014 value corroborated by macro memo (BI 5.75% hold), re-stamp scheduled next MONTHLY_IC 2026-11-07; remains escalated. (3) qc_price_cache_false_positive \u2014 prelude-order/weekend artifact, prices refreshed 09:39; structural fix request stands; remains escalated. (4) qc_critical IDX_PREOPEN 09:38 \u2014 superseded: today's WEEKLY_DEEP brief is qc=WARN, prices fresh, stale=false; resolved. (5) thesis_antigaming 0700HK \u2014 chain remains status=attacked; disposition this session: see construction-chain journal (not advanced past Judge gate; thesis 5,025 words vs 1,200-word gate). (6) idx_selloff 2026-10-16 \u2014 awareness only; no mechanical action (GLOBAL 100% cash\u2026",
     "persona": ""
   }
 ]
