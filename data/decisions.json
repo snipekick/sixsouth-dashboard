@@ -49,6 +49,17 @@
     "persona": ""
   },
   {
+    "meta": {
+      "date": "2026-11-27T20:00:55.216699+07:00",
+      "book": "GLOBAL",
+      "title": "US_PREOPEN 2026-11-27 \u2014 no new tickets; pass",
+      "thesis": "",
+      "kind": "other"
+    },
+    "body": "[2026-11-27T20:00:54+07:00] QC=WARN (6 flags: fx_carry_rates EUR/JPY/GBP/CNH/MXN asof >60d; not CRITICAL, run continued). Kill actions due: none; kill_monitoring_suspended: none. Governor: GLOBAL NONE (NAV $1,014,806.26, cash 100.0%, gross 0.0%, dd 0.0%), INDO NONE; no de-gross required. Entry staging GLOBAL: staged 0, blocked 0; waiting T-GLOBAL-NVO-002 (last 40.97 vs max_fill 24.72, gap 65.7%) and T-GLOBAL-TSM-002 (last 342.34 vs max_fill 247.20, gap 38.5%) \u2014 price triggers, no action. Pending INDO order ORD-20261127084520-CPIN.JK-48d3 (created 2026-11-27T08:45) is INDO-book, not touched here. FX sleeve: no judged Macro-FX theses live; no FX ticket. Tickets created this session: 0, so risk_check not run. Carried notes: fx_carry_rates stale >60d (WARN, no FX sizing active). Token use: wrapper-logged.",
+    "persona": ""
+  },
+  {
     "meta": {},
     "body": "# CONSTRUCT Session Journal \u2014 2026-11-27 (Fri)\n\nSession launched 2026-11-27T13:00:36+07:00 WIB; journal written 2026-11-27T13:20:48+07:00 WIB. **Queue worked strictly in runbook order: (a) both newly universe-tagged buy verdicts (`T-INDO-GJTL-001`, `T-INDO-SMSM-001`) cleared Voss and were jointly sized by Gunawan; (c) `T-INDO-AMRT-002` (superseding `T-INDO-AMRT-001`) completed freshness pass, Bear attack, Revision, bounded re-attack, and Judge `KILL` (`valuation`); (e) newest universe-listed ADVANCE card `fund record` built into `T-INDO-ACES-001`, attacked, revised, re-attacked, and Judge `KILL` (`valuation`).** Session stopped at the ` Gunawan `pm_pct: 2.98%` | `PASS_REDUCED 0.5` (standing) | none today \u2014 stages next pre-open (`4,000` lots @ `1,100`, max fill `1,133`, `2.98%` NAV) |\n| T-INDO-SMSM-001 | (a) awaiting_pm_sizing | Voss `CLEAR_WITH_NOTES` -> Gunawan `pm_pct: 5.00%` | `PASS_REDUCED 0.5` (standing) | none today \u2014 stages next pre-open (`4,439` lots @ `1,630`, max fill `1,678.9`, `4.90%` NAV) |\n| T-INDO-AMRT-002 | (c) draft (supersedes `T-INDO-AMRT-001`) | Freshness (106w) -> Bear `KILL_REC` (394w) -> Rev (272w) -> Re-attack (169w) -> Judge (282w) | **KILL** (`valuation`)\u2026",
     "persona": ""
@@ -876,17 +887,6 @@
       "kind": "other"
     },
     "body": "INDO (Dani), triage at 2026-10-19T09:57:48+07:00. (a) ADVANCE cards: none. (b) kill_revisits (brief, all past 30d cooldown and >=10% below kill): ASII 4,000 vs 5,150 at kill (-22.3%, killed 2026-07-22 valuation) \u2014 FY2025 P/E ~4.9x on EPS 810, ROE 14.3%, net debt/EBITDA 1.09x, 50% payout; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints and a 22% lower price => DEEP-DIVE. KLBF 635 vs 755 (-15.9%, killed 2026-09-02 fragile_estimates) \u2014 FY2025 EPS 80.51, P/E ~7.9x, ROE 15.7%, net cash, idr_defensive; refreshed 2026-10-19 dossier; new evidence = FY2025 print + H1-26 => DEEP-DIVE. TOWR 366 vs 448 (-18.3%, killed 2026-08-24 valuation) \u2014 FY2025 EPS 69, P/E ~5.3x, ROE 13.6%, infra_tower_compounder, net debt/EBITDA 6.76x; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints => DEEP-DIVE. ELSA 560 vs 695 (-19.4%, killed 2026-08-05 process) PASS \u2014 no new fundamental evidence; 1H26 upstream -11% YoY third consecutive decline, idea card DISCARD stands. PNBN 710 vs 875 (-18.9%, killed 2026-07-13 other) PASS \u2014 bank under the macro AVOID 'INDO rate-sensitive' tilt; no new evidence. DSNG 1,215 vs 1,360 (-10.7%, killed 2026-08-19 liquidity) PASS \u2014 liquidity kill is\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T09:43:24.499018+07:00",
-      "book": "INDO",
-      "title": "QC CRITICAL \u2014 no trading actions; price-cache flags are prelude-order/weekend artifacts",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "**Gate.** session_brief qc=CRITICAL (flags evaluated 2026-10-19T09:38:58+07:00): PRICE_CACHE_OLD 51h, PRICE_SOURCES_DEAD 2.1d, MARKET_PARAM_STALE cash_yield_proxy_annual_pct.INDO. No trading actions taken (runbook step 2).\n\n**Diagnosis \u2014 price flags are a prelude-order + weekend artifact, not dead sources.**\n- Last cache before today was the Sat 06:30 US_CLOSE snapshot (audit record 2026-10-17T06:30 OK); at Mon 09:38 age = 2.13d, just over fund rules data_integrity.price_sources_dead_critical_days = 2.\n- run_session.run_prelude runs qc_state (the gate) BEFORE fund record snapshot, so qc_state always grades the pre-refresh cache. The 09:39:04 snapshot then refreshed 16 tickers from yfinance \u2014 all 13 IDX names plus IDR=X, HKD=X, ^JKSE \u2014 stale=false, implausible=false. Live positions fresh: ERAA 490, MEDC 1240. Both sources are alive.\n- Structural: the Sat 06:30 -> Mon 08:45 gap is 50.25h > 48h, so this fires on every Monday and every post-holiday Monday, blocking new risk in the preopen that matters most.\n\n**Diagnosis \u2014 MARKET_PARAM_STALE is real but non-blocking.** cash_yield_proxy_annual_pct.INDO 5.50 asof 2026-08-19 = 61d > 60d. Value still corroborated by fund record\u2026",
     "persona": ""
   }
 ]
