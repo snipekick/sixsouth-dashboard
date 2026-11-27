@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-27T11:02:34+07:00",
+  "asof": "2026-11-27T13:21:46+07:00",
   "counts": {
-    "theses": 63,
+    "theses": 64,
     "ideas": 95,
     "stocks": 106,
     "dossiers": 96,
@@ -13,14 +13,13 @@
   },
   "pipeline": {
     "by_verdict": {
-      "KILL": 47,
+      "KILL": 49,
       "PASS_REDUCED": 14,
-      "REVISE": 1,
-      "PENDING": 1
+      "REVISE": 1
     },
     "by_book": {
       "GLOBAL": 26,
-      "INDO": 37
+      "INDO": 38
     }
   },
   "kill_scorecard": {
@@ -28,7 +27,7 @@
     "scored": 47,
     "avoided": 27,
     "missed": 20,
-    "avg_move_pct": -1.0,
+    "avg_move_pct": -0.8,
     "rows": [
       {
         "thesis_id": "T-GLOBAL-NVO-001",
@@ -81,9 +80,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 640.0,
         "reason": "process",
-        "px_now": 610.0,
+        "px_now": 615.0,
         "px_asof": "2026-11-27",
-        "move_pct": -4.7
+        "move_pct": -3.9
       },
       {
         "thesis_id": "T-INDO-PNBN-001",
@@ -147,9 +146,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1575.0,
+        "px_now": 1570.0,
         "px_asof": "2026-11-27",
-        "move_pct": 17.5
+        "move_pct": 17.2
       },
       {
         "thesis_id": "T-GLOBAL-SMFG-002",
@@ -169,9 +168,9 @@
         "killed": "2026-08-05",
         "px_at_kill": 695.0,
         "reason": "process",
-        "px_now": 610.0,
+        "px_now": 615.0,
         "px_asof": "2026-11-27",
-        "move_pct": -12.2
+        "move_pct": -11.5
       },
       {
         "thesis_id": "T-GLOBAL-AMD-001",
@@ -235,9 +234,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 372.0,
+        "px_now": 374.0,
         "px_asof": "2026-11-27",
-        "move_pct": -17.0
+        "move_pct": -16.5
       },
       {
         "thesis_id": "T-GLOBAL-COST-001",
@@ -268,9 +267,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 805.0,
+        "px_now": 810.0,
         "px_asof": "2026-11-27",
-        "move_pct": 6.6
+        "move_pct": 7.3
       },
       {
         "thesis_id": "T-GLOBAL-JPM-001",
@@ -444,9 +443,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 630.0,
         "reason": "other",
-        "px_now": 805.0,
+        "px_now": 810.0,
         "px_asof": "2026-11-27",
-        "move_pct": 27.8
+        "move_pct": 28.6
       },
       {
         "thesis_id": "T-INDO-TOWR-002",
@@ -455,9 +454,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 364.0,
         "reason": "valuation",
-        "px_now": 372.0,
+        "px_now": 374.0,
         "px_asof": "2026-11-27",
-        "move_pct": 2.2
+        "move_pct": 2.7
       },
       {
         "thesis_id": "T-GLOBAL-0700HK-001",
@@ -466,9 +465,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 417.79998779296875,
         "reason": "other",
-        "px_now": 344.6000061035156,
+        "px_now": 353.0,
         "px_asof": "2026-11-27",
-        "move_pct": -17.5
+        "move_pct": -15.5
       },
       {
         "thesis_id": "T-GLOBAL-MRK-001",
@@ -488,9 +487,9 @@
         "killed": "2026-11-05",
         "px_at_kill": 10250.0,
         "reason": "valuation",
-        "px_now": 10350.0,
+        "px_now": 10400.0,
         "px_asof": "2026-11-27",
-        "move_pct": 1.0
+        "move_pct": 1.5
       },
       {
         "thesis_id": "T-INDO-DEWA-001",
@@ -532,9 +531,9 @@
         "killed": "2026-11-11",
         "px_at_kill": 294.0,
         "reason": "valuation",
-        "px_now": 334.0,
+        "px_now": 336.0,
         "px_asof": "2026-11-27",
-        "move_pct": 13.6
+        "move_pct": 14.3
       },
       {
         "thesis_id": "T-INDO-ESSA-001",
@@ -589,6 +588,32 @@
   },
   "theses": [
     {
+      "id": "T-INDO-ACES-001",
+      "book": "INDO",
+      "ticker": "ACES.JK",
+      "name": "Aspirasi Hidup Indonesia (Ace Hardware)",
+      "sector": "CONSUMER",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-11-27T13:09:30+07:00",
+      "judged": "2026-11-27T13:19:57+07:00",
+      "entry": 340.0,
+      "target": 381.0,
+      "kill": 244.0,
+      "price": null,
+      "expected_pct": -5.1,
+      "p_up": 0.4,
+      "kelly_full_pct": -57.2,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-aces-001"
+    },
+    {
       "id": "T-GLOBAL-TSM-002",
       "book": "GLOBAL",
       "ticker": "TSM",
@@ -621,19 +646,19 @@
       "name": "Sumber Alfaria Trijaya (Alfamart)",
       "sector": "CONSUMER",
       "archetype": "derated_compounder_rerating",
-      "status": "draft",
-      "verdict": null,
+      "status": "judged",
+      "verdict": "KILL",
       "size_multiplier": null,
       "horizon": "long",
       "drafted": "2026-11-21T10:12:01+07:00",
-      "judged": null,
+      "judged": "2026-11-27T13:15:14+07:00",
       "entry": 878.0,
       "target": 1066.0,
       "kill": 653.0,
       "price": 1045.0,
-      "expected_pct": -1.4,
+      "expected_pct": -2.0,
       "p_up": 0.4,
-      "kelly_full_pct": -14.9,
+      "kelly_full_pct": -22.0,
       "pm_pct": null,
       "has_model": true,
       "kill_move_pct": null,
@@ -682,7 +707,7 @@
       "entry": 1434.0,
       "target": 4883.0,
       "kill": 1145.0,
-      "price": 1575.0,
+      "price": 1570.0,
       "expected_pct": 46.8,
       "p_up": 0.25,
       "kelly_full_pct": 88.0,
@@ -774,8 +799,8 @@
       "id": "T-INDO-GJTL-001",
       "book": "INDO",
       "ticker": "GJTL.JK",
-      "name": "GJTL.JK",
-      "sector": null,
+      "name": "Gajah Tunggal",
+      "sector": "AUTOS",
       "archetype": "derated_compounder_rerating",
       "status": "judged",
       "verdict": "PASS_REDUCED",
@@ -786,11 +811,11 @@
       "entry": 1100.0,
       "target": 2300.0,
       "kill": 605.0,
-      "price": 1165.0,
+      "price": 1170.0,
       "expected_pct": 22.2,
       "p_up": 0.4,
       "kelly_full_pct": 40.0,
-      "pm_pct": null,
+      "pm_pct": 2.98,
       "has_model": true,
       "kill_move_pct": null,
       "entry_state": "not staged",
@@ -826,8 +851,8 @@
       "id": "T-INDO-SMSM-001",
       "book": "INDO",
       "ticker": "SMSM.JK",
-      "name": "SMSM.JK",
-      "sector": null,
+      "name": "Selamat Sempurna",
+      "sector": "AUTOS",
       "archetype": "derated_compounder_rerating",
       "status": "judged",
       "verdict": "PASS_REDUCED",
@@ -842,7 +867,7 @@
       "expected_pct": 9.2,
       "p_up": 0.4,
       "kelly_full_pct": 52.4,
-      "pm_pct": null,
+      "pm_pct": 5.0,
       "has_model": true,
       "kill_move_pct": null,
       "entry_state": "not staged",
@@ -916,13 +941,13 @@
       "entry": 296.0,
       "target": 421.72,
       "kill": 163.5,
-      "price": 334.0,
+      "price": 336.0,
       "expected_pct": -4.53,
       "p_up": 0.38,
       "kelly_full_pct": -15.8,
       "pm_pct": 2.5,
       "has_model": true,
-      "kill_move_pct": 13.6,
+      "kill_move_pct": 14.3,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-avia-001"
     },
@@ -968,7 +993,7 @@
       "entry": 1070.0,
       "target": 1490.0,
       "kill": 860.0,
-      "price": 1275.0,
+      "price": 1270.0,
       "expected_pct": 29.21,
       "p_up": 0.55,
       "kelly_full_pct": 182.6,
@@ -994,7 +1019,7 @@
       "entry": 1500.0,
       "target": 2450.0,
       "kill": 1125.0,
-      "price": 1430.0,
+      "price": 1425.0,
       "expected_pct": 30.7,
       "p_up": 0.44,
       "kelly_full_pct": 98.0,
@@ -1020,7 +1045,7 @@
       "entry": 3000.0,
       "target": 4842.0,
       "kill": 2488.0,
-      "price": 2960.0,
+      "price": 2980.0,
       "expected_pct": 49.7,
       "p_up": 0.42,
       "kelly_full_pct": 171.1,
@@ -1072,13 +1097,13 @@
       "entry": 7475.0,
       "target": 9344.0,
       "kill": 1868.0,
-      "price": 10350.0,
+      "price": 10400.0,
       "expected_pct": -33.0,
       "p_up": 0.35,
       "kelly_full_pct": -90.2,
       "pm_pct": null,
       "has_model": true,
-      "kill_move_pct": 1.0,
+      "kill_move_pct": 1.5,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-aadi-001"
     },
@@ -1098,13 +1123,13 @@
       "entry": 366.0,
       "target": 466.0,
       "kill": 238.0,
-      "price": 372.0,
+      "price": 374.0,
       "expected_pct": -6.0,
       "p_up": 0.32,
       "kelly_full_pct": -96.7,
       "pm_pct": null,
       "has_model": true,
-      "kill_move_pct": 2.2,
+      "kill_move_pct": 2.7,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-towr-002"
     },
@@ -1176,13 +1201,13 @@
       "entry": 520.0,
       "target": 673.0,
       "kill": 410.0,
-      "price": 805.0,
+      "price": 810.0,
       "expected_pct": 9.1,
       "p_up": 0.4,
       "kelly_full_pct": 34.1,
       "pm_pct": null,
       "has_model": true,
-      "kill_move_pct": 27.8,
+      "kill_move_pct": 28.6,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-klbf-002"
     },
@@ -1514,7 +1539,7 @@
       "entry": 780.0,
       "target": 1250.0,
       "kill": 430.0,
-      "price": 2900.0,
+      "price": 2920.0,
       "expected_pct": 3.6,
       "p_up": 0.42,
       "kelly_full_pct": 0.4,
@@ -1566,7 +1591,7 @@
       "entry": 1400.0,
       "target": 2250.0,
       "kill": 920.0,
-      "price": 1235.0,
+      "price": 1230.0,
       "expected_pct": 15.0,
       "p_up": 0.42,
       "kelly_full_pct": 38.0,
@@ -1644,13 +1669,13 @@
       "entry": 760.0,
       "target": 1140.0,
       "kill": 532.0,
-      "price": 805.0,
+      "price": 810.0,
       "expected_pct": 7.7,
       "p_up": 0.4,
       "kelly_full_pct": 24.3,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": 6.6,
+      "kill_move_pct": 7.3,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-klbf-001"
     },
@@ -1748,13 +1773,13 @@
       "entry": 390.0,
       "target": 527.0,
       "kill": 312.0,
-      "price": 372.0,
+      "price": 374.0,
       "expected_pct": 15.6,
       "p_up": 0.48,
       "kelly_full_pct": 118.7,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -17.0,
+      "kill_move_pct": -16.5,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-towr-001"
     },
@@ -1904,13 +1929,13 @@
       "entry": 685.0,
       "target": 1062.0,
       "kill": 377.0,
-      "price": 610.0,
+      "price": 615.0,
       "expected_pct": -12.25,
       "p_up": 0.2,
       "kelly_full_pct": -74.6,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -12.2,
+      "kill_move_pct": -11.5,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-elsa-002"
     },
@@ -1956,13 +1981,13 @@
       "entry": null,
       "target": null,
       "kill": null,
-      "price": 1575.0,
+      "price": 1570.0,
       "expected_pct": -5.5,
       "p_up": 0.33,
       "kelly_full_pct": -59.8,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": 17.5,
+      "kill_move_pct": 17.2,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-lsip-001"
     },
@@ -2034,13 +2059,13 @@
       "entry": 330.0,
       "target": 370.0,
       "kill": 180.0,
-      "price": 344.6000061035156,
+      "price": 353.0,
       "expected_pct": -19.0,
       "p_up": 0.4,
       "kelly_full_pct": -298.6,
       "pm_pct": 0.0,
       "has_model": true,
-      "kill_move_pct": -17.5,
+      "kill_move_pct": -15.5,
       "entry_state": null,
       "doc": "research_doc_thesis_t-global-0700hk-001"
     },
@@ -2138,13 +2163,13 @@
       "entry": 620.0,
       "target": 885.0,
       "kill": 403.0,
-      "price": 610.0,
+      "price": 615.0,
       "expected_pct": -3.8,
       "p_up": 0.22,
       "kelly_full_pct": -75.7,
       "pm_pct": null,
       "has_model": false,
-      "kill_move_pct": -4.7,
+      "kill_move_pct": -3.9,
       "entry_state": null,
       "doc": "research_doc_thesis_t-indo-elsa-001"
     },
@@ -2342,7 +2367,7 @@
       "book": "INDO",
       "ticker": "ACES.JK",
       "name": "Aspirasi Hidup Indonesia (Ace Hardware)",
-      "verdict": "ADVANCE",
+      "verdict": "PROMOTED",
       "regime": "UNASSESSED",
       "sleeve": "COVERAGE",
       "asof": "2026-11-15",
@@ -2661,7 +2686,7 @@
     {
       "book": "INDO",
       "ticker": "GJTL.JK",
-      "name": "GJTL.JK",
+      "name": "Gajah Tunggal",
       "verdict": "PROMOTED",
       "regime": "AGAINST",
       "sleeve": "COVERAGE",
@@ -2701,7 +2726,7 @@
     {
       "book": "INDO",
       "ticker": "SMSM.JK",
-      "name": "SMSM.JK",
+      "name": "Selamat Sempurna",
       "verdict": "PROMOTED",
       "regime": "AGAINST",
       "sleeve": "COVERAGE",
@@ -3207,7 +3232,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_0700-hk"
       },
-      "price": 344.6000061035156,
+      "price": 353.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -3217,9 +3242,9 @@
         "killed": "2026-10-19",
         "px_at_kill": 417.79998779296875,
         "reason": "other",
-        "px_now": 344.6000061035156,
+        "px_now": 353.0,
         "px_asof": "2026-11-27",
-        "move_pct": -17.5
+        "move_pct": -15.5
       }
     },
     {
@@ -4218,7 +4243,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_aadi-jk"
       },
-      "price": 10350.0,
+      "price": 10400.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -4228,9 +4253,9 @@
         "killed": "2026-11-05",
         "px_at_kill": 10250.0,
         "reason": "valuation",
-        "px_now": 10350.0,
+        "px_now": 10400.0,
         "px_asof": "2026-11-27",
-        "move_pct": 1.0
+        "move_pct": 1.5
       }
     },
     {
@@ -4261,10 +4286,19 @@
       "book": "INDO",
       "name": "Aspirasi Hidup Indonesia (Ace Hardware)",
       "sector": "CONSUMER",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-ACES-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-11-27T13:19:57+07:00",
+          "drafted": "2026-11-27T13:09:30+07:00",
+          "doc": "research_doc_thesis_t-indo-aces-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-15",
           "doc": "research_doc_idea_indo-aces"
         }
@@ -4276,7 +4310,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "KILL",
       "kill": null
     },
     {
@@ -4306,7 +4340,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_akra-jk"
       },
-      "price": 1275.0,
+      "price": 1270.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -4319,9 +4353,9 @@
       "theses": [
         {
           "id": "T-INDO-AMRT-002",
-          "verdict": null,
-          "status": "draft",
-          "judged": null,
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-11-27T13:15:14+07:00",
           "drafted": "2026-11-21T10:12:01+07:00",
           "doc": "research_doc_thesis_t-indo-amrt-002"
         },
@@ -4348,7 +4382,7 @@
       },
       "price": 1045.0,
       "price_asof": "2026-11-27",
-      "latest_verdict": null,
+      "latest_verdict": "KILL",
       "kill": null
     },
     {
@@ -4529,7 +4563,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_avia-jk"
       },
-      "price": 334.0,
+      "price": 336.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -4539,9 +4573,9 @@
         "killed": "2026-11-11",
         "px_at_kill": 294.0,
         "reason": "valuation",
-        "px_now": 334.0,
+        "px_now": 336.0,
         "px_asof": "2026-11-27",
-        "move_pct": 13.6
+        "move_pct": 14.3
       }
     },
     {
@@ -5095,7 +5129,7 @@
         }
       ],
       "dossier": null,
-      "price": 610.0,
+      "price": 615.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -5105,9 +5139,9 @@
         "killed": "2026-07-13",
         "px_at_kill": 640.0,
         "reason": "process",
-        "px_now": 610.0,
+        "px_now": 615.0,
         "px_asof": "2026-11-27",
-        "move_pct": -4.7
+        "move_pct": -3.9
       }
     },
     {
@@ -5233,8 +5267,8 @@
     {
       "ticker": "GJTL.JK",
       "book": "INDO",
-      "name": "GJTL.JK",
-      "sector": null,
+      "name": "Gajah Tunggal",
+      "sector": "AUTOS",
       "theses": [
         {
           "id": "T-INDO-GJTL-001",
@@ -5257,7 +5291,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_gjtl-jk"
       },
-      "price": 1165.0,
+      "price": 1170.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -5507,7 +5541,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_jpfa-jk"
       },
-      "price": 1430.0,
+      "price": 1425.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -5620,7 +5654,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_klbf-jk"
       },
-      "price": 805.0,
+      "price": 810.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -5630,9 +5664,9 @@
         "killed": "2026-09-02",
         "px_at_kill": 755.0,
         "reason": "fragile_estimates",
-        "px_now": 805.0,
+        "px_now": 810.0,
         "px_asof": "2026-11-27",
-        "move_pct": 6.6
+        "move_pct": 7.3
       }
     },
     {
@@ -5735,7 +5769,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_lsip-jk"
       },
-      "price": 1575.0,
+      "price": 1570.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": {
@@ -5745,9 +5779,9 @@
         "killed": "2026-07-22",
         "px_at_kill": 1340.0,
         "reason": "process",
-        "px_now": 1575.0,
+        "px_now": 1570.0,
         "px_asof": "2026-11-27",
-        "move_pct": 17.5
+        "move_pct": 17.2
       }
     },
     {
@@ -5823,7 +5857,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_medc-jk"
       },
-      "price": 1235.0,
+      "price": 1230.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -6050,7 +6084,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_ptba-jk"
       },
-      "price": 2960.0,
+      "price": 2980.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -6104,8 +6138,8 @@
     {
       "ticker": "SMSM.JK",
       "book": "INDO",
-      "name": "SMSM.JK",
-      "sector": null,
+      "name": "Selamat Sempurna",
+      "sector": "AUTOS",
       "theses": [
         {
           "id": "T-INDO-SMSM-001",
@@ -6233,7 +6267,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_tins-jk"
       },
-      "price": 2900.0,
+      "price": 2920.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "PASS_REDUCED",
       "kill": null
@@ -6296,7 +6330,7 @@
         "kind": "auto",
         "doc": "research_doc_dossier_towr-jk"
       },
-      "price": 372.0,
+      "price": 374.0,
       "price_asof": "2026-11-27",
       "latest_verdict": "KILL",
       "kill": {
@@ -6306,9 +6340,9 @@
         "killed": "2026-08-24",
         "px_at_kill": 448.0,
         "reason": "valuation",
-        "px_now": 372.0,
+        "px_now": 374.0,
         "px_asof": "2026-11-27",
-        "move_pct": -17.0
+        "move_pct": -16.5
       }
     },
     {
@@ -6753,7 +6787,7 @@
     },
     {
       "ticker": "GJTL.JK",
-      "name": "GJTL.JK",
+      "name": "Gajah Tunggal",
       "asof": "2026-11-07",
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",
@@ -7063,7 +7097,7 @@
     },
     {
       "ticker": "SMSM.JK",
-      "name": "SMSM.JK",
+      "name": "Selamat Sempurna",
       "asof": "2026-11-07",
       "kind": "auto",
       "source": "company financial statements via Yahoo Finance (annual + quarterly tables)",

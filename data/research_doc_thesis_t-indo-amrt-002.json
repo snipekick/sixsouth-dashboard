@@ -17,14 +17,14 @@
     "direction": "long",
     "horizon": "long",
     "archetype": "derated_compounder_rerating",
-    "status": "draft",
-    "verdict": null,
+    "status": "judged",
+    "verdict": "KILL",
     "size_multiplier": null,
     "supersedes": "T-INDO-AMRT-001",
     "catalyst_date": null,
     "estimates_committed_at": "2026-11-21T10:12:01+07:00",
     "drafted": "2026-11-21T10:12:01+07:00",
-    "judged": null,
+    "judged": "2026-11-27T13:15:14+07:00",
     "analyst": "Dani"
   },
   "levels": {
@@ -42,12 +42,12 @@
     "up_pct": 21.4,
     "p_down": 0.6,
     "down_pct": -25.6,
-    "net_div_yield_pct_pa": 5.3,
+    "net_div_yield_pct_pa": 4.8,
     "fee_tax_drag_pct": 1.0,
-    "expected_pct": -1.4,
+    "expected_pct": -2.0,
     "horizon_years": 3.0,
-    "carry_pct": 15.9,
-    "kelly_full_pct": -14.9
+    "carry_pct": 14.4,
+    "kelly_full_pct": -22.0
   },
   "sizing": {
     "script_pct": null,
@@ -173,6 +173,30 @@
       "at": "2026-11-21T10:12:01+07:00",
       "actor": "Dani",
       "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-27T13:09:16+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-27T13:12:48+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-27T13:13:33+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-27T13:15:14+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
     }
   ],
   "kill_outcome": null,
@@ -222,6 +246,26 @@
       "heading": "Earnings quality gate",
       "detail": null,
       "markdown": "Accruals (NI \u2212 CFO)/average assets FY2025 \u221210.5% (CFO = FCF + capex, dossier): clean. No special-notation or pemantauan khusus in the dossier. Q1-Q3 unaudited. PSAK 73: ROU depreciation 2,492.1; EBITDA excludes rent, so I value on EBIT/FCFF with ROU capex. Related-party receivables 12.9 (0.4%, F36); MIDI and LWS consolidate. Pledge and auditor not in the dossier."
+    },
+    {
+      "heading": "Freshness pass",
+      "detail": "2026-11-27",
+      "markdown": "Tape fell from Rp1,085 (20-Nov) to Rp1,045 (27-Nov, prev_close Rp1,045, stale=false, -3.7%), now 2.0% below base Rp1,066 (12.0x FY2026E EPS, 4.2% yield) yet 19.0% above derived entry Rp878. ADV is Rp82.93bn/day (`the liquidity feed`, vs Rp83.6bn prior); 5% of INDO NAV remains under 0.05 day at 20% participation. No fundamental, dossier (`asof: 2026-11-09`), or coverage change (BUY TP Rp1,189, 2026-11-12); `fund record` stays empty/stale, macro stays `balance_of_payments_pressure` / `CAUTIOUS` (2026-11-21), and AMRT.JK is unaffected by FTSE Russell's 21-Dec 14-stock IDX deletion. **Levels stand:** I maintain derived entry Rp878 (defect (c): EV -1.4%, own-Kelly -14.4%, no-trade at printed prices) rather than back-solving to <Rp770. Frontmatter untouched."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "DREW. Calibration absent (`n=0`).\n\n1. **Fact-check & anti-gaming.** Note 21a ties in S4 p.17/118 (`3,228.7+1,333.7=4,562.4`; `1,246.0` recurring vs `87.6` non-recurring; FY24 `1,130.2` vs `93.4`), and 50% payout holds (`1,705.3/3,410.9`, S3 p.9/F31; Rp14.50 Oct interim, F51). Two errors: (a) S3 Note 21a p.110 has `75.0`bn non-recurring inside 9M26 `1,053.3`bn other income, leaving recurring 9M26 EBIT at 3.08% (`3,116.7`bn), not 3.15%; (b) `net_div_yield_pct_pa: 5.3` is gross (5.34%), omitting 10% IDX WHT (4.80% net), cutting EV to -2.0%. `estimates_committed_at` (21-Nov) and `stage_log` are clean. **[MATERIAL]**\n\n2. **Negative EV & unexecutable construction.** At Rp878, `ev_math` prints `expected_pct: -1.4%`, `own_kelly_pct: -14.4%`, `gap_adjusted_expected_pct: -12.6%`, `up/|down|` 1.37 vs library 1.67, and `the sizing engine` sizes `0.0%`. Gap-priced (`Rp490` ARB fill, -44.2%), Kelly turns positive only `=4.6% and Note 21a recurring income >=1,246bn.\n\n**Verdict: KILL_RECOMMENDED.** Strongest sentence: At Rp878, EV is negative (-1.4%, -12.6% ARB-gapped) and sizing is 0.0%, leaving no executable price in the 52-week range while relying on a Q4 recurring-margin jump from 3.08% to 4.86% on supplier-dependent fees."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "`estimates_committed_at`, `model.lines`, and `model.valuation` are untouched. `ev_math` updates only for 10% IDX WHT: `net_div_yield_pct_pa` 5.3\u21924.8%, `expected_pct` -1.4\u2192-2.0% (+42.9% rel.), `up_down_ratio` 1.37\u21921.31, `own_kelly_pct` -14.4\u2192-22.0% (+53.1% rel.), `gap_adjusted_expected_pct` -12.6\u2192-13.2%. Both `expected_pct` and `own_kelly_pct` move >20% relative (requiring Drew re-attack before Judge).\n\n1. **[MATERIAL] Conceded.** S3 Note 21a (p.110) has 75.0bn non-recurring in 9M26 other income, putting 9M26 recurring EBIT at 3.08% (3,116.7bn; +2bp YoY vs 9M25 recurring 3.06%). Net of 10% WHT (`the fund rules`), 3y DPS yield is 4.80% (`4.8%`), cutting EV to -2.0%.\n2. **[FATAL] Conceded (`SIZING \u00a73(c)`).** At derived entry 878, EV is -2.0% (-13.2% ARB-gapped at 490) and `the sizing engine` prints 0.0%. Even at the 855 52-week low, ARB-gapped EV is -10.8% and Kelly negative; positive gap-adjusted Kelly requires =4.6%` and Note 21a recurring income `>=1,246bn`.\n\n**Verdict: KILL_RECOMMENDED** confirmed \u2014 conceded by the analyst (`0.0%` sizing, negative EV across the entire `855\u20132,000` 52-week range); send to Aldrich for final ruling."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "Correction applied: `the kill ledger` holds 47 kills (35 early kills/0 fills, modal `other`) and INDO sits at 19.24% gross (4 live names vs 8-name minimum). I rule against cash-default bias and test `PASS_REDUCED` at a price and `REVISE` first.\n\n**Verdict: KILL (`reason_tag: valuation`).** Dispositive flaw: negative expected value (`-2.0%` un-gapped, `-13.2%` ARB-gapped) and `0.0%` sizing at honestly derived levels, with no positive-Kelly entry inside the `855\u20132,000` 52-week range.\n\n1. **Process & coverage.** `the thesis linter` passes; `stage_log` is monotonic across draft, attack, revision, and bounded re-attack; Bear attacks are verbatim and consensus quarantine clean. House v6 (BUY TP Rp1,189) is reconciled: Dani's DCF-only Rp1,066 strips `87.6`bn non-recurring other income and drops the 22.22% GM bridge.\n2. **New evidence ruling.** Flagged S4 p.17/118 and S3 p.4 (`F3/F13/F17`) cure `T-INDO-AMRT-001`'s `REVISE`, tying dossier `3,228.7` to LK `4,562.4` and supporting `1,066` over `660`. Yet S3 Note 21a p.110 reveals `75.0`bn non-recurring in 9M26, cutting recurring EBIT to `3.08%` and requiring a `4.86%` Q4 jump against `18.77%` opex creep.\n3. **Three questions & LESSON-0004.** `p_up: 0.40` matches `derated_compounder_rerating`; LK citations trace, though the owner-earnings bridge (`VAL_COMPOUNDER_QUALITY`) and `66%` ROIIC durability remain unverified. Restating Drew: at derived entry `Rp878`, `expected_pct` is `-2.0%` (`-13.2%` gapped at `Rp490`), `own_kelly_pct` is `-22.0%`, and `the sizing engine` returns `0.0%`. Even at `Rp855` (52-week low), gapped EV is `-10.8%`; positive gap-adjusted Kelly requires `=4.6%`).\n\nThroughput: 1 chain judged (0 PASS / 0 PASS_REDUCED / 0 REVISE / 1 KILL); unpassable as rebuilt because negative EV holds across the entire 52-week range."
     }
   ]
 }

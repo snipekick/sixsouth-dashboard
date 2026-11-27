@@ -1,6 +1,17 @@
 [
   {
     "meta": {
+      "date": "2026-11-27T13:06:37.891382+07:00",
+      "book": "INDO",
+      "title": "SMSM.JK sizing: script 10.00% vs Judge-reduced 5.00% vs PM 5.00% NAV",
+      "thesis": "T-INDO-SMSM-001",
+      "kind": "sizing"
+    },
+    "body": "2026-11-27T13:05:52+07:00. Price at decision Rp1,685.0 (stale=false, ADV Rp5.35bn/day). fund record: script_pct 10.00% NAV (binding: constitution_cap; kelly_full 52.38%, kelly_quarter 13.10%, 15.0% correlation haircut -> 11.14%, liquidity_cap 49.26%). Judge PASS_REDUCED 0.5x sets 5.00% NAV PM ceiling (equals max_single_trade_pct_nav 5.0%). Risk Officer Voss CLEAR_WITH_NOTES. Chosen pm_pct 5.00% NAV (no further PM cut beyond Judge 0.5x). Joint AUTOS/domestic_cycle sizing with GJTL.JK (2.98% NAV): active AUTOS staging totals 7.98% NAV (10.48% pro forma with distant AUTO.JK trigger at Rp1,930; sector cap 30.0%); domestic_cycle primary moves from 9.02% live (+2.00% pending CPIN.JK) to 19.00% NAV if both fill (soft cap 40.0%, pro-forma book heat ~1.80% vs 12.0% budget). SMSM keeps the full 5.00% Judge allowance because GJTL already absorbed the 0.7x cut, SMSM holds Rp907bn net cash with ~29.5% ROE and 62% USD/export revenue (partial weak-IDR hedge alongside MEDC/PTBA under balance_of_payments_pressure / CAUTIOUS, offsetting INDO consumer-discretionary AVOID on its 38% domestic leg), and INDO sits at 19.24% gross (80.8% cash vs 60-95% band). Flows stale (n=0, no fresh foreign-flow data\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-27T08:45:58.587366+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-11-27: triggers reviewed; CPIN staged entry confirmed, no other action",
@@ -8,6 +19,17 @@
       "kind": "other"
     },
     "body": "[2026-11-27T08:45:52+07:00] QC WARN (5 stale fx_carry_rates >60d: EUR, JPY, GBP, CNH, MXN; qc_flags_total 6; no FX exposure on INDO; not CRITICAL, no trading gate). Kill exits: none fired (kill_actions_due empty, kill_monitoring_suspended empty); kill_revisits informational only. Governor NONE on INDO (dd_pct -1.67%, gross_pct 19.1%, cash_pct 80.9%, n_names 4), no de-gross tickets. Entry staging INDO: staged 1, blocked 0. Confirmed staged entry ORD-20261127084520-CPIN.JK-48d3 (buy 134,000 CPIN.JK limit 2200, max_chase_pct 3.0%, max fill 2266, 2.00% NAV, risk PASS) against fund record (verdict PASS_REDUCED size_multiplier 0.25, pm_pct 2.0%, entry 2200, kill price<1800, target 3480). Waiting for price (no fault, no action): T-INDO-AKRA-001 (last 1265.0 vs max_fill 1102.1, gap 14.8%), T-INDO-AUTO-001 (2980.0 vs 1987.9, gap 49.9%), T-INDO-BBRI-001 (3080.0 vs 2255.7, gap 36.5%), T-INDO-LSIP-002 (1585.0 vs 1430.0, gap 10.8%), T-INDO-TINS-001 (2840.0 vs 819.0, gap 246.8%). T-INDO-GJTL-001 and T-INDO-SMSM-001 await PM sizing; T-INDO-AMRT-001 in revise_queue (not IDX_PREOPEN action). No tickets created by this session, so no risk_check run and no post-09:00 slip. Escalations: none.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-27T13:06:36.944304+07:00",
+      "book": "INDO",
+      "title": "GJTL.JK sizing: script 8.51% vs Judge-reduced 4.25% vs PM 2.98% NAV",
+      "thesis": "T-INDO-GJTL-001",
+      "kind": "sizing"
+    },
+    "body": "2026-11-27T13:05:52+07:00. Price at decision Rp1,170.0 (stale=false, ADV Rp4.11bn/day). fund record: script_pct 8.51% NAV (binding: quarter_kelly_after_haircut; kelly_full 40.04%, kelly_quarter 10.01%, 15.0% correlation haircut on 9% domestic_cycle/em_flows load, liquidity_cap 37.83%, constitution_cap 10.00%). Judge PASS_REDUCED 0.5x sets 4.25% NAV PM ceiling. Risk Officer Voss RECOMMEND_REDUCE (0.7 of PM size) -> accepted pm_pct 2.98% NAV (~Rp453.2m, 0.55 days to exit at 20% ADV, ARB -45% tail -1.34% NAV, book heat +0.15pp). Joint AUTOS/domestic_cycle sizing with SMSM.JK (5.00% NAV): active AUTOS staging totals 7.98% NAV (10.48% pro forma with distant AUTO.JK trigger at Rp1,930 vs ~2,980 tape; sector cap 30.0%); domestic_cycle primary moves from 9.02% live (+2.00% pending CPIN.JK) to 19.00% NAV if both fill (soft cap 40.0%). GJTL takes the 0.7x cut for its Rp3,950.6bn related-party receivable (35% of equity, FY2026 audit Mar/Apr 2027) and IDR-funding/raw-material exposure against macro balance_of_payments_pressure / CAUTIOUS (INDO rate-sensitive consumer discretionary AVOID). Flows stale (n=0, no fresh foreign-flow data \u2014 do not estimate). Entry plan: limit Rp1,100, max_chase 3%\u2026",
     "persona": ""
   },
   {
@@ -24,6 +46,11 @@
   {
     "meta": {},
     "body": "# IDEATION \u2014 2026-11-27 (launched 11:00 WIB, journal 2026-11-27T11:02:07+07:00)\n\n## Session summary\n- Step 1 brief: QC WARN (5 `fx_carry_rates` asof >60d plus 1 additional flag, 6 total). No kill actions due, no reviews open. Pending `CPIN.JK` buy order (`ORD-20261127084520-CPIN.JK-48d3`) is a trading-session matter. INDO flow regime STALE (`n=0`).\n- Step 2 ingestion: `data/fundamentals_inbox/` holds no raw exports (only `fund record`, `fund record`, `fund record`). Skipped.\n- Step 3 screens: GLOBAL 79 names, 12 MOMENTUM rows, prices live. INDO 97 names, 3 NEGLECTED plus 12 MOMENTUM, prices live, flow regime STALE. Macro frontmatter read (`balance_of_payments_pressure` / `CAUTIOUS`, asof `2026-11-21`). Memo not edited.\n- Step 4: uncarded screen rows: GLOBAL `UL` (#10 MOMENTUM); INDO has no uncarded screen rows. Kill-revisit list from the brief: `0700.HK`, `QCOM`, `AMD`, `TAPG.JK`, `UNH`, `ELSA.JK`, `MS`, `MUFG`.\n\n## Cards\n- **GLOBAL-0700HK (`fund record`): written, DISCARD, regime NEUTRAL.** Uncarded kill revisit (`T-GLOBAL-0700HK-001`, killed 2026-10-19 at HK$417.80, tag `other`, cooldown expired 2026-11-18; now HK$344.60, \u221217.5%). Dossier (`data/dossiers/0700.fund record`) and\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {},
+    "body": "# CONSTRUCT Session Journal \u2014 2026-11-27 (Fri)\n\nSession launched 2026-11-27T13:00:36+07:00 WIB; journal written 2026-11-27T13:20:48+07:00 WIB. **Queue worked strictly in runbook order: (a) both newly universe-tagged buy verdicts (`T-INDO-GJTL-001`, `T-INDO-SMSM-001`) cleared Voss and were jointly sized by Gunawan; (c) `T-INDO-AMRT-002` (superseding `T-INDO-AMRT-001`) completed freshness pass, Bear attack, Revision, bounded re-attack, and Judge `KILL` (`valuation`); (e) newest universe-listed ADVANCE card `fund record` built into `T-INDO-ACES-001`, attacked, revised, re-attacked, and Judge `KILL` (`valuation`).** Session stopped at the ` Gunawan `pm_pct: 2.98%` | `PASS_REDUCED 0.5` (standing) | none today \u2014 stages next pre-open (`4,000` lots @ `1,100`, max fill `1,133`, `2.98%` NAV) |\n| T-INDO-SMSM-001 | (a) awaiting_pm_sizing | Voss `CLEAR_WITH_NOTES` -> Gunawan `pm_pct: 5.00%` | `PASS_REDUCED 0.5` (standing) | none today \u2014 stages next pre-open (`4,439` lots @ `1,630`, max fill `1,678.9`, `4.90%` NAV) |\n| T-INDO-AMRT-002 | (c) draft (supersedes `T-INDO-AMRT-001`) | Freshness (106w) -> Bear `KILL_REC` (394w) -> Rev (272w) -> Re-attack (169w) -> Judge (282w) | **KILL** (`valuation`)\u2026",
     "persona": ""
   },
   {
@@ -860,33 +887,6 @@
       "kind": "pass"
     },
     "body": "**Gate.** session_brief qc=CRITICAL (flags evaluated 2026-10-19T09:38:58+07:00): PRICE_CACHE_OLD 51h, PRICE_SOURCES_DEAD 2.1d, MARKET_PARAM_STALE cash_yield_proxy_annual_pct.INDO. No trading actions taken (runbook step 2).\n\n**Diagnosis \u2014 price flags are a prelude-order + weekend artifact, not dead sources.**\n- Last cache before today was the Sat 06:30 US_CLOSE snapshot (audit record 2026-10-17T06:30 OK); at Mon 09:38 age = 2.13d, just over fund rules data_integrity.price_sources_dead_critical_days = 2.\n- run_session.run_prelude runs qc_state (the gate) BEFORE fund record snapshot, so qc_state always grades the pre-refresh cache. The 09:39:04 snapshot then refreshed 16 tickers from yfinance \u2014 all 13 IDX names plus IDR=X, HKD=X, ^JKSE \u2014 stale=false, implausible=false. Live positions fresh: ERAA 490, MEDC 1240. Both sources are alive.\n- Structural: the Sat 06:30 -> Mon 08:45 gap is 50.25h > 48h, so this fires on every Monday and every post-holiday Monday, blocking new risk in the preopen that matters most.\n\n**Diagnosis \u2014 MARKET_PARAM_STALE is real but non-blocking.** cash_yield_proxy_annual_pct.INDO 5.50 asof 2026-08-19 = 61d > 60d. Value still corroborated by fund record\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T09:43:30.304127+07:00",
-      "book": "INDO",
-      "title": "MEDC next tranche blocked by QC CRITICAL gate \u2014 no manual ticket",
-      "thesis": "T-INDO-MEDC-001",
-      "kind": "pass"
-    },
-    "body": "fund record ran 2026-10-19T09:39:10+07:00 and its dry-run risk_check blocked the remaining MEDC tranche with \"QC CRITICAL \u2014 new risk blocked (risk-reducing exits still allowed)\". Binding gate: the QC level, not the thesis.\n\nEconomics: entry limit 1400, max fill 1470 (max_chase 5%); spot 1240 is inside the fill band, so absent the gate the tranche (remaining 1.101% NAV after the 4.899% first tranche filled 2026-10-16 at 1295) would have staged. STAGE_BOOK maps only IDX_PREOPEN/US_PREOPEN to a book, so the tranche cannot stage again until the 2026-10-20 IDX_PREOPEN prelude unless QC is cleared and fund record is rerun.\n\nAction: none \u2014 no manual entry ticket (runbook step 2 + V4 staging rule). Thesis unchanged: target 2250, kill 920, first tranche -4.25%; no PM re-size and no REVISE needed. QC fix escalated to HUMAN_ATTENTION.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-19 (Mon)\n\nSession 2026-10-19T11:00:18+07:00 \u2192 2026-10-19T11:05:05+07:00. Early exit per step 4: no un-carded candidate clears the fast-disqualify sniff test in either book. No cards written; three re-affirmations and two tombstone deletions for hygiene.\n\n## State at entry\n- QC **OK, 0 flags**. Governor NONE both books; no pending orders; no kill actions due; no open reviews. GLOBAL 100% cash / 0 names (NAV $1,010,393.56); INDO 91.6% cash / 2 names (ERAA, MEDC; NAV IDR 15.15bn, gross 8.42%, DD \u22120.54%). judged_unticketed: T-GLOBAL-NVO-002 and T-INDO-TINS-001 (both far above their ticket limits). No kill/review item is mine to execute. human_attention head is the WEEKLY_DEEP win-state-gate escalation (10:37), not IDEATION's.\n- Macro frontmatter (asof 2026-10-19, read only): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc (\"underwrite name-by-name, do not chase\"); AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM, property, consumer discretionary). Memo not re-reasoned, not edited.\n\n## Ingestion sweep\n- `data/fundamentals_inbox/` holds only\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T10:03:58.494274+07:00",
-      "book": "GLOBAL",
-      "title": "Zero-deployment priced: GLOBAL 0% vs ACWI +0.67pp since inception; binding gate is entry level, not an empty pipeline",
-      "thesis": "",
-      "kind": "review"
-    },
-    "body": "GLOBAL closes WEEKLY_DEEP 2026-10-19 at 0.00% deployed, 0 names, cash USD 1,010,393.56, no ticket staged \u2014 the zero-deployment test fires and cash is priced against its benchmark rather than assumed neutral. Realised opportunity cost since inception (fund record, bench_level normalised to 100 at 2026-07-11): book 1,000,116.44 -> 1,010,393.56 = +1.03%; benchmark 100.00 -> 100.3633 = +0.36%; cash is +0.67pp AHEAD of the benchmark, so the realised cost of holding cash to date is negative \u2014 this is a statement about the tape, not a licence to keep it. Attribution of the binding gate (three-consecutive-week condition met: GLOBAL has never ramped since 2026-07-07): it is NOT 'no qualifying opportunity' and NOT construction defects or liquidity. There is one Judge-PASSED, PM-sized name \u2014 T-GLOBAL-NVO-002, PASS_REDUCED 0.25 -> pm_pct 2.50% NAV, entry_plan limit 24.00 (max fill 24.72) valid to 2027-02-15 \u2014 resting as a price trigger because the maximum fill sits 36% below the 2026-10-16 close of 38.83, far outside entries.stage_within_pct 10%, so fund record correctly writes no ticket. The gate that binds GLOBAL is therefore valuation/entry level: 22 GLOBAL theses to date, 21 KILL and 1\u2026",
     "persona": ""
   }
 ]

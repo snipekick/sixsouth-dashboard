@@ -2,14 +2,17 @@
   "schema_version": 1,
   "kind": "thesis",
   "id": "T-INDO-SMSM-001",
-  "title": "SMSM.JK (SMSM.JK)",
+  "title": "Selamat Sempurna (SMSM.JK)",
   "meta": {
     "id": "T-INDO-SMSM-001",
     "book": "INDO",
     "ticker": "SMSM.JK",
-    "name": "SMSM.JK",
-    "sector": null,
-    "factors": [],
+    "name": "Selamat Sempurna",
+    "sector": "AUTOS",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
     "instrument": "equity",
     "direction": "long",
     "horizon": "long",
@@ -47,9 +50,9 @@
     "kelly_full_pct": 52.4
   },
   "sizing": {
-    "script_pct": null,
-    "pm_pct": null,
-    "deviation_reason": null
+    "script_pct": 10.0,
+    "pm_pct": 5.0,
+    "deviation_reason": "Judge PASS_REDUCED 0.5x binds (10.00% x 0.5 = 5.00% NAV, equal to max_single_trade_pct_nav); no further PM cut under joint AUTOS sizing with GJTL.JK (2.98% NAV) given net-cash Rp907bn / 62%-export IDR hedge, 80.8% book cash, and Voss CLEAR_WITH_NOTES."
   },
   "base_rate": {
     "rate": 0.4,
@@ -186,6 +189,18 @@
       "at": "2026-11-23T13:00:52+07:00",
       "actor": "Voss",
       "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-11-27T13:03:27+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    },
+    {
+      "stage": "sized",
+      "at": "2026-11-27T13:05:52+07:00",
+      "actor": "Gunawan",
+      "role": "PM_INDO"
     }
   ],
   "kill_outcome": null,
@@ -279,6 +294,16 @@
       "heading": "Risk review",
       "detail": null,
       "markdown": "**Tag: still UNTAGGED (14 days open).** `the INDO universe` has 98 lines and no SMSM.JK row; only AUTO.JK is tagged (domestic_cycle/idr_defensive). Closed-taxonomy rule: un-buyable. Layer-1 VETO stands. Sizer still returns 10% on the missing row instead of failing closed (PENDING_PATCHES). Fix: add SMSM.JK domestic_cycle / idr_defensive.\n**Stress (domestic_cycle -5% assumed):** sizer at the 10% anchor: heat 1.30 to 1.80% NAV. At the Judge 0.5 fraction (5% NAV): ~1.55%. Headroom 6.45pp to -8% REVIEW, 13.45pp to -15% DEGROSS.\n**Liquidity:** Rp758m vs 20% of Rp6.08bn ADV = 0.62 days. Clear.\n**Disguise:** domestic_cycle ERAA + JPFA + SMSM ~14% NAV (<40% soft). SMSM is the IDR-weak beneficiary against an import-cost cluster; autos sleeve (SMSM, GJTL, AUTO) is one vehicle-parc bet. No shared balance sheet or lender.\n**Kills:** machine-monitorable; KPI kills annual, price kills are the interim monitor.\n**Sizing:** `sizing:` null; PM to record script 10.0 / pm 5.0 (0.5 equals the 5% single-trade cap).\n**Verdict: ESCALATE (fail-closed, untagged). Arithmetic otherwise clean; clears at 0.5x once tagged and sizer re-run.**"
+    },
+    {
+      "heading": "Risk review",
+      "detail": null,
+      "markdown": "**Factor-tag audit \u2014 RESOLVED / CLEAR.** `SMSM.JK` added to `the INDO universe` (`AUTOS`, `domestic_cycle` / `idr_defensive`, `small`, `thin`, `main`). Both tags are in `the fund rules` `factor_taxonomy`, match peer `AUTO.JK`, and pin the higher-stress `-5.0%` primary (`domestic_cycle` vs `-3.0%` `idr_defensive`). Dossier `data/dossiers/SMSM.fund record` (`asof: 2026-11-07`, 20d old) inside 45d WARN / 60d freeze; prices/ADV fresh (`last` Rp1,685.0, `prev_close` Rp1,650.0, `ADV` Rp5.35bn/day, `stale=false`, `implausible=false`).\n**Stress / book heat.** `the sizing engine`: `book_heat_before_pct` **1.30%**, `book_heat_after_pct` **1.80%** at the 10.00% script anchor (+0.50pp). At the Judge 0.5x max (**5.00% NAV**), SMSM adds **+0.25pp** \u2192 post-trade book heat **1.55% NAV** (`book_heat_warn=false` vs 12.0% budget). Remaining governor headroom (stress-day heat vs thresholds): **6.45pp** to **\u22128% REVIEW** and **13.45pp** to **\u221215% DEGROSS** (6.20pp / 13.20pp at 10% anchor). Current drawdown: indicative \u22121.50%, official \u22121.67%, governor `NONE` (peak Rp15.44bn); combined official dd + post-trade stress day = \u22123.22% (4.78pp / 11.78pp buffer). Pending `CPIN.JK` (2.0% \u00d7 5% = +0.10pp) and peer `GJTL.JK` (if 5.0% \u00d7 5% = +0.25pp) would take heat to ~1.90% NAV.\n**Liquidity.** At 5.00% NAV = **Rp760.5m** on updated 30d ADV **Rp5.35bn/day** (down from Rp6.08bn on 11-23), 20% participation = Rp1.07bn/day \u2192 **0.71 days to exit** (14.2% of 1d ADV; 1.42d at 10% anchor), inside the 7-day limit (`liquidity_cap_pct: 49.26%` non-binding). Entry note: 10% ADV per-open cap = Rp535.2m/session (~3.52% NAV/session), so a 5.00% ticket splits across \u22652 opens; live close Rp1,685.0 is +0.36% above `entry_plan` max chase Rp1,678.90 (`1630 \u00d7 1.03`), inside `stage_within_pct: 10.0%` (stages as resting limit).\n**Concentration in disguise.** `domestic_cycle` primary rises from 9.03% (`ERAA.JK` 4.51% + `JPFA.JK` 4.51%) to **14.03% NAV** (+2.00% pending `CPIN.JK` = 16.03%; +5.00% if `GJTL.JK` also fills = 21.03%) \u2014 below 40% soft / 60% hard caps. `idr_defensive` secondary rises from 4.51% to **9.51% NAV** (11.51% with `CPIN.JK`). `AUTOS` sector moves 0.00% \u2192 **5.00% NAV** (10.00% if `GJTL.JK` fills; cap 30%). Disguised overlap: (a) `SMSM.JK` + `GJTL.JK` (`PASS_REDUCED` 0.5x in same queue) is a combined 10.00% NAV vehicle-parc / aftermarket bet, though SMSM is 62%-export net-cash filters vs GJTL domestic tyres with related-party receivable risk; (b) under `balance_of_payments_pressure` / `CAUTIOUS`, SMSM's 62% USD/export revenue aligns with `MEDC.JK` (5.50%) and `PTBA.JK` (4.71%) as a partial weak-IDR hedge (15.21% NAV combined) offsetting import-cost victims (`ERAA`, `JPFA`, `CPIN`), while its 38% domestic leg retains IDR-cost sensitivity. No shared controller, balance sheet, or lender.\n**Kill-criteria hygiene.** Four machine-monitorable criteria: `price < 1600` (`review`), `price < 1200` (`exit_full`), `ROE < 15` and `payout_ratio < 45` (`FY audited LK`, `review`). Annual KPI lag leaves up to 12m before audit trigger; `price < 1600` is the interim monitor. 2nd-ARB-band tail (~Rp1,020, \u221237.4%) costs \u22121.87% NAV at 5.00% size (\u22120.55pp beyond stated \u22121.32% at Rp1,200) \u2014 survivable.\n**Sizing audit.** `the sizing engine`: `kelly_full_pct: 52.38`, `kelly_quarter_pct: 13.10`, `correlation_haircut_pct: 15.0`, `liquidity_cap_pct: 49.26`, `constitution_cap_pct: 10.00`, `recommended_pct: 10.00`, `hard_max_pct: 10.00`. Judge `PASS_REDUCED` 0.5x \u2192 **5.00% NAV** PM ceiling (equals `max_single_trade_pct_nav: 5.0%`). `sizing:` is still `null`; PM must write `{script_pct: 10.0, pm_pct: <=5.0, deviation_reason: \"Judge PASS_REDUCED 0.5\"}` before staging.\n**Horizon balance.** `horizon: long` against a post-ramp book at 4 names / 19.24% gross (short-horizon minimum NORM currently unmet per `the risk checker`). Advisory gap noted; never force a short-horizon trade to clear it.\n**Output contract: CLEAR_WITH_NOTES** (prior untagged VETO resolved; hard limits pass; PM to record `sizing:`, monitor resting limit vs Rp1,678.90 max chase, and size `SMSM.JK` + `GJTL.JK` jointly as one `AUTOS` sleeve)."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**GUNAWAN (PM_INDO), 2026-11-27T13:05:52+07:00 \u2014 sized at 5.00% NAV (Judge 0.5x ceiling, no further PM deviation).**\n- **Anchor & multiplier:** `the sizing engine` `script_pct` **10.00% NAV** (binding: `constitution_cap`; `kelly_full` 52.38%, `kelly_quarter` 13.10%, 15.0% correlation haircut \u2192 11.14%, `liquidity_cap` 49.26%). Judge `PASS_REDUCED` 0.5x binds at **5.00% NAV** (~Rp760.5m on NAV Rp15,210.4m), matching `max_single_trade_pct_nav` 5.0%.\n- **Joint AUTOS sizing:** Sized jointly with `GJTL.JK` (2.98% NAV, where Voss's 0.7x cut was accepted). Combined new `AUTOS` exposure is **7.98% NAV** (10.48% pro forma with distant `AUTO.JK` trigger at Rp1,930 vs ~Rp2,980 tape; sector cap 30.0%). Combined `domestic_cycle` primary reaches **19.00% NAV** with live ERAA/JPFA (9.02%), pending CPIN (2.00%), GJTL (2.98%), and SMSM (5.00%) \u2014 well below the 40.0% soft cap, with post-trade book heat ~1.80% vs 12.0% budget. No further cut on SMSM: Voss ruled `CLEAR_WITH_NOTES`, SMSM's net cash (Rp907bn), ~29.5% ROE, and 62% export revenue offset GJTL's IDR-funding risk, and INDO is at 19.24% gross (80.8% cash vs 60\u201395% band).\n- **Macro & flows:** `balance_of_payments_pressure` / `CAUTIOUS`; INDO rate-sensitive consumer discretionary `AVOID`. SMSM's 62% USD/export revenue acts as a partial weak-IDR hedge alongside `MEDC.JK` and `PTBA.JK` (15.21% NAV combined if filled), while its 38% domestic leg stays exposed to IDR funding/import competition. **Flows stale** (`n=0`, no fresh foreign-flow data \u2014 none estimated).\n- **Liquidity, entry plan & staging:** ADV Rp5.35bn/day \u2192 0.71 days to exit at 20% participation (note: 10% ADV per-open cap = Rp535.2m/session, so `the fill engine` splits a 5.00% ticket across \u22652 opens). Entry plan: `{level: 1630, max_chase_pct: 3, mode: limit, valid_until: \"2026-12-28\"}`. Max fill Rp1,678.9; last close Rp1,685.0 sits +0.36% above max fill (within `stage_within_pct: 10.0%`), so `the entry stager` stages a resting limit at next pre-open until pullback <= Rp1,678.9 or `valid_until: 2026-12-28`. No order typed manually; `the sizing engine ticket` governs share count. Rules applied: none."
     }
   ]
 }

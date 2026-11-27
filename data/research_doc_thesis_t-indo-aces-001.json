@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ACES-001",
+  "title": "Aspirasi Hidup Indonesia (Ace Hardware) (ACES.JK)",
+  "meta": {
+    "id": "T-INDO-ACES-001",
+    "book": "INDO",
+    "ticker": "ACES.JK",
+    "name": "Aspirasi Hidup Indonesia (Ace Hardware)",
+    "sector": "CONSUMER",
+    "factors": [
+      "domestic_cycle",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-27T13:09:30+07:00",
+    "drafted": "2026-11-27T13:09:30+07:00",
+    "judged": "2026-11-27T13:19:57+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 340.0,
+    "target": 381.0,
+    "kill": 244.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Stripped ex-other_nonop Base DCF (cut from Rp 459 on Bear #2)",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 12.1,
+    "p_down": 0.6,
+    "down_pct": -28.2,
+    "net_div_yield_pct_pa": 6.6,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -5.1,
+    "horizon_years": 3.0,
+    "carry_pct": 19.8,
+    "kelly_full_pct": -57.2
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (rate 0.40, +50/-30, 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 244.0,
+      "action": "exit_full",
+      "note": "Bear DCF falsification level (Rp 243/sh rounded to Rp 2 tick)"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "FY26 results + AGM dividend fail to hold >=Rp32 DPS and positive SSSG"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 0.0,
+      "action": "review",
+      "name": "sssg_2q_consecutive",
+      "source": "LK/public expose (S2)"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 46.5,
+      "action": "review",
+      "name": "gross_margin_fy",
+      "source": "audited LK (100bp below FY25)"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        8582.5,
+        8638.7,
+        9303.9,
+        9955.2,
+        10552.5
+      ],
+      "ebit": [
+        1022.9,
+        623.8,
+        707.1,
+        776.5,
+        844.2
+      ],
+      "net_income": [
+        892.0,
+        668.7,
+        810.5,
+        785.3,
+        842.1
+      ],
+      "eps": [
+        51.97,
+        38.96,
+        47.34,
+        45.87,
+        49.18
+      ],
+      "dps": [
+        33.87,
+        32.01,
+        37.87,
+        36.69,
+        39.35
+      ]
+    },
+    "valuation": {
+      "method": "Lease-adjusted 10y Owner-Earnings DCF (WACC 12.0%, g 4.0%)",
+      "bear": {
+        "value": 243.0,
+        "basis": "WACC 12.5%, g 2.5%, EBIT margin 5.8%, 0 credit for other_nonop; 4.8x exit EV/EBIT_adj"
+      },
+      "base": {
+        "value": 459.0,
+        "basis": "WACC 12.0%, g 4.0%, EBIT margin 7.8-8.1%, recurring 196bn/yr other_nonop; 6.6x exit EV/EBIT_adj"
+      },
+      "bull": {
+        "value": 634.0,
+        "basis": "WACC 11.5%, g 4.5%, EBIT margin 9.5%, NEKA scale + 220bn/yr other_nonop; 8.3x exit EV/EBIT_adj"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-27T13:09:30+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-27T13:14:48+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-27T13:17:32+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-27T13:18:18+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-27T13:19:57+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "What I believe the market narrative is: ACES permanently impaired its moat by losing the ACE Hardware licence to MAP and faces structural margin compression amid weak Indonesian discretionary spending."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "- **Accruals & cash conversion (3y):** Clean \u2014 accruals ratio `(NI - CFO) / avg_assets` ran **-7.1%** (FY23), **+1.1%** (FY24), **-11.7%** (FY25), with CFO/NI conversion of **170%**, **90%**, and **246%** (`data/dossiers/ACES.fund record`). Receivables/payables are small relative to inventory (`IDR 3.4tn` in FY24; `coverage/companies/ACES.JK/assumptions.yaml`); no channel-stuffing signature.\n- **IDX status:** Main Board, liquid/dividend and KEHATI ESG index constituent (`S13`); no special-monitoring notation observed. 9M2026 (`S2`) is unaudited.\n- **Optics-class / unverified-footnote flags (no confirmed manipulation-class flag):**\n  1. **Unidentified `other_nonop`:** Pre-tax profit exceeded `EBIT + net interest` by `IDR 186bn` (FY25) and `IDR 267.5bn` (9M26), positive in all five quarters (`43.3, 41.5, 58.5, 156.0, 52.9bn`; `fund record`). Stripping `other_nonop` drops operating dividend cover below 1.0x at an 80% payout.\n  2. **PSAK 73 lease-flow gap:** Historical cash reconciliation (`FCF - Div - dCash`) shows `IDR 447-514bn/yr` of lease principal outflows in financing cash flows (`FY23: 513.8bn, FY24: 473.5bn, FY25: 447.2bn`). Unadjusted FCFF adding back ROU D&A (`~4.3-4.5%` rev) without ROU renewals overstates owner earnings; ROU and RPT footnotes (Kawan Lama leases/services) remain unverified because `idx.co.id`/IR site were unreachable (`fund record` \u00a73, \u00a76)."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed 2026-11-27T13:09:30+07:00, before any market number",
+      "markdown": "- **Operating path (most likely):** 9M2026 delivered `IDR 6,857.2bn` sales (+8.3% YoY, SSSG +2.4% vs BI retail index +0.6%; `fund record` F2, F12, F20), `IDR 496.8bn` EBIT (7.24%; Q3 jumped to 9.58%), and `IDR 604.7bn` NI (+25.7% YoY; F18). Adding a normal Q4 (`~IDR 2,447bn` sales, +6.2% YoY) yields **FY2026E revenue `IDR 9,303.9bn`** (+7.7% YoY) and **EBIT `IDR 707.1bn`** (7.6% margin). With 282 AZKO and 31 NEKA stores at 9M26 (F1, F4) plus ~5-11 delayed AZKO openings rolling into FY27, revenue grows **+7.0% (FY27E)** and **+6.0% (FY28E)**, fading to **4.0% terminal** (`<8.6%` nominal GDP). Gross margin holds **~47.6-47.8%** (weak IDR ~18,080-18,350 and NEKA mix cap recovery to FY24's 48.7%), while post-rebrand efficiency lifts EBIT margin modestly to **7.8% (FY27E)** and **8.0-8.1% (FY28E-30E)**. `other_nonop` normalizes from `IDR 312bn` (FY26E, incl. Q2 spike) to the 4-quiet-quarter run-rate (`IDR 196bn` FY27E, `198bn` FY28E), taxed at 18.5%; payout holds 80% on net cash (`~IDR 2,059bn` end-FY26E post-FY25 dividend).\n- **Owner-earnings & DCF (VAL_COMPOUNDER_QUALITY):** To avoid PSAK 73 distortion, we value retail operations on **pre-PSAK-73 owner earnings**: `EBIT_adj = EBIT - 0.9% rev` lease interest, adding only pure PPE D&A (`2.3%` rev) less cash capex (`2.5%` FY26E; `3.0%` FY27E+) less NWC drag (`38.3%` of incremental sales \u2014 2y Dec average). FY27E reinvestment rate is **57.0%** at **16.2% ROIIC** (steady-state ~14-15% ROIIC). Discounting 10y FCFFs (fade to year 10 on 90-city distribution density moat; `WACC = 12.0%` midpoint of IDR 11-13% band; `g = 4.0%`) gives **Retail EV `IDR 4,461bn`** (exit **6.6x EV/EBIT_adj**, passing multiple survival). Adding end-FY26E cash (`IDR 2,059bn`; lease debt excluded to avoid double-counting full rent) and capitalized `other_nonop` (`IDR 1,331bn` at 12%) yields **Base `IDR 459/sh`** (Bear `IDR 243`, Bull `IDR 634`).\n- **Sensitivity (Base Rp/sh):** WACC `11%/12%/13%` \u2192 `505 / 459 / 422`; EBIT margin `-1.5pp/0/+1.5pp` \u2192 `366 / 459 / 551`; `other_nonop` `0 / 196bn` \u2192 `381 / 459`."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": ">=3, citing dossier/facts.yaml",
+      "markdown": "1. **Store rollout slippage & cannibalization:** AZKO added only 5 stores in Q3 (19 YTD vs 25-30 target; `fund record` F8, F21), and FY25's 27 AZKO openings yielded just +0.7% revenue growth (`data/dossiers/ACES.fund record`), showing tier-2/3 cannibalization.\n2. **Returning ACE Hardware competition & weak macro:** MAP opened ACE Hardware in Sunter Mall (Jul-2026) and Serpong (`fund record` \u00a71) just as BI retail sales slowed to +0.6% YoY (`F12`) under `balance_of_payments_pressure` (`the macro regime memo`).\n3. **Unexplained `other_nonop` & thin operating dividend cover:** `IDR 186bn` (FY25) and `IDR 267.5bn` (9M26) below-the-line income is unidentified; ex-`other_nonop`, FY26E retail NOPAT (`~IDR 577bn`) barely covers or falls short of the `IDR 548-648bn` cash dividend (`F14`, `fund record` \u00a73).\n4. **Unverified PSAK 73 lease & Kawan Lama RPT footnotes:** Full LK footnotes remain inaccessible (`fund record` \u00a73, \u00a76); undisclosed off-debt leases or adverse group-lease resets directly reduce equity value (`~Rp 58/sh` per `IDR 1tn`)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At `Rp 352` (`-22.1%` 12m, ~7.4x FY26E P/E, ~0.9x P/B), ACES is structurally impaired post-ACE licence loss, with MAP's re-entry eroding share amid soft discretionary demand.\n**Why wrong:** FY25 absorbed the margin reset (7.2% EBIT margin vs 11.9% FY24), yet 9M26 sales grew +8.3% YoY with +2.4% SSSG (`F2`, `F20`) vs BI retail +0.6% (`F12`), showing AZKO's 282-store, 90-city network held customers. At `Rp 340-352` (~6.6x EV/EBIT_adj, ~8.8% net yield), reaching `Rp 459` needs zero multiple expansion.\n**What proves us wrong:** Two consecutive negative-SSSG quarters as MAP expands, gross margin `<46.5%`, `other_nonop` disappearing forcing a dividend cut (`<Rp 25`), or hidden ROU/RPT leaks."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Nov 2029 and this position lost 30-45%. MAP's ACE Hardware captured flagship branded-tool suppliers and Jabodetabek footfall while weak IDR (`>18,350`) compressed gross margin below 46%. Without `other_nonop` and facing adverse Kawan Lama lease resets, payout fell below 60%, sending shares to Bear `Rp 244`. An IDX ARB-gap (-25% band) below `Rp 244` fills near **`Rp 184`** (`-45.9%` from `Rp 340`)."
+    },
+    {
+      "heading": "IDX microstructure",
+      "detail": null,
+      "markdown": "Screen (`fund record`, MOMENTUM #9): `last_price Rp 352.0`, `adv_value Rp 9.13bn/day` (`>Rp 2bn` floor; 7d exit at 20% ADV = `Rp 12.8bn`), `vol 37.8%`, `corr_bench 0.63`, `mom12 -22.1%`, `mom6 +10.8%`, `mom1 +10.0%`. Main Board, `39.66%` free float (`fund record`), `Rp 2` tick, `\u00b125%` ARA/ARB. **Cache flags:** `fund record` is stale (`flow_stale: True`); `the price snapshot` and `the liquidity feed` lack `ACES.JK` keys and need refresh before `the entry stager`/`the risk checker`."
+    },
+    {
+      "heading": "Macro stance",
+      "detail": null,
+      "markdown": "`balance_of_payments_pressure / CAUTIOUS`, INDO consumer discretionary `AVOID` (`the macro regime memo`) \u2014 trade is **AGAINST** macro tilt. Weak IDR (`18,225` spot, `18,350` FY27E deck) squeezes imported COGS and funding, priced via flat ~47.7% gross margin, 12.0% WACC, un-shaded `p_up = 0.40`, and patient `Rp 340` limit entry."
+    },
+    {
+      "heading": "Valuation, ev_math and Kelly",
+      "detail": null,
+      "markdown": "Anchored at `the base-rate library` `derated_compounder_rerating` (`rate: 0.40`, `+50/-30`, 3y; library ratio `1.67`, library-Kelly `+13.3%`). Holding `p_up = 0.40` (9M26 inflection offsets MAP/macro risks), `entry = 340`, `target = 459` (`+35.0%`), `kill = 244` (`-28.2%`), `net_div_yield = 8.8%/yr` (`30.0 IDR/sh` net of 10% WHT, up leg only \u2192 `+26.4pp`), `drag = 1.0%`: `up_leg = 60.4pp`, `down_leg = 29.2pp`, **`up/|down| = 2.07`** (`>=1.3`), **`EV = +6.6%`**, **own Full-Kelly = `+37.6%`**, **Quarter-Kelly = `+9.4%`** (library `+3.3%`; ARB-gap `Rp 184` drops EV to `-4.0%`)."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "Base `Rp 459` sits `-27%` below house TP `Rp 631` (`fund record`, `fund record`): (1) house DCF (`Rp 658`) adds back ROU D&A (`6.7%` rev) less capex (`3.0%`) without deducting ROU lease renewals (`Rp 447-514bn/yr` CFF), failing multiple survival; our pre-PSAK-73 adjustment cuts Retail EV to `Rp 4,461bn` (`6.6x` exit EV/EBIT_adj); (2) we capitalize recurring `other_nonop` (`Rp 1,331bn`), partly offsetting; (3) we omit frozen trailing P/E (`Rp 505`) and EV/EBITDA (`Rp 439`) legs. Idea card questions (`fund record`): `pctv` renders 100x low in `fund record` (we use raw `fund record`/dossier data); house bear `Rp 533` freezes multiples whereas our Bear (`Rp 243`) re-prices fully; `38.3%` `nwc_pct` is Dec FY24-25 avg vs `44.0%` Sept-26 seasonal peak (`Rp 4,080.7bn` NWC)."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "1. **Fact-check & cash defect (`fund record`, `fund record`):** 9M26 sales `Rp 6,857.2bn`, EBIT `496.8bn`, NI `604.7bn`, `other_nonop` `267.5bn` (Q2 spike `156.0bn`), and CFF lease outflows `447-514bn/yr` verify. However, `Rp 2,059bn` end-FY26E cash \"ex-lease debt\" fails `2026Q3` actuals: cash fell `-41%` YTD to `1,404.4bn` vs `939.6bn` debt (net cash **`Rp 464.8bn`**), and debt includes WC facilities (`fund record`). Hitting `2,059bn` needs an unsourced `+655bn` Q4 cash surge post-leases. `[MATERIAL]`\n2. **Single-assumption dependency (`fund record` \u00a73):** Capitalizing unidentified `other_nonop` (`Rp 1,331bn` at 12%) supplies **29.8% of Retail EV (`4,461bn`)** and `Rp 77.7/sh`, contradicting `fund record` L374-377 barring capitalization alongside cash (double-count). Stripping it cuts Base to `Rp 381/sh` (`+12.1%`), drops `FY26E` operating dividend cover to **`0.89x`** (`577bn` NOPAT vs `648bn` div), lowers `net_div_yield_pct_pa` (post-10% WHT) from `8.8%` to `~6.6%` (`Rp 22.6/sh`), and turns **`EV = -5.2%`** (Quarter-Kelly `0`). `[FATAL]`\n3. **NWC surge, PSAK 73 & ARB gap (`fund record`, `the fund rules`):** `3Q26` inventory jumped `+33%` in two quarters (`2,938bn -> 3,905bn`), lifting NWC to **`43.9%` of FY26E sales** (`4,081bn`) vs `38.3%` modeled. On `30-Sep` net cash (`465bn`) ex-`other_nonop`, equity drops to `~Rp 288/sh` before unverified Kawan Lama lease/RPT gaps (`~Rp 58/sh` per `1tn`). An IDX `-25%` ARB lock below `kill 244` fills near **`Rp 184`** (`-45.9%`), cutting EV to **`-4.0%`**. `[FATAL]`\n4. **Omitted news & competition (`fund record`, `S9`):** On `2026-11-18` Kontan reported ACES raised its 2026 AZKO target to **40-45 stores** (vs 25-30; 19 opened 9M26), refuting \"5-11 delayed openings\" and signaling Q4 capex/lease strain. MAP reopened ACE Hardware in Jakarta/Serpong (`S9`) after FY25 EBIT margin fell `-470bp` (`11.9% -> 7.2%`) and 27 openings added `+0.7%` sales. `[MATERIAL]`\n5. **Archetype/macro mismatch (`the base-rate library`, `the macro regime memo`):** Screened `MOMENTUM #9` (`mom12 -22.1%`, `flow_stale: True`); `derated_compounder_rerating` (`p_up 0.40`, `n=15`) warns against structural share loss. Fights `consumer discretionary AVOID` (`IDR 18,225`) and duplicates live `ERAA.JK` (`CONSUMER / domestic_cycle`). `[MATERIAL]`\n6. **Pre-mortem:** Audited FY26 LK reveals Kawan Lama leases and `other_nonop` vanishes; dividend cuts `<Rp 22/sh`, gapping ARB past `244`. `[MINOR]`\n7. **Anti-gaming & anomalies:** `stage_log`/`estimates_committed_at` clean. Verbatim anomalies: `the calibration report report` returns `{\"n\": 0}`; `the price snapshot` (55) and `the liquidity feed` (52) omit `ACES.JK`; `fund record` is empty (`flow_stale: True`). `[MINOR]`\n\n**Stop-objecting price:** `Rp 255/sh` (with audited LK ROU/RPT footnotes and `other_nonop` disclosure).\n**Verdict:** `KILL_RECOMMENDED` \u2014 **Strongest sentence:** Capitalizing an unidentified plug for 30% of Retail EV and an unsourced `+655bn` Q4 cash surge still yields negative EV (`-4.0%` ARB-gap, `-5.2%` ex-`other_nonop`) against an `AVOID` macro regime and a returning licensor."
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "1. **Q3 cash/NWC:** `fund record` shows `2026Q1->Q3` NWC jumped `+1,195bn` (`2,886->4,081bn`) while cash fell `2,717->1,404bn` after `548bn` dividends; seasonal Q4 unwind explains most of `~2,020bn` year-end cash, **except** debt (`940bn`) includes unquantified WC facilities (`fund record`). Concede cash-bridge uncertainty until FY26 LK.\n2. **`other_nonop` FATAL (cut bought by Bear #2):** Concede. `fund record` L374-377 bars capitalizing unidentified `other_nonop` (`1,331bn`). Stripping it cuts `exit_plan.target` `459 -> 381` (`up_pct: 35.0 -> 12.1%`, `>20%` move), trims `net_div_yield_pct_pa` `8.8 -> 6.6%` (`>20%` move; `0.89x` FY26E operating cover), and flips `expected_pct` `+6.6 -> -5.1%` (`>20%` move; `up/|down| = 1.06`, Quarter-Kelly `0%`).\n3. **NWC/PSAK 73/ARB gap FATAL:** Holding `30-Sep` cash (`1,404bn`) + `43.9%` NWC cuts stripped Base further to `Rp 324/sh` (`Rp 269/sh` if `940bn` debt deducted). Under `-25%` ARB gap (`Rp 184`, `-45.9%`), `Rp 340` EV is `-15.7%` (and `-8.1%` even at `Rp 312`, the lowest stageable price within 10% of `352`). A forced `Rp 254` entry sits unstageable (`-28%` below spot) just `Rp 10` above Bear `244`. **Per `SIZING \u00a73(c)`, no coherent trade exists in the traded range; concede `KILL_RECOMMENDED`.**\n4. **Kontan 40-45 stores & MAP:** Concede; aggressive Q4 openings tighten Q4 cash/lease burn while MAP targets branded tools.\n5. **Archetype/macro:** Concede; against `consumer discretionary AVOID` (`IDR 18,225`) and `ERAA.JK` overlap, negative EV cannot pass.\n6. **Pre-mortem:** Accepted; unverified ROU/RPT/`other_nonop` breaks dividend cover.\n7. **Anomalies:** Noted (`the price snapshot`/`the liquidity feed` omit `ACES.JK`; `fund record` empty). Revisit only post-cooldown (` 381` (`up_pct: 35.0 -> 12.1%`), `net_div_yield_pct_pa` `8.8 -> 6.6%`, and `expected_pct` `+6.6 -> -5.1%` (`up/|down| = 1.06`, `Quarter-Kelly = 0%`). Both `[FATAL]` defects remain dispositive: (1) ex-`other_nonop`, operating dividend cover is `0.89x` (`FY26E`) and expected return is negative even before `3Q26` NWC (`43.9%`) or unverified Kawan Lama lease/debt deductions (`Rp 269\u2013324/sh` stripped value); (2) under IDX `-25%` ARB (`Rp 184`), EV drops to `-15.7%` at `Rp 340` (`-8.1%` at `Rp 312`). Analyst concedes `KILL_RECOMMENDED`.\n\n**Re-attack verdict:** `KILL_RECOMMENDED` \u2014 uninvestable in the stageable range; revisit only post-cooldown (`<=Rp 255/sh`) with audited FY26 LK ROU/RPT footnotes and `other_nonop` breakdown."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**KILL** \u2014 `reason_tag: valuation`. ALDRICH (JUDGE), `2026-11-27T13:19:57+07:00`. Standing calibration correction applied (`35 KILL / 5 PASS_REDUCED / 0 fills`, `12/28` kills left gains; INDO at `19.24%` gross vs 8-name floor): I do not kill reflexively or for a sub-hurdle spot price, only where honest business value fails across all sensible entries. Chain verified: `the thesis linter` PASS; `stage_log` monotonic (`13:09:30` -> `13:14:48` -> `13:17:32` -> `13:18:18` -> `13:19:57`); actors valid; verbatim Bear logs; every revision move is a cut (`459 -> 381`).\n\n1. **Dispositive valuation flaw:** Capitalizing unidentified `other_nonop` (`1,331bn`) alongside cash explicitly violated `fund record` L374-377. Stripping it cuts Base `Rp 459 -> 381` (`+12.1%`), cuts FY26E operating dividend cover to `0.89x` (`net_div_yield_pct_pa` `8.8% -> 6.6%`), and flips `expected_pct` to `-5.1%` (`up/|down| = 1.06`, `the sizing engine = 0.0%`). Holding `3Q26` actual cash (`1,404bn`, down `41%` YTD) and `43.9%` NWC cuts stripped equity further to `Rp 269\u2013324/sh`.\n2. **No `PASS_REDUCED` at a price or `REVISE`:** Not a `6a` mis-specification or `LESSON-0004` price objection: pre-PSAK-73 owner-earnings value fails at any stageable entry. With `-25%` IDX ARB (`Rp 184`), `Rp 312` (`-11%` vs `Rp 352` spot) yields `-8.1%` EV; `Rp 254\u2013255` (`-28%` vs spot) sits only `Rp 10\u201311` above Bear `Rp 244`, with unverified Kawan Lama ROU/RPT footnotes (`~Rp 58/sh` per `1tn`) and `0.89x` dividend cover.\n3. **Base rate & Drew's strongest sentence:** `p_up = 0.40` matches `derated_compounder_rerating` (`n=15`). Thesis fails Drew's strongest sentence \u2014 removing the `other_nonop` plug and `+655bn` Q4 cash surge leaves negative EV against an `AVOID` macro tilt and returning MAP ACE competition. Revisit only post-cooldown (`<=Rp 255/sh`) with audited FY26 LK ROU/RPT and `other_nonop` footnotes.\n\n*Session close: 1 chain judged (0 PASS / 0 PASS_REDUCED / 0 REVISE / 1 KILL); not passable if rebuilt \u2014 business value fails across sensible entries.*"
+    }
+  ]
+}
