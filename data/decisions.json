@@ -1,6 +1,28 @@
 [
   {
     "meta": {
+      "date": "2026-11-27T08:45:58.587366+07:00",
+      "book": "INDO",
+      "title": "IDX_PREOPEN 2026-11-27: triggers reviewed; CPIN staged entry confirmed, no other action",
+      "thesis": "T-INDO-CPIN-001",
+      "kind": "other"
+    },
+    "body": "[2026-11-27T08:45:52+07:00] QC WARN (5 stale fx_carry_rates >60d: EUR, JPY, GBP, CNH, MXN; qc_flags_total 6; no FX exposure on INDO; not CRITICAL, no trading gate). Kill exits: none fired (kill_actions_due empty, kill_monitoring_suspended empty); kill_revisits informational only. Governor NONE on INDO (dd_pct -1.67%, gross_pct 19.1%, cash_pct 80.9%, n_names 4), no de-gross tickets. Entry staging INDO: staged 1, blocked 0. Confirmed staged entry ORD-20261127084520-CPIN.JK-48d3 (buy 134,000 CPIN.JK limit 2200, max_chase_pct 3.0%, max fill 2266, 2.00% NAV, risk PASS) against fund record (verdict PASS_REDUCED size_multiplier 0.25, pm_pct 2.0%, entry 2200, kill price<1800, target 3480). Waiting for price (no fault, no action): T-INDO-AKRA-001 (last 1265.0 vs max_fill 1102.1, gap 14.8%), T-INDO-AUTO-001 (2980.0 vs 1987.9, gap 49.9%), T-INDO-BBRI-001 (3080.0 vs 2255.7, gap 36.5%), T-INDO-LSIP-002 (1585.0 vs 1430.0, gap 10.8%), T-INDO-TINS-001 (2840.0 vs 819.0, gap 246.8%). T-INDO-GJTL-001 and T-INDO-SMSM-001 await PM sizing; T-INDO-AMRT-001 in revise_queue (not IDX_PREOPEN action). No tickets created by this session, so no risk_check run and no post-09:00 slip. Escalations: none.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-27T08:45:20.554748+07:00",
+      "book": "INDO",
+      "title": "auto-staged entry CPIN.JK",
+      "thesis": "T-INDO-CPIN-001",
+      "kind": "entry"
+    },
+    "body": "Auto-staged entry tranche (limit) for T-INDO-CPIN-001: buy 134,000 CPIN.JK limit 2200 (max chase 3%, max fill 2266) = 2.00% NAV at most. Target 2.00% NAV (PM sizing); held 0.00%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261127084520-CPIN.JK-48d3 is stamped by risk_check and fills at the next open only within the limit.",
+    "persona": ""
+  },
+  {
+    "meta": {
       "date": "2026-11-26T08:45:34.437882+07:00",
       "book": "INDO",
       "title": "IDX_PREOPEN 2026-11-26: triggers reviewed, no action",
@@ -871,28 +893,6 @@
       "kind": "other"
     },
     "body": "Triage at 2026-10-19T09:55:23+07:00. Blocker files: 30 historical files, newest 2026-10-16 IDX_CLOSE/daily_quiet rc=3 ('trades today \u2014 not a quiet day') \u2014 a correct non-quiet signal, not a fault; resolved/no action. All other blocker files predate the V4 cutover (2026-10-16) and are superseded by V4 prelude/budget fixes; no open blocker affects this session. HUMAN_ATTENTION backlog dispositions: (1) heartbeat_gap 51h \u2014 ops/launchd, no session-side action; remains escalated. (2) market_param_stale INDO cash yield 5.50 asof 2026-08-19 \u2014 value corroborated by macro memo (BI 5.75% hold), re-stamp scheduled next MONTHLY_IC 2026-11-07; remains escalated. (3) qc_price_cache_false_positive \u2014 prelude-order/weekend artifact, prices refreshed 09:39; structural fix request stands; remains escalated. (4) qc_critical IDX_PREOPEN 09:38 \u2014 superseded: today's WEEKLY_DEEP brief is qc=WARN, prices fresh, stale=false; resolved. (5) thesis_antigaming 0700HK \u2014 chain remains status=attacked; disposition this session: see construction-chain journal (not advanced past Judge gate; thesis 5,025 words vs 1,200-word gate). (6) idx_selloff 2026-10-16 \u2014 awareness only; no mechanical action (GLOBAL 100% cash\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T09:57:38.217513+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP 2026-10-19 sourcing triage \u2014 GLOBAL",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "GLOBAL (Sloane), triage at 2026-10-19T09:57:38+07:00. (a) ADVANCE cards: none. (b) kill_ledger/watchlist revisits: none \u2014 NVO watch trigger is  9% on the refreshed 2026-10-16 dossier (prior gate required Q1-FY26 ROE evidence; FY2026 net income 1,583bn, equity 15,786bn), quality_bank_rerating, BOJ normalization (JPY policy 1.25%) is a direct NIM tailwind, ~3.5% total shareholder yield => DEEP-DIVE. LLY \u2014 recycle gate UNMET: price 1,257.03 vs  stays WATCH. (d) cold rows assessed because quota not met: AMD 117x forward on FY26 run-rate and heavy coverage (no variant perception); COP 23x FY25 at 52w high under a NEUTRAL commodity-bloc 'do not chase' tilt; V 39x at 52w high; CRM 31x, mom12 +3.5% (no de-rating); KO at 52w high, heavy coverage; PLTR 78% vol, no variant. All PASS \u2014 no cold-row deep-dive this week. Picks: SMFG (1). GLOBAL remains 0% deployed; the binding gate is genuinely no qualifying opportunity at an honest price, not a liquidity/ADV cap \u2014 escalated to HUMAN_ATTENTION per PM_GLOBAL zero-deployment rule. 0700HK legacy chain disposition journaled separately.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T10:37:29.831858+07:00",
-      "book": "GLOBAL",
-      "title": "WEEKLY_DEEP 2026-10-19 session close \u2014 4 chains, 4 KILL (valuation), no ticket staged",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "Session 2026-10-19T09:46:46+07:00 -> 10:37+07:00. Four construction chains run, three INDO and one GLOBAL, all with full stage chains (draft -> Bear attack -> Revision -> re-attack where ev_math moved >20% -> Judge). Verdict mix: 4 KILL, 0 PASS, 0 PASS_REDUCED, 0 REVISE. No thesis reached step 8, so no Voss review, no size_position run, and no ticket staged; nothing was placed.\n\nT-INDO-ASII-002 (KILL, valuation): at 4,000 the win state is 8.9%/yr against an 11.2% hurdle \u2014 even p_up = 1.0 fails. The hurdle-clearing entry (~2,910) needs the 4,400 re-rating the thesis disclaims and sits below its own review trigger.\nT-INDO-KLBF-002 (KILL, valuation): at 520 expected 3.0%/yr, sub-cash before sub-hurdle; the only clearing entry (~404) is below the 410 impairment kill. The win state does clear (11.7%/yr), so this one dies on the 60% failure weight, not on certainty.\nT-GLOBAL-SMFG-003 (KILL, valuation): at 17.75 the win state is +11.10%/3y against a 12.10% hurdle; the clearing entry (~12.97-13.93) sits below the 14.20 kill. The FY2026 ROE print that justified re-advancing the idea card does not survive the recurring-ROE correction (8.6% ex one-offs); LESSON-0002 re-test confirms the\u2026",
     "persona": ""
   }
 ]
