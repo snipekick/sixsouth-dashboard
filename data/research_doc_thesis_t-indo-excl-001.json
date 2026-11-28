@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-EXCL-001",
+  "title": "XLSmart Telecom Sejahtera (EXCL.JK)",
+  "meta": {
+    "id": "T-INDO-EXCL-001",
+    "book": "INDO",
+    "ticker": "EXCL.JK",
+    "name": "XLSmart Telecom Sejahtera",
+    "sector": "TELECOM",
+    "factors": [
+      "idr_defensive",
+      "infra_towers"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "turnaround_restructuring",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-28T10:12:05+07:00",
+    "drafted": "2026-11-28T10:14:24+07:00",
+    "judged": "2026-11-28T10:21:29+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 950.0,
+    "target": 1990.0,
+    "kill": 420.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Phase-1 Base value Rp1,991 (70% EBITDAaL DCF Rp2,122 + 30% 3.65x FY27E EV/EBITDA Rp1,687), rounded to IDX Rp5 tick",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.32,
+    "up_pct": 109.5,
+    "p_down": 0.68,
+    "down_pct": -55.8,
+    "net_div_yield_pct_pa": 0.94,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -3.2,
+    "horizon_years": 2.5,
+    "carry_pct": 2.35,
+    "kelly_full_pct": -5.0
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.32,
+    "source": "the base-rate library#turnaround_restructuring",
+    "library": {
+      "rate": 0.32,
+      "base_up_pct": 80.0,
+      "base_down_pct": -42.0,
+      "horizon_y": 2.5
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 420.0,
+      "action": "exit_full",
+      "note": "Bear falsification Rp419 (Rp2 tick); IDX ARB lock (-15-35%) implies ~Rp335-355 fill"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "Smartfren integration complete and FY26 audited LK confirms ARPU >= Rp46k and related-party AR < Rp2.0tn"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 41.0,
+      "action": "review",
+      "name": "blended_arpu_idr_k",
+      "source": "quarterly_results_press_release"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        34391.6,
+        42446.0,
+        48388.4,
+        52259.5,
+        55917.7
+      ],
+      "ebit": [
+        5588.6,
+        -233.2,
+        1064.5,
+        4964.7,
+        6710.1
+      ],
+      "net_income": [
+        1819.0,
+        -4426.6,
+        -1929.0,
+        1175.5,
+        2724.2
+      ],
+      "eps": [
+        139.0,
+        -276.0,
+        -106.0,
+        64.6,
+        149.7
+      ],
+      "dps": [
+        48.6,
+        159.0,
+        0.0,
+        0.0,
+        29.9
+      ]
+    },
+    "valuation": {
+      "method": "70% Lease-Adjusted FCFF DCF (EBITDAaL, WACC 10.2%, g 4.0%, 5% gov discount) + 30% Peer EV/EBITDA (3.65x FY2027E)",
+      "bear": {
+        "value": 419.0,
+        "basis": "Price-war relapse (-3pp rev growth, -2.5pp EBITDA margin, WACC 10.8%, g 3.5%, FY27+ capex cut): Rp273 DCF / Rp760 at 3.3x FY27E EBITDA"
+      },
+      "base": {
+        "value": 1991.0,
+        "basis": "ARPU repair (+8% FY27E rev, 46.5% EBITDA, capex 44%->20%, 5% gov haircut): Rp2,122 DCF / Rp1,687 at 3.65x FY27E EBITDA"
+      },
+      "bull": {
+        "value": 4922.0,
+        "basis": "3-player repair + net synergies (+2pp rev, +2pp EBITDA margin, WACC 9.6%, g 4.0%): Rp5,613 DCF / Rp3,308 at 4.5x FY27E EBITDA"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-28T10:14:24+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-28T10:17:52+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-28T10:19:29+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-28T10:20:22+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-28T10:21:29+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, written before document work",
+      "markdown": "What I believe the market narrative is: PT XLSMART Telecom Sejahtera Tbk (XL Axiata + Smartfren) is Indonesia's consolidating #3 mobile operator backed jointly by Axiata and Sinar Mas, where investors debate whether three-player ARPU repair and synergies can overcome heavy 5G capex and PSAK 73 lease obligations to generate durable equity free cash flow."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "- **Accruals & CFO/NI (`data/dossiers/EXCL.fund record`, `fund record`, `fund record` p.12\u201316, `F30`/`F35`):** Accruals `(NI-CFO)/avg_assets`: `-14.9%` (FY22), `-17.0%` (FY23), `-18.4%` (FY24), `-21.8%` (FY25: `-Rp4,426.6bn` NI vs `+Rp17,501.5bn` CFO; `1H25 -10.1%`). `CFO/NI`: `12.8x`, `12.8x`, `9.8x`, `NM` (`5.8x` on FY25 normalized PAT `Rp3,000bn` `F4`). **PSAK 73 nuance:** lease principal (`Rp4,748.2bn` FY24 `fund record`; `Rp3,136.4bn` 1H25 `fund record`) and lease interest (`Rp2,174.5bn` FY24; `Rp1,512.6bn` 1H25) sit in Financing CF; post-lease FCF was `-Rp652bn` (FY22), `-Rp1,045bn` (FY23), `+Rp1,414bn` (FY24), `+Rp280bn` (1H25).\n- **Merger D&A, leases & spectrum (`fund record`, `fund record` Notes 2i/8/9/15, `fund record`, `F26`):** FY25 D&A hit `Rp18.0tn` (`42.4%` of rev `fund record`) via `~Rp5tn` non-cash accelerated depreciation (`fund record`) on retiring legacy gear and returning `7.5 MHz` of `900 MHz` spectrum by Dec 2026 (`fund record` Note 9; `1H25` `Rp739.4bn` `F34`). Lease liabilities reached `Rp40,169.3bn` at 1H25 (`Rp9,846.6bn` assumed) vs `Rp20,870bn` non-lease debt at 1H26 (`F26`/`fund record`, all IDR, `90%` floating). Spectrum (`Rp11,908.6bn` 1H25) is unamortised indefinite-lived; cash spectrum outflows occur via `13\u201314%` regulatory burden (`F27`/`fund record`) and July 2026 bids (`Rp1,291.8bn` for `700 MHz`/`2.6 GHz`, `fund record`). FY26 capex guide `Rp20tn` (`F20`/`fund record`) matches 1H26 capitalized spend `Rp10.27tn` (`F21`).\n- **IDX & governance flags (`fund record`, `fund record`, `fund record`, `fund record` Notes 19/30):** Regular board, non-HSC, no special notation (`fund record` \u00a76). Dec 2025 paid `Rp2.89tn` (`Rp159/sh` `F22`) from YE24 retained earnings before skipping FY25 final dividend (`fund record`). Dual controllers Axiata (`34.69%` issued) and Sinar Mas (`~34.8%`) share control (`fund record`, `fund record`). **Optics-class flag:** related-party trade receivables jumped `+147%` in 1H25 to `Rp2,421.3bn` (`67.4%` of trade AR `F36`/`F37`, `2.13%` of assets): Link Net `Rp1,779.8bn` (3.8x YE24), Axiata Digital Analytics `Rp389.8bn`, Eka Mas Republik `Rp179.6bn` (`fund record` Note 30c); 1H25 related-party revenue `3.39%`, infra expense `11.94%`, leases `Rp872.7bn` (`Notes 30f\u2013i`). Triggers a `5%` EV governance haircut."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "- **Revenue & ARPU (`fund record`, `fund record`, `F7`/`F9`/`F31`):** 1H26 revenue `Rp24,030bn` (`+26% YoY`) and blended ARPU **`Rp47.1k` vs `Rp38.2k` YoY (`+23.3%`, `fund record`; `+5.1%` vs `4Q25 Rp44.8k`)** support FY26E `Rp48,388.4bn` (`+14.0%`), FY27E `Rp52,259.5bn` (`+8.0%`, net of Apr 2027 Smartfren cutover churn `fund record`), FY28E `Rp55,917.7bn` (`+7.0%`), fading to `4.0%`.\n- **Margins & EBIT (`fund record`, `fund record`, `fund record`, `fund record`):** Normalized EBITDA margin `46.2%` FY26E (near 1H26 `46.0%` `F10`), `46.5%` FY27E, `47.0%` FY28E as `USD 153m` 1H26 gross synergies shift from 5G/decommissioning (`15k` sites removed `fund record`) to net savings. D&A eases from `44.0%` FY26E (1H26 EBIT `+Rp282.8bn`, `dossier`) to `37.0%` FY27E post-Dec 2026 `900 MHz` return and `35.0%` FY28E, lifting EBIT from `Rp1,064.5bn` to `Rp6,710.1bn` and reported NI from `-Rp1,929.0bn` to `+Rp2,724.2bn` (`18,199.9m` shares; `20%` dividend resumes FY28E).\n- **Lease-adjusted FCFF, ROIC & AFFO (`fund record`, `fund record`, `fund record`, `fund record`):** Owned capex + `Rp1,291.8bn` spectrum (`fund record`) = `Rp21,292bn` (`44.0%`) in FY26E, fading to `33.0%` FY27E, `27.0%` FY28E, `20.0%` steady state (matching `~19%` owned D&A). Deducting lease cash (`19.0%`\u2192`16.0%`), `FCFF_AL` inflects from `-Rp7,697bn` (FY26E) and `-Rp2,085bn` (FY27E) to `+Rp1,425bn` (FY28E) and `+Rp5,821bn` (FY30E). Non-lease ROIC (`NOPAT_AL / Rp48,038bn`) rises from `-3.9%` (FY26E) to `3.2%` (FY27E), `5.9%` (FY28E), and `11.5%` (FY30E, clearing `10.2%` WACC); FY28E/FY30E AFFO yields `8.5%`/`11.7%` on Base equity (`Rp36,236bn`) vs `7.45%` 10y FR.\n- **Intrinsic valuation (`Rp1,991` Base / `Rp419` Bear / `Rp4,922` Bull):** `70%` EBITDAaL DCF (`Rp2,122` Base, `5%` gov haircut, `Rp18,204bn` non-lease net debt) + `30%` `3.65x` FY27E EV/EBITDA (`Rp1,687` Base, `~Rp58tn` lease-inclusive net debt)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At `Rp1,720` (`+15%` since `2026-11-09` `Rp1,495`), the market prices EXCL.JK near `4.0x` FY26E EBITDA \u2014 discounting statutory losses (`1H26 -Rp994bn`) and `Rp20tn` capex as structural impairment while overlooking post-2027 cash inflection, or conversely assuming spot offers wide upside.\n**Why wrong:** Both views miss the balance-sheet reality: at `Rp1,720`, upside to honest lease-adjusted Base (`Rp1,991`) is only `+15.8%` against `-75.6%` Bear (`Rp419`), making spot uninvestable (`EV -39.5%`, negative Kelly). Only at a patient `limit Rp950` (`3.1x` FY27E EV/EBITDA) does 3-player ARPU repair create asymmetric `+10.4%` EV (`1.96x` payoff ratio).\n**What proves us wrong:** Sustained data price war compressing ARPU ` 36%` of revenue, or Link Net/related-party receivable write-offs."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "Our Base (`Rp1,991`) sits `43%` below house coverage `tp_final` (`Rp3,472.6` in `coverage/companies/EXCL.JK/model.json`) for four reasons: (1) **Lease treatment** \u2014 coverage's `Rp3,621` DCF adds back ROU depreciation (`da`) without deducting ongoing lease renewals (`FY26E FCFF +Rp2,849bn`), whereas our EBITDAaL DCF deducts cash lease outflows (`19%`\u2192`16%` of rev; `FY26E FCFF_AL -Rp7,697bn`), yielding `Rp2,122`; (2) **Spectrum cash outflow** \u2014 we embed `Rp1,291.8bn` July 2026 auction bids (`fund record`), omitted from coverage; (3) **Governance** \u2014 `5%` EV haircut for `+147%` related-party AR (`fund record` Note 30c); (4) **V0 vs forward roll** \u2014 coverage rolls `tp_base Rp3,190` forward 12m and weights convex Bull (`Rp6,986` at `25%`), whereas we anchor on V0 Base."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. Statutory net loss continued through `2Q26` (`-Rp277.2bn`, `1H26 -Rp994.1bn`, `data/dossiers/EXCL.fund record`) and FY25 final dividend was skipped (`fund record`).\n2. Related-party trade receivables jumped `+147%` in 1H25 to `Rp2,421.3bn` (`67.4%` of trade AR, led by Link Net `Rp1,779.8bn`, `fund record` Note 30c), exceeding third-party receivables (`Rp1,169.4bn`).\n3. FY26 capex was hiked `33%` to `Rp20tn` (`fund record`/`F20`) plus `Rp1,291.8bn` spectrum bids (`fund record`), pushing `FY26E\u2013FY27E` post-lease FCF negative (`-Rp9.8tn` cumulative).\n4. Post-merger lease liabilities stand at `Rp40,169.3bn` (`fund record` Note 15) on `90%` floating-rate IDR bank debt (`fund record`) under a `5.75%` BI-Rate tightening regime (`the macro regime memo`)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is November 2029 and a filled position lost 30%+. The most likely reason is data-pricing discipline broke after Smartfren's April 2027 integration as Telkomsel/IOH defended share, driving blended ARPU back below `Rp40k` while 5G obligations (`51%` pop coverage `fund record`) kept capex `>30%` of revenue; with `~Rp58tn` lease-inclusive debt, equity compressed toward Bear (`Rp419`), and IDX ARB locks (`-15\u201335%`) filled exits near `~Rp340\u2013355`."
+    },
+    {
+      "heading": "Flow & ownership checklist",
+      "detail": null,
+      "markdown": "- **Foreign flow:** **flows stale** (`market-data snapshot` is `{}`; zero fresh readings).\n- **Ownership & float:** `fund record` reports `free_float 29.35%`, `insider 80.231%`, `institution 3.343%` (mutually inconsistent `>100%`). Primary filing `fund record` Note 19 shows `18,199.9m` issued (`17,105.2m` ex-`1,094.7m` treasury shares from April 2025 dissenting buyback): Axiata `34.69%`, Sinar Mas entities `~34.8%` (`fund record`), public `<5%` `26.33%` (`~26\u201329%` effective float).\n- **Disclosures:** Oct 2026 commissioner swap Thomas Hundt for Vivek Sood (`fund record`); no rights issue or share pledge disclosed (`fund record` \u00a76)."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": null,
+      "markdown": "- **Conviction & edge:** `2/5` at spot (`Rp1,720`, negative EV `-39.5%`, `own-Kelly -327.9%` \u2014 pass/do not chase); `3/5` at patient `limit Rp950` (`EV +10.4%`, `up/|down| 1.96x` vs `1.67x` library; **`own-Kelly +16.5%` / quarter-Kelly `4.13%` vs `library-Kelly +13.3%`**). Edge: slow market/accounting separation of non-cash 900 MHz D&A vs real PSAK 73 lease economics.\n- **Liquidity & regime:** `adv_book Rp36.20bn/day` (`adtv_3m Rp24.88bn`), 100-share board lot (`mcap Rp31.30tn`); 20% ADV clears `~Rp7.2bn/day` (full `1\u20134%` INDO position exits in 1 day normal, or 1\u20132 ARB sessions under stress). Sector `TELECOM` / `idr_defensive` is NEUTRAL to `balance_of_payments_pressure / CAUTIOUS` tilts (`the macro regime memo`), with `BI-Rate 5.75%` domestic WACC headwind and Link Net governance flag noted."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check:** Verified 3 load-bearing inputs: 1H26 ARPU `Rp47.1k` vs `Rp38.2k` (`fund record` l.44, `F31`), FY26E capex+spectrum `Rp21,292bn` (`Rp20tn` `fund record` l.20 + `Rp1,291.8bn` `fund record` l.39,65), 1H25 leases `Rp40,169.3bn` / FY25A `-Rp4,426.6bn` NI (`fund record` l.7381; `dossier`). `[MINOR]`\n1. **Estimates (fragile \u2014 single-assumption dependency):** Steady-state `20%` capex/rev undercuts pre-merger XL (`21.4%`, `fund record` l.94) and ignores the 5y `538-village` 4G + `51%` 5G mandate (`fund record` l.70\u201372). Using coverage's `28%` (`fund record` l.92) cuts FY30E `FCFF_AL` (`+Rp5,821bn`) by `~Rp4.8tn/yr`, erasing `>Rp30tn` EV and pushing DCF below `Rp950`. `[FATAL]`\n2. **Variant perception:** At `Rp1,720` (`~4.0\u20134.3x` FY26E EBITDA, `0%` div, `3.6x` net debt/EBITDA), EXCL trades *above* dividend-paying TLKM (`3.52x`, `11.3%`) and ISAT (`3.77x`, `7.8%`, `fund record` l.1594\u20131606). `limit Rp950` (`-45%` spot, `-35%` vs `Rp1,460` 52w low, expiring `2027-02-28`) is adverse selection: it fills only if ARPU or funding breaks. `[FATAL]`\n3. **Catalyst:** Flows favor yielding TLKM/ISAT over zero-dividend, `90%` floating-IDR debt (`5.75%` BI-Rate); competitor defense at Apr-2027 Smartfren cutover (`fund record`) plus Komdigi rules can stall repair. `[MATERIAL]`\n4. **Base rate:** `derated_compounder_rerating` (`0.40`, `n=15`) is misapplied to a loss-making (`-Rp4.4tn`), zero-dividend turnaround; `turnaround_restructuring` (`0.32`, `n=30`, `the base-rate library` l.110) cuts `Rp950` EV to **`-3.0%`** (`the calibration report` `n=0`). `[FATAL]`\n5. **Sizing math (both directions):** At `Rp420` kill (`25%` ARB tier, `the fund rules` l.184), an ARB gap fills at **`Rp315` (`-66.8%`)**, not `-55.8%`; at `0.32` prior, EV is **`-10.5%`**. Conversely, `Rp950` manufactures `1.96x` payoff absent at `Rp1,460\u20131,720` (`EV -39.5%`), wasting a slot (`stage_within_pct: 10%`; `the sizing engine` `0.0%`). `[FATAL]`\n6. **Disconfirming facts:** (a) EXCL impaired 20%-owned Link Net `Rp802.2bn` in 1H25 (`fund record` l.6723\u20136738); Link Net lost `-Rp691.7bn` (`0.34x` current ratio, `l.6791\u20136845`), turning `Rp1,779.8bn` RPT AR (`Note 30c` l.9563) + `Rp1,395.9bn` stake into `~Rp3.2tn` (`10%` mcap) write-off risk vs `5%` EV haircut. (b) `SE Menkomdigi 4/2026` (`fund record` l.223\u2013251) bans quota forfeiture, pressuring prepaid ARPU. `[FATAL]`\n7. **Pre-mortem steelman:** Cumulative `FY26\u201327E` `FCFF_AL` `-Rp9.8tn` (`Rp2.0tn` 2Q26 cash; `fund record` cash `-Rp2.4tn`) forces a dilutive rights issue (`PUT III` precedent, `fund record` l.1534) or higher-cost floating refi pre-FY28E. `[MATERIAL]`\n8. **Anti-gaming:** `estimates_committed_at` precedes `draft` by 2m19s; monotonic stamps, no retro-edits. `[MINOR]`\n9. **Grading (pts 0\u20138):** 5 `[FATAL]`, 2 `[MATERIAL]`, 2 `[MINOR]`. `[MINOR]`\n10. **Stop-objecting price:** `Rp700` *only after* FY27 capex guide `<30%` and Link Net AR collection without dilution. `[MATERIAL]`\n11. **Verdict:** **KILL_RECOMMENDED** \u2014 A `Rp950` limit (`-35%` below 52w low) manufactures fake payoff asymmetry on a mislabeled `0.40` turnaround prior while `28%` steady-state capex and `-Rp9.8tn` pre-FY28E cash burn wipe out equity or force dilution. `[FATAL]`"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "**Verdict response:** **Concede `KILL_RECOMMENDED`.** Answering Bear points `0\u201311`:\n- **0 (`[MINOR]`):** Confirmed; primary-source figures match.\n- **1 (`[FATAL]`):** Conceded. Steady-state `20%` capex/rev sits below pre-merger XL (`21.4%`, `fund record` l.94) and under-models the 5y `538-village` 4G + `51%` 5G mandate (`fund record` l.70\u201372; `23%` 1H26 coverage). Coverage's `28%` capex cuts FY30E `FCFF_AL` by `~Rp4.8tn/yr` and DCF well below `Rp950`.\n- **2 (`[FATAL]`):** Conceded. Spot `Rp1,720` (`0%` div) trades above yielding TLKM (`3.52x`, `11.3%`) and ISAT (`3.77x`, `7.8%`); `limit Rp950` (`-45%` spot, `-35%` vs `Rp1,460` 52w low, `valid_until 2027-02-28`) is adverse selection.\n- **3 (`[MATERIAL]`):** Conceded. `90%` floating IDR debt at `5.75%` BI-Rate, zero dividends, and Apr-2027 cutover churn delay flows.\n- **4 (`[FATAL]`):** Conceded. Re-keyed from `derated_compounder_rerating` (`0.40`) to `turnaround_restructuring` (`0.32`, `n=30`) given `-Rp4.4tn` FY25 NI and `0%` payout; `Rp950` `expected_pct` drops to **`-3.2%`** (`horizon_y 2.5`; `-3.0%` at `3y`).\n- **5 (`[FATAL]`):** Conceded. Under the `25%` ARB tier (`the fund rules` l.184), `Rp420` kill fills near `Rp315` (`-66.8%`), pushing `0.32`-prior EV to **`-10.6%`** (`the sizing engine 0.0%`; `Rp950` breaches `stage_within_pct 10%`).\n- **6 (`[FATAL]`):** Conceded. Link Net `Rp802.2bn` 1H25 impairment, `0.34x` current ratio, `-Rp691.7bn` 1H25 loss (`fund record` Note 10), `Rp1,779.8bn` AR (`Note 30c`), and `Rp1,395.9bn` stake create `~Rp3.2tn` (`~10%` mcap) exposure above our `5%` EV haircut; `SE Menkomdigi 4/2026` (`fund record` l.223\u2013251) caps prepaid quota-forfeiture upside.\n- **7 (`[MATERIAL]`):** Conceded. Cumulative `FY26\u201327E` `FCFF_AL` `-Rp9.8tn` vs `Rp2.0tn` 2Q26 cash (`fund record` `-Rp2.4tn` FY26E cash) risks `PUT III`-style (`fund record` l.1534) equity dilution.\n- **8\u20139 (`[MINOR]`):** Noted; monotonic pre-draft commitment confirmed.\n- **10 (`[MATERIAL]`):** Conceded. Revisit only at `<=Rp700` *after* FY27 capex guide `<30%` and Link Net AR collection without dilution.\n- **11 (`[FATAL]`):** Conceded **`KILL_RECOMMENDED`** cleanly \u2014 negative EV at spot (`-39.5%`) and `Rp950` (`-3.2%` / `-10.6%` ARB-adjusted).\n\n**Re-attack (Drew, bounded):**\nA. **Honesty:** Clean, non-defensive concession across all `5 [FATAL]` and `3 [MATERIAL]` points without ungrounded rescue numbers or hidden drift. `[MINOR]`\nB. **Arithmetic:** Re-keying to `turnaround_restructuring` (`0.32`, `horizon_y 2.5`) checks out: `0.32*(109.5 + 2.5*0.94) + 0.68*(-55.8) - 1.0 = -3.2%` (`ev_math` matches). Under the `25%` ARB gap at `Rp420` (`Rp315`, `-66.8%`), EV falls further to **`-10.6%`**. `[FATAL]`\nC. **Residual:** Frontmatter retains the unrevised `20%` steady-state capex DCF (`Rp1,991` Base) and `Rp950` limit (`-35%` below 52w low, breaching `stage_within_pct 10%`; `the sizing engine 0.0%`), alongside unhedged Link Net (`~Rp3.2tn`) and `FY26\u201327E` cash-burn (`-Rp9.8tn`) dilution risk. `[FATAL]`\nD. **Verdict: KILL_RECOMMENDED confirmed.** Negative EV at both spot (`-39.5%`) and `Rp950` (`-3.2%` / `-10.6%` ARB-adjusted) leaves no investable path; revisit only under `supersedes` at `<=Rp700` post-FY27 capex `<30%` and Link Net AR resolution."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: KILL** (`reason_tag: valuation`). *Standing correction:* Given the inception 35/40 kill bias (12/28 leaving gains; `the calibration report` `{n: 0}`) and INDO at 80.5% cash (4 live names vs 8-min, 19.5% deployed), I reject marginal kills and kill only for dispositive flaws. Dispositive flaw: Even at a `-45%` patient `Rp950` limit, the thesis posts negative EV (`-3.2%`, or `-10.6%` ARB-adjusted) under the `turnaround_restructuring` (`0.32`) prior, while modeling 5G capex obligations (`28%` vs `20%`) and Link Net exposure drops intrinsic DCF below `Rp950`, leaving no honest entry without pure adverse selection.\n\n1. **Process & coverage reconciliation:** `the thesis linter` passes (`problems: []`); `estimates_committed_at` (`10:12:05+07:00`) precedes monotonic `draft -> attacked -> revision -> re_attacked` stamps. Coverage gap (`-43%` vs `Rp3,472.6`) is explained via lease cash outflows, `Rp1.29tn` spectrum, `5%` gov haircut, and V0 Base.\n2. **Base rate & EV (Rule 5a/5c):** `turnaround_restructuring` (`0.32`, `n=30`) fits a `-Rp4.4tn` FY25 / `-Rp994bn` 1H26 zero-dividend turnaround. At `Rp950` (`+109.5%` / `-55.8%`), `expected_pct` is `-3.2%` (`-10.6%` at `Rp315` `25%`-ARB fill), and `-39.5%` at spot `Rp1,720` (above yielding `TLKM` `3.52x` / `ISAT` `3.77x`). Both Dani and Drew concede `KILL_RECOMMENDED`.\n3. **Rule 6a & primary-source survival (Rule 5b):** Not a `REVISE` construction defect (`p_up=0.32` unshaded, `1.96x` payoff); steady-state `20%` capex/rev undercuts pre-merger XL (`21.4%`) and omits the 5-year 4G/5G mandate (`fund record`), where `28%` capex erases `>Rp30tn` EV, compounded by `~Rp3.2tn` Link Net exposure (`fund record` Note 10/30c) and `-Rp9.8tn` `FY26-27E` `FCFF_AL` burn risking dilution.\n4. **Session close:** 1 chain judged (`1 KILL`); unpassable as built\u2014revisit via `supersedes:` only at `<=Rp700` after FY27 capex guides `<30%` and Link Net AR resolves without dilution."
+    }
+  ]
+}

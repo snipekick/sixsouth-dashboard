@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-SSMS-001",
+  "title": "Sawit Sumbermas Sarana (SSMS.JK)",
+  "meta": {
+    "id": "T-INDO-SSMS-001",
+    "book": "INDO",
+    "ticker": "SSMS.JK",
+    "name": "Sawit Sumbermas Sarana",
+    "sector": "PLANTATION",
+    "factors": [
+      "cpo",
+      "idr_defensive"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "KILL",
+    "size_multiplier": null,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-28T10:10:44+07:00",
+    "drafted": "2026-11-28T10:13:11+07:00",
+    "judged": "2026-11-28T10:23:18+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 860.0,
+    "target": 1260.0,
+    "kill": 420.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "12m-rolled konglo-compressed DCF (Rp2,184 x 0.577 HSC lens), below pre-lens Rp2,080 Base DCF",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.33,
+    "up_pct": 46.5,
+    "p_down": 0.67,
+    "down_pct": -51.2,
+    "net_div_yield_pct_pa": 5.0,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": -15.0,
+    "horizon_years": 3.0,
+    "carry_pct": 15.0,
+    "kelly_full_pct": -47.5
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": null
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (n=40, horizon 3y, base_up +75%, base_down -35%); p_up cut -9pp to 0.33 (holdco_discount_narrowing prior) on Bear Pt 4",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 420.0,
+      "action": "exit_full",
+      "note": "ARB-adjusted exit fill (25% IDX ARB gap below Rp560 Bear fundamental DCF falsification); Bear Pt 5"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-06-30",
+      "action": "review",
+      "condition": "MSCI Indonesia Standalone decision & FY26 audited LK reviewed without float/governance catalyst or discount closure"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 950.0,
+      "action": "review",
+      "name": "cpo_benchmark_usd_t",
+      "source": "fund record"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        10366.8,
+        14813.2,
+        19797.4,
+        23481.8,
+        23969.6
+      ],
+      "ebit": [
+        1640.4,
+        2436.1,
+        3690.0,
+        5478.5,
+        5197.1
+      ],
+      "net_income": [
+        819.5,
+        1160.7,
+        2184.1,
+        3402.2,
+        3238.6
+      ],
+      "eps": [
+        86.04,
+        121.86,
+        229.3,
+        357.19,
+        340.02
+      ],
+      "dps": [
+        0.0,
+        83.99,
+        149.05,
+        232.17,
+        221.01
+      ]
+    },
+    "valuation": {
+      "method": "Unlevered FCFF DCF (WACC 12.2%, g 2.5%), pre-konglo regime compression",
+      "bear": {
+        "value": 559.0,
+        "basis": "CPO trough $886/t in FY27E ($960->$1,060 LT), 0.95x vol, $8/t DSI fee, 50% DHE lockup haircut (ND Rp9,525.3bn)"
+      },
+      "base": {
+        "value": 2080.0,
+        "basis": "Agri deck CPO ($1,135->$1,240->$1,150 LT), SML volume ramp, -$4/t DSI fee from Jan-27, DHE Rp3,200bn counted (ND Rp7,925.3bn)"
+      },
+      "bull": {
+        "value": 3525.0,
+        "basis": "El Nino + B50 pushes CPO to $1,450/t in FY27E ($1,265 LT), 1.05x vol, $2/t DSI fee, full DHE cash release"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-28T10:13:11+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-28T10:18:28+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-28T10:20:47+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-28T10:22:04+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-28T10:23:18+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": "one sentence, from memory, before document work",
+      "markdown": "What I believe the market narrative is: SSMS.JK is a Central Kalimantan palm planter controlled by CBI (Abdul Rasyid), known for high yields on young trees, refinancing sensitivity, and related-party dealings with CBI's downstream arm."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "- **Accruals & cash conversion**: 3y accruals `(NI \u2212 CFO)/avg assets` ran **\u22120.92% (FY23A)**, **\u22121.25% (FY24A)**, **+0.83% (FY25A)** (`fund record` F112\u2013F114; `data/dossiers/SSMS.fund record`). CFO/Group NI was **1.20x / 1.18x / 0.91x** (0.95x parent FY25), reflecting Rp673.8bn NWC build (21.5% of rev; `fund record`). Biological-asset gains (PSAK 69) are undisclosed in press summaries (`fund record`, `fund record`), but tight CFO/NI rules out divergence.\n- **DHE SDA lockup vs debt (optics/liquidity)**: At 30 Sep 2026, **Rp3,200bn** restricted DHE cash is locked up to 12m (`F46`, `fund record`, `fund record`) plus **Rp904.0bn** unrestricted cash (`F45`), while gross debt rose from Rp8,423.1bn (`dossier`) to **Rp12,029.3bn** (`F101`, `fund record`). Ex-DHE current assets (**Rp7,900bn**) trail current liabilities (**Rp9,480bn**, 0.83x; `F47`, `F49`), despite Rp800bn FY25 (`F52`) and Rp500bn FY26 interim dividends (`F54`, `fund record`).\n- **CBI RPT & footnote gaps (structure/optics)**: 62.30% parent CBI (`F17`) sold 63.4% of SML (11,046 ha) to SSMS on 24 Nov 2025 for **Rp1,600bn** debt-funded (`F14\u2013F18`, `fund record`). Third-party sales dominate (`fund record`), yet audited LK footnotes (CBI/CBUT RPT sales/receivables, auditor opinion) and IDX notation registers (B/E/L/M/S) are inaccessible (`fund record`, `fund record` \u00a76). Pack G&A D&A (Rp73bn) understates cash-flow group D&A (Rp568.3bn FY25, `F60`).\n- **HSC & FTSE exit**: On BEI's HSC list (`fund record`, `fund record`), excluded from IHSG (`fund record`), and deleted by **FTSE Russell** effective **21 Dec 2026** (`F102`, `fund record`). Registry free float is **29.16%** (`fund record`, 15%-compliant); absent from Sep-2026 special-monitoring release list (`fund record`). **Verdict**: Optics/governance flags only; zero manipulation-class flags."
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": "committed first \u2014 timestamp above, before any market number",
+      "markdown": "- **Yields & volume**: 23 Kalimantan estates (**115,584 ha**, incl. 11,046 ha young SML; `F10\u2013F14`) produced **1,628,452 t** nucleus FFB in FY25 (+4.22%; `F1`, `F9`) and milled **2,382,942 t** (`F6`, `F13`) at **22.12% OER** (`F7`, `fund record`) for **527,052 t CPO** (+14.23%; `F2`, `F8`), with **23.5%** purchased fruit (`F19`, `F62`). Implied CPO-equivalent turnover (**941 kt** FY25, `F59`) rises with SML consolidation to **1,045 kt (FY26E)**, **1,090 kt (FY27E)**, **1,125 kt (FY28E)** (`fund record`).\n- **Deck CPO, FX & Jan-2027 DSI fee**: Using `fund record` CPO (**$1,007->$1,135->$1,240->$1,210->$1,150 LT**, +2.5% IDR escalation post-FY30) and `fund record` USD/IDR (**16,448->17,570->18,350->18,600->19,000 LT**), we hold **0.95** empirical realisation (`F59`, not capitalizing Nov-2026's US$246.36/t levy cut, `fund record`) and deduct **US$4/t** blended **DSI export fee** from **1 Jan 2027** (`fund record`; -Rp80bn FY27E rev).\n- **Cost & P&L (9M26 actuals: Rev Rp14,830bn, EBIT Rp2,760bn, Parent NI Rp1,590bn; `F32\u2013F41`, `fund record`)**: FY26E base cash cost **Rp10.44m/t** (23.5% CPO-linked + 76.5% 2.5% inflation), SG&A **21.44%**, D&A **Rp0.604m/t**, capex **Rp0.700m/t**, tax **25%**, minority **9.1%**, NWC **22.56%**, payout **65%** -> FY26E/27E/28E EBITDA **Rp4,321/6,153/5,911bn**, FCFF **Rp1,382/3,171/3,674bn**.\n- **Pre-konglo DCF (WACC 12.2%: rf 7.45%, ERP 6.69%, beta_u 0.80->1.16, Ke 15.21%, Kd 9.45% at 37.5% D/V; g 2.5%)**: **Base IDR 2,080/sh** (EV Rp28,131bn \u2212 ND Rp7,925bn [incl. DHE] \u2212 SML minority Rp391bn; ex-DHE **IDR 1,744/sh**; flat-$1,150/t NAV **IDR 1,941/sh**; SML land `F100` Rp26.4tn EV). **Bear IDR 559/sh** ($886/t FY27E->$1,060 LT, 0.95x vol, $8/t DSI, 50% DHE haircut). **Bull IDR 3,525/sh** ($1,450/t FY27E->$1,265 LT, 1.05x vol, $2/t DSI)."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At Rp960\u2013970 (2026-11-28 screen), SSMS is an un-investable HSC/konglo trap facing **21-Dec-2026 FTSE passive selling** and a below-deck CPO cycle (~$1,121/t implied).\n**Why wrong:** Thin coverage (NEGLECTED #3) misses 9M26 Parent NI +58.4% YoY (`F34`) and SML's ramp; compressing our 12m-rolled prob-weighted DCF (**Rp2,184**) via the HSC konglo lens (0.577x kept; `fund record`) yields **Rp1,260/sh**, plus **14.0% net div yield** at our **Rp860** limit entry inside the konglo bear zone (Rp835\u2013884) to catch FTSE supply.\n**What proves us wrong:** CPO retesting $886/t (`d.agri.cpo`) with DSI fees >$8/t, another debt-funded CBI RPT, or DHE refinancing stress."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "House coverage (`fund record`, `fund record`) sets `tp_fundamental` **Rp2,920.6/sh** and konglo `tp_final` **Rp1,403.5/sh** (BUY vs Rp955). Our Phase-1 Base DCF (**Rp2,080/sh**) and 12m-rolled prob-weighted value (**Rp2,184/sh**) sit ~25% below `tp_fundamental` because we: (1) apply **12.2% WACC** (25% tax vs house 22%/11.39% WACC), (2) deduct **US$4/t Jan-2027 DSI export fee**, and (3) anchor solely on DCF rather than P/BV and EV/EBITDA cross-checks. Applying the same 0.577x HSC lens yields our **Rp1,260** target (-10.2% vs `tp_final`), while we rest a **Rp860 limit entry** into the 21-Dec FTSE deletion."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. **FTSE 21 Dec 2026 deletion & HSC IHSG exit**: Excluded from IHSG (`fund record`, `fund record`) and FTSE global indices at 21 Dec open (`F102`, `fund record`), removing passive bids on Rp6.10\u20136.38bn/day ADTV while MSCI's Standalone review runs to 30 Jun 2027.\n2. **Tight ex-DHE liquidity**: 30 Sep 2026 gross debt hit Rp12,029.3bn (`F101`), and current liabilities (Rp9,480bn, `F49`) exceed ex-DHE current assets (Rp7,900bn) as Rp500bn interim dividend pays 2 Dec 2026 (`F54`, `fund record`).\n3. **CBI RPT leverage & footnote gap**: Rp1,600bn SML deal paid 62.3% parent CBI via group-secured debt (`F16\u2013F18`, `fund record`); primary RPT footnotes and IDX notation registers remain unverified (`fund record`)."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Nov 2029 and SSMS lost >30%: CPO fell to $886/t (`FY23A` trough) as El Nino faded while DSI fees compressed netbacks; FY27E EBITDA halved to ~Rp1.7tn, forcing a dividend cut under Rp12tn debt. MSCI downgraded Indonesia to Standalone in Jun 2027, keeping HSC discounts wide, and a break below Rp560 hit a **25% IDX ARB lock**, filling near **Rp420 (-51.2% vs Rp860)**."
+    },
+    {
+      "heading": "Flow & ownership checklist",
+      "detail": null,
+      "markdown": "- **Foreign flow**: **Flows stale** (`market-data snapshot` `{}` \u2014 zero readings; no flow narrative claimed).\n- **Ownership & float**: CBI owns **62.30%** (`F17`); BEI registry free float **29.16%** (`fund record`, 15%-compliant), though overlapping `fund record` insider (80.69%) and institution (12.20%) fields imply tighter residual float.\n- **Liquidity & disclosures**: ADTV **Rp6.10\u20136.38bn/day** (27\u201328 Nov, Rp960\u2013970, 52w Rp670\u20131,820); disclosures cover Rp500bn interim dividend (`fund record`) and FTSE/HSC removals (`fund record`, `fund record`)."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": null,
+      "markdown": "Conviction **3/5**; edge from NEGLECTED #3 thin coverage + 21-Dec FTSE supply limit entry. **EV & Kelly (`commodity_capex_turnaround`: prior `0.42`, horizon `3y`, lib Kelly +42.7% / quarter-Kelly +10.7%, lib `up/|down|` 2.14)**: `p_up = 0.42` (zero probability shading; conservatism is in Rp860 entry and Rp1,260 target), `up_pct +46.5%`, `down_pct -34.9%`, net div `14.0%/yr` (10% WHT), drag `1.0%` -> **EV +15.9%**, `up_leg/|down_leg| = 2.44` (price-only 1.33), **own-Kelly +50.7% (quarter-Kelly +12.7%)**. Under a **25% ARB-gapped exit** at Rp420 (`-51.2%`), quarter-Kelly is **+3.5%**. 7d exit @ 20% of Rp6.38bn ADTV caps size at **Rp8.9bn (~6.0% of INDO book)**; watch CPO overlap and HSC/DHE flags."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check:** FY25A rev Rp14,813.2bn, NI Rp1,160.7bn, debt Rp8,423.1bn (`fund record` L21\u201332) and 9M26 rev Rp14,830bn, EBIT Rp2,760bn, debt Rp12,029.3bn, DHE Rp3,200bn (`fund record` F32/F37/F101/F46) verify. Yet accruals omit `fund record` **9M26 OCF \u2212Rp2,441.6bn** (`Q2 \u2212651.4`, `Q3 \u22121,914.8`; LTM \u2212Rp2,564.3bn) vs Rp1,750bn NI. [MATERIAL]\n1. **Estimates:** **Fragile \u2014 single-assumption dependency** on `net_div_yield_pct_pa: 14.0` (+42.0pp carry); price-only EV is **\u22121.7%** (`qK \u22122.6%`). Paying Rp134/sh gross (~Rp1.28tn/yr) conflicts with \u2212Rp2,813.5bn 9M26 FCF, Rp6,855bn current debt (`datapack`), 0.83x ex-DHE current ratio, and pledged DHE. At 5% net yield + ARB kill (`Rp420`, \u221251.2%), EV hits **\u22124.8%** (`qK \u22123.8%`). Spot CPO (`$1,180`) trails FY27E `$1,240`; at `$992` (0.8x deck), `fund record` value drops >50%. [FATAL]\n2. **Variant perception:** \"NEGLECTED #3\" mispricing contradicts priors admitting refinancing/RPT sensitivity. Market prices HSC exclusions, 62.3% CBI control, Rp1,600bn debt-funded SML RPT, and 10x trough-EBITDA leverage. [MATERIAL]\n3. **Catalyst:** Zero 12m positive catalyst; FTSE deletes SSMS **21-Dec-2026** on **Rp6.1bn** ADTV (~15d/1% float), MSCI Standalone freeze runs to **30-Jun-2027** (`fund record`), and CBI has no float-expansion plan. [MATERIAL]\n4. **Base rate & sleeve:** `commodity_capex_turnaround` (`0.42`) ignores **MOMENTUM #2** (`mom6 +46.5%`, `mom12 \u221235.4%`) and konglo traps (`holdco_discount_narrowing` `0.33`). At `p_up=0.33` and ARB \u221251.2%, EV is **\u22126.1%** even at 14% yield. [FATAL]\n5. **Sizing (both directions):** `560=9% net dividend without new debt. [MATERIAL]\n11. **Verdict:** **KILL_RECOMMENDED** \u2014 SSMS\u2019s +15.9% EV relies entirely on a 14%/yr dividend carry unfunded by \u2212Rp2,442bn 9M26 OCF and contradicted by SELL-rated 70%-owned CBUT\u2019s cash-collateralized DHE/debt filings in our archive. [FATAL]"
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; may only lower estimates or widen down_pct without new evidence \u2014 raising p_up/up_pct/target requires a flagged \"new evidence\" citation",
+      "markdown": "**Conceding KILL_RECOMMENDED \u2014 Dani (ANALYST_INDO).**\n\n0. **Fact-check \u2014 conceded.** `SSMS.JK/datapack.json`: 9M26 OCF **\u2212Rp2,441.6bn** (`Q1 +124.7`, `Q2 \u2212651.4`, `Q3 \u22121,914.8`; LTM `\u2212Rp2,564.3bn`), 9M26 FCF **\u2212Rp2,813.5bn**; accruals missed CBUT-driven NWC surge (`+Rp4.40tn` to `Rp7.58tn`).\n1. **Estimates \u2014 conceded.** `14.0%` net yield (`~Rp1.28tn/yr`) is debt-funded (`current_debt` `Rp6,855.0bn`, ex-DHE CR `0.83x`). Cut `net_div_yield_pct_pa` `14.0\u21925.0%` [Pt 1] (20%` relative \u2192 back to Drew before Judge.\n\n**Re-attack (Drew, bounded):**\nA. **Honesty:** Clean concession\u2014no unattributed drift. Every cut cites its Bear point (`net_div` `14.0\u21925.0%` [Pt 1], `p_up` `0.42\u21920.33` [Pt 4], `kill 560\u2192420` / `down_pct \u221234.9\u2192\u221251.2%` [Pt 5]); `estimates_committed_at` (`10:10:44`) and `model:` remain untouched.\nB. **Arithmetic:** Exact. `0.33\u00d7(46.5+15.0)+0.67\u00d7(\u221251.2)\u22121.0 = \u221215.0%` EV; `up_leg/|down_leg| = 60.5/52.2 = 1.16` (price-only `0.91`); `the sizing engine` confirms `kelly_full_pct: 0.0%` (`Kelly <= 0`), binding on `quarter_kelly_after_haircut`. `420<860<1260` matches \u00b13pp lint.\nC. **Residual:** All three FATAL defects (#1 unfunded dividend, #4 konglo/HSC prior, #6 70.22%-owned SELL-rated CBUT\u2019s Rp3.30tn cash-collateralized DHE/Rp5.24tn ST loans and \u2212Rp2,441.6bn 9M26 OCF) stand conceded, not cured. The conditional `Rp700` re-entry bar remains unmet until April 2027 audited FY26 LK. (`archetype:` stays `commodity_capex_turnaround` in frontmatter despite adopting `0.33` `holdco_discount_narrowing` prior\u2014moot under kill.)\nD. **Verdict: KILL_RECOMMENDED confirmed.** Negative EV (`\u221215.0%`) and zero Kelly leave Aldrich no viable PASS or PASS_REDUCED path."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**VERDICT: KILL** (`reason_tag: fragile_estimates`)\n\nApplying the standing correction against inception over-killing (35/40 kills, 12/28 leaving gains) amid 80.5% INDO cash and 4/8 live names: a marginal name warrants `PASS_REDUCED`, and Rule 6a construction defects return as `REVISE`. Here, however, Dani and Drew both converged on `KILL_RECOMMENDED` after archive filings broke the thesis's single load-bearing return driver\u2014a dispositive flaw, not a construction defect.\n\n1. **Process & base rate:** `estimates_committed_at` (`10:10:44`) precedes `draft` (`10:13:11`); `stage_log` is monotonic across `draft -> attacked -> revision -> re_attacked -> judged`. Lowering `p_up` from `0.42` (`commodity_capex_turnaround`) to `0.33` (`holdco_discount_narrowing` prior) reflects HSC/FTSE deletion (`21-Dec-2026`) and MSCI Standalone (`30-Jun-2027`) discount persistence.\n2. **Broken load-bearing assumption (dispositive flaw):** The initial `+15.9%` EV depended entirely on an unfunded `14.0%/yr` (`+42.0pp`) net dividend carry (price-only EV `-1.7%`). `SSMS.JK/datapack.json` shows `-Rp2,441.6bn` 9M26 OCF and `Rp6,855.0bn` current debt, while `CBUT.JK/facts.yaml` proves 70.22%-owned SELL-rated CBUT holds `Rp3.30tn` restricted DHE cash collateralizing `Rp5.24tn` ST loans (`F13\u2013F14`, `F16`). Consolidated DHE is encumbered, not free payout capacity.\n3. **Negative EV & house reconciliation:** Cutting net yield to `5.0%` and widening kill to `Rp420` (`-51.2%` for 25% IDX ARB gap) produces `-15.0%` EV (`0.0%` Kelly) at `Rp860`, and remains `-5.9%` even at Drew's `Rp700` washout level. House coverage (`tp_final` Rp1,403.5) is reconciled via WACC, DSI fee, and unmodelled CBUT/OCF strain.\n4. **Resubmission bar:** Locked 30 days (`exits.judge_kill_cooldown_days`) unless `supersedes:` brings audited FY26 LK proving ex-CBUT OCF covers the payout without debt."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "(Voss; deterministic VETO is absolute, judgment note above it.)"
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "(sizing block above records the sizing engine output; deviation only downward, reason mandatory.)"
+    }
+  ]
+}

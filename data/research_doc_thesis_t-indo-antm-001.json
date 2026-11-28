@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ANTM-001",
+  "title": "Aneka Tambang (ANTM.JK)",
+  "meta": {
+    "id": "T-INDO-ANTM-001",
+    "book": "INDO",
+    "ticker": "ANTM.JK",
+    "name": "Aneka Tambang",
+    "sector": "METALS",
+    "factors": [
+      "nickel_ev",
+      "gold"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "commodity_capex_turnaround",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-28T10:10:17+07:00",
+    "drafted": "2026-11-28T10:12:02+07:00",
+    "judged": "2026-11-28T10:22:47+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 2150.0,
+    "target": 3200.0,
+    "kill": 1925.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Revised from Rp3,800: Base NAV Rp3,796 less -Rp187/sh at-cost bridge strip, -Rp170/sh FY27E+ Buli JV equity call (S25), and -Rp239/sh spot-gold $3,779/oz weight; below Spot NAV Rp3,246/sh",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.37,
+    "up_pct": 48.8,
+    "p_down": 0.63,
+    "down_pct": -13.4,
+    "net_div_yield_pct_pa": 6.5,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 15.8,
+    "horizon_years": 3.0,
+    "carry_pct": 19.5,
+    "kelly_full_pct": 163.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": "the sizing engine recommended_pct=0.0 (fail-closed ADV unknown in the liquidity feed until next prelude refresh-adv, adv_feed_gap_new_passes); script_pct/pm_pct kept null for thesis_lint compliance & awaiting_pm_sizing in CONSTRUCT Step 1(a)"
+  },
+  "base_rate": {
+    "rate": 0.42,
+    "source": "the base-rate library commodity_capex_turnaround (n=40, +75/-35, 3y)",
+    "library": {
+      "rate": 0.42,
+      "base_up_pct": 75.0,
+      "base_down_pct": -35.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 1925.0,
+      "action": "exit_full",
+      "note": "Bear NAV falsification level (Ni $14k, vol -20%, Au $3,655, non-Ni GM 12.05%), NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2027-04-30",
+      "action": "review",
+      "condition": "FY2026 audited LK fails to confirm >=Rp14.5trn EBITDA or Sloan accruals >10% without WC release"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 11400.0,
+      "action": "review",
+      "name": "Annualized nickel ore sales / 2027 RKAB quota (kt wmt)",
+      "source": "ESDM RKAB / IDX quarterly disclosure"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        69192.4,
+        84642.4,
+        117965.3,
+        119050.3,
+        119089.7
+      ],
+      "ebit": [
+        3509.6,
+        6975.1,
+        16089.0,
+        16384.1,
+        15815.8
+      ],
+      "net_income": [
+        3647.2,
+        7208.8,
+        12107.1,
+        12123.2,
+        11710.2
+      ],
+      "eps": [
+        151.77,
+        299.98,
+        503.82,
+        504.48,
+        487.3
+      ],
+      "dps": [
+        151.77,
+        209.73,
+        352.67,
+        353.14,
+        341.11
+      ]
+    },
+    "valuation": {
+      "method": "Through-cycle life-of-asset DCF/NAV (WACC 15.2% IDR, 15y ore/FeNi profile + ongoing bullion/alumina TV g=2.5%)",
+      "bear": {
+        "value": 1925.0,
+        "basis": "LME Ni -20% ($14,000/t), ore/FeNi vol -20% (deeper RKAB cut), Au -15% ($3,655/oz), non-Ni GM -25% (12.05%), Ni unit cost +5%"
+      },
+      "base": {
+        "value": 3796.0,
+        "basis": "House metals & macro decks (Ni $17,500/t, Au $4,300/oz, USD/IDR 18,350->19,000), 14.3m wmt ore flat 27E then -8%/yr to 40E, 15.5kt FeNi, 16.07% non-Ni GM, WACC 15.2% + Sep-26 net cash Rp4.8trn & Rp4.5trn growth capex bridge"
+      },
+      "bull": {
+        "value": 5838.0,
+        "basis": "LME Ni +20% ($21,000/t, 16%/5% PP 19/2025 royalties), vol +20% (17.2m wmt RKAB), Au +15% ($4,945/oz), non-Ni GM +20% (19.28%)"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-28T10:12:02+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-28T10:15:18+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-28T10:19:57+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "re_attacked",
+      "at": "2026-11-28T10:21:23+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-28T10:22:47+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-11-28T10:24:04+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "Market narrative (from memory): ANTM.JK is Indonesia's state-owned miner under MIND ID, driven by gold trading/mining margins and nickel ore/ferronickel volumes under RKAB quotas and mining royalties."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "- **3y Accruals & CFO/NI (`data/dossiers/ANTM.fund record`, `fund record` F14/F17/F20/F34, `sources/S9.txt`\u2013`fund record`):** Using `CFO = FCF + |Capex|`: FY23A CFO Rp4,357.3bn vs NI Rp3,077.6bn (**141.6%** CFO/NI, Sloan **\u22123.35%**); FY24A Rp3,681.1bn vs Rp3,647.2bn (**100.9%**, **\u22120.08%**); FY25A Rp4,853.3bn vs Rp7,208.8bn (**67.3%**, **+4.85%**). 3y mean Sloan accruals = **+0.47%** (<10% threshold). Unaudited 9M2026 CFO fell to Rp5,060bn vs Group NI Rp9,660bn (**52.4%**; **57.3%** of Parent NI Rp8,830bn; **37.5%** of EBITDA Rp13,480bn) \u2014 **optics/WC drag**, not fraud.\n- **Working capital & inventory (`fund record`, `F1\u2013F5/S9`):** `fund record` (S0) records FY25 gross NWC at Rp8.46trn (**10.0%** of sales: inventories Rp7.73trn + receivables Rp2.33trn \u2212 payables Rp1.60trn) and +Rp2.29trn 1H26 NWC build. In 9M26, ore output (12.16m wmt) exceeded sales (10.73m wmt), while FeNi sales (13,971 TNi, +71% y/y) outpaced production (11,638 TNi) via ~2.33 kt inventory drawdown (non-recurring post-26E).\n- **IDX board, split, royalties, RKAB, DHE, IUPK:** No IDX special-monitoring board or notation flags (`fund record` \u00a73, `fund record`). 9M26 is unaudited (expect Q4 true-ups; Q4 25 posted \u2212Rp932.7bn EBIT). Revenue split (`S9`): Gold **77.3%** (Rp68,410bn; 25,217 kg sold vs 634 kg Pongkor output \u2014 ~97.5% traded/refined bullion), Nickel **19.2%** (Rp16,980bn), Bauxite/Alumina **3.0%** (Rp2,640bn). PP 19/2025 (`S28`, F59) charges **14%** on nickel ore and **4%** on FeNi (<US$18/kg HMA), though `S19` flags CIF-below-HPM pricing lifts effective royalties. 2026 national RKAB (290\u2013300m t, F31/F41) sits below 2025 output (379m t, F32) with a 2027 cut signalled (`S15`) and national saprolite life <10y (F42/S17); Kepmen 363/2026 cut limonite CF (26%\u219214%) while holding saprolite at 30% (`S24`), matching ANTM's saprolite-order 1H26 realisation (Rp1.265m/wmt, F54\u2013F55/`S2`). **95%** domestic 9M26 sales (F33/`S11`) mute DHE FX retention drag. fund record ID control removes *konglo* pledge/IUPK divestment risk (`fund record` \u00a76) but adds policy capex (Mempawah, Buli, Gresik, `S12`/`S25`/`S29`), procurement flags (KPK artisanal-gold warning `S12`), and **8.6%** minority leakage (F17/F34). **Gate: PASS WITH OPTICS/WC HAIRCUTS.**"
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "Committed `2026-11-28T10:10:17+07:00` on `fund record` (Ni $17,089/t FY26E \u2192 $17,500/t FY27E\u201329E; Au $4,494/oz FY26E \u2192 $4,300/oz FY27E\u201329E; +2%/yr USD post-29E) and `fund record` (USD/IDR 17,570 \u2192 18,350 \u2192 18,600 \u2192 18,850 \u2192 19,000, +0.49%/yr PPP post-30E; IDR WACC **15.2%** from `rf_idr` 7.45% + `erp` 4.23% + `crp` 2.46% + `coe_premium` 1.50% = 15.64% Ke, 95/5 E/D):\n- **Nickel (ore + FeNi):** FY26E ore 14.3m wmt (9M26 `10.73m \u00d7 4/3`, F1/`S9`), flat FY27E (`S15`), \u22128%/yr FY28E\u201340E (15y, ~137m wmt); ore price 0.425% LME Ni/wmt (`S2` 1H26 Rp1.265m/wmt), 14% royalty (`S28`). FeNi normalizes from 17.85 kt (26E) to 15.52 kt output run-rate (27E\u201340E, F5/`S9`) at 81.8% LME Ni (`S2`), 4% royalty. Unit cash costs US$36.5/wmt ore, US$10,640/TNi FeNi (+2%/yr USD). Segment revenue: FY26E Rp22,632bn, FY27E Rp23,592bn, FY28E Rp22,331bn.\n- **Gold & Bauxite/Alumina:** Gold annualizes 9M26 Rp68,410bn (F9/`S9`) to Rp91,213bn on flat ~33.6t volume, moving with gold/FX decks (FY27E Rp91,155bn, FY28E Rp92,397bn); bauxite/other Rp4,120bn (26E) \u2192 Rp4,303bn (27E). Non-nickel GM **16.07%** (calibrated to 9M26 GP Rp15,560bn, F16/`S9`).\n- **Group & NAV:** SG&A 4.0% (`S9`), D&A Rp1,907bn (`S9`), 20.5% effective tax, 8.6% minorities, 70% payout (`F18/S3`; FY24A DPS Rp151.77 per `fund record`), sustaining capex Rp1,500bn/yr + Rp4,500bn 26E growth capex (`S25`), 10% NWC. **Base NAV: Rp3,796/sh** (parent ops PV Rp81,917bn incl. ongoing bullion/alumina TV g=2.5% + Sep-26 net cash Rp4,800bn [F19/F28] + Rp4,500bn projects; 20y finite ex-TV = Rp3,532/sh). **Spot NAV** (Ni $16,324, Au $3,779, FX 18,080): **Rp3,246/sh**. **Bear NAV:** **Rp1,925/sh** (net cash/trough EBITDA \u22120.57x). **Bull NAV:** **Rp5,838/sh**."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At Rp2,680/sh, ANTM trades like an unhedged nickel miner facing ~800kt oversupply (F35/`S15`), RKAB risk, and SOE discount \u2014 pricing <$9k/t LME nickel and ignoring gold.\n**Why wrong:** Gold refining/retail bullion supplies 77% of revenue and ~70% of GP alongside Rp4.8trn net cash and a 70% payout (`S3`); even at Spot ($16,324 Ni / $3,779 Au), NAV is Rp3,246/sh (+21%), and Base NAV is Rp3,796/sh (+42%) under Indonesia's `FAVOR` nickel supply-discipline stance (`the macro regime memo`).\n**What proves us wrong:** Nickel drops to ~$14k/t alongside a \u226520% RKAB cut AND bullion demand/spreads compress (gold ~$3,655/oz, non-Ni GM \u226412%) with persistent NWC cash burn."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "Our Base NAV (**Rp3,796/sh**) sits 12.6% below house `tp_final` (**Rp4,344/sh**, `fund record`) and 18.1% below `dcf_life` (**Rp4,637/sh**) for three reasons: (1) we omit the Rp10,017bn `investments` add-back to avoid double-counting JV associates alongside Rp4.5trn growth capex at cost + Rp4.8trn Sep-26 net cash, and apply **15.2%** WACC vs 14.55%; (2) we strip ~2.33 kt FeNi inventory release post-FY26E and charge 10% gross NWC throughout; (3) house `tp_final` rolls `v0` (Rp3,934) forward 12m at Ke less DPS and weights a Rp6,668 Bull 25%, whereas our Rp3,800 target anchors to unrolled Base NAV. Both frameworks agree ANTM is mispriced against spot and through-cycle fundamentals."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. **9M26 cash conversion trails earnings:** OCF Rp5,060bn was 37.5% of EBITDA (Rp13,480bn) and 52.4% of Group NI (Rp9,660bn; F14/F20/F34/`S9`/`S11`).\n2. **FeNi growth relied on inventory draw:** 9M26 sales (13,971 TNi, +71% y/y) exceeded production (11,638 TNi; F3/F5/`S9`).\n3. **Ore output trails guidance & spot gold trails deck:** 9M26 ore output (12.16m wmt) is 67.6% of FY26 18m t guidance (F2/F30/`S11`); Nov-18 GC=F gold ($3,779/oz, `fund record`) sits 12.1% below FY27E $4,300/oz.\n4. **Policy & procurement friction:** KPK warned on small-scale gold sourcing (`S12`), `S19` documents CIF ore pricing below FOB HPM, and ANTM's RKAB/reserve report is unarchived."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is Nov-2029 and ANTM.JK lost 30%+: 2027 RKAB quotas failed to clear global supply (or cut ANTM saprolite >20% / HPM trimmed saprolite CF), LME nickel fell toward $14k/t, gold dropped toward $3,600/oz compressing retail spreads, and Buli/Gresik capex drained cash. Under IDX \u00b125% ARB bands, a shock could gap 1 ARB session below Rp1,925 (~Rp1,440 fill, \u221246%)."
+    },
+    {
+      "heading": "Flow & ownership checklist",
+      "detail": null,
+      "markdown": "- **Foreign flow:** `market-data snapshot` is `{}` \u2192 **flows stale** (no flow narrative underwritten).\n- **Ownership (`fund record` 2026-11-18, `fund record`):** MIND ID/insiders **66.373%**, free float **34.79%** (institutions **15.145%**). Non-konglo, non-HSC, float-compliant.\n- **Liquidity:** Mcap **Rp64.40trn** (24.03bn shares); `adv_book` **Rp232.93bn/day** (`adtv_3m` **Rp292.49bn/day**), `mcap_ok: true, adv_ok: true`."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": null,
+      "markdown": "- **Conviction:** 4/5 (net cash, 8.5%+ net dividend, `FAVOR` nickel tilt, tempered by 10% NWC drag and policy capex).\n- **Kelly & symmetry (`commodity_capex_turnaround`):** `p_up = 0.42` at library prior (`the base-rate library`, n=40). Entry Rp2,680 \u2192 target Rp3,800 (+41.8%), kill Rp1,925 (\u221228.2%), +8.5%/yr net div over 3y (25.5%, up-leg only) \u2212 1.0% drag: `expected_pct = +10.9%`, `up_leg/|down_leg| = 2.27` (vs library `2.14`, >1.3 floor). **Own-Kelly = 56.4%** (1/4 = **14.1%**) vs **Library-Kelly = 42.7%** (1/4 = **10.7%**). Even with 1\u00d725% ARB gap below Rp1,925 (~\u221246.3%), Kelly stays positive (+1.3%).\n- **Liquidity & overlap:** 20% of Rp232.93bn ADV (= Rp46.59bn/day) exits a 10% INDO cap (~Rp1.5bn) in **<0.05 days**; aligns with `nickel / ID supply-discipline names: FAVOR`."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check:** Verified FY25A Rev Rp84,642.4bn, EBIT Rp6,975.1bn, NI Rp7,208.8bn (fund record L21\u201325); 9M26 Rev Rp88,480bn, Gold Rp68,410bn, Ni Rp16,980bn, EBITDA Rp13,480bn, OCF Rp5,060bn (F7/F9/F12/F14/F20). Sep-26 net cash Rp4,800bn pairs Sep-26 cash Rp10,540bn (F19) with Jun-26 debt Rp5,740bn (F28). [MINOR]\n1. **Estimates:** Gold/non-Ni GM (77.3% sales, ~70% GP) has widest error bar. Spot GC=F $3,778.90/oz (fund record) sits -12.1% vs $4,300 deck (Spot NAV Rp3,246). Cutting non-Ni GM -25% to 12.05% (above FY24A 9.4%) cuts NOPAT ~Rp2.8trn/yr (~-Rp830/sh PV \u2192 ~Rp2,965 NAV); spot gold + 12.05% GM drops NAV to ~Rp2,550/sh (<Rp2,680 entry) \u2014 fragile, single-assumption dependency. [FATAL]\n2. **Variant perception:** 97.5% of gold (25,217kg sold vs 634kg mined, S9) is low-moat trading/refining (37.5% OCF/EBITDA). Discount prices SOE capex, KPK artisanal-gold warning (S12), and CIF<HPM royalty drag (S19). [MATERIAL]\n3. **Catalyst:** No catalyst_date; assumes ESDM cuts 2027 RKAB after raising 2026 RKAB to 290\u2013300m t (F31/F41) amid 800kt surplus (F35), while smelters undercut HPM (S19) and reserves/ore mix are unarchived. [MATERIAL]\n4. **Base rate & sleeve:** commodity_capex_turnaround (0.42, n=40, 3y) misfits a 77%-gold-trading SOE expanding capex (S25); peak gold ($4,494) + FeNi draw (2.33kt, F3/F5) hits the base-rate library's peak-margin trap. Off-screen (COVERAGE v6). [MATERIAL]\n5. **Sizing (both directions):** 1,925<2,680<3,800 and 2.27 payoff pass lint, but 1x25% ARB gap (Rp1,444 fill, -46.1%) slashes EV from +10.9% to +0.5% and quarter-Kelly to 0.6% (DOA). Conversely, 8.5% net_div_yield understates 11.8% modeled net yield\u2014yet 9M26 OCF (Rp5.06trn) < FY26E capex (Rp6trn) leaves 70% payout unfunded by FCF. [MATERIAL]\n6. **Disconfirming facts:** (a) fund record L44\u201353: 30% of $1.9bn Buli HPAL + 40% of $1.4bn Buli RKEF (to 2027; Gresik 2028) = ~Rp20.4trn share omitted from FY27E+ capex (Rp0 modeled) while bridging Rp4.5trn at cost; (b) fund record (11-17): Nov-P2 HPM fell across all grades despite +$118 HMA; (c) fund record L53: Q4-25 posted -Rp932.7bn EBIT vs Rp4,039bn Q4-26E implied. [MATERIAL]\n7. **Pre-mortem:** MIND ID/Danantara mandates funding Buli overruns ($3.3bn gross) while KPK gold-sourcing friction (S12) squeezes spreads, flipping FCF negative and cutting the 70% dividend. [MINOR]\n8. **Anti-gaming:** estimates_committed_at (10:10:17) precedes draft (10:12:02); stage_log/sizing clean. [MINOR]\n9. **Grades:** Assigned per point above. [MINOR]\n10. **Stop-objecting price:** <= Rp2,200/sh (prices spot gold $3,779/oz, 12% non-Ni GM, Buli capex, ARB gap). [MINOR]\n11. **Verdict:** **KILL_RECOMMENDED** \u2014 At Rp2,680, ANTM.JK prices peak 16.1% bullion-trading margins and zero post-2026 Buli capex while spot gold ($3,779/oz), Q4-25 EBIT loss precedent, and +0.5% ARB-gapped EV leave no safety margin. [FATAL]"
+    },
+    {
+      "heading": "Revision",
+      "detail": "analyst answers each numbered Bear point; lower estimates/widen down_pct only without new evidence",
+      "markdown": "**Answering Drew \u2014 Dani (ANALYST_INDO). Defend `PASS at a price` (`Rp2,150` limit, `target Rp3,200`, `kill Rp1,925`).**\n\n0. **Conceded.** Jun-26 debt `Rp5,740bn` (`F28`) + Sep-26 cash `Rp10,540bn` (`F19`) = `Rp4,800bn` proxy; 9M26/FY25A verified.\n1. **Conceded [FATAL].** Spot `$3,779/oz` cuts NAV `3,796\u21923,246` (\u2212Rp550/sh); \u221225% non-Ni GM (`12.05%`) cuts ~Rp830/sh (~Rp2,550 spot+12.05% GM). Drives target `3,800\u21923,200` and entry `2,680\u21922,150`.\n2. **Partially conceded.** 97.5% gold is low-moat trading (`37.5%` OCF/EBITDA); KPK (`S12`), `CIF20% moves (`down_pct`, `net_div_yield_pct_pa`, `expected_pct`) trigger re-attack.\n\n**Re-attack (Drew, bounded):**\n- **A. Honesty:** Every cut maps to a Bear point (Pts 1, 4, 5, 6, 10); up_pct lift (+48.8%) is mechanical from entry 2,680->2,150. However, holding kill 1,925 against 2,150 leaves just a -10.5% falsification floor (padded to -13.4% in ev_math), well inside IDX's 25% daily ARB band. Moreover, filling 19.8% below spot (and 10.4% below the 2,400 52w low) risks adverse selection: a drop to 2,150 likely coincides with realized Buli equity calls or spot-gold/margin compression (~Rp2,550 NAV).\n- **B. Arithmetic:** Verified: up_pct +48.8%, 0.37x68.3% + 0.63x(-13.4%) - 1.0% = +15.8% EV; 1x25% ARB gap below 1,925 (1,444, -32.8%) leaves +3.6% EV (generalized Kelly ~15.7%, 1/4 3.9%).\n- **C. Residual:** Target 3,200 still assumes peak 16.07% non-Ni GM holds and ~65% Buli JV debt (S25 unproven); if non-Ni GM reverts to 12.05% at spot gold (~Rp2,550 NAV), 2,150->1,925 is noise, not falsification.\n- **D. Verdict:** **SURVIVES_WITH_SCARS** \u2014 The FATAL Rp2,680 overvaluation is priced out at Rp2,150; residual ARB-gap, adverse-selection, and peak-GM scars belong to Aldrich's sizing/conditional-PASS ruling."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**Verdict: PASS_REDUCED (`size_multiplier: 0.25` starter, resting limit `Rp2,150`, target `Rp3,200`, kill `Rp1,925`).**\n\n*Calibration & deployment:* Standing correction applied (inception\u20132026-10-15: 35/40 kills, 12/28 scored kills left gains, mostly `other`): do not kill priced or size-manageable risk when INDO holds 80.5% cash across 4/8 names.\n\n1. **Process & Rule 6a:** `the thesis linter` passed; `estimates_committed_at` (`10:10:17`) precedes `draft` (`10:12:02`), `stage_log` is monotonic, and Revision cuts (`entry` `2,680->2,150`, `target` `3,800->3,200`, `p_up` `0.42->0.37`, `net_div` `8.5->6.5%`) map to Bear points (mechanical `up_pct` lift from entry cut). Not a Rule 6a defect: `up_leg/|down_leg| = 4.67` (`1.99` ARB-gapped, `>1.3`); `Rp1,925` is Bear NAV falsification, not a stop. Reconciles with house coverage BUY (`Rp4,344`/`Rp4,894`).\n2. **Base rate & citations:** `p_up: 0.37` (\u22125pp from `0.42` `commodity_capex_turnaround` prior) is argued for peak-margin gold-trading capex risk. Load-bearing inputs cite `fund record`/`S2\u2013S28`, except `~65%` Buli JV debt (`S25` leaves funding structure unproven) and unarchived RKAB/reserves.\n3. **Drew's strongest sentence:** *At `Rp2,150`, a `\u221210.5%` gap to `Rp1,925` inside IDX's `25%` ARB band invites adverse selection into peak `16.07%` non-Ni GM and unproven `~Rp20.4trn` Buli capex.* Valid as sizing scars, not fatal: at `Rp2,150` (`=Rp14.5trn` EBITDA, OCF check), Buli debt terms, and 2027 RKAB (`>=11.4m` wmt) verify.\n\n*Session close:* 1 chain judged (`1 PASS_REDUCED`, `0 KILL`, `0 REVISE`); `ANTM.JK` passed at `Rp2,150` starter limit."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**Verdict: CLEAR_WITH_NOTES** *(pro-forma for Monday CONSTRUCT once `the liquidity feed` populates; **FAIL-CLOSED HOLD TODAY** at `recommended_pct: 0.0%` \u2014 no `pm_pct > 0` until prelude `refresh-adv`)*.\n1. **Factors & concentration:** `nickel_ev` (`-8.0%`), `gold` (`-5.0%`), `METALS` verified in closed taxonomy (`the fund rules`). Shared MIND ID SOE parent with `PTBA.JK` (4.73%) and below-tape `TINS.JK`; distinct commodity drivers.\n2. **Stress & headroom:** Current `book_heat = 1.32%` (`12.0%` budget). Pro-forma `2.50%` starter (`0.25x` \u00d7 `10.0%` cap) adds `+0.20%` (`nickel_ev -8.0%`) \u2192 **1.52%** post-trade stress-day loss; from `-1.23%` DD, remaining headroom is **5.25pp** to `-8%` REVIEW / **12.25pp** to `-15%` DEGROSS.\n3. **Liquidity:** `the liquidity feed` lacks `ANTM.JK` (`liquidity_cap_pct: 0.0%` fail-closed today). Underlying `Rp232.93bn/day` ADV exits `2.50%` (`~Rp0.38bn`) in `<0.01` days at 20% ADV (`<=7d`).\n4. **Kills, sizing, horizon:** 3 kills machine-monitorable (`price<1925`, `2027-04-30` LK/accruals, `<11,400 kt` RKAB). `horizon: long`; short-horizon gap (`NORM`) and `80.55%` cash logged, unforced."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**2026-11-28 (Gunawan / PM_INDO) \u2014 FAIL-CLOSED HOLD (awaiting Monday prelude `refresh-adv`):**\n- `the sizing engine size --thesis fund record --book INDO`: `recommended_pct: 0.0` (`kelly_full_pct: 100.0`, `kelly_quarter_pct: 25.0`, `correlation_haircut_pct: 0.0`, `constitution_cap_pct: 10.0`, `book_heat_before_pct: 1.32`, binding: `liquidity_cap: 0.0` \u2014 `ADV unknown for ANTM.JK` in `the liquidity feed`, `adv_feed_gap_new_passes`). Underlying `fund record` `adv_book` is Rp232.93bn/day.\n- `flows stale` (`n=0`, no foreign flow estimate). Judge `PASS_REDUCED 0.25x` binds; Risk Officer Voss `CLEAR_WITH_NOTES` (pro-forma `2.50%` starter cap once `the liquidity feed` populates; `+0.20%` stress-day heat -> `1.52%` vs `12.0%` budget).\n- `entry_plan: {level: 2150, max_chase_pct: 3, mode: limit, valid_until: \"2027-02-28\"}`. `sizing.pm_pct` kept `null` (`script_pct: null` per `the thesis linter` dual-finite guard) and no `stage_log: sized` appended so `the session brief` keeps `T-INDO-ANTM-001` in `awaiting_pm_sizing` for Monday `CONSTRUCT` Step 1(a). No order placed."
+    }
+  ]
+}

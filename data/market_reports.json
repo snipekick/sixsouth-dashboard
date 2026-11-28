@@ -1,7 +1,35 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T00:33:30+00:00",
+  "generated_at": "2026-11-28T00:32:05+00:00",
   "weekly": [
+    {
+      "id": "MR-weekly-W48-2026",
+      "kind": "weekly",
+      "label": "W48-2026",
+      "title": "Six South Weekly Report \u00b7 W48-2026",
+      "period_start": "2026-11-21",
+      "period_end": "2026-11-27",
+      "narrative": "### Desk View: W48-2026 (2026-11-21 to 2026-11-27)\n\n**Market & Book Impact**\nGlobal equities rallied (MSCI ACWI ETF `+1.7432%` to `150.5800018310547`) while U.S. Aggregate Bond ETF slipped `-0.3211%` (`96.23999786376953`). Jakarta Composite rose `+1.8367%` to `5338.45703125`, even as USD/IDR weakened `+0.7247%` to `18375.0` (USD/HKD `-0.1123%` to `7.829699993133545`). Under a `CAUTIOUS` `balance_of_payments_pressure` macro regime (as of `2026-11-21`), cash-heavy positioning left both books trailing benchmarks: South Book (INDO, `19.45%` gross, `80.5%` cash, `4` names) returned `-0.06%` vs `1.03%` (`-1.09` pp active; `10.49` pp since-inception alpha), and North Book (GLOBAL, `0.0%` gross, `100.0%` cash, `0` names) returned `0.07%` vs `0.35%` (`-0.28` pp active; `4.55` pp since-inception alpha). No memos were published in the period, and `0` trades executed.\n\n**Candid Review of Decisions**\nRisk discipline held up on exits and passes. Killing `ACES.JK` (`-5.1%` expected, `0.4` `p_up`) and `AMRT.JK` (`-2.0%`, `0.4`), plus `PASS_REDUCED` on `TSM` (`8.0%`, `0.5`, sized `2.50%` vs `10.0%` suggested), aligns with `TSM` seeing `2` superinvestor sellers and `0` buyers. Provisionally, `39` Judge kills averaged `-3.9251%` and `12` passes `-5.13%`, though the kill scorecard shows `27` avoided vs `22` missed (`+0.6%` avg move) and killed `AAPL` sits at `98.6%` path-to-target. Conversely, extreme under-deployment (`80.5%` INDO cash; `100.0%` GLOBAL cash) and heavy PM haircutting\u2014`LSIP.JK` (`0.25%` vs `10.0%` script) and `GJTL.JK` (`2.98%` vs `8.51%`)\u2014drove the week\u2019s active drag. Sizing `BBRI.JK` (`2.5%` vs `10.0%` suggested) also jars with the macro `AVOID` on Indonesian rate-sensitives/banks NIM, though no trade details are recorded.\n\n**Next Steps & Watchlist**\nMonitor the `2026-12-05` macro rebuild and IDR pressure. In INDO, follow through on `ADD` stances for staged `CPIN.JK` (`16.7%` ann. EV, `-2.3%` to entry) and `PTBA.JK` (`15.1%` ann. EV), and review `TRIM` names (`AKRA.JK`, `AVIA.JK`) and `EXIT` candidate `NVO` (`-7.5%` ann. EV). In North Book, the analyst should address superinvestor selling in covered names `V` (`-3` net, `5` sellers), `MSFT` (`-4`, `5` sellers), `MA` (`-1`, `3` sellers), and `TSM` (`-2`, `2` sellers).\n\n**Learning Curve**\nCommitted probabilities are low (`mean_p_up` `0.381`) while open forecasts drift favourably (`mean_drift_open` `0.1227`)\u2014signalling systematic under-confidence that contributes to negative Brier skill (`-0.254`; `0.3668` vs `0.2925` base rate across `6` resolved of `58` theses).",
+      "model": "AI desk model",
+      "body": "## Market condition\n- Macro regime **balance_of_payments_pressure**, risk appetite **CAUTIOUS** (desk view as of 2026-11-21; next full rebuild 2026-12-05).\n- MSCI ACWI ETF: 150.58 (latest session +1.74%, as of 2026-11-27)\n- U.S. Aggregate Bond ETF: 96.24 (latest session -0.32%, as of 2026-11-27)\n- Jakarta Composite: 5,338 (latest session +1.84%, as of 2026-11-27)\n- USD / IDR: 18,375 (latest session +0.72%, as of 2026-11-27)\n- USD / HKD: 7.83 (latest session -0.11%, as of 2026-11-27)\n- Superinvestor net buying: AMZN (+1), DIS (+3), ELV (+2), FERG (+2), NVR (+1), SUNB (+3), FICO (+2), GLD (+2)\n- Superinvestor net selling: V (-3), GOOGL (-5), GOOG (-2), MSFT (-4), MA (-1), BRK.B (-2), META (-4), TSM (-2)\n\n## The fund\n- **South Book** (IDR): period -0.06% vs benchmark +1.03% \u2192 active -1.09pp; since inception +1.69% (alpha +10.49pp); gross 19.45%, 4 names, 0 trades, 12 decisions.\n- **North Book** (USD): period +0.07% vs benchmark +0.35% \u2192 active -0.28pp; since inception +1.49% (alpha +4.55pp); gross 0.0%, 0 names, 0 trades, 6 decisions.\n\n## Looking back\n- Forecast ledger: 58 forecasts, 6 resolved, Brier 0.3668 vs base-rate 0.2925.\n- New thesis T-INDO-ACES-001 (ACES.JK): KILL \u00b7 p_up 0.4 \u00b7 EV -5.1%\n- New thesis T-GLOBAL-TSM-002 (TSM): PASS_REDUCED \u00b7 p_up 0.5 \u00b7 EV 8.0%\n- New thesis T-INDO-AMRT-002 (AMRT.JK): KILL \u00b7 p_up 0.4 \u00b7 EV -2.0%\n- Judge kill scorecard: 27 avoided / 22 missed of 49 (avg move 0.6%).\n\n## Looking forward\n- 6S house estimate, GLOBAL: 3.88% expected 12m (covers 100.0% of NAV).\n- 6S house estimate, INDO: 6.94% expected 12m (covers 100.0% of NAV).\n- CPIN.JK: house p 0.45 \u00b7 EV 25.3% (16.7% p.a.) \u2192 **ADD**\n- PTBA.JK: house p 0.42 \u00b7 EV 50.7% (15.1% p.a.) \u2192 **ADD**\n- ERAA.JK: house p 0.44 \u00b7 EV 38.1% (14.9% p.a.) \u2192 **HOLD**\n- JPFA.JK: house p 0.44 \u00b7 EV 35.8% (13.5% p.a.) \u2192 **HOLD**\n- GJTL.JK: house p 0.4 \u00b7 EV 29.0% (9.0% p.a.) \u2192 **HOLD**\n- MEDC.JK: house p 0.42 \u00b7 EV 26.8% (8.9% p.a.) \u2192 **HOLD**\n- SMSM.JK: house p 0.4 \u00b7 EV 21.9% (7.0% p.a.) \u2192 **HOLD**\n- AKRA.JK: house p 0.55 \u00b7 EV 10.9% (4.4% p.a.) \u2192 **TRIM**\n- Near target: AAPL (98.6% of path) \u2014 re-underwrite or take profit\n\n## Lessons handed to the learning curve\n- [watch] Committed probabilities are low but open forecasts are drifting favourably \u2014 possible systematic under-confidence.\n- [info] 4 tracked superinvestors added DIS last filing (5 hold it). Not a signal by itself \u2014 ask what they see that we do not.\n- [info] 3 tracked superinvestors added SUNB last filing (3 hold it). Not a signal by itself \u2014 ask what they see that we do not.\n- [info] 2 tracked superinvestors added ELV last filing (4 hold it). Not a signal by itself \u2014 ask what they see that we do not.\n- [info] 2 tracked superinvestors added FERG last filing (4 hold it). Not a signal by itself \u2014 ask what they see that we do not.\n- [info] 2 tracked superinvestors added FICO last filing (3 hold it). Not a signal by itself \u2014 ask what they see that we do not.\n- [watch] 5 superinvestors cut V, which is in Six South coverage. The North analyst should address their likely reasoning in the next review.\n- [watch] 5 superinvestors cut MSFT, which is in Six South coverage. The North analyst should address their likely reasoning in the next review.",
+      "headline": {
+        "GLOBAL": {
+          "active_pp": -0.28,
+          "bench_pct": 0.35,
+          "from": "2026-11-20",
+          "fund_pct": 0.07,
+          "to": "2026-11-27"
+        },
+        "INDO": {
+          "active_pp": -1.09,
+          "bench_pct": 1.03,
+          "from": "2026-11-20",
+          "fund_pct": -0.06,
+          "to": "2026-11-27"
+        }
+      },
+      "recorded_at": "2026-11-28T00:32:05+00:00"
+    },
     {
       "id": "MR-weekly-W46-2026",
       "kind": "weekly",

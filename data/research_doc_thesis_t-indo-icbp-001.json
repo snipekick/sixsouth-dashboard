@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "kind": "thesis",
+  "id": "T-INDO-ICBP-001",
+  "title": "Indofood CBP (ICBP.JK)",
+  "meta": {
+    "id": "T-INDO-ICBP-001",
+    "book": "INDO",
+    "ticker": "ICBP.JK",
+    "name": "Indofood CBP",
+    "sector": "CONSUMER",
+    "factors": [
+      "idr_defensive",
+      "domestic_cycle"
+    ],
+    "instrument": "equity",
+    "direction": "long",
+    "horizon": "long",
+    "archetype": "derated_compounder_rerating",
+    "status": "judged",
+    "verdict": "PASS_REDUCED",
+    "size_multiplier": 0.25,
+    "supersedes": null,
+    "catalyst_date": null,
+    "estimates_committed_at": "2026-11-28T10:10:19+07:00",
+    "drafted": "2026-11-28T10:12:25+07:00",
+    "judged": "2026-11-28T10:21:45+07:00",
+    "analyst": "Dani"
+  },
+  "levels": {
+    "entry": 6325.0,
+    "target": 9574.0,
+    "kill": 4975.0,
+    "max_chase_pct": 3.0,
+    "entry_mode": "limit",
+    "target_rationale": "Revised 12.5% WACC DCF Rp9,654 less Rp80/sh zero-USD-cash FX stress (8.8x FY26E EV/EBIT)",
+    "price": null,
+    "price_asof": null
+  },
+  "ev": {
+    "p_up": 0.4,
+    "up_pct": 51.4,
+    "p_down": 0.6,
+    "down_pct": -21.3,
+    "net_div_yield_pct_pa": 3.8,
+    "fee_tax_drag_pct": 1.0,
+    "expected_pct": 11.3,
+    "horizon_years": 3.0,
+    "carry_pct": 11.4,
+    "kelly_full_pct": 82.3
+  },
+  "sizing": {
+    "script_pct": null,
+    "pm_pct": null,
+    "deviation_reason": "the sizing engine recommended_pct=0.0 (fail-closed ADV unknown in the liquidity feed until next prelude refresh-adv, adv_feed_gap_new_passes); script_pct/pm_pct kept null for thesis_lint compliance & awaiting_pm_sizing in CONSTRUCT Step 1(a)"
+  },
+  "base_rate": {
+    "rate": 0.4,
+    "source": "the base-rate library derated_compounder_rerating (n=15, +50/-30, 3y)",
+    "library": {
+      "rate": 0.4,
+      "base_up_pct": 50.0,
+      "base_down_pct": -30.0,
+      "horizon_y": 3.0
+    }
+  },
+  "kill_criteria": [
+    {
+      "metric": "price",
+      "op": "<",
+      "value": 4975.0,
+      "action": "exit_full",
+      "note": "Zero-USD-cash Bear DCF Rp6,234 less 20% IDX ARB gap cushion (below 52w low Rp5,475); thesis-invalidating level, NOT a stop"
+    },
+    {
+      "metric": "date",
+      "op": ">",
+      "value": "2029-11-28",
+      "action": "review",
+      "condition": "3y derated_compounder_rerating horizon elapsed without re-rating toward Rp9,574"
+    },
+    {
+      "metric": "kpi",
+      "op": "<",
+      "value": 18.5,
+      "action": "review",
+      "name": "consolidated_ebit_margin_pct",
+      "source": "ICBP quarterly LK / IDX disclosures"
+    }
+  ],
+  "model": {
+    "currency": "IDR",
+    "unit": "bn",
+    "years": [
+      "2024A",
+      "2025A",
+      "2026E",
+      "2027E",
+      "2028E"
+    ],
+    "lines": {
+      "revenue": [
+        72597.2,
+        74850.9,
+        85607.6,
+        91787.1,
+        97583.9
+      ],
+      "ebit": [
+        16318.8,
+        15873.7,
+        18253.4,
+        19943.7,
+        21461.5
+      ],
+      "net_income": [
+        7079.4,
+        9224.9,
+        9178.8,
+        12172.1,
+        13121.5
+      ],
+      "eps": [
+        607.0,
+        791.0,
+        787.1,
+        1043.7,
+        1125.2
+      ],
+      "dps": [
+        200.0,
+        250.0,
+        343.8,
+        381.0,
+        415.5
+      ]
+    },
+    "valuation": {
+      "method": "10y Fade DCF (WACC 11.5%, terminal g 4.0%, less 17.1% Pinehill NCI & spot-FX net debt)",
+      "bear": {
+        "value": 6413.0,
+        "basis": "WACC 12.5%, term g 3.0%, -2.5pp rev growth, -200bp EBITm on unpassed wheat/CPO, USD/IDR 20,000"
+      },
+      "base": {
+        "value": 11223.0,
+        "basis": "WACC 11.5%, term g 4.0%, 9M26 run-rate + 95%/97% CPO/wheat pass-through, USD/IDR 18,225 spot"
+      },
+      "bull": {
+        "value": 15904.0,
+        "basis": "WACC 11.0%, term g 4.5%, +2.0pp rev growth on plant fill/Pinehill, +150bp EBITm as agri eases, USD/IDR 17,000"
+      }
+    }
+  },
+  "stage_log": [
+    {
+      "stage": "draft",
+      "at": "2026-11-28T10:12:25+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "attacked",
+      "at": "2026-11-28T10:17:20+07:00",
+      "actor": "Drew",
+      "role": "BEAR"
+    },
+    {
+      "stage": "revision",
+      "at": "2026-11-28T10:20:30+07:00",
+      "actor": "Dani",
+      "role": "ANALYST_INDO"
+    },
+    {
+      "stage": "judged",
+      "at": "2026-11-28T10:21:45+07:00",
+      "actor": "Aldrich",
+      "role": "JUDGE"
+    },
+    {
+      "stage": "risk_checked",
+      "at": "2026-11-28T10:24:34+07:00",
+      "actor": "Voss",
+      "role": "RISK_OFFICER"
+    }
+  ],
+  "kill_outcome": null,
+  "entry_status": null,
+  "sections": [
+    {
+      "heading": "Priors disclosure",
+      "detail": null,
+      "markdown": "What I believe the market narrative is: Indofood CBP (`ICBP.JK`) is Indonesia's dominant instant-noodle/packaged-food franchise (Indomie) controlled by INDF/Salim, a defensive staple whose pricing power and margins are periodically clouded by wheat/CPO inflation and non-cash FX noise on Pinehill USD bonds."
+    },
+    {
+      "heading": "Earnings quality gate",
+      "detail": null,
+      "markdown": "- **Board/audit & 9M26:** No *pemantauan khusus*, special notations, or going-concern flags (`coverage/companies/ICBP.JK/report.md` \u00a73, \u00a76); INDF FY25 statements hold an unmodified EY opinion (`coverage/companies/ICBP.JK/sources/S10.txt` p.140). 9M26 figures (`fund record`, `fund record`) are unaudited\u2014expect Q4 true-ups.\n- **3y accruals & CFO/NI (`data/dossiers/ICBP.fund record`, `CFO = FCF \u2212 Capex`):** FY23A \u22124.62% (CFO Rp12,415bn / NI Rp6,991bn = 1.78\u00d7), FY24A \u22124.38% (1.76\u00d7), FY25A \u22122.20% (1.31\u00d7; CFO Rp12,105bn / NI Rp9,225bn). Cash exceeds book earnings throughout, narrowing on receivables/inventory build (optics-class modern-trade timing, `fund record` \u00a73).\n- **D&A restatement:** Direct-method packs show a ~Rp357bn stub (`coverage/companies/ICBP.JK/assumptions.yaml` line 366). INDF's CBP note (`fund record` F1\u2013F2, F13; `fund record` p.291\u2013292; `fund record` p.292) gives D&A of Rp1,659.0bn (FY23), Rp1,788.2bn (FY24), Rp1,861.4bn (FY25, 2.5% of sales), lifting FY25A EBITDA to Rp17,735.1bn.\n- **USD debt & Pinehill:** ICBP holds US$2,750m of 2031\u20132052 USD bonds (`fund record` p.20, Note 19; Rp45,936.3bn = 96.8% of FY25 debt at 16,782 IDR/USD). Long tenors remove refi risk, and Pinehill overseas sales (~Rp27.84trn INDF) + USD cash (US$878.9m INDF, Note 37) partially hedge, but weak IDR drives non-cash FX losses (9M26 NI \u221214% YoY vs +5% core profit, `fund record`, `fund record`). Pinehill goodwill (Rp52.2trn, 24% of INDF assets) is a Key Audit Matter (`fund record` p.143).\n- **Related-party/Salim governance:** INDF owns 80.5% (`fund record` F10). INDF RP sales are 8.41% (Indomaret/Indogrosir) and RP purchases 0.52% (`fund record` p.33, Note 31). ICBP's flour purchases from Bogasari (inter-segment Rp6,607.2bn, `fund record` p.291) eliminate on INDF consolidation and ICBP's standalone 2025 LK failed TLS/IDX fetch (`fund record` \u00a76), leaving standalone RP COGS unverified (~20% bounded). Zero manipulation flags; optics-class only. **Gate: PASS.**"
+    },
+    {
+      "heading": "Bottom-up estimates",
+      "detail": null,
+      "markdown": "- **Divisional model (`fund record` p.43\u201350, `fund record` p.42\u201351, `fund record`):**\n  - *Noodles* (FY24/25: Rp53,870/55,850bn; 25.9%/24.4% EBITm): +16.0%/+7.5%/+6.5% FY26E\u201328E (39bn packs + West Java 2026 plant, Pinehill MEA/SEE, price pass-through) at 24.2%/24.5%/24.7% EBITm.\n  - *Dairy* (Rp9,660/9,820bn; 9.6%/8.0%): +10%/+6%/+5.5% at 8.2%/8.5%/8.8% EBITm. *Snacks* (Rp4,540/4,620bn; 10.1%/4.2%): +12%/+8%/+7% (+20% Central Java capacity, `fund record` F11) recovering to 6.0%/7.5%/8.2%. *Seasonings* (Rp4,300/4,600bn; 10.8%/15.3%): +12%/+7%/+6% at ~15.0\u201315.3%. *Nutrition* (Rp1,360/1,310bn) +6%/+5%/+5% at ~10%; *Beverages* (Rp1,670/1,470bn) +4%/yr at ~15%.\n  - Net of eliminations (0.9637 sales factor), consolidated revenue is Rp85,607.6bn (FY26E, 9M26 Rp64,445.7bn annualized, `fund record`), Rp91,787.1bn (FY27E), Rp97,583.9bn (FY28E); EBIT is Rp18,253.4bn (21.3%), Rp19,943.7bn (21.7%), Rp21,461.5bn (22.0%).\n- **Agri & FX deck:** Wheat (`d.agri.wheat` 220.8 spot / 293.5 FY27E; 20% COGS, 97% pass-through) and CPO (`d.agri.cpo` 1,180 spot / 1,240 FY27E; 12% COGS, 95% pass-through) leave ~15\u201320bp net drag, confirmed by 9M26 21.2% EBITm (`fund record`). Net USD debt (~US$2,100m = US$2,750m bonds less ~US$650m USD cash) revaluing from 16,782 along `m.usd_idr` (18,225/18,350/18,600, `the macro regime memo`) drives \u2212Rp3,030bn/Rp263bn/Rp525bn pre-tax FX losses, reconciling FY26E Core EPS Rp955.1 (9M26 core Rp8.04trn, `S2`) to Reported EPS Rp787.1 (9M26 NI Rp6.10trn, `S3`), recovering to Rp1,043.7/1,125.2 in FY27E\u201328E (22% tax, 17.1% NCI).\n- **ROIC, Owner Earnings & 10y Fade DCF (`VAL_COMPOUNDER_QUALITY`):** FY26E\u201328E reinvestment (Net Capex Rp5,560bn + \u0394NWC Rp2,105bn) = 16.5% of NOPAT (Rp46,534bn) \u2192 56.9% headline ROIIC (~32% steady-state \u00d7 ~18% = ~5.8% organic growth). Parent Owner Earnings (after all capex, 0 SBC, ex non-cash FX): Rp7,582bn (FY25A), Rp8,680bn (FY26E), Rp10,346bn (FY27E), Rp11,560bn (FY28E). DCF uses **11.5% WACC** (in 11\u201313% IDR band), fading FY29E\u201335E growth to **4.0% terminal g** (3.28% CPI + 0.72% volume, <8.6% nominal GDP) and EBITm to 20.5% (distribution/brand moat): EV Rp183,505bn (48.9% PV FCFF) less 17.1% NCI (Rp31,379bn) and spot-FX net debt (Rp21,245bn) = **Rp11,223/sh** (10.1\u00d7 FY26E EV/EBIT; **9.9\u00d7 Year-10 exit EV/EBIT**\u2014zero multiple expansion). 3-assumption sensitivity: WACC (11.0\u201312.5%) Rp12,176\u20139,654; EBITm (\u2212200/+150bp) Rp9,829\u201312,268; terminal g (3.0\u20134.5%) Rp10,148\u201311,875."
+    },
+    {
+      "heading": "Variant perception",
+      "detail": null,
+      "markdown": "**Market believes:** At Rp7,050 (~7.4\u00d7 FY26E Core P/E, ~5.7\u00d7 EV/EBITDA), IDX staples remain structurally impaired while wheat/CPO costs and USD-debt FX losses (9M26 NI \u221214% YoY) erode earnings.\n**Why wrong:** Pricing power is intact: 9M26 sales +14.5% YoY and EBIT margin 21.2% (`fund record`) confirm ~95%/97% CPO/wheat pass-through via Indomie/Supermi's two-tier brand ladder and distribution moat (`fund record` p.27, p.40). Non-cash FX translation on 2031\u20132052 USD bonds hides +5% core profit growth (`fund record`). Base Rp11,223 implies 9.9\u00d7 exit EV/EBIT\u2014zero return to >30\u00d7 UNVR multiples needed.\n**What proves us wrong:** Two quarters of EBIT margin <18.5%, revenue growth <3%, or an adverse Bogasari/related-party pricing shift."
+    },
+    {
+      "heading": "House coverage reconciliation",
+      "detail": null,
+      "markdown": "Our Base **Rp11,223/sh** sits 21% below house `tp_final` **Rp14,294/sh** (`coverage/companies/ICBP.JK/model.json`, `fund record` \u00a74) for three reasons: (1) house `fund record` discounts at **10.72% WACC**, outside `VAL_COMPOUNDER_QUALITY`'s 11\u201313% IDR band, whereas we enforce **11.5% WACC** under `balance_of_payments_pressure` (~\u2212Rp1,300/sh); (2) house DCF deducts book NCI (Rp22,471bn) and book net debt (Rp16,996bn ex-investments) to reach Rp15,317/sh, whereas we deduct full 17.1% EV share for Pinehill minorities (Rp31,379bn) and mark USD debt to spot **18,225 IDR/USD** (Rp21,245bn net debt); and (3) house blends 60% DCF with 30% trailing P/E (Rp10,019) and 10% EV/EBITDA (Rp10,238) rolled 12 months forward (`tp_base` Rp14,564, weighted `tp_final` Rp14,294), whereas we anchor solely on un-rolled 10y DCF."
+    },
+    {
+      "heading": "Disconfirming facts",
+      "detail": null,
+      "markdown": "1. 9M26 parent NI fell 14.1% YoY to Rp6.10trn (`fund record` para 3; Q2-26 NI Rp1,128.7bn, `fund record`) on USD-debt FX losses.\n2. FY25 Noodles EBITm fell 150bp to 24.4% (`fund record` p.43 vs 25.9% FY24, `fund record` p.42); Snacks EBITm fell to 4.2% (from 10.1%) on CPO/potato costs (`fund record` p.46).\n3. Accruals narrowed from \u22124.62% (FY23) to \u22122.20% (FY25, `fund record`) on receivables/inventory build (`fund record` \u00a73); standalone Bogasari flour COGS % is unverified (`fund record` p.33, `fund record` \u00a76).\n4. Forward `d.agri.wheat` (FY27E 293.5 vs spot 220.8) and `m.usd_idr` (18,225\u219218,850, `the macro regime memo`) pose ongoing lag/FX headwinds."
+    },
+    {
+      "heading": "Pre-mortem",
+      "detail": null,
+      "markdown": "It is November 2029 and this position lost 30%. The most likely reason is wheat/CPO inflation plus value-tier discounting broke ICBP's pass-through (EBITm 20,000, depressing reported EPS and keeping IDX staples de-rated. An ARB-locked exit below Rp5,200 fills 15% lower (~Rp4,420, \u221237.3%)."
+    },
+    {
+      "heading": "Flow & ownership checklist",
+      "detail": null,
+      "markdown": "- **Foreign flow:** `market-data snapshot` is `{}` \u2192 **flows stale** (no flow narrative).\n- **Ownership & float:** INDF owns 80.5% (`fund record` F10); `fund record` shows insider 82.397%, institutions 7.615%, free float **19.41%** (>15% IDX floor; not HSC, `fund record`). No pledged stake (`fund record`).\n- **Disclosures:** 2026 buyback up to Rp750bn (~1% cap, `fund record`) preserves \u226515% float."
+    },
+    {
+      "heading": "Sizing input",
+      "detail": null,
+      "markdown": "Conviction 3.5/5; `idr_defensive` (neutral to rate-sensitive AVOID). Liquidity: `adv_book` Rp57.57bn/day (`fund record`, `adv_ok: true`; 10% of Rp15bn book = 2.6% ADV, <0.2d at 20% participation). EV: `p_up = 0.40` (exact `derated_compounder_rerating` prior, n=15), `up_pct = +59.2%`, `down_pct = -26.2%` (`kill = 5,200`, Bear Rp6,413 less ~19% ARB cushion; gap-adjusted \u221237.3% at Rp4,420), `net_div_yield_pct_pa = 3.4%` (`Rp265 \u00d7 0.9 / Rp7,050`), `drag = 1.0%`, `expected_pct = +11.0%`. `up/|down| = 2.26` raw (`2.51` V5.4 legs vs 1.67 library). **Own-Kelly: 59.3% full / 14.8% quarter**; **Library-Kelly: 13.3% full / 3.3% quarter**."
+    },
+    {
+      "heading": "Bear attack",
+      "detail": "log",
+      "markdown": "0. **Fact-check:** FY25A Rev Rp74,850.9bn, EBIT Rp15,873.7bn, NI Rp9,224.9bn, CFO Rp12,104.5bn, Debt Rp47,431.5bn (`fund record` L21\u201342), 9M26 Rev Rp64,445.7bn (L52), D&A Rp1,861.4bn (`fund record` F1) verify. Yet D&A uses INDF's segment note (ICBP LK unarchived, `fund record` \u00a76), and `~US$650m` USD cash vs US$2,750m bonds (`fund record` p.19) is uncited\u2014Note 37 (p.294) shows US$878.9m across INDF. [MATERIAL]\n1. **Estimates:** Bear DCF (12.5% WACC, \u2212200bp EBITm, IDR 20,000) is **Rp6,413**, **9.0% below** Rp7,050 entry (+28.8% off Oct-26 Rp5,475 low); 12.5% WACC alone yields Rp9,654. Target Rp11,223 needs 10.1\u00d7 EV/EBIT (~10.5\u00d7 EV/EBITDA) vs ~5.8\u00d7\u20136.4\u00d7 today (`fund record` \u00a74), failing `VAL_COMPOUNDER_QUALITY`'s multiple-survival test amid UNVR-class de-rating; `fund record` noted scenarios never print Rp6,325. [MATERIAL]\n2. **Variant perception:** ~7.4\u00d7 Core P/E prices real risks: US$2,750m USD bonds (96.8% debt) under `balance_of_payments_pressure` (`the macro regime memo`) drove 9M26 NI \u221214.1% YoY (`fund record`); ~20% Bogasari flour COGS (Rp6,607.2bn, `fund record` p.291) is unverified standalone; wheat FY27E 293.5 sits +33% over spot (`fund record`). [MATERIAL]\n3. **Catalyst:** No `catalyst_date`; 3y re-rating assumes buyers despite MSCI Standalone freeze (`fund record`), FTSE dropping 14 ID names (`fund record`), STALE `fund record`. Rp750bn buyback (`fund record`) is <1% of cap. [MATERIAL]\n4. **Base rate & sleeve:** `derated_compounder_rerating` (0.40, n=15, +50/\u221230) requires challenger share data (`the base-rate library` L68) vs Mie Sedaap/Mie Gaga/Lemonilo\u2014omitted. Off-screen (`COVERAGE`, `the calibration report` n=0). [MATERIAL]\n5. **Sizing (both directions):** 5,200<7,050<11,223 (`up/|down|=2.26`, EV +11.0%) passes lint with unshaded 0.40 prior, **but** entry above Bear Rp6,413 narrows safety margin while 20% ARB gap (`the fund rules` L185) takes kill-exit to \u221237.3% (Rp4,420). `the sizing engine` returns `0.0%` (ADV plumbing fail-closed). [MATERIAL]\n6. **Disconfirming facts (new):** (a) `fund record` L21: 9M26 EBITm fell **\u2212140bp YoY** (22.6%\u219221.2%), refuting flat pass-through; (b) `fund record` p.50 L3556\u20133560: Beverages FY25 **\u221212%** to Rp1.47trn (vs +4%/yr modeled), Nutrition \u22123% (p.49 L3451); (c) `fund record` p.232 L20117\u201320170: Rp52.23trn Pinehill goodwill (~101% equity) uses 5.37%\u201328.31% discount rates; DPFP Nigeria lost Rp2.93trn (p.218 L18769; impairment p.31 L1839). [MATERIAL]\n7. **Pre-mortem:** Pinehill slowdown impairs Rp52.23trn goodwill alongside a Bogasari transfer-price hike, eroding equity and breaking Rp5,200 without domestic noodle collapse. [MINOR]\n8. **Anti-gaming:** `estimates_committed_at` (10:10:19) precedes `draft` (10:12:25); `stage_log` monotonic. Body mixes spot-FX/entry Rp7,050 into `## Bottom-up estimates`; `sizing.script_pct` null vs prose 14.8%. [MINOR]\n9. **Grades:** Assigned above. [MINOR]\n10. **Stop-objecting price:** **<= Rp6,325/sh** (<= Bear Rp6,413, `fund record` price), with challenger share data and zero-USD-cash FX stress. [MATERIAL]\n11. **Verdict:** **MAJOR_REVISION** \u2014 Paying Rp7,050 above Bear DCF (Rp6,413) when 9M26 EBIT margin fell 140bp YoY, standalone LK/USD cash are unverified, and challenger share data are missing lacks safety margin. [MATERIAL]"
+    },
+    {
+      "heading": "Revision",
+      "detail": null,
+      "markdown": "0. **Concede:** D&A uses INDF segment notes (`fund record` p.291\u2013292; ICBP LK unarchived); Note 37 (`fund record` p.294) US$878.9m cash is INDF-consolidated, leaving ICBP USD cash unverified. Zero-USD-cash stress adds +Rp938bn net debt at 18,225 (\u2212Rp80/sh DCF; \u2212Rp52/sh FY26E EPS) and +Rp2,092bn at 20,000 (\u2212Rp179/sh \u2192 Bear Rp6,234).\n1. **Adjust (Bear 1 & 10):** Cut `entry_plan.level` to **Rp6,325** (\u2264Bear Rp6,413, `fund record` price) and `exit_plan.target` to **Rp9,574** (12.5% WACC Rp9,654 less Rp80/sh FX stress = 8.8\u00d7 FY26E EV/EBIT, ~7.9\u00d7 EV/EBITDA vs 7.6\u00d7 peer median), clearing multiple survival without UNVR multiples.\n2. **Refute break / concede risk:** Core profit +5% YoY (`fund record`) and 2031\u20132052 bonds (`fund record` p.286) remove refi risk; FX/Bogasari risk priced via 12.5% WACC.\n3. **Refute zero catalysts / concede flow:** MSCI freeze and stale `fund record` `{}` cap beta; FY26 results (2027-02), Q1-27 (2027-04), Rp750bn buyback (`fund record`, `fund record` \u00a77) hold.\n4. **Concede:** Challenger share data (Mie Sedaap/Wings/Lemonilo) are absent from `fund record`, `sources/*.txt`, and `fund record` (management claims only)\u2014evidence scar for Judge sizing.\n5. **Adjust (Bear 0 & 5):** Cut kill to **Rp4,975** (Bear Rp6,234 less 20% ARB, `the fund rules` L185; ARB-20% fill Rp3,980 = \u221237.1%). `the sizing engine` `0.0%` reflects off-held `the liquidity feed` plumbing; `fund record` shows `adv_book` Rp57.57bn (`adv_ok: true`).\n6. **Concede:** 9M26 EBITm fell \u2212140bp YoY (`22.6%\u219221.2%`, `fund record` L21, flat vs FY25 21.2%), Beverages \u221212% / Nutrition \u22123% (`fund record` p.49\u201350; <0.5% EBIT), Rp52.23trn Pinehill goodwill (`fund record` p.232), and DPFP Nigeria \u2212Rp2.93trn loss (p.218; prior impairment p.31) cap upside.\n7. **Concede:** Pinehill/Bogasari risk covered by Rp4,975 kill and 18.5% EBITm trigger.\n8. **Concede:** `sizing.script_pct` stays `null` pre-PM; Phase-2 note acknowledged.\n9. **Noted.**\n10. **Met:** Entry **Rp6,325**, zero-USD-cash stress, share gap disclosed.\n11. **Defend `PASS at a price`:** Rp6,325 / Rp9,574 / Rp4,975 gives `up +51.4%`, `down \u221221.3%`, `EV +11.3%`, `up/|down| 2.41` (own-Kelly 82.3% / 20.6% quarter; max `ev_math` move 18.7% rel)."
+    },
+    {
+      "heading": "Judge verdict",
+      "detail": null,
+      "markdown": "**VERDICT: PASS_REDUCED (`size_multiplier: 0.25`, starter) \u2014 resting limit at Rp6,325.**\n\n*Standing correction:* Against inception's 35/40 kill bias (12/28 scored kills left gains; calibration `n=0`), I reserve KILL for dispositive flaws, use resting limits for spot-price objections, and shrink size via `size_multiplier` when inputs are unverified.\n\n1. **Process & lint:** `the thesis linter` passes (`problems: []`); `estimates_committed_at` (`10:10:19`) precedes `draft` (`10:12:25`), `stage_log` is monotonic (`ANALYST_INDO \u2192 BEAR \u2192 ANALYST_INDO`), no `the kill ledger` cooldown on `ICBP.JK`, and house coverage divergence (Rp9,574 revised target vs BUY Rp14,294) is reconciled via 12.5% WACC, 17.1% NCI, and spot-FX debt.\n2. **Base rate & EV:** `p_up: 0.40` matches `derated_compounder_rerating` (`n=15`); revised `6,325 / 9,574 / 4,975` yields `+51.4% / -21.3%` (`up/|down| = 2.41`), `+11.3%` EV, and 8.8x FY26E EV/EBIT (~7.9x EV/EBITDA vs 7.6x peer median), passing multiple-survival.\n3. **Bear's strongest point:** Paying Rp7,050 above Bear DCF (Rp6,413) while 9M26 EBIT margin fell 140bp YoY (22.6%\u219221.2%) with unverified standalone USD cash/LK and missing challenger share data lacked safety margin. Dani resolved price by cutting entry to Rp6,325 (patient limit below Bear Rp6,413) and cutting target to Rp9,574 under zero-USD-cash stress (`-Rp80/sh`).\n4. **Why `0.25` starter, not `0.5` or `KILL`:** Missing challenger share data (Mie Sedaap/Lemonilo) leave the structural-vs-cyclical de-rating test (`VAL_COMPOUNDER_QUALITY` #6) unverified, alongside unarchived ICBP standalone LK/Bogasari COGS. Under V4 law, unverified load-bearing inputs shrink size to a 0.25 starter rather than killing a sound limit entry in an 80.5%-cash book. Verify challenger share and standalone LK before any add."
+    },
+    {
+      "heading": "Risk check",
+      "detail": null,
+      "markdown": "**VERDICT: CLEAR_WITH_NOTES** (blocked today on `the liquidity feed` fail-closed `0.0%`; clears for Monday CONSTRUCT post-`refresh-adv`).\n\n1. **Factors:** `idr_defensive` (`-3.0%`) / `domestic_cycle` (`-5.0%`) verified (`the fund rules`). Pro-forma `CONSUMER` 13.58% (incl. 2.0% staged `CPIN.JK`,  0` today; await Monday `refresh-adv`.\n5. **Kills/sizing/horizon:** Kills (`price < 4975`, `consolidated_ebit_margin_pct < 18.5`, date) machine-monitorable. Pre-PM `sizing` null. `horizon: long` widens short-horizon NORM gap (never force)."
+    },
+    {
+      "heading": "PM decision",
+      "detail": null,
+      "markdown": "**2026-11-28 (Gunawan / PM_INDO) \u2014 FAIL-CLOSED HOLD (awaiting Monday prelude `refresh-adv`):**\n- `the sizing engine size --thesis fund record --book INDO`: `recommended_pct: 0.0` (`kelly_full_pct: 82.28`, `kelly_quarter_pct: 20.57`, `correlation_haircut_pct: 15.1` on 9% `idr_defensive`/`domestic_cycle` load, `constitution_cap_pct: 10.0`, `book_heat_before_pct: 1.32`, binding: `liquidity_cap: 0.0` \u2014 `ADV unknown for ICBP.JK` in `the liquidity feed`, `adv_feed_gap_new_passes`). Underlying `fund record` `adv_book` is Rp57.57bn/day.\n- `flows stale` (`n=0`, no foreign flow estimate). Judge `PASS_REDUCED 0.25x` binds; Risk Officer Voss `CLEAR_WITH_NOTES` (pro-forma `2.50%` starter cap once `the liquidity feed` populates; `+0.13%` stress-day heat -> `1.45%` vs `12.0%` budget).\n- `entry_plan: {level: 6325, max_chase_pct: 3, mode: limit, valid_until: \"2027-02-28\"}`. `sizing.pm_pct` kept `null` (`script_pct: null` per `the thesis linter` dual-finite guard) and no `stage_log: sized` appended so `the session brief` keeps `T-INDO-ICBP-001` in `awaiting_pm_sizing` for Monday `CONSTRUCT` Step 1(a). No order placed."
+    }
+  ]
+}

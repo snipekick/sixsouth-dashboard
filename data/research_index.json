@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "asof": "2026-11-28T06:31:21+07:00",
+  "asof": "2026-11-28T10:29:13+07:00",
   "counts": {
-    "theses": 64,
+    "theses": 68,
     "ideas": 95,
     "stocks": 106,
     "dossiers": 96,
@@ -13,13 +13,13 @@
   },
   "pipeline": {
     "by_verdict": {
-      "KILL": 49,
-      "PASS_REDUCED": 14,
+      "KILL": 51,
+      "PASS_REDUCED": 16,
       "REVISE": 1
     },
     "by_book": {
       "GLOBAL": 26,
-      "INDO": 38
+      "INDO": 42
     }
   },
   "kill_scorecard": {
@@ -574,7 +574,7 @@
     "doc": "research_doc_macro_regime",
     "regime": "balance_of_payments_pressure",
     "risk_appetite": "CAUTIOUS",
-    "asof": "2026-11-21",
+    "asof": "2026-11-28",
     "next_full_rebuild": "2026-12-05",
     "authors": [
       "Severin (global macro)",
@@ -609,6 +609,110 @@
     ]
   },
   "theses": [
+    {
+      "id": "T-INDO-EXCL-001",
+      "book": "INDO",
+      "ticker": "EXCL.JK",
+      "name": "XLSmart Telecom Sejahtera",
+      "sector": "TELECOM",
+      "archetype": "turnaround_restructuring",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-11-28T10:14:24+07:00",
+      "judged": "2026-11-28T10:21:29+07:00",
+      "entry": 950.0,
+      "target": 1990.0,
+      "kill": 420.0,
+      "price": null,
+      "expected_pct": -3.2,
+      "p_up": 0.32,
+      "kelly_full_pct": -5.0,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-excl-001"
+    },
+    {
+      "id": "T-INDO-SSMS-001",
+      "book": "INDO",
+      "ticker": "SSMS.JK",
+      "name": "Sawit Sumbermas Sarana",
+      "sector": "PLANTATION",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "KILL",
+      "size_multiplier": null,
+      "horizon": "long",
+      "drafted": "2026-11-28T10:13:11+07:00",
+      "judged": "2026-11-28T10:23:18+07:00",
+      "entry": 860.0,
+      "target": 1260.0,
+      "kill": 420.0,
+      "price": null,
+      "expected_pct": -15.0,
+      "p_up": 0.33,
+      "kelly_full_pct": -47.5,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-ssms-001"
+    },
+    {
+      "id": "T-INDO-ICBP-001",
+      "book": "INDO",
+      "ticker": "ICBP.JK",
+      "name": "Indofood CBP",
+      "sector": "CONSUMER",
+      "archetype": "derated_compounder_rerating",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.25,
+      "horizon": "long",
+      "drafted": "2026-11-28T10:12:25+07:00",
+      "judged": "2026-11-28T10:21:45+07:00",
+      "entry": 6325.0,
+      "target": 9574.0,
+      "kill": 4975.0,
+      "price": null,
+      "expected_pct": 11.3,
+      "p_up": 0.4,
+      "kelly_full_pct": 82.3,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-icbp-001"
+    },
+    {
+      "id": "T-INDO-ANTM-001",
+      "book": "INDO",
+      "ticker": "ANTM.JK",
+      "name": "Aneka Tambang",
+      "sector": "METALS",
+      "archetype": "commodity_capex_turnaround",
+      "status": "judged",
+      "verdict": "PASS_REDUCED",
+      "size_multiplier": 0.25,
+      "horizon": "long",
+      "drafted": "2026-11-28T10:12:02+07:00",
+      "judged": "2026-11-28T10:22:47+07:00",
+      "entry": 2150.0,
+      "target": 3200.0,
+      "kill": 1925.0,
+      "price": null,
+      "expected_pct": 15.8,
+      "p_up": 0.37,
+      "kelly_full_pct": 163.3,
+      "pm_pct": null,
+      "has_model": true,
+      "kill_move_pct": null,
+      "entry_state": null,
+      "doc": "research_doc_thesis_t-indo-antm-001"
+    },
     {
       "id": "T-INDO-ACES-001",
       "book": "INDO",
@@ -2449,8 +2553,8 @@
       "book": "INDO",
       "ticker": "SSMS.JK",
       "name": "Sawit Sumbermas Sarana",
-      "verdict": "ADVANCE",
-      "regime": "UNASSESSED",
+      "verdict": "PROMOTED",
+      "regime": "NEUTRAL",
       "sleeve": "COVERAGE",
       "asof": "2026-11-14",
       "doc": "research_doc_idea_indo-ssms"
@@ -2909,8 +3013,8 @@
       "book": "INDO",
       "ticker": "ANTM.JK",
       "name": "Aneka Tambang",
-      "verdict": "ADVANCE",
-      "regime": "UNASSESSED",
+      "verdict": "PROMOTED",
+      "regime": "WITH",
       "sleeve": "COVERAGE",
       "asof": "2026-11-08",
       "doc": "research_doc_idea_indo-antm"
@@ -2939,8 +3043,8 @@
       "book": "INDO",
       "ticker": "EXCL.JK",
       "name": "XLSmart Telecom Sejahtera",
-      "verdict": "ADVANCE",
-      "regime": "UNASSESSED",
+      "verdict": "PROMOTED",
+      "regime": "NEUTRAL",
       "sleeve": "COVERAGE",
       "asof": "2026-11-08",
       "doc": "research_doc_idea_indo-excl"
@@ -2959,8 +3063,8 @@
       "book": "INDO",
       "ticker": "ICBP.JK",
       "name": "Indofood CBP",
-      "verdict": "ADVANCE",
-      "regime": "UNASSESSED",
+      "verdict": "PROMOTED",
+      "regime": "NEUTRAL",
       "sleeve": "COVERAGE",
       "asof": "2026-11-08",
       "doc": "research_doc_idea_indo-icbp"
@@ -4432,10 +4536,19 @@
       "book": "INDO",
       "name": "Aneka Tambang",
       "sector": "METALS",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-ANTM-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-11-28T10:22:47+07:00",
+          "drafted": "2026-11-28T10:12:02+07:00",
+          "doc": "research_doc_thesis_t-indo-antm-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-08",
           "doc": "research_doc_idea_indo-antm"
         }
@@ -4447,7 +4560,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -5288,10 +5401,19 @@
       "book": "INDO",
       "name": "XLSmart Telecom Sejahtera",
       "sector": "TELECOM",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-EXCL-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-11-28T10:21:29+07:00",
+          "drafted": "2026-11-28T10:14:24+07:00",
+          "doc": "research_doc_thesis_t-indo-excl-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-08",
           "doc": "research_doc_idea_indo-excl"
         }
@@ -5303,7 +5425,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "KILL",
       "kill": null
     },
     {
@@ -5454,10 +5576,19 @@
       "book": "INDO",
       "name": "Indofood CBP",
       "sector": "CONSUMER",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-ICBP-001",
+          "verdict": "PASS_REDUCED",
+          "status": "judged",
+          "judged": "2026-11-28T10:21:45+07:00",
+          "drafted": "2026-11-28T10:12:25+07:00",
+          "doc": "research_doc_thesis_t-indo-icbp-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-08",
           "doc": "research_doc_idea_indo-icbp"
         }
@@ -5469,7 +5600,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "PASS_REDUCED",
       "kill": null
     },
     {
@@ -6214,10 +6345,19 @@
       "book": "INDO",
       "name": "Sawit Sumbermas Sarana",
       "sector": "PLANTATION",
-      "theses": [],
+      "theses": [
+        {
+          "id": "T-INDO-SSMS-001",
+          "verdict": "KILL",
+          "status": "judged",
+          "judged": "2026-11-28T10:23:18+07:00",
+          "drafted": "2026-11-28T10:13:11+07:00",
+          "doc": "research_doc_thesis_t-indo-ssms-001"
+        }
+      ],
       "ideas": [
         {
-          "verdict": "ADVANCE",
+          "verdict": "PROMOTED",
           "asof": "2026-11-14",
           "doc": "research_doc_idea_indo-ssms"
         }
@@ -6229,7 +6369,7 @@
       },
       "price": null,
       "price_asof": null,
-      "latest_verdict": null,
+      "latest_verdict": "KILL",
       "kill": null
     },
     {

@@ -1,5 +1,54 @@
 [
   {
+    "meta": {},
+    "body": "# WEEKLY_DEEP Session Journal \u2014 2026-11-28 (Sat)\n\nSession launched `2026-11-28T10:00:33+07:00` WIB; journal written `2026-11-28T10:28:12+07:00` WIB. **Four INDO deep-dives built from the `COVERAGE` `ADVANCE` backlog: two survived to `PASS_REDUCED 0.25x` at patient limit entries (`T-INDO-ANTM-001` at Rp2,150, `T-INDO-ICBP-001` at Rp6,325) and two were `KILL`ed after revision and bounded re-attack (`T-INDO-EXCL-001` `valuation`, `T-INDO-SSMS-001` `fragile_estimates`).** Macro = DELTA (markers intact, `balance_of_payments_pressure` / `CAUTIOUS` held, `asof: 2026-11-28`). Post-mortem queue empty (0 open). No ingestion (empty inbox). GLOBAL = 0 deep-dives (100% cash, `+4.55pp` vs benchmark since inception). Both new `PASS_REDUCED` theses cleared Voss (`CLEAR_WITH_NOTES`) and wait in `awaiting_pm_sizing` pending Monday prelude `refresh-adv`.\n\n## State at entry\n- **QC:** `WARN`, 6 flags (5 `published cash-rate policy.fx_carry_rates` `asof > 60d`: `EUR`, `JPY`, `GBP`, `CNH`, `MXN` + 1 additional flag). Governor `NONE` both books; `kill_actions_due: []`; `reviews_open: []`; `postmortem_queue`: 0 open (`T-INDO-ERAA-001` closed 2026-11-07).\n- **GLOBAL:** NAV `$1,014,914.14`, `100.0%` cash\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-28T10:27:33.698106+07:00",
+      "book": "INDO",
+      "title": "INDO Step 9 weekly portfolio review: 4 live names re-affirmed",
+      "thesis": "",
+      "kind": "review"
+    },
+    "body": "2026-11-28 WEEKLY_DEEP Step 9 (PM_INDO / Gunawan). Book NAV Rp15,252,892,605.6 (80.5% cash, 19.45% gross across 4 live holdings, dd -1.23%, governor NONE, flows stale n=0). No holding within 10% of kill (+20.6% to +37.5%) or target (+61.4% to +86.4%), none >15% NAV, no target hit or raise-target; full theses not opened for revision. KPI kill-criteria checked vs latest dossiers: (1) T-INDO-ERAA-001 (px 515.0, target 960.0 +86.4%, kill 420.0 +22.6%): dossier 2026-11-25 shows Q3-26 rev Rp21,077.0bn / EBIT Rp480.4bn / NI Rp303.7bn (no quarterly CFO lines in auto-dossier to re-test LTM CFO/NI 0.42 floor). (3) T-INDO-JPFA-001 (px 1450.0, target 2450.0 +69.0%, kill 1125.0 +28.9%): dossier 2026-10-31 unchanged, Q2-26 EBITm 6.25% / Q1-26 13.74% (>5.0% floor), FY25 net debt/EBITDA 1.27x (1.0 intact. All 4 live theses stamped last_reviewed: '2026-11-28' and passed fund record.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-28T10:27:33.542079+07:00",
+      "book": "INDO",
+      "title": "ICBP.JK sizing hold: script 0.00% (ADV unknown) awaiting Monday refresh-adv; pro-forma 2.50% starter",
+      "thesis": "T-INDO-ICBP-001",
+      "kind": "sizing"
+    },
+    "body": "2026-11-28 WEEKLY_DEEP Step 8 (PM_INDO / Gunawan). Thesis spot Rp7,050 (fund record unpopulated pending Monday prelude). fund record size returned recommended_pct: 0.0 (kelly_full_pct 82.28, kelly_quarter_pct 20.57, correlation_haircut_pct 15.1 on 9% idr_defensive/domestic_cycle load, constitution_cap_pct 10.0, book_heat_before_pct 1.32, binding constraint liquidity_cap 0.00% NAV due to ADV unknown for ICBP.JK in market-data snapshot adv_feed_gap_new_passes). Underlying fund record adv_book is Rp57.57bn/day. Flows stale (n=0, no foreign flow estimate). Judge PASS_REDUCED 0.25x binds; Risk Officer Voss CLEAR_WITH_NOTES (pro-forma 2.50% NAV starter cap once fund record lands; +0.13% stress-day heat -> 1.45% vs 12.0% budget; staples NEUTRAL macro tilt). Set entry_plan: {level: 6325, max_chase_pct: 3, mode: limit, valid_until: '2027-02-28'}. Kept sizing.script_pct: null and sizing.pm_pct: null (with deviation_reason recording script_pct=0.0 fail-closed) and omitted stage_log: sized so fund record passes and fund record keeps T-INDO-ICBP-001 in awaiting_pm_sizing for Monday CONSTRUCT Step 1(a). Book deployment 19.45% gross (80.5% cash vs 60-95% band). No order placed; fund record\u2026",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-28T10:27:33.383111+07:00",
+      "book": "INDO",
+      "title": "ANTM.JK sizing hold: script 0.00% (ADV unknown) awaiting Monday refresh-adv; pro-forma 2.50% starter",
+      "thesis": "T-INDO-ANTM-001",
+      "kind": "sizing"
+    },
+    "body": "2026-11-28 WEEKLY_DEEP Step 8 (PM_INDO / Gunawan). Thesis spot Rp2,680 (fund record unpopulated pending Monday prelude). fund record size returned recommended_pct: 0.0 (kelly_full_pct 100.0, kelly_quarter_pct 25.0, correlation_haircut_pct 0.0, constitution_cap_pct 10.0, book_heat_before_pct 1.32, binding constraint liquidity_cap 0.00% NAV due to ADV unknown for ANTM.JK in market-data snapshot adv_feed_gap_new_passes). Underlying fund record adv_book is Rp232.93bn/day. Flows stale (n=0, no foreign flow estimate). Judge PASS_REDUCED 0.25x binds; Risk Officer Voss CLEAR_WITH_NOTES (pro-forma 2.50% NAV starter cap once fund record lands; +0.20% stress-day heat -> 1.52% vs 12.0% budget; nickel FAVOR macro tilt). Set entry_plan: {level: 2150, max_chase_pct: 3, mode: limit, valid_until: '2027-02-28'}. Kept sizing.script_pct: null and sizing.pm_pct: null (with deviation_reason recording script_pct=0.0 fail-closed) and omitted stage_log: sized so fund record passes and fund record keeps T-INDO-ANTM-001 in awaiting_pm_sizing for Monday CONSTRUCT Step 1(a). Book deployment 19.45% gross (80.5% cash vs 60-95% band). No order placed; fund record ticket not run.",
+    "persona": ""
+  },
+  {
+    "meta": {
+      "date": "2026-11-28T10:26:22.225352+07:00",
+      "book": "GLOBAL",
+      "title": "WEEKLY_DEEP 2026-11-28 GLOBAL portfolio review & zero-deployment opportunity cost",
+      "thesis": "",
+      "kind": "review"
+    },
+    "body": "Portfolio review (Harrison, PM_GLOBAL \u2014 Step 9 of desk procedure macro fund record asof 2026-11-28: balance_of_payments_pressure / CAUTIOUS):\n\n1. Book state & nil holdings review: GLOBAL NAV USD 1,014,914.14 (+1.49% vs USD 1,000,000 initial capital), cash_pct 100.0%, n_names 0, gross_pct 0.0%, dd_pct 0.0%, governor NONE, week_trades 0/10, 0 tickets staged. With 0 holdings, no holding-level distance-to-kill/target re-affirmations, >15% NAV market-value concentration triggers, target-hit re-underwrites, or KPI kill-criteria checks apply.\n\n2. Mandatory zero-deployment cash opportunity cost (agents/PM_GLOBAL.md; fund rules \u00a79a): GLOBAL closes at 0.0% deployed with 0 tickets staged. Benchmark (80% ACWI / 20% AGG in fund record): 100.0 (2026-07-11) -> 96.9416 (2026-11-28) = -3.06%. Realised cash opportunity cost vs benchmark since inception = +4.55pp outperformance (+1.49% book vs -3.06% benchmark). Cash being ahead of the benchmark reflects the tape drawdown, not a licence to stay 100% cash.\n\n3. Resting entry triggers (entry_staging.waiting): T-GLOBAL-NVO-002 (last 40.97 vs max_fill 24.72, gap +65.7%) and T-GLOBAL-TSM-002 (last 342.34 vs max_fill 247.20, gap +38.5%) remain resting\u2026",
+    "persona": ""
+  },
+  {
     "meta": {
       "date": "2026-11-27T13:06:37.891382+07:00",
       "book": "INDO",
@@ -838,55 +887,6 @@
       "kind": "entry"
     },
     "body": "Staged tranche ORD-20261020084518-MEDC.JK-307f (buy 172,300 MEDC.JK limit 1400, max chase 5% -> max fill 1470) still matches T-INDO-MEDC-001: entry_plan limit 1400 / max_chase 5% (valid_until 2026-12-31), target 2250, kill 920. Current 1260 is below the 1400 limit (fills at limit or better) and 37.0% above the 920 kill \u2014 no averaging down through a kill level. Tranche 1.669% NAV against PM cap 6.00% NAV; thesis live, no re-size or REVISE needed. Ticket left in place for the 09:00 open.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-20T08:46:05.569134+07:00",
-      "book": "INDO",
-      "title": "preopen triggers reviewed \u2014 no action",
-      "thesis": "",
-      "kind": "pass"
-    },
-    "body": "Kill exits: kill_actions_due empty and no fired kill in the brief \u2014 nothing missing, no fail-closed breach. Governor NONE on INDO (and GLOBAL) \u2014 no de-gross tickets owed, no sells written, buys not vetoed. Entry staging: MEDC staged and confirmed; no blocked entries to journal or escalate; T-INDO-TINS-001 waiting on price (last 3380 vs max fill 819, gap 312.7%) \u2014 a price trigger, no journal line needed. Kill revisits PNBN.JK (-18.3%) and ELSA.JK (-18.0%) remain prior kills, not new actions. QC OK, 0 flags. No tickets created this session.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-20T08:45:18.235654+07:00",
-      "book": "INDO",
-      "title": "auto-staged entry MEDC.JK",
-      "thesis": "T-INDO-MEDC-001",
-      "kind": "entry"
-    },
-    "body": "Auto-staged entry tranche (limit) for T-INDO-MEDC-001: buy 172,300 MEDC.JK limit 1400 (max chase 5%, max fill 1470) = 1.67% NAV at most. Target 6.00% NAV (PM sizing); held 4.33%, pending 0.00% before this ticket. Dry-run risk check PASS; ticket ORD-20261020084518-MEDC.JK-307f is stamped by risk_check and fills at the next open only within the limit.",
-    "persona": ""
-  },
-  {
-    "meta": {},
-    "body": "# IDEATION Session Journal \u2014 2026-10-20 (Tue)\n\nSession 2026-10-20T11:00:20+07:00 \u2192 2026-10-20T11:03:51+07:00. Early exit per step 4: **no new candidates \u2014 no un-carded screen row clears the fast-disqualify sniff test in either book.** No cards written; no hygiene actions due.\n\n## State at entry\n- QC **OK, 0 flags**. Governor NONE both books; no pending orders; kill_actions_due []; reviews_open []. GLOBAL 100% cash / 0 names (NAV $1,010,715.78); INDO 89.4% cash / 2 names (ERAA, MEDC; NAV IDR 15.28bn, gross 10.57%, DD \u22120.29%). judged_unticketed: T-GLOBAL-NVO-002 and T-INDO-TINS-001 (both far above ticket limits \u2014 not mine). The brief's head item is the WEEKLY_DEEP lint_status_enum WARN, not IDEATION's.\n- Macro frontmatter (asof 2026-10-19, read only): `balance_of_payments_pressure`, risk_appetite **CAUTIOUS**. Tilts: FAVOR nickel/ID supply-discipline; NEUTRAL thermal coal + commodity bloc (\"underwrite name-by-name, do not chase\"); AVOID oil-import beneficiaries + INDO rate-sensitives (banks NIM, property, consumer discretionary). Memo not re-reasoned, not edited.\n\n## Screen sweep\n- **Market context:** IDX rebounded \u2014 ^JKSE 5,130.25 vs 4,996.61 (+2.67%), IDR 17,995 (rupiah +0.34%)\u2026",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T10:02:28.062735+07:00",
-      "book": "INDO",
-      "title": "Weekly portfolio review 2026-10-19 \u2014 ERAA, MEDC re-affirmed; no action",
-      "thesis": "",
-      "kind": "review"
-    },
-    "body": "ERAA.JK IDR 490 (yfinance 2026-10-19, stale=false): 16.7% above kill 420, 95.9% below target 960 \u2014 outside the 10% review band; H1-26 NI IDR 784bn (+38% yoy) on revenue +22.4% yoy still supports the discovery thesis; position 0.43% NAV. KPI check: cash_conversion CFO/NI LTM  1.0 confirmed FY25 (2P 564 vs 493 mmboe, AR2025 p.75), no breach; position 0.41% NAV. Neither holding is within 10% of kill/target and neither exceeds 15% NAV, so one-line re-affirmations stand; last_reviewed stamped 2026-10-19 on both. Book context: INDO 8.43% deployed, 2 names vs 8-name minimum \u2014 pipeline shortfall, addressed in the zero-deployment/attribution escalation.",
-    "persona": ""
-  },
-  {
-    "meta": {
-      "date": "2026-10-19T09:57:48.512459+07:00",
-      "book": "INDO",
-      "title": "WEEKLY_DEEP 2026-10-19 sourcing triage \u2014 INDO",
-      "thesis": "",
-      "kind": "other"
-    },
-    "body": "INDO (Dani), triage at 2026-10-19T09:57:48+07:00. (a) ADVANCE cards: none. (b) kill_revisits (brief, all past 30d cooldown and >=10% below kill): ASII 4,000 vs 5,150 at kill (-22.3%, killed 2026-07-22 valuation) \u2014 FY2025 P/E ~4.9x on EPS 810, ROE 14.3%, net debt/EBITDA 1.09x, 50% payout; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints and a 22% lower price => DEEP-DIVE. KLBF 635 vs 755 (-15.9%, killed 2026-09-02 fragile_estimates) \u2014 FY2025 EPS 80.51, P/E ~7.9x, ROE 15.7%, net cash, idr_defensive; refreshed 2026-10-19 dossier; new evidence = FY2025 print + H1-26 => DEEP-DIVE. TOWR 366 vs 448 (-18.3%, killed 2026-08-24 valuation) \u2014 FY2025 EPS 69, P/E ~5.3x, ROE 13.6%, infra_tower_compounder, net debt/EBITDA 6.76x; refreshed 2026-10-19 dossier; new evidence = FY2025 + H1-26 prints => DEEP-DIVE. ELSA 560 vs 695 (-19.4%, killed 2026-08-05 process) PASS \u2014 no new fundamental evidence; 1H26 upstream -11% YoY third consecutive decline, idea card DISCARD stands. PNBN 710 vs 875 (-18.9%, killed 2026-07-13 other) PASS \u2014 bank under the macro AVOID 'INDO rate-sensitive' tilt; no new evidence. DSNG 1,215 vs 1,360 (-10.7%, killed 2026-08-19 liquidity) PASS \u2014 liquidity kill is\u2026",
     "persona": ""
   }
 ]
